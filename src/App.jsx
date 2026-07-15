@@ -6,6 +6,8 @@ import { ScrollProgress } from "./components/layout/ScrollProgress";
 import { LoveMarquee } from "./components/motion/LoveMarquee";
 import { FinalSection } from "./sections/FinalSection";
 import { FutureSection } from "./sections/FutureSection";
+import { TripSection } from "./sections/TripSection";
+import { TripPlannerSection } from "./sections/TripPlannerSection";
 import { GallerySection } from "./sections/GallerySection";
 import { HeroSection } from "./sections/HeroSection";
 import { LetterSection } from "./sections/LetterSection";
@@ -36,6 +38,8 @@ function App() {
               <GallerySection />
               <LetterSection />
               <FutureSection />
+              <TripSection />
+              <TripPlannerSection />
               <FinalSection />
             </main>
           </motion.div>

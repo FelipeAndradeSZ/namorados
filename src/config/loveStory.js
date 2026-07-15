@@ -181,4 +181,33 @@ export const loveStory = {
         "Um lar cheio de cumplicidade, domingos tranquilos, planos na mesa e a certeza de que continuamos no mesmo barco.",
     },
   ],
+  trip: {
+    bookingCode: "SRJDZZ",
+    origin: {
+      code: "RAO",
+      city: "Ribeirão Preto",
+    },
+    destination: {
+      code: "VIX",
+      city: "Vitória",
+    },
+    departure: "2026-12-14T12:25:00-03:00",
+    arrival: "2026-12-14T16:35:00-03:00",
+    connection: 1,
+    message: "Nossa próxima aventura está chegando!",
+  },
+  returnTrip: {
+    bookingCode: "SRJDZZ",
+    origin: {
+      code: "VIX",
+      city: "Vitória",
+    },
+    destination: {
+      code: "RAO",
+      city: "Ribeirão Preto",
+    },
+    departure: "2026-12-20T05:15:00-03:00",
+    arrival: "2026-12-20T10:55:00-03:00",
+    connection: 1
+  }
 };

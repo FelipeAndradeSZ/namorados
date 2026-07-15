@@ -116,14 +116,13 @@ export function LoveIntro() {
               stroke="rgba(254,205,211,0.32)"
               strokeWidth="2"
             />
-            <motion.rect
+            <rect
               x="0"
+              y={fillY * 1.1}
               width="120"
-              height="110"
+              height={110}
               fill="url(#intro-heart-gradient)"
               clipPath="url(#heart-shape)"
-              animate={{ y: fillY * 1.1 }}
-              transition={{ duration: 0.12, ease: "linear" }}
             />
             <path
               d="M60 102C54 94 14 69 8 41C3 17 20 4 38 7C49 9 56 17 60 25C64 17 71 9 82 7C100 4 117 17 112 41C106 69 66 94 60 102Z"

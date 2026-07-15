@@ -9,6 +9,8 @@ const links = [
   { href: "#momentos", label: "Momentos" },
   { href: "#carta", label: "Carta" },
   { href: "#futuro", label: "Nosso futuro" },
+  { href: "#viagem", label: "Viagem" },
+  { href: "#planejamento", label: "Planejamento" },
 ];
 
 export function Navigation() {
