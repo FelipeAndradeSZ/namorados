@@ -11,7 +11,7 @@ import {
   setDoc,
   serverTimestamp 
 } from "firebase/firestore";
-import { db, authReady } from "../lib/firebase";
+import { db } from "../lib/firebase";
 
 const INITIAL_DAYS = [
   { date: "2026-12-14", title: "Chegada em Vitória ✈️" },
@@ -113,69 +113,62 @@ export function useItinerary() {
     let isSubscribed = true;
     let hasSeededDays = false;
     let hasSeededActs = false;
-    let unsubDays = () => {};
-    let unsubActs = () => {};
 
-    // SEC-02: Wait for anonymous auth before subscribing to Firestore
-    authReady.then((user) => {
-      if (!isSubscribed || !user) return;
-
-      // Listen to days
-      const qDays = query(collection(db, "days"), orderBy("date", "asc"));
-      unsubDays = onSnapshot(
-        qDays, 
-        (snapshot) => {
-          if (!isSubscribed) return;
-          const fetchedDays = snapshot.docs.map(docSnapshot => ({
-            id: docSnapshot.id,
-            ...docSnapshot.data()
-          }));
-          setDays(fetchedDays);
-          
-          if (snapshot.empty && !hasSeededDays) {
-            hasSeededDays = true;
-            seedInitialDays();
-          } else if (!snapshot.empty) {
-            // Auto-migrate missing days
-            const existingDates = fetchedDays.map(d => d.date);
-            const missingDays = INITIAL_DAYS.filter(d => !existingDates.includes(d.date));
-            if (missingDays.length > 0) {
-              missingDays.forEach(async (day) => {
-                await setDoc(doc(db, "days", day.date), {
-                  date: day.date,
-                  title: day.title
-                });
+    // Listen to days
+    const qDays = query(collection(db, "days"), orderBy("date", "asc"));
+    const unsubDays = onSnapshot(
+      qDays, 
+      (snapshot) => {
+        if (!isSubscribed) return;
+        const fetchedDays = snapshot.docs.map(docSnapshot => ({
+          id: docSnapshot.id,
+          ...docSnapshot.data()
+        }));
+        setDays(fetchedDays);
+        
+        if (snapshot.empty && !hasSeededDays) {
+          hasSeededDays = true;
+          seedInitialDays();
+        } else if (!snapshot.empty) {
+          // Auto-migrate missing days
+          const existingDates = fetchedDays.map(d => d.date);
+          const missingDays = INITIAL_DAYS.filter(d => !existingDates.includes(d.date));
+          if (missingDays.length > 0) {
+            missingDays.forEach(async (day) => {
+              await setDoc(doc(db, "days", day.date), {
+                date: day.date,
+                title: day.title
               });
-            }
+            });
           }
-        },
-        (err) => console.error("Erro ao escutar dias:", err)
-      );
-
-      // Listen to activities
-      const qActs = query(collection(db, "activities"), orderBy("time", "asc"));
-      unsubActs = onSnapshot(
-        qActs, 
-        (snapshot) => {
-          if (!isSubscribed) return;
-          const fetchedActs = snapshot.docs.map(docSnapshot => ({
-            id: docSnapshot.id,
-            ...docSnapshot.data()
-          }));
-          setActivities(fetchedActs);
-          setLoading(false);
-
-          if (snapshot.empty && !hasSeededActs) {
-            hasSeededActs = true;
-            seedInitialActivities();
-          }
-        },
-        (err) => {
-          console.error("Erro ao escutar atividades:", err);
-          if (isSubscribed) setLoading(false);
         }
-      );
-    });
+      },
+      (err) => console.error("Erro ao escutar dias:", err)
+    );
+
+    // Listen to activities
+    const qActs = query(collection(db, "activities"), orderBy("time", "asc"));
+    const unsubActs = onSnapshot(
+      qActs, 
+      (snapshot) => {
+        if (!isSubscribed) return;
+        const fetchedActs = snapshot.docs.map(docSnapshot => ({
+          id: docSnapshot.id,
+          ...docSnapshot.data()
+        }));
+        setActivities(fetchedActs);
+        setLoading(false);
+
+        if (snapshot.empty && !hasSeededActs) {
+          hasSeededActs = true;
+          seedInitialActivities();
+        }
+      },
+      (err) => {
+        console.error("Erro ao escutar atividades:", err);
+        if (isSubscribed) setLoading(false);
+      }
+    );
 
     return () => {
       isSubscribed = false;

@@ -10,7 +10,7 @@ import {
   doc, 
   serverTimestamp 
 } from "firebase/firestore";
-import { db, authReady } from "../lib/firebase";
+import { db } from "../lib/firebase";
 
 const INITIAL_ITEMS = [
   // Malas
@@ -57,38 +57,32 @@ export function useChecklist() {
   useEffect(() => {
     let isSubscribed = true;
     let hasSeeded = false;
-    let unsubscribe = () => {};
 
-    // SEC-02: Wait for anonymous auth before subscribing to Firestore
-    authReady.then((user) => {
-      if (!isSubscribed || !user) return;
+    const q = query(collection(db, "checklist"), orderBy("createdAt", "asc"));
+    
+    const unsubscribe = onSnapshot(
+      q, 
+      (snapshot) => {
+        if (!isSubscribed) return;
+        const fetchedItems = snapshot.docs.map((docSnapshot) => ({
+          id: docSnapshot.id,
+          ...docSnapshot.data()
+        }));
+        
+        setItems(fetchedItems);
+        setLoading(false);
 
-      const q = query(collection(db, "checklist"), orderBy("createdAt", "asc"));
-      
-      unsubscribe = onSnapshot(
-        q, 
-        (snapshot) => {
-          if (!isSubscribed) return;
-          const fetchedItems = snapshot.docs.map((docSnapshot) => ({
-            id: docSnapshot.id,
-            ...docSnapshot.data()
-          }));
-          
-          setItems(fetchedItems);
-          setLoading(false);
-
-          // Se o banco estiver vazio, popula os dados iniciais uma única vez
-          if (snapshot.empty && !hasSeeded) {
-            hasSeeded = true;
-            seedInitialData();
-          }
-        },
-        (error) => {
-          console.error("Erro ao carregar checklist:", error);
-          if (isSubscribed) setLoading(false);
+        // Se o banco estiver vazio, popula os dados iniciais uma única vez
+        if (snapshot.empty && !hasSeeded) {
+          hasSeeded = true;
+          seedInitialData();
         }
-      );
-    });
+      },
+      (error) => {
+        console.error("Erro ao carregar checklist:", error);
+        if (isSubscribed) setLoading(false);
+      }
+    );
 
     return () => {
       isSubscribed = false;
