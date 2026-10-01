@@ -23,7 +23,7 @@ const TripSection = lazy(() =>
 const TripPlannerSection = lazy(() =>
   import("./sections/TripPlannerSection").then((m) => ({ default: m.TripPlannerSection }))
 );
-const TravelGame = lazy(() => import("./features/travel-game/TravelGame"));
+const Destino1000App = lazy(() => import("./features/destino1000/Destino1000App"));
 
 function App() {
   const { hasEntered, isGameOpen, closeGame } = useExperience();
@@ -35,7 +35,7 @@ function App() {
           <LoveIntro key="intro" />
         ) : isGameOpen ? (
           <motion.div
-            key="travel-game"
+            key="destino-1000"
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
@@ -46,11 +46,11 @@ function App() {
               fallback={
                 <div className="flex h-full w-full flex-col items-center justify-center bg-[#0b0c1e] text-rose-200">
                   <div className="size-10 animate-spin rounded-full border-2 border-rose-300 border-t-transparent mb-4" />
-                  <p className="font-display text-lg">Preparando Nosso Voo...</p>
+                  <p className="font-display text-lg">Decolando no Destino 1000... ✈️</p>
                 </div>
               }
             >
-              <TravelGame onBack={closeGame} />
+              <Destino1000App onBack={closeGame} />
             </Suspense>
           </motion.div>
         ) : (

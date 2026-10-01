@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Clock, Heart, Ticket, Gamepad2 } from "lucide-react";
+import { MapPin, Clock, Heart, Ticket, Compass } from "lucide-react";
 import { loveStory } from "../config/loveStory";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { TripCountdown } from "../features/trip-countdown/TripCountdown";
@@ -167,14 +167,14 @@ export function TripSection() {
         >
           <div className="flex items-center gap-4 text-left">
             <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-rose-500/20 text-rose-300 border border-rose-300/30">
-              <Gamepad2 size={24} />
+              <Compass size={24} className="animate-spin-slow" />
             </span>
             <div>
               <p className="font-display text-base sm:text-lg font-bold text-white">
-                Expedição a Bordo: Rumo a Vitória ✈️
+                Destino 1000: Expedição ENEM & Viagens ✈️
               </p>
               <p className="text-xs text-rose-200/70 mt-0.5">
-                Que tal pilotar nosso avião de Ribeirão Preto a Vitória agora mesmo e desviar das tempestades?
+                Viaje pelo Brasil explorando polos educacionais, revisando com repetição espaçada e treinando rumo à Medicina e Nota 1000 na Redação!
               </p>
             </div>
           </div>
@@ -183,7 +183,7 @@ export function TripSection() {
             onClick={openGame}
             className="shrink-0 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 px-6 py-3 text-xs font-bold text-white shadow-lg shadow-rose-500/25 hover:scale-105 transition-all cursor-pointer flex items-center gap-2"
           >
-            <span>Jogar Agora</span>
+            <span>Decolar no Destino 1000</span>
             <span>🛫</span>
           </button>
         </motion.div>

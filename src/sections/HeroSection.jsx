@@ -6,7 +6,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { ArrowDown, Gamepad2, Heart, Sparkles } from "lucide-react";
+import { ArrowDown, Compass, Heart, Sparkles } from "lucide-react";
 import { loveStory } from "../config/loveStory";
 import { LoveCounter } from "../features/love-counter/LoveCounter";
 import { useExperience } from "../context/useExperience";
@@ -120,14 +120,14 @@ export function HeroSection() {
                 />
               </a>
 
-              {/* Botão para entrar no Jogo da Viagem */}
+              {/* Botão para entrar no Destino 1000 */}
               <button
                 type="button"
                 onClick={openGame}
                 className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full border border-rose-300/40 bg-gradient-to-r from-rose-500/20 via-pink-500/20 to-purple-500/20 px-6 py-4 text-sm font-semibold text-rose-100 shadow-[0_10px_40px_rgba(244,63,94,0.25)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-rose-300 hover:bg-rose-500/30 active:scale-95 cursor-pointer"
               >
-                <Gamepad2 size={17} className="text-rose-300 animate-pulse" />
-                <span>Jogar: Rumo a Vitória ✈️</span>
+                <Compass size={17} className="text-rose-300 animate-spin-slow" />
+                <span>Destino 1000 ✈️</span>
               </button>
 
               <span className="flex items-center gap-2 text-xs text-rose-100/45">
