@@ -18,13 +18,13 @@ import { InventoryView } from "./ui/InventoryView";
 import { AnalyticsDashboard } from "./ui/AnalyticsDashboard";
 
 import { BRAZIL_CITIES } from "./content/citiesData";
-import { INITIAL_QUESTIONS } from "./content/initialQuestions";
+import { contentEngine } from "./core/contentEngine";
+import { saveAttempt } from "./core/indexedDB";
 import { loadPlayerState, savePlayerState } from "./core/storageSync";
 import { rewardStudyAction } from "./core/gameState";
 import { 
   calculateNextReview, 
-  updateSkillMastery, 
-  buildQuickSession 
+  updateSkillMastery
 } from "./learning/learningEngine";
 import { destinoAudio } from "./core/soundEngine";
 
@@ -32,8 +32,9 @@ export default function Destino1000App({ onBack }) {
   const [playerState, setPlayerState] = useState(() => loadPlayerState());
   const [activeTab, setActiveTab] = useState("viagem"); // 'viagem' | 'estudo' | 'redacao' | 'mochila' | 'evolucao'
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-  const [activeSessionQuestions, setActiveSessionQuestions] = useState(INITIAL_QUESTIONS);
+  const [activeSessionQuestions, setActiveSessionQuestions] = useState([]);
   const [isMuted, setIsMuted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Cidade ativa
   const activeCity = BRAZIL_CITIES.find(c => c.id === playerState.location.currentCityId) || BRAZIL_CITIES[0];
@@ -59,23 +60,43 @@ export default function Destino1000App({ onBack }) {
   }, []);
 
   // Selecionar cidade para iniciar expedição de estudos
-  const handleSelectCityForStudy = (cityId) => {
-    // Filtra questões prioritárias para a cidade ou temas afins
-    const cityQuestions = INITIAL_QUESTIONS.filter(q => q.cityId === cityId);
-    const questionsToRun = cityQuestions.length > 0 ? cityQuestions : INITIAL_QUESTIONS;
+  const handleSelectCityForStudy = async (cityId) => {
+    setIsLoading(true);
+    // Filtra questões prioritárias para a cidade
+    const cityQuestions = await contentEngine.getQuestionsForCity(cityId);
+    
+    // Se a cidade ainda não tiver questões, pega um mix aleatório
+    let questionsToRun = cityQuestions;
+    if (questionsToRun.length === 0) {
+      questionsToRun = await contentEngine.getRandomQuestions(10);
+    }
     
     setActiveSessionQuestions(questionsToRun);
     setActiveQuestionIndex(0);
     setActiveTab("estudo");
+    setIsLoading(false);
   };
 
   // Modo "Tenho 10 Minutos"
-  const handleQuickSession = (minutes = 10) => {
+  const handleQuickSession = async (minutes = 10) => {
     destinoAudio.playClick();
-    const quickPool = buildQuickSession(minutes, INITIAL_QUESTIONS, playerState.history);
+    setIsLoading(true);
+    
+    const count = Math.max(2, Math.floor(minutes / 2.5));
+    const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
+    
+    let quickPool = await contentEngine.getRandomQuestions(count, { excludeIds: seenIds });
+    
+    if (quickPool.length < count) {
+       // Se faltar questão inédita, repete algumas
+       const fallback = await contentEngine.getRandomQuestions(count);
+       quickPool = fallback;
+    }
+
     setActiveSessionQuestions(quickPool);
     setActiveQuestionIndex(0);
     setActiveTab("estudo");
+    setIsLoading(false);
   };
 
   // Viagem entre capitais
@@ -102,9 +123,11 @@ export default function Destino1000App({ onBack }) {
   };
 
   // Processar resposta da questão
-  const handleAnswerSubmit = ({ questionId, selectedOptionId, isCorrect, confidence, errorCategory, reflected }) => {
-    const question = INITIAL_QUESTIONS.find(q => q.id === questionId);
+  const handleAnswerSubmit = async ({ questionId, selectedOptionId, isCorrect, confidence, errorCategory, reflected }) => {
+    const question = activeSessionQuestions.find(q => q.id === questionId);
     if (!question) return;
+
+    let attemptToSave = null;
 
     setPlayerState(prev => {
       // 1. Recompensa de XP
@@ -120,15 +143,15 @@ export default function Destino1000App({ onBack }) {
       const rewarded = rewardStudyAction(prev, { xp, milhas, reais });
 
       // 2. Cálculo do SM-2
-      const previousSchedule = prev.history.find(h => h.questionId === questionId)?.reviewSchedule;
+      const previousSchedule = prev.history?.find(h => h.questionId === questionId)?.reviewSchedule;
       const nextSchedule = calculateNextReview(previousSchedule, isCorrect, confidence);
 
       // 3. Atualizar domínio da área
-      const currentAreaMastery = prev.masteryMatrix[question.area] || 50;
+      const currentAreaMastery = prev.masteryMatrix?.[question.area] || 50;
       const newAreaMastery = updateSkillMastery(currentAreaMastery, isCorrect, question.difficulty, confidence);
 
-      // 4. Registrar no histórico
-      const attempt = {
+      // 4. Construir tentativa
+      attemptToSave = {
         id: `${Date.now()}-${questionId}`,
         questionId,
         selectedOptionId,
@@ -147,9 +170,15 @@ export default function Destino1000App({ onBack }) {
           ...rewarded.masteryMatrix,
           [question.area]: newAreaMastery
         },
-        history: [...(rewarded.history || []), attempt]
+        // O histórico em playerState pode ser mantido pequeno (apenas recentes), 
+        // mas para retrocompatibilidade, mantemos aqui por enquanto.
+        history: [...(rewarded.history || []), attemptToSave]
       };
     });
+
+    if (attemptToSave) {
+      await saveAttempt(attemptToSave);
+    }
   };
 
   const currentQuestion = activeSessionQuestions[activeQuestionIndex];
@@ -221,19 +250,37 @@ export default function Destino1000App({ onBack }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
+              className="h-full"
             >
-              <StudyStation 
-                question={currentQuestion}
-                onAnswerSubmit={handleAnswerSubmit}
-                onNextQuestion={() => {
-                  if (activeQuestionIndex < activeSessionQuestions.length - 1) {
-                    setActiveQuestionIndex(prev => prev + 1);
-                  } else {
-                    setActiveTab("viagem");
-                  }
-                }}
-                isLastQuestion={activeQuestionIndex >= activeSessionQuestions.length - 1}
-              />
+              {isLoading ? (
+                <div className="flex flex-col items-center justify-center h-[50vh] text-rose-300">
+                  <div className="w-8 h-8 border-4 border-rose-500/30 border-t-rose-500 rounded-full animate-spin mb-4" />
+                  <p className="text-sm">Carregando expedição...</p>
+                </div>
+              ) : currentQuestion ? (
+                <StudyStation 
+                  question={currentQuestion}
+                  onAnswerSubmit={handleAnswerSubmit}
+                  onNextQuestion={() => {
+                    if (activeQuestionIndex < activeSessionQuestions.length - 1) {
+                      setActiveQuestionIndex(prev => prev + 1);
+                    } else {
+                      setActiveTab("viagem");
+                    }
+                  }}
+                  isLastQuestion={activeQuestionIndex >= activeSessionQuestions.length - 1}
+                />
+              ) : (
+                <div className="flex flex-col items-center justify-center h-[50vh] text-white/50 px-6 text-center">
+                  <p className="mb-4">Não há questões disponíveis nesta expedição ainda.</p>
+                  <button 
+                    onClick={() => setActiveTab("viagem")}
+                    className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition"
+                  >
+                    Voltar para o Mapa
+                  </button>
+                </div>
+              )}
             </motion.div>
           )}
 

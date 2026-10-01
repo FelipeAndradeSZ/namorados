@@ -167,5 +167,181 @@ export const BRAZIL_CITIES = [
       { to: "brasilia", flightMiles: 1200, busCost: 480, busHours: 48, flightHours: 2.8 },
       { to: "salvador", flightMiles: 1500, busCost: 550, busHours: 60, flightHours: 3.5 }
     ]
+  },
+  {
+    id: "curitiba",
+    name: "Curitiba",
+    state: "PR",
+    region: "Sul",
+    lat: -25.4284,
+    lng: -49.2733,
+    isStartingCity: false,
+    tagline: "A Capital Ecológica",
+    description: "Modelo de planejamento urbano, transporte BRT e sustentabilidade ambiental.",
+    thematicFocus: ["Geometria Urbana", "Ecologia", "Estatística"],
+    primaryArea: "natureza",
+    hubs: [
+      { id: "jardim-botanico-cwb", name: "Jardim Botânico (Estufa)", type: "nature", area: "natureza", desc: "Estruturas metálicas, fotossíntese e espécies subtropicais." },
+      { id: "museu-oscar-niemeyer", name: "Museu Oscar Niemeyer (Olho)", type: "arts", area: "linguagens", desc: "Arte contemporânea, geometria espacial e museologia." },
+      { id: "tubo-brt", name: "Estação Tubo (Mobilidade)", type: "urban", area: "matematica", desc: "Otimização de fluxos, grafos e cálculo de capacidade de transporte." },
+    ],
+    connections: [
+      { to: "sao-paulo", flightMiles: 280, busCost: 100, busHours: 6.5, flightHours: 1.0 },
+      { to: "florianopolis", flightMiles: 180, busCost: 70, busHours: 4.5, flightHours: 0.8 }
+    ]
+  },
+  {
+    id: "florianopolis",
+    name: "Florianópolis",
+    state: "SC",
+    region: "Sul",
+    lat: -27.5954,
+    lng: -48.5480,
+    isStartingCity: false,
+    tagline: "Ilha da Magia",
+    description: "Polo tecnológico em ascensão e refúgio ecológico com cultura açoriana.",
+    thematicFocus: ["Geologia Costeira", "Tecnologia", "História Luso-Brasileira"],
+    primaryArea: "natureza",
+    hubs: [
+      { id: "ponte-hercilio-luz", name: "Ponte Hercílio Luz", type: "physics", area: "natureza", desc: "Estática de pontes pênseis, tração em cabos e dilatação térmica." },
+      { id: "sapiens-parque", name: "Polo Tecnológico (Sapiens Parque)", type: "science", area: "matematica", desc: "Algoritmos, startups, lógica de programação e crescimento exponencial." },
+      { id: "centrinho-lagoa", name: "Lagoa da Conceição", type: "biology", area: "natureza", desc: "Dinâmica estuarina, salinidade e impacto do turismo no ecossistema." },
+    ],
+    connections: [
+      { to: "curitiba", flightMiles: 180, busCost: 70, busHours: 4.5, flightHours: 0.8 },
+      { to: "porto-alegre", flightMiles: 290, busCost: 110, busHours: 7, flightHours: 1.0 }
+    ]
+  },
+  {
+    id: "porto-alegre",
+    name: "Porto Alegre",
+    state: "RS",
+    region: "Sul",
+    lat: -30.0346,
+    lng: -51.2177,
+    isStartingCity: false,
+    tagline: "Tradição dos Pampas",
+    description: "Berço da Revolução Farroupilha e encontro das águas no Guaíba.",
+    thematicFocus: ["Revoltas Coloniais", "Hidrografia", "Literatura Regionalista"],
+    primaryArea: "humanas",
+    hubs: [
+      { id: "usina-gasometro", name: "Usina do Gasômetro", type: "physics", area: "natureza", desc: "Conversão de energia termoelétrica e poluição do ar." },
+      { id: "parque-redencao", name: "Parque da Redenção", type: "history", area: "humanas", desc: "Movimentos sociais, abolicionismo no sul e o gaúcho na República Velha." },
+      { id: "lago-guaiba", name: "Orla do Guaíba", type: "geography", area: "humanas", desc: "Bacias hidrográficas, assoreamento e planejamento contra enchentes." },
+    ],
+    connections: [
+      { to: "florianopolis", flightMiles: 290, busCost: 110, busHours: 7, flightHours: 1.0 },
+      { to: "sao-paulo", flightMiles: 650, busCost: 220, busHours: 16, flightHours: 1.5 }
+    ]
+  },
+  {
+    id: "recife",
+    name: "Recife & Olinda",
+    state: "PE",
+    region: "Nordeste",
+    lat: -8.0476,
+    lng: -34.8770,
+    isStartingCity: false,
+    tagline: "Veneza Brasileira",
+    description: "Invasões holandesas, o frevo e o inovador Porto Digital no coração do Manguebeat.",
+    thematicFocus: ["Invasões Holandesas", "Cultura Popular", "Inovação Tecnológica"],
+    primaryArea: "humanas",
+    hubs: [
+      { id: "marco-zero", name: "Praça do Marco Zero", type: "arts", area: "linguagens", desc: "Movimento Manguebeat, Chico Science e manifestações folclóricas." },
+      { id: "porto-digital", name: "Porto Digital (Ilha do Recife)", type: "tech", area: "matematica", desc: "Estatística do mercado de TI, funções exponenciais e matrizes." },
+      { id: "alto-se", name: "Alto da Sé (Olinda)", type: "history", area: "humanas", desc: "Arquitetura seiscentista, colonização holandesa e Insurreição Pernambucana." },
+    ],
+    connections: [
+      { to: "salvador", flightMiles: 480, busCost: 170, busHours: 12, flightHours: 1.2 },
+      { to: "fortaleza", flightMiles: 450, busCost: 160, busHours: 11, flightHours: 1.2 }
+    ]
+  },
+  {
+    id: "fortaleza",
+    name: "Fortaleza",
+    state: "CE",
+    region: "Nordeste",
+    lat: -3.7172,
+    lng: -38.5431,
+    isStartingCity: false,
+    tagline: "Terra da Luz",
+    description: "Polo pioneiro no abolicionismo e de grande concentração de polos de fibra óptica.",
+    thematicFocus: ["Abolicionismo", "Geografia do Semiárido", "Física Óptica"],
+    primaryArea: "humanas",
+    hubs: [
+      { id: "dragao-do-mar", name: "Centro Dragão do Mar", type: "history", area: "humanas", desc: "Chico da Matilde, pioneirismo na abolição e a seca no sertão nordestino." },
+      { id: "praia-futuro", name: "Praia do Futuro (Hub de Cabos Submarinos)", type: "physics", area: "natureza", desc: "Reflexão total interna, fibra óptica e velocidade de propagação." },
+      { id: "mercado-central-ce", name: "Mercado Central", type: "economy", area: "matematica", desc: "Comércio popular, descontos, lucro e probabilidade." },
+    ],
+    connections: [
+      { to: "recife", flightMiles: 450, busCost: 160, busHours: 11, flightHours: 1.2 },
+      { to: "belem", flightMiles: 750, busCost: 280, busHours: 24, flightHours: 1.8 }
+    ]
+  },
+  {
+    id: "belem",
+    name: "Belém",
+    state: "PA",
+    region: "Norte",
+    lat: -1.4550,
+    lng: -48.4902,
+    isStartingCity: false,
+    tagline: "Portal da Amazônia",
+    description: "O maior mercado a céu aberto da América Latina, o Círio de Nazaré e a riqueza gastronômica.",
+    thematicFocus: ["Botânica Econômica", "Religiosidade", "Clima Equatorial"],
+    primaryArea: "natureza",
+    hubs: [
+      { id: "ver-o-peso", name: "Mercado Ver-o-Peso", type: "biology", area: "natureza", desc: "Botânica aplicada, princípios ativos das plantas e cadeias alimentares." },
+      { id: "basilica-nazare", name: "Basílica de Nazaré", type: "sociology", area: "humanas", desc: "Turismo religioso, sincretismo cultural e dinâmica populacional no Círio." },
+      { id: "estacao-docas", name: "Estação das Docas", type: "chemistry", area: "natureza", desc: "Processamento do açaí, bioquímica dos alimentos e oxidação." },
+    ],
+    connections: [
+      { to: "fortaleza", flightMiles: 750, busCost: 280, busHours: 24, flightHours: 1.8 },
+      { to: "manaus", flightMiles: 800, busCost: 300, busHours: 90, flightHours: 2.0 } // barco/ônibus
+    ]
+  },
+  {
+    id: "cuiaba",
+    name: "Cuiabá",
+    state: "MT",
+    region: "Centro-Oeste",
+    lat: -15.6014,
+    lng: -56.0979,
+    isStartingCity: false,
+    tagline: "Capital do Agronegócio",
+    description: "Portal do Pantanal e centro da expansão da fronteira agrícola brasileira.",
+    thematicFocus: ["Agronegócio", "Bioma Pantanal", "Sustentabilidade"],
+    primaryArea: "humanas",
+    hubs: [
+      { id: "chapadada-guimaraes", name: "Chapada dos Guimarães", type: "geography", area: "humanas", desc: "Relevo de planalto, erosão e bacias sedimentares." },
+      { id: "pantanal-norte", name: "Portal do Pantanal", type: "biology", area: "natureza", desc: "Planície de inundação, nichos ecológicos e impacto das queimadas." },
+      { id: "fazendas-soja", name: "Cinturão da Soja", type: "economy", area: "matematica", desc: "Exportação de commodities, balança comercial e estatística de safra." },
+    ],
+    connections: [
+      { to: "brasilia", flightMiles: 540, busCost: 200, busHours: 14, flightHours: 1.3 },
+      { to: "goiania", flightMiles: 460, busCost: 170, busHours: 12, flightHours: 1.2 }
+    ]
+  },
+  {
+    id: "goiania",
+    name: "Goiânia",
+    state: "GO",
+    region: "Centro-Oeste",
+    lat: -16.6869,
+    lng: -49.2648,
+    isStartingCity: false,
+    tagline: "Berço do Sertanejo",
+    description: "Metrópole planejada, polo de cultura agro e próxima à estância termal de Caldas Novas.",
+    thematicFocus: ["Cultura Regional", "Energia Nuclear (Césio-137)", "Demografia"],
+    primaryArea: "humanas",
+    hubs: [
+      { id: "praca-civica", name: "Praça Cívica", type: "history", area: "humanas", desc: "Marcha para o Oeste na Era Vargas e integração nacional." },
+      { id: "memorial-cesio", name: "Memorial Césio-137", type: "physics", area: "natureza", desc: "Radioatividade, meia-vida, isótopos e desastres ambientais." },
+      { id: "polo-agro", name: "Polo Agroindustrial", type: "chemistry", area: "natureza", desc: "Fertilizantes (NPK), correção de solo (calagem) e agrotóxicos." },
+    ],
+    connections: [
+      { to: "brasilia", flightMiles: 110, busCost: 40, busHours: 3, flightHours: 0.5 },
+      { to: "cuiaba", flightMiles: 460, busCost: 170, busHours: 12, flightHours: 1.2 }
+    ]
   }
 ];

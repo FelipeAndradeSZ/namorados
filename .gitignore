@@ -4,3 +4,17 @@ dist
 *.local
 *.log
 
+# Environment variables (secrets)
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
