@@ -182,7 +182,6 @@ export const loveStory = {
     },
   ],
   trip: {
-    bookingCode: "SRJDZZ",
     origin: {
       code: "RAO",
       city: "Ribeirão Preto",
@@ -197,7 +196,6 @@ export const loveStory = {
     message: "Nossa próxima aventura está chegando!",
   },
   returnTrip: {
-    bookingCode: "SRJDZZ",
     origin: {
       code: "VIX",
       city: "Vitória",

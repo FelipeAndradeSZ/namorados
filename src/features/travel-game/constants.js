@@ -1,0 +1,157 @@
+export const GAME_STAGES = [
+  {
+    id: "rao",
+    name: "Ribeirão Preto",
+    code: "RAO",
+    subtitle: "Decolagem no Interior Paulista",
+    icon: "🛫",
+    range: [0, 35],
+    skyGradient: ["#2b1020", "#5c2434", "#a84b42", "#e88d67"],
+    groundColor: "#26131b",
+    cloudsColor: "rgba(255, 214, 214, 0.45)",
+    landmark: "Interior & Canaviais",
+  },
+  {
+    id: "cgh",
+    name: "São Paulo / Congonhas",
+    code: "CGH",
+    subtitle: "Conexão na Metrópole Iluminada",
+    icon: "🏙️",
+    range: [35, 70],
+    skyGradient: ["#0b0c1e", "#1b1938", "#33224d", "#64335c"],
+    groundColor: "#0f111a",
+    cloudsColor: "rgba(180, 190, 240, 0.35)",
+    landmark: "Skyline Noturno Paulistano",
+  },
+  {
+    id: "vix",
+    name: "Vitória",
+    code: "VIX",
+    subtitle: "Chegada Triunfal ao Paraíso Capixaba",
+    icon: "🌴",
+    range: [70, 100],
+    skyGradient: ["#0c2340", "#184e68", "#2c8a9e", "#f3b97b"],
+    groundColor: "#103138",
+    cloudsColor: "rgba(255, 245, 230, 0.5)",
+    landmark: "Terceira Ponte & Convento da Penha",
+  },
+];
+
+export const CHARACTERS = [
+  {
+    id: "felipe",
+    name: "Felipe",
+    role: "Piloto Romântico",
+    avatar: "🧑‍✈️",
+    badge: "Especialista em Café & Velocidade",
+    color: "#f43f5e",
+    perkText: "Velocidade +15% ao pegar café ☕",
+    speedBonus: 1.15,
+    shieldBonus: 1.0,
+  },
+  {
+    id: "beatriz",
+    name: "Beatriz",
+    role: "Comandante do Coração",
+    avatar: "👩‍⚕️",
+    badge: "Mestre em Proteção & Amor",
+    color: "#ec4899",
+    perkText: "Escudo 🛡️ dura +3s e mais corações 💖",
+    speedBonus: 1.0,
+    shieldBonus: 1.5,
+  },
+];
+
+export const ITEM_TYPES = {
+  HEART: {
+    id: "HEART",
+    name: "Coração de Amor",
+    symbol: "💖",
+    score: 100,
+    color: "#ff3366",
+    size: 26,
+    sound: "heart",
+  },
+  COFFEE: {
+    id: "COFFEE",
+    name: "Café Turbo",
+    symbol: "☕",
+    score: 250,
+    color: "#d97706",
+    size: 24,
+    sound: "turbo",
+    duration: 5000,
+  },
+  SHIELD: {
+    id: "SHIELD",
+    name: "Escudo do Amor",
+    symbol: "🛡️",
+    score: 200,
+    color: "#38bdf8",
+    size: 28,
+    sound: "shield",
+    duration: 6000,
+  },
+  LETTER: {
+    id: "LETTER",
+    name: "Cartinha Apaixonada",
+    symbol: "💌",
+    score: 300,
+    color: "#f472b6",
+    size: 26,
+    sound: "heart",
+  },
+  MOQUECA: {
+    id: "MOQUECA",
+    name: "Moqueca Capixaba",
+    symbol: "🥘",
+    score: 500,
+    color: "#ea580c",
+    size: 30,
+    sound: "special",
+  },
+  SHELL: {
+    id: "SHELL",
+    name: "Concha da Ilha",
+    symbol: "🐚",
+    score: 150,
+    color: "#a7f3d0",
+    size: 22,
+    sound: "heart",
+  },
+};
+
+export const OBSTACLE_TYPES = {
+  CLOUD: {
+    id: "CLOUD",
+    name: "Nuvem de Tempestade",
+    symbol: "⛈️",
+    color: "#475569",
+    size: 44,
+  },
+  BALLOON: {
+    id: "BALLOON",
+    name: "Balão Desgovernado",
+    symbol: "🎈",
+    color: "#ef4444",
+    size: 36,
+  },
+  TURBULENCE: {
+    id: "TURBULENCE",
+    name: "Turbulência Aérea",
+    symbol: "🌪️",
+    color: "#94a3b8",
+    size: 40,
+  },
+  BIRD: {
+    id: "BIRD",
+    name: "Gaivota Costeira",
+    symbol: "🕊️",
+    color: "#f8fafc",
+    size: 32,
+  },
+};
+
+export const INITIAL_LIVES = 3;
+export const TOTAL_FLIGHT_DISTANCE = 10000; // in game distance units
+export const BASE_FLIGHT_SPEED = 2.4;

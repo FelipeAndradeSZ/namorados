@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Clock, Heart, Ticket, Eye, EyeOff } from "lucide-react";
+import { MapPin, Clock, Heart, Ticket, Gamepad2 } from "lucide-react";
 import { loveStory } from "../config/loveStory";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { TripCountdown } from "../features/trip-countdown/TripCountdown";
 import { FlightMap } from "../features/trip-countdown/FlightMap";
+import { useExperience } from "../context/useExperience";
 
 function formatTime(isoDate) {
   const d = new Date(isoDate);
@@ -21,8 +22,8 @@ function formatDate(isoDate) {
 }
 
 export function TripSection() {
+  const { openGame } = useExperience();
   const [activeFlight, setActiveFlight] = useState("ida");
-  const [showBookingCode, setShowBookingCode] = useState(false);
   
   const currentFlight = activeFlight === "ida" ? loveStory.trip : loveStory.returnTrip;
 
@@ -52,7 +53,7 @@ export function TripSection() {
           <div className="immersive-card group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] shadow-2xl shadow-black/10 backdrop-blur-xl">
             <span className="card-sheen pointer-events-none absolute inset-0 z-20" />
 
-            {/* Top bar — booking code & badge */}
+            {/* Top bar — flight badge & tab selector */}
             <div className="flex items-center justify-between border-b border-dashed border-white/10 px-6 py-4 sm:px-8">
               <div className="flex items-center gap-3">
                 <span className="grid size-9 place-items-center rounded-full bg-rose-300/10 text-rose-200">
@@ -60,22 +61,11 @@ export function TripSection() {
                 </span>
                 <div>
                   <p className="text-[0.6rem] font-semibold tracking-[0.2em] text-rose-200/50 uppercase">
-                    Reserva
+                    Cartão de Embarque
                   </p>
-                  <div className="flex items-center gap-2">
-                    <p className="font-display text-lg tracking-wider text-white">
-                      {showBookingCode ? currentFlight.bookingCode : `${(currentFlight.bookingCode || "").slice(0, 2)}••••`}
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => setShowBookingCode((prev) => !prev)}
-                      className="cursor-pointer text-rose-200/40 hover:text-rose-200 transition-colors p-1"
-                      title={showBookingCode ? "Ocultar localizador" : "Revelar localizador"}
-                      aria-label={showBookingCode ? "Ocultar localizador" : "Revelar localizador"}
-                    >
-                      {showBookingCode ? <EyeOff size={14} /> : <Eye size={14} />}
-                    </button>
-                  </div>
+                  <p className="font-display text-lg tracking-wider text-white">
+                    Felipe & Beatriz ✈️
+                  </p>
                 </div>
               </div>
               
@@ -168,12 +158,42 @@ export function TripSection() {
           </div>
         </motion.div>
 
+        {/* Interactive Flight Game CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mx-auto mt-10 flex flex-col sm:flex-row items-center justify-between gap-5 rounded-3xl border border-rose-300/25 bg-gradient-to-r from-rose-500/15 via-pink-500/10 to-amber-500/15 p-6 backdrop-blur-xl shadow-xl"
+        >
+          <div className="flex items-center gap-4 text-left">
+            <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-rose-500/20 text-rose-300 border border-rose-300/30">
+              <Gamepad2 size={24} />
+            </span>
+            <div>
+              <p className="font-display text-base sm:text-lg font-bold text-white">
+                Expedição a Bordo: Rumo a Vitória ✈️
+              </p>
+              <p className="text-xs text-rose-200/70 mt-0.5">
+                Que tal pilotar nosso avião de Ribeirão Preto a Vitória agora mesmo e desviar das tempestades?
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={openGame}
+            className="shrink-0 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 px-6 py-3 text-xs font-bold text-white shadow-lg shadow-rose-500/25 hover:scale-105 transition-all cursor-pointer flex items-center gap-2"
+          >
+            <span>Jogar Agora</span>
+            <span>🛫</span>
+          </button>
+        </motion.div>
+
         {/* Bottom motivational banner */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="mx-auto mt-10 flex max-w-3xl items-center justify-center gap-3 rounded-full border border-rose-100/10 bg-rose-100/[0.04] px-6 py-4 text-center text-sm text-rose-100/55 backdrop-blur-xl"
+          className="mx-auto mt-6 flex max-w-3xl items-center justify-center gap-3 rounded-full border border-rose-100/10 bg-rose-100/[0.04] px-6 py-4 text-center text-sm text-rose-100/55 backdrop-blur-xl"
         >
           <Heart
             size={14}

@@ -5,34 +5,34 @@ import { ExperienceContext } from "./experience-context";
 export function ExperienceProvider({ children }) {
   const [hasEntered, setHasEntered] = useState(false);
   const [effectsEnabled, setEffectsEnabled] = useState(true);
-  const [isWorld3DOpen, setIsWorld3DOpen] = useState(false);
+  const [isGameOpen, setIsGameOpen] = useState(false);
 
   const enterExperience = useCallback(() => setHasEntered(true), []);
   const resetExperience = useCallback(() => setHasEntered(false), []);
   const toggleEffects = useCallback(() => setEffectsEnabled((current) => !current), []);
-  const openWorld3D = useCallback(() => setIsWorld3DOpen(true), []);
-  const closeWorld3D = useCallback(() => setIsWorld3DOpen(false), []);
+  const openGame = useCallback(() => setIsGameOpen(true), []);
+  const closeGame = useCallback(() => setIsGameOpen(false), []);
 
   const value = useMemo(
     () => ({
       hasEntered,
       effectsEnabled,
-      isWorld3DOpen,
+      isGameOpen,
       enterExperience,
       resetExperience,
       toggleEffects,
-      openWorld3D,
-      closeWorld3D,
+      openGame,
+      closeGame,
     }),
     [
       effectsEnabled,
       hasEntered,
-      isWorld3DOpen,
+      isGameOpen,
       enterExperience,
       resetExperience,
       toggleEffects,
-      openWorld3D,
-      closeWorld3D,
+      openGame,
+      closeGame,
     ],
   );
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Heart, Menu, Pause, Sparkles, X } from "lucide-react";
+import { Gamepad2, Heart, Menu, Pause, Sparkles, X } from "lucide-react";
 import { loveStory } from "../../config/loveStory";
 import { useExperience } from "../../context/useExperience";
 
@@ -15,13 +15,13 @@ const links = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { effectsEnabled, toggleEffects, openWorld3D } = useExperience();
+  const { effectsEnabled, toggleEffects, openGame } = useExperience();
 
   const closeMenu = () => setIsOpen(false);
 
-  const handleOpen3D = () => {
+  const handleOpenGame = () => {
     closeMenu();
-    openWorld3D?.();
+    openGame?.();
   };
 
   return (
@@ -77,14 +77,14 @@ export function Navigation() {
               {effectsEnabled ? <Pause size={15} /> : <Sparkles size={16} />}
             </button>
 
-            {/* Botão Elegante para Entrar no Mundo 3D */}
+            {/* Botão Elegante para Entrar no Jogo da Viagem */}
             <button
               type="button"
-              onClick={handleOpen3D}
-              className="group relative flex items-center gap-2 rounded-full border border-rose-300/30 bg-gradient-to-r from-rose-500/20 to-pink-500/20 px-4 py-2.5 text-xs font-semibold tracking-wide text-rose-100 shadow-[0_0_20px_rgba(244,63,94,0.2)] backdrop-blur-md transition-all hover:scale-105 hover:border-rose-300 hover:bg-rose-500/30"
+              onClick={handleOpenGame}
+              className="group relative flex items-center gap-2 rounded-full border border-rose-300/30 bg-gradient-to-r from-rose-500/20 via-pink-500/20 to-purple-500/20 px-4 py-2.5 text-xs font-semibold tracking-wide text-rose-100 shadow-[0_0_20px_rgba(244,63,94,0.2)] backdrop-blur-md transition-all hover:scale-105 hover:border-rose-300 hover:bg-rose-500/30 cursor-pointer"
             >
-              <Sparkles size={14} className="text-rose-300 animate-pulse" />
-              <span>Mundo 3D</span>
+              <Gamepad2 size={14} className="text-rose-300 animate-pulse" />
+              <span>Jogo da Viagem</span>
             </button>
 
             <a
@@ -116,16 +116,16 @@ export function Navigation() {
             className="fixed inset-0 z-[60] grid place-items-center bg-[#100810]/95 px-8 backdrop-blur-2xl md:hidden"
           >
             <div className="flex flex-col items-center gap-8">
-              {/* Opção Mundo 3D no menu Mobile */}
+              {/* Opção Jogo da Viagem no menu Mobile */}
               <motion.button
                 type="button"
-                onClick={handleOpen3D}
+                onClick={handleOpenGame}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="font-display text-4xl text-rose-300 flex items-center gap-3"
+                className="font-display text-3xl sm:text-4xl text-rose-300 flex items-center gap-3 cursor-pointer"
               >
-                <Sparkles size={28} />
-                <span>Nosso Mundo 3D</span>
+                <Gamepad2 size={28} />
+                <span>Jogo da Viagem ✈️</span>
               </motion.button>
 
               {links.map((link, index) => (

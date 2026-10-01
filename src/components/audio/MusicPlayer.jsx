@@ -8,11 +8,11 @@ import { loveStory } from "../../config/loveStory";
  * Player de Música Ambiente / Trilha Sonora Romântica
  * - Suporta arquivo de áudio via loveStory.soundtrack.url
  * - Fallback inteligente com sintetizador Web Audio API de acordes suaves (funciona 100% offline!)
- * - Pausa automaticamente ao entrar no Mundo 3D
+ * - Pausa automaticamente ao entrar no Jogo da Viagem
  * - Respeita as políticas de autoplay dos navegadores (ativa no primeiro clique)
  */
 export function MusicPlayer() {
-  const { isWorld3DOpen } = useExperience();
+  const { isGameOpen } = useExperience();
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -110,19 +110,19 @@ export function MusicPlayer() {
     }
   };
 
-  // Pausa música ao abrir o Mundo 3D
+  // Pausa música ao abrir o Jogo da Viagem
   useEffect(() => {
-    if (isWorld3DOpen && isPlaying) {
+    if (isGameOpen && isPlaying) {
       if (audioRef.current) audioRef.current.pause();
       stopAmbientSynth();
-    } else if (!isWorld3DOpen && isPlaying) {
+    } else if (!isGameOpen && isPlaying) {
       if (track.url && audioRef.current) {
         audioRef.current.play().catch(() => startAmbientSynth());
       } else {
         startAmbientSynth();
       }
     }
-  }, [isWorld3DOpen, isPlaying, track.url, startAmbientSynth, stopAmbientSynth]);
+  }, [isGameOpen, isPlaying, track.url, startAmbientSynth, stopAmbientSynth]);
 
   useEffect(() => {
     return () => {
