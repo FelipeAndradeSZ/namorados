@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   MapPin, 
@@ -7,10 +7,12 @@ import {
   Compass, 
   Sparkles, 
   AlertCircle,
-  BookOpen
+  BookOpen,
+  Sword
 } from "lucide-react";
 import { BRAZIL_CITIES } from "../content/citiesData";
 import { destinoAudio } from "../core/soundEngine";
+import { contentEngine } from "../core/contentEngine";
 
 export function MapExplorer({ 
   playerState, 
@@ -20,10 +22,19 @@ export function MapExplorer({
   const currentCityId = playerState.location.currentCityId || "vitoria";
   const [selectedCityId, setSelectedCityId] = useState(currentCityId);
   const [travelError, setTravelError] = useState(null);
+  const [cityMissions, setCityMissions] = useState([]);
 
   const currentCity = BRAZIL_CITIES.find(c => c.id === currentCityId);
   const selectedCity = BRAZIL_CITIES.find(c => c.id === selectedCityId) || currentCity;
   const isCurrentCity = selectedCity.id === currentCityId;
+
+  useEffect(() => {
+    let active = true;
+    contentEngine.getMissionsForCity(selectedCity.id).then(missions => {
+      if (active) setCityMissions(missions);
+    });
+    return () => { active = false; };
+  }, [selectedCity.id]);
 
   // Verifica se há conexão direta entre a cidade atual e a selecionada
   const directConnection = currentCity?.connections.find(conn => conn.to === selectedCity.id);
@@ -195,6 +206,47 @@ export function MapExplorer({
               ))}
             </div>
           </div>
+
+          {/* Missões Narrativas */}
+          {cityMissions.length > 0 && (
+            <div className="mb-5 border-t border-white/10 pt-4">
+              <h4 className="text-xs font-semibold text-white mb-2.5 flex items-center gap-1.5">
+                <Sword size={14} className="text-rose-300" />
+                <span>Missões Narrativas</span>
+              </h4>
+              <div className="flex flex-col gap-2">
+                {cityMissions.map((mission) => {
+                  const isBoss = mission.difficulty === "Boss" || mission.id.includes("boss");
+                  return (
+                    <button 
+                      key={mission.id} 
+                      onClick={() => onSelectCityForStudy(selectedCity.id, mission)}
+                      className={`text-left rounded-xl border p-2.5 transition cursor-pointer hover:scale-[1.02] ${
+                        isBoss 
+                          ? "border-amber-500/50 bg-gradient-to-r from-amber-950/40 to-transparent hover:border-amber-400" 
+                          : "border-white/5 bg-gradient-to-r from-rose-950/20 to-transparent hover:border-rose-500/30"
+                      }`}
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className={`text-xl ${isBoss ? "animate-pulse" : ""}`}>{mission.icon}</span>
+                        <div>
+                          <strong className={`text-xs block leading-tight ${isBoss ? "text-amber-400 font-black" : "text-white"}`}>
+                            {mission.title}
+                          </strong>
+                          <span className="text-[0.6rem] font-bold uppercase text-amber-400">
+                            XP: {mission.rewards.xp} • Milhas: {mission.rewards.milhas}
+                          </span>
+                        </div>
+                      </div>
+                      <p className={`text-[0.65rem] leading-tight ${isBoss ? "text-amber-200/80" : "text-rose-200/60"}`}>
+                        {mission.description}
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Ações: Estudar na Cidade Atual OU Viajar para Cidade Selecionada */}
           <div className="border-t border-white/10 pt-4">

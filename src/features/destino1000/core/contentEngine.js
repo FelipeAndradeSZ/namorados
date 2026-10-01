@@ -10,7 +10,7 @@
  * O Content Engine NUNCA modifica questões — é read-only.
  */
 
-import { QUESTION_MODULES, CONTENT_METADATA } from "../content/registry";
+import { QUESTION_MODULES, CONTENT_METADATA, MISSION_MODULES } from "../content/registry";
 
 class ContentEngine {
   constructor() {

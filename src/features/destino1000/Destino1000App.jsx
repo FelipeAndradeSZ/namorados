@@ -60,13 +60,24 @@ export default function Destino1000App({ onBack }) {
   }, []);
 
   // Selecionar cidade para iniciar expedição de estudos
-  const handleSelectCityForStudy = async (cityId) => {
+  const handleSelectCityForStudy = async (cityId, mission = null) => {
     setIsLoading(true);
-    // Filtra questões prioritárias para a cidade
-    const cityQuestions = await contentEngine.getQuestionsForCity(cityId);
+    
+    let questionsToRun = [];
+
+    if (mission && mission.questionQuery) {
+      questionsToRun = await contentEngine.getRandomQuestions(mission.questionQuery.count || 5, {
+        area: mission.questionQuery.area,
+        topic: mission.questionQuery.topic
+      });
+    }
+
+    if (questionsToRun.length === 0) {
+      const cityQuestions = await contentEngine.getQuestionsForCity(cityId);
+      questionsToRun = cityQuestions;
+    }
     
     // Se a cidade ainda não tiver questões, pega um mix aleatório
-    let questionsToRun = cityQuestions;
     if (questionsToRun.length === 0) {
       questionsToRun = await contentEngine.getRandomQuestions(10);
     }
@@ -94,6 +105,26 @@ export default function Destino1000App({ onBack }) {
     }
 
     setActiveSessionQuestions(quickPool);
+    setActiveQuestionIndex(0);
+    setActiveTab("estudo");
+    setIsLoading(false);
+  };
+
+  // Modo Simulado
+  const handleSimuladoSession = async (count = 10) => {
+    destinoAudio.playClick();
+    setIsLoading(true);
+    
+    const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
+    
+    let simuladoPool = await contentEngine.getRandomQuestions(count, { excludeIds: seenIds });
+    
+    if (simuladoPool.length < count) {
+       const fallback = await contentEngine.getRandomQuestions(count);
+       simuladoPool = fallback;
+    }
+
+    setActiveSessionQuestions(simuladoPool);
     setActiveQuestionIndex(0);
     setActiveTab("estudo");
     setIsLoading(false);
@@ -316,7 +347,10 @@ export default function Destino1000App({ onBack }) {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <AnalyticsDashboard playerState={playerState} />
+              <AnalyticsDashboard 
+                playerState={playerState} 
+                onStartSimulado={handleSimuladoSession}
+              />
             </motion.div>
           )}
         </AnimatePresence>

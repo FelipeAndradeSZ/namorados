@@ -19,32 +19,32 @@ export const QUESTION_MODULES = {
   "matematica/porcentagem": () => import("./questions/matematica/porcentagem.js"),
   "matematica/estatistica": () => import("./questions/matematica/estatistica.js"),
   "matematica/geometria": () => import("./questions/matematica/geometria.js"),
-  // "matematica/funcoes": () => import("./questions/matematica/funcoes.js"),
-  // "matematica/probabilidade": () => import("./questions/matematica/probabilidade.js"),
-  // "matematica/financeira": () => import("./questions/matematica/financeira.js"),
-  // "matematica/razao-proporcao": () => import("./questions/matematica/razao-proporcao.js"),
+  "matematica/funcoes": () => import("./questions/matematica/funcoes.js"),
+  "matematica/probabilidade": () => import("./questions/matematica/probabilidade.js"),
+  "matematica/financeira": () => import("./questions/matematica/financeira.js"),
+  "matematica/razao-proporcao": () => import("./questions/matematica/razao-proporcao.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
   "linguagens/literatura": () => import("./questions/linguagens/literatura.js"),
   "linguagens/generos": () => import("./questions/linguagens/generos.js"),
   "linguagens/argumentacao": () => import("./questions/linguagens/argumentacao.js"),
-  // "linguagens/recursos-linguisticos": () => import("./questions/linguagens/recursos-linguisticos.js"),
+  "linguagens/recursos-linguisticos": () => import("./questions/linguagens/recursos-linguisticos.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
-  // "humanas/brasil-republica": () => import("./questions/humanas/brasil-republica.js"),
+  "humanas/brasil-republica": () => import("./questions/humanas/brasil-republica.js"),
   "humanas/geografia-urbana": () => import("./questions/humanas/geografia-urbana.js"),
-  // "humanas/sociologia-filosofia": () => import("./questions/humanas/sociologia-filosofia.js"),
-  // "humanas/meio-ambiente": () => import("./questions/humanas/meio-ambiente.js"),
+  "humanas/sociologia-filosofia": () => import("./questions/humanas/sociologia-filosofia.js"),
+  "humanas/meio-ambiente": () => import("./questions/humanas/meio-ambiente.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),
   "natureza/mecanica": () => import("./questions/natureza/mecanica.js"),
-  // "natureza/estequiometria": () => import("./questions/natureza/estequiometria.js"),
-  // "natureza/genetica": () => import("./questions/natureza/genetica.js"),
-  // "natureza/eletricidade": () => import("./questions/natureza/eletricidade.js"),
-  // "natureza/termoquimica": () => import("./questions/natureza/termoquimica.js"),
+  "natureza/estequiometria": () => import("./questions/natureza/estequiometria.js"),
+  "natureza/genetica": () => import("./questions/natureza/genetica.js"),
+  "natureza/eletricidade": () => import("./questions/natureza/eletricidade.js"),
+  "natureza/termoquimica": () => import("./questions/natureza/termoquimica.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),
@@ -71,10 +71,18 @@ export const CITY_MODULES = {
 export const MISSION_MODULES = {
   vitoria: () => import("./missions/vitoria.js"),
   "sao-paulo": () => import("./missions/sao-paulo.js"),
-  // "rio-de-janeiro": () => import("./missions/rio-de-janeiro.js"),
-  // brasilia: () => import("./missions/brasilia.js"),
-  // salvador: () => import("./missions/salvador.js"),
-  // manaus: () => import("./missions/manaus.js"),
+  belem: () => import("./missions/belem.js"),
+  cuiaba: () => import("./missions/cuiaba.js"),
+  goiania: () => import("./missions/goiania.js"),
+  curitiba: () => import("./missions/curitiba.js"),
+  florianopolis: () => import("./missions/florianopolis.js"),
+  "porto-alegre": () => import("./missions/porto-alegre.js"),
+  recife: () => import("./missions/recife.js"),
+  fortaleza: () => import("./missions/fortaleza.js"),
+  "rio-de-janeiro": () => import("./missions/rio-de-janeiro.js"),
+  brasilia: () => import("./missions/brasilia.js"),
+  salvador: () => import("./missions/salvador.js"),
+  manaus: () => import("./missions/manaus.js"),
 };
 
 // ─────────────────────────────────────────────

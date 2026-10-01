@@ -52,5 +52,29 @@ export const MISSIONS_SAOPAULO = [
       success: "Você desvendou as intenções modernistas e compreendeu as ironias da carta perfeitamente!",
       failure: "Os textos pareciam confusos. O modernismo fugiu do seu domínio. Hora de revisar figuras de linguagem."
     }
+  },
+  {
+    id: "boss-sp",
+    cityId: "sao-paulo",
+    title: "BOSS: Mestre da Matemática",
+    description: "Desafio Final de Matemática! Um mega-teste de lógica, estatística, proporção e funções.",
+    icon: "🧮",
+    difficulty: "Boss",
+    estimatedTime: 45,
+    rewards: {
+      xp: 2000,
+      milhas: 1000,
+      reais: 800,
+      item: "Troféu de Ouro: Pitágoras"
+    },
+    questionQuery: {
+      area: "matematica",
+      count: 10
+    },
+    narrative: {
+      start: "O céu de São Paulo escurece. O trânsito para. Uma projeção holográfica gigante do Mestre da Matemática aparece no Masp. 'Apenas quem dominar os números passará!'",
+      success: "Você dominou as equações e o Mestre se curvou diante da sua genialidade matemática!",
+      failure: "Os cálculos falharam e a cidade parou num engarrafamento caótico. Volte e treine mais!"
+    }
   }
 ];
