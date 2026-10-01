@@ -1,7 +1,7 @@
-import { Volume2, VolumeX, ArrowLeft, Compass } from "lucide-react";
+import { Volume2, VolumeX, ArrowLeft } from "lucide-react";
 import { getLevelInfo } from "../core/gameState";
 
-export function HUD({ playerState, activeCity, onBack, isMuted, onToggleMute }) {
+export function HUD({ playerState, onBack, isMuted, onToggleMute }) {
   const levelInfo = getLevelInfo(playerState.profile.currentXP);
 
   return (
@@ -45,40 +45,31 @@ export function HUD({ playerState, activeCity, onBack, isMuted, onToggleMute }) 
           </div>
         </div>
 
-        {/* Centro / Direita: Recursos de Viagem & Cidade Atual */}
+        {/* Centro / Direita: Recursos de Estudo & Foco */}
         <div className="flex items-center gap-1.5 sm:gap-3">
           
-          {/* Cidade Atual */}
-          <div className="hidden md:flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-rose-100">
-            <Compass size={14} className="text-rose-400" />
-            <span className="font-medium">{activeCity?.name || "Vitória"}</span>
+          {/* Badge de Meta */}
+          <div className="hidden md:flex items-center gap-1.5 rounded-xl border border-rose-500/20 bg-rose-500/10 px-2.5 py-1 text-xs text-rose-200">
+            <span>🩺</span>
+            <span className="font-semibold">Meta: Medicina ENEM</span>
           </div>
 
-          {/* Sequência de Estudo */}
+          {/* Sequência de Estudo (Streak) */}
           <div 
             className="flex items-center gap-1 rounded-xl border border-amber-500/20 bg-amber-500/10 px-2 py-1 text-xs font-semibold text-amber-300"
-            title="Sequência de dias estudando"
+            title="Sequência de dias consecutivos estudando"
           >
             <span>🔥</span>
             <span>{playerState.profile.streakDays}d</span>
           </div>
 
-          {/* Milhas de Voo */}
+          {/* XP de Aprendizado */}
           <div 
             className="flex items-center gap-1 rounded-xl border border-sky-500/20 bg-sky-500/10 px-2 py-1 text-xs font-semibold text-sky-300"
-            title="Milhas acumuladas com aprendizagem"
+            title="Pontos de experiência acumulados com estudos"
           >
-            <span>✈️</span>
-            <span>{playerState.economy.milhas}</span>
-          </div>
-
-          {/* Saldo R$ */}
-          <div 
-            className="flex items-center gap-1 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-2 py-1 text-xs font-semibold text-emerald-300"
-            title="Orçamento para hospedagem e passagens"
-          >
-            <span>R$</span>
-            <span>{playerState.economy.saldoReais.toFixed(0)}</span>
+            <span>⚡</span>
+            <span>{playerState.profile.currentXP} XP</span>
           </div>
 
           {/* Áudio Mudo */}

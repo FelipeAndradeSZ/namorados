@@ -1,23 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Compass, 
-  BookOpen, 
   PenTool, 
-  Bookmark, 
-  BarChart3
+  BarChart3, 
+  GraduationCap, 
+  Target
 } from "lucide-react";
 
 import { HUD } from "./ui/HUD";
-import { MapExplorer } from "./ui/MapExplorer";
+import { AreaStudyHub } from "./ui/AreaStudyHub";
 import { StudyStation } from "./ui/StudyStation";
 import { RedacaoLab } from "./ui/RedacaoLab";
-import { InventoryView } from "./ui/InventoryView";
 import { AnalyticsDashboard } from "./ui/AnalyticsDashboard";
-import { StudyDashboard } from "./ui/StudyDashboard";
-import { Home } from "lucide-react";
 
-import { BRAZIL_CITIES } from "./content/citiesData";
 import { contentEngine } from "./core/contentEngine";
 import { saveAttempt } from "./core/indexedDB";
 import { loadPlayerState, savePlayerState } from "./core/storageSync";
@@ -30,14 +25,11 @@ import { destinoAudio } from "./core/soundEngine";
 
 export default function Destino1000App({ onBack }) {
   const [playerState, setPlayerState] = useState(() => loadPlayerState());
-  const [activeTab, setActiveTab] = useState("inicio"); // 'inicio' | 'trilha' | 'estudo' | 'redacao' | 'mochila' | 'evolucao'
+  const [activeTab, setActiveTab] = useState("areas"); // 'areas' | 'simulados' | 'estudo' | 'redacao' | 'evolucao'
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
   const [activeSessionQuestions, setActiveSessionQuestions] = useState([]);
   const [isMuted, setIsMuted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  // Cidade ativa
-  const activeCity = BRAZIL_CITIES.find(c => c.id === playerState.location.currentCityId) || BRAZIL_CITIES[0];
 
   // Auto-save sempre que o estado mudar
   useEffect(() => {
@@ -60,29 +52,27 @@ export default function Destino1000App({ onBack }) {
   }, []);
 
   // Selecionar cidade para iniciar expedição de estudos
-  const handleSelectCityForStudy = async (cityId, mission = null) => {
+  // Iniciar sessão focada em um módulo / tópico específico
+  const handleStartTopicSession = async (modulePath) => {
+    destinoAudio.playClick();
     setIsLoading(true);
-    
-    let questionsToRun = [];
 
-    if (mission && mission.questionQuery) {
-      questionsToRun = await contentEngine.getRandomQuestions(mission.questionQuery.count || 5, {
-        area: mission.questionQuery.area,
-        topic: mission.questionQuery.topic
-      });
+    try {
+      const questions = await contentEngine.loadModule(modulePath);
+      if (questions && questions.length > 0) {
+        setActiveSessionQuestions(questions);
+      } else {
+        // Fallback para perguntas da área
+        const [area] = modulePath.split("/");
+        const areaQs = await contentEngine.getQuestionsForArea(area);
+        setActiveSessionQuestions(areaQs.slice(0, 10));
+      }
+    } catch (e) {
+      console.error("Erro ao carregar módulo:", e);
+      const fallback = await contentEngine.getRandomQuestions(10);
+      setActiveSessionQuestions(fallback);
     }
 
-    if (questionsToRun.length === 0) {
-      const cityQuestions = await contentEngine.getQuestionsForCity(cityId);
-      questionsToRun = cityQuestions;
-    }
-    
-    // Se a cidade ainda não tiver questões, pega um mix aleatório
-    if (questionsToRun.length === 0) {
-      questionsToRun = await contentEngine.getRandomQuestions(10);
-    }
-    
-    setActiveSessionQuestions(questionsToRun);
     setActiveQuestionIndex(0);
     setActiveTab("estudo");
     setIsLoading(false);
@@ -99,7 +89,6 @@ export default function Destino1000App({ onBack }) {
     let quickPool = await contentEngine.getRandomQuestions(count, { excludeIds: seenIds });
     
     if (quickPool.length < count) {
-       // Se faltar questão inédita, repete algumas
        const fallback = await contentEngine.getRandomQuestions(count);
        quickPool = fallback;
     }
@@ -128,29 +117,6 @@ export default function Destino1000App({ onBack }) {
     setActiveQuestionIndex(0);
     setActiveTab("estudo");
     setIsLoading(false);
-  };
-
-  // Viagem entre capitais
-  const handleTravelToCity = (destinationCityId, { costReais = 0, costMiles = 0 }) => {
-    setPlayerState(prev => {
-      const visited = prev.location.visitedCities.includes(destinationCityId)
-        ? prev.location.visitedCities
-        : [...prev.location.visitedCities, destinationCityId];
-
-      return {
-        ...prev,
-        economy: {
-          ...prev.economy,
-          saldoReais: Math.max(0, prev.economy.saldoReais - costReais),
-          milhas: Math.max(0, prev.economy.milhas - costMiles),
-        },
-        location: {
-          ...prev.location,
-          currentCityId: destinationCityId,
-          visitedCities: visited
-        }
-      };
-    });
   };
 
   // Processar resposta da questão
@@ -220,7 +186,6 @@ export default function Destino1000App({ onBack }) {
       {/* Top HUD */}
       <HUD 
         playerState={playerState} 
-        activeCity={activeCity}
         onBack={onBack}
         isMuted={isMuted}
         onToggleMute={handleToggleMute}
@@ -229,35 +194,33 @@ export default function Destino1000App({ onBack }) {
       {/* Área Central Rolável */}
       <main className="flex-1 overflow-y-auto pb-24 pt-2">
         <AnimatePresence mode="wait">
-          {activeTab === "inicio" && (
+          {activeTab === "areas" && (
             <motion.div
-              key="inicio"
+              key="areas"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <StudyDashboard 
-                playerState={playerState}
+              <AreaStudyHub 
+                onStartTopicSession={handleStartTopicSession}
+                onGoToRedacao={() => setActiveTab("redacao")}
                 onStartQuickSession={handleQuickSession}
-                onStartSimulado={handleSimuladoSession}
-                onGoToTrilha={() => setActiveTab("trilha")}
               />
             </motion.div>
           )}
 
-          {activeTab === "trilha" && (
+          {activeTab === "simulados" && (
             <motion.div
-              key="trilha"
+              key="simulados"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <MapExplorer 
-                playerState={playerState}
-                onSelectCityForStudy={handleSelectCityForStudy}
-                onTravelToCity={handleTravelToCity}
+              <AnalyticsDashboard 
+                playerState={playerState} 
+                onStartSimulado={handleSimuladoSession}
               />
             </motion.div>
           )}
@@ -274,7 +237,7 @@ export default function Destino1000App({ onBack }) {
               {isLoading ? (
                 <div className="flex flex-col items-center justify-center h-[50vh] text-rose-300">
                   <div className="w-8 h-8 border-4 border-rose-500/30 border-t-rose-500 rounded-full animate-spin mb-4" />
-                  <p className="text-sm">Carregando expedição...</p>
+                  <p className="text-sm">Carregando conteúdo e questões do ENEM...</p>
                 </div>
               ) : currentQuestion ? (
                 <StudyStation 
@@ -285,19 +248,19 @@ export default function Destino1000App({ onBack }) {
                     if (activeQuestionIndex < activeSessionQuestions.length - 1) {
                       setActiveQuestionIndex(prev => prev + 1);
                     } else {
-                      setActiveTab("inicio");
+                      setActiveTab("areas");
                     }
                   }}
                   isLastQuestion={activeQuestionIndex >= activeSessionQuestions.length - 1}
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center h-[50vh] text-white/50 px-6 text-center">
-                  <p className="mb-4">Não há questões disponíveis nesta expedição ainda.</p>
+                  <p className="mb-4">Não há questões disponíveis para este filtro no momento.</p>
                   <button 
-                    onClick={() => setActiveTab("inicio")}
-                    className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition"
+                    onClick={() => setActiveTab("areas")}
+                    className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition cursor-pointer text-white font-semibold"
                   >
-                    Voltar para o Mapa
+                    Voltar para as Áreas do ENEM
                   </button>
                 </div>
               )}
@@ -313,18 +276,6 @@ export default function Destino1000App({ onBack }) {
               transition={{ duration: 0.25 }}
             >
               <RedacaoLab />
-            </motion.div>
-          )}
-
-          {activeTab === "mochila" && (
-            <motion.div
-              key="mochila"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.25 }}
-            >
-              <InventoryView playerState={playerState} />
             </motion.div>
           )}
 
@@ -345,44 +296,33 @@ export default function Destino1000App({ onBack }) {
         </AnimatePresence>
       </main>
 
-      {/* Barra Inferior de Navegação (Bottom Navigation Bar) - Mobile-First */}
+      {/* Barra Inferior de Navegação - Focada em Estudos do ENEM */}
       <nav 
-        aria-label="Navegação do Jogo Destino 1000"
+        aria-label="Navegação da Plataforma ENEM"
         className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#100810]/95 px-3 py-2 backdrop-blur-2xl"
       >
         <div className="mx-auto flex max-w-lg items-center justify-around">
           
           <button
             type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("inicio"); }}
+            onClick={() => { destinoAudio.playClick(); setActiveTab("areas"); }}
             className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "inicio" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              activeTab === "areas" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
             }`}
           >
-            <Home size={20} />
-            <span className="text-[0.65rem]">Início</span>
+            <GraduationCap size={20} />
+            <span className="text-[0.65rem]">Áreas ENEM</span>
           </button>
 
           <button
             type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("trilha"); }}
+            onClick={() => { destinoAudio.playClick(); setActiveTab("simulados"); }}
             className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "trilha" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              activeTab === "simulados" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
             }`}
           >
-            <Compass size={20} />
-            <span className="text-[0.65rem]">Trilha</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("estudo"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "estudo" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <BookOpen size={20} />
-            <span className="text-[0.65rem]">Sessão</span>
+            <Target size={20} />
+            <span className="text-[0.65rem]">Simulados</span>
           </button>
 
           <button
@@ -393,18 +333,7 @@ export default function Destino1000App({ onBack }) {
             }`}
           >
             <PenTool size={20} />
-            <span className="text-[0.65rem]">Redação</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("mochila"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "mochila" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <Bookmark size={20} />
-            <span className="text-[0.65rem]">Mochila</span>
+            <span className="text-[0.65rem]">Redação 1000</span>
           </button>
 
           <button
@@ -415,7 +344,7 @@ export default function Destino1000App({ onBack }) {
             }`}
           >
             <BarChart3 size={20} />
-            <span className="text-[0.65rem]">Evolução</span>
+            <span className="text-[0.65rem]">Desempenho</span>
           </button>
 
         </div>
