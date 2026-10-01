@@ -139,7 +139,9 @@ export function FlightMap({ direction = "ida" }) {
     }).addTo(map);
 
     // Animation
-    let animFrameId;
+    let animFrameId = null;
+    let startTimerId = null;
+    let isDestroyed = false;
     let progress = 0;
     const speed = 0.003;
     const pauseDuration = 2000;
@@ -147,6 +149,8 @@ export function FlightMap({ direction = "ida" }) {
     let started = false;
 
     function animate() {
+      if (isDestroyed) return;
+
       if (pauseStart !== null) {
         if (Date.now() - pauseStart < pauseDuration) {
           animFrameId = requestAnimationFrame(animate);
@@ -177,10 +181,11 @@ export function FlightMap({ direction = "ida" }) {
     // Start animation when visible
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !started) {
+        if (entry.isIntersecting && !started && !isDestroyed) {
           started = true;
           // Small delay to let tiles load
-          setTimeout(() => {
+          startTimerId = setTimeout(() => {
+            if (isDestroyed || !mapRef.current) return;
             map.invalidateSize();
             animate();
           }, 300);
@@ -188,10 +193,14 @@ export function FlightMap({ direction = "ida" }) {
       },
       { threshold: 0.2 },
     );
-    observer.observe(containerRef.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
     return () => {
+      isDestroyed = true;
       observer.disconnect();
+      if (startTimerId) clearTimeout(startTimerId);
       if (animFrameId) cancelAnimationFrame(animFrameId);
       map.remove();
       mapRef.current = null;

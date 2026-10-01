@@ -4,7 +4,11 @@ import { ExperienceContext } from "./experience-context";
 
 export function ExperienceProvider({ children }) {
   const [hasEntered, setHasEntered] = useState(false);
-  const [effectsEnabled, setEffectsEnabled] = useState(true);
+  // A11Y-08 FIX: Respeitar prefers-reduced-motion do sistema operacional
+  const [effectsEnabled, setEffectsEnabled] = useState(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return true;
+    return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  });
   const [isGameOpen, setIsGameOpen] = useState(false);
 
   const enterExperience = useCallback(() => setHasEntered(true), []);
@@ -39,7 +43,7 @@ export function ExperienceProvider({ children }) {
   return (
     <ExperienceContext.Provider value={value}>
       <MotionConfig
-        reducedMotion={effectsEnabled ? "never" : "always"}
+        reducedMotion={effectsEnabled ? "user" : "always"}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
         {children}

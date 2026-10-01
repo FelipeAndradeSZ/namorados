@@ -44,6 +44,9 @@ jobs:
       - name: Lint and Code Quality Check
         run: npm run lint
 
+      - name: Security Audit (SAST Dependencies)
+        run: npm audit --audit-level=critical
+
       - name: Build
         run: npm run build
 

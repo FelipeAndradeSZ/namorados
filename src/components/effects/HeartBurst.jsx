@@ -57,6 +57,7 @@ export function HeartBurst() {
           whileHover={{ scale: 1.08 }}
           className="group flex items-center gap-2 rounded-full border border-rose-300/30 bg-gradient-to-r from-rose-500/25 to-pink-500/25 px-4 py-2.5 text-xs font-semibold text-rose-100 shadow-[0_4px_25px_rgba(244,63,94,0.3)] backdrop-blur-xl transition-all cursor-pointer hover:border-rose-300 hover:bg-rose-500/40"
           title="Toque para enviar amor"
+          aria-label={`Toque para enviar amor. Total acumulado: ${heartCount}`}
         >
           <motion.span
             animate={{ scale: [1, 1.25, 1] }}

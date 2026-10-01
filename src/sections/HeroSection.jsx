@@ -174,6 +174,9 @@ export function HeroSection() {
                 src={loveStory.hero.image}
                 alt="Felipe e Beatriz juntos"
                 fetchPriority="high"
+                decoding="async"
+                width="480"
+                height="600"
                 style={{ objectPosition: loveStory.hero.imagePosition }}
                 className="h-full w-full rounded-[1.5rem] object-cover saturate-[0.9]"
               />

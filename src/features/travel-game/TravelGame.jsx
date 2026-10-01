@@ -82,6 +82,7 @@ export default function TravelGame({ onBack }) {
     oceanWaves: [],
     turboUntil: 0,
     shieldUntil: 0,
+    stageIndex: 0,
     lastFrameTime: 0,
     nextSpawnDistance: 120,
     nextCloudSpawn: 0,
@@ -127,6 +128,7 @@ export default function TravelGame({ onBack }) {
     st.confetti = [];
     st.turboUntil = 0;
     st.shieldUntil = 0;
+    st.stageIndex = 0;
     st.lastFrameTime = performance.now();
     st.nextSpawnDistance = 150;
 
@@ -286,6 +288,7 @@ export default function TravelGame({ onBack }) {
         let activeIdx = 0;
         if (currentProg >= 70) activeIdx = 2;
         else if (currentProg >= 35) activeIdx = 1;
+        st.stageIndex = activeIdx;
 
         // Movimento do avião
         const planeSpeedY = 320 * dt;
@@ -541,7 +544,7 @@ export default function TravelGame({ onBack }) {
         // Sincronizar estado React a cada 4 frames para fluidez da UI
         if (Math.floor(now) % 4 === 0) {
           setProgress(Math.round(currentProg));
-          setCurrentStageIndex(activeIdx);
+          setCurrentStageIndex((prev) => (prev !== activeIdx ? activeIdx : prev));
           setActiveTurbo(isTurbo);
           setActiveShield(isShield);
         }
@@ -551,7 +554,8 @@ export default function TravelGame({ onBack }) {
       ctx.clearRect(0, 0, w, h);
 
       // A. Gradiente de Céu Conforme o Estágio Atual
-      const currentStage = GAME_STAGES[currentStageIndex] || GAME_STAGES[0];
+      const activeStageIdx = st.stageIndex || 0;
+      const currentStage = GAME_STAGES[activeStageIdx] || GAME_STAGES[0];
       const skyGrad = ctx.createLinearGradient(0, 0, 0, h);
       skyGrad.addColorStop(0, currentStage.skyGradient[0]);
       skyGrad.addColorStop(0.35, currentStage.skyGradient[1]);
@@ -561,7 +565,7 @@ export default function TravelGame({ onBack }) {
       ctx.fillRect(0, 0, w, h);
 
       // B. Camada de Fundo Dinâmica (Parallax)
-      if (currentStageIndex === 0) {
+      if (activeStageIdx === 0) {
         // Fase 1: Interior de SP / Colinas suaves ao pôr do sol
         ctx.fillStyle = "rgba(45, 18, 28, 0.4)";
         ctx.beginPath();
@@ -573,7 +577,7 @@ export default function TravelGame({ onBack }) {
         ctx.lineTo(w, h);
         ctx.closePath();
         ctx.fill();
-      } else if (currentStageIndex === 1) {
+      } else if (activeStageIdx === 1) {
         // Fase 2: São Paulo / Skyline noturno de prédios iluminados
         ctx.fillStyle = "#121424";
         st.cityLights.forEach((bld, idx) => {
@@ -769,12 +773,12 @@ export default function TravelGame({ onBack }) {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", resizeCanvas);
     };
-  }, [gameState, selectedChar, currentStageIndex, saveHighScore]);
+  }, [gameState, selectedChar, saveHighScore]);
 
-  // Limpeza de áudio ao sair da tela
+  // LEAK-03 FIX: Limpeza completa de áudio (AudioContext + Hum) ao desmontar tela
   useEffect(() => {
     return () => {
-      gameAudio.stopEngineHum();
+      gameAudio.cleanup();
     };
   }, []);
 

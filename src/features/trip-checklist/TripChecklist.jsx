@@ -54,12 +54,14 @@ export function TripChecklist({ items, loading, addItem, toggleItem, deleteItem,
           type="text"
           value={newItemText}
           onChange={(e) => setNewItemText(e.target.value)}
+          aria-label="Adicionar novo item ao checklist"
           placeholder={`Adicionar à categoria ${categories.find(c => c.id === activeCategory)?.label}...`}
           className="flex-1 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder-rose-100/30 focus:border-rose-300/30 focus:bg-white/[0.05] focus:outline-none"
         />
         <button
           type="submit"
           disabled={!newItemText.trim()}
+          aria-label="Adicionar item ao checklist"
           className="grid size-12 place-items-center rounded-xl bg-rose-200 text-[#2a1020] hover:bg-rose-100 disabled:opacity-40 disabled:hover:bg-rose-200 transition-colors"
         >
           <Plus size={18} />
@@ -93,6 +95,9 @@ export function TripChecklist({ items, loading, addItem, toggleItem, deleteItem,
                     {/* Custom Checkbox */}
                     <button
                       type="button"
+                      role="checkbox"
+                      aria-checked={item.checked}
+                      aria-label={`Marcar ${item.text}`}
                       onClick={() => toggleItem(item.id, item.checked, currentUser)}
                       className={`grid size-6 shrink-0 place-items-center rounded-lg border transition-all ${
                         item.checked
@@ -106,7 +111,16 @@ export function TripChecklist({ items, loading, addItem, toggleItem, deleteItem,
                     {/* Text */}
                     <span
                       onClick={() => toggleItem(item.id, item.checked, currentUser)}
-                      className={`text-sm text-rose-50 cursor-pointer select-none truncate transition-all duration-300 ${
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          toggleItem(item.id, item.checked, currentUser);
+                        }
+                      }}
+                      tabIndex={0}
+                      role="button"
+                      aria-label={`Alternar status de ${item.text}`}
+                      className={`text-sm text-rose-50 cursor-pointer select-none truncate transition-all duration-300 focus:outline-none focus:underline ${
                         item.checked ? "opacity-40 line-through decoration-rose-300/50" : ""
                       }`}
                     >
@@ -129,6 +143,7 @@ export function TripChecklist({ items, loading, addItem, toggleItem, deleteItem,
                   <button
                     type="button"
                     onClick={() => deleteItem(item.id)}
+                    aria-label={`Excluir item ${item.text}`}
                     className="text-rose-100/30 hover:text-rose-300 p-1 transition-colors"
                   >
                     <Trash2 size={15} />

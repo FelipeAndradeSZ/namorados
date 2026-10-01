@@ -5,6 +5,37 @@ O formato é baseado no [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ---
 
+## [1.2.0] — 2026-10-01
+
+### 🛡️ Segurança de Nível Bancário & DevSecOps (P0)
+* **Prevenção Definitiva de DOM XSS no Mapa (`SEC-01`):** Implementada função de sanitização de strings (`escapeHtml`) para todos os dados dinâmicos do Firestore (`location`, `description`, `time`), impedindo injeção de HTML/scripts no Leaflet (`divIcon` e `bindPopup`).
+* **Blindagem Total do Firestore & Autenticação Anônima (`SEC-02`):** Adicionada autenticação anônima obrigatória (`firebase/auth`) com portão de prontidão (`authReady`). Criado o arquivo `firestore.rules` com regras restritivas que exigem autenticação e validam tipos e tamanhos de campos para as coleções `checklist`, `days` e `activities`.
+* **Content Security Policy Restritiva (`SEC-04`):** Adicionada meta tag CSP completa no `index.html` com proteção de recursos (`default-src 'self'`, `connect-src` apenas para Firebase, CARTO e Nominatim), além de `X-Content-Type-Options: nosniff` e `Referrer-Policy: strict-origin-when-cross-origin`.
+* **Suporte a Variáveis de Ambiente para CARTO (`SEC-03`):** Configurado `import.meta.env.VITE_CARTO_API_KEY` com fallback retrocompatível.
+* **URLs de Mapa Restritas a HTTPS (`SEC-05`):** `getSafeMapsUrl` agora rejeita protocolos inseguros `http://` para eliminar avisos de conteúdo misto.
+* **Quality Gate de Dependências no CI/CD:** Adicionado passo `npm audit --audit-level=critical` no GitHub Actions (`deploy.yml`) para barrar qualquer vulnerabilidade crítica de dependência antes do deploy.
+
+### ⚙️ Resiliência & Zero Vazamentos de Memória (P1)
+* **Correção de Loop e Timers Órfãos no Mapa de Voo (`LEAK-01`):** Em `FlightMap.jsx`, o timer de inicialização e o loop de animação (`requestAnimationFrame`) agora são rastreados e cancelados imediatamente no desmonte do componente, prevenindo erros de runtime e consumo fantasma de CPU.
+* **Desacoplamento do Loop de Animação do Jogo (`LEAK-02`):** Em `TravelGame.jsx`, o estágio do voo foi desacoplado da lista de dependências do `useEffect`, garantindo que o loop do canvas funcione a 60 FPS contínuos sem desmontagens mid-gameplay.
+* **Coleta de Lixo dos Nós de Áudio (`LEAK-03`):** Implementado `osc.onended` com `disconnect()` automático em todos os osciladores e amplificadores do sintetizador Web Audio (`audioEngine.js` e `MusicPlayer.jsx`). O `AudioContext` do jogo agora é devidamente fechado (`cleanup()`) ao sair da tela.
+
+### ⚡ Otimização & Performance Máxima (P2)
+* **Code-Splitting das Seções Pesadas (`PERF-02`):** `TripSection` (Leaflet) e `TripPlannerSection` (Firebase) agora são carregadas sob demanda com `React.lazy` e `Suspense`. O bundle inicial foi reduzido em **mais de 700 kB**, acelerando drasticamente o carregamento inicial.
+* **Prevenção de CLS na Hero (`PERF-03`):** Adicionadas dimensões explícitas (`width`, `height`) e `decoding="async"` na foto principal para zerar o deslocamento de layout (Cumulative Layout Shift).
+* **Carregamento Assíncrono de Fontes (`PERF-04`):** Google Fonts agora utilizam carregamento não-bloqueante (`rel="preload"` + media swap) eliminando bloqueio de renderização do FCP.
+* **Limpeza de Assets Mortos:** Removidas imagens mock não utilizadas (`src/assets/moments/` e `6.jpeg`), economizando espaço no repositório.
+* **Desativação Explícita de Source Maps:** Configurado `sourcemap: false` no `vite.config.js`.
+
+### ♿ Acessibilidade WCAG Nível A & AAA (P3)
+* **Textos Alternativos na Galeria (`A11Y-01`):** Adicionado `alt={moment.title}` nas fotografias da galeria.
+* **Rótulos Acessíveis para Leitores de Tela (`A11Y-02` / `A11Y-07`):** Adicionados atributos `aria-label` e `placeholder` acessíveis em todos os botões de ícone do checklist, roteiro e botão de carinho flutuante.
+* **Semântica de Checkbox (`A11Y-03` / `A11Y-05`):** Adicionados `role="checkbox"`, `aria-checked`, `tabIndex={0}` e tratamento de teclado (`Enter`/`Space`) aos itens do checklist.
+* **Diálogos Modais Acessíveis & Tecla Escape (`A11Y-06`):** Adicionados `role="dialog"` e `aria-modal="true"` ao menu mobile e à modal da galeria, com fechamento acessível pela tecla `Escape`.
+* **Respeito a Movimento Reduzido (`A11Y-08`):** `ExperienceProvider` e CSS global agora detectam e respeitam as preferências do sistema operacional (`prefers-reduced-motion: reduce`) e usam `scrollbar-gutter: stable` para evitar saltos de tela.
+
+---
+
 ## [1.1.0] — 2026-09-30
 
 ### 🛡️ Segurança & Privacidade Máxima (P0)

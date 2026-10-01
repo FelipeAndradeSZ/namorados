@@ -1,7 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { CARTO_DARK_TILE_URL, CARTO_TILE_OPTIONS } from "../../config/mapConfig";
+
+// SEC-01 FIX: Escape HTML to prevent XSS via Leaflet innerHTML sinks
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
 // Center of Vitoria as fallback
 const VIX_CENTER = [-20.31, -40.29];
@@ -41,7 +52,7 @@ function createNumberedMarker(number, label, time) {
           white-space: nowrap;
           box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         ">
-          <span style="opacity: 0.6; margin-right: 3px;">${time}</span>${label}
+          <span style="opacity: 0.6; margin-right: 3px;">${escapeHtml(time)}</span>${escapeHtml(label)}
         </div>
       </div>
     `,
@@ -55,17 +66,21 @@ export function DayMap({ activities }) {
   const mapRef = useRef(null);
   const layerGroupRef = useRef(null);
 
-  const mappedActs = activities
-    .filter(
-      (act) =>
-        act.lat !== undefined &&
-        act.lat !== null &&
-        !isNaN(act.lat) &&
-        act.lng !== undefined &&
-        act.lng !== null &&
-        !isNaN(act.lng)
-    )
-    .sort((a, b) => (a.time || "").localeCompare(b.time || ""));
+  // PERF-06 FIX: Memoize to prevent useEffect re-trigger on every render
+  const mappedActs = useMemo(() =>
+    activities
+      .filter(
+        (act) =>
+          act.lat !== undefined &&
+          act.lat !== null &&
+          !isNaN(act.lat) &&
+          act.lng !== undefined &&
+          act.lng !== null &&
+          !isNaN(act.lng)
+      )
+      .sort((a, b) => (a.time || "").localeCompare(b.time || "")),
+    [activities]
+  );
 
   // 1. Inicialização do Mapa Leaflet com Cleanup no Unmount
   useEffect(() => {
@@ -120,10 +135,10 @@ export function DayMap({ activities }) {
         marker.bindPopup(`
           <div style="color: #2a1020; font-family: 'DM Sans', sans-serif; padding: 4px;">
             <p style="margin: 0; font-size: 10px; font-weight: 700; color: #e11d48; text-transform: uppercase; letter-spacing: 0.05em;">
-              📌 Passo ${index + 1} — ${act.time}
+              📌 Passo ${index + 1} — ${escapeHtml(act.time)}
             </p>
-            <h4 style="margin: 4px 0 2px 0; font-size: 13px; font-weight: bold;">${act.description || ""}</h4>
-            <p style="margin: 0; font-size: 11px; color: #666;">${act.location || ""}</p>
+            <h4 style="margin: 4px 0 2px 0; font-size: 13px; font-weight: bold;">${escapeHtml(act.description)}</h4>
+            <p style="margin: 0; font-size: 11px; color: #666;">${escapeHtml(act.location)}</p>
           </div>
         `);
 

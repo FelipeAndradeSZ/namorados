@@ -7,8 +7,6 @@ import { ScrollProgress } from "./components/layout/ScrollProgress";
 import { LoveMarquee } from "./components/motion/LoveMarquee";
 import { FinalSection } from "./sections/FinalSection";
 import { FutureSection } from "./sections/FutureSection";
-import { TripSection } from "./sections/TripSection";
-import { TripPlannerSection } from "./sections/TripPlannerSection";
 import { GallerySection } from "./sections/GallerySection";
 import { HeroSection } from "./sections/HeroSection";
 import { LetterSection } from "./sections/LetterSection";
@@ -17,6 +15,14 @@ import { useExperience } from "./context/useExperience";
 import { MusicPlayer } from "./components/audio/MusicPlayer";
 import { HeartBurst } from "./components/effects/HeartBurst";
 
+// PERF-02: Lazy-load heavy sections so Leaflet (~150kB) and Firebase (~560kB)
+// do not block the initial page load or inflate the entry bundle.
+const TripSection = lazy(() =>
+  import("./sections/TripSection").then((m) => ({ default: m.TripSection }))
+);
+const TripPlannerSection = lazy(() =>
+  import("./sections/TripPlannerSection").then((m) => ({ default: m.TripPlannerSection }))
+);
 const TravelGame = lazy(() => import("./features/travel-game/TravelGame"));
 
 function App() {
@@ -63,8 +69,24 @@ function App() {
               <GallerySection />
               <LetterSection />
               <FutureSection />
-              <TripSection />
-              <TripPlannerSection />
+              <Suspense
+                fallback={
+                  <div className="flex min-h-[300px] items-center justify-center">
+                    <div className="size-8 animate-spin rounded-full border-2 border-rose-400/40 border-t-rose-400" />
+                  </div>
+                }
+              >
+                <TripSection />
+              </Suspense>
+              <Suspense
+                fallback={
+                  <div className="flex min-h-[300px] items-center justify-center">
+                    <div className="size-8 animate-spin rounded-full border-2 border-rose-400/40 border-t-rose-400" />
+                  </div>
+                }
+              >
+                <TripPlannerSection />
+              </Suspense>
               <FinalSection />
             </main>
             <MusicPlayer />

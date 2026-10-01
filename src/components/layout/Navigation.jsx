@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Gamepad2, Heart, Menu, Pause, Sparkles, X } from "lucide-react";
 import { loveStory } from "../../config/loveStory";
@@ -23,6 +23,18 @@ export function Navigation() {
     closeMenu();
     openGame?.();
   };
+
+  // A11Y-06 FIX: Fechar menu mobile com tecla Escape
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   return (
     <>
@@ -112,7 +124,9 @@ export function Navigation() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu de navegação mobile"
             className="fixed inset-0 z-[60] grid place-items-center bg-[#100810]/95 px-8 backdrop-blur-2xl md:hidden"
           >
             <div className="flex flex-col items-center gap-8">

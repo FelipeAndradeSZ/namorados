@@ -29,6 +29,17 @@ class GameAudioEngine {
     }
   }
 
+  _cleanupOnEnd(osc, gain) {
+    osc.onended = () => {
+      try {
+        osc.disconnect();
+        gain.disconnect();
+      } catch {
+        // Silently ignore already disconnected nodes
+      }
+    };
+  }
+
   playHeart() {
     if (this.isMuted || !this.ctx) return;
     this.init();
@@ -46,6 +57,7 @@ class GameAudioEngine {
 
     osc.connect(gain);
     gain.connect(this.ctx.destination);
+    this._cleanupOnEnd(osc, gain);
 
     osc.start(now);
     osc.stop(now + 0.3);
@@ -68,6 +80,7 @@ class GameAudioEngine {
 
     osc.connect(gain);
     gain.connect(this.ctx.destination);
+    this._cleanupOnEnd(osc, gain);
 
     osc.start(now);
     osc.stop(now + 0.5);
@@ -91,6 +104,7 @@ class GameAudioEngine {
 
       osc.connect(gain);
       gain.connect(this.ctx.destination);
+      this._cleanupOnEnd(osc, gain);
 
       osc.start(now);
       osc.stop(now + 0.28);
@@ -115,6 +129,7 @@ class GameAudioEngine {
 
       osc.connect(gain);
       gain.connect(this.ctx.destination);
+      this._cleanupOnEnd(osc, gain);
 
       osc.start(now);
       osc.stop(now + 0.38);
@@ -137,6 +152,7 @@ class GameAudioEngine {
 
     osc.connect(gain);
     gain.connect(this.ctx.destination);
+    this._cleanupOnEnd(osc, gain);
 
     osc.start(now);
     osc.stop(now + 0.3);
@@ -169,6 +185,7 @@ class GameAudioEngine {
 
       osc.connect(gain);
       gain.connect(this.ctx.destination);
+      this._cleanupOnEnd(osc, gain);
 
       osc.start(t);
       osc.stop(t + d + 0.05);
@@ -195,6 +212,7 @@ class GameAudioEngine {
 
       osc.connect(gain);
       gain.connect(this.ctx.destination);
+      this._cleanupOnEnd(osc, gain);
 
       osc.start(t);
       osc.stop(t + 0.32);

@@ -36,7 +36,7 @@ const iconOptions = [
 function getSafeMapsUrl(url, location) {
   if (url && typeof url === "string") {
     const trimmed = url.trim();
-    if (trimmed.startsWith("https://") || trimmed.startsWith("http://")) {
+    if (trimmed.startsWith("https://")) {
       return trimmed;
     }
   }
@@ -223,6 +223,7 @@ export function TripItinerary({
                 </h3>
                 <button
                   onClick={handleStartEditTitle}
+                  aria-label="Editar título do dia"
                   className="text-rose-100/40 hover:text-rose-200 p-1"
                 >
                   <Edit3 size={14} />
@@ -466,6 +467,7 @@ export function TripItinerary({
                               onClick={() => handleStartEditActivity(act)}
                               className="text-rose-100/40 hover:text-rose-200 p-1.5"
                               title="Editar atividade"
+                              aria-label={`Editar atividade: ${act.description}`}
                             >
                               <Edit3 size={13} />
                             </button>
@@ -473,6 +475,7 @@ export function TripItinerary({
                               onClick={() => deleteActivity(act.id)}
                               className="text-rose-100/30 hover:text-rose-400 p-1.5"
                               title="Deletar atividade"
+                              aria-label={`Deletar atividade: ${act.description}`}
                             >
                               <Trash2 size={13} />
                             </button>

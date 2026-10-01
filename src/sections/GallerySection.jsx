@@ -75,7 +75,7 @@ export function GallerySection() {
             >
               <img
                 src={moment.image}
-                alt=""
+                alt={moment.title}
                 loading="lazy"
                 style={{ objectPosition: moment.position }}
                 className="absolute inset-0 h-full w-full object-cover brightness-[0.88] saturate-[0.9] transition duration-700 group-hover:scale-110 group-hover:brightness-100 group-hover:saturate-100"
@@ -108,6 +108,9 @@ export function GallerySection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Foto: ${selectedMoment.title}`}
             onClick={() => setSelectedIndex(null)}
             className="fixed inset-0 z-[90] grid place-items-center bg-[#0c060b]/90 p-4 backdrop-blur-2xl"
           >

@@ -6,6 +6,8 @@ export default defineConfig({
   base: "/namorados/",
   plugins: [react(), tailwindcss()],
   build: {
+    sourcemap: false,
+    chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
         manualChunks(id) {

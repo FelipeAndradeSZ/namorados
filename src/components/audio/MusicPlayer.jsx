@@ -64,6 +64,15 @@ export function MusicPlayer() {
         osc.connect(gain);
         gain.connect(ctx.destination);
 
+        osc.onended = () => {
+          try {
+            osc.disconnect();
+            gain.disconnect();
+          } catch {
+            // Silently ignore already disconnected nodes
+          }
+        };
+
         osc.start(now);
         osc.stop(now + 3.4);
       };
