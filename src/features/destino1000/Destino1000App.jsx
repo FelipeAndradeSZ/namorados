@@ -278,6 +278,7 @@ export default function Destino1000App({ onBack }) {
                 </div>
               ) : currentQuestion ? (
                 <StudyStation 
+                  key={currentQuestion.id}
                   question={currentQuestion}
                   onAnswerSubmit={handleAnswerSubmit}
                   onNextQuestion={() => {

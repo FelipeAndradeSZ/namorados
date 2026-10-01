@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   CheckCircle2, 
   XCircle, 
@@ -23,6 +23,7 @@ export function StudyStation({
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [selectedErrorCategory, setSelectedErrorCategory] = useState(null);
   const [hasReflected, setHasReflected] = useState(false);
+  const [viewState, setViewState] = useState("theory"); // 'theory' | 'question'
 
   if (!question) {
     return (
@@ -113,30 +114,80 @@ export function StudyStation({
         </div>
       </div>
 
-      {/* Cartão de Contexto e Texto de Apoio */}
-      {question.context?.supportText && (
-        <div className="mb-5 rounded-2xl border border-white/10 bg-[#160d19]/80 p-4 sm:p-5 shadow-lg backdrop-blur-md">
-          <div className="mb-2 flex items-center gap-2 text-[0.65rem] font-semibold tracking-widest text-rose-300/80 uppercase">
-            <BookOpen size={13} />
-            <span>Texto de Apoio / Contexto</span>
-          </div>
-          <p className="text-sm sm:text-base leading-relaxed text-rose-50/90 whitespace-pre-line font-serif italic">
-            "{question.context.supportText}"
-          </p>
-          {question.context.source && (
-            <p className="mt-2 text-right text-[0.65rem] text-rose-200/50">
-              — {question.context.source}
-            </p>
-          )}
-        </div>
-      )}
+      <AnimatePresence mode="wait">
+        {viewState === "theory" ? (
+          <motion.div
+            key="theory"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            className="flex flex-col gap-6"
+          >
+            <div className="rounded-2xl border border-sky-500/30 bg-gradient-to-br from-sky-950/40 to-transparent p-5 sm:p-6 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                <Lightbulb size={120} />
+              </div>
+              <h3 className="font-display text-xl text-sky-300 mb-2 flex items-center gap-2">
+                <Lightbulb size={20} />
+                Revisão Rápida
+              </h3>
+              <p className="text-sm sm:text-base leading-relaxed text-sky-50/90 relative z-10">
+                {question.detailedExplanation?.coreConcept || "Conceito fundamental para resolver o próximo desafio."}
+              </p>
+              
+              {question.detailedExplanation?.trapWarning && (
+                <div className="mt-4 rounded-xl bg-amber-500/10 border border-amber-500/20 p-3 text-xs text-amber-200/90 relative z-10">
+                  <strong className="block mb-1">⚠️ Atenção à Pegadinha:</strong>
+                  {question.detailedExplanation.trapWarning}
+                </div>
+              )}
+            </div>
 
-      {/* Enunciado Principal */}
-      <div className="mb-6">
-        <h2 className="text-base sm:text-lg font-medium leading-relaxed text-white">
-          {question.prompt}
-        </h2>
-      </div>
+            {/* Cartão de Contexto Prévio (Opcional) */}
+            {question.context?.supportText && (
+              <div className="rounded-2xl border border-white/10 bg-[#160d19]/80 p-4 sm:p-5 shadow-lg backdrop-blur-md">
+                <div className="mb-2 flex items-center gap-2 text-[0.65rem] font-semibold tracking-widest text-rose-300/80 uppercase">
+                  <BookOpen size={13} />
+                  <span>Leitura Prévia</span>
+                </div>
+                <p className="text-sm sm:text-base leading-relaxed text-rose-50/90 whitespace-pre-line font-serif italic">
+                  "{question.context.supportText}"
+                </p>
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() => setViewState("question")}
+              className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-rose-500 px-6 py-4 text-sm font-bold text-white shadow-xl hover:bg-rose-400 transition cursor-pointer w-full sm:w-auto self-end"
+            >
+              <span>Ir para a Questão</span>
+              <ArrowRight size={18} />
+            </button>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="question"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            className="flex flex-col"
+          >
+            {/* Cartão de Contexto e Texto de Apoio (se houver, e se ainda for útil mostrar aqui) */}
+            {question.context?.supportText && (
+              <div className="mb-5 rounded-2xl border border-white/10 bg-[#160d19]/80 p-4 sm:p-5 shadow-lg backdrop-blur-md text-sm opacity-80">
+                <p className="leading-relaxed text-rose-50/80 whitespace-pre-line font-serif italic">
+                  "{question.context.supportText}"
+                </p>
+              </div>
+            )}
+
+            {/* Enunciado Principal */}
+            <div className="mb-6">
+              <h2 className="text-base sm:text-lg font-medium leading-relaxed text-white">
+                {question.prompt}
+              </h2>
+            </div>
 
       {/* Alternativas */}
       <div className="flex flex-col gap-3 mb-6">
@@ -209,14 +260,23 @@ export function StudyStation({
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={handleSubmitAnswer}
-            disabled={!selectedOptionId}
-            className="w-full sm:w-auto rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 disabled:opacity-40 disabled:hover:scale-100 cursor-pointer"
-          >
-            Confirmar Resposta
-          </button>
+          <div className="flex w-full sm:w-auto items-center gap-2">
+            <button
+              type="button"
+              onClick={onNextQuestion}
+              className="w-full sm:w-auto rounded-xl border border-white/10 bg-transparent px-4 py-3 text-sm font-bold text-white/50 hover:bg-white/5 hover:text-white transition-all cursor-pointer"
+            >
+              Pular
+            </button>
+            <button
+              type="button"
+              onClick={handleSubmitAnswer}
+              disabled={!selectedOptionId}
+              className="w-full sm:w-auto rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 disabled:opacity-40 disabled:hover:scale-100 cursor-pointer"
+            >
+              Confirmar
+            </button>
+          </div>
         </div>
       ) : (
         /* Seção Pós-Envio: Feedback Pedagógico & Explicação Detalhada */
@@ -323,9 +383,11 @@ export function StudyStation({
               <ArrowRight size={16} />
             </button>
           </div>
-        </motion.div>
+          </motion.div>
+        )}
+      </motion.div>
       )}
-
+      </AnimatePresence>
     </div>
   );
 }
