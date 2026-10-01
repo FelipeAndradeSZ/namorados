@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   MapPin, 
-  Plane, 
-  Bus, 
   Compass, 
   Sparkles, 
   AlertCircle,
   BookOpen,
-  Sword
+  Sword,
+  Zap
 } from "lucide-react";
 import { BRAZIL_CITIES } from "../content/citiesData";
 import { destinoAudio } from "../core/soundEngine";
@@ -82,15 +81,15 @@ export function MapExplorer({
         <div>
           <span className="text-xs font-semibold tracking-widest text-rose-300 uppercase flex items-center gap-1.5">
             <Compass size={14} />
-            <span>Mapa de Viagem & Expedições pelo Brasil</span>
+            <span>Trilha de Aprendizado Gamificada</span>
           </span>
           <h2 className="font-display text-2xl sm:text-3xl text-white mt-1">
-            Escolha seu Destino Educacional
+            Escolha seu Próximo Módulo
           </h2>
         </div>
 
         <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-[#160a16]/80 px-4 py-2 text-xs text-rose-200">
-          <span>Você está em:</span>
+          <span>Você está focado em:</span>
           <strong className="text-white flex items-center gap-1">
             <MapPin size={14} className="text-rose-400" />
             {currentCity?.name}
@@ -105,8 +104,8 @@ export function MapExplorer({
         <div className="lg:col-span-7 rounded-3xl border border-white/10 bg-[#130b14]/90 p-4 sm:p-6 shadow-2xl relative overflow-hidden">
           
           <div className="mb-4 flex items-center justify-between text-xs text-rose-200/60">
-            <span>Rede de Cidades e Polos Temáticos</span>
-            <span>{BRAZIL_CITIES.length} Capitais Mapeadas</span>
+            <span>Módulos de Estudo (Polos Temáticos)</span>
+            <span>{BRAZIL_CITIES.length} Módulos Disponíveis</span>
           </div>
 
           {/* Lista de Cidades Estilizadas como Cartões de Embarque */}
@@ -188,7 +187,7 @@ export function MapExplorer({
           <div className="mb-5 border-t border-white/10 pt-4">
             <h4 className="text-xs font-semibold text-white mb-2.5 flex items-center gap-1.5">
               <BookOpen size={14} className="text-rose-300" />
-              <span>Pontos de Estudo & Expedições</span>
+              <span>Tópicos de Estudo</span>
             </h4>
             <div className="flex flex-col gap-2">
               {selectedCity.hubs.map((hub) => (
@@ -212,7 +211,7 @@ export function MapExplorer({
             <div className="mb-5 border-t border-white/10 pt-4">
               <h4 className="text-xs font-semibold text-white mb-2.5 flex items-center gap-1.5">
                 <Sword size={14} className="text-rose-300" />
-                <span>Missões Narrativas</span>
+                <span>Missões de Estudo</span>
               </h4>
               <div className="flex flex-col gap-2">
                 {cityMissions.map((mission) => {
@@ -257,35 +256,33 @@ export function MapExplorer({
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 py-3 text-sm font-bold text-white shadow-lg shadow-rose-500/25 hover:scale-102 transition cursor-pointer"
               >
                 <Sparkles size={16} />
-                <span>Iniciar Expedição em {selectedCity.name}</span>
+                <span>Estudar Todos os Tópicos Deste Módulo</span>
               </button>
             ) : canTravel ? (
               <div className="flex flex-col gap-2">
-                <span className="text-xs text-rose-200/70 font-medium">Escolha seu meio de transporte:</span>
+                <span className="text-xs text-rose-200/70 font-medium">Requisitos para desbloquear:</span>
                 
                 <div className="grid grid-cols-2 gap-2">
-                  {/* Ônibus */}
                   <button
                     type="button"
                     onClick={handleTravelByBus}
                     className="flex flex-col items-center justify-center p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-emerald-500/20 hover:border-emerald-500/40 transition cursor-pointer"
                   >
-                    <Bus size={20} className="text-emerald-400 mb-1" />
-                    <span className="text-xs font-bold text-white">Ônibus Leito</span>
+                    <BookOpen size={20} className="text-emerald-400 mb-1" />
+                    <span className="text-xs font-bold text-white">Bolsa Estudo</span>
                     <span className="text-[0.65rem] text-emerald-300">R$ {directConnection.busCost}</span>
-                    <span className="text-[0.6rem] text-rose-200/50">{directConnection.busHours}h de rota</span>
+                    <span className="text-[0.6rem] text-rose-200/50">Lento</span>
                   </button>
 
-                  {/* Voo */}
                   <button
                     type="button"
                     onClick={handleTravelByPlane}
                     className="flex flex-col items-center justify-center p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-sky-500/20 hover:border-sky-500/40 transition cursor-pointer"
                   >
-                    <Plane size={20} className="text-sky-400 mb-1" />
-                    <span className="text-xs font-bold text-white">Voo Rápido</span>
+                    <Zap size={20} className="text-sky-400 mb-1" />
+                    <span className="text-xs font-bold text-white">Acesso Expresso</span>
                     <span className="text-[0.65rem] text-sky-300">{directConnection.flightMiles} milhas</span>
-                    <span className="text-[0.6rem] text-rose-200/50">{directConnection.flightHours}h de voo</span>
+                    <span className="text-[0.6rem] text-rose-200/50">Imediato</span>
                   </button>
                 </div>
 

@@ -5,9 +5,7 @@ import {
   BookOpen, 
   PenTool, 
   Bookmark, 
-  BarChart3, 
-  Zap,
-  RotateCcw
+  BarChart3
 } from "lucide-react";
 
 import { HUD } from "./ui/HUD";
@@ -16,6 +14,8 @@ import { StudyStation } from "./ui/StudyStation";
 import { RedacaoLab } from "./ui/RedacaoLab";
 import { InventoryView } from "./ui/InventoryView";
 import { AnalyticsDashboard } from "./ui/AnalyticsDashboard";
+import { StudyDashboard } from "./ui/StudyDashboard";
+import { Home } from "lucide-react";
 
 import { BRAZIL_CITIES } from "./content/citiesData";
 import { contentEngine } from "./core/contentEngine";
@@ -30,7 +30,7 @@ import { destinoAudio } from "./core/soundEngine";
 
 export default function Destino1000App({ onBack }) {
   const [playerState, setPlayerState] = useState(() => loadPlayerState());
-  const [activeTab, setActiveTab] = useState("viagem"); // 'viagem' | 'estudo' | 'redacao' | 'mochila' | 'evolucao'
+  const [activeTab, setActiveTab] = useState("inicio"); // 'inicio' | 'trilha' | 'estudo' | 'redacao' | 'mochila' | 'evolucao'
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
   const [activeSessionQuestions, setActiveSessionQuestions] = useState([]);
   const [isMuted, setIsMuted] = useState(false);
@@ -226,41 +226,29 @@ export default function Destino1000App({ onBack }) {
         onToggleMute={handleToggleMute}
       />
 
-      {/* Atalhos Rápidos no Sub-header (Modo 10 Minutos & Recomendação) */}
-      <div className="flex items-center justify-between border-b border-white/5 bg-[#120a16]/60 px-4 py-1.5 text-xs">
-        <div className="flex items-center gap-2">
-          <span className="text-[0.65rem] text-rose-300 font-semibold uppercase tracking-wider hidden sm:inline">
-            Modos de Estudo:
-          </span>
-          <button
-            type="button"
-            onClick={() => handleQuickSession(10)}
-            className="flex items-center gap-1 rounded-lg bg-rose-500/15 border border-rose-500/30 px-2 py-0.5 text-[0.65rem] font-bold text-rose-200 hover:bg-rose-500/25 transition cursor-pointer"
-          >
-            <Zap size={11} className="text-rose-400" />
-            <span>⚡ Tenho 10 Minutos</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => handleSelectCityForStudy(activeCity.id)}
-            className="flex items-center gap-1 rounded-lg bg-sky-500/15 border border-sky-500/30 px-2 py-0.5 text-[0.65rem] font-bold text-sky-200 hover:bg-sky-500/25 transition cursor-pointer"
-          >
-            <RotateCcw size={11} className="text-sky-400" />
-            <span>Revisão do Dia</span>
-          </button>
-        </div>
-
-        <div className="text-[0.65rem] text-rose-200/50 hidden md:block">
-          ENEM 2026 • Medicina no Horizonte 🩺
-        </div>
-      </div>
-
       {/* Área Central Rolável */}
       <main className="flex-1 overflow-y-auto pb-24 pt-2">
         <AnimatePresence mode="wait">
-          {activeTab === "viagem" && (
+          {activeTab === "inicio" && (
             <motion.div
-              key="viagem"
+              key="inicio"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+            >
+              <StudyDashboard 
+                playerState={playerState}
+                onStartQuickSession={handleQuickSession}
+                onStartSimulado={handleSimuladoSession}
+                onGoToTrilha={() => setActiveTab("trilha")}
+              />
+            </motion.div>
+          )}
+
+          {activeTab === "trilha" && (
+            <motion.div
+              key="trilha"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
@@ -296,7 +284,7 @@ export default function Destino1000App({ onBack }) {
                     if (activeQuestionIndex < activeSessionQuestions.length - 1) {
                       setActiveQuestionIndex(prev => prev + 1);
                     } else {
-                      setActiveTab("viagem");
+                      setActiveTab("inicio");
                     }
                   }}
                   isLastQuestion={activeQuestionIndex >= activeSessionQuestions.length - 1}
@@ -305,7 +293,7 @@ export default function Destino1000App({ onBack }) {
                 <div className="flex flex-col items-center justify-center h-[50vh] text-white/50 px-6 text-center">
                   <p className="mb-4">Não há questões disponíveis nesta expedição ainda.</p>
                   <button 
-                    onClick={() => setActiveTab("viagem")}
+                    onClick={() => setActiveTab("inicio")}
                     className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition"
                   >
                     Voltar para o Mapa
@@ -365,13 +353,24 @@ export default function Destino1000App({ onBack }) {
           
           <button
             type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("viagem"); }}
+            onClick={() => { destinoAudio.playClick(); setActiveTab("inicio"); }}
             className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "viagem" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              activeTab === "inicio" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+            }`}
+          >
+            <Home size={20} />
+            <span className="text-[0.65rem]">Início</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => { destinoAudio.playClick(); setActiveTab("trilha"); }}
+            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+              activeTab === "trilha" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
             }`}
           >
             <Compass size={20} />
-            <span className="text-[0.65rem]">Viagem</span>
+            <span className="text-[0.65rem]">Trilha</span>
           </button>
 
           <button
@@ -382,7 +381,7 @@ export default function Destino1000App({ onBack }) {
             }`}
           >
             <BookOpen size={20} />
-            <span className="text-[0.65rem]">Estudo</span>
+            <span className="text-[0.65rem]">Sessão</span>
           </button>
 
           <button
