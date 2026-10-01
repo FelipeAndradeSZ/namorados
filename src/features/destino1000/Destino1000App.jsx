@@ -12,6 +12,7 @@ import { AreaStudyHub } from "./ui/AreaStudyHub";
 import { StudyStation } from "./ui/StudyStation";
 import { RedacaoLab } from "./ui/RedacaoLab";
 import { AnalyticsDashboard } from "./ui/AnalyticsDashboard";
+import { SessionReportModal } from "./ui/SessionReportModal";
 
 import { contentEngine } from "./core/contentEngine";
 import { saveAttempt } from "./core/indexedDB";
@@ -30,6 +31,13 @@ export default function Destino1000App({ onBack }) {
   const [activeSessionQuestions, setActiveSessionQuestions] = useState([]);
   const [isMuted, setIsMuted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Estados de Sessão Acadêmica e Simulado Cronometrado
+  const [sessionType, setSessionType] = useState("estudo"); // 'estudo' | 'simulado' | 'revisao' | 'erro' | 'rapido'
+  const [sessionStartTime, setSessionStartTime] = useState(null);
+  const [currentSessionAttempts, setCurrentSessionAttempts] = useState([]);
+  const [completedSessionData, setCompletedSessionData] = useState(null);
+  const [simuladoTimeRemaining, setSimuladoTimeRemaining] = useState(null);
 
   // Auto-save sempre que o estado mudar
   useEffect(() => {
@@ -51,11 +59,47 @@ export default function Destino1000App({ onBack }) {
     });
   }, []);
 
-  // Selecionar cidade para iniciar expedição de estudos
+  // Finalizar sessão acadêmica com relatório pedagógico
+  const handleFinishSession = useCallback(() => {
+    const totalTime = sessionStartTime ? Math.round((Date.now() - sessionStartTime) / 1000) : 180;
+    setCompletedSessionData({
+      questions: activeSessionQuestions,
+      attempts: currentSessionAttempts,
+      sessionType,
+      totalTimeSeconds: totalTime
+    });
+  }, [sessionStartTime, activeSessionQuestions, currentSessionAttempts, sessionType]);
+
+  // Cronômetro regressivo para o modo Simulado ENEM
+  useEffect(() => {
+    if (activeTab !== "estudo" || sessionType !== "simulado" || simuladoTimeRemaining == null || simuladoTimeRemaining <= 0) {
+      return;
+    }
+
+    const timer = setInterval(() => {
+      setSimuladoTimeRemaining(prev => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          destinoAudio.playReflect();
+          handleFinishSession();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [activeTab, sessionType, simuladoTimeRemaining, handleFinishSession]);
+
   // Iniciar sessão focada em um módulo / tópico específico
   const handleStartTopicSession = async (modulePath) => {
     destinoAudio.playClick();
     setIsLoading(true);
+    setSessionType("topico");
+    setSessionStartTime(Date.now());
+    setCurrentSessionAttempts([]);
+    setCompletedSessionData(null);
+    setSimuladoTimeRemaining(null);
 
     try {
       const questions = await contentEngine.loadModule(modulePath);
@@ -82,6 +126,11 @@ export default function Destino1000App({ onBack }) {
   const handleQuickSession = async (minutes = 10) => {
     destinoAudio.playClick();
     setIsLoading(true);
+    setSessionType("rapido");
+    setSessionStartTime(Date.now());
+    setCurrentSessionAttempts([]);
+    setCompletedSessionData(null);
+    setSimuladoTimeRemaining(minutes * 60);
     
     const count = Math.max(2, Math.floor(minutes / 2.5));
     const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
@@ -103,6 +152,11 @@ export default function Destino1000App({ onBack }) {
   const handleStartReviewSession = async () => {
     destinoAudio.playClick();
     setIsLoading(true);
+    setSessionType("revisao");
+    setSessionStartTime(Date.now());
+    setCurrentSessionAttempts([]);
+    setCompletedSessionData(null);
+    setSimuladoTimeRemaining(null);
 
     const today = new Date().toISOString().split("T")[0];
     const dueQuestionIds = (playerState.history || [])
@@ -116,7 +170,6 @@ export default function Destino1000App({ onBack }) {
     }
 
     if (reviewPool.length === 0) {
-      // Se não houver revisão vencida, pega um mix de fixação
       reviewPool = await contentEngine.getRandomQuestions(8);
     }
 
@@ -130,6 +183,11 @@ export default function Destino1000App({ onBack }) {
   const handleStartErrorSession = async () => {
     destinoAudio.playClick();
     setIsLoading(true);
+    setSessionType("erro");
+    setSessionStartTime(Date.now());
+    setCurrentSessionAttempts([]);
+    setCompletedSessionData(null);
+    setSimuladoTimeRemaining(null);
 
     const errIds = (playerState.errorNotebook || []).map(e => e.questionId);
     let errorPool = [];
@@ -148,10 +206,15 @@ export default function Destino1000App({ onBack }) {
     setIsLoading(false);
   };
 
-  // Modo Simulado
+  // Modo Simulado Oficial ENEM
   const handleSimuladoSession = async (count = 10) => {
     destinoAudio.playClick();
     setIsLoading(true);
+    setSessionType("simulado");
+    setSessionStartTime(Date.now());
+    setCurrentSessionAttempts([]);
+    setCompletedSessionData(null);
+    setSimuladoTimeRemaining(count * 180); // 3 minutos por questão (padrão ENEM)
     
     const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
     
@@ -172,6 +235,12 @@ export default function Destino1000App({ onBack }) {
   const handleAnswerSubmit = async ({ questionId, selectedOptionId, isCorrect, confidence, errorCategory, reflected }) => {
     const question = activeSessionQuestions.find(q => q.id === questionId);
     if (!question) return;
+
+    // Registrar no histórico da sessão ativa atual
+    setCurrentSessionAttempts(prev => [
+      ...prev.filter(a => a.questionId !== questionId),
+      { questionId, isCorrect, selectedOptionId }
+    ]);
 
     let attemptToSave = null;
 
@@ -281,6 +350,9 @@ export default function Destino1000App({ onBack }) {
                 onStartQuickSession={handleQuickSession}
                 onStartReviewSession={handleStartReviewSession}
                 onStartErrorSession={handleStartErrorSession}
+                onXpEarned={(xp) => {
+                  setPlayerState(prev => rewardStudyAction(prev, { xp, isCorrect: true }));
+                }}
               />
             </motion.div>
           )}
@@ -309,7 +381,26 @@ export default function Destino1000App({ onBack }) {
               transition={{ duration: 0.25 }}
               className="h-full"
             >
-              {isLoading ? (
+              {completedSessionData ? (
+                <SessionReportModal
+                  sessionQuestions={completedSessionData.questions}
+                  sessionAttempts={completedSessionData.attempts}
+                  sessionType={completedSessionData.sessionType}
+                  totalTimeSeconds={completedSessionData.totalTimeSeconds}
+                  onClose={() => {
+                    setCompletedSessionData(null);
+                    setActiveTab("areas");
+                  }}
+                  onRetryErrors={(wrongQuestions) => {
+                    setActiveSessionQuestions(wrongQuestions);
+                    setActiveQuestionIndex(0);
+                    setCurrentSessionAttempts([]);
+                    setSessionStartTime(Date.now());
+                    setSessionType("erro");
+                    setCompletedSessionData(null);
+                  }}
+                />
+              ) : isLoading ? (
                 <div className="flex flex-col items-center justify-center h-[50vh] text-rose-300">
                   <div className="w-8 h-8 border-4 border-rose-500/30 border-t-rose-500 rounded-full animate-spin mb-4" />
                   <p className="text-sm">Carregando conteúdo e questões do ENEM...</p>
@@ -318,12 +409,16 @@ export default function Destino1000App({ onBack }) {
                 <StudyStation 
                   key={currentQuestion.id}
                   question={currentQuestion}
+                  questionIndex={activeQuestionIndex}
+                  totalQuestions={activeSessionQuestions.length}
+                  sessionType={sessionType}
+                  timeRemainingSeconds={simuladoTimeRemaining}
                   onAnswerSubmit={handleAnswerSubmit}
                   onNextQuestion={() => {
                     if (activeQuestionIndex < activeSessionQuestions.length - 1) {
                       setActiveQuestionIndex(prev => prev + 1);
                     } else {
-                      setActiveTab("areas");
+                      handleFinishSession();
                     }
                   }}
                   isLastQuestion={activeQuestionIndex >= activeSessionQuestions.length - 1}

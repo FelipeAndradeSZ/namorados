@@ -12,33 +12,45 @@ import {
   FileText,
   Play,
   Zap,
-  RotateCcw
+  RotateCcw,
+  Brain
 } from "lucide-react";
 
 import { ENEM_AREAS } from "../content/curriculum";
 import { getTheoryForModule } from "../content/theoryData";
+import { FlashcardDeck } from "./FlashcardDeck";
 
-// Mapeamento dos 23 módulos de questões por área do ENEM
+// Mapeamento dos módulos de questões por área do ENEM
 const AREA_TOPICS = {
   natureza: [
     { id: "natureza/ecologia", name: "Ecologia e Dinâmica Ambiental", tag: "Biologia", priority: "Crítica • Top 1", questionsCount: 15 },
+    { id: "natureza/citologia", name: "Citologia e Metabolismo Energético", tag: "Biologia", priority: "Crítica • Top Medicina", questionsCount: 10 },
     { id: "natureza/eletricidade", name: "Eletrodinâmica e Circuitos", tag: "Física", priority: "Alta • Cai Todo Ano", questionsCount: 15 },
+    { id: "natureza/ondulatoria", name: "Ondulatória, Acústica e Óptica", tag: "Física", priority: "Crítica • V = λ·f", questionsCount: 10 },
+    { id: "natureza/termologia", name: "Termologia, Calorimetria e Dilatação", tag: "Física", priority: "Alta • Trocas Térmicas", questionsCount: 10 },
     { id: "natureza/estequiometria", name: "Estequiometria e Cálculos Químicos", tag: "Química", priority: "Alta • Ouro da TRI", questionsCount: 15 },
+    { id: "natureza/quimica-organica", name: "Química Orgânica e Reações", tag: "Química", priority: "Alta • Isomeria e Funções", questionsCount: 10 },
+    { id: "natureza/eletroquimica", name: "Eletroquímica e Pilhas", tag: "Química", priority: "Alta • Pilhas e Corrosão", questionsCount: 10 },
     { id: "natureza/genetica", name: "Genética, DNA e Biotecnologia", tag: "Biologia", priority: "Alta", questionsCount: 15 },
     { id: "natureza/mecanica", name: "Mecânica e Conservação de Energia", tag: "Física", priority: "Alta", questionsCount: 12 },
     { id: "natureza/termoquimica", name: "Termoquímica e Cinética Química", tag: "Química", priority: "Média-Alta", questionsCount: 15 },
   ],
   matematica: [
     { id: "matematica/razao-proporcao", name: "Razão, Proporção e Escala", tag: "Aritmética", priority: "Crítica • Mais Cobrado", questionsCount: 15 },
-    { id: "matematica/porcentagem", name: "Porcentagem e Matemática Financeira", tag: "Financeira", priority: "Crítica • Base da TRI", questionsCount: 18 },
+    { id: "matematica/porcentagem", name: "Porcentagem e Variações Percentuais", tag: "Financeira", priority: "Crítica • Base da TRI", questionsCount: 18 },
+    { id: "matematica/financeira", name: "Matemática Financeira e Juros", tag: "Financeira", priority: "Alta • Aplicação Prática", questionsCount: 10 },
     { id: "matematica/estatistica", name: "Estatística (Médias, Mediana, Moda)", tag: "Estatística", priority: "Crítica • Acerto Obrigatório", questionsCount: 18 },
     { id: "matematica/geometria", name: "Geometria Espacial e Plana", tag: "Geometria", priority: "Alta • Projeções e Volumes", questionsCount: 18 },
+    { id: "matematica/geometria-analitica", name: "Geometria Analítica e Retas", tag: "Geometria", priority: "Alta • Coordenadas e Cônicas", questionsCount: 10 },
     { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 12 },
+    { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 10 },
     { id: "matematica/probabilidade", name: "Probabilidade e Análise Combinatória", tag: "Combinatória", priority: "Média-Alta", questionsCount: 12 },
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 15 },
+    { id: "humanas/cidadania-direitos", name: "Cidadania, Direitos e Movimentos Sociais", tag: "Sociologia", priority: "Crítica • Base da Redação", questionsCount: 10 },
     { id: "humanas/geografia-urbana", name: "Geografia Urbana, Demografia e Espaço", tag: "Geografia", priority: "Crítica", questionsCount: 15 },
+    { id: "humanas/geopolitica", name: "Geopolítica, Nova DIT e Globalização", tag: "Geografia", priority: "Alta • Atualidades", questionsCount: 10 },
     { id: "humanas/sociologia-filosofia", name: "Sociologia e Filosofia Contemporânea", tag: "Sociologia", priority: "Alta • Útil para Redação", questionsCount: 15 },
     { id: "humanas/brasil-colonial", name: "Brasil Colonial: Economia e Escravidão", tag: "História", priority: "Alta", questionsCount: 12 },
     { id: "humanas/meio-ambiente", name: "Biomas Brasileiros e Impactos Antrópicos", tag: "Geografia", priority: "Alta", questionsCount: 12 },
@@ -47,6 +59,7 @@ const AREA_TOPICS = {
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 15 },
     { id: "linguagens/literatura", name: "Literatura Brasileira e Modernismo", tag: "Literatura", priority: "Alta • Semana de 22 e Fase 30", questionsCount: 15 },
     { id: "linguagens/argumentacao", name: "Argumentação e Recursos Persuasivos", tag: "Argumentação", priority: "Alta", questionsCount: 15 },
+    { id: "linguagens/vanguardas-artes", name: "Vanguardas Europeias e Artes Visuais", tag: "Artes", priority: "Alta • Modernismo e Ruptura", questionsCount: 10 },
     { id: "linguagens/generos", name: "Gêneros Textuais e Esferas de Circulação", tag: "Gêneros", priority: "Alta", questionsCount: 15 },
     { id: "linguagens/recursos-linguisticos", name: "Recursos da Língua e Variação Linguística", tag: "Gramática", priority: "Média-Alta", questionsCount: 12 },
   ],
@@ -107,10 +120,12 @@ export function AreaStudyHub({
   onGoToRedacao, 
   onStartQuickSession,
   onStartReviewSession,
-  onStartErrorSession
+  onStartErrorSession,
+  onXpEarned
 }) {
   const [selectedAreaId, setSelectedAreaId] = useState("natureza");
   const [activeTheoryModule, setActiveTheoryModule] = useState(null);
+  const [activeFlashcards, setActiveFlashcards] = useState(null); // null | { area: string, moduleId: string }
 
   const selectedArea = ENEM_AREAS[selectedAreaId];
   const topics = AREA_TOPICS[selectedAreaId] || [];
@@ -122,6 +137,18 @@ export function AreaStudyHub({
   ).length;
 
   const errorCount = (playerState.errorNotebook || []).length;
+
+  // Visualização de Flashcards / Active Recall
+  if (activeFlashcards) {
+    return (
+      <FlashcardDeck
+        filterArea={activeFlashcards.area}
+        filterModuleId={activeFlashcards.moduleId}
+        onClose={() => setActiveFlashcards(null)}
+        onXpEarned={onXpEarned}
+      />
+    );
+  }
 
   // Visualização de Teoria Completa
   if (activeTheoryModule) {
@@ -168,6 +195,17 @@ export function AreaStudyHub({
             >
               <Play size={16} fill="white" />
               <span>Praticar Questões deste Tema Agora</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setActiveFlashcards({ area: selectedAreaId, moduleId: activeTheoryModule.id });
+              }}
+              className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition cursor-pointer"
+            >
+              <Brain size={16} className="text-sky-300" />
+              <span>Flashcards & Active Recall</span>
             </button>
           </div>
         </div>
@@ -285,8 +323,8 @@ export function AreaStudyHub({
         </div>
       </div>
 
-      {/* Cards de Ação Adaptativa Imediata: Revisão de Hoje + Caderno de Erros + Treino Rápido */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+      {/* Cards de Ação Adaptativa Imediata: Revisão de Hoje + Caderno de Erros + Flashcards + Treino Rápido */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
         
         {/* 1. Revisão do Dia (SM-2) */}
         <div className="rounded-2xl border border-sky-500/20 bg-sky-950/20 p-4 flex flex-col justify-between">
@@ -345,7 +383,35 @@ export function AreaStudyHub({
           </button>
         </div>
 
-        {/* 3. Treino Rápido 10 Min */}
+        {/* 3. Flashcards & Active Recall */}
+        <div className="rounded-2xl border border-purple-500/20 bg-purple-950/20 p-4 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[0.65rem] font-bold text-purple-300 uppercase tracking-wider flex items-center gap-1">
+                <Brain size={12} />
+                <span>Active Recall</span>
+              </span>
+              <span className="rounded-full bg-purple-500/20 px-2 py-0.2 text-[0.65rem] font-bold text-purple-200">
+                Fórmulas & Regras
+              </span>
+            </div>
+            <h2 className="font-display font-bold text-white text-base">
+              Flashcards do ENEM
+            </h2>
+            <p className="text-[0.65rem] text-rose-200/60 mt-0.5">
+              Pratique recuperação ativa com cards de fórmulas, conceitos e pegadinhas da banca.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setActiveFlashcards({ area: selectedAreaId, moduleId: null })}
+            className="mt-3 w-full rounded-xl bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500 hover:text-white py-2 text-xs font-bold text-purple-200 transition cursor-pointer"
+          >
+            Abrir Flashcards ➔
+          </button>
+        </div>
+
+        {/* 4. Treino Rápido 10 Min */}
         <div className="rounded-2xl border border-rose-500/20 bg-rose-950/20 p-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-1">

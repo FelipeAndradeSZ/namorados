@@ -221,7 +221,71 @@ export const THEORY_CONTENT = {
       "Afirmar que catalisador aumenta o rendimento ou muda o ΔH da reação (FALSO: ele só diminui a energia de ativação e tempo).",
       "Errar o sinal da quebra/formação de ligações: quebrar ligação ABSORVE energia (+), formar ligação LIBERA energia (-)."
     ],
-    mnemonics: "Catalisador: 'Abaixa a montanha da ativação, mas não mexe no começo nem no chão'."
+  },
+
+  "natureza/ondulatoria": {
+    topic: "Ondulatória, Acústica e Óptica",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Top 3 de Física no ENEM. Foco em fenômenos ondulatórios, qualidades do som e efeito Doppler.",
+    highFrequencySkills: ["H17 - Equação fundamental da onda", "H18 - Fenômenos ondulatórios"],
+    overview: "Ondas transportam energia sem transportar matéria. O ENEM cobra o reconhecimento de difração, refração, interferência, polarização e a acústica do cotidiano.",
+    keyConcepts: [
+      {
+        title: "Equação Fundamental (v = λ · f)",
+        content: "A velocidade da onda depende do MEIO de propagação. A frequência (f) depende exclusivamente da FONTE emissora e NUNCA muda ao trocar de meio (na refração, a frequência permanece constante; se a velocidade muda, o comprimento de onda λ varia proporcionalmente)."
+      },
+      {
+        title: "Fenômenos Ondulatórios Decisivos",
+        content: "• Difração: Capacidade de contornar obstáculos (intensa quando λ ≈ tamanho do obstáculo).\n• Polarização: Filtrar uma única direção de oscilação (ocorre APENAS em ondas transversais; o som no ar NÃO polariza).\n• Ressonância: Sistema recebe energia em sua frequência natural, aumentando a amplitude das oscilações."
+      },
+      {
+        title: "Qualidades Fisiológicas do Som",
+        content: "• Altura: Frequência (Alta frequência = Som Agudo / Baixa frequência = Som Grave).\n• Intensidade: Amplitude / Volume / Energia (Forte vs. Fraco).\n• Timbre: Formato da onda / Harmônicos (Permite distinguir dois instrumentos tocando a mesma nota)."
+      }
+    ],
+    formulasAndRules: [
+      "Equação Fundamental: v = λ · f",
+      "Período e Frequência: T = 1 / f  |  f = 1 / T",
+      "Efeito Doppler: Aproximação → frequência aparente maior (mais agudo). Afastamento → frequência menor (mais grave)."
+    ],
+    enemTraps: [
+      "Dizer que som alto é som barulhento (Som alto = som AGUDO).",
+      "Afirmar que a frequência muda na refração (a frequência NUNCA muda na refração, só velocidade e comprimento)."
+    ],
+    mnemonics: "Acústica: 'Altura é Agudo/Grave, Intensidade é Forte/Fraco, Timbre é a Identidade'."
+  },
+
+  "natureza/quimica-organica": {
+    topic: "Química Orgânica: Funções, Isomeria e Sabões",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Presente em todas as edições do ENEM (3 a 5 questões de Química).",
+    highFrequencySkills: ["H24 - Funções oxigenadas e nitrogenadas", "H25 - Propriedades físicas e polaridade"],
+    overview: "Identificação rápida de funções orgânicas, forças intermoleculares, ação tensoativa de sabões e detergentes, e isomeria óptica com carbono quiral.",
+    keyConcepts: [
+      {
+        title: "Polaridade e Solubilidade (Semelhante dissolve Semelhante)",
+        content: "• Hidrocarbonetos: Estritamente apolares (interações de London fracas, insolúveis em água, solúveis em lipídios/óleos).\n• Álcoois e Ácidos Carboxílicos: Polares com ligações de hidrogênio (cadeias curtas são miscíveis em água; à medida que a cadeia carbônica cresce, a parte apolar predomina)."
+      },
+      {
+        title: "Sabões, Tensoativos e Micelas",
+        content: "Moléculas anfifílicas: cauda apolar (lipofílica) interage com a gordura; cabeça polar/iônica (hidrofílica) interage com a água. Formam micelas e reduzem a tensão superficial da água, permitindo a limpeza."
+      },
+      {
+        title: "Isomeria Óptica e Carbono Quiral",
+        content: "Carbono assimétrico (sp³) ligado a 4 grupos distintos entre si. Desvia o plano da luz polarizada. 2ⁿ isômeros opticamente ativos."
+      }
+    ],
+    formulasAndRules: [
+      "Regra do Carbono Quiral: C* com 4 ligantes diferentes (A ≠ B ≠ D ≠ E).",
+      "Saponificação: Éster de triglicerídeo + Base Forte (NaOH) → Sabão (Sal de ácido graxo) + Glicerol."
+    ],
+    enemTraps: [
+      "Confundir álcool com fenol: -OH no anel benzênico é FENOL. -OH em carbono saturado é ÁLCOOL.",
+      "Achar que tensoativo aumenta a tensão superficial da água (ele DIMINUI a tensão superficial)."
+    ],
+    mnemonics: "Funções: 'Oxigênio entre carbonos é Éter; Carbonila com oxigênio entre carbonos é Éster'."
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -423,7 +487,34 @@ export const THEORY_CONTENT = {
       "Misturar metros e centímetros na escala sem converter para a mesma unidade.",
       "Esquecer de elevar a escala ao quadrado em questões de área de plantas de apartamentos."
     ],
-    mnemonics: "Escala: 'De centímetro para quilômetro, corte 5 zeros!'."
+  },
+
+  "matematica/trigonometria": {
+    topic: "Trigonometria e Funções Periódicas",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Aplicações práticas em topografia, alturas inacessíveis e fenômenos periódicos (marés, temperatura).",
+    highFrequencySkills: ["H8 - Resolução de triângulos retângulos", "H20 - Modelagem com funções periódicas"],
+    overview: "O ENEM utiliza a trigonometria para problemas de medição no mundo real (teodolitos, sombras, declividade de rampas) e para modelar grandezas cíclicas que se repetem ao longo do tempo.",
+    keyConcepts: [
+      {
+        title: "Razões no Triângulo Retângulo (SO-CAH-TOA)",
+        content: "• Seno = Cateto Oposto / Hipotenusa\n• Cosseno = Cateto Adjacente / Hipotenusa\n• Tangente = Cateto Oposto / Cateto Adjacente\nÂngulos Notáveis (30°, 45°, 60°): sen 30° = 1/2; cos 30° = √3/2; tg 30° = √3/3; sen 45° = cos 45° = √2/2; tg 45° = 1; sen 60° = √3/2; cos 60° = 1/2; tg 60° = √3."
+      },
+      {
+        title: "Funções Periódicas (f(x) = A + B · sen(C·x + D))",
+        content: "• A (Termo Médio / Eixo Central): Linha média em torno da qual a curva oscila.\n• B (Amplitude): Metade da distância entre o valor máximo e o mínimo.\n• Valor Máximo = A + |B|  |  Valor Mínimo = A - |B|.\n• Período: P = 2π / |C| (intervalo de tempo para completar um ciclo completo)."
+      }
+    ],
+    formulasAndRules: [
+      "Relação Fundamental: sen²(θ) + cos²(θ) = 1",
+      "Período de Seno e Cosseno: P = 2π / C"
+    ],
+    enemTraps: [
+      "Esquecer de somar a altura do observador ou teodolito ao calcular a altura de um prédio ou torre.",
+      "Confundir a amplitude (B) com a altura total (máximo - mínimo = 2B)."
+    ],
+    mnemonics: "Trigonometria: 'SO-CAH-TOA' (Seno = Op/Hip, Cosseno = Adj/Hip, Tangente = Op/Adj)."
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -561,7 +652,33 @@ export const THEORY_CONTENT = {
       "Afirmar que Foucault localiza o poder apenas na figura do Presidente ou ditador (para Foucault, o poder é capilarizado e circula em todas as relações sociais).",
       "Confundir ação social weberiana com fato social durkheimiano."
     ],
-    mnemonics: "Tríade Sociológica: 'DUR-WE-MA' (Durkheim - Coletivo molda o indivíduo; Weber - Indivíduo dá sentido à ação; Marx - A economia determina a estrutura social)."
+  },
+
+  "humanas/geopolitica": {
+    topic: "Geopolítica, Globalização e Refugiados",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Nova DIT, blocos econômicos, migrações forçadas e conflitos geopolíticos por recursos.",
+    highFrequencySkills: ["H23 - A Nova Divisão Internacional do Trabalho", "H18 - Direitos humanos e migrações"],
+    overview: "A globalização econômica e técnica integra os mercados financeiros e fragmenta as cadeias produtivas, ao mesmo tempo em que aprofunda desigualdades globais e crises humanitárias de refugiados.",
+    keyConcepts: [
+      {
+        title: "A Nova DIT e a Fábrica Global",
+        content: "A produção de mercadorias complexas é fatiada globalmente: design e inovação nos países centrais; extração mineral e montagem intensiva em mão de obra nos países periféricos e emergentes (Sul Global)."
+      },
+      {
+        title: "Refugiados vs. Migrantes Econômicos",
+        content: "• Migrante Econômico: Deslocamento voluntário por motivos de trabalho e renda.\n• Refugiado (Convenção de 1951): Deslocamento forçado por fundado temor de perseguição (política, religiosa, étnica) ou conflito armado generalizado. Protegido pelo princípio de não devolução (non-refoulement)."
+      }
+    ],
+    formulasAndRules: [
+      "Tripé da Globalização Contemporânea: Meios de transporte rápidos (conteinerização) + Tecnologias da Informação (Internet/satélites) + Desregulamentação financeira transnacional."
+    ],
+    enemTraps: [
+      "Confundir refugiado com migrante ilegal comum.",
+      "Achar que globalização eliminou fronteiras físicas (ela abriu fronteiras para mercadorias e capitais, mas fechou e ergueu muros contra pessoas vulneráveis)."
+    ],
+    mnemonics: "DIT: 'Tradicional trocava Matéria-Prima por Manufatura; Nova DIT fatia a fábrica pelo planeta inteiro'."
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -625,7 +742,33 @@ export const THEORY_CONTENT = {
     enemTraps: [
       "Confundir o nacionalismo ufanista do Romantismo (idealização do índio e da pátria perfeita) com o nacionalismo crítico do Modernismo (que expõe as contradições brasileiras)."
     ],
-    mnemonics: "Três Fases do Modernismo: 'Ruptura (22), Realidade/Regionalismo (30), Reinvenção da Linguagem (45)'."
+  },
+
+  "linguagens/vanguardas-artes": {
+    topic: "Artes Visuais e Vanguardas Europeias",
+    area: "linguagens",
+    areaName: "Linguagens",
+    enemRelevance: "Ruptura estética, arte contemporânea, Semana de 22 e funções da arte.",
+    highFrequencySkills: ["H12 - Artes visuais e patrimônio", "H14 - Relações entre arte e sociedade"],
+    overview: "As vanguardas europeias do início do século XX (Futurismo, Cubismo, Dadaísmo, Surrealismo, Expressionismo) romperam com a representação figurativa tradicional e abriram caminho para a arte conceitual e o Modernismo brasileiro.",
+    keyConcepts: [
+      {
+        title: "As Principais Vanguardas e suas Marcas",
+        content: "• Futurismo (Marinetti): Culto à velocidade, máquinas, tecnologia e rompimento violento com o passado.\n• Cubismo (Picasso): Geometrização das formas e sobreposição de múltiplos ângulos visuais simultâneos em um único plano.\n• Dadaísmo (Duchamp): Anti-arte, nonsense, ironia iconoclasta e os 'ready-mades' (a ideia vale mais do que a técnica manual).\n• Surrealismo (Dalí, Magritte): Exploração do inconsciente, do sonho e da livre associação psíquica (influência de Freud).\n• Expressionismo (Munch): Deformação da realidade para expressar angústias e sentimentos humanos profundos."
+      },
+      {
+        title: "Semana de Arte Moderna (1922) e Antropofagia",
+        content: "Artistas brasileiros absorveram as técnicas das vanguardas para 'deglutir' as influências externas e produzir uma arte autenticamente nacional (Tarsila do Amaral com o 'Abaporu', Anita Malfatti, Oswald de Andrade, Mário de Andrade)."
+      }
+    ],
+    formulasAndRules: [
+      "Princípio da Arte Conceitual: O valor artístico reside no conceito/intenção crítica formulada pelo artista, e não na habilidade técnica de reprodução mimetizada da realidade."
+    ],
+    enemTraps: [
+      "Julgar obras de arte contemporâneas por critérios clássicos de beleza ou proporção renascentista.",
+      "Achar que o Dadaísmo defendia regras ou técnicas acadêmicas."
+    ],
+    mnemonics: "Vanguardas: 'FU-CU-DA-SU-EX' (Futurismo-Velocidade, Cubismo-Geometria, Dadaísmo-Nonsense/Ready-Made, Surrealismo-Inconsciente, Expressionismo-Angústia)."
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -662,6 +805,198 @@ export const THEORY_CONTENT = {
       "Ferir os Direitos Humanos na proposta de intervenção: zera sumariamente a Competência 5."
     ],
     mnemonics: "Fórmula da C5: 'QUEM faz, O QUE faz, COMO faz, PRA QUE faz, e um DETALHE a mais'."
+  },
+
+  "natureza/citologia": {
+    topic: "Citologia e Metabolismo Energético",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Altíssima frequência no ENEM e prova de Medicina (Cadeia respiratória, fotossíntese e organelas).",
+    highFrequencySkills: ["H13 - Organização celular e biomembranas", "H14 - Fluxos energéticos celulares", "H15 - Divisão e ciclo celular"],
+    overview: "A citologia no ENEM foca no funcionamento integrado da célula viva: como ela obtém energia (ATP), sintetiza e exporta substâncias, mantém o equilíbrio osmótico e se reproduz ou morre de forma orquestrada.",
+    keyConcepts: [
+      {
+        title: "Metabolismo Energético: Respiração Celular vs. Fermentação",
+        content: "1. Glicólise (Citosol): Glicose → 2 Piruvatos + 2 NADH + 2 ATP líquidos (Anaeróbica).\n2. Ciclo de Krebs (Matriz Mitocondrial): Descarboxilação e geração de NADH, FADH2 e 2 ATPs.\n3. Cadeia Transportadora de Elétrons (Cristas Mitocondriais): Elétrons bombeiam prótons H+ para o espaço intermembranas. O refluxo de H+ pela ATP Sintase produz ~28 ATPs. O oxigênio (O2) é o aceptor final de elétrons, formando água.\nFermentação: Em hipóxia, o piruvato vira lactato ou etanol exclusivamente para reoxidar NADH em NAD+ e não travar a glicólise."
+      },
+      {
+        title: "Fotossíntese: Fase Clara e Fase Escura",
+        content: "• Fase Fotoquímica (Tilacoides): Fotólise da água libera O2 (TODO o oxigênio liberado vem da água!) e produz ATP e NADPH.\n• Fase Enzimática / Ciclo de Calvin (Estroma): Fixação do CO2 atmosférico pela enzima Rubisco para sintetizar glicose."
+      },
+      {
+        title: "Membrana e Osmose",
+        content: "A água se move por osmose do meio HIPOTÔNICO (menos concentrado) para o meio HIPERTÔNICO (mais concentrado).\n• Célula animal em meio hipotônico: incha até estourar (hemólise/plasmoptise).\n• Célula vegetal em meio hipotônico: ganha água, mas NÃO estoura devido à parede celular (fica túrgida)."
+      },
+      {
+        title: "Teoria Endossimbiótica (Lynn Margulis)",
+        content: "Mitocôndrias e cloroplastos evoluíram de bactérias ancestrais fagocitadas: possuem DNA circular próprio, ribossomos 70S, dupla membrana e autoduplicação independente por fissão binária."
+      }
+    ],
+    formulasAndRules: [
+      "Respiração Aeróbica Global: C6H12O6 + 6 O2 → 6 CO2 + 6 H2O + ~30-32 ATP",
+      "Fotossíntese Global: 6 CO2 + 12 H2O + Luz → C6H12O6 + 6 H2O + 6 O2",
+      "Fases da Mitose: Prófase → Metáfase (placa equatorial) → Anáfase (separação das cromátides) → Telófase"
+    ],
+    enemTraps: [
+      "Achar que o O2 liberado na fotossíntese vem do CO2 (vem 100% da quebra da água!).",
+      "Achar que a fermentação gera dezenas de ATPs (ela só serve para regenerar o NAD+ da glicólise).",
+      "Esquecer que células vegetais realizam mitocôndrias e respiração celular 24 horas por dia (além de fotossíntese durante o dia)."
+    ],
+    mnemonics: "Fases da Mitose: 'PRO METO A ANA NO TELO' (Prófase, Metáfase, Anáfase, Telófase)."
+  },
+
+  "natureza/eletroquimica": {
+    topic: "Eletroquímica e Pilhas",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Presença certa no ENEM. Foco em pilhas, eletrólise industrial, baterias e proteção contra corrosão.",
+    highFrequencySkills: ["H18 - Processos eletroquímicos e energia", "H19 - Transformações químicas e sustentabilidade"],
+    overview: "Estudo da interconversão entre energia química e energia elétrica. Compreende processos espontâneos (pilhas galvânicas, ΔEº > 0) e não espontâneos forçados por gerador externo (eletrólise, ΔEº < 0).",
+    keyConcepts: [
+      {
+        title: "Pilhas Galvânicas e Mnemônico CRAO",
+        content: "• CÁTODO: Ocorre REDUÇÃO (+ polo positivo da pilha). Atrai cátions e ganha massa.\n• ÂNODO: Ocorre OXIDAÇÃO (- polo negativo da pilha). Corrói e perde massa.\n• Elétrons: fluem SEMPRE do Ânodo para o Cátodo pelo fio metálico condutor externo.\n• Ponte Salina: conduz íons em solução para neutralizar cargas e fechar o circuito (NUNCA conduz elétrons)."
+      },
+      {
+        title: "Potencial Padrão e Espontaneidade",
+        content: "ΔEº = Eº(redução maior) - Eº(redução menor). Se ΔEº > 0, o processo é ESPONTÂNEO (pilha). Se ΔEº < 0, é NÃO ESPONTÂNEO (exige eletrólise).\nNota: Eº é propriedade intensiva; NÃO multiplique o valor de Eº ao balancear a equação!"
+      },
+      {
+        title: "Metal de Sacrifício e Proteção Catódica",
+        content: "Para proteger o ferro (Fe) da corrosão, conecta-se a ele um metal com MENOR potencial de redução (maior facilidade de oxidar, como Mg ou Zn). O metal de sacrifício se corrói preferencialmente, mantendo o ferro reduzido e intacto."
+      },
+      {
+        title: "Eletrólise Aquosa de Salmoura (NaCl)",
+        content: "No cátodo: H+ descarrega antes do Na+ da família 1A, formando H2(g) e OH-. No ânodo: Cl- descarrega antes de OH-, formando Cl2(g). Em solução restam Na+ e OH- (soda cáustica NaOH)."
+      }
+    ],
+    formulasAndRules: [
+      "Força Eletromotriz: ΔEº = Eºredução(cátodo) - Eºredução(ânodo)",
+      "Carga Elétrica: Q = i · t (Q em Coulombs, i em Amperes, t em segundos)",
+      "Constante de Faraday: 1 mol de e⁻ = 96 500 C"
+    ],
+    enemTraps: [
+      "Achar que elétrons circulam pela ponte salina (apenas íons circulam pela solução aquosa!).",
+      "Multiplicar o potencial Eº pelos coeficientes estequiométricos da reação global.",
+      "Achar que Na metálico pode ser obtido em eletrólise aquosa (o H+ da água descarrega na frente)."
+    ],
+    mnemonics: "Pilha: CRAO (Cátodo Reduz, Ânodo Oxida). Quem tem Maior Eº REDUZ, quem tem Menor Eº OXIDA."
+  },
+
+  "natureza/termologia": {
+    topic: "Termologia, Calorimetria e Dilatação",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Muito cobrado em Física: trocas de calor, brisas costeiras, panela de pressão e garrafa térmica.",
+    highFrequencySkills: ["H17 - Fenômenos térmicos no cotidiano", "H18 - Uso eficiente e balanço térmico"],
+    overview: "Compreensão do calor como energia térmica em trânsito devido à diferença de temperatura, suas formas de propagação (condução, convecção e radiação) e os efeitos de aquecimento e mudança de estado físico.",
+    keyConcepts: [
+      {
+        title: "Calor Sensível vs. Calor Latente",
+        content: "• Calor Sensível (Q = m·c·ΔT): Altera a temperatura sem mudar de fase.\n• Calor Latente (Q = m·L): Altera a fase física mantendo a temperatura constante durante a transição em substâncias puras (platô térmico)."
+      },
+      {
+        title: "Mecanismos de Transferência Térmica",
+        content: "• Condução: Exige contato direto em sólidos molécula a molécula.\n• Convecção: Exclusiva de fluidos (líquidos e gases) por correntes ascendentes de ar quente menos denso e descendentes de ar frio mais denso.\n• Radiação: Ondas eletromagnéticas (infravermelho) que se propagam inclusive no vácuo."
+      },
+      {
+        title: "Garrafa Térmica (Frasco de Dewar)",
+        content: "• Vácuo entre paredes duplas: impede Condução e Convecção.\n• Paredes espelhadas: refletem a radiação infravermelha de volta.\n• Tampa plástica vedante: impede convecção e perda por evaporação."
+      },
+      {
+        title: "Comportamento Anômalo da Água",
+        content: "A água atinge densidade MÁXIMA a 4 °C. Abaixo de 4 °C ela se expande devido às pontes de hidrogênio abertas. Por isso o gelo flutua e lagos congelam apenas na superfície, preservando a vida aquática no fundo a 4 °C."
+      }
+    ],
+    formulasAndRules: [
+      "Calor Sensível: Q = m · c · ΔT",
+      "Calor Latente: Q = m · L",
+      "Equilíbrio Térmico: ΣQ = 0 (Qcedido + Qrecebido = 0)",
+      "Dilatação Linear: ΔL = L0 · α · ΔT",
+      "Primeira Lei da Termodinâmica: ΔU = Q - W (onde W = P · ΔV)"
+    ],
+    enemTraps: [
+      "Confundir calor com temperatura (temperatura é a medida microscópica da agitação; calor é a energia em trânsito).",
+      "Achar que roupas de lã 'esquentam': a lã é um isolante térmico que apenas retarda a perda de calor do corpo para o ambiente.",
+      "Fazer média simples de temperatura em misturas quando as massas de água forem desiguais."
+    ],
+    mnemonics: "Fórmulas de Calor: 'Que macete' (Q = m·c·ΔT) e 'Que moleza' (Q = m·L)."
+  },
+
+  "matematica/geometria-analitica": {
+    topic: "Geometria Analítica e Cônicas",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Cai regularmente associada a mapas, antenas, radares e otimização de rotas logísticas.",
+    highFrequencySkills: ["H8 - Coordenadas cartesianas no plano", "H21 - Modelagem algébrico-geométrica"],
+    overview: "A geometria analítica unifica a álgebra e a geometria euclidiana através do plano cartesiano, permitindo calcular distâncias, posições relativas e áreas de figuras através de coordenadas numéricas.",
+    keyConcepts: [
+      {
+        title: "Distância Entre Dois Pontos e Ponto Médio",
+        content: "• Distância: d = √[(xB - xA)² + (yB - yA)²] (aplicação direta de Pitágoras).\n• Ponto Médio M: xM = (xA + xB) / 2 e yM = (yA + yB) / 2.\n• Baricentro G do triângulo: xG = (xA + xB + xC) / 3 e yG = (yA + yB + yC) / 3."
+      },
+      {
+        title: "Equação da Reta e Posições Relativas",
+        content: "• Equação Reduzida: y = mx + n (onde m = coeficiente angular = Δy/Δx; n = ponto onde corta o eixo y).\n• Retas Paralelas: possuem coeficientes angulares idênticos (m1 = m2).\n• Retas Perpendiculares: m1 · m2 = -1 (ou m2 = -1 / m1)."
+      },
+      {
+        title: "Equação da Circunferência",
+        content: "Forma Reduzida: (x - a)² + (y - b)² = R² (onde C(a, b) é o centro e R é o raio).\nPara saber se um ponto P está dentro, na borda ou fora: substitua as coordenadas. Se < R² (dentro); se = R² (na borda); se > R² (fora)."
+      },
+      {
+        title: "Distância de Ponto à Reta",
+        content: "d = |A·x0 + B·y0 + C| / √(A² + B²) (a reta deve estar na forma geral Ax + By + C = 0)."
+      }
+    ],
+    formulasAndRules: [
+      "Distância entre pontos: d² = (Δx)² + (Δy)²",
+      "Equação ponto-declive da reta: y - y0 = m · (x - x0)",
+      "Área do triângulo por coordenadas: Área = (1/2) · |Determinante das Coordenadas|"
+    ],
+    enemTraps: [
+      "Esquecer de trocar o sinal das coordenadas ao extrair o centro da circunferência da equação (x - a)² + (y - b)² = R².",
+      "Esquecer de extrair a raiz quadrada de R² para encontrar o raio da circunferência.",
+      "Confundir coeficiente angular (m = Δy / Δx) fazendo Δx / Δy."
+    ],
+    mnemonics: "Equação da Reta: 'Yo-Yo Mi-Xo-Xo' (y - y0 = m · (x - x0))."
+  },
+
+  "humanas/cidadania-direitos": {
+    topic: "Cidadania, Direitos e Movimentos Sociais",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Tema transversal de máxima pontuação no ENEM e pilar essencial para nota 900+ na Redação.",
+    highFrequencySkills: ["H23 - Cidadania e movimentos sociais", "H24 - Legislação, Estado e Direitos Humanos"],
+    overview: "Analisa a conquista histórica dos direitos fundamentais civis, políticos e sociais no Brasil, o papel da Constituição de 1988 e os desafios contemporâneos da cidadania real frente às desigualdades estruturais.",
+    keyConcepts: [
+      {
+        title: "Gerações dos Direitos (T. H. Marshall e Bobbio)",
+        content: "• 1ª Dimensão (Liberdade): Direitos Civis e Políticos. Exigem abstenção estatal (liberdades negativas).\n• 2ª Dimensão (Igualdade): Direitos Sociais, Econômicos e Culturais (Saúde, Educação, Trabalho). Exigem prestação positiva do Estado.\n• 3ª Dimensão (Fraternidade): Direitos Difusos e Coletivos (Meio ambiente ecologicamente equilibrado, paz mundial)."
+      },
+      {
+        title: "Constituição Cidadã de 1988 e o SUS",
+        content: "O Artigo 196 consagrou: 'A saúde é direito de todos e dever do Estado'. Rompeu com o INAMPS (que atendia só quem tinha carteira assinada), universalizando o acesso com os pilares de Universalidade, Equidade e Integralidade."
+      },
+      {
+        title: "O Cidadão de Papel (Gilberto Dimenstein)",
+        content: "Denuncia o abismo entre a 'cidadania formal' (garantida no texto das leis) e a 'cidadania real' (a precariedade vivida nas periferias sem saneamento, segurança ou saúde de qualidade)."
+      },
+      {
+        title: "Artigo 231 e Direitos Originários Indígenas",
+        content: "Reconhece aos povos originários sua identidade cultural permanente e direitos originários sobre as terras tradicionais. A demarcação pela União tem natureza declaratória (reconhece posse pré-existente ao próprio Estado)."
+      }
+    ],
+    formulasAndRules: [
+      "Artigo 5º da CF/88: Todos são iguais perante a lei, sem distinção de qualquer natureza.",
+      "Artigo 196: A saúde é direito de todos e dever do Estado.",
+      "Artigo 227: Prioridade absoluta aos direitos da criança e do adolescente."
+    ],
+    enemTraps: [
+      "Achar que ações afirmativas (cotas) ferem o princípio da isonomia: o STF julgou que garantem a igualdade material.",
+      "Confundir plebiscito (consulta PRÉVIA) com referendo (aprovação POSTERIOR pelo povo).",
+      "Achar que o SUS é centralizado em Brasília: ele é tripartite descentralizado."
+    ],
+    mnemonics: "Pilares Doutrinários do SUS: 'U-E-I' (Universalidade, Equidade, Integralidade)."
   }
 };
 

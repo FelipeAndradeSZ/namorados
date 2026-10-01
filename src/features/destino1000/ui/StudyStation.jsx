@@ -16,22 +16,33 @@ export function StudyStation({
   question, 
   onAnswerSubmit, 
   onNextQuestion, 
-  isLastQuestion = false 
+  isLastQuestion = false,
+  questionIndex = 0,
+  totalQuestions = 1,
+  sessionType = "estudo",
+  timeRemainingSeconds = null
 }) {
   const [selectedOptionId, setSelectedOptionId] = useState(null);
   const [confidence, setConfidence] = useState("media");
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [selectedErrorCategory, setSelectedErrorCategory] = useState(null);
   const [hasReflected, setHasReflected] = useState(false);
-  const [viewState, setViewState] = useState("theory"); // 'theory' | 'question'
+  const [viewState, setViewState] = useState(sessionType === "simulado" ? "question" : "theory"); // Em simulado, vai direto para a questão
+
+  const formatCountdown = (secs) => {
+    if (secs == null) return null;
+    const mins = Math.floor(secs / 60);
+    const rem = secs % 60;
+    return `${mins}:${rem < 10 ? "0" : ""}${rem}`;
+  };
 
   if (!question) {
     return (
       <div className="flex flex-col items-center justify-center p-12 text-center text-rose-200">
         <Sparkles size={40} className="text-rose-400 mb-3 animate-bounce" />
-        <h3 className="font-display text-2xl text-white">Todas as missões desta expedição foram concluídas!</h3>
+        <h3 className="font-display text-2xl text-white">Sessão de Estudos Concluída com Sucesso! 🎓</h3>
         <p className="mt-2 text-sm text-rose-200/70 max-w-md">
-          Excelente trabalho! Você revisou seus pontos e acumulou milhas para viajar para o próximo destino no mapa do Brasil.
+          Excelente dedicação! Todos os conceitos deste bloco foram trabalhados e suas métricas foram atualizadas no seu plano rumo à nota 800+ em Medicina.
         </p>
       </div>
     );
@@ -93,22 +104,37 @@ export function StudyStation({
   return (
     <div className="mx-auto max-w-4xl px-3 py-6 sm:px-6">
       
-      {/* Header com Metadados da Questão */}
+      {/* Header com Metadados da Questão e Cronômetro */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="rounded-lg bg-rose-500/20 px-2.5 py-1 text-xs font-bold text-rose-300 border border-rose-500/30 uppercase tracking-wider">
             {question.area}
           </span>
-          <span className="text-xs text-rose-100/60 font-medium">
+          <span className="rounded-lg bg-white/5 px-2.5 py-1 text-xs font-bold text-white/80 border border-white/10">
+            {questionIndex + 1} / {totalQuestions}
+          </span>
+          <span className="text-xs text-rose-100/60 font-medium hidden sm:inline">
             Habilidade {question.skill} • {question.topic}
           </span>
         </div>
 
-        <div className="flex items-center gap-3 text-xs text-rose-200/50">
-          <span className="flex items-center gap-1">
-            <Clock size={13} /> {question.estimatedTimeSeconds || 150}s
-          </span>
-          <span className="flex items-center gap-1">
+        <div className="flex items-center gap-3 text-xs">
+          {timeRemainingSeconds != null ? (
+            <span className={`flex items-center gap-1 rounded-xl px-2.5 py-1 font-mono font-bold border ${
+              timeRemainingSeconds < 300 
+                ? "bg-rose-500/20 border-rose-500/40 text-rose-300 animate-pulse" 
+                : "bg-amber-500/20 border-amber-500/30 text-amber-200"
+            }`}>
+              <Clock size={13} />
+              <span>{formatCountdown(timeRemainingSeconds)}</span>
+            </span>
+          ) : (
+            <span className="flex items-center gap-1 text-rose-200/50">
+              <Clock size={13} /> {question.estimatedTimeSeconds || 150}s
+            </span>
+          )}
+
+          <span className="flex items-center gap-1 text-rose-200/50">
             Dificuldade: {"★".repeat(question.difficulty)}{"☆".repeat(5 - question.difficulty)}
           </span>
         </div>
@@ -307,7 +333,7 @@ export function StudyStation({
               </div>
               <div className="flex items-center gap-2">
                 <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold">
-                  {isCorrect ? "+50 XP • +30 Milhas" : "+20 XP pela tentativa"}
+                  {isCorrect ? "+50 XP • Alta Retenção" : "+20 XP pela tentativa"}
                 </span>
               </div>
             </div>
@@ -379,7 +405,7 @@ export function StudyStation({
               onClick={handleNext}
               className="flex items-center gap-2 rounded-xl bg-rose-200 px-6 py-3 text-sm font-bold text-[#2a1020] shadow-xl hover:bg-rose-100 transition cursor-pointer"
             >
-              <span>{isLastQuestion ? "Finalizar Expedição" : "Próxima Questão"}</span>
+              <span>{isLastQuestion ? "Finalizar Bloco de Estudos" : "Próxima Questão"}</span>
               <ArrowRight size={16} />
             </button>
           </div>
