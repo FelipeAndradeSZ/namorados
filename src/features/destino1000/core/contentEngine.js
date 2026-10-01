@@ -10,7 +10,7 @@
  * O Content Engine NUNCA modifica questões — é read-only.
  */
 
-import { QUESTION_MODULES, CONTENT_METADATA, MISSION_MODULES } from "../content/registry";
+import { QUESTION_MODULES, CONTENT_METADATA } from "../content/registry";
 
 class ContentEngine {
   constructor() {
@@ -97,18 +97,6 @@ class ContentEngine {
   }
 
   /**
-   * Obtém questões associadas a uma cidade específica.
-   * @param {string} cityId - ex: "sao-paulo"
-   * @returns {Promise<Array>}
-   */
-  async getQuestionsForCity(cityId) {
-    await this.loadAll();
-    return [...this.questionIndex.values()].filter(
-      (q) => q.cityId === cityId
-    );
-  }
-
-  /**
    * Obtém questões por habilidade específica do ENEM.
    * @param {string} area
    * @param {number} competence
@@ -129,7 +117,6 @@ class ContentEngine {
       return this.questionIndex.get(questionId);
     }
 
-    // Se não encontrado, carrega todos os módulos e tenta novamente
     await this.loadAll();
     return this.questionIndex.get(questionId) || null;
   }
@@ -166,20 +153,6 @@ class ContentEngine {
     }
 
     return shuffled.slice(0, count);
-  }
-
-  /**
-   * Obtém missões de uma cidade.
-   * @param {string} cityId 
-   */
-  async getMissionsForCity(cityId) {
-    if (!MISSION_MODULES[cityId]) return [];
-    try {
-      const mod = await MISSION_MODULES[cityId]();
-      return Object.values(mod).find(Array.isArray) || [];
-    } catch {
-      return [];
-    }
   }
 
   /**

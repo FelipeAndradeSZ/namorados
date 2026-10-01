@@ -186,22 +186,100 @@ export function getDailyRecommendation(playerState) {
 }
 
 /**
- * Montador de Sessão Expressa: "Tenho 10 Minutos"
- * @param {number} minutes Tempo disponível (ex: 5, 10, 15, 20)
- * @param {Array} availableQuestions Banco de questões
- * @returns {Array} Subconjunto calibrado de questões
+ * Estimador de Pontuação TRI do ENEM (Teoria de Resposta ao Item Simplificada)
+ * Avalia consistência pedagógica: acertos em questões fáceis, médias e difíceis.
+ * Se errar fáceis e acertar difíceis, a TRI penaliza por incoerência (chute).
+ * 
+ * @param {Array} attempts Histórico de questões resolvidas
+ * @param {string} area Área avaliada ('matematica', 'natureza', 'humanas', 'linguagens')
+ * @returns {Object} { estimatedScore, coherenceLevel, easyAcc, medAcc, hardAcc }
  */
-export function buildQuickSession(minutes = 10, availableQuestions = [], playerHistory = []) {
-  // Média ENEM: ~3 minutos por questão
-  const questionCount = Math.max(2, Math.floor(minutes / 2.5));
-  
-  // Priorizar questões não vistas recentemente
-  const seenIds = new Set(playerHistory.map(h => h.questionId));
-  const unseen = availableQuestions.filter(q => !seenIds.has(q.id));
-  
-  const pool = unseen.length >= questionCount ? unseen : availableQuestions;
-  
-  // Embaralha e seleciona a quantidade
-  const shuffled = [...pool].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, questionCount);
+export function estimateTRIScore(attempts = [], area = "matematica") {
+  const areaAttempts = attempts.filter(a => a.area === area || !a.area);
+  if (areaAttempts.length === 0) {
+    return {
+      estimatedScore: 500, // Média nacional padrão
+      coherenceLevel: "Neutro",
+      accuracyPercent: 0,
+      totalAnswered: 0
+    };
+  }
+
+  const easy = areaAttempts.filter(a => (a.difficulty || 3) <= 2);
+  const med = areaAttempts.filter(a => (a.difficulty || 3) === 3);
+  const hard = areaAttempts.filter(a => (a.difficulty || 3) >= 4);
+
+  const easyAcc = easy.length ? easy.filter(a => a.isCorrect).length / easy.length : 0.5;
+  const medAcc = med.length ? med.filter(a => a.isCorrect).length / med.length : 0.5;
+  const hardAcc = hard.length ? hard.filter(a => a.isCorrect).length / hard.length : 0.5;
+
+  const totalCorrect = areaAttempts.filter(a => a.isCorrect).length;
+  const rawAcc = totalCorrect / areaAttempts.length;
+
+  // Coerência pedagógica: o candidato ideal acerta fácil > médio > difícil
+  let coherence = 1.0;
+  if (hardAcc > easyAcc && hard.length >= 2 && easy.length >= 2) {
+    coherence = 0.82; // Incoerência: acertou difícil mas errou fácil (penalização por chute)
+  } else if (easyAcc >= medAcc && medAcc >= hardAcc) {
+    coherence = 1.15; // Coerência pedagógica perfeita: bônus TRI
+  }
+
+  // Faixas máximas do ENEM por área
+  const areaMax = {
+    matematica: 980,
+    natureza: 860,
+    humanas: 840,
+    linguagens: 820
+  };
+  const areaBase = 320;
+  const max = areaMax[area] || 850;
+
+  let estimated = areaBase + (max - areaBase) * rawAcc * coherence;
+  estimated = Math.max(300, Math.min(max, Math.round(estimated)));
+
+  return {
+    estimatedScore: estimated,
+    coherenceLevel: coherence > 1.0 ? "Alta Coerência (TRI Favorável)" : coherence < 1.0 ? "Incoerente (Possível Chute)" : "Equilibrado",
+    accuracyPercent: Math.round(rawAcc * 100),
+    totalAnswered: areaAttempts.length,
+    easyAccuracy: Math.round(easyAcc * 100),
+    medAccuracy: Math.round(medAcc * 100),
+    hardAccuracy: Math.round(hardAcc * 100)
+  };
 }
+
+/**
+ * Análise Diagnóstica do Caderno de Erros
+ * Identifica o padrão de falhas da estudante para intervenção direcionada
+ */
+export function analyzeErrorPatterns(errorNotebook = []) {
+  if (!errorNotebook || errorNotebook.length === 0) {
+    return {
+      totalErrors: 0,
+      topCategory: null,
+      topCategoryLabel: "Nenhum erro registrado",
+      categoryBreakdown: {},
+      remedyTip: "Resolva questões para mapear seus pontos de melhoria!"
+    };
+  }
+
+  const breakdown = {};
+  errorNotebook.forEach(err => {
+    const cat = err.errorCategory || "chute";
+    breakdown[cat] = (breakdown[cat] || 0) + 1;
+  });
+
+  const sortedCats = Object.entries(breakdown).sort((a, b) => b[1] - a[1]);
+  const topCat = sortedCats[0][0];
+  const catInfo = ERROR_CATEGORIES[topCat] || ERROR_CATEGORIES.interpretacao;
+
+  return {
+    totalErrors: errorNotebook.length,
+    topCategory: topCat,
+    topCategoryLabel: catInfo.label,
+    topCategoryPercent: Math.round((sortedCats[0][1] / errorNotebook.length) * 100),
+    categoryBreakdown: breakdown,
+    remedyTip: catInfo.tip
+  };
+}
+

@@ -1,11 +1,11 @@
 /**
  * DESTINO 1000 — Sincronizador de Armazenamento Local e Nuvem
- * Garante resiliência de dados mesmo com falhas de rede ou recarregamentos de página.
+ * 100% Focado em Aprendizagem Acadêmica do ENEM
  */
 
 import { INITIAL_PLAYER_STATE } from "./gameState";
 
-const STORAGE_KEY = "destino1000_player_state_v1";
+const STORAGE_KEY = "destino1000_academic_state_v2";
 
 export function loadPlayerState() {
   try {
@@ -13,7 +13,6 @@ export function loadPlayerState() {
     if (!raw) return INITIAL_PLAYER_STATE;
     const parsed = JSON.parse(raw);
     
-    // Mesclagem segura caso novos campos sejam adicionados no schema
     return {
       ...INITIAL_PLAYER_STATE,
       ...parsed,
@@ -21,22 +20,15 @@ export function loadPlayerState() {
         ...INITIAL_PLAYER_STATE.profile,
         ...(parsed.profile || {})
       },
-      economy: {
-        ...INITIAL_PLAYER_STATE.economy,
-        ...(parsed.economy || {})
-      },
-      location: {
-        ...INITIAL_PLAYER_STATE.location,
-        ...(parsed.location || {})
-      },
-      inventory: {
-        ...INITIAL_PLAYER_STATE.inventory,
-        ...(parsed.inventory || {})
-      },
       masteryMatrix: {
         ...INITIAL_PLAYER_STATE.masteryMatrix,
         ...(parsed.masteryMatrix || {})
       },
+      errorNotebook: parsed.errorNotebook || [],
+      spacedRepetitionQueue: parsed.spacedRepetitionQueue || [],
+      repertoriosAnotados: parsed.repertoriosAnotados || INITIAL_PLAYER_STATE.repertoriosAnotados,
+      history: parsed.history || [],
+      simuladosHistory: parsed.simuladosHistory || []
     };
   } catch (err) {
     console.warn("Falha ao recuperar progresso do Destino 1000 do localStorage:", err);
@@ -60,7 +52,7 @@ export function savePlayerState(state) {
 export function exportBackupData(state) {
   return JSON.stringify({
     exportedAt: new Date().toISOString(),
-    version: "1.0.0",
+    version: "2.0.0",
     data: state
   }, null, 2);
 }

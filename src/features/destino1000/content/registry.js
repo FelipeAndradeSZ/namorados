@@ -53,52 +53,12 @@ export const QUESTION_MODULES = {
 };
 
 // ─────────────────────────────────────────────
-// CIDADES — Organizadas por região
-// ─────────────────────────────────────────────
-
-export const CITY_MODULES = {
-  // sudeste: () => import("./cities/sudeste.js"),
-  // nordeste: () => import("./cities/nordeste.js"),
-  // norte: () => import("./cities/norte.js"),
-  // "centro-oeste": () => import("./cities/centro-oeste.js"),
-  // sul: () => import("./cities/sul.js"),
-};
-
-// ─────────────────────────────────────────────
-// MISSÕES — Por cidade
-// ─────────────────────────────────────────────
-
-export const MISSION_MODULES = {
-  vitoria: () => import("./missions/vitoria.js"),
-  "sao-paulo": () => import("./missions/sao-paulo.js"),
-  belem: () => import("./missions/belem.js"),
-  cuiaba: () => import("./missions/cuiaba.js"),
-  goiania: () => import("./missions/goiania.js"),
-  curitiba: () => import("./missions/curitiba.js"),
-  florianopolis: () => import("./missions/florianopolis.js"),
-  "porto-alegre": () => import("./missions/porto-alegre.js"),
-  recife: () => import("./missions/recife.js"),
-  fortaleza: () => import("./missions/fortaleza.js"),
-  "rio-de-janeiro": () => import("./missions/rio-de-janeiro.js"),
-  brasilia: () => import("./missions/brasilia.js"),
-  salvador: () => import("./missions/salvador.js"),
-  manaus: () => import("./missions/manaus.js"),
-};
-
-// ─────────────────────────────────────────────
-// EVENTOS ALEATÓRIOS
-// ─────────────────────────────────────────────
-
-// export const EVENT_MODULE = () => import("./events/random-events.js");
-
-// ─────────────────────────────────────────────
 // METADADOS ESTÁTICOS (contagens para UI sem carregar tudo)
 // ─────────────────────────────────────────────
 
 export const CONTENT_METADATA = {
   totalQuestionModules: Object.keys(QUESTION_MODULES).length,
-  totalCityRegions: Object.keys(CITY_MODULES).length,
   areas: ["matematica", "linguagens", "humanas", "natureza", "redacao"],
-  version: "2.0.0",
+  version: "3.0.0",
   lastUpdated: "2026-10-01",
 };

@@ -11,7 +11,8 @@ import {
   AlertTriangle, 
   FileText,
   Play,
-  Zap
+  Zap,
+  RotateCcw
 } from "lucide-react";
 
 import { ENEM_AREAS } from "../content/curriculum";
@@ -100,13 +101,27 @@ const AREA_COLORS = {
   },
 };
 
-export function AreaStudyHub({ onStartTopicSession, onGoToRedacao, onStartQuickSession }) {
+export function AreaStudyHub({ 
+  playerState = {}, 
+  onStartTopicSession, 
+  onGoToRedacao, 
+  onStartQuickSession,
+  onStartReviewSession,
+  onStartErrorSession
+}) {
   const [selectedAreaId, setSelectedAreaId] = useState("natureza");
   const [activeTheoryModule, setActiveTheoryModule] = useState(null);
 
   const selectedArea = ENEM_AREAS[selectedAreaId];
   const topics = AREA_TOPICS[selectedAreaId] || [];
   const colors = AREA_COLORS[selectedAreaId] || AREA_COLORS.natureza;
+
+  const today = new Date().toISOString().split("T")[0];
+  const dueReviewsCount = (playerState.history || []).filter(
+    h => h.reviewSchedule && h.reviewSchedule.nextReviewDate <= today
+  ).length;
+
+  const errorCount = (playerState.errorNotebook || []).length;
 
   // Visualização de Teoria Completa
   if (activeTheoryModule) {
@@ -268,17 +283,96 @@ export function AreaStudyHub({ onStartTopicSession, onGoToRedacao, onStartQuickS
             Selecione uma área abaixo para acessar a teoria aprofundada e as questões padrão ENEM de cada matéria.
           </p>
         </div>
+      </div>
 
-        {onStartQuickSession && (
+      {/* Cards de Ação Adaptativa Imediata: Revisão de Hoje + Caderno de Erros + Treino Rápido */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+        
+        {/* 1. Revisão do Dia (SM-2) */}
+        <div className="rounded-2xl border border-sky-500/20 bg-sky-950/20 p-4 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[0.65rem] font-bold text-sky-300 uppercase tracking-wider flex items-center gap-1">
+                <RotateCcw size={12} />
+                <span>Revisão Espaçada (SM-2)</span>
+              </span>
+              <span className="rounded-full bg-sky-500/20 px-2 py-0.2 text-[0.65rem] font-bold text-sky-200">
+                {dueReviewsCount > 0 ? `${dueReviewsCount} pendentes` : "Em dia ✅"}
+              </span>
+            </div>
+            <h2 className="font-display font-bold text-white text-base">
+              Revisão de Hoje
+            </h2>
+            <p className="text-[0.65rem] text-rose-200/60 mt-0.5">
+              Consolidação de conteúdos nos momentos ótimos da curva de esquecimento.
+            </p>
+          </div>
           <button
             type="button"
-            onClick={() => onStartQuickSession(10)}
-            className="flex items-center gap-2 rounded-2xl border border-rose-500/30 bg-rose-500/10 px-4 py-2.5 text-xs font-bold text-rose-200 hover:bg-rose-500/20 hover:border-rose-400 transition cursor-pointer self-start sm:self-auto"
+            onClick={onStartReviewSession}
+            className="mt-3 w-full rounded-xl bg-sky-500/20 border border-sky-500/30 hover:bg-sky-500 hover:text-sky-950 py-2 text-xs font-bold text-sky-200 transition cursor-pointer"
           >
-            <Zap size={16} className="text-rose-400" />
-            <span>⚡ Treino Rápido (10 Minutos)</span>
+            Iniciar Revisão ➔
           </button>
-        )}
+        </div>
+
+        {/* 2. Caderno de Erros */}
+        <div className="rounded-2xl border border-amber-500/20 bg-amber-950/20 p-4 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[0.65rem] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1">
+                <AlertTriangle size={12} />
+                <span>Superação de Falhas</span>
+              </span>
+              <span className="rounded-full bg-amber-500/20 px-2 py-0.2 text-[0.65rem] font-bold text-amber-200">
+                {errorCount} {errorCount === 1 ? "erro" : "erros"}
+              </span>
+            </div>
+            <h2 className="font-display font-bold text-white text-base">
+              Meus Erros Recorrentes
+            </h2>
+            <p className="text-[0.65rem] text-rose-200/60 mt-0.5">
+              Refaça exclusivamente as questões que você errou até atingir o domínio completo.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onStartErrorSession}
+            disabled={errorCount === 0}
+            className="mt-3 w-full rounded-xl bg-amber-500/20 border border-amber-500/30 hover:bg-amber-500 hover:text-amber-950 py-2 text-xs font-bold text-amber-200 transition cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {errorCount > 0 ? "Treinar Meus Erros ➔" : "Nenhum Erro Pendente ✅"}
+          </button>
+        </div>
+
+        {/* 3. Treino Rápido 10 Min */}
+        <div className="rounded-2xl border border-rose-500/20 bg-rose-950/20 p-4 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[0.65rem] font-bold text-rose-300 uppercase tracking-wider flex items-center gap-1">
+                <Zap size={12} />
+                <span>Tiro Rápido</span>
+              </span>
+              <span className="rounded-full bg-rose-500/20 px-2 py-0.2 text-[0.65rem] font-bold text-rose-200">
+                10 min
+              </span>
+            </div>
+            <h2 className="font-display font-bold text-white text-base">
+              Tenho 10 Minutos
+            </h2>
+            <p className="text-[0.65rem] text-rose-200/60 mt-0.5">
+              Sessão calibrada de 4 a 5 questões para manter a sequência diária ativa.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => onStartQuickSession && onStartQuickSession(10)}
+            className="mt-3 w-full rounded-xl bg-rose-500/20 border border-rose-500/30 hover:bg-rose-500 hover:text-white py-2 text-xs font-bold text-rose-200 transition cursor-pointer"
+          >
+            Iniciar Sprint ➔
+          </button>
+        </div>
+
       </div>
 
       {/* Seletor de Áreas (5 Abas Principais) */}

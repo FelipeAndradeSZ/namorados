@@ -99,6 +99,55 @@ export default function Destino1000App({ onBack }) {
     setIsLoading(false);
   };
 
+  // Modo "Revisão do Dia" (SM-2)
+  const handleStartReviewSession = async () => {
+    destinoAudio.playClick();
+    setIsLoading(true);
+
+    const today = new Date().toISOString().split("T")[0];
+    const dueQuestionIds = (playerState.history || [])
+      .filter(h => h.reviewSchedule && h.reviewSchedule.nextReviewDate <= today)
+      .map(h => h.questionId);
+
+    let reviewPool = [];
+    for (const qid of dueQuestionIds) {
+      const q = await contentEngine.getQuestionById(qid);
+      if (q) reviewPool.push(q);
+    }
+
+    if (reviewPool.length === 0) {
+      // Se não houver revisão vencida, pega um mix de fixação
+      reviewPool = await contentEngine.getRandomQuestions(8);
+    }
+
+    setActiveSessionQuestions(reviewPool);
+    setActiveQuestionIndex(0);
+    setActiveTab("estudo");
+    setIsLoading(false);
+  };
+
+  // Modo "Caderno de Erros" (Superar falhas)
+  const handleStartErrorSession = async () => {
+    destinoAudio.playClick();
+    setIsLoading(true);
+
+    const errIds = (playerState.errorNotebook || []).map(e => e.questionId);
+    let errorPool = [];
+    for (const qid of errIds) {
+      const q = await contentEngine.getQuestionById(qid);
+      if (q) errorPool.push(q);
+    }
+
+    if (errorPool.length === 0) {
+      errorPool = await contentEngine.getRandomQuestions(5);
+    }
+
+    setActiveSessionQuestions(errorPool);
+    setActiveQuestionIndex(0);
+    setActiveTab("estudo");
+    setIsLoading(false);
+  };
+
   // Modo Simulado
   const handleSimuladoSession = async (count = 10) => {
     destinoAudio.playClick();
@@ -127,19 +176,17 @@ export default function Destino1000App({ onBack }) {
     let attemptToSave = null;
 
     setPlayerState(prev => {
-      // 1. Recompensa de XP
+      // 1. Recompensa de XP Acadêmico
       let xp = isCorrect ? 50 : 20;
-      let milhas = isCorrect ? 35 : 10;
-      let reais = isCorrect ? 15 : 5;
 
       if (reflected) {
         // Bônus pedagógico por reflexão metacognitiva do erro
         xp += 30;
       }
 
-      const rewarded = rewardStudyAction(prev, { xp, milhas, reais });
+      const rewarded = rewardStudyAction(prev, { xp, isCorrect });
 
-      // 2. Cálculo do SM-2
+      // 2. Cálculo do SM-2 (Repetição Espaçada)
       const previousSchedule = prev.history?.find(h => h.questionId === questionId)?.reviewSchedule;
       const nextSchedule = calculateNextReview(previousSchedule, isCorrect, confidence);
 
@@ -147,13 +194,39 @@ export default function Destino1000App({ onBack }) {
       const currentAreaMastery = prev.masteryMatrix?.[question.area] || 50;
       const newAreaMastery = updateSkillMastery(currentAreaMastery, isCorrect, question.difficulty, confidence);
 
-      // 4. Construir tentativa
+      // 4. Caderno de Erros (Metacognição e Superação)
+      let updatedErrorNotebook = [...(prev.errorNotebook || [])];
+      if (!isCorrect) {
+        const existingErrIdx = updatedErrorNotebook.findIndex(e => e.questionId === questionId);
+        const errEntry = {
+          questionId,
+          area: question.area,
+          topic: question.topic,
+          skill: question.skill,
+          errorCategory: errorCategory || "chute",
+          date: new Date().toISOString(),
+          attemptsCount: existingErrIdx >= 0 ? (updatedErrorNotebook[existingErrIdx].attemptsCount || 1) + 1 : 1
+        };
+
+        if (existingErrIdx >= 0) {
+          updatedErrorNotebook[existingErrIdx] = errEntry;
+        } else {
+          updatedErrorNotebook = [errEntry, ...updatedErrorNotebook];
+        }
+      } else {
+        // Se acertou, remove do caderno de erros
+        updatedErrorNotebook = updatedErrorNotebook.filter(e => e.questionId !== questionId);
+      }
+
+      // 5. Construir tentativa
       attemptToSave = {
         id: `${Date.now()}-${questionId}`,
         questionId,
         selectedOptionId,
         area: question.area,
+        topic: question.topic,
         skill: question.skill,
+        difficulty: question.difficulty || 3,
         isCorrect,
         confidence,
         errorCategory,
@@ -167,8 +240,7 @@ export default function Destino1000App({ onBack }) {
           ...rewarded.masteryMatrix,
           [question.area]: newAreaMastery
         },
-        // O histórico em playerState pode ser mantido pequeno (apenas recentes), 
-        // mas para retrocompatibilidade, mantemos aqui por enquanto.
+        errorNotebook: updatedErrorNotebook,
         history: [...(rewarded.history || []), attemptToSave]
       };
     });
@@ -203,9 +275,12 @@ export default function Destino1000App({ onBack }) {
               transition={{ duration: 0.25 }}
             >
               <AreaStudyHub 
+                playerState={playerState}
                 onStartTopicSession={handleStartTopicSession}
                 onGoToRedacao={() => setActiveTab("redacao")}
                 onStartQuickSession={handleQuickSession}
+                onStartReviewSession={handleStartReviewSession}
+                onStartErrorSession={handleStartErrorSession}
               />
             </motion.div>
           )}
