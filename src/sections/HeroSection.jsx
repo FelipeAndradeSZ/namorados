@@ -9,6 +9,7 @@ import {
 import { ArrowDown, Heart, Sparkles } from "lucide-react";
 import { loveStory } from "../config/loveStory";
 import { LoveCounter } from "../features/love-counter/LoveCounter";
+import { useExperience } from "../context/useExperience";
 
 const entrance = {
   hidden: { opacity: 0, y: 32 },
@@ -20,6 +21,7 @@ const entrance = {
 };
 
 export function HeroSection() {
+  const { openWorld3D } = useExperience();
   const sectionRef = useRef(null);
   const rotateXValue = useMotionValue(0);
   const rotateYValue = useMotionValue(0);
@@ -104,7 +106,7 @@ export function HeroSection() {
 
             <motion.div
               variants={entrance}
-              className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
+              className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center flex-wrap"
             >
               <a
                 href="#historia"
@@ -117,6 +119,17 @@ export function HeroSection() {
                   size={17}
                 />
               </a>
+
+              {/* Botão para entrar no Mundo 3D */}
+              <button
+                type="button"
+                onClick={openWorld3D}
+                className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full border border-rose-300/40 bg-gradient-to-r from-rose-500/20 via-pink-500/20 to-purple-500/20 px-6 py-4 text-sm font-semibold text-rose-100 shadow-[0_10px_40px_rgba(244,63,94,0.25)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-rose-300 hover:bg-rose-500/30 active:scale-95"
+              >
+                <Sparkles size={17} className="text-rose-300 animate-pulse" />
+                <span>Entrar no Nosso Mundo 3D</span>
+              </button>
+
               <span className="flex items-center gap-2 text-xs text-rose-100/45">
                 <Heart size={14} fill="currentColor" />
                 Feito com amor para meu momor

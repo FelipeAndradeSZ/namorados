@@ -155,6 +155,17 @@ export function LoveIntro() {
         >
           {loveStory.initials} · para sempre nós dois
         </motion.p>
+
+        <motion.button
+          type="button"
+          onClick={enterExperience}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="mt-6 cursor-pointer rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-rose-200/60 transition-all hover:border-rose-200/30 hover:bg-white/10 hover:text-rose-100"
+        >
+          Pular introdução →
+        </motion.button>
       </div>
     </motion.div>
   );

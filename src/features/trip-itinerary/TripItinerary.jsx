@@ -33,6 +33,16 @@ const iconOptions = [
   { id: "star", label: "⭐ Passeio / Especial" }
 ];
 
+function getSafeMapsUrl(url, location) {
+  if (url && typeof url === "string") {
+    const trimmed = url.trim();
+    if (trimmed.startsWith("https://") || trimmed.startsWith("http://")) {
+      return trimmed;
+    }
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((location || "") + " Vitória Vila Velha")}`;
+}
+
 export function TripItinerary({ 
   days, 
   activities, 
@@ -426,7 +436,7 @@ export function TripItinerary({
                               {act.location && (
                                 <div className="flex items-center gap-1.5 flex-wrap">
                                   <a
-                                    href={act.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(act.location + " Vitória Vila Velha")}`}
+                                    href={getSafeMapsUrl(act.mapsUrl, act.location)}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-0.5 text-[0.65rem] text-rose-300 hover:text-rose-100 hover:underline transition-colors duration-200"

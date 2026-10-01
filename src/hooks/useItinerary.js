@@ -42,7 +42,7 @@ const INITIAL_ACTIVITIES = [
   { date: "2026-12-17", time: "13:00", description: "Almoçar Moqueca Capixaba tradicional", location: "Curva da Jurema, Vitória", icon: "food", mapsUrl: "", lat: -20.3134, lng: -40.2987 }
 ];
 
-// Geocoding helper using OpenStreetMap's Nominatim API
+// Geocoding helper using OpenStreetMap's Nominatim API with compliant headers
 async function geocodeLocation(locationText) {
   if (!locationText || locationText.trim().length < 3) return null;
   
@@ -57,7 +57,14 @@ async function geocodeLocation(locationText) {
   }
 
   try {
-    const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(queryText)}&limit=1`);
+    const res = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(queryText)}&limit=1`,
+      {
+        headers: {
+          "Accept": "application/json"
+        }
+      }
+    );
     const data = await res.json();
     if (data && data.length > 0) {
       return {
@@ -71,88 +78,104 @@ async function geocodeLocation(locationText) {
   return null;
 }
 
-export function useItinerary() {
-  const [days, setDays] = useState([]);
-  const [activities, setActivities] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Listen to days
-    const qDays = query(collection(db, "days"), orderBy("date", "asc"));
-    const unsubDays = onSnapshot(qDays, (snapshot) => {
-      const fetchedDays = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      setDays(fetchedDays);
-      
-      if (snapshot.empty && loading) {
-        seedInitialDays();
-      } else if (!snapshot.empty) {
-        // Auto-migrate missing days
-        const existingDates = fetchedDays.map(d => d.date);
-        const missingDays = INITIAL_DAYS.filter(d => !existingDates.includes(d.date));
-        if (missingDays.length > 0) {
-          missingDays.forEach(async (day) => {
-            await setDoc(doc(db, "days", day.date), {
-              date: day.date,
-              title: day.title
-            });
-          });
-        }
-      }
-    });
-
-    // Listen to activities
-    const qActs = query(collection(db, "activities"), orderBy("time", "asc"));
-    const unsubActs = onSnapshot(qActs, (snapshot) => {
-      const fetchedActs = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      setActivities(fetchedActs);
-      setLoading(false);
-
-      if (snapshot.empty && loading) {
-        seedInitialActivities();
-      }
-    });
-
-    return () => {
-      unsubDays();
-      unsubActs();
-    };
-  }, [loading]);
-
-  const seedInitialDays = async () => {
+async function seedInitialDays() {
+  try {
     for (const day of INITIAL_DAYS) {
       await setDoc(doc(db, "days", day.date), {
         date: day.date,
         title: day.title
       });
     }
-  };
+  } catch (err) {
+    console.error("Erro ao popular dias iniciais:", err);
+  }
+}
 
-  const seedInitialActivities = async () => {
-    const customSeeds = [
-      { date: "2026-12-14", time: "12:25", description: "Voo de Ribeirão Preto (RAO)", location: "Aeroporto de Ribeirão Preto (RAO)", icon: "plane", mapsUrl: "https://maps.app.goo.gl/wYcE22Yh9Hk9qE3H6", lat: -21.1367, lng: -47.7749 },
-      { date: "2026-12-14", time: "13:20", description: "Conexão em Congonhas (CGH)", location: "Aeroporto de Congonhas (CGH)", icon: "plane", mapsUrl: "https://maps.app.goo.gl/bV38D485fWk1uSjB6", lat: -23.6261, lng: -46.6564 },
-      { date: "2026-12-14", time: "16:35", description: "Chegada em Vitória (VIX)", location: "Aeroporto de Vitória (VIX)", icon: "plane", mapsUrl: "https://maps.app.goo.gl/pM795aU6WkJ1u2dH8", lat: -20.2581, lng: -40.2864 },
-      { date: "2026-12-14", time: "18:00", description: "Check-in no Hotel", location: "Praia do Canto, Vitória", icon: "hotel", mapsUrl: "", lat: -20.2982, lng: -40.2925 },
-      { date: "2026-12-14", time: "20:30", description: "Primeiro Jantar Juntos na Cidade", location: "Rua Joaquim Lírio, Praia do Canto, Vitória", icon: "food", mapsUrl: "", lat: -20.3015, lng: -40.2902 },
-      { date: "2026-12-15", time: "09:00", description: "Café da manhã reforçado", location: "Hotel Senac Ilha do Boi, Vitória", icon: "food", mapsUrl: "", lat: -20.3188, lng: -40.2835 },
-      { date: "2026-12-15", time: "10:30", description: "Praia do Canto & Ilha do Boi", location: "Praia da Esquerda, Ilha do Boi, Vitória", icon: "beach", mapsUrl: "https://maps.app.goo.gl/nN4942U6XkJ2u3dH8", lat: -20.3168, lng: -40.2842 },
-      { date: "2026-12-16", time: "10:00", description: "Visita ao Convento da Penha", location: "Convento da Penha, Vila Velha", icon: "star", mapsUrl: "https://maps.app.goo.gl/tWcE11Yh8Hk8qE2H5", lat: -20.3288, lng: -40.2872 },
-      { date: "2026-12-17", time: "13:00", description: "Almoçar Moqueca Capixaba tradicional", location: "Curva da Jurema, Vitória", icon: "food", mapsUrl: "", lat: -20.3134, lng: -40.2987 }
-    ];
-
-    for (const act of customSeeds) {
+async function seedInitialActivities() {
+  try {
+    for (const act of INITIAL_ACTIVITIES) {
       await addDoc(collection(db, "activities"), {
         ...act,
         createdAt: serverTimestamp()
       });
     }
-  };
+  } catch (err) {
+    console.error("Erro ao popular atividades iniciais:", err);
+  }
+}
+
+export function useItinerary() {
+  const [days, setDays] = useState([]);
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let isSubscribed = true;
+    let hasSeededDays = false;
+    let hasSeededActs = false;
+
+    // Listen to days
+    const qDays = query(collection(db, "days"), orderBy("date", "asc"));
+    const unsubDays = onSnapshot(
+      qDays, 
+      (snapshot) => {
+        if (!isSubscribed) return;
+        const fetchedDays = snapshot.docs.map(docSnapshot => ({
+          id: docSnapshot.id,
+          ...docSnapshot.data()
+        }));
+        setDays(fetchedDays);
+        
+        if (snapshot.empty && !hasSeededDays) {
+          hasSeededDays = true;
+          seedInitialDays();
+        } else if (!snapshot.empty) {
+          // Auto-migrate missing days
+          const existingDates = fetchedDays.map(d => d.date);
+          const missingDays = INITIAL_DAYS.filter(d => !existingDates.includes(d.date));
+          if (missingDays.length > 0) {
+            missingDays.forEach(async (day) => {
+              await setDoc(doc(db, "days", day.date), {
+                date: day.date,
+                title: day.title
+              });
+            });
+          }
+        }
+      },
+      (err) => console.error("Erro ao escutar dias:", err)
+    );
+
+    // Listen to activities
+    const qActs = query(collection(db, "activities"), orderBy("time", "asc"));
+    const unsubActs = onSnapshot(
+      qActs, 
+      (snapshot) => {
+        if (!isSubscribed) return;
+        const fetchedActs = snapshot.docs.map(docSnapshot => ({
+          id: docSnapshot.id,
+          ...docSnapshot.data()
+        }));
+        setActivities(fetchedActs);
+        setLoading(false);
+
+        if (snapshot.empty && !hasSeededActs) {
+          hasSeededActs = true;
+          seedInitialActivities();
+        }
+      },
+      (err) => {
+        console.error("Erro ao escutar atividades:", err);
+        if (isSubscribed) setLoading(false);
+      }
+    );
+
+    return () => {
+      isSubscribed = false;
+      unsubDays();
+      unsubActs();
+    };
+  }, []);
 
   const updateDayTitle = async (date, title) => {
     await setDoc(doc(db, "days", date), { date, title }, { merge: true });

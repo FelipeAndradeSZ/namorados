@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Clock, Heart, Ticket } from "lucide-react";
+import { MapPin, Clock, Heart, Ticket, Eye, EyeOff } from "lucide-react";
 import { loveStory } from "../config/loveStory";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { TripCountdown } from "../features/trip-countdown/TripCountdown";
@@ -22,6 +22,7 @@ function formatDate(isoDate) {
 
 export function TripSection() {
   const [activeFlight, setActiveFlight] = useState("ida");
+  const [showBookingCode, setShowBookingCode] = useState(false);
   
   const currentFlight = activeFlight === "ida" ? loveStory.trip : loveStory.returnTrip;
 
@@ -61,9 +62,20 @@ export function TripSection() {
                   <p className="text-[0.6rem] font-semibold tracking-[0.2em] text-rose-200/50 uppercase">
                     Reserva
                   </p>
-                  <p className="font-display text-lg tracking-wider text-white">
-                    {currentFlight.bookingCode}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="font-display text-lg tracking-wider text-white">
+                      {showBookingCode ? currentFlight.bookingCode : `${(currentFlight.bookingCode || "").slice(0, 2)}••••`}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setShowBookingCode((prev) => !prev)}
+                      className="cursor-pointer text-rose-200/40 hover:text-rose-200 transition-colors p-1"
+                      title={showBookingCode ? "Ocultar localizador" : "Revelar localizador"}
+                      aria-label={showBookingCode ? "Ocultar localizador" : "Revelar localizador"}
+                    >
+                      {showBookingCode ? <EyeOff size={14} /> : <Eye size={14} />}
+                    </button>
+                  </div>
                 </div>
               </div>
               

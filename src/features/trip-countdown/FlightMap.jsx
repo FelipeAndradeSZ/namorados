@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { CARTO_DARK_TILE_URL, CARTO_TILE_OPTIONS } from "../../config/mapConfig";
 
 // Coordinates
 const RAO = [-21.1367, -47.7749]; // Ribeirão Preto
@@ -48,27 +49,6 @@ function createCityMarker(label) {
   });
 }
 
-const planeIcon = L.divIcon({
-  className: "",
-  html: `
-    <div style="
-      width: 28px; height: 28px;
-      display: grid; place-items: center;
-      border-radius: 50%;
-      background: rgba(251,113,133,0.15);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(251,113,133,0.3);
-      box-shadow: 0 0 20px rgba(251,113,133,0.4);
-    ">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fecdd3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
-      </svg>
-    </div>
-  `,
-  iconSize: [28, 28],
-  iconAnchor: [14, 14],
-});
-
 export function FlightMap({ direction = "ida" }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
@@ -92,11 +72,8 @@ export function FlightMap({ direction = "ida" }) {
 
     mapRef.current = map;
 
-    // Dark tiles
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-      subdomains: "abcd",
-      maxZoom: 19,
-    }).addTo(map);
+    // Dark tiles com chave de API CARTO Basemaps
+    L.tileLayer(CARTO_DARK_TILE_URL, CARTO_TILE_OPTIONS).addTo(map);
 
     // Fit to show all three cities
     const bounds = L.latLngBounds([RAO, CGH, VIX]);

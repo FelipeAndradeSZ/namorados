@@ -37,61 +37,92 @@ const INITIAL_ITEMS = [
   { text: "Óculos de sol", category: "viagem", checked: false, checkedBy: "" }
 ];
 
-export function useChecklist() {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const q = query(collection(db, "checklist"), orderBy("createdAt", "asc"));
-    
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const fetchedItems = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      
-      setItems(fetchedItems);
-      setLoading(false);
-
-      // If database is empty, seed initial data
-      if (snapshot.empty && loading) {
-        seedInitialData();
-      }
-    });
-
-    return () => unsubscribe();
-  }, [loading]);
-
-  const seedInitialData = async () => {
+async function seedInitialData() {
+  try {
     for (const item of INITIAL_ITEMS) {
       await addDoc(collection(db, "checklist"), {
         ...item,
         createdAt: serverTimestamp()
       });
     }
-  };
+  } catch (err) {
+    console.error("Erro ao popular checklist inicial:", err);
+  }
+}
+
+export function useChecklist() {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let isSubscribed = true;
+    let hasSeeded = false;
+
+    const q = query(collection(db, "checklist"), orderBy("createdAt", "asc"));
+    
+    const unsubscribe = onSnapshot(
+      q, 
+      (snapshot) => {
+        if (!isSubscribed) return;
+        const fetchedItems = snapshot.docs.map((docSnapshot) => ({
+          id: docSnapshot.id,
+          ...docSnapshot.data()
+        }));
+        
+        setItems(fetchedItems);
+        setLoading(false);
+
+        // Se o banco estiver vazio, popula os dados iniciais uma única vez
+        if (snapshot.empty && !hasSeeded) {
+          hasSeeded = true;
+          seedInitialData();
+        }
+      },
+      (error) => {
+        console.error("Erro ao carregar checklist:", error);
+        if (isSubscribed) setLoading(false);
+      }
+    );
+
+    return () => {
+      isSubscribed = false;
+      unsubscribe();
+    };
+  }, []);
 
   const addItem = async (text, category) => {
     if (!text.trim()) return;
-    await addDoc(collection(db, "checklist"), {
-      text,
-      category,
-      checked: false,
-      checkedBy: "",
-      createdAt: serverTimestamp()
-    });
+    try {
+      await addDoc(collection(db, "checklist"), {
+        text,
+        category,
+        checked: false,
+        checkedBy: "",
+        createdAt: serverTimestamp()
+      });
+    } catch (err) {
+      console.error("Erro ao adicionar item:", err);
+    }
   };
 
   const toggleItem = async (id, currentChecked, userInitials) => {
-    const itemRef = doc(db, "checklist", id);
-    await updateDoc(itemRef, {
-      checked: !currentChecked,
-      checkedBy: !currentChecked ? userInitials : ""
-    });
+    try {
+      const itemRef = doc(db, "checklist", id);
+      await updateDoc(itemRef, {
+        checked: !currentChecked,
+        checkedBy: !currentChecked ? userInitials : ""
+      });
+    } catch (err) {
+      console.error("Erro ao alterar status do item:", err);
+    }
   };
 
   const deleteItem = async (id) => {
-    await deleteDoc(doc(db, "checklist", id));
+    try {
+      await deleteDoc(doc(db, "checklist", id));
+    } catch (err) {
+      console.error("Erro ao remover item:", err);
+    }
   };
 
   return { items, loading, addItem, toggleItem, deleteItem };

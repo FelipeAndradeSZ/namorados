@@ -15,9 +15,14 @@ const links = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { effectsEnabled, toggleEffects } = useExperience();
+  const { effectsEnabled, toggleEffects, openWorld3D } = useExperience();
 
   const closeMenu = () => setIsOpen(false);
+
+  const handleOpen3D = () => {
+    closeMenu();
+    openWorld3D?.();
+  };
 
   return (
     <>
@@ -72,6 +77,16 @@ export function Navigation() {
               {effectsEnabled ? <Pause size={15} /> : <Sparkles size={16} />}
             </button>
 
+            {/* Botão Elegante para Entrar no Mundo 3D */}
+            <button
+              type="button"
+              onClick={handleOpen3D}
+              className="group relative flex items-center gap-2 rounded-full border border-rose-300/30 bg-gradient-to-r from-rose-500/20 to-pink-500/20 px-4 py-2.5 text-xs font-semibold tracking-wide text-rose-100 shadow-[0_0_20px_rgba(244,63,94,0.2)] backdrop-blur-md transition-all hover:scale-105 hover:border-rose-300 hover:bg-rose-500/30"
+            >
+              <Sparkles size={14} className="text-rose-300 animate-pulse" />
+              <span>Mundo 3D</span>
+            </button>
+
             <a
               href="#carta"
               className="nav-heart-cta hidden rounded-full border border-rose-200/20 bg-rose-200/10 px-5 py-2.5 text-xs font-semibold tracking-wide text-rose-50 transition hover:border-rose-200/40 hover:bg-rose-200/15 lg:block"
@@ -101,6 +116,18 @@ export function Navigation() {
             className="fixed inset-0 z-[60] grid place-items-center bg-[#100810]/95 px-8 backdrop-blur-2xl md:hidden"
           >
             <div className="flex flex-col items-center gap-8">
+              {/* Opção Mundo 3D no menu Mobile */}
+              <motion.button
+                type="button"
+                onClick={handleOpen3D}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="font-display text-4xl text-rose-300 flex items-center gap-3"
+              >
+                <Sparkles size={28} />
+                <span>Nosso Mundo 3D</span>
+              </motion.button>
+
               {links.map((link, index) => (
                 <motion.a
                   key={link.href}
@@ -108,7 +135,7 @@ export function Navigation() {
                   onClick={closeMenu}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.08 }}
+                  transition={{ delay: (index + 1) * 0.08 }}
                   className="font-display text-4xl text-rose-50"
                 >
                   {link.label}
