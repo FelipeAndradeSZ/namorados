@@ -2683,6 +2683,53 @@ export const THEORY_CONTENT = {
       "As ilhas de calor ocorrem pelo baixo albedo do asfalto (absorve calor) e falta de árvores, e NÃO por proximidade com o lençol freático."
     ],
     mnemonics: "Conurbação junta a cidade no asfalto; o Pêndulo vai e volta no salto; a Gentrificação expulsa o pobre pro alto; e o Estatuto da Cidade pune o terreno ocioso de assalto!"
+  },
+
+  "natureza/equilibrio-acido-base-tampao": {
+    topic: "Equilíbrio Ácido-Base, Hidrólise Salina e Solução Tampão",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Competência 7 (H24, H25, H26, H27): Tema nobre e de altíssima exigência no ENEM e vestibulares de Medicina. Envolve autoionização da água (Kw), cálculo de pH e pOH, força de ácidos e bases (Ka e Kb), grau de ionização e Lei de Ostwald, hidrólise salina (calagem de solos e tratamento de água), efeito do íon comum, curvas de titulação e mecanismos fisiológicos de soluções tampão (com ênfase máxima no tampão bicarbonato no sangue, acidose e alcalose respiratória/metabólica).",
+    highFrequencySkills: [
+      "H24 - Utilizar códigos e nomenclatura da química para caracterizar equilíbrios em meio aquoso",
+      "H25 - Caracterizar materiais e equilíbrios iônicos a partir de seus potenciais hidrogeniônicos (pH)",
+      "H26 - Avaliar impactos de intervenções ambientais causadas por variações de pH (chuva ácida, calagem e acidificação oceânica)",
+      "H27 - Avaliar propostas de intervenção terapêutica ou ambiental baseadas no controle de equilíbrios ácido-base e sistemas tampão"
+    ],
+    overview: "O módulo aprofunda a físico-química dos equilíbrios iônicos em solução aquosa e suas correlações biomédicas e ecológicas. Aborda: 1) O produto iônico da água (Kw) e a definição rigorosa de neutralidade ([H3O+] = [OH-]), salientando a influência da temperatura; 2) Força de eletrólitos, constantes Ka e Kb, Lei da Diluição de Ostwald e o efeito do íon comum na repressão da ionização; 3) A hidrólise salina e sua predição a partir da força dos ácidos e bases de origem, com aplicações práticas na agricultura (calagem com CaCO3/MgCO3) e no saneamento (coagulação com sulfato de alumínio e cal hidratada); 4) O funcionamento cinético-termodinâmico de soluções tampão (equação de Henderson-Hasselbalch, capacidade tamponante e faixa de tamponamento ótimo); 5) A fisiologia do equilíbrio ácido-base no corpo humano (tampão ácido carbônico/bicarbonato, compensação respiratória e renal em distúrbios como cetoacidose, hiperventilação e aclimatação à altitude).",
+    keyConcepts: [
+      {
+        title: "Autoionização da Água, Kw, pH e pOH",
+        content: "• Equilíbrio: 2 H2O (l) ⇌ H3O+ (aq) + OH- (aq), endotérmico (ΔH > 0).\n• A 25 °C: Kw = [H3O+] · [OH-] = 1,0 x 10^-14 ⇒ pH + pOH = 14. Meio neutro: [H3O+] = [OH-] = 10^-7 mol/L (pH = 7,0).\n• Efeito da Temperatura: O aumento da temperatura desloca a autoionização para a direita, aumentando Kw. A 37 °C (temperatura corpórea), Kw ≈ 2,4 x 10^-14, fazendo com que o pH neutro seja ≈ 6,81, mantendo a água neutra porque [H3O+] = [OH-]."
+      },
+      {
+        title: "Constantes de Ionização (Ka, Kb) e Lei de Ostwald",
+        content: "• Força Ácida: Ka = ([H+] · [A-]) / [HA]. Quanto maior o Ka (ou menor o pKa = -log Ka), mais forte é o ácido, mais íons livres ele gera e menor é o pH para mesma concentração.\n• Pares Conjugados: Para qualquer par ácido-base em água a 25 °C, Ka · Kb = Kw. Ácido forte tem base conjugada fraca; ácido fraco tem base conjugada forte.\n• Lei da Diluição de Ostwald: Ka = (M · α²) / (1 - α). Para eletrólitos fracos (α << 1), Ka ≈ M · α², logo α ≈ √(Ka / M). Diluir a solução aumenta o grau de ionização (α), mas reduz a concentração molar absoluta de [H+], elevando o pH em direção a 7."
+      },
+      {
+        title: "Hidrólise Salina e Aplicações Práticas",
+        content: "• Sal de Ácido Forte + Base Forte (ex: NaCl): Nenhum íon hidrolisa; pH = 7,0 (neutro).\n• Sal de Ácido Fraco + Base Forte (ex: CH3COONa, NaHCO3): O ânion hidrolisa consumindo H+ e liberando OH- (A- + H2O ⇌ HA + OH-); pH > 7,0 (básico).\n• Sal de Ácido Forte + Base Fraca (ex: NH4Cl, Al2(SO4)3): O cátion hidrolisa consumindo OH- e gerando H3O+ (B+ + 2 H2O ⇌ BOH + H3O+); pH < 7,0 (ácido).\n• Calagem Agrícola: Aplicação de calcário (CaCO3 e MgCO3) para reagir com íons H+ no solo (CO3^2- + 2 H+ ⇌ H2O + CO2), elevando o pH e precipitando o alumínio fitotóxico como Al(OH)3 insolúvel."
+      },
+      {
+        title: "Soluções Tampão e Fisiologia Humana (Tampão Bicarbonato)",
+        content: "• Definição: Mistura de ácido fraco e sua base conjugada (ou base fraca e ácido conjugado) que resiste a variações bruscas de pH.\n• Henderson-Hasselbalch: pH = pKa + log([Base Conjugada] / [Ácido Fraco]). Quando [Base] = [Ácido], pH = pKa (capacidade máxima).\n• Tampão Sanguíneo: CO2 (aq) + H2O ⇌ H2CO3 ⇌ H+ + HCO3- (pH normal: 7,35 - 7,45).\n• Acidose Metabólica (ex: diabetes descompensado com corpos cetônicos): excesso de H+ é amortecido por hiperventilação de Kussmaul (elimina CO2, puxando equilíbrio para a esquerda e consumindo H+).\n• Alcalose Respiratória (ex: hiperventilação por ansiedade ou altitude): excesso de CO2 expirado puxa para a esquerda consumindo H+, elevando o pH; os rins compensam excretando HCO3- na urina."
+      }
+    ],
+    formulasAndRules: [
+      "Kw = [H3O+] · [OH-] = 1,0 x 10^-14 (a 25 °C)  |  pH = -log[H3O+]  |  pOH = -log[OH-]  |  pH + pOH = 14.",
+      "Ostwald (para α < 5%): Ka ≈ M · α²  ⇒  α ≈ √(Ka / M)  |  [H+] = M · α = √(Ka · M).",
+      "Pares Conjugados: Ka · Kb = Kw  |  Constante de Hidrólise: Kh = Kw / Ka (ânion) ou Kh = Kw / Kb (cátion).",
+      "Henderson-Hasselbalch: pH = pKa + log([Sal] / [Ácido])  |  pOH = pKb + log([Sal] / [Base]).",
+      "Neutralidade Absoluta: [H3O+] = [OH-], independente do valor numérico de pH na temperatura dada."
+    ],
+    enemTraps: [
+      "pH 7,0 NÃO é sinônimo universal de neutralidade: a 37 °C a água neutra tem pH ≈ 6,81 porque Kw aumenta com a temperatura!",
+      "Diluição de um ácido fraco aumenta seu grau de ionização (α), mas a concentração molar de íons H+ diminui (pH sobre em direção a 7)!",
+      "Solução tampão NÃO impede 100% qualquer variação de pH; ela amortece e minimiza a variação dentro de sua capacidade tamponante.",
+      "No ponto de equivalência de titulação de ácido fraco com base forte, o pH NÃO é 7,0; o pH é BÁSICO (> 7,0) devido à hidrólise do sal formado!",
+      "A calagem agrícola aumenta o pH do solo (reduz a acidez ativa) para neutralizar H+ e precipitar Al3+, e NÃO para acidificar a terra."
+    ],
+    mnemonics: "Le Chatelier no Sangue: 'Soprou CO2 demais? Falta ácido atrás: Alcalose voraz! Reter CO2 no pulmão? Sobe H+ de montão: Acidose na respiração!'"
   }
 };
 

@@ -90,6 +90,7 @@ export const QUESTION_MODULES = {
   "natureza/fisica-moderna": () => import("./questions/natureza/fisica-moderna.js"),
   "natureza/bioquimica-metabolismo": () => import("./questions/natureza/bioquimica-metabolismo.js"),
   "natureza/optica-geometrica-ondas": () => import("./questions/natureza/optica-geometrica-ondas.js"),
+  "natureza/equilibrio-acido-base-tampao": () => import("./questions/natureza/equilibrio-acido-base-tampao.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),
