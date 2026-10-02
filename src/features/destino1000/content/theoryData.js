@@ -2241,6 +2241,50 @@ export const THEORY_CONTENT = {
       "Na divisão de potências de 10 com expoentes negativos: 10⁻⁶ / 10⁻⁹ = 10^(-6 - (-9)) = 10³ = 1 000."
     ],
     mnemonics: "MDC reparte no maior sem sobrar; MMC espera a periodicidade encontrar; e 0,4 hora é 24 minutos pra não vacilar!"
+  },
+
+  "linguagens/literatura-contemporanea-cancao": {
+    topic: "Literatura Contemporânea, Canção e Poesia Periférica",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 5 e 6 (H15, H16, H17, H18): Presença maciça no ENEM (~15% da prova de Linguagens). Aborda a MPB como texto literário, o Tropicalismo, a poesia marginal dos anos 70, o rap dos Racionais MC's, os slams e a escrevivência de Conceição Evaristo.",
+    highFrequencySkills: [
+      "H15 - Estabelecer relações entre o texto literário e o momento de sua produção, situando aspectos do contexto histórico, social e político",
+      "H16 - Relacionar informações sobre concepções artísticas e procedimentos de construção do texto literário",
+      "H17 - Reconhecer a presença de valores sociais e humanos atualizáveis e permanentes no patrimônio literário nacional",
+      "H18 - Analisar a importância da produção literária e artística de grupos minoritários na afirmação de identidades"
+    ],
+    overview: "A literatura brasileira contemporânea transborda as fronteiras do livro impresso tradicional. No ENEM, a canção popular (Chico Buarque, Caetano, Belchior, Milton Nascimento, Criolo, Emicida), o rap dos Racionais MC's, os poetry slams nas praças, a escrevivência de Conceição Evaristo, os diários de Carolina Maria de Jesus e a ensaística ameríndia de Ailton Krenak e Davi Kopenawa são lidos como alta literatura de resistência, memória e cidadania.",
+    keyConcepts: [
+      {
+        title: "Poesia Concreta e Geração Mimeógrafo",
+        content: "• Concretismo (1956, Haroldo e Augusto de Campos, Décio Pignatari): rompe com a sintaxe linear; explora a espacialidade da página, a fragmentação sonora e visual (poema verbivocovisual).\n• Poesia Marginal / Anos 1970 (Chacal, Cacaso, Ana Cristina Cesar, Leminski): distribuição artesanal em mimeógrafos contra a censura da ditadura, poema-minuto, coloquialismo e ironia urbana."
+      },
+      {
+        title: "Tropicalismo e a Canção de Resistência",
+        content: "• Tropicalismo (1967-1968, Caetano, Gil, Tom Zé, Mutantes): antropofagia estética; une guitarras elétricas do rock ao berimbau e ao baião, colando fragmentos da cultura de massa (brigitte bardot, bombas, guerrilhas).\n• Canção Engajada (Chico Buarque, Elis Regina, Aldir Blanc): poética cifrada contra a censura do AI-5, jogos fonéticos (cálice/cale-se), hinos cívicos da anistia e a tragédia da classe trabalhadora ('Construção')."
+      },
+      {
+        title: "O Rap como Épica Periférica e Slams",
+        content: "• Racionais MC's ('Sobrevivendo no Inferno'): crônica sociológica em primeira pessoa da juventude negra encarcerada; afirmação de ética comunitária e denúncia do racismo estrutural.\n• Poetry Slams: batalhas de poesia falada em praças públicas; o corpo e a voz como suporte autoral democrático de minorias sociais."
+      },
+      {
+        title: "Escrevivência, Testemunho e Literatura Indígena",
+        content: "• Escrevivência (Conceição Evaristo): escrita fundamentada na experiência histórica e coletiva da mulher negra brasileira.\n• Carolina Maria de Jesus ('Quarto de Despejo'): o diário íntimo como denúncia da fome e afirmação de dignidade.\n• Pensamento Ameríndio (Ailton Krenak e Davi Kopenawa): desconstrução do antropocentrismo predatório ocidental; rios, montanhas e florestas como sujeitos cósmicos vivos."
+      }
+    ],
+    formulasAndRules: [
+      "Poema Verbivocovisual: Palavra como som + imagem gráfica na folha + significado poético.",
+      "Escrevivência = Escrita + Vivência histórica coletiva (combate ao apagamento da memória afro-brasileira).",
+      "Dupla Camada sob Ditadura: Superfície metafórica/religiosa ⟹ Sentido profundo de denúncia política à censura e tortura.",
+      "Oralidade do Rap/Cordel: Métrica, rima interna e cadência vocal como recursos literários legítimos de mesmo valor estético da tradição impressa."
+    ],
+    enemTraps: [
+      "Não considere letras de MPB, rap ou cordel como 'subliteratura': no ENEM, elas são analisadas com o mesmo rigor estilístico e temático de Machado de Assis ou Drummond.",
+      "A gíria periférica e a linguagem oral em Carolina Maria de Jesus e Geovani Martins NÃO são 'erros': são escolhas estéticas fundamentais de caracterização e autenticidade da voz narrativa.",
+      "Em poemas concretos, não busque uma ordem tradicional de leitura da esquerda para a direita de cima para baixo: a leitura é simultânea e espacial."
+    ],
+    mnemonics: "No concreto o espaço fala; no mimeógrafo a censura cala; no rap o povo rima; e a escrevivência o silêncio desanima!"
   }
 };
 

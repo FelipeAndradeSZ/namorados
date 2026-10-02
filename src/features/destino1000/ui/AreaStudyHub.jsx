@@ -88,6 +88,7 @@ const AREA_TOPICS = {
     { id: "linguagens/ingles-instrumental", name: "Língua Estrangeira: Inglês Instrumental", tag: "Inglês", priority: "Crítica • 5 Questões Garantidas", questionsCount: 25 },
     { id: "linguagens/espanhol-instrumental", name: "Língua Estrangeira: Espanhol Instrumental", tag: "Espanhol", priority: "Crítica • 5 Questões Garantidas", questionsCount: 25 },
     { id: "linguagens/publicidade-semiotica", name: "Publicidade, Propaganda e Semiótica Visual", tag: "Comunicação", priority: "Crítica • Persuasão e Multimodalidade", questionsCount: 25 },
+    { id: "linguagens/literatura-contemporanea-cancao", name: "Literatura Contemporânea, Canção e Poesia Periférica", tag: "Literatura", priority: "Crítica • MPB, Slams, Rap e Escrevivência", questionsCount: 25 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },
