@@ -1,6 +1,6 @@
 export const QUESTIONS_MEIO_AMBIENTE = [
   {
-    id: "HUM-GEO-001",
+    id: "HUM-AMB-001",
     area: "humanas",
     competence: 6,
     skill: 27,
@@ -40,7 +40,7 @@ export const QUESTIONS_MEIO_AMBIENTE = [
     createdAt: "2026-10-01"
   },
   {
-    id: "HUM-GEO-002",
+    id: "HUM-AMB-002",
     area: "humanas",
     competence: 6,
     skill: 28,
@@ -80,7 +80,7 @@ export const QUESTIONS_MEIO_AMBIENTE = [
     createdAt: "2026-10-01"
   },
   {
-    id: "HUM-GEO-003",
+    id: "HUM-AMB-003",
     area: "humanas",
     competence: 6,
     skill: 29,
@@ -120,7 +120,7 @@ export const QUESTIONS_MEIO_AMBIENTE = [
     createdAt: "2026-10-01"
   },
   {
-    id: "HUM-GEO-004",
+    id: "HUM-AMB-004",
     area: "humanas",
     competence: 6,
     skill: 27,
@@ -160,7 +160,7 @@ export const QUESTIONS_MEIO_AMBIENTE = [
     createdAt: "2026-10-01"
   },
   {
-    id: "HUM-GEO-005",
+    id: "HUM-AMB-005",
     area: "humanas",
     competence: 6,
     skill: 26,

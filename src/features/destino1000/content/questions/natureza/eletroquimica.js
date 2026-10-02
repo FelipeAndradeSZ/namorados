@@ -1,6 +1,6 @@
 export const QUESTIONS_ELETROQUIMICA = [
   {
-    id: "NAT-ELET-001",
+    id: "NAT-ELETROQ-001",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -42,7 +42,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-002",
+    id: "NAT-ELETROQ-002",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -84,7 +84,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-003",
+    id: "NAT-ELETROQ-003",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -125,7 +125,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-004",
+    id: "NAT-ELETROQ-004",
     area: "natureza",
     competence: 5,
     skill: 19,
@@ -171,7 +171,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-005",
+    id: "NAT-ELETROQ-005",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -212,7 +212,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-006",
+    id: "NAT-ELETROQ-006",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -255,7 +255,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-007",
+    id: "NAT-ELETROQ-007",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -297,7 +297,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-008",
+    id: "NAT-ELETROQ-008",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -339,7 +339,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-009",
+    id: "NAT-ELETROQ-009",
     area: "natureza",
     competence: 5,
     skill: 18,
@@ -381,7 +381,7 @@ export const QUESTIONS_ELETROQUIMICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "NAT-ELET-010",
+    id: "NAT-ELETROQ-010",
     area: "natureza",
     competence: 5,
     skill: 18,

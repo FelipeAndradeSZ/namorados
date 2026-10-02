@@ -1,6 +1,6 @@
 export const QUESTIONS_GEOPOLITICA = [
   {
-    id: "HUM-GEO-001",
+    id: "HUM-GEOPOL-001",
     area: "humanas",
     competence: 5,
     skill: 23,
@@ -39,7 +39,7 @@ export const QUESTIONS_GEOPOLITICA = [
     createdAt: "2026-10-01"
   },
   {
-    id: "HUM-GEO-002",
+    id: "HUM-GEOPOL-002",
     area: "humanas",
     competence: 4,
     skill: 18,

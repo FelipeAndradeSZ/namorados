@@ -997,6 +997,153 @@ export const THEORY_CONTENT = {
       "Achar que o SUS é centralizado em Brasília: ele é tripartite descentralizado."
     ],
     mnemonics: "Pilares Doutrinários do SUS: 'U-E-I' (Universalidade, Equidade, Integralidade)."
+  },
+
+  "humanas/era-vargas-populismo": {
+    topic: "Era Vargas, Legislação Trabalhista e Populismo",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Altíssima frequência no ENEM (CLT, Estado Novo, DIP, industrialização e populismo de JK).",
+    highFrequencySkills: ["H11 - Cidadania e direitos no Brasil", "H13 - Estado e poder político"],
+    overview: "A Era Vargas (1930-1945) transformou o Brasil de agrário-exportador em urbano-industrial, introduzindo direitos trabalhistas atrelados ao controle sindical corporativista e forte propaganda estatal.",
+    keyConcepts: [
+      {
+        title: "Revolução de 1930 e Fim da República Oligárquica",
+        content: "Ruptura com a política do café com leite. Getúlio Vargas assume criando o Ministério do Trabalho e centralizando o poder político nos interventores federais."
+      },
+      {
+        title: "Estado Novo (1937-1945): Ditadura e Corporativismo",
+        content: "Outorga da Constituição 'Polaca'. Criação do DIP (Departamento de Imprensa e Propaganda) para censura e culto à personalidade do presidente como 'Pai dos Pobres'. A CLT (1943) unifica os direitos sindicais, mas submete os sindicatos ao Ministério do Trabalho (peleguismo)."
+      },
+      {
+        title: "Industrialização de Base e Nacionalismo",
+        content: "Criação da CSN (Companhia Siderúrgica Nacional), Vale do Rio Doce e Fábrica Nacional de Motores durante a 2ª Guerra Mundial, aproveitando a diplomacia pendular com os EUA."
+      },
+      {
+        title: "O Nacional-Desenvolvimentismo de JK (1956-1961)",
+        content: "Plano de Metas ('50 anos em 5'): abertura ao capital internacional (indústria automobilística), construção de Brasília, rodoviarismo e início do endividamento inflacionário."
+      }
+    ],
+    formulasAndRules: [
+      "Trifeta Trabalhista Varguista: Carteira de Trabalho (1932) + Salário Mínimo (1940) + CLT (1943).",
+      "Corporativismo: Harmonização forçada entre capital e trabalho sob a tutela do Estado."
+    ],
+    enemTraps: [
+      "Achar que os direitos da CLT se estendiam aos trabalhadores rurais na Era Vargas (o Estatuto do Trabalhador Rural só veio em 1963).",
+      "Confundir a industrialização por substituição de importações (Vargas) com a abertura ao capital multinacional (JK)."
+    ],
+    mnemonics: "Fases de Vargas: 'P-C-E' (Provisório 30-34, Constitucional 34-37, Estado Novo 37-45)."
+  },
+
+  "humanas/geografia-fisica-clima": {
+    topic: "Climatologia, Relevo e Domínios Morfoclimáticos",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Tema clássico do ENEM (Aziz Ab'Sáber, massas de ar, bacias hidrográficas e biomas).",
+    highFrequencySkills: ["H26 - Dinâmica da natureza", "H27 - Impactos socioambientais"],
+    overview: "O ENEM cobra a integração sistêmica entre relevo, dinâmica atmosférica (massas de ar) e cobertura vegetal, além do manejo sustentável dos solos e recursos hídricos.",
+    keyConcepts: [
+      {
+        title: "Domínios Morfoclimáticos de Aziz Ab'Sáber",
+        content: "Amazonas (terras baixas florestadas equatoriais), Cerrado (chapadoes, solos ácidos laterizados, savana), Caatinga (depressões semiáridas com pediplanação e rios intermitentes), Mares de Morros (planalto atlântico florestado mamelonar), Araucárias (planalto meridional subtropical) e Pradarias (coxilhas dos pampas gaúchos)."
+      },
+      {
+        title: "Massas de Ar que Atuam no Brasil",
+        content: "• mEc (Equatorial Continental): Única massa continental úmida do mundo (evapotranspiração amazônica: rios voadores).\n• mPa (Polar Atlântica): Traz frentes frias, geadas no Sul e friagem na Amazônia ocidental.\n• mTa (Tropical Atlântica): Chuvas orográficas na Serra do Mar."
+      },
+      {
+        title: "Solos e Degradação Antrópica",
+        content: "• Laterização: Acúmulo de ferro e alumínio (crosta ferruginosa) em solos de clima tropical alternado.\n• Lixiviação: Lavagem dos nutrientes solúveis pela água da chuva em florestas tropicais.\n• Voçorocamento: Erosão linear severa que atinge o lençol freático em encostas desmatadas."
+      }
+    ],
+    formulasAndRules: [
+      "Chuva Orográfica: Vento úmido sobe a montanha (barlavento - chove) e desce seco (sotavento - estiagem).",
+      "Curvas de Nível e Terraceamento: Técnicas agrícolas indispensáveis contra a erosão laminar em declives."
+    ],
+    enemTraps: [
+      "Achar que o solo da Floresta Amazônica é naturalmente fértil: a fertilidade depende da serrapilheira reciclada rapidamente.",
+      "Confundir arenização (processo natural do RS em solos arenosos) com desertificação (degradação antrópica no semiárido da Caatinga)."
+    ],
+    mnemonics: "Massas de Ar Quentes e Úmidas: 'E-T-A' (Equatorial Atlântica, Equatorial Continental, Tropical Atlântica)."
+  },
+
+  "linguagens/funcoes-linguagem": {
+    topic: "As 6 Funções da Linguagem de Roman Jakobson",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Top 1 mais recorrente em Língua Portuguesa no ENEM (anúncios, poemas, dicionários e crônicas).",
+    highFrequencySkills: ["H26 - Efeitos de sentido de recursos verbais", "H27 - Função social dos textos"],
+    overview: "Cada ato de comunicação enfatiza um dos 6 elementos do circuito comunicativo (emissor, receptor, mensagem, canal, código ou contexto).",
+    keyConcepts: [
+      {
+        title: "Função Emotiva / Expressiva (Foco no Emissor)",
+        content: "Centrada na 1ª pessoa ('eu/nós'). Expressa sentimentos, opiniões subjetivas, exclamações e marcas de pontuação emotiva (poesias confessionais, diários, cartas)."
+      },
+      {
+        title: "Função Conativa / Apelativa (Foco no Receptor)",
+        content: "Centrada na 2ª pessoa ('você/tu'). Uso de verbos no imperativo, vocativos e apelos diretos para persuadir, orientar ou ordenar (propagandas, discursos políticos, sermões)."
+      },
+      {
+        title: "Função Metalinguística (Foco no Código)",
+        content: "O código explica o próprio código: a palavra explicando a palavra, a poesia falando sobre o ato de fazer poesia, a pintura retratando o pintor pintando (dicionários, gramáticas, poemas sobre versos)."
+      },
+      {
+        title: "Função Fática (Foco no Canal de Contato)",
+        content: "Tem como objetivo testar, iniciar, prolongar ou interromper o canal de comunicação: 'Alô?', 'Oi, tudo bem?', 'Entende?', 'Veja bem...'"
+      },
+      {
+        title: "Função Referencial / Denotativa (Foco no Contexto)",
+        content: "Centrada na informação objetiva, factual e impessoal (3ª pessoa). Linguagem denotativa sem ambiguidades (notícias jornalísticas, textos científicos, relatórios técnicos)."
+      },
+      {
+        title: "Função Poética (Foco na Mensagem)",
+        content: "Cuidado estético com a forma, ritmo, rimas, figuras de linguagem, jogos de palavras e sonoridade. Presente em poemas, slogans publicitários marcantes e prosa lírica."
+      }
+    ],
+    formulasAndRules: [
+      "Circuito de Jakobson: Emissor (Emotiva) → Receptor (Conativa) | Código (Metalinguística) | Canal (Fática) | Contexto (Referencial) | Mensagem (Poética)."
+    ],
+    enemTraps: [
+      "Textos publicitários misturam Função Conativa (imperativo) com Poética (trocadilhos/rima) e Referencial (dados): identifique qual a questão perguntou especificamente.",
+      "Confundir metalinguagem com intertextualidade: metalinguagem fala do código em si."
+    ],
+    mnemonics: "Lembre-se: 'E-R-C-P-F-M' (Emissor, Receptor, Código, Poesia, Fática, Mensagem)."
+  },
+
+  "linguagens/figuras-linguagem": {
+    topic: "Figuras de Linguagem e Expressividade Semântica",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Cai todo ano no ENEM em músicas de MPB, tirinhas (Mafalda, Armandinho), charges e poemas modernistas.",
+    highFrequencySkills: ["H15 - Recursos estilísticos na arte", "H26 - Sentido conotativo e polissemia"],
+    overview: "As figuras de linguagem enriquecem a expressividade ao desviar do sentido literal (denotativo) para criar múltiplos sentidos conotativos.",
+    keyConcepts: [
+      {
+        title: "Figuras de Palavras: Metáfora vs. Metonímia",
+        content: "• Metáfora: Comparação implícita sem conectivo ('O amor é fogo').\n• Metonímia: Substituição por proximidade real (o autor pela obra: 'ler Machado'; o continente pelo conteúdo: 'beber um copo'; a parte pelo todo: 'muitos braços no campo')."
+      },
+      {
+        title: "Figuras de Pensamento: Antítese vs. Paradoxo",
+        content: "• Antítese: Aproximação de ideias opostas possíveis no mesmo plano ('O dia e a noite se alternam').\n• Paradoxo / Oxímoro: Fusão de ideias opostas inconciliáveis que desafiam a lógica ('Amor é ferida que dói e não se sente', 'Um silêncio ensurdecedor')."
+      },
+      {
+        title: "Ironia, Eufemismo e Hipérbole",
+        content: "• Ironia: Afirmar o contrário do que se pensa para criticar ou ridicularizar.\n• Eufemismo: Suavização de ideia desagradável ou trágica ('Ele partiu para o plano espiritual').\n• Hipérbole: Exagero intencional ('Chorei rios de lágrimas')."
+      },
+      {
+        title: "Prosopopeia (Personificação) e Sinestesia",
+        content: "• Prosopopeia: Atribuição de qualidades humanas a seres inanimados ('A lua chorou de saudade').\n• Sinestesia: Mistura de sentidos humanos diferentes ('Um som doce e aveludado' = audição + paladar + tato)."
+      }
+    ],
+    formulasAndRules: [
+      "Comparação Explícita: 'Você é COMO uma flor'.\nMetáfora Implícita: 'Você É uma flor'.",
+      "Pleonasmo Literário: Repetição expressiva para reforçar ('Chorar um pranto amargo')."
+    ],
+    enemTraps: [
+      "Confundir Antítese (ideias opostas coexistentes) com Paradoxo (ideias opostas contraditórias simultâneas).",
+      "Nas tirinhas, a ironia quase sempre está na quebra de expectativa entre fala e imagem."
+    ],
+    mnemonics: "A-P-E-H (Antítese = Opostos; Paradoxo = Impossível; Eufemismo = Suave; Hipérbole = Exagero)."
   }
 };
 

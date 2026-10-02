@@ -54,6 +54,8 @@ const AREA_TOPICS = {
     { id: "humanas/sociologia-filosofia", name: "Sociologia e Filosofia Contemporânea", tag: "Sociologia", priority: "Alta • Útil para Redação", questionsCount: 15 },
     { id: "humanas/brasil-colonial", name: "Brasil Colonial: Economia e Escravidão", tag: "História", priority: "Alta", questionsCount: 12 },
     { id: "humanas/meio-ambiente", name: "Biomas Brasileiros e Impactos Antrópicos", tag: "Geografia", priority: "Alta", questionsCount: 12 },
+    { id: "humanas/era-vargas-populismo", name: "Era Vargas, CLT e Populismo", tag: "História", priority: "Crítica • Muito Cobrado", questionsCount: 10 },
+    { id: "humanas/geografia-fisica-clima", name: "Climatologia, Relevo e Domínios Naturais", tag: "Geografia", priority: "Alta • Aziz Ab'Sáber", questionsCount: 10 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 15 },
@@ -62,6 +64,8 @@ const AREA_TOPICS = {
     { id: "linguagens/vanguardas-artes", name: "Vanguardas Europeias e Artes Visuais", tag: "Artes", priority: "Alta • Modernismo e Ruptura", questionsCount: 10 },
     { id: "linguagens/generos", name: "Gêneros Textuais e Esferas de Circulação", tag: "Gêneros", priority: "Alta", questionsCount: 15 },
     { id: "linguagens/recursos-linguisticos", name: "Recursos da Língua e Variação Linguística", tag: "Gramática", priority: "Média-Alta", questionsCount: 12 },
+    { id: "linguagens/funcoes-linguagem", name: "Funções da Linguagem (Roman Jakobson)", tag: "Comunicação", priority: "Crítica • Cai Todo Ano", questionsCount: 10 },
+    { id: "linguagens/figuras-linguagem", name: "Figuras de Linguagem e Expressividade", tag: "Estilística", priority: "Crítica • Ouro do ENEM", questionsCount: 10 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },

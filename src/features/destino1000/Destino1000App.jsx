@@ -15,6 +15,10 @@ import { StudyStation } from "./ui/StudyStation";
 import { RedacaoLab } from "./ui/RedacaoLab";
 import { AnalyticsDashboard } from "./ui/AnalyticsDashboard";
 import { SessionReportModal } from "./ui/SessionReportModal";
+import { SimuladosHub } from "./ui/SimuladosHub";
+import { SimuladoExamView } from "./ui/SimuladoExamView";
+import { SimuladoResultView } from "./ui/SimuladoResultView";
+import { createSimulado, loadActiveSimulado, clearActiveSimulado } from "./core/simuladoEngine";
 
 import { contentEngine } from "./core/contentEngine";
 import { saveAttempt } from "./core/indexedDB";
@@ -59,6 +63,8 @@ export default function Destino1000App({ onBack }) {
   const [currentSessionAttempts, setCurrentSessionAttempts] = useState([]);
   const [completedSessionData, setCompletedSessionData] = useState(null);
   const [simuladoTimeRemaining, setSimuladoTimeRemaining] = useState(null);
+  const [currentSimuladoSession, setCurrentSimuladoSession] = useState(() => loadActiveSimulado());
+  const [currentSimuladoResult, setCurrentSimuladoResult] = useState(null);
 
   // Auto-save sempre que o estado mudar
   useEffect(() => {
@@ -226,29 +232,62 @@ export default function Destino1000App({ onBack }) {
     setIsLoading(false);
   };
 
-  // Modo Simulado Oficial ENEM
-  const handleSimuladoSession = async (count = 10) => {
+  // Iniciar Simulado Completo Oficial (90q, 45q, etc.)
+  const handleStartFullSimulado = async (modalityId) => {
     destinoAudio.playClick();
     setIsLoading(true);
-    setSessionType("simulado");
-    setSessionStartTime(Date.now());
-    setCurrentSessionAttempts([]);
-    setCompletedSessionData(null);
-    setSimuladoTimeRemaining(count * 180);
+    let mod = modalityId;
+    if (modalityId === 10) mod = "aquecimento-10";
+    if (modalityId === 20) mod = "treino-20";
+    if (modalityId === 45) mod = "dia1-90";
 
-    const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
-
-    let simuladoPool = await contentEngine.getRandomQuestions(count, { excludeIds: seenIds });
-
-    if (simuladoPool.length < count) {
-      const fallback = await contentEngine.getRandomQuestions(count);
-      simuladoPool = fallback;
+    try {
+      const session = await createSimulado(mod);
+      setCurrentSimuladoSession(session);
+      setCurrentSimuladoResult(null);
+      setActiveTab("simulados");
+    } catch (err) {
+      console.error("Erro ao criar simulado:", err);
+    } finally {
+      setIsLoading(false);
     }
+  };
 
-    setActiveSessionQuestions(simuladoPool);
+  const handleResumeSimulado = (session) => {
+    destinoAudio.playClick();
+    setCurrentSimuladoSession(session);
+    setCurrentSimuladoResult(null);
+    setActiveTab("simulados");
+  };
+
+  const handleFinishSimuladoExam = (result) => {
+    setCurrentSimuladoSession(null);
+    setCurrentSimuladoResult(result);
+    setPlayerState(prev => {
+      const history = [...(prev.simuladosHistory || []), result];
+      const xpEarned = Math.round(result.overallTRIScore / 2);
+      const rewarded = rewardStudyAction(prev, { xp: xpEarned, isCorrect: true });
+      return {
+        ...rewarded,
+        simuladosHistory: history
+      };
+    });
+  };
+
+  const handleCancelSimuladoExam = () => {
+    clearActiveSimulado();
+    setCurrentSimuladoSession(null);
+    setActiveTab("simulados");
+  };
+
+  const handleRetrySimuladoErrors = (wrongQuestions) => {
+    setCurrentSimuladoResult(null);
+    setActiveSessionQuestions(wrongQuestions);
     setActiveQuestionIndex(0);
+    setCurrentSessionAttempts([]);
+    setSessionStartTime(Date.now());
+    setSessionType("erro");
     setActiveTab("estudo");
-    setIsLoading(false);
   };
 
   // Navegar para uma área específica
@@ -346,16 +385,18 @@ export default function Destino1000App({ onBack }) {
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-[#0b0c1e] text-white select-none overflow-hidden font-sans">
 
-      {/* Top HUD */}
-      <HUD
-        playerState={playerState}
-        onBack={onBack}
-        isMuted={isMuted}
-        onToggleMute={handleToggleMute}
-      />
+      {/* Top HUD (oculto durante exame ativo) */}
+      {(!currentSimuladoSession || activeTab !== "simulados") && (
+        <HUD
+          playerState={playerState}
+          onBack={onBack}
+          isMuted={isMuted}
+          onToggleMute={handleToggleMute}
+        />
+      )}
 
       {/* Área Central Rolável */}
-      <main className="flex-1 overflow-y-auto pb-24 pt-2">
+      <main className={`flex-1 overflow-y-auto ${(!currentSimuladoSession || activeTab !== "simulados") ? "pb-24 pt-2" : "pb-0 pt-0"}`}>
         <AnimatePresence mode="wait">
 
           {activeTab === "inicio" && (
@@ -372,7 +413,7 @@ export default function Destino1000App({ onBack }) {
                 onStartQuickSession={handleQuickSession}
                 onStartReviewSession={handleStartReviewSession}
                 onStartErrorSession={handleStartErrorSession}
-                onStartSimulado={handleSimuladoSession}
+                onStartSimulado={handleStartFullSimulado}
                 onGoToRedacao={() => setActiveTab("redacao")}
                 onGoToAnalytics={() => setActiveTab("evolucao")}
                 onGoToAreas={() => setActiveTab("areas")}
@@ -412,10 +453,26 @@ export default function Destino1000App({ onBack }) {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <AnalyticsDashboard
-                playerState={playerState}
-                onStartSimulado={handleSimuladoSession}
-              />
+              {currentSimuladoSession ? (
+                <SimuladoExamView
+                  session={currentSimuladoSession}
+                  onFinishSimulado={handleFinishSimuladoExam}
+                  onCancelSimulado={handleCancelSimuladoExam}
+                />
+              ) : currentSimuladoResult ? (
+                <SimuladoResultView
+                  result={currentSimuladoResult}
+                  onRetryErrors={handleRetrySimuladoErrors}
+                  onClose={() => setCurrentSimuladoResult(null)}
+                />
+              ) : (
+                <SimuladosHub
+                  playerState={playerState}
+                  onStartSimulado={handleStartFullSimulado}
+                  onResumeActiveSimulado={handleResumeSimulado}
+                  onViewHistoricResult={(res) => setCurrentSimuladoResult(res)}
+                />
+              )}
             </motion.div>
           )}
 
@@ -513,77 +570,79 @@ export default function Destino1000App({ onBack }) {
             >
               <AnalyticsDashboard
                 playerState={playerState}
-                onStartSimulado={handleSimuladoSession}
+                onStartSimulado={handleStartFullSimulado}
               />
             </motion.div>
           )}
         </AnimatePresence>
       </main>
 
-      {/* Barra Inferior de Navegação — 5 Abas Focadas em Estudo */}
-      <nav
-        aria-label="Navegação da Plataforma ENEM"
-        className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#100810]/95 px-3 py-2 backdrop-blur-2xl"
-      >
-        <div className="mx-auto flex max-w-lg items-center justify-around">
+      {/* Barra Inferior de Navegação — 5 Abas (oculta durante exame ativo) */}
+      {(!currentSimuladoSession || activeTab !== "simulados") && (
+        <nav
+          aria-label="Navegação da Plataforma ENEM"
+          className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#100810]/95 px-3 py-2 backdrop-blur-2xl"
+        >
+          <div className="mx-auto flex max-w-lg items-center justify-around">
 
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("inicio"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "inicio" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <Home size={20} />
-            <span className="text-[0.65rem]">Início</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => { destinoAudio.playClick(); setActiveTab("inicio"); }}
+              className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+                activeTab === "inicio" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              }`}
+            >
+              <Home size={20} />
+              <span className="text-[0.65rem]">Início</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("areas"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "areas" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <GraduationCap size={20} />
-            <span className="text-[0.65rem]">Matérias</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => { destinoAudio.playClick(); setActiveTab("areas"); }}
+              className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+                activeTab === "areas" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              }`}
+            >
+              <GraduationCap size={20} />
+              <span className="text-[0.65rem]">Matérias</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("simulados"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "simulados" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <Target size={20} />
-            <span className="text-[0.65rem]">Simulados</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => { destinoAudio.playClick(); setActiveTab("simulados"); }}
+              className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+                activeTab === "simulados" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              }`}
+            >
+              <Target size={20} />
+              <span className="text-[0.65rem]">Simulados</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("redacao"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "redacao" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <PenTool size={20} />
-            <span className="text-[0.65rem]">Redação</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => { destinoAudio.playClick(); setActiveTab("redacao"); }}
+              className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+                activeTab === "redacao" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              }`}
+            >
+              <PenTool size={20} />
+              <span className="text-[0.65rem]">Redação</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => { destinoAudio.playClick(); setActiveTab("evolucao"); }}
-            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
-              activeTab === "evolucao" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
-            }`}
-          >
-            <BarChart3 size={20} />
-            <span className="text-[0.65rem]">Progresso</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => { destinoAudio.playClick(); setActiveTab("evolucao"); }}
+              className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+                activeTab === "evolucao" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              }`}
+            >
+              <BarChart3 size={20} />
+              <span className="text-[0.65rem]">Progresso</span>
+            </button>
 
-        </div>
-      </nav>
+          </div>
+        </nav>
+      )}
 
     </div>
   );

@@ -33,6 +33,8 @@ export const QUESTION_MODULES = {
   "linguagens/argumentacao": () => import("./questions/linguagens/argumentacao.js"),
   "linguagens/recursos-linguisticos": () => import("./questions/linguagens/recursos-linguisticos.js"),
   "linguagens/vanguardas-artes": () => import("./questions/linguagens/vanguardas-artes.js"),
+  "linguagens/funcoes-linguagem": () => import("./questions/linguagens/funcoes-linguagem.js"),
+  "linguagens/figuras-linguagem": () => import("./questions/linguagens/figuras-linguagem.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
@@ -42,6 +44,8 @@ export const QUESTION_MODULES = {
   "humanas/meio-ambiente": () => import("./questions/humanas/meio-ambiente.js"),
   "humanas/geopolitica": () => import("./questions/humanas/geopolitica.js"),
   "humanas/cidadania-direitos": () => import("./questions/humanas/cidadania-direitos.js"),
+  "humanas/era-vargas-populismo": () => import("./questions/humanas/era-vargas-populismo.js"),
+  "humanas/geografia-fisica-clima": () => import("./questions/humanas/geografia-fisica-clima.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),
