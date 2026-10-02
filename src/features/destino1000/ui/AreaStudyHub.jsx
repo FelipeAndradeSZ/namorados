@@ -53,6 +53,7 @@ const AREA_TOPICS = {
     { id: "matematica/analise-combinatoria", name: "Análise Combinatória e PFC", tag: "Combinatória", priority: "Crítica • Técnicas de Contagem", questionsCount: 25 },
     { id: "matematica/progressoes", name: "Progressões Aritméticas e Geométricas (PA e PG)", tag: "Álgebra", priority: "Crítica • Modelagem Linear e Exponencial", questionsCount: 25 },
     { id: "matematica/exponencial-logaritmos", name: "Funções Exponenciais e Logaritmos", tag: "Álgebra", priority: "Crítica • Richter, pH e Decaimento", questionsCount: 25 },
+    { id: "matematica/sistemas-equacoes", name: "Álgebra, Equações e Sistemas Lineares", tag: "Álgebra", priority: "Crítica • Modelagem Algébrica", questionsCount: 25 },
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 25 },

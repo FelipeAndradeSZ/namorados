@@ -2106,6 +2106,50 @@ export const THEORY_CONTENT = {
       "Atenção ao greenwashing: selos autoatribuídos e folhas verdes no rótulo são estratégias visuais que muitas vezes ocultam poluição industrial real."
     ],
     mnemonics: "A imagem flutua, a palavra ancora; o imperativo convoca e a rima decora!"
+  },
+
+  "matematica/sistemas-equacoes": {
+    topic: "Álgebra, Equações e Sistemas Lineares",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Competência 5 (H19, H20, H21, H22): Essencial na modelagem algébrica do cotidiano, problemas de produção, ponto de equilíbrio, torneiras/vazão e balanceamento de misturas (~10% a 15% da prova).",
+    highFrequencySkills: [
+      "H19 - Identificar representações algébricas que expressem relações entre grandezas",
+      "H20 - Interpretar gráficos e tabelas para modelar equações e sistemas",
+      "H21 - Resolver situações-problema cuja modelagem envolva equações do 1º ou 2º grau e sistemas lineares",
+      "H22 - Utilizar conhecimentos algébricos para tomar decisões financeiras ou logísticas ótimas"
+    ],
+    overview: "A álgebra no ENEM não se limita ao cálculo mecânico: o exame exige a capacidade de traduzir enunciados verbais em modelos matemáticos (equações do 1º e 2º grau, inequações, sistemas lineares 2x2 e 3x3) e interpretar geometricamente as soluções (interseção de retas e parábolas, ponto de equilíbrio e regiões de viabilidade).",
+    keyConcepts: [
+      {
+        title: "Tradução de Enunciados para Modelos Algébricos",
+        content: "O passo mais crítico na prova: definir claramente o que cada incógnita representa (ex: x = número de unidades do tipo A, y = número de unidades do tipo B). Identificar palavras-chave: 'o dobro de x somado a y' (2x + y), 'no mínimo' (≥), 'no máximo' (≤), 'exceder em' (x - y = k)."
+      },
+      {
+        title: "Resolução de Sistemas 2x2: Adição vs. Substituição vs. Cramer",
+        content: "• Método da Adição: ideal quando coeficientes são simétricos ou facilmente multiplicáveis por constantes para eliminar uma variável.\n• Método da Substituição: eficiente quando uma variável possui coeficiente 1 ou -1.\n• Regra de Cramer: x = Dx / D, y = Dy / D. Se D ≠ 0, o sistema é Possível e Determinado (SPD, retas concorrentes). Se D = 0 e Dx = Dy = 0, é Possível e Indeterminado (SPI, retas coincidentes). Se D = 0 e ao menos um Dx, Dy ≠ 0, é Impossível (SI, retas paralelas distintas)."
+      },
+      {
+        title: "Problemas Clássicos: Misturas, Torneiras e Ponto de Equilíbrio",
+        content: "• Problemas de Torneiras/Trabalho Conjunto: a soma das taxas unitárias de trabalho por unidade de tempo é 1/t_total = 1/t_1 + 1/t_2.\n• Problemas de Misturas e Concentrações: C_1·V_1 + C_2·V_2 = C_final·(V_1 + V_2).\n• Ponto de Equilíbrio (Break-even): Custo Total C(x) = C_fixo + C_var·x igual à Receita Total R(x) = p·x. O lucro começa quando R(x) > C(x)."
+      },
+      {
+        title: "Equações do 2º Grau e Vértice da Parábola",
+        content: "ax² + bx + c = 0 com Δ = b² - 4ac. As raízes representam interceptos com o eixo x. As coordenadas do vértice V(x_v, y_v) com x_v = -b/(2a) e y_v = -Δ/(4a) determinam o ponto de máximo (se a < 0) ou mínimo (se a > 0), cruciais em problemas de lucro máximo ou trajetória balística."
+      }
+    ],
+    formulasAndRules: [
+      "Taxa de Trabalho Conjunto: 1/T = 1/t₁ + 1/t₂ (tempo para encher reservatório ou concluir obra juntos).",
+      "Classificação de Sistemas: D ≠ 0 (SPD, 1 solução); D = 0 e Dx = Dy = 0 (SPI, infinitas soluções); D = 0 e (Dx ≠ 0 ou Dy ≠ 0) (SI, sem solução).",
+      "Ponto de Nivelamento (Break-even): R(x) = C(x) ⟹ x = C_fixo / (Preço unitário - Custo variável unitário).",
+      "Vértice de Parábola: x_v = -b / (2a) (valor que maximiza/minimiza); y_v = -Δ / (4a) (valor máximo/mínimo atingido)."
+    ],
+    enemTraps: [
+      "Confundir a pergunta do vértice: o ENEM frequentemente pede 'quantas unidades devem ser vendidas' (x_v) e o aluno calcula 'o lucro máximo obtido' (y_v), ou vice-versa!",
+      "Em problemas de torneiras com ralo: a vazão do ralo deve ser SUBTRAÍDA da soma das vazões das torneiras: 1/T = 1/t₁ + 1/t₂ - 1/t_ralo.",
+      "Não conferir as unidades de tempo: misturar minutos e horas na mesma equação sem conversão prévia."
+    ],
+    mnemonics: "Trabalho soma o inverso da hora; no vértice, -b sobre 2a não demora; no ralo esvazia e subtrai sem demora!"
   }
 };
 

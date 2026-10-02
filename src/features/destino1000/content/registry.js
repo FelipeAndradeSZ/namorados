@@ -29,6 +29,7 @@ export const QUESTION_MODULES = {
   "matematica/geometria-plana": () => import("./questions/matematica/geometria-plana.js"),
   "matematica/exponencial-logaritmos": () => import("./questions/matematica/exponencial-logaritmos.js"),
   "matematica/analise-combinatoria": () => import("./questions/matematica/analise-combinatoria.js"),
+  "matematica/sistemas-equacoes": () => import("./questions/matematica/sistemas-equacoes.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
