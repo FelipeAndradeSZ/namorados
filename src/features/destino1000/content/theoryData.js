@@ -2919,6 +2919,53 @@ export const THEORY_CONTENT = {
       "Desacopladores mitocondriais NÃO paralisam o consumo de oxigênio; eles AUMENTAM o consumo de oxigênio e a queima de glicose gerando calor inútil sem sintetizar ATP!"
     ],
     mnemonics: "Cinética e Enzimas do ENEM: 'Catalisador abaixa a montanha da ativação sem mexer no chão do ΔH; calor dá energia pra molécula pular; Km pequeno é enzima que ama ligar; competidor empurra o Km pra lá sem a Vmax derrubar; e o próton de Mitchell desce a crista pra o ATP rodar!'"
+  },
+
+  "natureza/fisiologia-renal-hemodinamica": {
+    topic: "Fisiologia Renal, Hemodinâmica e Homeostase Humana",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Competência 4 (H14, H15, H16, H17) e Competência 7 (H24, H25): O tema mais nobre da Biologia Médica no ENEM. Integra a filtração glomerular, reabsorção de nutrientes (SGLT2), o eixo hormonal SRAA (renina-angiotensina-aldosterona), osmorregulação por ADH (aquaporinas), hemodinâmica do ciclo cardíaco (PAM = DC × RPT, Lei de Poiseuille), equilíbrio ácido-base do sangue (tampão bicarbonato, acidose e alcalose respiratória/metabólica) e mecanismos farmacológicos de anti-hipertensivos e diuréticos.",
+    highFrequencySkills: [
+      "H14 - Identificar padrões em fenômenos biológicos celulares e fisiológicos humanos",
+      "H15 - Interpretar respostas integradas de sistemas hormonais e excretores na homeostase",
+      "H17 - Analisar grandezas biofísicas de vazão, pressão e resistência na circulação",
+      "H24 - Reconhecer as etapas e os fatores que alteram o equilíbrio químico em sistemas biológicos"
+    ],
+    overview: "O módulo aprofunda a fisiologia e biofísica dos sistemas excretor e circulatório: 1) O néfron e a barreira de filtração glomerular seletiva por tamanho e carga elétrica negativa; 2) Forças de Starling na filtração glomerular e o cotransporte de glicose SGLT2 (limiar renal e glicosúria no diabetes); 3) A alça de Henle e o mecanismo multiplicador de contracorrente; 4) O eixo neuroendócrino da volemia: Sistema Renina-Angiotensina-Aldosterona (SRAA), Hormônio Antidiurético (ADH/aquaporinas AQP2) e Peptídeo Natriurético Atrial (ANP); 5) Ciclo cardíaco e hemodinâmica: Débito Cardíaco (DC = FC × VS), Resistência Periférica Total (R ∝ 1/r⁴ de Poiseuille), bulhas B1 e B2 e o barorreflexo autônomo; 6) Distúrbios ácido-base no sangue (acidose/alcalose metabólica e respiratória) e compensações; 7) Farmacologia cardiorrenal: diuréticos de alça (furosemida), poupadores de K⁺ (espironolactona) e inibidores da ECA/BRA.",
+    keyConcepts: [
+      {
+        title: "Barreira de Filtração e Forças de Starling no Glomérulo",
+        content: "• Barreira: Endotélio fenestrado + Lâmina basal aniônica + Podócitos. Impede passagem de hemácias e albumina (sua presença na urina indica proteinúria/hematúria patológica).\n• Pressão Efetiva de Filtração: PEF = P_HG - (P_HC + π_SG). P_HG empurra (+60 mmHg), P_HC resiste (-18 mmHg) e π_SG atrai de volta (-32 mmHg) ⇒ PEF ≈ +10 mmHg.\n• Reabsorção no Túbulo Proximal: Recupera 100% da glicose e aminoácidos via SGLT2 e 70% de Na⁺ e água. Saturação em glicemia > 180 mg/dL gera poliúria osmótica diabética."
+      },
+      {
+        title: "Eixos Hormonais da Volemia: SRAA, ADH e ANP",
+        content: "• SRAA: Rins liberam renina → cliva angiotensinogênio hepático em angiotensina I → ECA pulmonar gera angiotensina II (vasoconstrição sistêmica e da arteríola eferente) → adrenal libera aldosterona (reabsorve Na⁺ e água, excreta K⁺ e H⁺ no duto coletor).\n• ADH (Vasopressina): Hipotálamo detecta hiperosmolaridade → neuro-hipófise libera ADH → receptor V2 no duto coletor eleva cAMP e insere aquaporinas AQP2 apicais, reabsorvendo água pura livre (álcool inibe ADH, gerando poliúria e ressaca).\n• ANP: Estiramento atrial por hipervolemia dispara ANP, que inibe renina/aldosterona e promove natriurese e diurese."
+      },
+      {
+        title: "Hemodinâmica Cardiovascular e Barorreflexo",
+        content: "• Ciclo Cardíaco: B1 ('tum') = fechamento das valvas mitral/tricúspide na contração isovolumétrica; B2 ('tá') = fechamento das valvas aórtica/pulmonar no relaxamento isovolumétrico.\n• Equação Hemodinâmica: PAM = DC × RPT = (FC × VS) × RPT. Atletas possuem maior volume sistólico (VS), permitindo bradicardia de repouso para mesmo DC (~5 L/min).\n• Poiseuille: R ∝ 1/r⁴. Reduzir o raio arteriolar à metade multiplica a resistência vascular por 16!\n• Barorreflexo: Queda de pressão ortostática reduz estiramento no seio carotídeo/arco aórtico, desinibindo descarga simpática no bulbo (taquicardia e vasoconstrição imediata)."
+      },
+      {
+        title: "Equilíbrio Ácido-Base e Farmacologia Renal",
+        content: "• Tampão Bicarbonato: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3- (pH normal: 7,35 - 7,45).\n• Acidose Metabólica (ex: cetoacidose): HCO3- baixo; compensada por hiperventilação de Kussmaul (elimina CO2 e consome H+).\n• Acidose Respiratória (ex: DPOC): PaCO2 alto; compensada pelos rins retendo HCO3- e excretando H+.\n• Furosemida (Diurético de Alça): Inibe o NKCC2 na alça de Henle; potente natriurese com risco de hipocalemia.\n• Espironolactona: Antagonista da aldosterona; poupa potássio (risco de hipercalemia).\n• IECA vs BRA: IECA acumula bradicinina gerando tosse seca; BRA bloqueia receptor AT1 sem afetar a bradicinina."
+      }
+    ],
+    formulasAndRules: [
+      "Pressão Efetiva: PEF = P_HG - (P_HC + π_SG)  |  TFG normal ≈ 120 mL/min.",
+      "Débito Cardíaco: DC = FC × VS  |  Pressão Média: PAM = DC × RPT.",
+      "Lei de Poiseuille: R = (8 · η · L) / (π · r⁴)  ⇒  R ∝ 1 / r⁴.",
+      "Tampão Sanguíneo: pH = 6,1 + log([HCO₃⁻] / [0,03 × PaCO₂]). Razão normal = 20:1.",
+      "Osmolalidade Plasmática: Posm ≈ 2 · [Na⁺] + [Glicose]/18 + [Ureia]/6 ≈ 285-295 mOsm/kg."
+    ],
+    enemTraps: [
+      "Álcool etílico NÃO estimula o ADH; ele INIBE a liberação de ADH na neuro-hipófise, impedindo a inserção de aquaporinas e desidratando o corpo!",
+      "A primeira bulha B1 decorre do FECHAMENTO das valvas mitral e tricúspide, e NUNCA de sua abertura!",
+      "A aldosterona retém sódio e água, mas JOGA FORA potássio (K⁺); o excesso de aldosterona causa HIPOCALEMIA, não hipercalemia!",
+      "Na cetoacidose diabética, o paciente hiperventila para expirar CO₂ e consumir prótons H⁺, e NÃO porque está faltando oxigênio nos pulmões!",
+      "Os IECA (enalapril) causam tosse seca por acúmulo de bradicinina, e a conduta é trocar por um BRA (losartana), e NÃO administrar xarope comum."
+    ],
+    mnemonics: "Fisiologia Renal e Cardiorrenal: 'B1 fecha AV pro ventrículo bater; B2 fecha semilunar pro sangue não descer; renina solta angiotensina pro vaso fechar; aldosterona guarda sódio e manda potássio pro mar; ADH abre aquaporina pra água voltar; e a tosse do IECA é bradicinina que não quer degradar!'"
   }
 };
 
