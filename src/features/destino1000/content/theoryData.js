@@ -1716,6 +1716,44 @@ export const THEORY_CONTENT = {
       "A Proclamação da República em 1889 não contou com ampla participação popular: foi um golpe militar articulado com a oligarquia cafeeira ('o povo assistiu bestializado')."
     ],
     mnemonics: "Avanço liberal descentralizou nas regências; o café marchou pro oeste e o Exército derrubou a Coroa em 89."
+  },
+
+  "linguagens/coesao-coerencia": {
+    topic: "Coesão, Coerência e Conectivos",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Pilar da Competência 7 de Linguagens e da Competência 4 da Redação do ENEM (200 pontos obrigatórios de operadores interparágrafos).",
+    highFrequencySkills: ["H26 - Identificar recursos de coesão textual", "H27 - Analisar a força argumentativa de conectores"],
+    overview: "Estudo sistemático dos recursos de amarração superficial (coesão referencial e sequencial) e de unidade de sentido profunda (coerência global, não contradição e intencionalidade discursiva).",
+    keyConcepts: [
+      {
+        title: "Coesão Referencial: Anáfora, Catáfora e Hiperonímia",
+        content: "Anáfora = retomada de termo já expresso no texto (ex: pronome 'ele', 'isso', elipse ou hiperônimo como 'o órgão' para retomar o Ministério). Catáfora = antecipação de um termo a ser esclarecido (ex: 'o dilema é este: agir ou omitir-se'). Encapsulamento = síntese de oração inteira em um único substantivo avaliativo (ex: 'Essa postura inaceitável')."
+      },
+      {
+        title: "Operadores Argumentativos e Orientação Discursiva",
+        content: "Os conectivos direcionam a interpretação do leitor: • Oposição/Quebra de expectativa: contudo, todavia, no entanto. • Concessão (admite ressalva sem anular o fato): embora, conquanto, ainda que. • Causa (motivo originário): visto que, já que, dado que, porquanto. • Conclusão (efeito/decorrência lógica): portanto, logo, por conseguinte, destarte. • Adição enfática: não só... como também, ademais, outrossim."
+      },
+      {
+        title: "Coerência Textual e Não Contradição",
+        content: "A coerência é a harmonia de sentido global construída na interação entre autor, texto e leitor (Koch e Travaglia). Exige respeito ao princípio da não contradição, continuidade temática, progressão linear de ideias e adequação ao conhecimento de mundo compartilhado. Quebras de coerência podem ser usadas intencionalmente na literatura e na publicidade para criar humor e ironia."
+      },
+      {
+        title: "Crase e Paralelismo Sintático no Padrão Formal",
+        content: "Crase = fusão da preposição 'a' com artigo feminino 'a' (A + A = À). Proibida antes de verbos ('a partir de'), palavras masculinas e pronomes indefinidos. Facultativa antes de nomes femininos, possessivos femininos singulares e após 'até'. Paralelismo sintático exige que termos coordenados compartilhem a mesma estrutura gramatical (ex: 'visa à melhoria e à expansão', e não 'visa a melhorar e à expansão')."
+      }
+    ],
+    formulasAndRules: [
+      "Operadores Interparágrafos da Redação: D1 = 'A princípio,' / 'Em primeiro plano,'; D2 = 'Ademais,' / 'Outrossim,'; Conclusão = 'Portanto,' / 'Destarte,'.",
+      "Regra do Onde: 'Onde' só se refere a lugar físico palpável (ex: a cidade onde moro). Para abstrações temporais ou conceituais, use 'em que' ou 'no qual'.",
+      "À medida que = Proporção gradual; Na medida em que = Causa ('já que'). A forma 'à medida em que' é considerada incorreta pela norma padrão."
+    ],
+    enemTraps: [
+      "Não confunda 'porquanto' (causa/porque) com 'conquanto' (concessão/embora) nem com 'portanto' (conclusão/logo).",
+      "Nunca use crase antes de verbo no infinitivo nem antes de palavras masculinas ('andar a cavalo', 'pagar a prazo').",
+      "Não use 'onde' para retomar 'sociedade', 'livro', 'época' ou 'situação' na sua redação dissertativa."
+    ],
+    mnemonics: "Anáfora olha pra trás, catáfora anuncia a vez; o conectivo amarra a tese com clareza e sensatez."
   }
 };
 

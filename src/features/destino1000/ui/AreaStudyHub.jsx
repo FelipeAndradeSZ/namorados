@@ -75,6 +75,7 @@ const AREA_TOPICS = {
     { id: "linguagens/figuras-linguagem", name: "Figuras de Linguagem e Expressividade", tag: "Estilística", priority: "Crítica • Ouro do ENEM", questionsCount: 25 },
     { id: "linguagens/variacao-linguistica", name: "Variação Linguística e Preconceito", tag: "Sociolinguística", priority: "Crítica • Top 1 do ENEM", questionsCount: 25 },
     { id: "linguagens/artes-visuais-musica", name: "Artes Visuais, Música Brasileira e Expressões", tag: "Artes", priority: "Alta • MPB, Rap e Patrimônio", questionsCount: 25 },
+    { id: "linguagens/coesao-coerencia", name: "Coesão, Coerência e Conectivos", tag: "Gramática", priority: "Crítica • Base da Redação", questionsCount: 25 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },

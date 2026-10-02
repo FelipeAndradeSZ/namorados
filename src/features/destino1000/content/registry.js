@@ -39,6 +39,7 @@ export const QUESTION_MODULES = {
   "linguagens/figuras-linguagem": () => import("./questions/linguagens/figuras-linguagem.js"),
   "linguagens/variacao-linguistica": () => import("./questions/linguagens/variacao-linguistica.js"),
   "linguagens/artes-visuais-musica": () => import("./questions/linguagens/artes-visuais-musica.js"),
+  "linguagens/coesao-coerencia": () => import("./questions/linguagens/coesao-coerencia.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
