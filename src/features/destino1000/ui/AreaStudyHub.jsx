@@ -68,6 +68,7 @@ const AREA_TOPICS = {
     { id: "humanas/historia-geral", name: "História Geral: Antiguidade a Revoluções", tag: "História", priority: "Crítica • Grécia, Roma, Revoluções", questionsCount: 25 },
     { id: "humanas/afro-indigena", name: "História e Cultura Afro-Brasileira e Indígena", tag: "História/Sociologia", priority: "Crítica • Leis 10.639 e 11.645", questionsCount: 25 },
     { id: "humanas/geografia-agraria", name: "Geografia Agrária, Agronegócio e Terra", tag: "Geografia", priority: "Crítica • MATOPIBA e Conflitos", questionsCount: 25 },
+    { id: "humanas/filosofia-teoria-conhecimento", name: "Filosofia, Ética e Teoria do Conhecimento", tag: "Filosofia", priority: "Crítica • Sócrates a Kant", questionsCount: 25 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 25 },
@@ -83,6 +84,7 @@ const AREA_TOPICS = {
     { id: "linguagens/coesao-coerencia", name: "Coesão, Coerência e Conectivos", tag: "Gramática", priority: "Crítica • Base da Redação", questionsCount: 25 },
     { id: "linguagens/ingles-instrumental", name: "Língua Estrangeira: Inglês Instrumental", tag: "Inglês", priority: "Crítica • 5 Questões Garantidas", questionsCount: 25 },
     { id: "linguagens/espanhol-instrumental", name: "Língua Estrangeira: Espanhol Instrumental", tag: "Espanhol", priority: "Crítica • 5 Questões Garantidas", questionsCount: 25 },
+    { id: "linguagens/publicidade-semiotica", name: "Publicidade, Propaganda e Semiótica Visual", tag: "Comunicação", priority: "Crítica • Persuasão e Multimodalidade", questionsCount: 25 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },

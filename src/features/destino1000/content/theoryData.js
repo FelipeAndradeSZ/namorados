@@ -2027,6 +2027,85 @@ export const THEORY_CONTENT = {
       "Trabalho escravo contemporâneo (CP, art. 149) não exige correntes físicas; caracteriza-se por condições degradantes, servidão por dívida e jornada exaustiva."
     ],
     mnemonics: "A máquina modernizou, a terra concentrou; o familiar põe comida e o Gini disparou."
+  },
+
+  "humanas/filosofia-teoria-conhecimento": {
+    topic: "Filosofia, Ética e Teoria do Conhecimento",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Competência 1 e 4 (H1, H2, H16, H17, H18): Presença garantida no ENEM (3 a 4 questões anuais) e principal alicerce de repertório sociocultural legítimo para a Redação Nota 1000.",
+    highFrequencySkills: ["H1 - Interpretar o papel da reflexão filosófica na cidadania", "H16 - Diferenciar matrizes epistemológicas (racionalismo, empirismo, criticismo)", "H17 - Aplicar teorias éticas a dilemas da contemporaneidade", "H18 - Valorizar a dignidade da pessoa humana e os direitos fundamentais"],
+    overview: "Mapeamento sistemático da história do pensamento filosófico ocidental: a ruptura pré-socrática do mito pelo logos, Sócrates e a maiêutica, o idealismo de Platão, a ética das virtudes de Aristóteles, o estoicismo helenístico, a harmonia fé/razão tomista, a teoria do conhecimento moderna (Descartes, Locke, Hume, Kant), o realismo político (Maquiavel, Hobbes, Rousseau) e a reflexão contemporânea (Nietzsche, Arendt, Foucault, Bauman, Jonas, Han e Rawls).",
+    keyConcepts: [
+      {
+        title: "Sócrates, Platão e o Idealismo",
+        content: "Sócrates rompe com os sofistas combatendo o relativismo retórico: por meio da ironia (desconstrução de preconceitos) e da maiêutica (parto das ideias pela razão), busca essências universais. Platão formula o dualismo: o Mundo Sensível é o reino das sombras e das opiniões mutáveis (doxa); o Mundo Inteligível das Ideias é o reino do conhecimento verdadeiro (episteme), culminando na Ideia do Bem."
+      },
+      {
+        title: "Aristóteles e a Ética da Mediania",
+        content: "Para Aristóteles, a virtude ética (areté) não é inata nem puramente teórica, mas adquirida pelo hábito e pela sabedoria prática (phrónesis). A virtude situa-se no 'justo meio' (mesótis) entre dois extremos viciosos (um por falta e outro por excesso), como a coragem entre a covardia e a temeridade, orientando o animal político à felicidade plena (eudaimonia)."
+      },
+      {
+        title: "Racionalismo, Empirismo e o Criticismo Kantiano",
+        content: "• Descartes (Racionalismo): a dúvida metódica atinge a certeza indubitável do sujeito pensante (Cogito, ergo sum). • Locke e Hume (Empirismo): a mente é uma tábula rasa suprida pela experiência; Hume demonstra que a causalidade é uma crença gerada pelo hábito psicológico. • Kant (Criticismo): sintetiza ambas as correntes e funda a ética do Imperativo Categórico, exigindo máxima universalizável e respeito absoluto à dignidade humana (a pessoa como fim, nunca como meio)."
+      },
+      {
+        title: "Poder, Banalidade do Mal e Dilemas Contemporâneos",
+        content: "• Maquiavel: autonomia da política em relação à moral religiosa tradicional (virtù vs. fortuna). • Hannah Arendt: a 'banalidade do mal' decorre da renúncia ao pensamento crítico em burocracias alienadas. • Foucault: a sociedade disciplinar e o panóptico produzem 'corpos dóceis'. • Hans Jonas: Princípio Responsabilidade e a proteção ecológica das gerações futuras. • Byung-Chul Han: a sociedade do desempenho converte o trabalhador em autoexplorador voluntário de si mesmo."
+      }
+    ],
+    formulasAndRules: [
+      "Método Socrático: Ironia (destruição de falsas certezas) + Maiêutica (parto racional de conceitos).",
+      "Ética Aristotélica: Virtude = Justo Meio entre Excesso e Deficiência (Mesótis).",
+      "Imperativo Categórico Kantiano: 'Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne lei universal'.",
+      "Dicotomia do Controle Estoica: Foque no que depende de você (pensamentos/virtude); aceite com serenidade o que independe de você.",
+      "Justiça como Equidade (Rawls): Véu de ignorância garante imparcialidade; o Princípio da Diferença maximiza o benefício aos mais vulneráveis."
+    ],
+    enemTraps: [
+      "Não confunda Sócrates com sofistas: sofistas cobravam e ensinavam relativismo convincente; Sócrates dialogava de graça em busca da verdade universal.",
+      "A dúvida metódica cartesiana NÃO é ceticismo definitivo; é uma ferramenta cirúrgica para encontrar a rocha da primeira certeza indubitável.",
+      "Na ética kantiana, o cálculo de consequências não tem valor moral: uma boa intenção baseada no dever é o que define o ato moral, diferentemente do utilitarismo."
+    ],
+    mnemonics: "Sócrates dialoga com maiêutica na praça; Descartes pensa e existe com graça; Kant universaliza o dever sem trapaça!"
+  },
+
+  "linguagens/publicidade-semiotica": {
+    topic: "Publicidade, Propaganda e Semiótica Visual",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 7 (H21, H22, H23, H24): Uma das competências de maior incidência no primeiro domingo do ENEM (~15% a 20% das questões), cobrando análise multimodal de campanhas sociais, charges, cartazes e persuasão.",
+    highFrequencySkills: ["H21 - Reconhecer em textos publicitários as funções da linguagem e os recursos persuasivos", "H22 - Relacionar recursos visuais, tipográficos e verbais em textos multimodais", "H23 - Avaliar os efeitos de sentido provocados por recursos gráficos e quebras de expectativa", "H24 - Reconhecer o papel social e ético da publicidade e seus limites legais"],
+    overview: "Estudo crítico das estratégias de comunicação persuasiva: a distinção entre publicidade comercial (venda mercadológica) e propaganda/publicidade institucional (adesão cívica a causas de saúde, trânsito e direitos humanos), a retórica clássica (Ethos, Pathos e Logos), a semiótica de Roland Barthes (ancoragem da imagem pelo texto), a expressividade da tipografia, a função conativa e poética de slogans, a intertextualidade paródica e a ética contra o greenwashing e a publicidade infantil abusiva.",
+    keyConcepts: [
+      {
+        title: "Publicidade Comercial vs. Campanhas Institucionais",
+        content: "• Publicidade Comercial: orientada para o mercado de consumo, estimulando a aquisição de bens e serviços por meio do valor-signo e da associação a estilos de vida desejáveis. • Propaganda / Publicidade Institucional: promovida pelo Estado ou ONGs visando a transformação de comportamentos sociais danosos e a promoção de saúde pública, cidadania e direitos humanos (vacinação, doação de sangue, trânsito seguro, combate à violência doméstica)."
+      },
+      {
+        title: "Multimodalidade e o Tripé Retórico (Ethos, Pathos, Logos)",
+        content: "A persuasão opera pela convergência de modos semióticos (verbal + visual + tipográfico). Na retórica clássica: • Logos fundamenta-se em argumentos lógicos, gráficos estatísticos e fatos objetivos; • Ethos ancora-se na autoridade moral, científica e reputação da instituição emissora; • Pathos apela aos sentimentos de empatia, solidariedade, medo ou culpa do receptor para mobilizá-lo à ação."
+      },
+      {
+        title: "Ancoragem Texto-Imagem (Barthes) e Semiótica Tipográfica",
+        content: "Para Roland Barthes, imagens isoladas possuem significados flutuantes e polissêmicos. O texto verbal realiza a função essencial de ANCORAGEM: fixa o sentido pretendido e guia a interpretação do leitor. Paralelamente, a tipografia (tamanho, peso bold, caixa alta, textura de concreto ou linhas trêmulas) atua como recurso visual expressivo autônomo com carga semântica conotativa."
+      },
+      {
+        title: "Slogans, Humor Paródico e Desconstrução Crítica",
+        content: "• Slogans combinam função conativa (imperativos direcionados ao receptor) e função poética (ritmo cadenciado e rimas internas que facilitam a fixação mnemônica). • Paródias e Intertextualidade apropriam-se da cultura pop para gerar empatia e memorização rápida. • Em charges e cartazes críticos, a quebra de expectativa e a desproporção visual denunciam contradições socioeconômicas e desmascaram práticas como o greenwashing."
+      }
+    ],
+    formulasAndRules: [
+      "Ancoragem Semiótica (Roland Barthes): O texto verbal ancora e fecha a cadeia polissêmica flutuante da imagem visual.",
+      "Função Conativa/Apelativa: Verbos no imperativo ('Doe sangue', 'Denuncie', 'Use camisinha') e pronomes de 2ª pessoa focados no receptor.",
+      "Função Poética em Slogans: Rima e musicalidade que operam como fixadores mnemônicos no cérebro do público.",
+      "Regulação Ética (CDC e CONAR): Proibição da publicidade enganosa, abusiva e do assédio mercantil direto a crianças hipervulneráveis."
+    ],
+    enemTraps: [
+      "Não confunda anúncio institucional cívico com anúncio comercial: o institucional vende uma ATITUDE cidadã, não um produto lucrativo.",
+      "Em charges, preste atenção à contradição entre a fala e o desenho: quase sempre a imagem desmente ironicamente o que a personagem diz!",
+      "Atenção ao greenwashing: selos autoatribuídos e folhas verdes no rótulo são estratégias visuais que muitas vezes ocultam poluição industrial real."
+    ],
+    mnemonics: "A imagem flutua, a palavra ancora; o imperativo convoca e a rima decora!"
   }
 };
 

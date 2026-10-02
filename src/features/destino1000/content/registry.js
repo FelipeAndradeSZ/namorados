@@ -44,6 +44,7 @@ export const QUESTION_MODULES = {
   "linguagens/coesao-coerencia": () => import("./questions/linguagens/coesao-coerencia.js"),
   "linguagens/ingles-instrumental": () => import("./questions/linguagens/ingles-instrumental.js"),
   "linguagens/espanhol-instrumental": () => import("./questions/linguagens/espanhol-instrumental.js"),
+  "linguagens/publicidade-semiotica": () => import("./questions/linguagens/publicidade-semiotica.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
@@ -59,6 +60,7 @@ export const QUESTION_MODULES = {
   "humanas/brasil-imperio": () => import("./questions/humanas/brasil-imperio.js"),
   "humanas/afro-indigena": () => import("./questions/humanas/afro-indigena.js"),
   "humanas/geografia-agraria": () => import("./questions/humanas/geografia-agraria.js"),
+  "humanas/filosofia-teoria-conhecimento": () => import("./questions/humanas/filosofia-teoria-conhecimento.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),
