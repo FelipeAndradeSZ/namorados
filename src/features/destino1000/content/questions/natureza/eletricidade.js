@@ -852,6 +852,232 @@ export const QUESTIONS_ELETRICIDADE = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELET-021",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletricidade",
+    subtopic: "Geradores Reais e Equação da Tensão Terminal",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma bateria de íons de lítio utilizada em equipamentos médicos portáteis possui força eletromotriz (fem) nominal de 12,0 V e resistência interna r = 0,50 Ω. Ao alimentar um circuito de monitoramento que demanda uma corrente contínua de 4,0 A, a ddp entre os polos positivo e negativo da bateria sofre uma queda mensurável em relação ao seu valor em circuito aberto.",
+      source: "HALLIDAY, D.; RESNICK, R.; WALKER, J. Fundamentos de Física: Eletromagnetismo. LTC."
+    },
+    prompt: "A diferença de potencial útil (U) fornecida aos terminais do monitor e o rendimento elétrico percentual (η) dessa bateria nessa condição operacional valem, respectivamente:",
+    options: [
+      { id: "a", text: "10,0 V e 83,3%.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "12,0 V e 100,0%.", isCorrect: false, distractorRationale: "Desconsiderou a resistência interna (r) e a queda de tensão ôhmica interna r·i." },
+      { id: "c", text: "14,0 V e 116,7%.", isCorrect: false, distractorRationale: "Somou a queda interna em vez de subtrair (usou fórmula de receptor U = E + r·i)." },
+      { id: "d", text: "2,0 V e 16,7%.", isCorrect: false, distractorRationale: "Calculou apenas a tensão dissipada interna r·i = 0,5·4 = 2,0 V como sendo a tensão útil." },
+      { id: "e", text: "8,0 V e 66,7%.", isCorrect: false, distractorRationale: "Subtraiu o dobro da resistência interna por engano." }
+    ],
+    detailedExplanation: {
+      summary: "Em um gerador real, parte da energia química convertida é dissipada na própria resistência interna por efeito Joule: U = E - r·i. O rendimento é dado pela razão entre a tensão útil e a força eletromotriz: η = U / E.",
+      stepByStep: [
+        "1. Identificar os parâmetros: E = 12,0 V, r = 0,50 Ω e i = 4,0 A.",
+        "2. Aplicar a Equação do Gerador: U = E - r·i = 12,0 - (0,50 · 4,0) = 12,0 - 2,0 = 10,0 V.",
+        "3. Calcular o rendimento elétrico: η = U / E = 10,0 / 12,0 ≈ 0,8333 (83,3%).",
+        "4. Conclusão: a bateria fornece 10,0 V de tensão útil ao monitor com rendimento de 83,3%."
+      ],
+      coreConcept: "Equação do Gerador Real (U = E - r·i) e Rendimento Elétrico (η = U/E)",
+      trapWarning: "No ENEM, preste atenção se o dispositivo opera como GERADOR (U = E - r·i, fornece energia útil ao circuito) ou como RECEPTOR (U = E' + r'·i, consome energia elétrica para realizar trabalho)."
+    },
+    commonTraps: [
+      "Usar a equação do receptor para um gerador fornecendo corrente",
+      "Esquecer de subtrair a perda interna na resistência da bateria"
+    ],
+    tags: ["gerador-real", "resistencia-interna", "equacao-do-gerador", "rendimento-eletrico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELET-022",
+    area: "natureza",
+    competence: 5,
+    skill: 19,
+    topic: "Eletricidade",
+    subtopic: "Ponte de Wheatstone e Sensores de Deformação",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para monitorar tensões mecânicas e integridade estrutural em pontes de concreto, engenheiros utilizam um sensor strain gauge montado em um circuito de ponte de Wheatstone. O circuito é formado por quatro resistores (R1, R2, R3 e o resistor sensor R_x) dispostos em losango alimentados por uma fonte contínua. Um microamperômetro altamente sensível é conectado entre os vértices centrais C e D.",
+      source: "TIPLER, P. A.; MOSCA, G. Física para Cientistas e Engenheiros. LTC."
+    },
+    prompt: "Sabendo que R1 = 120 Ω, R2 = 360 Ω e R3 = 200 Ω, o valor da resistência do sensor R_x que faz com que a corrente no microamperômetro seja estritamente nula (ponte em equilíbrio elétrico com R1·R_x = R2·R3) é igual a:",
+    options: [
+      { id: "a", text: "600 Ω.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "240 Ω.", isCorrect: false, distractorRationale: "Somou os resistores sem aplicar a condição de produtos cruzados." },
+      { id: "c", text: "66,7 Ω.", isCorrect: false, distractorRationale: "Inverteu a proporção dos braços da ponte (calculou 120·200 / 360)." },
+      { id: "d", text: "1.200 Ω.", isCorrect: false, distractorRationale: "Multiplicou incorretamente por fator 2." },
+      { id: "e", text: "60 Ω.", isCorrect: false, distractorRationale: "Errou a potência de dez na divisão 72.000 / 120." }
+    ],
+    detailedExplanation: {
+      summary: "Na ponte de Wheatstone em equilíbrio, os potenciais nos vértices centrais são rigorosamente iguais (Vc = Vd), o que anula a ddp (Ucd = 0) e a corrente no galvanômetro. A condição necessária e suficiente é o produto cruzado das resistências opostas: R1 · Rx = R2 · R3.",
+      stepByStep: [
+        "1. Condição de equilíbrio da ponte: R1 · Rx = R2 · R3.",
+        "2. Substituir os valores numéricos dados: 120 · Rx = 360 · 200.",
+        "3. Efetuar a multiplicação: 360 · 200 = 72.000.",
+        "4. Isolar Rx: Rx = 72.000 / 120 = 600 Ω.",
+        "5. Conclusão: a resistência do sensor no estado de equilíbrio é de 600 Ω."
+      ],
+      coreConcept: "Condição de Equilíbrio da Ponte de Wheatstone (R1 · Rx = R2 · R3)",
+      trapWarning: "No ENEM: Quando a ponte está em equilíbrio, o ramo central com o galvanômetro ou resistor intermediário NÃO conduz corrente (pode ser retirado do circuito para simplificação das associações série e paralelo)."
+    },
+    commonTraps: [
+      "Multiplicar resistores vizinhos em vez de resistores em braços opostos",
+      "Tentar calcular correntes parciais desnecessariamente sem usar a propriedade do equilíbrio"
+    ],
+    tags: ["ponte-de-wheatstone", "circuitos", "sensores", "equilibrio-eletrico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELET-023",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletricidade",
+    subtopic: "Motores Elétricos, Receptores e Força Contraeletromotriz",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O motor elétrico de corrente contínua que aciona a bomba de um sistema hospitalar de hemodiálise opera conectado a uma rede de 110 V. Sua resistência interna de enrolamento é r' = 2,0 Ω. Em regime normal de rotação com carga plena, o motor opera com uma força contraeletromotriz (fcem) E' = 100 V. Contudo, se ocorrer um travamento mecânico do rotor devido a detritos, a indução magnética por rotação cessa instantaneamente e a fcem torna-se zero.",
+      source: "FEYNMAN, R. P. Lições de Física de Feynman. Bookman."
+    },
+    prompt: "A corrente elétrica absorvida pelo motor em operação normal e a corrente que circulará caso o rotor trave mecanicamente valem, respectivamente:",
+    options: [
+      { id: "a", text: "5,0 A e 55,0 A.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "50,0 A e 5,0 A.", isCorrect: false, distractorRationale: "Inverteu a ordem das situações físicas de operação normal e travamento." },
+      { id: "c", text: "10,0 A e 110,0 A.", isCorrect: false, distractorRationale: "Esqueceu de subtrair a FCEM no caso normal, calculando 110/11 e 110/1." },
+      { id: "d", text: "2,5 A e 27,5 A.", isCorrect: false, distractorRationale: "Dividiu a corrente por fator 2 arbitrário." },
+      { id: "e", text: "55,0 A e 55,0 A.", isCorrect: false, distractorRationale: "Ignorou o efeito dinâmico da força contraeletromotriz gerada pelo movimento do rotor." }
+    ],
+    detailedExplanation: {
+      summary: "Em um receptor elétrico, a equação é U = E' + r'·i, logo a corrente normal é i = (U - E') / r'. Quando o motor trava, E' = 0, restando apenas a resistência ôhmica pura dos fios (i_travado = U / r'), gerando uma sobrecorrente perigosa que queima o enrolamento se não houver disjuntor.",
+      stepByStep: [
+        "1. Operação normal: U = E' + r'·i_normal  ⇒  110 = 100 + 2,0 · i_normal.",
+        "2. Isolar i_normal: 2,0 · i_normal = 110 - 100 = 10  ⇒  i_normal = 10 / 2 = 5,0 A.",
+        "3. Rotor travado: como não há rotação cortando linhas de fluxo magnético, E' = 0.",
+        "4. Corrente de rotor travado: i_travado = U / r' = 110 / 2,0 = 55,0 A.",
+        "5. Conclusão: a corrente salta de 5,0 A para 55,0 A (11 vezes maior), evidenciando por que motores elétricos exigem relés térmicos de sobrecorrente."
+      ],
+      coreConcept: "Receptor Elétrico (U = E' + r'·i) e Efeito do Travamento de Motores",
+      trapWarning: "No ENEM: Motores elétricos consomem sua menor corrente quando giram livremente (fcem alta) e consomem corrente máxima no instante da partida ou em caso de travamento mecânico (fcem nula)."
+    },
+    commonTraps: [
+      "Achar que motor elétrico desligado ou travado não consome quase corrente (ele vira um curto-circuito resistivo)",
+      "Confundir equação de receptor (U = E' + r'·i) com de gerador (U = E - r·i)"
+    ],
+    tags: ["receptor-eletrico", "motor-eletrico", "fcem", "sobrecorrente", "efeito-joule"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELET-024",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Eletricidade",
+    subtopic: "Dimensionamento de Circuitos e Disjuntores Termomagnéticos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma residência alimentada com rede bifásica de 220 V entre fases, o circuito exclusivo de um banheiro atende simultaneamente a um chuveiro elétrico na potência 'inverno' de 7.700 W e a um aquecedor de toalhas de 1.100 W. Ambos os equipamentos são puramente resistivos e operam em paralelo sob a mesma tensão de 220 V. Para proteger a fiação contra sobrecarga e incêndio conforme a NBR 5410, deve-se selecionar um disjuntor termomagnético comercial cuja corrente nominal seja imediatamente superior à corrente total de projeto.",
+      source: "ABNT NBR 5410 - Instalações Elétricas de Baixa Tensão."
+    },
+    prompt: "Dentre os disjuntores bipolares comerciais padronizados (20 A, 32 A, 40 A, 50 A e 63 A), o dispositivo mais adequado a ser instalado nesse circuito é o de:",
+    options: [
+      { id: "a", text: "50 A.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "40 A.", isCorrect: false, distractorRationale: "A corrente total calculada é de 40 A exatos; o disjuntor de 40 A desarmaria com qualquer oscilação ou variação térmica ambiental de uso contínuo, violando a margem de projeto da NBR 5410 (disjuntor nominal imediatamente superior de 50 A)." },
+      { id: "c", text: "32 A.", isCorrect: false, distractorRationale: "O disjuntor de 32 A desarmará instantaneamente, pois 40 A ultrapassa sua capacidade nominal em 25%." },
+      { id: "d", text: "63 A.", isCorrect: false, distractorRationale: "Um disjuntor de 63 A é superdimensionado e deixará os fios superaquecerem antes de desarmar, gerando risco de incêndio." },
+      { id: "e", text: "20 A.", isCorrect: false, distractorRationale: "Calculou incorretamente a potência dividindo pela metade." }
+    ],
+    detailedExplanation: {
+      summary: "A corrente total demandada por aparelhos em paralelo é a soma das correntes individuais (ou P_total / U). P_total = 7.700 + 1.100 = 8.800 W. Sob 220 V: i = 8.800 / 220 = 40,0 A. Conforme os critérios técnicos de dimensionamento para regime contínuo, adota-se o disjuntor comercial de 50 A para evitar desarmes por aquecimento cíclico com carga máxima.",
+      stepByStep: [
+        "1. Potência total instalada: P_total = P_chuveiro + P_aquecedor = 7.700 + 1.100 = 8.800 W.",
+        "2. Tensão de operação: U = 220 V.",
+        "3. Corrente nominal total: i = P_total / U = 8.800 / 220 = 40,0 A.",
+        "4. Análise dos disjuntores comerciais: disjuntores de 20 A e 32 A desarmam imediatamente. O de 40 A ficaria no limite exato de desarme térmico (disjuntores operando a 100% da corrente nominal contínua desarmam por efeito Joule interno acumulado).",
+        "5. Seleção: adota-se o disjuntor de 50 A, devidamente compatibilizado com condutores de bitola mínima adequada (10 mm²)."
+      ],
+      coreConcept: "Cálculo de Corrente Elétrica (P = U·i) e Seleção de Disjuntores",
+      trapWarning: "No ENEM: Disjuntores NUNCA podem ser subdimensionados (desarmam à toa) nem superdimensionados (deixam o fio queimar sem desarmar)."
+    },
+    commonTraps: [
+      "Dividir a potência por 110 V quando o enunciado especifica claramente 220 V",
+      "Escolher um disjuntor de valor inferior à corrente demandada pelo circuito"
+    ],
+    tags: ["dimensionamento", "disjuntor", "nbr-5410", "potencia-eletrica", "chuveiro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELET-025",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Eletricidade",
+    subtopic: "Eficiência Energética, Selo Procel e Consumo em kWh",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A substituição de lâmpadas fluorescentes compactas por lâmpadas de tecnologia LED em prédios públicos é uma das metas prioritárias do Programa Nacional de Conservação de Energia Elétrica (Procel). Um hospital substituiu 200 lâmpadas fluorescentes de 25 W cada por lâmpadas LED de 9 W que produzem o mesmo fluxo luminoso. As lâmpadas permanecem acesas em média 10 horas por dia ao longo de um mês de 30 dias. Considere o custo da tarifa de energia elétrica como R$ 0,80 por kWh consumido.",
+      source: "Programa Nacional de Conservação de Energia Elétrica (PROCEL/Eletrobras)."
+    },
+    prompt: "A redução mensal na fatura de energia elétrica obtida pelo hospital após essa modernização sustentável é de:",
+    options: [
+      { id: "a", text: "R$ 768,00.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 960,00.", isCorrect: false, distractorRationale: "Calculou a fatura total gerada pelas lâmpadas fluorescentes originais, não a economia obtida pela troca." },
+      { id: "c", text: "R$ 432,00.", isCorrect: false, distractorRationale: "Calculou apenas o custo mensal final das lâmpadas de LED." },
+      { id: "d", text: "R$ 1.200,00.", isCorrect: false, distractorRationale: "Esqueceu de converter watts para quilowatts (W para kW) dividindo por 1.000." },
+      { id: "e", text: "R$ 256,00.", isCorrect: false, distractorRationale: "Calculou o tempo com base em apenas 10 dias em vez de 30 dias." }
+    ],
+    detailedExplanation: {
+      summary: "A economia de energia elétrica é calculada pela diferença de potência multiplicada pelo número de unidades, tempo diário de uso e dias no mês: ΔE = N · ΔP · Δt. Multiplicando essa energia em kWh pela tarifa unitária de R$ 0,80/kWh, obtém-se a economia financeira direta.",
+      stepByStep: [
+        "1. Diferença de potência economizada por lâmpada: ΔP = 25 W - 9 W = 16 W = 0,016 kW.",
+        "2. Potência total economizada com 200 lâmpadas: P_eco = 200 · 0,016 kW = 3,2 kW.",
+        "3. Tempo total de operação no mês: Δt = 10 horas/dia · 30 dias = 300 horas.",
+        "4. Energia elétrica mensal economizada: ΔE = 3,2 kW · 300 h = 960 kWh.",
+        "5. Economia financeira mensal na fatura: Economia = 960 kWh · R$ 0,80/kWh = R$ 768,00.",
+        "6. Conclusão: a modernização proporciona uma economia líquida de R$ 768,00 por mês."
+      ],
+      coreConcept: "Consumo de Energia Elétrica (E = P · Δt em kWh) e Eficiência Tecnológica",
+      trapWarning: "No ENEM: Lembre-se sempre de converter a potência em Watts para Quilowatts (dividindo por 1.000) ANTES de calcular o custo tarifário em kWh."
+    },
+    commonTraps: [
+      "Esquecer de multiplicar pelo número total de lâmpadas (200 unidades)",
+      "Não converter watts para quilowatts ao usar a tarifa por kWh"
+    ],
+    tags: ["eficiencia-energetica", "procel", "led", "consumo-kwh", "economia-energia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

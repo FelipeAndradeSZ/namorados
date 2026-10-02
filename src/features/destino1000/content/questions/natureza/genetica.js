@@ -824,6 +824,237 @@ export const QUESTIONS_GENETICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-GEN-021",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Genética",
+    subtopic: "Ligação Gênica (Linkage), Crossing-over e Mapeamento Cromossômico",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em experimentos clássicos com drosófilas (*Drosophila melanogaster*), Thomas Hunt Morgan cruzou fêmeas di-híbridas de corpo cinza e asas normais (heterozigotas para dois pares de genes no mesmo autossomo: genes A e B em conformação *cis*, isto é, AB/ab) com machos duplo-recessivos de corpo preto e asas vestigiais (ab/ab). Na descendência, foram obtidas as seguintes proporções fenotípicas: 420 cinza/asas normais (AB), 420 preto/asas vestigiais (ab), 80 cinza/asas vestigiais (Ab) e 80 preto/asas normais (aB).",
+      source: "GRIFFITHS, A. J. F. et al. Introdução à Genética. Guanabara Koogan."
+    },
+    prompt: "A taxa de recombinação meiótica (frequência de crossing-over) entre os locos A e B e a distância genética estimada no mapa cromossômico entre esses dois genes valem, respectivamente:",
+    options: [
+      { id: "a", text: "16% e 16 morganídeos (ou centimorgans - cM).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "50% e 50 morganídeos.", isCorrect: false, distractorRationale: "50% corresponderia à segregação independente clássica da Segunda Lei de Mendel em cromossomos distintos." },
+      { id: "c", text: "8% e 8 morganídeos.", isCorrect: false, distractorRationale: "Calculou a frequência de apenas uma das classes recombinantes (80/1.000 = 8%) em vez de somar ambas." },
+      { id: "d", text: "84% e 84 morganídeos.", isCorrect: false, distractorRationale: "Calculou a taxa dos gametas parentais (840/1.000 = 84%) e não dos recombinantes." },
+      { id: "e", text: "32% e 32 morganídeos.", isCorrect: false, distractorRationale: "Multiplicou a taxa por dois sem fundamento genético." }
+    ],
+    detailedExplanation: {
+      summary: "A taxa de recombinação meiótica é a razão entre o total de descendentes recombinantes e o número total de descendentes. Cada 1% de frequência de recombinação equivale convencionalmente a 1 unidade de recombinação (UR) ou 1 morganídeo (cM).",
+      stepByStep: [
+        "1. Total de descendentes analisados: 420 + 420 + 80 + 80 = 1.000 moscas.",
+        "2. Identificar as classes parentais (mais frequentes): AB (420) e ab (420) -> total = 840 (84%).",
+        "3. Identificar as classes recombinantes geradas por crossing-over meiótico: Ab (80) e aB (80) -> total = 160.",
+        "4. Calcular a taxa de recombinação (R): R = (Recombinantes / Total) · 100% = (160 / 1.000) · 100% = 16%.",
+        "5. Converter para distância no mapa genético: 1% de recombinação = 1 morganídeo (cM). Portanto, a distância é de 16 morganídeos.",
+        "6. Conclusão: os locos gênicos distam 16 cM no cromossomo."
+      ],
+      coreConcept: "Linkage Gênico, Permutação Meiótica e Cálculo de Distância Cromossômica",
+      trapWarning: "No ENEM: Parental é sempre a MAIOR frequência (> 50% somados); Recombinante é sempre a MENOR frequência (< 50% somados). A distância é calculada EXCLUSIVAMENTE sobre os recombinantes!"
+    },
+    commonTraps: [
+      "Calcular a distância usando apenas uma classe recombinante em vez da soma de ambas",
+      "Confundir taxa de linkage (inferior a 50%) com segregação independente mendeliana (50% de recombinação)"
+    ],
+    tags: ["linkage", "crossing-over", "morganideos", "mapa-genetico", "drosophila"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-GEN-022",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Genética",
+    subtopic: "Herança Quantitativa (Poligenia) e Variação Contínua",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A herança quantitativa ou poligênica é caracterizada pela atuação conjunta de múltiplos pares de genes não alelos que exercem efeitos aditivos acumulativos sobre uma característica fenotípica contínua (como altura, peso e coloração da pele). Na pigmentação melânica humana simplificada por três pares de alelos com segregação independente (A/a, B/b, C/c), os alelos em letras maiúsculas são aditivos e aumentam a síntese de melanina, enquanto os minúsculos não adicionam pigmento.",
+      source: "PIERCE, B. A. Genética: Um Enfoque Conceitual. Guanabara Koogan."
+    },
+    prompt: "Em um modelo de herança poligênica controlado por 3 pares de genes com segregação independente, o número de classes fenotípicas distintas possíveis na descendência e o genótipo que expressa a intensidade máxima de pigmentação são, respectivamente:",
+    options: [
+      { id: "a", text: "7 classes fenotípicas e genótipo AABBCC.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "6 classes fenotípicas e genótipo AaBbCc.", isCorrect: false, distractorRationale: "O número de classes com n pares de genes é (2n + 1), que para n = 3 resulta em 2(3)+1 = 7 classes, e AaBbCc é a classe intermediária média." },
+      { id: "c", text: "8 classes fenotípicas e genótipo aabbcc.", isCorrect: false, distractorRationale: "aabbcc possui zero alelos aditivos (pigmentação mínima/albina funcional)." },
+      { id: "d", text: "3 classes fenotípicas e genótipo AABbCc.", isCorrect: false, distractorRationale: "Três classes corresponderiam a dominância incompleta de apenas 1 par de alelos." },
+      { id: "e", text: "64 classes fenotípicas e genótipo AABBCC.", isCorrect: false, distractorRationale: "64 é o número total de combinações zigóticas no quadro de Punnett (4³ = 64), não o número de classes fenotípicas." }
+    ],
+    detailedExplanation: {
+      summary: "Na herança quantitativa com n pares de poligenes com efeitos equivalentes, a quantidade de classes fenotípicas é dada por (2n + 1). Para 3 pares: 2(3) + 1 = 7 fenótipos, que variam de 0 alelos aditivos (mínimo) a 6 alelos aditivos (máximo: AABBCC).",
+      stepByStep: [
+        "1. Identificar o número de pares de genes polivalentes: n = 3 pares (A/a, B/b, C/c).",
+        "2. Fórmula do número de classes fenotípicas: N_fenótipos = 2n + 1.",
+        "3. Aplicar: N = 2(3) + 1 = 6 + 1 = 7 classes fenotípicas (correspondentes a 0, 1, 2, 3, 4, 5 ou 6 alelos aditivos maiúsculos).",
+        "4. Distribuição em curva de Gauss: a classe mais frequente é a intermediária com 3 alelos efetivos (ex: AaBbCc).",
+        "5. O fenótipo máximo possui todos os 6 alelos efetivos presentes no genótipo homozigoto dominante: AABBCC.",
+        "6. Conclusão: 7 classes fenotípicas com máximo em AABBCC."
+      ],
+      coreConcept: "Herança Quantitativa (Poligenia), Alelos Aditivos e Curva de Gauss",
+      trapWarning: "No ENEM: Não confunda número de GENÓTIPOS (3³ = 27) ou combinações gaméticas (64) com número de CLASSES FENOTÍPICAS (2n + 1 = 7)."
+    },
+    commonTraps: [
+      "Confundir o número de genótipos do quadro de Punnett (64) com o número de fenótipos (7)",
+      "Achar que poligenia segue a proporção 9:3:3:1 da Segunda Lei mendeliana simples"
+    ],
+    tags: ["heranca-quantitativa", "poligenia", "alelos-aditivos", "curva-normal", "genetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-GEN-023",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Genética",
+    subtopic: "Interação Gênica Não Alélica: Epistasia Recessiva",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A determinação da cor da pelagem em cães da raça Labrador Retriever é um exemplo clássico de interação gênica por epistasia recessiva envolvendo dois locos autossômicos independentes: o loco B e o loco E. O alelo B condiciona pelagem preta, enquanto o alelo b condiciona pelagem marrom (chocolate). Contudo, a deposição efetiva desse pigmento na haste do pelo depende do alelo dominante E. Cães com genótipo homozigoto recessivo ee são incapazes de depositar pigmento escuro no pelo, resultando em pelagem amarela/dourada, independentemente dos alelos no loco B.",
+      source: "Genética Veterinária e Herança Epistática."
+    },
+    prompt: "No cruzamento entre dois cães labradores pretos di-híbridos (BbEe x BbEe), a proporção fenotípica esperada na descendência para cães pretos, marrons e amarelos/dourados é, respectivamente:",
+    options: [
+      { id: "a", text: "9 pretos : 3 marrons : 4 amarelos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "9 pretos : 3 marrons : 3 amarelos : 1 albino.", isCorrect: false, distractorRationale: "Isso corresponderia à proporção mendeliana sem epistasia 9:3:3:1." },
+      { id: "c", text: "12 pretos : 3 marrons : 1 amarelo.", isCorrect: false, distractorRationale: "Essa proporção (12:3:1) é típica de epistasia DOMINANTE, não recessiva." },
+      { id: "d", text: "15 pretos : 1 amarelo.", isCorrect: false, distractorRationale: "Essa proporção (15:1) decorre de genes duplicados com efeitos cumulativos redundantes." },
+      { id: "e", text: "9 pretos : 7 amarelos.", isCorrect: false, distractorRationale: "Essa proporção (9:7) é típica de genes complementares em epistasia recessiva dupla." }
+    ],
+    detailedExplanation: {
+      summary: "Na epistasia recessiva, o par homozigoto recessivo epistático (ee) mascara os fenótipos do gene hipostático (B/b). Das 16 combinações mendelianas: 9 B_E_ são pretos; 3 bbE_ são marrons; e os 3 B_ee mais 1 bbee fundem-se em 4 cães amarelos (9:3:4).",
+      stepByStep: [
+        "1. Cruzamento di-híbrido clássico BbEe x BbEe produz 16 combinações no quadro de Punnett:",
+        "   - 9 B_E_ : produzem pigmento preto e depositam no pelo -> Labradores Pretos.",
+        "   - 3 bbE_ : produzem pigmento marrom e depositam no pelo -> Labradores Marrons (chocolate).",
+        "   - 3 B_ee : produzem pigmento preto, mas NÃO conseguem depositar nos pelos devido ao alelo epistático ee -> Labradores Amarelos/Dourados.",
+        "   - 1 bbee : produzem pigmento marrom, mas NÃO conseguem depositar devido a ee -> Labradores Amarelos/Dourados.",
+        "2. Somar os fenótipos indistinguíveis epistáticos: 3 + 1 = 4 cães amarelos.",
+        "3. Proporção modificada: 9 pretos : 3 marrons : 4 amarelos.",
+        "4. Conclusão: a proporção fenotípica característica da epistasia recessiva é 9:3:4."
+      ],
+      coreConcept: "Epistasia Recessiva e Modificação das Proporções Mendelinas (9:3:4)",
+      trapWarning: "No ENEM: Memorize as principais proporções modificadas da di-hibridismo: 9:3:4 (epistasia recessiva) e 12:3:1 (epistasia dominante)."
+    },
+    commonTraps: [
+      "Aplicar 9:3:3:1 esquecendo de juntar os dois grupos com genótipo ee em um único fenótipo amarelo",
+      "Confundir epistasia recessiva (9:3:4) com dominante (12:3:1)"
+    ],
+    tags: ["epistasia", "epistasia-recessiva", "labrador", "interacao-genica", "segunda-lei"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-GEN-024",
+    area: "natureza",
+    competence: 4,
+    skill: 16,
+    topic: "Genética",
+    subtopic: "Edição Gênica por CRISPR-Cas9 e Terapia Gênica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A tecnologia de edição gênica CRISPR-Cas9, laureada com o Prêmio Nobel de Química em 2020 concedido a Emmanuelle Charpentier e Jennifer Doudna, foi adaptada do sistema imunológico adaptativo de bactérias contra bacteriófagos. A técnica utiliza uma endonuclease (a enzima Cas9) associada a uma molécula de RNA guia (sgRNA) desenhada sinteticamente para reconhecer uma sequência específica de bases no genoma de células eucarióticas.",
+      source: "DOUDNA, J. A.; CHARPENTIER, E. The new frontier of genome engineering with CRISPR-Cas9. Science."
+    },
+    prompt: "O mecanismo molecular que confere a precisão cirúrgica de corte e edição da ferramenta CRISPR-Cas9 reside na:",
+    options: [
+      { id: "a", text: "hibridização por complementaridade de bases nitrogenadas (A-U e C-G) entre o RNA guia sintético e a sequência de DNA-alvo do genoma hospedeiro, direcionando a clivagem da dupla fita pela enzima Cas9 no sítio exato.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "quebra aleatória e indiscriminada de todas as pontes de hidrogênio em todos os cromossomos nucleares.", isCorrect: false, distractorRationale: "O CRISPR destaca-se exatamente pela sua alta especificidade de sequência, e não por cortes aleatórios inespecíficos." },
+      { id: "c", text: "fusão térmica das membranas nucleares utilizando micro-ondas de altíssima intensidade.", isCorrect: false, distractorRationale: "A técnica opera sob condições bioquímicas fisiológicas sem radiação micro-ondas desestabilizadora." },
+      { id: "d", text: "transformação de ribossomos citoplasmáticos em plasmídeos virais que destroem os telômeros.", isCorrect: false, distractorRationale: "Ribossomos sintetizam proteínas e não têm relação funcional com a ação nucleolítica da Cas9." },
+      { id: "e", text: "digestão completa de todo o RNA mensageiro celular antes da transcrição no retículo endoplasmático.", isCorrect: false, distractorRationale: "O foco da tecnologia é o DNA genômico nuclear, não a destruição em massa de todo o transcriptoma celular." }
+    ],
+    detailedExplanation: {
+      summary: "O complexo CRISPR-Cas9 funciona como uma tesoura molecular programável guiada por GPS de RNA. O sgRNA reconhece por pareamento de Watson-Crick a fita de DNA-alvo; uma vez ancorada, a nuclease Cas9 cliva a dupla hélice, permitindo a inserção, deleção ou correção de genes mutados.",
+      stepByStep: [
+        "1. Origem biológica: Mecanismo de defesa de bactérias que gravam fragmentos de vírus invasores no loco CRISPR para degradá-los em infecções futuras.",
+        "2. Engenharia biomédica: Cientistas desenham um RNA guia (guide RNA) contendo ~20 nucleotídeos complementares ao gene mutado (ex: o gene da beta-globina na anemia falciforme).",
+        "3. Ancoragem e corte: O RNA guia pareia com o DNA-alvo após o reconhecimento do motivo PAM; a Cas9 cliva a dupla hélice gerando quebra de fita dupla (DSB).",
+        "4. Reparo: A maquinaria celular repara o corte por união de pontas não homólogas (NHEJ, silenciando o gene) ou por recombinação homóloga (HDR, inserindo a sequência correta de cura).",
+        "5. Aplicação: Cura de doenças genéticas monogênicas e melhoramento agrícola sustentável."
+      ],
+      coreConcept: "Engenharia Genética de Precisão: Sistema CRISPR-Cas9 e Pareamento sgRNA-DNA",
+      trapWarning: "No ENEM: Atenção bioética: A edição de células SOMÁTICAS (ex: tratar sangue de paciente adulto) cura o indivíduo sem transmitir modificações aos filhos; já a edição de células GERMINATIVAS (espermatozoides, óvulos, embriões) altera a linhagem hereditária da espécie, suscitando severos dilemas éticos."
+    },
+    commonTraps: [
+      "Achar que a própria enzima Cas9 reconhece a sequência de DNA (quem reconhece é o RNA guia por complementaridade de bases)",
+      "Confundir terapia gênica somática (não hereditária) com edição germinativa (hereditária)"
+    ],
+    tags: ["crispr-cas9", "biotecnologia", "terapia-genica", "rna-guia", "engenharia-genetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-GEN-025",
+    area: "natureza",
+    competence: 4,
+    skill: 16,
+    topic: "Genética",
+    subtopic: "Identificação Forense por Eletroforese de DNA e Microssatélites (STRs)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na genética forense e em testes de paternidade, a técnica de 'impressão digital de DNA' (DNA fingerprint) analisa regiões não codificantes do genoma caracterizadas por repetições curtas em tandem (STRs - *Short Tandem Repeats*). Após a amplificação enzimática dessas regiões por PCR (Reação em Cadeia da Polimerase), os fragmentos de DNA gerados são submetidos à eletroforese em gel de agarose ou poliacrilamida sob campo elétrico constante.",
+      source: "Genética Forense e Identificação Humana."
+    },
+    prompt: "No processo de eletroforese, a migração e a separação dos fragmentos de DNA ocorrem em virtude do fato de as moléculas de DNA possuírem:",
+    options: [
+      { id: "a", text: "carga elétrica líquida negativa decorrente dos grupos fosfato de seus nucleotídeos, migrando em direção ao polo positivo (ânodo) em velocidades inversamente proporcionais ao tamanho de cada fragmento (os menores migram mais rápido).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "carga elétrica positiva nos anéis de ribose, migrando em direção ao polo negativo (cátodo) e acumulando-se no topo da cuba.", isCorrect: false, distractorRationale: "O DNA tem carga negativa em pH biológico pelos grupos fosfato (PO4³⁻), e migra rumo ao ânodo (+)." },
+      { id: "c", text: "neutralidade eletrostática pura, deslocando-se unicamente por convecção térmica gerada pela temperatura do gel.", isCorrect: false, distractorRationale: "O deslocamento depende da força elétrica aplicada F = q·E sobre a carga negativa líquida do DNA." },
+      { id: "d", text: "velocidade de migração diretamente proporcional ao seu peso molecular, fazendo os maiores fragmentos chegarem primeiro ao fundo do gel.", isCorrect: false, distractorRationale: "A matriz porosa do gel funciona como peneira molecular: fragmentos maiores sofrem mais atrito e migram mais DEVAGAR." },
+      { id: "e", text: "afinidade magnética espontânea com o polo norte geográfico terrestre.", isCorrect: false, distractorRationale: "A eletroforese é um método elétrico com corrente contínua, não um processo de magnetismo terrestre." }
+    ],
+    detailedExplanation: {
+      summary: "O esqueleto açúcar-fosfato do DNA confere carga negativa constante e uniforme. No gel de eletroforese, sob diferença de potencial elétrico, o DNA migra do polo negativo (-) para o polo positivo (+). O gel atua como rede de malha: moléculas menores passam com facilidade e viajam mais longe; moléculas maiores ficam retidas no início.",
+      stepByStep: [
+        "1. Propriedade química do DNA: Cada grupo fosfato (PO4³-) tem carga negativa em pH fisiológico -> DNA é um polianião.",
+        "2. Princípio da Eletroforese: Os fragmentos são atraídos para o polo positivo (ânodo: 'Run to the red').",
+        "3. Efeito peneira molecular da malha do gel: Fragmentos curtos de STRs sofrem menos atrito hidrodinâmico e migram mais rapidamente, alcançando distâncias maiores.",
+        "4. Padrão de bandas: Ao corar o gel com fluoróforo (ex: brometo de etídio) e iluminar com luz UV, visualizam-se bandas correspondentes aos alelos herdados (metade de origem materna e metade paterna).",
+        "5. Conclusão: A alternativa 'a' descreve com exatidão físico-química o mecanismo da técnica."
+      ],
+      coreConcept: "Eletroforese em Gel de DNA: Carga Negativa do Fosfato e Peneiramento Molecular",
+      trapWarning: "No ENEM: Lembre-se sempre: em eletroforese, fragmento MENOR corre MAIS e fica MAIS LONGE da origem; fragmento MAIOR corre MENOS e fica MAIS PERTO do ponto de aplicação."
+    },
+    commonTraps: [
+      "Achar que DNA migra para o polo negativo",
+      "Inverter a ordem de migração (achar que fragmentos pesados migram mais rápido)"
+    ],
+    tags: ["eletroforese", "dna-fingerprint", "genetica-forense", "pcr", "strs"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

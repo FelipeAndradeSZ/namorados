@@ -788,7 +788,229 @@ export const QUESTIONS_INTERPRETACAO = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-021",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Interpretação Textual",
+    subtopic: "Linguagem Multimodal, Charge e Ironia Visual",
+    difficulty: 3,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a descrição de uma charge contemporânea:\nEm um primeiro plano, uma imensa fila de pessoas acampa do lado de fora de uma loja iluminada para comprar o lançamento de um smartphone com bateria de maior duração. Em segundo plano, no chão ao lado da calçada, uma pilha de caixas de aparelhos eletrônicos comprados no ano anterior é jogada diretamente em uma caçamba de entulho. Um dos compradores na fila olha para a caçamba e comenta no celular com entusiasmo: 'Esse novo modelo é revolucionário, dura quase seis meses a mais sem travar!'.",
+      source: "Cartunistas Contemporâneos e Crítica da Cultura do Consumo."
+    },
+    prompt: "O efeito de humor crítico e a ironia construídos pela charge decorrem do contraste entre:",
+    options: [
+      { id: "a", text: "o fascínio cego dos consumidores por pequenas inovações técnicas efêmeras e a rapidez com que descartam produtos em perfeito estado, evidenciando o fenômeno da obsolescência programada e o desperdício socioambiental.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a perfeição mecânica absoluta de todos os aparelhos eletrônicos modernos que nunca quebram ou sofrem desgaste.", isCorrect: false, distractorRationale: "A charge ironiza justamente o descarte precoce e a curta vida útil dos aparelhos." },
+      { id: "c", text: "o baixo preço dos eletrônicos que faz com que todos os cidadãos comprem dezenas de aparelhos no mesmo dia.", isCorrect: false, distractorRationale: "O foco não é a acessibilidade financeira, mas a compulsão ao consumo induzida pelo marketing." },
+      { id: "d", text: "a recusa obstinada da população em utilizar tecnologias digitais de comunicação.", isCorrect: false, distractorRationale: "Os personagens estão sofregamente acampados para adquirir o novo modelo, e não recusando-o." },
+      { id: "e", text: "a eficiência total das cidades na reciclagem de 100% de todo o lixo eletrônico gerado.", isCorrect: false, distractorRationale: "A caçamba de entulho a céu aberto revela descarte inadequado e impacto ambiental negativo." }
+    ],
+    detailedExplanation: {
+      summary: "A charge utiliza a linguagem multimodal (texto verbal e linguagem visual) para denunciar o consumismo desenfreado. O contraste entre a empolgação da fila e a caçamba cheia de aparelhos novos expõe o absurdo ecológico da obsolescência perceptiva.",
+      stepByStep: [
+        "1. Elemento verbal: A fala do personagem celebra que o novo aparelho 'dura seis meses a mais sem travar' como algo revolucionário.",
+        "2. Elemento não verbal: A caçamba de entulho com modelos recém-comprados demonstra que a troca constante é artificialmente estimulada.",
+        "3. Ironia: A discrepância entre a expectativa grandiosa do consumidor e a futilidade da mudança funcional dos aparelhos.",
+        "4. Tema central: Obsolescência programada e sociedade de hiperconsumo, temas recorrentes na prova de Linguagens do ENEM."
+      ],
+      coreConcept: "Linguagem Multimodal, Charge e Ironia Crítica no ENEM",
+      trapWarning: "No ENEM: A charge nunca existe apenas para 'fazer rir'; o riso é uma ferramenta de desnaturalização crítica de comportamentos sociais alienados."
+    },
+    commonTraps: [
+      "Focar apenas no texto verbal e esquecer de analisar o cenário visual da caçamba de lixo",
+      "Interpretar a charge de modo literal, perdendo o sentido irônico do cartunista"
+    ],
+    tags: ["charge", "linguagem-multimodal", "ironia", "obsolescencia-programada", "consumismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-INT-022",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Interpretação Textual",
+    subtopic: "Infográficos Estatísticos e Transição Demográfica",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a síntese dos dados apresentados em um infográfico temático divulgado pelo Instituto Brasileiro de Geografia e Estatística (IBGE):\n• 1980: Base da pirâmide larga (jovens de 0 a 14 anos representavam 38,2% da população); topo estreito (idosos com 65 anos ou mais representavam apenas 4,0%).\n• 2010: Alargamento do corpo intermediário da pirâmide (população em idade ativa correspondia a 67,5%).\n• 2022 (Censo): Encolhimento expressivo da base (crianças e jovens representam 19,8%) e expansão do topo (idosos atingem 10,9% do total, com taxa de envelhecimento acelerada).",
+      source: "IBGE. Censo Demográfico: Panorama da Transição Demográfica no Brasil."
+    },
+    prompt: "A leitura articulada das informações contidas no infográfico permite inferir que a transformação na estrutura etária brasileira exige prioritariamente a reformulação de políticas públicas voltadas para:",
+    options: [
+      { id: "a", text: "o fortalecimento da rede de seguridade social, adequação do sistema previdenciário e expansão da atenção primária e gerontológica na saúde pública, diante da elevação expressiva da expectativa de vida aliada à queda da taxa de fecundidade.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o fechamento compulsório de todas as universidades públicas devido ao esvaziamento irreversível da população adulta.", isCorrect: false, distractorRationale: "A população adulta em idade produtiva continua maciça e exige qualificação tecnológica contínua." },
+      { id: "c", text: "a proibição de vacinação de recém-nascidos para conter o crescimento demográfico descontrolado.", isCorrect: false, distractorRationale: "O problema demográfico apontado é justamente a queda da natalidade e o envelhecimento, e vacinação é direito basilar." },
+      { id: "d", text: "o estímulo exclusivo à construção de creches em detrimento de qualquer investimento em leitos hospitalares.", isCorrect: false, distractorRationale: "Com menos crianças nascendo e mais idosos adoecendo, a demanda médica hospitalar e gerontológica cresce exponencialmente." },
+      { id: "e", text: "a redução imediata do orçamento destinado ao tratamento de doenças crônico-degenerativas na terceira idade.", isCorrect: false, distractorRationale: "O envelhecimento populacional requer ampliação, e não redução, dos recursos para doenças crônicas." }
+    ],
+    detailedExplanation: {
+      summary: "A transição demográfica brasileira é marcada pela queda abrupta da taxa de fecundidade e pelo aumento da longevidade. O infográfico traduz essa dinâmica: com a pirâmide etária retangularizada/invertida, o país enfrenta o desafio do envelhecimento antes mesmo de enriquecer plenamente.",
+      stepByStep: [
+        "1. Leitura dos dados temporais: Redução de jovens (38,2% -> 19,8%) e mais que duplicação de idosos (4,0% -> 10,9%).",
+        "2. Causa sociodemográfica: Urbanização, inserção feminina no mercado de trabalho, métodos contraceptivos e avanços na medicina preventiva e saneamento.",
+        "3. Consequências socioeconômicas: Razão de dependência de idosos aumenta, exigindo sustentabilidade do sistema de previdência e ampliação dos cuidados geriátricos no SUS.",
+        "4. Inferência textual: A opção 'a' sintetiza com precisão o impacto das tendências estatísticas nas políticas públicas."
+      ],
+      coreConcept: "Interpretação de Infográficos Estatísticos e Transição Demográfica",
+      trapWarning: "No ENEM: Em questões com infográficos, não busque apenas o número isolado; o ENEM cobra a capacidade de inferir tendências sociais e impactos em políticas públicas a partir dos gráficos."
+    },
+    commonTraps: [
+      "Ler apenas os dados brutos sem correlacioná-los com as demandas sociais correspondentes",
+      "Achar que o Brasil continua sendo um país estritamente jovem como era no século XX"
+    ],
+    tags: ["infografico", "ibge", "transicao-demografica", "envelhecimento", "politicas-publicas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-INT-023",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Interpretação Textual",
+    subtopic: "Pressupostos e Subentendidos em Editorial Jornalístico",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Leia o seguinte excerto de um editorial jornalístico:\n\n'A recente proliferação de ferramentas generativas no cotidiano produtivo reabre o debate sobre a automação do trabalho intelectual. Ao contrário do que previam os entusiastas deslumbrados, a tecnologia não veio simplesmente para libertar os trabalhadores do fardo das tarefas mecânicas e enfadonhas; ela ameaça converter o próprio ato criativo em um processo padronizado e precarizado. Se a sociedade continuar tratando esses avanços como um destino tecnológico inexorável em vez de uma escolha política e regulatória, correrá o risco de celebrar a eficiência do algoritmo enquanto assiste à erosão silenciosa da dignidade do trabalho humano.'",
+      source: "Editorial Jornalístico Contemporâneo sobre Trabalho e Tecnologia."
+    },
+    prompt: "No texto, a oração 'Se a sociedade continuar tratando esses avanços como um destino tecnológico inexorável em vez de uma escolha política e regulatória' carrega o pressuposto implícito de que:",
+    options: [
+      { id: "a", text: "o desenvolvimento e a implantação das tecnologias não são processos autônomos ou naturais fora do controle humano, mas sim frutos de decisões institucionais e econômicas que podem e devem ser reguladas pela coletividade.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a sociedade já baniu por completo o uso de computadores e algoritmos em todas as repartições públicas.", isCorrect: false, distractorRationale: "O texto discute exatamente a rápida proliferação das ferramentas no mercado de trabalho." },
+      { id: "c", text: "a inteligência artificial possui sentimentos morais e deve ser julgada criminalmente por tribunais trabalhistas.", isCorrect: false, distractorRationale: "O editorial não personifica a IA com sentimentos humanos; foca nas escolhas políticas humanas de regulação." },
+      { id: "d", text: "qualquer inovação tecnológica conduz automaticamente à extinção da espécie humana sem alternativa de sobrevivência.", isCorrect: false, distractorRationale: "O tom é de alerta regulatório e ético, não de fatalismo apocalíptico." },
+      { id: "e", text: "os entusiastas da tecnologia detêm a posse legítima de todas as normas jurídicas do país.", isCorrect: false, distractorRationale: "O autor critica justamente a ingenuidade dos tecnoutopistas." }
+    ],
+    detailedExplanation: {
+      summary: "Pressupostos linguísticos são informações implícitas decorrentes do sentido de certas palavras (como a oposição 'inexorável' vs 'escolha política'). O autor refuta o determinismo tecnológico cego: a tecnologia decorre de escolhas políticas e sociais sujeitas à regulação democrática.",
+      stepByStep: [
+        "1. Identificação do marcador discursivo: 'em vez de uma escolha política e regulatória'.",
+        "2. Análise do pressuposto: Dizer que a sociedade deve tratar algo como escolha política pressupõe que as ferramentas tecnológicas são construções sociais moldáveis pelo Direito e pela cidadania, e não forças cósmicas imutáveis.",
+        "3. Crítica ao determinismo: O autor desconstroi o clichê de que 'a tecnologia é um caminho sem volta que não se pode deter ou regrar'.",
+        "4. Conclusão: A questão avalia a capacidade de identificar os valores e axiomas ideológicos que sustentam a argumentação do editorialista."
+      ],
+      coreConcept: "Identificação de Pressupostos, Subentendidos e Determinismo Tecnológico",
+      trapWarning: "No ENEM: Pressuposto é o que está posto pela própria gramática do enunciado (marcado textualmente); subentendido depende do contexto compartilhado com o leitor."
+    },
+    commonTraps: [
+      "Interpretar a crítica do editorial como ludismo ou rejeição cega à ciência",
+      "Não perceber a distinção entre determinismo tecnológico (inexorável) e agência política coletiva"
+    ],
+    tags: ["editorial", "pressupostos", "inteligencia-artificial", "trabalho", "argumentacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-INT-024",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Interpretação Textual",
+    subtopic: "Intertextualidade e Ressignificação de Expressões Populares",
+    difficulty: 3,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Observe o slogan e a imagem de uma campanha publicitária veiculada pelo Ministério da Saúde em redes sociais e painéis urbanos:\n\nImagem: O braço de um jovem estendido confortavelmente em uma poltrona de hemocentro, enquanto uma bolsa de coleta de sangue é preenchida lentamente. Ao fundo, uma criança sorridente segura um desenho colorido com um coração.\nTexto verbal em destaque: 'No dia a dia, muita gente diz que dá o sangue pelo que ama. Mas já pensou em dar o sangue por quem você nem conhece? Doe sangue. Salve vidas.'",
+      source: "Ministério da Saúde. Campanha Nacional de Doação de Sangue."
+    },
+    prompt: "O recurso expressivo central que confere força persuasiva à campanha publicitária consiste na:",
+    options: [
+      { id: "a", text: "ressignificação intertextual de uma expressão metafórica popular ('dar o sangue'), contrapondo o sentido figurado de esforço árduo ao sentido literal de solidariedade biomédica que salva vidas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ameaça punitiva direta de sanções judiciais àqueles cidadãos que se recusarem a comparecer aos hemocentros.", isCorrect: false, distractorRationale: "A campanha não adota tom coercitivo ou punitivo; apela à empatia e à solidariedade voluntária." },
+      { id: "c", text: "desqualificação agressiva da linguagem popular, exigindo que os leitores utilizem apenas vocabulário erudito latino.", isCorrect: false, distractorRationale: "A campanha valoriza a expressão popular cotidiana para aproximar o anúncio do interlocutor." },
+      { id: "d", text: "proibição da doação de sangue para familiares ou pessoas conhecidas do doador.", isCorrect: false, distractorRationale: "O texto incentiva a doação universal desinteressada, sem proibir a doação direcionada." },
+      { id: "e", text: "reprodução de um jargão médico hermético que impede a compreensão por parte de leitores comuns.", isCorrect: false, distractorRationale: "A linguagem é simples, direta e altamente acessível ao público geral." }
+    ],
+    detailedExplanation: {
+      summary: "A eficácia comunicativa do anúncio baseia-se no jogo polissêmico entre o sentido conotativo da expressão 'dar o sangue' (esforçar-se ao máximo no trabalho ou estudos) e o sentido denotativo concreto do ato médico de doação hemoderivada em prol de um desconhecido.",
+      stepByStep: [
+        "1. Expressão popular de base: 'Dar o sangue' é metáfora cristalizada no uso cotidiano brasileiro para denotar dedicação extrema.",
+        "2. Quebra de expectativa: A pergunta retórica ('Mas já pensou em dar o sangue por quem você nem conhece?') desloca a expressão para o plano literal da agulha e da bolsa coletora.",
+        "3. Função conativa/apelativa: O imperativo final ('Doe sangue. Salve vidas') canaliza a reflexão ética em uma atitude cidadã concreta.",
+        "4. Conclusão: A intertextualidade com o saber popular é estratégia de alto rendimento no ENEM para campanhas de interesse social."
+      ],
+      coreConcept: "Intertextualidade, Polissemia e Ressignificação Semântica em Campanhas Públicas",
+      trapWarning: "No ENEM: Preste atenção no deslocamento de sentido: expressões figuradas do senso comum ganham potência extraordinária quando o publicitário as remete ao seu sentido literal originário."
+    },
+    commonTraps: [
+      "Achar que a campanha critica quem usa expressões populares",
+      "Não perceber o contraste entre o sentido figurado (esforço) e o sentido literal (doação biológica)"
+    ],
+    tags: ["intertextualidade", "campanha-publicitaria", "polissemia", "doacao-de-sangue", "persuasao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-INT-025",
+    area: "linguagens",
+    competence: 7,
+    skill: 24,
+    topic: "Interpretação Textual",
+    subtopic: "Crônica Contemporânea e Reflexão sobre a Aceleração do Cotidiano",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Leia o excerto da crônica a seguir:\n\n'Reparo que agora ouvimos mensagens de áudio na velocidade duas vezes. Assistimos a vídeos pulando introduções, lemos notícias em manchetes telegráficas de três linhas e nos impacientamos se a página da internet demora quatro segundos para carregar. Temos a estranha sensação de que estamos ganhando tempo, acumulando preciosos minutos como moedas em um cofrinho imaginário. Mas ao final do dia, quando finalmente apagamos a luz da cabeceira, somos assaltados por uma exaustão oca: para onde foi todo o tempo que economizamos com tanta pressa? Talvez a urgência com que devoramos os minutos esteja apenas nos devorando por dentro.'",
+      source: "Crônica Literária Brasileira Contemporânea."
+    },
+    prompt: "Na construção dos sentidos da crônica, a indagação final do narrador e a metáfora de 'devorar os minutos' expressam uma reflexão crítica sobre:",
+    options: [
+      { id: "a", text: "o paradoxo da aceleração temporal na vida hiperconectada, na qual o anseio obsessivo por produtividade e velocidade gera desumanização, ansiedade e um vazio existencial reflexivo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a superioridade inquestionável dos relógios digitais sobre os antigos relógios de corda manuais.", isCorrect: false, distractorRationale: "O texto não discute modelos de relógios, mas sim a experiência subjetiva do tempo na sociedade moderna." },
+      { id: "c", text: "a recomendação aos leitores para que acelerem ainda mais a velocidade dos áudios para triplicar a produção diária.", isCorrect: false, distractorRationale: "O cronista problematiza essa aceleração, vendo nela uma armadilha desgastante." },
+      { id: "d", text: "a comemoração entusiasta do fim de todos os momentos de silêncio e repouso na vida privada.", isCorrect: false, distractorRationale: "O cronista lamenta a perda do tempo contemplativo e a chegada de uma 'exaustão oca'." },
+      { id: "e", text: "a necessidade de abolir completamente o uso da energia elétrica e das luzes de cabeceira nas cidades.", isCorrect: false, distractorRationale: "A luz de cabeceira é apenas um detalhe descritivo de ambientação cotidiana noturna." }
+    ],
+    detailedExplanation: {
+      summary: "O gênero crônica toma um detalhe minúsculo do cotidiano (ouvir áudios em 2x) para filosofar sobre uma questão civilizacional profunda: a mercantilização do tempo e a sociedade do cansaço (Byung-Chul Han / Zygmunt Bauman).",
+      stepByStep: [
+        "1. Ponto de partida empírico: Hábitos modernos de aceleração (áudio acelerado, vídeos pulados, pressa digital).",
+        "2. Metáfora monetária: 'acumulando preciosos minutos como moedas num cofrinho' retrata a visão utilitarista do tempo como mercadoria.",
+        "3. Quebra e paradoxo: 'exaustão oca' ao deitar revela que economizar tempo acelerando a vida não produz bem-estar nem realização.",
+        "4. Desfecho reflexivo: A aceleração contínua consome o próprio indivíduo, roubando-lhe a capacidade de viver o presente com significado.",
+        "5. Conclusão: A crônica convida à desaceleração e à preservação da interioridade humana."
+      ],
+      coreConcept: "A Crônica Literária como Exercício Crítico da Subjetividade e do Tempo",
+      trapWarning: "No ENEM: A crônica não é notícia; ela parte de um fato cotidiano banal para construir uma reflexão lírica, existencial e filosófica sobre a condição humana."
+    },
+    commonTraps: [
+      "Achar que o cronista está ensinando técnicas de produtividade pessoal",
+      "Ignorar a ambiguidade irônica da pergunta retórica final"
+    ],
+    tags: ["cronica", "cotidiano", "aceleracao-temporal", "modernidade-liquida", "reflexao-existencial"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 
 

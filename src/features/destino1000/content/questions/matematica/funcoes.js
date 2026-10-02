@@ -888,6 +888,250 @@ export const QUESTIONS_FUNCOES = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FUNC-021",
+    area: "matematica",
+    competence: 5,
+    skill: 21,
+    topic: "Funções",
+    subtopic: "Decaimento Radioativo e Função Exponencial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na medicina nuclear, o radiofármaco Iodo-131 (¹³¹I) é utilizado no tratamento de distúrbios da glândula tireoide. Esse isótopo decai exponencialmente com meia-vida física aproximada de T = 8 dias. A massa residual M(t) da amostra após t dias decorridos da administração obedece à lei matemática: M(t) = M₀ · (1/2)^(t / 8), onde M₀ representa a massa inicial ativa.",
+      source: "Fundamentos de Física Médica e Proteção Radiológica."
+    },
+    prompt: "Se uma dose terapêutica administrada a um paciente continha inicialmente M₀ = 40 mg de Iodo-131, a massa residual ativa remanescente no organismo após 32 dias de monitoramento é igual a:",
+    options: [
+      { id: "a", text: "2,5 mg.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "5,0 mg.", isCorrect: false, distractorRationale: "Calculou para 3 meias-vidas (24 dias: 40 / 8 = 5,0 mg)." },
+      { id: "c", text: "10,0 mg.", isCorrect: false, distractorRationale: "Calculou para 2 meias-vidas (16 dias: 40 / 4 = 10,0 mg)." },
+      { id: "d", text: "1,25 mg.", isCorrect: false, distractorRationale: "Calculou para 5 meias-vidas (40 dias)." },
+      { id: "e", text: "0,0 mg.", isCorrect: false, distractorRationale: "Assumiu erroneamente decaimento linear completo 40 - (8x4)." }
+    ],
+    detailedExplanation: {
+      summary: "Em decaimento exponencial com meia-vida, a quantidade divide-se por 2 a cada período T. O número de meias-vidas transcorridas é n = t / T = 32 / 8 = 4 períodos. Logo, M(32) = 40 · (1/2)⁴ = 40 / 16 = 2,5 mg.",
+      stepByStep: [
+        "1. Identificar o período de meia-vida: T = 8 dias.",
+        "2. Determinar o número de ciclos transcorridos em 32 dias: n = 32 / 8 = 4 meias-vidas.",
+        "3. Aplicar a lei exponencial: M(32) = 40 · (1/2)⁴.",
+        "4. Calcular a potência: (1/2)⁴ = 1 / 16.",
+        "5. Efetuar a divisão: M(32) = 40 / 16 = 2,5 mg.",
+        "6. Conclusão: restam 2,5 mg de Iodo-131 (93,75% do material já decaiu)."
+      ],
+      coreConcept: "Função Exponencial de Decaimento e Conceito de Meia-Vida",
+      trapWarning: "No ENEM: Meia-vida NUNCA é decaimento linear! Não subtraia frações fixas do valor inicial; divida sempre sucessivamente por 2."
+    },
+    commonTraps: [
+      "Tratar decaimento exponencial como linear subtraindo quantias constantes",
+      "Errar a contagem do expoente dividindo tempo pelo valor da massa"
+    ],
+    tags: ["exponencial", "meia-vida", "iodo-131", "decaimento-radioativo", "medicina"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FUNC-022",
+    area: "matematica",
+    competence: 5,
+    skill: 21,
+    topic: "Funções",
+    subtopic: "Otimização de Receita e Vértice da Parábola",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma desenvolvedora de aplicativos educacionais comercializa licenças de uma plataforma de estudos. Estudos de mercado demonstraram que o preço unitário p (em reais) que os clientes estão dispostos a pagar relaciona-se com a quantidade mensal demandada q de licenças pela equação linear de demanda: p(q) = 160 - 2q, para 0 ≤ q ≤ 80. A Receita Total mensal R(q) é calculada multiplicando-se a quantidade vendida pelo preço unitário cobrado.",
+      source: "Microeconomia Aplicada e Gestão Empresarial."
+    },
+    prompt: "Para maximizar a receita total obtida com as assinaturas da plataforma, o número ideal de licenças mensais a serem comercializadas e o valor da receita máxima atingida são, respectivamente:",
+    options: [
+      { id: "a", text: "40 licenças e R$ 3.200,00.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "80 licenças e R$ 6.400,00.", isCorrect: false, distractorRationale: "Usou a raiz da função de demanda (p=0), onde a receita é zero." },
+      { id: "c", text: "40 licenças e R$ 1.600,00.", isCorrect: false, distractorRationale: "Multiplicou 40 por 40 em vez de substituir na função receita." },
+      { id: "d", text: "20 licenças e R$ 2.400,00.", isCorrect: false, distractorRationale: "Dividiu a coordenada x do vértice por 2 arbitrariamente." },
+      { id: "e", text: "50 licenças e R$ 3.000,00.", isCorrect: false, distractorRationale: "Testou um valor genérico que produz receita subótima (50 x 60 = 3.000)." }
+    ],
+    detailedExplanation: {
+      summary: "A receita é R(q) = q · p(q) = q(160 - 2q) = -2q² + 160q. Como o coeficiente de q² é negativo (a = -2), a parábola tem concavidade voltada para baixo e possui ponto de máximo no vértice: q_v = -b / (2a) e R_max = R(q_v).",
+      stepByStep: [
+        "1. Montar a função Receita: R(q) = q · (160 - 2q) = -2q² + 160q.",
+        "2. Identificar os coeficientes quadráticos: a = -2, b = 160 e c = 0.",
+        "3. Calcular a abscissa do vértice (quantidade de máxima receita):",
+        "   q_v = -b / (2a) = -160 / (2 · (-2)) = -160 / -4 = 40 licenças.",
+        "4. Calcular o preço correspondente: p(40) = 160 - 2(40) = 160 - 80 = R$ 80,00.",
+        "5. Calcular a receita máxima: R_max = 40 · 80 = R$ 3.200,00 (ou usando -Δ/(4a): -160²/(4·(-2)) = -25600/-8 = 3.200).",
+        "6. Conclusão: a receita é maximizada com 40 licenças ao montante de R$ 3.200,00."
+      ],
+      coreConcept: "Otimização de Funções Quadráticas via Vértice da Parábola (x_v e y_v)",
+      trapWarning: "No ENEM: Diferencie com atenção 'a quantidade que maximiza' (x_v) de 'o valor máximo obtido' (y_v)."
+    },
+    commonTraps: [
+      "Confundir o x do vértice (40 licenças) com o y do vértice (R$ 3.200,00)",
+      "Achar que vender o máximo possível de licenças (q = 80) gera a máxima receita (no preço zero, a receita é zero!)"
+    ],
+    tags: ["funcao-quadratica", "vertice-parabola", "otimizacao", "receita-maxima"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FUNC-023",
+    area: "matematica",
+    competence: 5,
+    skill: 23,
+    topic: "Funções",
+    subtopic: "Função Logarítmica e Escala de Richter",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A magnitude sísmica na escala Richter e a energia mecânica liberada E (em Joules) por um terremoto relacionam-se empiricamente pela equação logarítmica de Gutenberg-Richter: log₁₀(E) = 4,8 + 1,5 · M, onde M é a magnitude registrada pelo sismógrafo.",
+      source: "Sismologia Básica e Geofísica Computacional."
+    },
+    prompt: "Considere dois abalos sísmicos: o terremoto A com magnitude M_A = 7,0 e o terremoto B com magnitude M_B = 5,0. A razão entre a energia liberada pelo terremoto A e a energia liberada pelo terremoto B (E_A / E_B) é igual a:",
+    options: [
+      { id: "a", text: "1.000.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "1,4.", isCorrect: false, distractorRationale: "Fez a divisão direta das magnitudes: 7,0 / 5,0 = 1,4." },
+      { id: "c", text: "100.", isCorrect: false, distractorRationale: "Assumiu escala logarítmica simples com expoente 1·(7-5) em vez de 1,5·(7-5)." },
+      { id: "d", text: "20.", isCorrect: false, distractorRationale: "Multiplicou a diferença (7 - 5 = 2) por 10." },
+      { id: "e", text: "10.000.", isCorrect: false, distractorRationale: "Assumiu que cada unidade de magnitude multiplica por 100." }
+    ],
+    detailedExplanation: {
+      summary: "Pelas propriedades dos logaritmos: log(E_A) - log(E_B) = log(E_A / E_B). Substituindo: log(E_A / E_B) = 1,5 · (M_A - M_B) = 1,5 · (7,0 - 5,0) = 1,5 · 2 = 3. Logo, E_A / E_B = 10³ = 1.000.",
+      stepByStep: [
+        "1. Escrever as equações para cada terremoto:",
+        "   log(E_A) = 4,8 + 1,5 · 7,0",
+        "   log(E_B) = 4,8 + 1,5 · 5,0",
+        "2. Subtrair as duas equações para usar a propriedade log(E_A / E_B):",
+        "   log(E_A) - log(E_B) = 1,5 · (7,0 - 5,0)",
+        "   log(E_A / E_B) = 1,5 · 2 = 3,0.",
+        "3. Aplicar a definição fundamental de logaritmo na base 10:",
+        "   E_A / E_B = 10^(3,0) = 1.000.",
+        "4. Conclusão: uma variação de apenas 2 unidades na magnitude sísmica representa uma liberação de energia 1.000 vezes maior."
+      ],
+      coreConcept: "Propriedades Operatórias de Logaritmos e Escala de Richter",
+      trapWarning: "No ENEM: Em escalas logarítmicas, subtrair logaritmos equivale a dividir os argumentos! Nunca divida diretamente as magnitudes na escala linear."
+    },
+    commonTraps: [
+      "Dividir 7 por 5 achando que a resposta é 1,4",
+      "Esquecer do coeficiente multiplicador 1,5 da fórmula de Richter"
+    ],
+    tags: ["logaritmos", "escala-richter", "terremoto", "potenciacao", "geofisica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FUNC-024",
+    area: "matematica",
+    competence: 5,
+    skill: 19,
+    topic: "Funções",
+    subtopic: "Composição de Funções e Cadeias Produtivas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma cooperativa de reciclagem de polímeros, o custo de beneficiamento C (em reais) depende da massa m (em toneladas) de plástico triado segundo a função afim: C(m) = 80m + 500. Por sua vez, a massa triada m relaciona-se com o número h de horas de operação contínua das esteiras mecânicas pela função: m(h) = 2,5h + 4.",
+      source: "Engenharia de Produção e Gestão de Resíduos Sólidos."
+    },
+    prompt: "A lei que modela o custo total C em função direta das horas trabalhadas h, isto é, a função composta C(m(h)), e o custo gerado em uma jornada de 8 horas diárias valem, respectivamente:",
+    options: [
+      { id: "a", text: "C(h) = 200h + 820 e C(8) = R$ 2.420,00.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "C(h) = 200h + 500 e C(8) = R$ 2.100,00.", isCorrect: false, distractorRationale: "Esqueceu de multiplicar o termo constante 4 pelo coeficiente 80 na distributiva (80 x 4 = 320)." },
+      { id: "c", text: "C(h) = 82,5h + 504 e C(8) = R$ 1.164,00.", isCorrect: false, distractorRationale: "Somou os coeficientes das duas funções em vez de compô-las algebricamente." },
+      { id: "d", text: "C(h) = 200h + 820 e C(8) = R$ 1.600,00.", isCorrect: false, distractorRationale: "Calculou apenas 200 x 8 sem somar a parcela fixa de 820." },
+      { id: "e", text: "C(h) = 160h + 900 e C(8) = R$ 2.180,00.", isCorrect: false, distractorRationale: "Errou a multiplicação 80 x 2,5." }
+    ],
+    detailedExplanation: {
+      summary: "Na composição de funções f(g(x)), substitui-se toda a expressão de g(x) no lugar da variável da função externa f. Aqui: C(h) = 80(2,5h + 4) + 500 = 200h + 320 + 500 = 200h + 820.",
+      stepByStep: [
+        "1. Escrever a função externa: C(m) = 80m + 500.",
+        "2. Substituir m pela função interna m(h) = 2,5h + 4:",
+        "   C(h) = 80 · (2,5h + 4) + 500.",
+        "3. Aplicar a distributiva:",
+        "   80 · 2,5h = 200h",
+        "   80 · 4 = 320.",
+        "4. Agrupar os termos semelhantes:",
+        "   C(h) = 200h + 320 + 500 = 200h + 820.",
+        "5. Calcular para h = 8 horas:",
+        "   C(8) = 200 · 8 + 820 = 1.600 + 820 = R$ 2.420,00.",
+        "6. Conclusão: o custo em 8 horas é de R$ 2.420,00 com lei C(h) = 200h + 820."
+      ],
+      coreConcept: "Composição Algébrica de Funções Afins e Aplicação Produtiva",
+      trapWarning: "No ENEM: Lembre-se da propriedade distributiva ao compor funções afins: k · (ax + b) = k·ax + k·b."
+    },
+    commonTraps: [
+      "Somar as leis em vez de compor f(g(x))",
+      "Esquecer de distribuir o fator multiplicativo no termo independente interno"
+    ],
+    tags: ["funcao-composta", "funcao-afim", "custos", "algebra", "modelagem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FUNC-025",
+    area: "matematica",
+    competence: 5,
+    skill: 22,
+    topic: "Funções",
+    subtopic: "Modelo Logístico e Assíntotas Horizontais",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A adesão de estudantes a um simulado digital preparatório para o ENEM ao longo dos dias t (t ≥ 0) foi modelada com precisão pela função de crescimento logístico: N(t) = 12.000 / (1 + 5 · 2^(-0,2 · t)), onde N(t) representa o número acumulado de alunos inscritos no dia t.",
+      source: "Modelagem Matemática de Sistemas Sociais e Tecnologias Educacionais."
+    },
+    prompt: "Com base nessa modelagem, o número de alunos inscritos no dia inicial do lançamento (t = 0) e o limite assintótico máximo de inscrições à medida que o tempo cresce indefinidamente (t → ∞) são, respectivamente:",
+    options: [
+      { id: "a", text: "2.000 alunos e 12.000 alunos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "0 alunos e 12.000 alunos.", isCorrect: false, distractorRationale: "Assumiu que t = 0 zera a função, ignorando que 2^0 = 1 e o denominador fica 1 + 5 = 6." },
+      { id: "c", text: "2.400 alunos e 10.000 alunos.", isCorrect: false, distractorRationale: "Dividiu 12.000 por 5 em vez de (1 + 5) = 6." },
+      { id: "d", text: "2.000 alunos e infinitos alunos.", isCorrect: false, distractorRationale: "Confundiu modelo logístico com modelo exponencial puro ilimitado." },
+      { id: "e", text: "1.200 alunos e 60.000 alunos.", isCorrect: false, distractorRationale: "Multiplicou por 5 por engano no limite assintótico." }
+    ],
+    detailedExplanation: {
+      summary: "Em t = 0: 2^0 = 1, logo N(0) = 12.000 / (1 + 5·1) = 12.000 / 6 = 2.000 inscritos. Quando t → ∞: o termo 2^(-0,2t) = 1 / 2^(0,2t) tende a 0, logo o denominador tende a 1 + 0 = 1. A assíntota horizontal superior é 12.000 alunos.",
+      stepByStep: [
+        "1. Calcular para o instante inicial t = 0:",
+        "   2^(-0,2 · 0) = 2^0 = 1.",
+        "   N(0) = 12.000 / (1 + 5 · 1) = 12.000 / 6 = 2.000 alunos.",
+        "2. Analisar o comportamento para tempos muito grandes (t → ∞):",
+        "   Como o expoente é negativo, 2^(-0,2 · t) = 1 / 2^(0,2t) tende a 0.",
+        "   Portanto: 5 · 2^(-0,2t) tende a 0.",
+        "   Denominador tende a: 1 + 0 = 1.",
+        "3. Limite assintótico máximo (capacidade de saturação do sistema):",
+        "   N_max = 12.000 / 1 = 12.000 alunos.",
+        "4. Conclusão: a campanha começa com 2.000 inscritos e satura assintoticamente em 12.000 inscritos."
+      ],
+      coreConcept: "Comportamento Limítrofe da Função Logística e Assíntotas",
+      trapWarning: "No ENEM: A função logística NUNCA cresce até o infinito; o numerador representa o teto máximo de saturação (capacidade de suporte da população)."
+    },
+    commonTraps: [
+      "Achar que 2^0 = 0",
+      "Achar que a curva logística continua subindo sem teto"
+    ],
+    tags: ["funcao-logistica", "assintota", "limites", "exponencial-negativa", "saturacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

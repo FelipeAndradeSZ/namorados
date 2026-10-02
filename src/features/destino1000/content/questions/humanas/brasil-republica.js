@@ -808,7 +808,230 @@ export const QUESTIONS_BRASIL_REPUBLICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-REP-021",
+    area: "humanas",
+    competence: 3,
+    skill: 12,
+    topic: "Brasil República",
+    subtopic: "Revolta da Chibata (1910) e Cidadania Negra",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em novembro de 1910, marinheiros sublevaram-se na Baía de Guanabara a bordo dos principais encouraçados da Armada brasileira (Minas Geraes e São Paulo), apontando seus canhões contra a sede do governo republicano no Rio de Janeiro. Liderados por João Cândido, o 'Almirante Negro', redigiram um memorial ao presidente Hermes da Fonseca exigindo o fim imediato dos castigos corporais com chibatadas, o aumento dos soldos e a demissão de oficiais truculentos.",
+      source: "CARVALHO, José Murilo de. Cidadania no Brasil: O Longo Caminho. Civilização Brasileira."
+    },
+    prompt: "A Revolta da Chibata expressou uma contradição central da Primeira República brasileira ao evidenciar que:",
+    options: [
+      { id: "a", text: "a proclamação republicana manteve nos quartéis e na hierarquia naval a lógica disciplinar violenta herdada do período colonial e escravocrata, negando plenos direitos de cidadania à marujada predominantemente negra e mestiça.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "os marinheiros pretendiam restaurar a monarquia bragantina e coroar a Princesa Isabel como imperatriz absoluta do Brasil.", isCorrect: false, distractorRationale: "A revolta reivindicava direitos humanos e trabalhistas contra a violência disciplinar, sem qualquer projeto de restauração imperial." },
+      { id: "c", text: "o Exército brasileiro apoiava integralmente os marujos rebeldes para fechar o Congresso e instaurar o socialismo soviético.", isCorrect: false, distractorRationale: "O episódio ocorreu em 1910, antes da Revolução Russa (1917), e o Exército participou da repressão aos revoltosos." },
+      { id: "d", text: "a sublevação foi financiada pela Coroa britânica para confiscar as jazidas de ferro e café do litoral sudeste.", isCorrect: false, distractorRationale: "A motivação foi endógena, nascida da revolta contra o suplício físico imposto aos marinheiros de baixa patente." },
+      { id: "e", text: "a Marinha imperial já havia abolido totalmente os castigos físicos desde a Guerra do Paraguai em 1870.", isCorrect: false, distractorRationale: "Os castigos com chibata continuaram vigentes na Marinha mesmo após a República até a eclosão da revolta de 1910." }
+    ],
+    detailedExplanation: {
+      summary: "A Revolta da Chibata denunciou o abismo entre o discurso modernizador da República oligárquica e a persistência de práticas arcaicas escravocratas nos corpos de marinheiros negros e pobres.",
+      stepByStep: [
+        "1. Contexto: A República brasileira se proclamava moderna e civilizada, adquirindo encouraçados de última geração tipo dreadnought.",
+        "2. Realidade interna: As tripulações de marinheiros (majoritariamente homens negros e pobres) continuavam sujeitas a castigos com chibata aplicados por oficiais brancos da elite.",
+        "3. Estopim: A punição com 250 chibatadas imposta ao marinheiro Marcelino Rodrigues desencadeou o levante sob liderança serena de João Cândido.",
+        "4. Significado histórico: Luta antirracista por dignidade e cidadania real no início do século XX."
+      ],
+      coreConcept: "Revolta da Chibata (1910), Cidadania Negra e Permanências Escravocratas",
+      trapWarning: "No ENEM: A Revolta da Chibata NÃO foi uma revolta contra a modernização naval técnica, mas sim contra a desumanização e os castigos corporais impostos aos marinheiros."
+    },
+    commonTraps: [
+      "Confundir Revolta da Chibata (1910) com a Revolta da Armada (1893-1894, disputa entre Exército e Marinha monarquista)",
+      "Achar que a revolta tinha caráter de restauração monárquica"
+    ],
+    tags: ["revolta-da-chibata", "joao-candido", "primeira-republica", "cidadania", "racismo-estrutural"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-REP-022",
+    area: "humanas",
+    competence: 3,
+    skill: 11,
+    topic: "Brasil República",
+    subtopic: "Guerra de Canudos (1896-1897) e Conflitos Rurais",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A comunidade de Belo Monte, fundada por Antônio Conselheiro às margens do rio Vaza-Barris no sertão da Bahia, reuniu cerca de 25 mil sertanejos despossuídos, ex-escravizados e caboclos. Vivendo em regime comunitário de subsistência e religiosidade messiânica, a comunidade foi tratada pelas elites latifundiárias locais e pelos jornais republicanos da capital federal como um perigoso 'reduto fanático de restauração monárquica' que ameaçava as instituições republicanas.",
+      source: "CUNHA, Euclides da. Os Sertões: Campanha de Canudos. 1902."
+    },
+    prompt: "A intensa repressão militar que culminou no massacre de Canudos pelo exército republicano após quatro expedições decorreu fundamentalmente do:",
+    options: [
+      { id: "a", text: "incômodo gerado pela autonomia social e econômica do arraial perante o poder dos coronéis latifundiários e da Igreja tradicional, aliado ao medo conspiratório republicano de ameaça à nova ordem institucional.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "desejo de Antônio Conselheiro de proclamar um califado islâmico no semiárido nordestino.", isCorrect: false, distractorRationale: "Antônio Conselheiro pregava uma religiosidade católica messiânica popular, sem vínculos com o islamismo." },
+      { id: "c", text: "alinhamento direto dos conselheiristas com a guerrilha anarquista operária do ABC paulista.", isCorrect: false, distractorRationale: "Não havia ligação entre o messianismo sertanejo do sertão baiano e o operariado anarcossindicalista urbano de São Paulo." },
+      { id: "d", text: "acordo formal firmado por Canudos com os Estados Unidos para ceder a bacia do São Francisco.", isCorrect: false, distractorRationale: "Canudos era um vilarejo autônomo e isolado, sem qualquer negociação com potências internacionais." },
+      { id: "e", text: "ataque preventivo das forças federais para conter uma epidemia de febre amarela que os sertanejos transmitiam.", isCorrect: false, distractorRationale: "O conflito foi estritamente político-social e fundiário, e não uma intervenção sanitária." }
+    ],
+    detailedExplanation: {
+      summary: "Canudos atraía milhares de sertanejos explorados que deixavam as fazendas dos coronéis em busca de terra, proteção e vida digna. Essa perda de mão de obra barata ameaçou o poder oligárquico dos latifúndios baianos, justificando o massacre militar sob a retórica de defesa da República.",
+      stepByStep: [
+        "1. Aspecto socioeconômico: Belo Monte oferecia alternativa concreta de vida comunitária fora do jugo semifeudal dos coronéis e do pagamento de dízimos exploratórios.",
+        "2. Aspecto político: Os coronéis locais pressionaram o governo estadual e federal alegando que Conselheiro conspirava para o retorno da Monarquia.",
+        "3. Três expedições militares foram fragorosamente derrotadas pelos conselheiristas no terreno acidentado da Caatinga.",
+        "4. Quarta expedição: Artilharia pesada do Exército destruiu totalmente o povoado em 1897, degolando milhares de sobreviventes.",
+        "5. Conclusão: Euclides da Cunha imortalizou a denúncia em 'Os Sertões', qualificando o desfecho como crime da nacionalidade."
+      ],
+      coreConcept: "Guerra de Canudos (1896-1897), Messianismo Sertanejo e Coronelismo",
+      trapWarning: "No ENEM: Não interprete Canudos apenas como 'fanatismo religioso cego'. O messianismo era a linguagem cultural sertaneja para canalizar profundas demandas de terra, pão e justiça social."
+    },
+    commonTraps: [
+      "Acreditar na versão da imprensa da época de que Canudos era uma conspiração armada monárquica internacional",
+      "Confundir Canudos (Bahia, 1896-1897) com a Guerra do Contestado (Santa Catarina/Paraná, 1912-1916)"
+    ],
+    tags: ["canudos", "antonio-conselheiro", "euclides-da-cunha", "messianismo", "coronelismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-REP-023",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "Brasil República",
+    subtopic: "Movimento Tenentista e a Coluna Prestes (1925-1927)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao longo da década de 1920, jovens oficiais de baixa e média patente do Exército brasileiro protagonizaram levantes armados de contestação à ordem oligárquica da República Velha. Após a Revolta dos 18 do Forte (1922) e a Revolução Paulista de 1924, organizou-se a Coluna Prestes-Miguel Costa, que percorreu cerca de 25.000 quilômetros pelo sertão do interior do Brasil durante quase três anos sem nunca ter sido derrotada pelas tropas legalistas.",
+      source: "FAUSTO, Boris. História do Brasil. Edusp."
+    },
+    prompt: "Entre as principais reivindicações políticas e institucionais defendidas pelos tenentes em marcha destacava-se a:",
+    options: [
+      { id: "a", text: "adoção do voto secreto obrigatório para combater as fraudes do voto de cabresto, combinada com a moralização pública, o ensino primário gratuito e a centralização do poder estatal.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "implantação imediata da ditadura do proletariado e coletivização compulsória de todas as pequenas propriedades rurais.", isCorrect: false, distractorRationale: "O tenentismo inicial tinha caráter liberal-burguês e moralizador, sem orientação comunista ou de coletivização agrária." },
+      { id: "c", text: "devolução da soberania política e administrativa da federação às monarquias absolutistas europeias.", isCorrect: false, distractorRationale: "Os tenentes eram profundamente nacionalistas e republicanos." },
+      { id: "d", text: "extinção completa das Forças Armadas regulares e criação de milícias estaduais comandadas pelos governadores.", isCorrect: false, distractorRationale: "Eles defendiam o fortalecimento do Exército nacional contra os exércitos estaduais das oligarquias paulista e mineira." },
+      { id: "e", text: "permanência indefinida da política do café com leite e do controle político exercido pela Comissão Verificadora de Poderes.", isCorrect: false, distractorRationale: "O tenentismo combatia vigorosamente o arranjo oligárquico do café com leite e as fraudes da degola política." }
+    ],
+    detailedExplanation: {
+      summary: "O tenentismo representou a insatisfação da classe média urbana e de setores militares contra a República Oligárquica. Defendiam moralização da política, voto secreto (para acabar com as fraudes eleitorais) e fortalecimento do Estado nacional.",
+      stepByStep: [
+        "1. Crítica à Primeira República: A 'política dos governadores' e o 'coronelismo' sustentavam a fraude eleitoral institucionalizada pelo voto aberto (voto de cabresto).",
+        "2. Perfil social: Oficiais de classe média que se enxergavam como a 'reserva moral da nação' encarregada de regenerar a pátria.",
+        "3. Pautas centrais: Voto secreto, Justiça Eleitoral independente, expansão da educação pública e fortalecimento do poder central federal contra os coronéis estaduais.",
+        "4. Desdobramento: O tenentismo abriu caminho direto para a Revolução de 1930, que levou Getúlio Vargas ao poder e sepultou a República Oligárquica."
+      ],
+      coreConcept: "Tenentismo, Coluna Prestes e Crise da República Oligárquica",
+      trapWarning: "No ENEM: Luís Carlos Prestes só aderiu formalmente ao Marxismo e ao Partido Comunista ANOS DEPOIS da marcha da Coluna (na década de 1930); o movimento tenentista dos anos 1920 era nacionalista e reformista liberal."
+    },
+    commonTraps: [
+      "Rotular a Coluna Prestes nos anos 1920 como um movimento comunista soviético",
+      "Achar que os tenentes queriam a descentralização do poder para os estados"
+    ],
+    tags: ["tenentismo", "coluna-prestes", "voto-secreto", "republica-velha", "anos-1920"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-REP-024",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "Brasil República",
+    subtopic: "Ato Institucional nº 5 (AI-5 de 1968) e Ditadura Militar",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 13 de dezembro de 1968, o presidente marechal Arthur da Costa e Silva promulgou em cadeia nacional de rádio e televisão o Ato Institucional nº 5 (AI-5). O ato concedeu poderes quase ilimitados ao Chefe do Poder Executivo, permitindo o fechamento por prazo indeterminado do Congresso Nacional, a intervenção direta nos estados e municípios, a cassação de mandatos de parlamentares e a suspensão da garantia de habeas corpus para crimes contra a segurança nacional.",
+      source: "GASPARI, Elio. A Ditadura Envergonhada. Companhia das Letras."
+    },
+    prompt: "A decretação do AI-5 marcou o início da fase mais autoritária da Ditadura Militar brasileira (os chamados 'anos de chumbo'), cujo impacto jurídico e político mais grave sobre a sociedade foi:",
+    options: [
+      { id: "a", text: "a institucionalização do terrorismo de Estado e da censura prévia irrestrita, retirando qualquer proteção judiciária contra prisões arbitrárias, torturas e perseguições políticas promovidas pelos órgãos de repressão (como DOI-CODI e OBAN).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o estabelecimento imediato de eleições diretas para presidente da República com sufrágio universal irrestrito.", isCorrect: false, distractorRationale: "O AI-5 endureceu o regime e suprimiu liberdades civis, afastando qualquer hipótese de eleições diretas." },
+      { id: "c", text: "a legalização de todos os partidos de oposição de esquerda clandestinos na legalidade eleitoral.", isCorrect: false, distractorRationale: "Partidos de esquerda foram sumariamente criminalizados e perseguidos com extrema violência após o AI-5." },
+      { id: "d", text: "a entrega do controle das Forças Armadas a juízes civis da Suprema Corte de Haia.", isCorrect: false, distractorRationale: "O tribunal internacional não teve jurisdição nem participação na estrutura da ditadura militar brasileira." },
+      { id: "e", text: "a abolição das Forças Armadas e sua substituição por tribunais corporativos operários.", isCorrect: false, distractorRationale: "As Forças Armadas eram exatamente quem detinha o monopólio e o comando do aparelho estatal ditatorial." }
+    ],
+    detailedExplanation: {
+      summary: "O AI-5 rasgou qualquer resquício de constitucionalismo liberal da Constituição de 1967. Ao suspender o habeas corpus para 'crimes políticos', qualquer cidadão podia ser sequestrado, detido incomunicável e torturado sem que a Justiça pudesse intervir.",
+      stepByStep: [
+        "1. Contexto: 1968 foi marcado por intensa contestação social (Passeata dos Cem Mil, greves operárias de Contagem e Osasco, discurso do deputado Márcio Moreira Alves).",
+        "2. A 'linha dura' militar reagiu com o AI-5 em dezembro de 1968.",
+        "3. Medidas autoritárias: Fechamento do Congresso, demissão sumária de servidores e professores universitários, censura à imprensa e às artes.",
+        "4. O ponto mais cruel: Suspensão do habeas corpus, dando carta-branca ao aparato repressivo clandestino para torturar e assassinar opositores nos porões do regime.",
+        "5. O AI-5 vigorou por uma década, sendo revogado apenas em dezembro de 1978 no governo Geisel."
+      ],
+      coreConcept: "AI-5 (1968), Anos de Chumbo e Suspensão de Garantias Fundamentais",
+      trapWarning: "No ENEM: A suspensão do HABEAS CORPUS é a chave jurídica do AI-5. Sem habeas corpus, não há freio legal contra o abuso de autoridade e a tortura estatal."
+    },
+    commonTraps: [
+      "Achar que o AI-5 vigorou apenas por algumas semanas (ele durou de 1968 a 1978, 10 anos)",
+      "Confundir o AI-5 (1968, endurecimento máximo) com a Lei de Anistia (1979, distensão política)"
+    ],
+    tags: ["ditadura-militar", "ai-5", "anos-de-chumbo", "habeas-corpus", "direitos-humanos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-REP-025",
+    area: "humanas",
+    competence: 3,
+    skill: 14,
+    topic: "Brasil República",
+    subtopic: "A Campanha das Diretas Já (1984) e a Redemocratização",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Entre o final de 1983 e abril de 1984, milhões de brasileiros ocuparam avenidas e praças públicas em comícios multitudinários em cidades como São Paulo, Rio de Janeiro e Belo Horizonte, erguendo cartazes e vestindo amarelo em apoio à Proposta de Emenda Constitucional nº 05/1983 (a Emenda Dante de Oliveira). A emenda propunha o restabelecimento imediato de eleições diretas para a Presidência da República no mesmo ano de 1984.",
+      source: "SKIDMORE, Thomas E. Brasil: De Castelo a Tancredo (1964-1985). Paz e Terra."
+    },
+    prompt: "Embora a Emenda Dante de Oliveira não tenha alcançado o quórum de dois terços na Câmara dos Deputados em 25 de abril de 1984, o movimento das 'Diretas Já' foi decisivo para a história brasileira porque:",
+    options: [
+      { id: "a", text: "evidenciou o esgotamento irrevogável da legitimidade civil e social da Ditadura Militar, unificando a oposição e pavimentando a vitória da Aliança Democrática (Tancredo Neves e José Sarney) no Colégio Eleitoral em 1985.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "provocou a decretação imediata de um golpe militar com fechamento do país por mais três décadas.", isCorrect: false, distractorRationale: "O regime militar já estava desgastado economicamente pela hiperinflação e não tinha coesão para prolongar a ditadura." },
+      { id: "c", text: "conseguiu aprovar na marra a eleição direta imediata que empossou Ulysses Guimarães presidente em 1984.", isCorrect: false, distractorRationale: "A emenda NÃO foi aprovada por falta de 22 votos; a primeira eleição direta para presidente só ocorreu em 1989." },
+      { id: "d", text: "resultou na renúncia coletiva de todos os generais e na entrega do governo ao Partido Comunista Brasileiro.", isCorrect: false, distractorRationale: "A transição brasileira foi lenta, gradual e pactuada pela via parlamentar do Colégio Eleitoral." },
+      { id: "e", text: "extinguiu a Constituição de 1988 antes mesmo de sua elaboração pelos constituintes.", isCorrect: false, distractorRationale: "A Assembleia Nacional Constituinte foi instalada em 1987 justamente como fruto do processo de redemocratização." }
+    ],
+    detailedExplanation: {
+      summary: "A campanha das 'Diretas Já' foi a maior mobilização popular da história republicana brasileira até então. Mesmo derrotada no plenário por manobra do governo Figueiredo, quebrou a base de sustentação do partido governista (PDS), levando dissidentes (Frente Liberal) a apoiarem Tancredo Neves contra Paulo Maluf.",
+      stepByStep: [
+        "1. Cenário: Crise econômica galopante (dívida externa, inflação de mais de 200% ao ano) e abertura política 'lenta, gradual e segura'.",
+        "2. Mobilização de massas: Artistas, líderes sindicais, governadores eleitos em 1982 e partidos de oposição (PMDB, PT, PDT, PCdoB) uniram milhões nas ruas.",
+        "3. Votação da Emenda Dante de Oliveira (25 de abril de 1984): obteve 298 votos a favor, mas faltaram 22 votos para os 2/3 exigidos.",
+        "4. Consequência política: O impacto das ruas fraturou o PDS governista, viabilizando a eleição indireta de Tancredo Neves no Colégio Eleitoral em janeiro de 1985, encerrando 21 anos de ditadura militar."
+      ],
+      coreConcept: "Campanha das Diretas Já (1984) e a Transição Democrática Brasileira",
+      trapWarning: "No ENEM: A emenda das Diretas Já NÃO foi aprovada! A primeira eleição direta com voto popular para presidente só aconteceu em 1989 (quando Fernando Collor venceu Lula no 2º turno)."
+    },
+    commonTraps: [
+      "Achar que as Diretas Já venceram a votação no Congresso e elegeram Tancredo Neves pelo voto direto do povo",
+      "Confundir a eleição indireta de 1985 (Colégio Eleitoral) com eleição direta"
+    ],
+    tags: ["diretas-ja", "redemocratizacao", "dante-de-oliveira", "tancredo-neves", "cidadania"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 
 

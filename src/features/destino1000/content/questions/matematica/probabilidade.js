@@ -823,7 +823,254 @@ export const QUESTIONS_PROBABILIDADE = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-PROB-021",
+    area: "matematica",
+    competence: 7,
+    skill: 28,
+    topic: "Probabilidade",
+    subtopic: "Teorema de Bayes e Sensibilidade em Exames Clínicos",
+    difficulty: 4,
+    estimatedTimeSeconds: 180,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma campanha de triagem populacional de uma condição metabólica rara que atinge 1% da população (prevalência = 0,01), utiliza-se um teste laboratorial rápido. O teste possui sensibilidade de 95% (detecta corretamente 95% dos verdadeiros positivos) e taxa de falso-positivo de 5% (indica incorretamente resultado positivo em 5% dos indivíduos saudáveis). Um indivíduo assintomático realizou o teste ao acaso e o resultado foi positivo.",
+      source: "Bioestatística e Epidemiologia Clínica."
+    },
+    prompt: "A probabilidade de que esse indivíduo realmente seja portador da condição metabólica, dado que seu resultado foi positivo, P(Doente | Positivo), é de aproximadamente:",
+    options: [
+      { id: "a", text: "16,1%.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "95,0%.", isCorrect: false, distractorRationale: "Confundiu a sensibilidade do teste P(+|D) com o valor preditivo positivo P(D|+), falácia comum do promotor." },
+      { id: "c", text: "50,0%.", isCorrect: false, distractorRationale: "Ignorou a baixa prevalência da doença na população geral." },
+      { id: "d", text: "5,0%.", isCorrect: false, distractorRationale: "Usou apenas a taxa de falsos positivos." },
+      { id: "e", text: "90,0%.", isCorrect: false, distractorRationale: "Fez 95% - 5% = 90%." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo Teorema de Bayes: P(D|+) = [P(D) · P(+|D)] / [P(D) · P(+|D) + P(S) · P(+|S)]. Em 10.000 pessoas: 100 são doentes (95 testam positivo) e 9.900 são saudáveis (495 testam positivo como falsos positivos). Total de positivos = 95 + 495 = 590. P(D|+) = 95 / 590 ≈ 16,1%.",
+      stepByStep: [
+        "1. Considerar uma população hipotética de 10.000 pessoas para facilitar a contagem:",
+        "   - Doentes: 1% de 10.000 = 100 pessoas.",
+        "   - Saudáveis: 99% de 10.000 = 9.900 pessoas.",
+        "2. Calcular os resultados positivos do teste:",
+        "   - Positivos verdadeiros: 95% de 100 = 95 pessoas.",
+        "   - Positivos falsos: 5% de 9.900 = 495 pessoas.",
+        "3. Total de testes positivos observados: 95 + 495 = 590 pessoas.",
+        "4. Probabilidade condicional (Valor Preditivo Positivo):",
+        "   P(Doente | Positivo) = 95 / 590 ≈ 0,1610 (16,1%).",
+        "5. Conclusão: a probabilidade real é de apenas ~16,1%, pois a enorme massa de pessoas saudáveis gera muitos falsos positivos absolutos."
+      ],
+      coreConcept: "Teorema de Bayes e Valor Preditivo Positivo (VPP)",
+      trapWarning: "No ENEM: Sensibilidade de 95% NÃO significa que quem deu positivo tem 95% de chance de estar doente! Depende crucialmente da prevalência basal da doença."
+    },
+    commonTraps: [
+      "Afirmar que a chance é 95% (falácia da taxa base)",
+      "Não ponderar o peso dos falsos positivos no grupo saudável majoritário"
+    ],
+    tags: ["teorema-de-bayes", "probabilidade-condicional", "falso-positivo", "epidemiologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-PROB-022",
+    area: "matematica",
+    competence: 7,
+    skill: 28,
+    topic: "Probabilidade",
+    subtopic: "União de Eventos e Princípio da Inclusão-Exclusão",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma escola de ensino médio com 400 estudantes concluintes, uma pesquisa levantou a participação em oficinas optativas de redação e ciências exatas. Constatou-se que 180 alunos participam da oficina de Redação Nota 1000, 140 participam da oficina de Raciocínio Lógico-Matemático e 60 participam de ambas as oficinas simultaneamente.",
+      source: "Estatística Educacional e Teoria dos Conjuntos."
+    },
+    prompt: "Ao selecionar ao acaso um estudante desse grupo de 400 alunos, a probabilidade de que ele participe de pelo menos uma dessas duas oficinas (P(R ∪ M)) é igual a:",
+    options: [
+      { id: "a", text: "65,0%.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "80,0%.", isCorrect: false, distractorRationale: "Somou 180 + 140 = 320 sem subtrair os 60 da interseção dupla (320/400 = 80%)." },
+      { id: "c", text: "50,0%.", isCorrect: false, distractorRationale: "Subtraiu 60 duas vezes por engano." },
+      { id: "d", text: "15,0%.", isCorrect: false, distractorRationale: "Calculou apenas a probabilidade da interseção 60/400 = 15%." },
+      { id: "e", text: "45,0%.", isCorrect: false, distractorRationale: "Calculou apenas quem faz exclusivamente redação 180/400 = 45%." }
+    ],
+    detailedExplanation: {
+      summary: "Pela regra da união de dois eventos não mutuamente exclusivos: P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Aqui: n(R ∪ M) = 180 + 140 - 60 = 260 alunos. A probabilidade é 260 / 400 = 0,65 (65%).",
+      stepByStep: [
+        "1. Identificar o total do espaço amostral: n(Ω) = 400 alunos.",
+        "2. Aplicar o princípio da inclusão e exclusão para a união dos conjuntos:",
+        "   n(R ∪ M) = n(R) + n(M) - n(R ∩ M)",
+        "   n(R ∪ M) = 180 + 140 - 60 = 320 - 60 = 260 alunos.",
+        "3. Calcular a probabilidade da união:",
+        "   P(R ∪ M) = 260 / 400 = 26 / 40 = 13 / 20 = 0,65 = 65,0%.",
+        "4. Conclusão: a probabilidade de selecionar um aluno que participe de pelo menos uma oficina é de 65%."
+      ],
+      coreConcept: "Regra da Adição de Probabilidades: P(A ∪ B) = P(A) + P(B) - P(A ∩ B)",
+      trapWarning: "No ENEM: Quando os eventos têm elementos em comum, somar diretamente as probabilidades conta os elementos da interseção duas vezes!"
+    },
+    commonTraps: [
+      "Esquecer de subtrair a interseção n(A ∩ B)",
+      "Dividir o número de alunos pela metade do espaço amostral"
+    ],
+    tags: ["uniao-eventos", "probabilidade", "teoria-dos-conjuntos", "inclusao-exclusao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-PROB-023",
+    area: "matematica",
+    competence: 7,
+    skill: 28,
+    topic: "Probabilidade",
+    subtopic: "Distribuição Binomial em Ensaios de Bernoulli",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma linha de montagem de componentes eletrônicos aeroespaciais, sabe-se por histórico de fabricação que a probabilidade de um microchip apresentar falha de calibração em teste individual é de p = 0,10 (10%). Um lote de controle com 4 microchips independentes é submetido à bancada de teste.",
+      source: "Controle Estatístico de Qualidade na Engenharia."
+    },
+    prompt: "A probabilidade de que exatamente 2 dos 4 microchips inspecionados apresentem falha de calibração é igual a:",
+    options: [
+      { id: "a", text: "4,86%.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "1,00%.", isCorrect: false, distractorRationale: "Calculou apenas (0,1)² sem considerar os chips perfeitos (0,9)² nem a combinação C(4,2)." },
+      { id: "c", text: "0,81%.", isCorrect: false, distractorRationale: "Calculou (0,1)² · (0,9)² = 0,0081 esquecendo de multiplicar pelo coeficiente binomial C(4,2) = 6." },
+      { id: "d", text: "20,00%.", isCorrect: false, distractorRationale: "Multiplicou 2 falhas por 10% diretamente." },
+      { id: "e", text: "6,00%.", isCorrect: false, distractorRationale: "Multiplicou C(4,2) = 6 por 0,01 sem considerar os componentes sem defeito." }
+    ],
+    detailedExplanation: {
+      summary: "Pela fórmula da distribuição binomial: P(X = k) = C(n, k) · p^k · (1 - p)^(n - k). Para n = 4, k = 2 e p = 0,10: P(X = 2) = C(4, 2) · (0,10)² · (0,90)² = 6 · 0,01 · 0,81 = 0,0486 = 4,86%.",
+      stepByStep: [
+        "1. Identificar os parâmetros do ensaio binomial:",
+        "   - Número de ensaios: n = 4.",
+        "   - Sucessos desejados (defeitos): k = 2.",
+        "   - Probabilidade de defeito: p = 0,10.",
+        "   - Probabilidade de não defeito: q = 1 - p = 0,90.",
+        "2. Calcular o coeficiente binomial (ordens possíveis das falhas):",
+        "   C(4, 2) = (4 · 3) / (2 · 1) = 6 maneiras.",
+        "3. Calcular a probabilidade de uma sequência específica com 2 falhas e 2 acertos:",
+        "   p² · q² = (0,10)² · (0,90)² = 0,01 · 0,81 = 0,0081.",
+        "4. Multiplicar pelo número de sequências possíveis:",
+        "   P(X = 2) = 6 · 0,0081 = 0,0486 = 4,86%.",
+        "5. Conclusão: a probabilidade é de exatamente 4,86%."
+      ],
+      coreConcept: "Modelo de Probabilidade Binomial: P(k) = C(n,k) · p^k · q^(n-k)",
+      trapWarning: "No ENEM: Não esqueça de multiplicar pela combinação C(n, k)! Os 2 componentes defeituosos podem aparecer em 6 ordens distintas (ex: DDNN, DNDN, DNND, etc.)."
+    },
+    commonTraps: [
+      "Esquecer de multiplicar pelo número de combinações possíveis (fator binomial)",
+      "Esquecer a probabilidade dos itens que NÃO falharam (0,90²)"
+    ],
+    tags: ["distribuicao-binomial", "bernoulli", "combinatoria", "probabilidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-PROB-024",
+    area: "matematica",
+    competence: 7,
+    skill: 28,
+    topic: "Probabilidade",
+    subtopic: "Permutação Circular e Agrupamentos com Restrição",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma mesa redonda de um simpósio de neurociência, 6 pesquisadores de destaque sentar-se-ão para debater um protocolo cirúrgico. Entre os convidados estão dois pesquisadores principais, Dra. Lúcia e Dr. Carlos, que precisam sentar-se obrigatoriamente lado a lado em cadeiras consecutivas para compartilhar o monitor de análise durante o debate.",
+      source: "Análise Combinatória Avançada e Topologia Discreta."
+    },
+    prompt: "Considerando que em uma mesa circular duas disposições são consideradas idênticas se uma puder ser obtida da outra por rotação pura, o número de maneiras distintas de dispor esses 6 pesquisadores ao redor da mesa com Dra. Lúcia e Dr. Carlos juntos é:",
+    options: [
+      { id: "a", text: "48.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "120.", isCorrect: false, distractorRationale: "Calculou a permutação circular simples de 6 elementos: (6 - 1)! = 5! = 120, sem a restrição." },
+      { id: "c", text: "24.", isCorrect: false, distractorRationale: "Calculou (5 - 1)! = 24 mas esqueceu que os dois pesquisadores juntos podem trocar de posição entre si (2! = 2)." },
+      { id: "d", text: "720.", isCorrect: false, distractorRationale: "Calculou a permutação linear normal 6! = 720." },
+      { id: "e", text: "240.", isCorrect: false, distractorRationale: "Calculou 2 · 5! = 240 usando fórmula linear em vez de circular." }
+    ],
+    detailedExplanation: {
+      summary: "Em permutação circular de n objetos, PC(n) = (n - 1)!. Tratando a Dra. Lúcia e o Dr. Carlos como um único bloco indivisível, temos 5 'elementos' para organizar em roda: PC(5) = (5 - 1)! = 4! = 24. Como os dois podem inverter a ordem entre si no bloco (Lúcia-Carlos ou Carlos-Lúcia), multiplicamos por 2! = 2. Total = 24 · 2 = 48.",
+      stepByStep: [
+        "1. Tratar os dois pesquisadores juntos como um 'super-elemento': [L, C].",
+        "2. Contar o número de elementos a posicionar na mesa redonda: o bloco [L, C] + 4 outros pesquisadores = 5 elementos.",
+        "3. Aplicar a fórmula de Permutação Circular para 5 elementos:",
+        "   PC(5) = (5 - 1)! = 4! = 4 · 3 · 2 · 1 = 24 maneiras.",
+        "4. Considerar a permutação interna dos dois pesquisadores dentro do bloco:",
+        "   P(2) = 2! = 2 maneiras (Lúcia à esquerda ou Carlos à esquerda).",
+        "5. Aplicar o princípio multiplicativo: Total = 24 · 2 = 48 maneiras distintas.",
+        "6. Conclusão: existem 48 formas distintas de acomodar os cientistas na mesa redonda."
+      ],
+      coreConcept: "Permutação Circular com Elementos Vizinhos: (n - 1)! · k!",
+      trapWarning: "No ENEM: Em mesas redondas, rotacionar todos os ocupantes para a cadeira do lado gera a MESMA configuração relativa. Por isso subtrai-se 1 no fatorial: (n - 1)!."
+    },
+    commonTraps: [
+      "Usar permutação linear sem dividir pela rotação circular",
+      "Esquecer de permutar os dois elementos que estão juntos no mesmo bloco"
+    ],
+    tags: ["permutacao-circular", "combinatoria", "analise-combinatoria", "agrupamento"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-PROB-025",
+    area: "matematica",
+    competence: 7,
+    skill: 28,
+    topic: "Probabilidade",
+    subtopic: "Probabilidade com Amostragem Sucessiva Sem Reposição",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma caixa de armazenamento de um laboratório de química forense há 10 frascos de ensaio idênticos por fora, dos quais 6 contêm reagente iodeto de potássio puro e 4 contêm solução inerte com água destilada. Um técnico retira da caixa, sucessivamente e sem reposição, exatamente 3 frascos para realizar um teste em triplicata.",
+      source: "Laboratório de Química Analítica e Bioestatística."
+    },
+    prompt: "A probabilidade de que todos os 3 frascos retirados contenham a solução inerte com água destilada é igual a:",
+    options: [
+      { id: "a", text: "1/30.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "64/1.000.", isCorrect: false, distractorRationale: "Calculou a amostragem COM reposição: (4/10)³ = 64/1.000 = 8/125." },
+      { id: "c", text: "4/10.", isCorrect: false, distractorRationale: "Calculou apenas a probabilidade da primeira retirada isolada." },
+      { id: "d", text: "1/24.", isCorrect: false, distractorRationale: "Errou o denominador na multiplicação das frações sucessivas." },
+      { id: "e", text: "1/120.", isCorrect: false, distractorRationale: "Inverteu a combinação no cálculo." }
+    ],
+    detailedExplanation: {
+      summary: "Na amostragem sem reposição, o número de frascos favoráveis e o total diminuem a cada evento. P = (4/10) · (3/9) · (2/8) = (2/5) · (1/3) · (1/4) = 2 / 60 = 1/30.",
+      stepByStep: [
+        "1. Total inicial: 10 frascos (4 inertes e 6 de reagente).",
+        "2. Probabilidade de tirar o 1º inerte: P(1º) = 4 / 10.",
+        "3. Restam 9 frascos, sendo 3 inertes. Probabilidade do 2º inerte: P(2º) = 3 / 9.",
+        "4. Restam 8 frascos, sendo 2 inertes. Probabilidade do 3º inerte: P(3º) = 2 / 8.",
+        "5. Multiplicar as probabilidades condicionadas:",
+        "   P = (4 / 10) · (3 / 9) · (2 / 8).",
+        "6. Simplificar as frações:",
+        "   P = (2 / 5) · (1 / 3) · (1 / 4) = 2 / (5 · 3 · 4) = 2 / 60 = 1 / 30.",
+        "7. Conclusão: a probabilidade é de 1 em 30 (cerca de 3,33%)."
+      ],
+      coreConcept: "Multiplicação de Probabilidades em Eventos Dependentes (Sem Reposição)",
+      trapWarning: "No ENEM: Atenção à palavra 'sem reposição'! O espaço amostral diminui a cada retirada (10 -> 9 -> 8) assim como os casos favoráveis."
+    },
+    commonTraps: [
+      "Tratar eventos sem reposição como se houvesse reposição (mantendo o denominador 10)",
+      "Esquecer de simplificar a fração final"
+    ],
+    tags: ["amostragem-sem-reposicao", "probabilidade", "quimica-forense", "fracoes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 
 

@@ -791,7 +791,231 @@ export const QUESTIONS_LITERATURA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-021",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura",
+    subtopic: "Realismo Machadiano: Narrador Desabusado e Volubilidade",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de 'Memórias Póstumas de Brás Cubas' (1881), de Machado de Assis:\n\n'Este último capítulo é todo de negativas. Não alcancei a celebridade do emplasto, não fui ministro, não fui califa, não conheci o casamento. É verdade que, ao lado dessas faltas, coube-me a boa fortuna de não comprar o pão com o suor do meu rosto. Mais; não padeci a morte de Dona Plácida, nem a semidemência do Quincas Borba. Somadas umas coisas e outras, qualquer pessoa imaginará que não houve míngua nem sobra, e conseguinte que saí quite com a vida. E imaginará mal; porque ao chegar a este outro lado do mistério, achei-me com um pequeno saldo, que é a derradeira negativa deste capítulo de negativas: — Não tive filhos, não transmiti a nenhuma criatura o legado da nossa miséria.'",
+      source: "ASSIS, Machado de. Memórias Póstumas de Brás Cubas. 1881."
+    },
+    prompt: "Ao encerrar suas memórias declarando como 'pequeno saldo' vitorioso o fato de não ter deixado descendentes para transmitir 'o legado da nossa miséria', o narrador defunto de Machado de Assis consolida:",
+    options: [
+      { id: "a", text: "um pessimismo radical perante a condição humana e a hipocrisia das elites imperiais escravocratas, desnudando a vaidade ociosa da classe dominante sob uma perspectiva distanciada da vida terrena.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "uma adesão ingênua ao romantismo sentimental que celebra a esperança no amor conjugal eterno e na redenção divina.", isCorrect: false, distractorRationale: "O romance rompe com o sentimentalismo romântico, inaugurando o Realismo no Brasil com sarcasmo e ceticismo." },
+      { id: "c", text: "um elogio fervoroso à moral burguesa do trabalho árduo e ao enriquecimento fruto do esforço pessoal dos operários.", isCorrect: false, distractorRationale: "Brás Cubas vangloria-se explicitamente de 'não comprar o pão com o suor do meu rosto', revelando o parasitismo senhorial." },
+      { id: "d", text: "uma proposta política de reforma agrária socialista imediata para combater a concentração de terras no Império.", isCorrect: false, distractorRationale: "Brás Cubas é um aristocrata fútil e desocupado sem qualquer engajamento com lutas sociais populares." },
+      { id: "e", text: "a conversão mística do narrador ao catecismo jesuítico tradicional do século XVI.", isCorrect: false, distractorRationale: "O tom de Brás Cubas é agnóstico, irônico e desprovido de dogmas religiosos piedosos." }
+    ],
+    detailedExplanation: {
+      summary: "Memórias Póstumas de Brás Cubas (1881) inaugura o Realismo no Brasil. A condição de 'defunto autor' confere a Brás Cubas a liberdade suprema de confessar suas veleidades, covardias e a perversidade da elite sem temor ao julgamento social dos vivos.",
+      stepByStep: [
+        "1. Inovação estrutural: Não é um autor defunto (alguém vivo escrevendo sobre mortos), mas um 'defunto autor' escrevendo do além-túmulo.",
+        "2. O 'legado de nossa miséria': O pessimismo antropológico de Machado atinge o ápice ao ver a reprodução biológica como perpetuação da dor e do desengano universal.",
+        "3. Crítica social velada: O orgulho de não suar para ganhar o pão expõe a matriz escravocrata brasileira, onde o trabalho manual era relegado aos escravizados enquanto a elite senhorial vivia do ócio parasitário.",
+        "4. Conclusão: A volubilidade machadiana desconstrói as ilusões morais da sociedade burguesa do Segundo Reinado."
+      ],
+      coreConcept: "Realismo Machadiano, Narrador Defunto e Volubilidade de Classe",
+      trapWarning: "No ENEM: Machado de Assis NÃO fazia panfleto social aberto; sua crítica é sutil, mediada pela ironia mordaz, pelo narrador não confiável e pela psicologia profunda."
+    },
+    commonTraps: [
+      "Confundir o pessimismo filosófico de Brás Cubas com depressão romântica (o tom machadiano é lúcido, cínico e aristocrático)",
+      "Achar que Brás Cubas é o porta-voz virtuoso do autor Machado de Assis"
+    ],
+    tags: ["machado-de-assis", "realismo", "bras-cubas", "ironia", "pessimismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-LIT-022",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura",
+    subtopic: "Naturalismo e Determinismo em O Cortiço de Aluísio Azevedo",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Leia o seguinte trecho de 'O Cortiço' (1890), de Aluísio Azevedo:\n\n'Eram cinco horas da manhã e o cortiço acordava, abrindo, não os olhos, mas a sua infinidade de portas e janelas alinhadas. Um acordar alegre e farto de quem dormiu de um gole só, a sono solto. Um ranger de gonzos e fechaduras; um bater de portas; um chiar de frigideiras (...). O rumor crescia, condensando-se; o zunzum de todos os dias acentuava-se; já se não destacavam vozes dispersas, mas um só ruído grosso e contínuo que parecia vir da terra; (...) e naquela terra encharcada e fumegante, naquela umidade quente e lodosa, começou a minhocar, a esfervilhar, a crescer, um mundo, uma coisa viva, uma geração que parecia brotar espontânea, ali mesmo, daquele esterco.'",
+      source: "AZEVEDO, Aluísio. O Cortiço. 1890."
+    },
+    prompt: "No fragmento transcrito, a estética naturalista manifesta-se através de recursos estilísticos que evidenciam a:",
+    options: [
+      { id: "a", text: "personificação e zoomorfização da habitação coletiva, retratando o cortiço como um organismo biológico vivo e instintivo que molda deterministamente os comportamentos e destinos das personagens que ali habitam.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "idealização platônica da moradia popular como um refúgio bucólico e harmonioso distante da corrupção das cidades.", isCorrect: false, distractorRationale: "A visão é crua, ligada ao lodo, esterco e instintos, em oposição frontal à idealização árcade ou romântica." },
+      { id: "c", text: "celebração da nobreza de sangue e dos valores de cavalaria herdados das novelas medievais.", isCorrect: false, distractorRationale: "O Naturalismo foca nas classes populares urbanas marginalizadas sob ótica científica darwinista e zolaísta." },
+      { id: "d", text: "rejeição categórica de teorias científicas e biológicas em favor da fé cristã milagrosa.", isCorrect: false, distractorRationale: "O Naturalismo é fundamentado no cientificismo, no determinismo de Taine e no evolucionismo da época." },
+      { id: "e", text: "ênfase no fluxo de consciência interior e na introspecção existencial dos pensamentos abstratos dos moradores.", isCorrect: false, distractorRationale: "A abordagem é exterior, objetiva, coletiva e fisiológica, e não introspectiva intimista." }
+    ],
+    detailedExplanation: {
+      summary: "Em 'O Cortiço', Aluísio Azevedo aplica o determinismo hipolitiano (o meio, a raça e o momento histórico). O próprio cortiço é o protagonista coletivo, descrito com verbos de natureza biológica/animal ('minhocar, esfervilhar, brotar do esterco').",
+      stepByStep: [
+        "1. Estética Naturalista: Influenciada por Émile Zola, enxerga o ser humano como animal biológico movido por instintos primários (sexo, sobrevivência, ganância).",
+        "2. Zoomorfização: As personagens e a coletividade são descritas com traços e metáforas animais ('minhocar', 'formigueiro', 'ninho').",
+        "3. Determinismo ambiental: O espaço físico infecto e sensual do cortiço corrompe os indivíduos (como ocorre com o operário português Jerônimo, que abandona a família e o trabalho ao ser atraído pelo calor tropical e por Rita Baiana).",
+        "4. Conclusão: A alternativa 'a' sintetiza as bases teóricas do Naturalismo brasileiro no ENEM."
+      ],
+      coreConcept: "Naturalismo no Brasil: Zoomorfização, Determinismo e Protagonismo Coletivo",
+      trapWarning: "No ENEM: Diferencie Realismo de Naturalismo: o Realismo analisa a hipocrisia psicológica e moral da burguesia; o Naturalismo foca nos instintos biológicos, na patologia social e nas massas populares."
+    },
+    commonTraps: [
+      "Confundir zoomorfização (homens descritos como animais) com fábula moralizante",
+      "Achar que o protagonista de O Cortiço é João Romão individualmente (o cortiço em si é o personagem central)"
+    ],
+    tags: ["naturalismo", "aluisio-azevedo", "o-cortico", "zoomorfizacao", "determinismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-LIT-023",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Literatura",
+    subtopic: "Poesia Marginal e a Geração Mimeógrafo dos Anos 1970",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o poema 'Rápido e Rasteiro', de Chacal, e o contexto da poesia marginal brasileira na década de 1970:\n\n'vai ter uma festa\nque eu vou dançar\naté o sapato pedir água\naí eu tiro o sapato\ne danço o resto da vida'\n\nDurante o regime militar e sob vigência do AI-5, jovens poetas cariocas e paulistas passaram a produzir seus próprios livretos impressos artesanalmente em mimeógrafos e copiadoras, vendendo-os pessoalmente de mão em mão nas portas de cinemas, teatros, bares e praças públicas.",
+      source: "CHACAL. Poesia Marginal dos Anos 70. Coleção Cantadas Literárias."
+    },
+    prompt: "A produção poética da Geração Mimeógrafo consolidou uma estética inovadora que se caracterizou pela:",
+    options: [
+      { id: "a", text: "linguagem coloquial e despojada, pelo lirismo bem-humorado do instante cotidiano e pela circulação alternativa autônoma, subvertendo tanto o mercado editorial convencional quanto a asfixia repressiva da censura política.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "retomada rigorosa das formas parnasianas fixas, com métrica alexandrina perfeita e vocabulário arcaico lusitano.", isCorrect: false, distractorRationale: "Os poetas marginais repudiaram frontalmente qualquer formalismo acadêmico parnasiano." },
+      { id: "c", text: "obediência cega aos editais e manuais oficiais de cultura chancelados pelos censores da ditadura.", isCorrect: false, distractorRationale: "Eles eram chamados de 'marginais' justamente por atuarem fora da censura prévia institucional." },
+      { id: "d", text: "produção de longos tratados épicos em prosa narrando triunfos militares governamentais.", isCorrect: false, distractorRationale: "A poesia marginal privilegiava o poema-pílula, o fragmento relâmpago e o cotidiano urbano intimista." },
+      { id: "e", text: "distribuição exclusiva de livros de luxo importados para colecionadores da alta nobreza europeia.", isCorrect: false, distractorRationale: "A confecção era precária, artesanal e popular em folhas de mimeógrafo baratas." }
+    ],
+    detailedExplanation: {
+      summary: "A 'Poesia Marginal' dos anos 70 (Chacal, Cacaso, Ana Cristina Cesar, Torquato Neto) driblou o mercado formal e a censura militar com impressões caseiras em mimeógrafo. Esteticamente, recuperou o humor modernista de 1922, a linguagem das ruas e a celebração do corpo livre.",
+      stepByStep: [
+        "1. Contexto político-social: Década de 1970, fechamento pós-AI-5, censura prévia ferrenha às artes e editoras.",
+        "2. Por que 'marginal'?: À margem do mercado editorial hegemônico e à margem do sistema político oficial.",
+        "3. Estilo: Poema-relâmpago, coloquialismo deliberado, gírias da juventude, velocidade pop e ironia despretensiosa.",
+        "4. Conexão com o Modernismo: Diálogo direto com Oswald de Andrade e a Poesia Pau-Brasil de 1924.",
+        "5. Conclusão: A alternativa 'a' captura com perfeição a dimensão estética e sociopolítica da Geração Mimeógrafo no ENEM."
+      ],
+      coreConcept: "Poesia Marginal dos Anos 1970, Geração Mimeógrafo e Resistência Contracultural",
+      trapWarning: "No ENEM: Marginalidade aqui NÃO tem sentido de marginalidade criminal; significa estar à margem das engrenagens comerciais e oficiais da indústria cultural da época."
+    },
+    commonTraps: [
+      "Associar 'marginal' a condutas criminosas em vez de posição editorial independente",
+      "Achar que por ser leve e bem-humorada a poesia marginal não continha resistência política à ditadura"
+    ],
+    tags: ["poesia-marginal", "geracao-mimeografo", "chacal", "ditadura-militar", "anos-1970"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-LIT-024",
+    area: "linguagens",
+    competence: 5,
+    skill: 17,
+    topic: "Literatura",
+    subtopic: "Guimarães Rosa e a Dimensão Universal do Sertão",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Leia o seguinte excerto de 'Grande Sertão: Veredas' (1956), obra-prima de João Guimarães Rosa:\n\n'O sertão está em toda a parte. O sertão é dentro da gente. (...) Viver é negócio muito perigoso. O senhor sabe: sertão é onde o pensamento da gente se forma mais forte do que o poder do lugar. (...) O diabo não há! É o que eu digo, se for... Existe é homem humano. Travessia.'",
+      source: "ROSA, João Guimarães. Grande Sertão: Veredas. 1956."
+    },
+    prompt: "Na prosa rosiana da Terceira Geração Modernista (Geração de 45), a recriação do espaço sertanejo supera o mero regionalismo documental porque:",
+    options: [
+      { id: "a", text: "transfigura o sertão geográfico em um território mítico e metafísico de questionamento ontológico universal, onde os conflitos do jagunço espelham os dilemas universais da alma humana sobre o bem, o mal e o destino.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "limita-se a catalogar a flora e a fauna do cerrado mineiro com linguagem estritamente botânica de manual.", isCorrect: false, distractorRationale: "Guimarães Rosa recria a linguagem poeticamente para filosofar sobre a existência, indo muito além de inventário botânico." },
+      { id: "c", text: "adota a norma-padrão gramatical lusitana clássica sem introduzir qualquer inovação lexical ou neologismo.", isCorrect: false, distractorRationale: "A marca suprema de Guimarães Rosa é a revolução da linguagem por neologismos, sintaxe arcaica e arroubos poéticos." },
+      { id: "d", text: "retrata o sertanejo como uma criatura desprovida de sentimentos morais ou dúvidas existenciais.", isCorrect: false, distractorRationale: "O narrador Riobaldo é profundamente atormentado por dúvidas éticas, teológicas e afetivas (o amor por Diadorim)." },
+      { id: "e", text: "defende que os dilemas da existência humana ocorrem apenas nos centros cosmopolitas europeus.", isCorrect: false, distractorRationale: "A célebre máxima de Rosa é justamente 'o sertão é o mundo', universalizando a experiência sertaneja." }
+    ],
+    detailedExplanation: {
+      summary: "Em Grande Sertão: Veredas, Guimarães Rosa universaliza o regionalismo. O sertão não é folclore exótico para leitor urbano; é o palco existencial do homem perante o infinito ('Nonada. Tiros que o senhor ouviu...').",
+      stepByStep: [
+        "1. Superação do regionalismo tradicional: O romance de 30 (Graciliano, Jorge Amado) focava no determinismo socioeconômico da seca e do latifúndio; Rosa leva o sertão para o plano metafísico e ontológico.",
+        "2. 'O sertão é o mundo': As dúvidas de Riobaldo sobre a existência do demônio, a lealdade na guerra jagunça e o amor interdito por Diadorim são dilemas da condição humana em qualquer tempo ou lugar.",
+        "3. Revolução linguística: Sintaxe inovadora, fusão de termos arcaicos portugueses, latim, fala sertaneja viva e neologismos originais.",
+        "4. 'Travessia': A vida como passagem constante de autoconstrução moral e ética.",
+        "5. Conclusão: A alternativa 'a' traduz com rigor conceitual a genialidade universal de Rosa cobrada no ENEM."
+      ],
+      coreConcept: "Guimarães Rosa: O Sertão Metafísico Universal e a Geração de 45",
+      trapWarning: "No ENEM: Nunca classifique Guimarães Rosa como 'regionalismo tradicional'. Seu projeto estético é o Regionalismo Universalizante."
+    },
+    commonTraps: [
+      "Reduzir Grande Sertão: Veredas a uma história de tiroteio de jagunços e coronéis",
+      "Não perceber a revolução neológica na sintaxe e no léxico rosiano"
+    ],
+    tags: ["guimaraes-rosa", "grande-sertao-veredas", "geracao-de-45", "neologismos", "metafisica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "LIN-LIT-025",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura",
+    subtopic: "Clarice Lispector e a Incompletude em A Hora da Estrela",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de 'A Hora da Estrela' (1977), último livro publicado por Clarice Lispector:\n\n'Ela não sabia que ela era o que era, assim como um cachorro não sabe que é cachorro. Daí não se sentir infeliz. A única coisa que queria era viver. Não sabia para quê, não se indagava. (...) Eu tenho que falar desta nordestina, senão sufoco. Ela me acusa e o meio de me defender é escrever sobre ela. (...) Proponho-me a que não seja complexo o que escreverei, embora seja obrigado a usar as palavras que vos sustentam. A história — determino com falso livre-arbítrio — terá uns sete personagens e eu sou um dos mais importantes deles, é claro. Eu, Rodrigo S.M. Velho escritor? Não, não se trata de idade, mas de peso.'",
+      source: "LISPECTOR, Clarice. A Hora da Estrela. 1977."
+    },
+    prompt: "Ao intercalar o relato sobre a vida precária da jovem Macabéa com as reflexões metalinguísticas e existenciais do narrador fictício Rodrigo S.M., Clarice Lispector constrói uma narrativa que:",
+    options: [
+      { id: "a", text: "problematiza os limites éticos e estéticos do ato de narrar a miséria do outro, expondo o desconforto e a cumplicidade da elite letrada perante a invisibilidade histórica dos marginalizados sociais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ridiculariza a ingenuidade dos nordestinos para demonstrar a superioridade moral dos intelectuais do sudeste.", isCorrect: false, distractorRationale: "O narrador sente culpa, vergonha e desconforto angustiante ao falar de Macabéa, sem qualquer postura de deboche moral." },
+      { id: "c", text: "apresenta um relato jornalístico estritamente objetivo sem qualquer interferência dos sentimentos do narrador.", isCorrect: false, distractorRationale: "A narrativa clariceana é profundamente subjetiva, lírica e metalinguística." },
+      { id: "d", text: "conclui que a opressão social é um destino benéfico para a preservação da inocência espiritual da personagem.", isCorrect: false, distractorRationale: "O livro denuncia o aniquilamento da vida e a carência material extrema de Macabéa como tragédia brasileira." },
+      { id: "e", text: "propõe que escritores devem se abster de escrever ficção para se dedicar apenas à administração pública.", isCorrect: false, distractorRationale: "A reflexão debate a responsabilidade moral e vital da escrita artística ('senão sufoco')." }
+    ],
+    detailedExplanation: {
+      summary: "Em A Hora da Estrela (1977), Clarice entrelaça a denúncia social (a saga da alagoana Macabéa na periferia carioca) com a vertigem metalinguística (o narrador Rodrigo S.M. que expõe a dificuldade ética do escritor burguês em dar voz aos despossuídos sem cair no sentimentalismo fácil ou na apropriação indébita).",
+      stepByStep: [
+        "1. Personagem Macabéa: Datilógrafa nordestina semianalfabeta, órfã, desnutrida (alimenta-se de cachorro-quente e café frio), que vive em quarto com quatro moças de balcão e não tem consciência de sua própria tragédia.",
+        "2. A invenção de Rodrigo S.M.: Clarice cria um narrador masculino interposto para interrogar o ato de escrita: 'Como narrar quem não tem palavras para si mesma?'.",
+        "3. Metalinguagem e Ética: A narrativa reflete sobre a culpa de classe do intelectual, a insuficiência das palavras e a violência da desigualdade brasileira.",
+        "4. A 'Hora da Estrela': Macabéa só se torna o centro das atenções e 'estrela' no instante de sua morte atropelada por um Mercedes-Benz amarelo de luxo.",
+        "5. Conclusão: A alternativa 'a' resume magistralmente a confluência entre consciência social e vanguarda reflexiva de Clarice Lispector."
+      ],
+      coreConcept: "Clarice Lispector: Metalinguagem, Ética da Escrita e Invisibilidade Social",
+      trapWarning: "No ENEM: A Hora da Estrela é a obra mais política e social de Clarice Lispector, combinando sua costumeira introspecção psicológica existencial com uma denúncia contundente da miséria urbana brasileira."
+    },
+    commonTraps: [
+      "Achar que Clarice só escrevia romances intimistas de dona de casa burguesa e não abordava questões sociais",
+      "Ignorar a voz do narrador Rodrigo S.M., tratando o livro como se tivesse narração em terceira pessoa tradicional neutra"
+    ],
+    tags: ["clarice-lispector", "a-hora-da-estrela", "macabea", "metalinguagem", "desigualdade-social"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 
 

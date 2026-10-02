@@ -857,10 +857,230 @@ export const QUESTIONS_ECOLOGIA = [
       "Achar que o oceano fica ácido como vinagre (o pH cai de ~8,2 para ~8,0, mas isso representa um aumento de ~30% na concentração de H+ em escala logarítmica)",
       "Confundir branqueamento de corais com maré vermelha"
     ],
-    tags: ["acidificacao-oceanos", "efeito-estufa", "recifes-corais", "quimica-ambiental"],
+  },
+  {
+    id: "NAT-ECO-021",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Ecologia",
+    subtopic: "Ciclo Biogeoquímico do Nitrogênio e Fixação Biológica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A técnica de adubação verde e a rotação de culturas agrícolas, como o plantio alternado de milho (gramínea) e soja (leguminosa), são práticas amplamente incentivadas pela Embrapa para a recuperação de solos degradados. As raízes das leguminosas formam nódulos ricos em bactérias simbiontes capazes de romper a tripla ligação covalente do nitrogênio gasoso (N2), indisponível para a maioria dos eucariotos, incorporando-o na forma assimilável de compostos amoniacais.",
+      source: "EMBRAPA Solos. Práticas Sustentáveis no Manejo Agrícola do Solo, 2024."
+    },
+    prompt: "No ciclo do nitrogênio, a etapa essencial realizada pelas bactérias simbiontes do gênero Rhizobium associadas às raízes dessas leguminosas é denominada:",
+    options: [
+      { id: "a", text: "fixação biológica de nitrogênio, que converte o N2 atmosférico em amônia (NH3/NH4+), que posteriormente entra na síntese de aminoácidos vegetais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "desnitrificação estrita, que devolve nitratos tóxicos diretamente à atmosfera na forma de amônia volátil.", isCorrect: false, distractorRationale: "A desnitrificação é realizada por bactérias anaeróbias desnitrificantes como Pseudomonas, reduzindo nitrato a N2 gasoso, e não amônia." },
+      { id: "c", text: "nitratação oxidativa, executada exclusivamente por fungos micorrízicos no interior dos cloroplastos foliares.", isCorrect: false, distractorRationale: "A nitratação é a oxidação de nitrito a nitrato por bactérias Nitrobacter no solo, e não no interior de cloroplastos." },
+      { id: "d", text: "amonificação fúngica, responsável por transformar o gás oxigênio do solo em óxido nitroso gasoso.", isCorrect: false, distractorRationale: "A amonificação é a decomposição de matéria orgânica nitrogenada (uréia, proteínas) em amônia por decompositores." },
+      { id: "e", text: "fotólise da água, que quebra o vapor d'água no solo para gerar compostos orgânicos fosfatados.", isCorrect: false, distractorRationale: "Fotólise da água é a reação de Hill na fase clara da fotossíntese, independente de Rhizobium." }
+    ],
+    detailedExplanation: {
+      summary: "A fixação biológica é a conversão do N2 inerte atmosférico em amônia pelas bactérias diazotróficas que expressam a enzima nitrogenase, nutrindo a leguminosa e enriquecendo o solo.",
+      stepByStep: [
+        "1. O ar atmosférico tem ~78% de N2, mas plantas não conseguem absorvê-lo diretamente devido à tripla ligação estável (N≡N).",
+        "2. Bactérias do gênero Rhizobium colonizam os pelos radiculares de leguminosas, formando nódulos simbióticos com auxílio da leg-hemoglobina.",
+        "3. Pela enzima nitrogenase, o N2 é reduzido a amônia (NH3/NH4+): Fixação Biológica.",
+        "4. No solo, o amônio sofre nitrificação: Nitrosomonas oxidam amônio a nitrito (NO2-), e Nitrobacter oxidam nitrito a nitrato (NO3-), a forma preferencialmente absorvida pelas raízes."
+      ],
+      coreConcept: "Fixação Biológica de Nitrogênio e Mutualismo Rhizobium-Leguminosa",
+      trapWarning: "No ENEM, certifique-se de diferenciar Fixação (N2 -> NH3), Nitrificação (NH3 -> NO2- -> NO3-) e Desnitrificação (NO3- -> N2)."
+    },
+    commonTraps: [
+      "Confundir Rhizobium (fixadora simbiótica) com Nitrosomonas/Nitrobacter (nitrificantes quimiossintetizantes de vida livre)",
+      "Achar que plantas absorvem diretamente o N2 pelos estômatos"
+    ],
+    tags: ["ciclo-nitrogenio", "fixacao-biologica", "leguminosas", "rhizobium", "embrapa"],
     status: "published",
     version: 1,
-    createdAt: "2026-10-01"
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ECO-022",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Ecologia",
+    subtopic: "Dinâmica da Sucessão Ecológica e Estágio Clímax",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A recuperação de áreas degradadas por mineração ou abandono de pastagens envolve o processo de sucessão ecológica ao longo de décadas. No início, espécies pioneiras de rápido crescimento e ciclo de vida curto colonizam o substrato intemperizado. Gradualmente, são substituídas por espécies intermediárias arbustivas e, finalmente, por uma floresta madura estável em comunidade clímax.",
+      source: "ODUM, Eugene P. Fundamentos de Ecologia. 5ª ed. Cengage Learning."
+    },
+    prompt: "Ao comparar o estágio pioneiro inicial com o estágio clímax de uma sucessão florestal, observa-se que a comunidade clímax apresenta:",
+    options: [
+      { id: "a", text: "maior biomassa total acumulada e razão entre produtividade primária líquida e biomassa (PPL/B) próxima de zero, devido ao alto gasto respiratório da comunidade.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "produtividade primária líquida (PPL) infinitamente superior ao estágio inicial, sobrando imensa biomassa livre não consumida.", isCorrect: false, distractorRationale: "No clímax, a produção bruta é alta, mas a respiração comunitária (R) quase se iguala à produção (PPB ≈ R), logo PPL ≈ 0." },
+      { id: "c", text: "cadeias tróficas exclusivamente lineares com ausência completa de organismos decompositores e detritívoros.", isCorrect: false, distractorRationale: "No clímax, as teias tróficas tornam-se altamente complexas e ramificadas, com papel vital dos decompositores." },
+      { id: "d", text: "menor diversidade de nichos ecológicos e alta vulnerabilidade a qualquer oscilação microclimática sazonal.", isCorrect: false, distractorRationale: "O estágio clímax tem a maior diversidade de nichos e máxima estabilidade/homeostase homeostática ecológica." },
+      { id: "e", text: "taxa de respiração total nula, já que todas as árvores maduras realizam apenas armazenamento estático de minerais.", isCorrect: false, distractorRationale: "Árvores e organismos da comunidade mantêm metabolismo aeróbio ativo com altíssima taxa respiratória conjunta." }
+    ],
+    detailedExplanation: {
+      summary: "Na sucessão ecológica, a biomassa e a diversidade aumentam até o clímax. No clímax, a Produtividade Primária Bruta (PPB) é quase totalmente consumida pela Respiração da comunidade (R), fazendo com que a Produtividade Primária Líquida (PPL = PPB - R) tenda a zero.",
+      stepByStep: [
+        "1. Estágio Pioneiro (Ecese): PPL alta, razão P/B alta, biomassa baixa, teias alimentares simples.",
+        "2. Estágio Intermediário (Sere): aumento gradativo de biomassa, diversidade e complexidade.",
+        "3. Estágio Clímax: máxima biomassa, diversidade e estabilidade. A fotossíntese de toda a comunidade equilibra-se com a respiração total (PPB ≈ R).",
+        "4. Portanto, a PPL no clímax tende a zero (a floresta clímax não é 'o pulmão do mundo' produtor de oxigênio líquido excedente, mas um imenso reservatório estável de carbono estocado)."
+      ],
+      coreConcept: "Balanço Energético e Bioenergética na Sucessão Ecológica",
+      trapWarning: "Cuidado no ENEM: O mito de que a Amazônia madura produz o oxigênio do planeta cai nessa relação PPL = PPB - R ≈ 0."
+    },
+    commonTraps: [
+      "Achar que floresta clímax tem PPL máxima (ela tem PPB máxima e Biomassa máxima, mas PPL próxima de zero)",
+      "Confundir sucessão primária (substrato estéril) com secundária (solo pré-existente)"
+    ],
+    tags: ["sucessao-ecologica", "climax", "biomassa", "produtividade-liquida", "odum"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ECO-023",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Ecologia",
+    subtopic: "Eutrofização Antrópica e Dinâmica do Fósforo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em lagos e reservatórios urbanos, o aporte contínuo de esgoto doméstico não tratado e o escoamento de fertilizantes fosfatados e nitrogenados de áreas agrícolas provocam alterações drásticas na dinâmica aquática. Inicialmente, constata-se a formação de uma densa camada esverdeada superficial constituída por cianobactérias e microalgas microscópicas (floração das águas). Dias depois, registra-se mortandade massiva de peixes ictiófagos e bentônicos.",
+      source: "TUNDISI, J. G. Limnologia. Oficina de Textos, São Paulo."
+    },
+    prompt: "A mortandade massiva dos peixes descrita na etapa tardia do processo de eutrofização decorre diretamente da:",
+    options: [
+      { id: "a", text: "depleção drástica do oxigênio molecular dissolvido (anóxia), causada pela proliferação e respiração de bactérias decompositoras aeróbias ao degradarem a biomassa de algas mortas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "produção excessiva de gás oxigênio na superfície pelas algas, causando embolia gasosa letal nas brânquias dos peixes.", isCorrect: false, distractorRationale: "O problema não é excesso de oxigênio; a morte dos peixes ocorre no fundo pela anóxia profunda gerada pelos decompositores." },
+      { id: "c", text: "queda violenta da salinidade da água provocada pelo consumo acelerado de sais de cálcio pelas bactérias anaeróbias.", isCorrect: false, distractorRationale: "A concentração de sais não tem relação direta com a asfixia aquática observada em eventos de eutrofização." },
+      { id: "d", text: "ingestão de grandes volumes de nitrogênio molecular puro que solidifica o trato gastrointestinal dos organismos aquáticos.", isCorrect: false, distractorRationale: "O N2 gasoso não se solidifica no organismo dos peixes nem causa morte mecânica." },
+      { id: "e", text: "substituição instantânea da água doce por petróleo residual sintetizado naturalmente pelo fitoplâncton.", isCorrect: false, distractorRationale: "Fitoplâncton não gera camadas de hidrocarbonetos pesados de petróleo em eventos límnicos pontuais." }
+    ],
+    detailedExplanation: {
+      summary: "A eutrofização é um processo em cadeia: excesso de nutrientes -> proliferação algal superficial -> bloqueio da luz solar -> morte de vegetação submersa -> explosão de decompositores aeróbios -> consumo total do O2 dissolvido (DBO alta) -> anóxia e asfixia de peixes.",
+      stepByStep: [
+        "1. Nutrientes (N e P) chegam à água: fertilização acelerada.",
+        "2. Floração de algas (bloom): tapete verde na superfície.",
+        "3. A luz solar deixa de penetrar nas camadas profundas: plantas submersas morrem por interrupção da fotossíntese.",
+        "4. Algas superficiais morrem e afundam: matéria orgânica morta se acumula em abundância.",
+        "5. Bactérias decompositoras aeróbias decompõem a biomassa consumindo avidamente o O2 dissolvido: a Demanda Bioquímica de Oxigênio (DBO) dispara.",
+        "6. Quando o O2 se esgota, os peixes morrem asfixiados e proliferam bactérias anaeróbias produtoras de gás sulfídrico (H2S, cheiro fétido)."
+      ],
+      coreConcept: "Fisiopatologia Ecológica da Eutrofização e Curva de DBO",
+      trapWarning: "No ENEM, atente-se: as algas superficiais produzem oxigênio durante o dia no topo, mas quem MATA os peixes é a decomposição aeróbia submersa que consome todo o oxigênio da coluna d'água."
+    },
+    commonTraps: [
+      "Achar que as próprias algas consomem todo o oxigênio (são os decompositores aeróbios ao degradar a biomassa morta)",
+      "Confundir DBO alta (muita matéria orgânica a ser decomposta) com OD alto (oxigênio dissolvido, que na verdade despenca)"
+    ],
+    tags: ["eutrofizacao", "limnologia", "dbo", "poluicao-aquatica", "oxigenio-dissolvido"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ECO-024",
+    area: "natureza",
+    competence: 4,
+    skill: 16,
+    topic: "Ecologia",
+    subtopic: "Bioindicadores e Monitoramento da Qualidade Ambiental",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Pesquisadores que avaliam o impacto de emissões gasosas industriais em centros urbanos mapearam a presença de líquens epífitos nos troncos de árvores centenárias. Líquens são associações simbióticas mutualísticas entre fungos (micobiontes) e algas unicelulares ou cianobactérias (fotobiontes). Por não possuírem cutícula cerosa impermeabilizante nem estômatos regulatórios, eles absorvem água e nutrientes diretamente da atmosfera por toda a sua superfície talosa.",
+      source: "MARGULIS, L. Diversidade da Vida e Simbiose. Guanabara Koogan."
+    },
+    prompt: "O desaparecimento progressivo de líquens foliosos e fruticosos em áreas com intenso tráfego veicular e fábricas deve-se à alta sensibilidade desses organismos à presença atmosférica de:",
+    options: [
+      { id: "a", text: "dióxido de enxofre (SO2) e óxidos de nitrogênio (NOx), que acidificam os tecidos celulares e destroem os pigmentos de clorofila do fotobionte.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "gás oxigênio (O2) em concentrações atmosféricas normais de 21%, que é altamente letal para fungos micobiontes.", isCorrect: false, distractorRationale: "Líquens realizam respiração celular aeróbia e necessitam vitalmente de O2." },
+      { id: "c", text: "vapor d'água condensado durante chuvas torrenciais, que dissolve o talo por choque osmótico permanente.", isCorrect: false, distractorRationale: "A umidade é indispensável para a hidratação e metabolismo ativo dos líquens." },
+      { id: "d", text: "dióxido de carbono puro, substância tóxica que bloqueia a fotossíntese de qualquer ser autotrófico marinho e terrestre.", isCorrect: false, distractorRationale: "O CO2 é o substrato essencial para a fotossíntese do fotobionte liquênico." },
+      { id: "e", text: "gás hélio liberado pelo asfalto novo, que impede a fixação das hifas fúngicas na casca dos troncos.", isCorrect: false, distractorRationale: "Gás hélio é inerte e não é expelido em quantidades significativas por pavimento asfáltico." }
+    ],
+    detailedExplanation: {
+      summary: "Líquens funcionam como excelentes bioindicadores atmosféricos porque acumulam poluentes sem mecanismos de excreção ativa. O SO2 e NOx formam ácidos que degradam a clorofila das microalgas/cianobactérias associadas.",
+      stepByStep: [
+        "1. Líquens não possuem sistema de raízes nem cutícula protetora: absorvem umidade e solutos do ar.",
+        "2. Indústrias e queima de combustíveis fósseis emitem SO2 e NOx.",
+        "3. Em contato com a umidade no talo liquênico, esses óxidos formam ácido sulfuroso/sulfúrico e ácido nítrico.",
+        "4. A acidez decompõe a clorofila, inibindo a fotossíntese do fotobionte.",
+        "5. Sem nutrientes sintetizados pela alga, o fungo definha e o líquen morre: 'deserto de líquens' em centros poluídos."
+      ],
+      coreConcept: "Bioindicadores Liquênicos e Sensibilidade a Poluentes Ácidos Atmosféricos",
+      trapWarning: "No ENEM, lembre-se de que os bioindicadores revelam poluição crônica acumulada ao longo do tempo, o que análises químicas pontuais de ar podem não captar."
+    },
+    commonTraps: [
+      "Confundir bioindicadores (organismos vivos que respondem à poluição) com sensores eletrônicos físico-químicos",
+      "Achar que líquens são parasitas de árvores (são epífitos mutualistas, usando o tronco apenas como suporte físico)"
+    ],
+    tags: ["bioindicadores", "liquens", "poluicao-atmosferica", "so2", "chuva-acida"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ECO-025",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Ecologia",
+    subtopic: "Dinâmica Populacional e Capacidade de Suporte do Meio (K)",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O gráfico teórico de crescimento de uma população biológica em ambiente natural com recursos limitados descreve uma curva sigmoide (curva logística em S). Inicialmente há uma fase de crescimento exponencial (fase lag e fase log), que desacelera progressivamente à medida que a densidade populacional se aproxima de um patamar superior, oscilando ao redor do valor K.",
+      source: "BEGON, M.; TOWNSEND, C. R. Ecologia: De Indivíduos a Ecossistemas. Artmed."
+    },
+    prompt: "O patamar K representado na curva logística reflete a:",
+    options: [
+      { id: "a", text: "capacidade de suporte ou carga do ambiente, correspondente ao tamanho máximo sustentável da população suportado pelo suprimento disponível de espaço, alimento e abrigo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "taxa de mortalidade máxima provocada pelo envelhecimento genético obrigatório de todos os indivíduos da espécie.", isCorrect: false, distractorRationale: "K representa o limite de indivíduos sustentados pelo ambiente, não uma barreira genética de senescência." },
+      { id: "c", text: "capacidade reprodutiva intrínseca máxima (potencial biótico) em um ecossistema com recursos infinitos e sem predadores.", isCorrect: false, distractorRationale: "O potencial biótico é a curva exponencial teórica sem limites (curva em J), enquanto K é imposto pela resistência ambiental." },
+      { id: "d", text: "extinção iminente e irreversível da espécie devido ao esgotamento completo de todo o oxigênio do bioma.", isCorrect: false, distractorRationale: "No patamar K, a população atinge estabilidade dinâmica (natalidade ≈ mortalidade), não extinção." },
+      { id: "e", text: "área geográfica territorial medida em quilômetros quadrados ocupada pela primeira geração pioneira.", isCorrect: false, distractorRationale: "K é uma medida da quantidade máxima de indivíduos ou biomassa sustentável, e não a área física em si." }
+    ],
+    detailedExplanation: {
+      summary: "A capacidade de suporte do meio (K) é o ponto de equilíbrio dinâmico entre o potencial biótico da espécie (tendência ao crescimento exponencial ilimitado) e a resistência do meio (fatores limitantes como alimento, predadores, doenças e espaço).",
+      stepByStep: [
+        "1. Potencial biótico: capacidade reprodutiva máxima teórica (curva geométrica/exponencial em J).",
+        "2. Resistência ambiental: conjunto de fatores que se opõem ao crescimento ilimitado (competição, predação, parasitismo, falta de recursos).",
+        "3. Curva real (em S ou logística): desacelera quando a densidade aumenta e a resistência do meio atua com mais força.",
+        "4. Patamar K (Capacidade de Suporte): quando o tamanho populacional N atinge K, a taxa de natalidade mais imigração se iguala à taxa de mortalidade mais emigração."
+      ],
+      coreConcept: "Curva Logística de Crescimento Populacional e Capacidade de Carga (K)",
+      trapWarning: "No ENEM: Se uma população ultrapassar abruptamente a capacidade de suporte (overshoot), pode degradar o habitat e fazer K cair drasticamente, gerando um colapso populacional."
+    },
+    commonTraps: [
+      "Confundir potencial biótico (curva exponencial em J) com crescimento real (curva logística em S)",
+      "Achar que K é constante e imutável (fatores ambientais podem aumentar ou reduzir a capacidade de carga de um ecossistema)"
+    ],
+    tags: ["dinamica-populacional", "capacidade-de-suporte", "resistencia-ambiental", "potencial-biotico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

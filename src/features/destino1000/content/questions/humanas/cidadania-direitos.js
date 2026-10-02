@@ -857,6 +857,229 @@ export const QUESTIONS_CIDADANIA_DIREITOS = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-CID-021",
+    area: "humanas",
+    competence: 5,
+    skill: 23,
+    topic: "Cidadania e Direitos",
+    subtopic: "Jürgen Habermas, Esfera Pública e Agir Comunicativo",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na teoria da ação comunicativa desenvolvida pelo filósofo alemão Jürgen Habermas, a legitimidade das normas sociais e das instituições democráticas repousa sobre a razão comunicativa. Diferentemente da razão instrumental (que busca apenas o cálculo pragmático de meios e fins para o sucesso egoísta), a ação comunicativa orienta-se para a busca cooperativa de entendimento mútuo entre sujeitos capazes de linguagem e ação.",
+      source: "HABERMAS, Jürgen. Teoria do Agir Comunicativo. WMF Martins Fontes."
+    },
+    prompt: "De acordo com o modelo deliberativo de Habermas, uma decisão política adquire validade democrática genuína quando é fruto de:",
+    options: [
+      { id: "a", text: "um debate discursivo na esfera pública livre de coerção e violência, no qual todos os participantes têm igual oportunidade de manifestação e prevalece a força do melhor argumento racional.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "uma imposição vertical exercida por especialistas técnicos detentores de poder autocrático inquestionável.", isCorrect: false, distractorRationale: "Habermas critica o tecnocratismo e a colonização do mundo da vida por imperativos burocráticos sem validação popular." },
+      { id: "c", text: "uma guerra cibernética de algoritmos direcionados para calar vozes divergentes nas redes digitais.", isCorrect: false, distractorRationale: "Isso representa a degradação da esfera pública pela razão instrumental manipuladora, oposta ao entendimento mútuo." },
+      { id: "d", text: "um sorteio aleatório de cidadãos sem qualquer fundamentação ou justificativa dialógica prévia.", isCorrect: false, distractorRationale: "A deliberação habermasiana requer justificação discursiva de pretensões de validade, e não aleatoriedade acrítica." },
+      { id: "e", text: "tradições religiosas imutáveis que proíbem o debate racional sobre novas leis civis.", isCorrect: false, distractorRationale: "A modernidade pós-metafísica exige justificação racional aberta a todos os cidadãos em sociedade pluralista." }
+    ],
+    detailedExplanation: {
+      summary: "Para Habermas, a esfera pública democrática é o espaço onde a sociedade civil debate racionalmente suas necessidades. Uma norma só é justa se puder contar com o assentimento de todos os concernidos numa situação ideal de fala.",
+      stepByStep: [
+        "1. Crítica à razão instrumental de Adorno e Horkheimer: Habermas não abandona a razão, mas resgata seu potencial emancipatório pela linguagem (agir comunicativo).",
+        "2. Pretensões de validade: Ao falar, o sujeito reivindica verdade (mundo objetivo), retidão normativa (mundo social) e autenticidade (mundo subjetivo).",
+        "3. Situação ideal de fala: Procedimento no qual nenhum participante é coagido fisicamente ou simbolicamente, prevalecendo a força persuasiva do argumento racional mais fundamentado.",
+        "4. Democracia deliberativa: A cidadania se expressa no fluxo discursivo entre sociedade civil, opinião pública e parlamento formal."
+      ],
+      coreConcept: "Agir Comunicativo, Democracia Deliberativa e Razão Dialógica de Habermas",
+      trapWarning: "No ENEM: Diferencie Razão Instrumental (usar a razão para dominar objetos ou manipular pessoas) de Razão Comunicativa (usar a linguagem para alcançar entendimento mútuo e consenso ético)."
+    },
+    commonTraps: [
+      "Achar que Habermas defende o consenso imposto pela autoridade estatal",
+      "Confundir ação estratégica (manipulação) com ação comunicativa (entendimento)"
+    ],
+    tags: ["habermas", "agir-comunicativo", "esfera-publica", "democracia-deliberativa", "filosofia-politica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-CID-022",
+    area: "humanas",
+    competence: 5,
+    skill: 23,
+    topic: "Cidadania e Direitos",
+    subtopic: "Hannah Arendt e a Banalidade do Mal",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao cobrir o julgamento do oficial nazista Adolf Eichmann em 1961 para a revista The New Yorker, a filósofa Hannah Arendt formulou a controversa tese da 'banalidade do mal'. Longe de encontrar um monstro sádico ou um demônio psicopata sedento por sangue, Arendt deparou-se com um burocrata medíocre, zeloso cumpridor de ordens e focado em metas operacionais e progressão na carreira administrativa.",
+      source: "ARENDT, Hannah. Eichmann em Jerusalém: Um Relato sobre a Banalidade do Mal. Companhia das Letras."
+    },
+    prompt: "Na análise filosófica de Hannah Arendt, a gênese dos crimes sistemáticos perpetrados por Eichmann no regime totalitário residia fundamentalmente na sua:",
+    options: [
+      { id: "a", text: "incapacidade reflexiva de pensar a partir da perspectiva dos outros e da renúncia moral ao juízo crítico autônomo, agindo como mero executor automático de ordens de uma máquina burocrática genocida.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "militância revolucionária marxista que visava à destruição do capitalismo monopolista industrial.", isCorrect: false, distractorRationale: "O nazismo era um regime totalitário de extrema-direita anticomunista." },
+      { id: "c", text: "loucura clínica congênita atestada por psiquiatras que o impedia de discernir a realidade física imediata.", isCorrect: false, distractorRationale: "Os psiquiatras declararam Eichmann plenamente são, o que tornou seu comportamento ainda mais aterrorizante para Arendt." },
+      { id: "d", text: "ambição de enriquecer comprando fazendas no interior do continente asiático.", isCorrect: false, distractorRationale: "Eichmann era movido por obediência burocrática e conformismo funcional na hierarquia nazista, não por especulação de terras na Ásia." },
+      { id: "e", text: "tentativa de sabotar o Estado totalitário por meio de relatórios com erros intencionais de digitação.", isCorrect: false, distractorRationale: "Ele cumpriu a logística do extermínio com máxima eficiência operacional sem qualquer hesitação moral." }
+    ],
+    detailedExplanation: {
+      summary: "O conceito de 'banalidade do mal' mostra que os maiores crimes da humanidade podem ser cometidos não por demônios extraordinários, mas por homens comuns que renunciam à capacidade de pensar criticamente e se tornam peças cegas de engrenagens institucionais opressivas.",
+      stepByStep: [
+        "1. Observação de Arendt: Eichmann repetia clichês linguísticos vazios e alegava cumprir seu dever com a lei do Estado (o imperativo categórico de Kant distorcido pelo nazismo).",
+        "2. Falta de pensamento (thoughtlessness): Incapacidade de dialogar consigo mesmo na consciência moral e de se colocar no lugar da vítima sofrida.",
+        "3. A banalização: O mal torna-se banal não porque seja pequeno ou trivial, mas porque não tem raiz profunda (não tem profundidade demoníaca); ele alastra-se como um fungo pela superfície social quando as pessoas deixam de pensar criticamente.",
+        "4. Alerta para a cidadania contemporânea: Qualquer sociedade corre o risco de desumanização quando burocratas e cidadãos abdicam de sua responsabilidade ética individual sob o pretexto de 'apenas cumprir regulamentos'."
+      ],
+      coreConcept: "A Banalidade do Mal e a Responsabilidade Ética em Hannah Arendt",
+      trapWarning: "No ENEM: Arendt NUNCA disse que os crimes nazistas eram triviais ou perdoáveis! O mal é 'banal' pela ausência de motivos profundos no agente, mas as suas consequências foram monstruosas e imperdoáveis."
+    },
+    commonTraps: [
+      "Achar que 'banalidade do mal' significa que o Holocausto foi um crime pequeno ou banal",
+      "Confundir a tese de Arendt com a ideia de que Eichmann era um louco inimputável"
+    ],
+    tags: ["hannah-arendt", "banalidade-do-mal", "totalitarismo", "etica", "direitos-humanos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-CID-023",
+    area: "humanas",
+    competence: 5,
+    skill: 23,
+    topic: "Cidadania e Direitos",
+    subtopic: "Michel Foucault: Sociedade Disciplinar e Biopolítica",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nas obras 'Vigiar e Punir' (1975) e 'História da Sexualidade' (1976), Michel Foucault analisa a transformação histórica dos mecanismos de controle social no Ocidente a partir dos séculos XVII e XVIII. Do antigo poder soberano (cujo lema era 'fazer morrer ou deixar viver', expressando-se em suplícios públicos sangrentos), emerge uma nova tecnologia de poder: o biopoder, desdobrado em anátomo-política do corpo individual e biopolítica das populações.",
+      source: "FOUCAULT, Michel. Vigiar e Punir: Nascimento da Prisão. Vozes."
+    },
+    prompt: "De acordo com as análises foucaultianas, as instituições disciplinares modernas (como prisões, escolas, fábricas e quartéis) caracterizam-se pelo objetivo primordial de:",
+    options: [
+      { id: "a", text: "docilizar os corpos e torná-los economicamente produtivos e politicamente submissos por meio do controle minucioso do tempo, do espaço, dos horários e da vigilância constante (como no modelo do Panóptico).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "promover a emancipação anarquista irrestrita de todos os trabalhadores sem qualquer divisão de tarefas.", isCorrect: false, distractorRationale: "As instituições disciplinares operam para adestrar e vigiar comportamentos, o oposto de libertação anárquica." },
+      { id: "c", text: "restaurar a execução de penas corporais medievais em praça pública com esquartejamento de criminosos.", isCorrect: false, distractorRationale: "Foucault explica como o poder moderno abandona o espetáculo do suplício físico para colonizar a alma e os hábitos do indivíduo." },
+      { id: "d", text: "eliminar qualquer registro estatístico de nascimentos, mortes e contágios epidêmicos na sociedade.", isCorrect: false, distractorRationale: "O biopoder depende essencialmente de estatísticas demográficas, taxas de natalidade e saneamento regulatório." },
+      { id: "e", text: "transferir o controle exclusivo das decisões médicas para o clero monástico da Idade Média.", isCorrect: false, distractorRationale: "A biopolítica é uma tecnologia moderna laica de gestão científica das populações pelo Estado." }
+    ],
+    detailedExplanation: {
+      summary: "A microfísica do poder de Foucault revela que o poder não está apenas no Estado, mas circula capilarmente em toda a rede social. A disciplina fabrica 'corpos dóceis' (adestramento minucioso de gestos e ritmos), enquanto a biopolítica gere a vida biológica da população (epidemias, natalidade, higiene).",
+      stepByStep: [
+        "1. Passagem histórica: Do poder do rei de castigar o corpo visivelmente para a vigilância invisível permanente da alma do condenado.",
+        "2. O Panóptico de Jeremy Bentham: Arquitetura circular onde um vigia central pode ver todos os detentos sem que eles saibam quando estão sendo observados, introjetando a autocensura nos vigiados.",
+        "3. Disciplina: Aplica-se ao corpo individual na escola (fileiras, sinos, uniformes), no quartel e na fábrica.",
+        "4. Biopolítica: Aplica-se ao corpo-espécie (à população globalmente considerada) através de vacinação, demografia, urbanismo e políticas de higiene pública: 'fazer viver e deixar morrer'.",
+        "5. Conexão com direitos: Compreender o poder em Foucault é vital para contestar violências institucionais naturalizadas na sociedade contemporânea."
+      ],
+      coreConcept: "Microfísica do Poder, Sociedade Disciplinar e Biopolítica em Michel Foucault",
+      trapWarning: "No ENEM: Em Foucault, o poder NÃO é apenas repressivo (não diz só 'não'); o poder é PRODUTIVO: ele produz saberes, identidades, discursos e modos de vida corporais."
+    },
+    commonTraps: [
+      "Achar que Foucault localiza o poder apenas na figura do Presidente ou das Forças Armadas",
+      "Confundir controle disciplinar do corpo individual com a biopolítica da população em massa"
+    ],
+    tags: ["michel-foucault", "panoptico", "biopolitica", "sociedade-disciplinar", "biopoder"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-CID-024",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Cidadania e Direitos",
+    subtopic: "Estatuto da Igualdade Racial (Lei 12.288/2010) e Reparação Histórica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Estatuto da Igualdade Racial (Lei Federal nº 12.288/2010) consolidou no ordenamento jurídico brasileiro as diretrizes de políticas públicas para a promoção da equidade étnico-racial. O texto legal reconhece expressamente o dever do Estado na implementação de ações afirmativas destinadas a corrigir desvantagens históricas cumulativas suportadas pela população negra no acesso ao ensino superior, ao mercado de trabalho, à saúde e à terra quilombola.",
+      source: "BRASIL. Lei nº 12.288, de 20 de julho de 2010. Estatuto da Igualdade Racial."
+    },
+    prompt: "No âmbito do Direito Constitucional e da Sociologia das Relações Raciais no Brasil, as ações afirmativas fundamentam-se no princípio da:",
+    options: [
+      { id: "a", text: "igualdade material ou substancial, que busca tratar desigualmente os desiguais na exata medida de suas desigualdades para neutralizar os efeitos estruturais de séculos de escravidão e discriminação institucional.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "igualdade meramente formal perante a lei, que proíbe qualquer política compensatória em nome da neutralidade cega do Estado.", isCorrect: false, distractorRationale: "A igualdade formal estrita é insuficiente porque finge que todos partem do mesmo ponto de partida, perpetuando privilégios históricos." },
+      { id: "c", text: "hereditariedade de privilégios aristocráticos restritos aos descendentes das famílias imperiais.", isCorrect: false, distractorRationale: "Ações afirmativas buscam exatamente democratizar o acesso e combater heranças excludentes de privilégios." },
+      { id: "d", text: "meritocracia irrestrita e espontânea que desconsidera os pontos de partida socioeconômicos dos concorrentes.", isCorrect: false, distractorRationale: "O mito da meritocracia abstrata ignora as barreiras estruturais do racismo contra as quais as ações afirmativas atuam." },
+      { id: "e", text: "segregação compulsória de espaços públicos segundo a linhagem de ancestralidade biológica.", isCorrect: false, distractorRationale: "Ações afirmativas promovem a inclusão e integração plural em espaços de poder, combatendo qualquer segregação." }
+    ],
+    detailedExplanation: {
+      summary: "A igualdade puramente formal ('todos são iguais perante a lei') não impede que a população negra continue com os piores índices de renda, escolaridade e representatividade devido à herança de mais de 300 anos de escravismo sem reforma agrária ou indenização pós-abolição. Ações afirmativas materializam a justiça distributiva reparatória.",
+      stepByStep: [
+        "1. Desigualdade histórica: A abolição em 1888 não incluiu políticas de acesso à terra ou educação para a população negra liberta.",
+        "2. Racismo estrutural: Desigualdades se perpetuaram de geração em geração na ocupação de postos de liderança e universidades públicas.",
+        "3. Conceito de Igualdade Material (Aristóteles / CF/88): Não basta a lei ser cega; o Estado deve adotar medidas compensatórias ativas temporárias (cotas raciais, programas de permanência) para nivelar o ponto de partida.",
+        "4. Constitucionalidade: Em 2012, o STF julgou a ADPF 186 e declarou por unanimidade que as cotas raciais nas universidades são plenamente constitucionais e indispensáveis para uma sociedade justa."
+      ],
+      coreConcept: "Ações Afirmativas, Igualdade Material e Justiça Reparatória",
+      trapWarning: "No ENEM: Ações afirmativas NÃO são privilégios, mas mecanismos temporários de reparação de direitos fundamentais sonegados historicamente."
+    },
+    commonTraps: [
+      "Confundir igualdade formal (lei abstrata) com igualdade material (justiça concreta)",
+      "Acreditar no mito da democracia racial brasileira que nega a existência do racismo estrutural"
+    ],
+    tags: ["igualdade-racial", "acoes-afirmativas", "cotas-raciais", "adpf-186", "reparacao-historica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "HUM-CID-025",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Cidadania e Direitos",
+    subtopic: "Estatuto da Criança e do Adolescente (ECA) e Proteção Integral",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A promulgação do Estatuto da Criança e do Adolescente (Lei Federal nº 8.069/1990) representou uma ruptura paradigmática com a antiga legislação menorista brasileira (Código de Menores de 1979). Enquanto a doutrina anterior da 'situação irregular' tratava a criança e o jovem empobrecido como objeto de controle policialesco e judicial quando em situação de abandono ou delito, o ECA instituiu a Doutrina da Proteção Integral respaldada no Artigo 227 da Constituição de 1988.",
+      source: "CURY, Munir. Estatuto da Criança e do Adolescente Comentado. Malheiros Editores."
+    },
+    prompt: "A Doutrina da Proteção Integral consagrada pelo ECA fundamenta-se na premissa jurídica de que crianças e adolescentes são:",
+    options: [
+      { id: "a", text: "sujeitos plenos de direitos civis, humanos e sociais, reconhecidos como pessoas em condição peculiar de desenvolvimento que demandam prioridade absoluta por parte da família, da sociedade e do Estado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "propriedades privadas exclusivas de seus genitores biológicos, sendo vedada qualquer intervenção tutelar pública em casos de negligência.", isCorrect: false, distractorRationale: "O ECA estabelece o princípio da co-responsabilidade social (família, sociedade e Estado) com atuação do Conselho Tutelar." },
+      { id: "c", text: "cidadãos plenamente imputáveis penalmente a partir dos 10 anos de idade, devendo cumprir penas em presídios comuns de segurança máxima.", isCorrect: false, distractorRationale: "Crianças e adolescentes são penalmente inimputáveis conforme a CF/88 (Art. 228), sujeitos a medidas protetivas e socioeducativas específicas." },
+      { id: "d", text: "trabalhadores adultos em potencial autorizados a exercer atividades insalubres e noturnas sem qualquer fiscalização estatal.", isCorrect: false, distractorRationale: "O trabalho infantil é proibido e protegido rigorosamente (vedado trabalho noturno, perigoso ou insalubre a menores de 18 anos)." },
+      { id: "e", text: "indivíduos sem personalidade jurídica até completarem a maioridade civil aos 21 anos de idade.", isCorrect: false, distractorRationale: "Crianças e adolescentes possuem personalidade jurídica e capacidade de direitos desde a concepção e nascimento com vida." }
+    ],
+    detailedExplanation: {
+      summary: "O ECA transformou a criança e o adolescente de 'objetos tutelares passivos' para 'sujeitos ativos de direitos' em condição peculiar de desenvolvimento. O Artigo 227 da CF/88 outorga a eles 'prioridade absoluta' em todas as esferas públicas.",
+      stepByStep: [
+        "1. Histórico: O Código de Menores estigmatizava o 'menor abandonado ou infrator'.",
+        "2. Ruptura do ECA (1990): Alinhamento à Convenção Internacional sobre os Direitos da Criança da ONU.",
+        "3. Pilares da Proteção Integral: Prioridade absoluta na destinação de recursos públicos, primazia de socorro e proteção em qualquer circunstância.",
+        "4. Medidas socioeducativas (para adolescentes de 12 a 18 anos que cometem ato infracional): Caráter pedagógico e ressocializador (advertência, prestação de serviços à comunidade, liberdade assistida, internação até no máximo 3 anos), visando a reintegração social e não a vingança retributiva penal.",
+        "5. Conselho Tutelar: Órgão autônomo, não jurisdicional, encarregado pela sociedade de zelar pelo cumprimento dos direitos da infância."
+      ],
+      coreConcept: "Doutrina da Proteção Integral, Prioridade Absoluta e o ECA (Lei 8.069/1990)",
+      trapWarning: "No ENEM: Adolescente NÃO comete 'crime', comete 'ato infracional'; e não recebe 'pena de prisão', mas sim 'medida socioeducativa'."
+    },
+    commonTraps: [
+      "Achar que o ECA protege a impunidade (ele prevê medidas socioeducativas severas de privação de liberdade na Fundação CASA/internação)",
+      "Confundir a Doutrina da Situação Irregular (antiga) com a Doutrina da Proteção Integral (atual)"
+    ],
+    tags: ["eca", "protecao-integral", "prioridade-absoluta", "direitos-da-crianca", "cidadania"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

@@ -857,6 +857,247 @@ export const QUESTIONS_FINANCEIRA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-021",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Sistemas de Amortização: Tabela Price vs SAC",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao contratar um financiamento habitacional no valor de R$ 240.000,00 a ser quitado em 120 meses à taxa fixa de 1,0% ao mês sobre o saldo devedor, um mutuário compara dois sistemas de amortização:\n1. Sistema de Amortização Constante (SAC): a cota de amortização mensal do principal é constante (A = Saldo / n), e as prestações são decrescentes à medida que os juros sobre o saldo devedor diminuem.\n2. Tabela Price: as prestações mensais são fixas e uniformes ao longo de todo o contrato.",
+      source: "Matemática Financeira Aplicada ao Crédito Imobiliário."
+    },
+    prompt: "No Sistema de Amortização Constante (SAC), o valor da PRIMEIRA prestação mensal (P₁) a ser paga pelo mutuário é de:",
+    options: [
+      { id: "a", text: "R$ 4.400,00.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 2.400,00.", isCorrect: false, distractorRationale: "Calculou apenas os juros do primeiro mês (1% de R$ 240.000 = R$ 2.400), esquecendo a cota de amortização de R$ 2.000." },
+      { id: "c", text: "R$ 2.000,00.", isCorrect: false, distractorRationale: "Calculou apenas a amortização pura (R$ 240.000 / 120 = R$ 2.000), desconsiderando a cobrança dos juros." },
+      { id: "d", text: "R$ 4.800,00.", isCorrect: false, distractorRationale: "Dobrou os juros por engano no primeiro mês." },
+      { id: "e", text: "R$ 3.600,00.", isCorrect: false, distractorRationale: "Subestimou a soma dos juros e amortização inicial." }
+    ],
+    detailedExplanation: {
+      summary: "No sistema SAC, cada prestação é a soma da Amortização com os Juros do período: P_k = A + J_k. A amortização fixa é A = 240.000 / 120 = R$ 2.000,00. No 1º mês, os juros incidem sobre o saldo integral: J₁ = 1% de 240.000 = R$ 2.400,00. Logo, P₁ = 2.000 + 2.400 = R$ 4.400,00.",
+      stepByStep: [
+        "1. Amortização constante (A): A = Saldo Inicial / Número de parcelas = R$ 240.000,00 / 120 = R$ 2.000,00 por mês.",
+        "2. Juros do 1º mês (J₁): incidem sobre o saldo devedor inicial de R$ 240.000,00.",
+        "   J₁ = 0,01 · R$ 240.000,00 = R$ 2.400,00.",
+        "3. Primeira Prestação (P₁): P₁ = A + J₁ = R$ 2.000,00 + R$ 2.400,00 = R$ 4.400,00.",
+        "4. Comportamento ao longo do tempo: no mês seguinte, o saldo cai para R$ 238.000,00, os juros caem para R$ 2.380,00 e a prestação cai para R$ 4.380,00 (decresce R$ 20 por mês até a última parcela de R$ 2.020,00).",
+        "5. Conclusão: a primeira prestação do SAC é de R$ 4.400,00."
+      ],
+      coreConcept: "Sistema de Amortização Constante (SAC): P = Amortização + Juros",
+      trapWarning: "No ENEM: Prestação NUNCA é só juros nem só amortização; é sempre a soma das duas componentes! No SAC a prestação começa mais alta e diminui todo mês."
+    },
+    commonTraps: [
+      "Esquecer de somar a amortização com os juros",
+      "Confundir prestação decrescente do SAC com prestação constante da Tabela Price"
+    ],
+    tags: ["matematica-financeira", "sac", "tabela-price", "amortizacao", "financiamento"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FIN-022",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Equação de Fisher: Taxa Nominal vs Taxa Real de Juros",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No planejamento financeiro de longo prazo, deve-se distinguir a rentabilidade aparente (nominal) da rentabilidade real, que desconta a perda do poder de compra causada pela inflação. A relação rigorosa entre a taxa nominal (i), a taxa real de juros (r) e a taxa de inflação (j) é dada pela Equação de Fisher: (1 + i) = (1 + r) · (1 + j). Em um determinado ano, um fundo de previdência obteve rendimento nominal de i = 10,24% (0,1024), enquanto a inflação oficial medida pelo IPCA foi de j = 4,00% (0,0400).",
+      source: "Fundamentos de Economia e Finanças: Equação de Fisher."
+    },
+    prompt: "A taxa real de rentabilidade (r) auferida pelos cotistas desse fundo previdenciário no referido ano foi de:",
+    options: [
+      { id: "a", text: "6,00%.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "6,24%.", isCorrect: false, distractorRationale: "Fez a subtração direta ingênua 10,24% - 4,00% = 6,24%, sem descontar o efeito da inflação sobre o ganho pela equação de Fisher." },
+      { id: "c", text: "2,56%.", isCorrect: false, distractorRationale: "Dividiu 10,24% por 4,00%." },
+      { id: "d", text: "14,24%.", isCorrect: false, distractorRationale: "Somou os juros com a inflação." },
+      { id: "e", text: "4,00%.", isCorrect: false, distractorRationale: "Repetiu o valor da inflação." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Equação de Fisher: (1 + r) = (1 + i) / (1 + j). Substituindo: (1 + r) = (1 + 0,1024) / (1 + 0,0400) = 1,1024 / 1,04 = 1,06. Logo, r = 1,06 - 1 = 0,06 (6,00% exatos).",
+      stepByStep: [
+        "1. Escrever a relação de Fisher: (1 + i) = (1 + r) · (1 + j).",
+        "2. Isolar o fator real: (1 + r) = (1 + i) / (1 + j).",
+        "3. Substituir os valores decimais dados:",
+        "   1 + i = 1 + 0,1024 = 1,1024",
+        "   1 + j = 1 + 0,04 = 1,04.",
+        "4. Efetuar a divisão dos fatores de capitalização:",
+        "   (1 + r) = 1,1024 / 1,04 = 1,06.",
+        "5. Determinar a taxa real percentual: r = 1,06 - 1 = 0,06 = 6,00%.",
+        "6. Conclusão: a rentabilidade real que aumentou o poder de compra foi de 6,00% (e não 6,24%)."
+      ],
+      coreConcept: "Equação de Fisher e Rentabilidade Real: (1 + i) = (1 + r)·(1 + j)",
+      trapWarning: "No ENEM: Subtrair a inflação diretamente (i - j) é apenas uma aproximação grosseira! A conta exata exige SEMPRE dividir os fatores de acumulação: (1 + i) / (1 + j)."
+    },
+    commonTraps: [
+      "Subtrair diretamente 10,24% - 4% = 6,24% (pegadinha clássica em provas)",
+      "Esquecer de somar 1 às taxas antes de efetuar a divisão"
+    ],
+    tags: ["equacao-de-fisher", "taxa-real", "taxa-nominal", "inflacao", "ipca"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FIN-023",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Tributação Regressiva de Renda Fixa e Retorno Líquido",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "As aplicações em títulos de renda fixa (como CDBs e Tesouro Direto) sujeitam-se à tabela regressiva do Imposto de Renda (IR) incidente exclusivamente sobre o rendimento nominal auferido:\n• Até 180 dias de aplicação: alíquota de 22,5%\n• De 181 a 360 dias: alíquota de 20,0%\n• De 361 a 720 dias: alíquota de 17,5%\n• Acima de 720 dias: alíquota de 15,0%\nUma investidora aplicou R$ 50.000,00 em um CDB prefixado e resgatou a aplicação após 400 dias, período no qual o investimento acumulou um rendimento bruto de R$ 8.000,00.",
+      source: "Legislação Tributária e Educação Financeira da CVM."
+    },
+    prompt: "O valor total líquido resgatado pela investidora após o desconto do Imposto de Renda retido na fonte foi de:",
+    options: [
+      { id: "a", text: "R$ 56.600,00.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 56.400,00.", isCorrect: false, distractorRationale: "Aplicou a alíquota de 20,0% referente ao intervalo de 181 a 360 dias." },
+      { id: "c", text: "R$ 56.800,00.", isCorrect: false, distractorRationale: "Aplicou a alíquota de 15,0% referente a prazos superiores a 720 dias." },
+      { id: "d", text: "R$ 47.850,00.", isCorrect: false, distractorRationale: "Cobrou o IR sobre o capital inicial total e não sobre o rendimento auferido." },
+      { id: "e", text: "R$ 58.000,00.", isCorrect: false, distractorRationale: "Esqueceu de deduzir o imposto de renda retido na fonte." }
+    ],
+    detailedExplanation: {
+      summary: "Para 400 dias de aplicação (intervalo entre 361 e 720 dias), a alíquota de IR é de 17,5%. O imposto incide apenas sobre o ganho de capital (rendimento): IR = 17,5% de R$ 8.000,00 = R$ 1.400,00. Rendimento líquido = 8.000 - 1.400 = R$ 6.600,00. Total resgatado = 50.000 + 6.600 = R$ 56.600,00.",
+      stepByStep: [
+        "1. Identificar o prazo da aplicação: 400 dias decorridos.",
+        "2. Consultar a faixa correspondente na tabela regressiva: 361 a 720 dias -> alíquota de 17,5%.",
+        "3. Calcular o valor do Imposto de Renda (incidente somente sobre o rendimento de R$ 8.000):",
+        "   IR = 0,175 · R$ 8.000,00 = R$ 1.400,00.",
+        "4. Calcular o rendimento líquido:",
+        "   Rendimento Líquido = R$ 8.000,00 - R$ 1.400,00 = R$ 6.600,00.",
+        "5. Somar ao capital principal investido:",
+        "   Total Líquido Resgatado = R$ 50.000,00 + R$ 6.600,00 = R$ 56.600,00.",
+        "6. Conclusão: a investidora recebe R$ 56.600,00 líquidos na conta."
+      ],
+      coreConcept: "Tabela Regressiva de Renda Fixa e Incidência de Imposto de Renda sobre Ganho de Capital",
+      trapWarning: "No ENEM: Imposto de Renda em aplicações financeiras incide APENAS sobre o rendimento (lucro), NUNCA sobre o capital principal investido!"
+    },
+    commonTraps: [
+      "Calcular o IR sobre os R$ 58.000 totais em vez de apenas sobre o rendimento de R$ 8.000",
+      "Errar a faixa de dias na tabela regressiva"
+    ],
+    tags: ["renda-fixa", "imposto-de-renda", "tabela-regressiva", "cdb", "retorno-liquido"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FIN-024",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Juros Embutidos: Compra à Vista com Desconto vs Parcelamento",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um monitor ultrarresistente para computação médica é comercializado em uma loja de informática por R$ 1.200,00 para pagamento parcelado em duas vezes de R$ 600,00 (uma parcela de entrada no ato da compra e a segunda parcela exatamente 30 dias após a compra). Para pagamento integral à vista em dinheiro ou PIX, a loja oferece 10% de desconto sobre o valor de tabela.",
+      source: "ENEM / Educação Financeira do Consumidor."
+    },
+    prompt: "Caso o cliente opte pelo pagamento parcelado em vez do pagamento à vista com desconto, a taxa real de juros mensal embutida no financiamento do saldo devedor é de:",
+    options: [
+      { id: "a", text: "25,0%.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10,0%.", isCorrect: false, distractorRationale: "Confundiu a taxa de desconto à vista com a taxa de juros do financiamento sobre o saldo devedor." },
+      { id: "c", text: "20,0%.", isCorrect: false, distractorRationale: "Calculou R$ 120 / R$ 600 = 20%, esquecendo que o saldo financiado era de apenas R$ 480." },
+      { id: "d", text: "0,0%.", isCorrect: false, distractorRationale: "Caiu na ilusão do marketing comercial de que o parcelamento 'não tem juros'." },
+      { id: "e", text: "15,0%.", isCorrect: false, distractorRationale: "Média aritmética aleatória." }
+    ],
+    detailedExplanation: {
+      summary: "O valor real do produto à vista é 1.200 - 10% = R$ 1.080,00. Na opção parcelada, o comprador paga R$ 600 de entrada no ato, restando uma dívida financiada de R$ 1.080 - 600 = R$ 480,00. Como paga R$ 600 após 30 dias para quitar essa dívida de R$ 480, os juros são de R$ 120,00. A taxa mensal é: i = 120 / 480 = 1 / 4 = 25,0%.",
+      stepByStep: [
+        "1. Determinar o preço real à vista (valor presente do bem):",
+        "   P_vista = R$ 1.200,00 - 10% = R$ 1.200,00 - R$ 120,00 = R$ 1.080,00.",
+        "2. Analisar o fluxo de caixa do parcelamento:",
+        "   - Entrada paga no ato (mês 0): R$ 600,00.",
+        "   - Saldo devedor real financiado: R$ 1.080,00 - R$ 600,00 = R$ 480,00.",
+        "3. Valor pago após 30 dias para quitar o saldo:",
+        "   Segunda parcela (mês 1): R$ 600,00.",
+        "4. Calcular os juros nominais pagos:",
+        "   Juros = Parcela - Saldo Devedor = R$ 600,00 - R$ 480,00 = R$ 120,00.",
+        "5. Calcular a taxa de juros sobre o capital realmente financiado:",
+        "   i = Juros / Saldo Devedor = 120 / 480 = 1 / 4 = 0,25 = 25,0% ao mês.",
+        "6. Conclusão: a loja cobra uma taxa exorbitante de 25% ao mês disfarçada de 'sem juros'."
+      ],
+      coreConcept: "Cálculo de Juros Implícitos em Parcelamento com Entrada",
+      trapWarning: "No ENEM: NUNCA calcule os juros sobre o preço cheio da mercadoria! Calcule SEMPRE sobre o saldo que ficou efetivamente financiado após a entrada: (Preço à vista - Entrada)."
+    },
+    commonTraps: [
+      "Acreditar que não há juros porque 600 + 600 = 1.200",
+      "Dividir o desconto pelo total da compra em vez de dividir pelo saldo financiado"
+    ],
+    tags: ["juros-embutidos", "desconto-a-vista", "parcelamento", "saldo-devedor", "consumidor"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "MAT-FIN-025",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Custo Efetivo Total (CET) e Encargos Acessórios",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Banco Central do Brasil exige que todas as instituições financeiras informem aos clientes o Custo Efetivo Total (CET) das operações de empréstimo. O CET expressa a taxa percentual anual e mensal que engloba não apenas os juros remuneratórios contratados, mas também todos os tributos obrigatórios (IOF), tarifas de cadastro (TAC) e despesas administrativas embutidas nas prestações.",
+      source: "Banco Central do Brasil. Resolução CMN nº 3.517."
+    },
+    prompt: "Um tomador de crédito analisa duas propostas para um empréstimo pessoal de R$ 10.000,00 a ser quitado em parcela única após 12 meses:\n• Banco Alfa: taxa de juros de 1,5% ao mês, taxa de abertura de crédito (TAC) de R$ 500,00 e seguro de R$ 300,00 deduzidos do valor liberado na conta.\n• Banco Beta: taxa de juros de 1,8% ao mês, com isenção total de tarifas de cadastro, seguros e taxas administrativas.\nO instrumento obrigatório que permite ao consumidor comparar diretamente qual das duas opções representa o menor custo financeiro real global é o:",
+    options: [
+      { id: "a", text: "Custo Efetivo Total (CET), pois ele padroniza todos os encargos, tarifas e tributos em uma única taxa percentual comparável calculada sobre o valor líquido efetivamente recebido.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "Índice Nacional de Preços ao Consumidor Amplo (IPCA), que define os limites legais de juros de bancos públicos.", isCorrect: false, distractorRationale: "O IPCA mede a inflação do consumidor, não a taxa de custos operacionais do empréstimo bancário." },
+      { id: "c", text: "extrato de limite do cheque especial, que avalia o patrimônio imobiliário de garantia.", isCorrect: false, distractorRationale: "O cheque especial é uma linha rotativa de crédito de curto prazo, não o indexador regulatório comparativo de empréstimos." },
+      { id: "d", text: "saldo acumulado do Fundo de Garantia por Tempo de Serviço (FGTS).", isCorrect: false, distractorRationale: "O FGTS é benefício trabalhista rescisório, sem relação com cálculo de taxas bancárias em empréstimos." },
+      { id: "e", text: "valor nominal da taxa Selic Over diária divulgada pelo Copom.", isCorrect: false, distractorRationale: "A Selic é a taxa básica da economia, não o custo total individual contratado no varejo bancário." }
+    ],
+    detailedExplanation: {
+      summary: "O Custo Efetivo Total (CET) foi criado pelo Banco Central exatamente para impedir que instituições atraiam clientes com juros nominais aparentemente baixos enquanto cobram altas tarifas embutidas que elevam o custo real da operação.",
+      stepByStep: [
+        "1. Problema de assimetria de informação: Bancos podem anunciar juros baixos (ex: 1,5% ao mês), mas descontar R$ 800 de taxas na hora de entregar o dinheiro (o cliente só recebe R$ 9.200, mas paga juros sobre R$ 10.000).",
+        "2. Definição do CET: Taxa interna de retorno (TIR) que iguala o fluxo do dinheiro líquido recebido ao fluxo de todos os pagamentos futuros.",
+        "3. Função pedagógica e regulatória: Permite comparar contratos de diferentes bancos na mesma métrica percentual consolidada.",
+        "4. Conclusão: O CET é o único índice técnico confiável para o consumidor tomar a decisão mais vantajosa."
+      ],
+      coreConcept: "Custo Efetivo Total (CET), Transparência Bancária e Proteção do Consumidor",
+      trapWarning: "No ENEM: Nunca compare empréstimos olhando apenas para a taxa de juros nominal anunciada no folheto! Compare SEMPRE o CET."
+    },
+    commonTraps: [
+      "Achar que taxa de juros e CET são a mesma coisa",
+      "Ignorar tarifas administrativas que reduzem o capital liberado na conta do cliente"
+    ],
+    tags: ["cet", "custo-efetivo-total", "banco-central", "emprestimo", "educacao-financeira"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 
