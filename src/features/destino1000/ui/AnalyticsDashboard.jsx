@@ -65,7 +65,7 @@ export function AnalyticsDashboard({ playerState, onStartSimulado }) {
             <span>Diagnóstico Acadêmico & Projeção ENEM</span>
           </span>
           <h1 className="font-display text-2xl sm:text-3xl text-white font-bold mt-1">
-            Painel de Evolução da Beatriz
+            Painel de Evolução de {profile.name || "Beatriz"}
           </h1>
         </div>
 
