@@ -5,12 +5,14 @@ import {
   BarChart3,
   GraduationCap,
   Target,
-  Home
+  Home,
+  BookOpen
 } from "lucide-react";
 
 import { HUD } from "./ui/HUD";
 import { DashboardHome } from "./ui/DashboardHome";
 import { AreaStudyHub } from "./ui/AreaStudyHub";
+import { BibliotecaHub } from "./ui/BibliotecaHub";
 import { StudyStation } from "./ui/StudyStation";
 import { RedacaoLab } from "./ui/RedacaoLab";
 import { AnalyticsDashboard } from "./ui/AnalyticsDashboard";
@@ -417,6 +419,25 @@ export default function Destino1000App({ onBack }) {
                 onGoToRedacao={() => setActiveTab("redacao")}
                 onGoToAnalytics={() => setActiveTab("evolucao")}
                 onGoToAreas={() => setActiveTab("areas")}
+                onGoToBiblioteca={() => setActiveTab("biblioteca")}
+              />
+            </motion.div>
+          )}
+
+          {activeTab === "biblioteca" && (
+            <motion.div
+              key="biblioteca"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+            >
+              <BibliotecaHub
+                onStartTopicSession={(modulePath) => {
+                  handleStartTopicSession(modulePath);
+                  setActiveTab("estudo");
+                }}
+                onBackToHub={() => setActiveTab("inicio")}
               />
             </motion.div>
           )}
@@ -594,6 +615,17 @@ export default function Destino1000App({ onBack }) {
             >
               <Home size={20} />
               <span className="text-[0.65rem]">Início</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => { destinoAudio.playClick(); setActiveTab("biblioteca"); }}
+              className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+                activeTab === "biblioteca" ? "text-amber-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+              }`}
+            >
+              <BookOpen size={20} />
+              <span className="text-[0.65rem]">Livros</span>
             </button>
 
             <button

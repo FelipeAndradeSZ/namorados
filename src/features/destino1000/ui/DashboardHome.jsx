@@ -36,6 +36,7 @@ export function DashboardHome({
   onGoToRedacao,
   onGoToAnalytics,
   onGoToAreas,
+  onGoToBiblioteca,
 }) {
   const {
     profile = {},
@@ -445,6 +446,37 @@ export function DashboardHome({
           </span>
         </motion.button>
       </div>
+
+      {/* ═══ BIBLIOTECA DIDÁTICA (APOSTILAS COMPLETAS) ═══ */}
+      <motion.button
+        type="button"
+        onClick={onGoToBiblioteca}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.38 }}
+        className="w-full rounded-2xl border border-amber-500/30 bg-gradient-to-r from-amber-950/40 via-orange-950/20 to-slate-900/60 p-4 hover:bg-amber-950/60 hover:border-amber-400/60 transition cursor-pointer flex items-center justify-between group shadow-lg"
+      >
+        <div className="flex items-center gap-3">
+          <div className="p-2.5 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
+            <BookOpen size={22} />
+          </div>
+          <div className="text-left">
+            <div className="flex items-center gap-2">
+              <h3 className="font-bold text-white text-sm">Biblioteca Didática: 7 Apostilas Completas</h3>
+              <span className="px-1.5 py-0.5 rounded text-[0.6rem] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                Padrão Medicina
+              </span>
+            </div>
+            <p className="text-[0.65rem] text-slate-300 mt-0.5">
+              Livros aprofundados de Funções, Eletrodinâmica, Ecologia, Brasil Contemporâneo, Argumentação e Redação 1000.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-1 text-xs font-bold text-amber-300 group-hover:translate-x-1 transition">
+          <span>Abrir Biblioteca</span>
+          <ChevronRight size={18} />
+        </div>
+      </motion.button>
 
       {/* ═══ EXPLORAR TODAS AS ÁREAS ═══ */}
       <motion.button
