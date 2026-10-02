@@ -41,6 +41,7 @@ export const QUESTION_MODULES = {
   "linguagens/variacao-linguistica": () => import("./questions/linguagens/variacao-linguistica.js"),
   "linguagens/artes-visuais-musica": () => import("./questions/linguagens/artes-visuais-musica.js"),
   "linguagens/coesao-coerencia": () => import("./questions/linguagens/coesao-coerencia.js"),
+  "linguagens/ingles-instrumental": () => import("./questions/linguagens/ingles-instrumental.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
@@ -54,6 +55,7 @@ export const QUESTION_MODULES = {
   "humanas/geografia-fisica-clima": () => import("./questions/humanas/geografia-fisica-clima.js"),
   "humanas/historia-geral": () => import("./questions/humanas/historia-geral.js"),
   "humanas/brasil-imperio": () => import("./questions/humanas/brasil-imperio.js"),
+  "humanas/afro-indigena": () => import("./questions/humanas/afro-indigena.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),

@@ -1793,6 +1793,82 @@ export const THEORY_CONTENT = {
       "O produto das raízes auxiliares y1 · y2 não é o produto das raízes x1 · x2, mas sim a^(x1 + x2)!"
     ],
     mnemonics: "Se o expoente tá no alto, o logaritmo tomba ele pro chão; produto vira soma e fração vira subtração."
+  },
+
+  "linguagens/ingles-instrumental": {
+    topic: "Língua Estrangeira: Inglês Instrumental",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 2 da Matriz do ENEM (H5 a H8): 5 questões garantidas na abertura da prova de Linguagens.",
+    highFrequencySkills: ["H5 - Identificar marcas linguísticas de intenção discursiva", "H6 - Utilizar conhecimentos de língua estrangeira para acesso à informação", "H7 - Relacionar termos e vocabulário ao contexto sociocultural", "H8 - Reconhecer valores e produções culturais em língua estrangeira"],
+    overview: "O ENEM não avalia regras gramaticais isoladas em língua estrangeira, mas a capacidade leitora crítica (leitura instrumental). Os textos exploram divulgação científica, campanhas de saúde pública, tirinhas e charges com ironia e reivindicações sociais globais.",
+    keyConcepts: [
+      {
+        title: "Estratégias de Leitura: Skimming vs. Scanning",
+        content: "• Skimming: leitura rápida e panorâmica para apreender a ideia central, o gênero textual, a tese do autor e o público-alvo (leia primeiro o título, subtítulo e primeira/última frase dos parágrafos). • Scanning: varredura visual cirúrgica para localizar dados pontuais solicitados no enunciado (datas, percentuais, nomes próprios ou termos técnicos)."
+      },
+      {
+        title: "Falsos Cognatos Recorrentes (False Friends)",
+        content: "Palavras com grafia semelhante ao português, mas com significado distinto: • Actually = na realidade / de fato (não atualmente); • Pretend = fingir (não pretender; pretender é 'intend'); • Notice = perceber / notar / aviso (não notícia); • Realize = dar-se conta / perceber (não apenas realizar); • Push = empurrar (não puxar; puxar é 'pull'); • Novel = romance literário (não novela televisiva); • Resume = retomar / reiniciar (não resumir); • Fabric = tecido / fibra (não fábrica; fábrica é 'factory')."
+      },
+      {
+        title: "Conectivos Argumentativos e Discursivos",
+        content: "Marcadores de contraste e ressalva: However (no entanto), Although / Even though (embora), Despite / In spite of (apesar de), Whereas / While (enquanto que / ao passo que). Marcadores de adição e progressão: Furthermore / Moreover / In addition (além disso). Marcadores de conclusão: Therefore / Thus / Hence (portanto). Marcadores de condição: Unless (a não ser que / a menos que)."
+      },
+      {
+        title: "Verbos Modais e Ponto de Vista do Autor",
+        content: "• Should / Ought to: conselho, recomendação de saúde ou dever ético. • May / Might / Could: possibilidade, hipótese cautelosa em artigos acadêmicos. • Must / Have to: obrigação estrita ou dedução lógica irrefutável. • Must not: proibição categórica."
+      }
+    ],
+    formulasAndRules: [
+      "Ordem Estratégica: No ENEM, LEIA SEMPRE O ENUNCIADO E AS ALTERNATIVAS EM PORTUGUÊS ANTES DE LER O TEXTO EM INGLÊS. O enunciado já revela o tema central e o que você deve buscar.",
+      "Regra do 'Despite': 'Despite' e 'In spite of' são seguidos de substantivo ou verbo com -ing, nunca de oração com verbo conjugado direto (ex: 'Despite the crisis, we succeeded').",
+      "Prefixos e Sufixos: -less indica ausência (homeless, careless), -ful indica plenitude (hopeful, helpful), mis- indica erro/equívoco (misunderstand, mislead)."
+    ],
+    enemTraps: [
+      "Cuidado com a alternativa que traduz o falso cognato pelo sentido literal falso (ex: traduzir 'pretend' como ter a intenção de algo em vez de fingir).",
+      "Em tirinhas ou charges (cartoons), a chave interpretativa está na quebra de expectativa entre o texto verbal e a expressão fisionômica das personagens.",
+      "Não selecione a alternativa apenas porque ela repetiu uma palavra idêntica do texto: distratores adoram copiar palavras soltas fora do contexto para atrair quem faz leitura ingênua."
+    ],
+    mnemonics: "Enunciado primeiro clareia a visão; 'actually' é de fato, 'pretend' é encenação."
+  },
+
+  "humanas/afro-indigena": {
+    topic: "História e Cultura Afro-Brasileira e Indígena",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Obrigatório pelas Leis 10.639/03 e 11.645/08. Presente em múltiplas questões das Competências 1, 3 e 5 e repertório de elite para a Redação.",
+    highFrequencySkills: ["H11 - Reconhecer identidades e diversidade cultural", "H14 - Comparar o significado de normas jurídicas e direitos de cidadania", "H15 - Avaliar ações de grupos sociais e lutas por emancipação"],
+    overview: "Estudo crítico das cosmologias originárias, territorialidade, marcos jurídicos (Art. 231 e Art. 68 do ADCT), pensadores negros fundamentais (Lélia Gonzalez, Abdias do Nascimento, Sueli Carneiro, Florestan Fernandes) e patrimônio cultural imaterial de matriz afro-brasileira.",
+    keyConcepts: [
+      {
+        title: "Cosmologias Indígenas e Crítica Ecológica (Krenak e Kopenawa)",
+        content: "Ailton Krenak desconstrói a ilusão ocidental de separação entre humanidade e natureza, propondo o parentesco com montanhas e rios para 'adiar o fim do mundo'. Davi Kopenawa ('A Queda do Céu') alerta para a ecologia xamânica yanomami: a devastação florestal pelo garimpo rompe o equilíbrio mantido pelos xapiri, ameaçando a sobrevivência de todos os povos."
+      },
+      {
+        title: "Artigo 231 da CF/88 e Direitos Originários Indígenas",
+        content: "A Constituição de 1988 rompeu com a tutela assimilacionista e reconheceu o 'indigenato' — direito originário (anterior à formação do Estado) à posse permanente e ao usufruto exclusivo das terras tradicionalmente ocupadas pela União. Em 2023, o STF julgou inconstitucional a tese do Marco Temporal (RE 1017365), reafirmando que o esbulho renitente e a violência pretérita não invalidam o direito territorial indígena."
+      },
+      {
+        title: "Amefricanidade e Interseccionalidade (Lélia Gonzalez e Sueli Carneiro)",
+        content: "Lélia Gonzalez articulou de maneira precursora as dimensões de raça, classe e gênero, cunhando o conceito de 'Amefricanidade' e a valorização do 'pretuguês'. Sueli Carneiro teorizou a urgência de 'enegrecer o feminismo', evidenciando que o mito da fragilidade feminina ignorou a mulher negra, submetida ao cativeiro, ao trabalho doméstico e à violência estrutural."
+      },
+      {
+        title: "Territórios Quilombolas e Patrimônio Imaterial",
+        content: "O Artigo 68 do ADCT e o Decreto 4.887/2003 fundamentam a titulação quilombola na autoatribuição (autoidentificação) e trajetória ancestral compartilhada. Manifestações como a Capoeira (patrimônio imaterial pela UNESCO) e o Cais do Valongo (sítio de memória sensível da diáspora) marcam a transição da criminalização e apagamento colonial para a afirmação do direito à memória."
+      }
+    ],
+    formulasAndRules: [
+      "Equação da Interseccionalidade: Raça + Gênero + Classe = Formas específicas e entrelaçadas de vulnerabilidade socioeconômica.",
+      "Terras Indígenas (CF/88, Art. 231): São bens públicos da União, inalienáveis e indisponíveis; os indígenas detêm a posse permanente e o usufruto exclusivo.",
+      "Critério Quilombola: Autoatribuição identitária e posse ancestral coletiva (Convenção 169 da OIT e Decreto 4.887/2003)."
+    ],
+    enemTraps: [
+      "Cuidado com o mito da democracia racial: o ENEM rejeita categoricamente qualquer tese de miscigenação harmônica sem conflito.",
+      "Terras indígenas NÃO são propriedade privada particular e não podem ser vendidas ou desmembradas no mercado.",
+      "Não confunda a abolição jurídica de 1888 com cidadania plena: Florestan Fernandes demonstrou que a abolição foi inconclusa e marginalizou deliberadamente a população negra."
+    ],
+    mnemonics: "Krenak adia o fim, Lélia cruza a opressão; o indigenato é originário e garante a posse do chão."
   }
 };
 
