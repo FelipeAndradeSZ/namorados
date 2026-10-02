@@ -1754,6 +1754,45 @@ export const THEORY_CONTENT = {
       "Não use 'onde' para retomar 'sociedade', 'livro', 'época' ou 'situação' na sua redação dissertativa."
     ],
     mnemonics: "Anáfora olha pra trás, catáfora anuncia a vez; o conectivo amarra a tese com clareza e sensatez."
+  },
+
+  "matematica/exponencial-logaritmos": {
+    topic: "Funções Exponenciais e Logaritmos",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Competência 5 do ENEM: Aplicações de crescimento bacteriano, decaimento radioativo, Escala Richter, decibéis e pH.",
+    highFrequencySkills: ["H19 - Identificar representações de funções exponenciais e logarítmicas", "H21 - Modelar fenômenos de variação exponencial", "H22 - Utilizar logaritmos para linearizar grandezas e resolver equações"],
+    overview: "Estudo das funções exponenciais e suas inversas logarítmicas, propriedades operatórias, mudança de base e modelagem de fenômenos de crescimento e decaimento acelerados.",
+    keyConcepts: [
+      {
+        title: "Função Exponencial e Meia-Vida",
+        content: "Crescimento contínuo: P(t) = P_0 · (1 + i)^t ou P(t) = P_0 · 2^(t/T_dup). Decaimento radioativo: M(t) = M_0 · (1/2)^(t/T_meia_vida) = M_0 / (2^k). A cada ciclo de meia-vida decorrido, a massa remanescente divide-se por 2. Base a > 1 gera curva crescente; 0 < a < 1 gera curva decrescente assintótica ao eixo x."
+      },
+      {
+        title: "Definição e Propriedades dos Logaritmos",
+        content: "log_b(a) = x ⟺ b^x = a (com a > 0, b > 0, b ≠ 1). Propriedades operatórias fundamentais: • Produto: log(a · b) = log a + log b; • Quociente: log(a / b) = log a - log b; • Potência (regra do tombo): log(a^k) = k · log a; • Raiz: log(ⁿ√a) = (1/n) · log a; • Mudança de base: log_b(a) = log_c(a) / log_c(b)."
+      },
+      {
+        title: "Escalas Científicas e Modelagem no ENEM",
+        content: "• Escala Richter (magnitude de sismos): M = (2/3) · log10(E / E_0) — a variação de 2 pontos na magnitude significa energia 1.000 vezes maior (10³). • Nível sonoro (decibéis): β = 10 · log10(I / I_0) — cada acréscimo de 10 dB multiplica a intensidade por 10. • Escala de pH: pH = -log10[H+] — se [H+] = 2 · 10⁻³, pH = 3 - log(2)."
+      },
+      {
+        title: "Equações Exponenciais e Mudança de Variável",
+        content: "Para equações do tipo a^(2x) + b · a^x + c = 0, adota-se a variável auxiliar y = a^x (com y > 0 obrigatório), recaindo em equação do 2º grau. Em inequações, atente para a base: se 0 < a < 1, inverta a desigualdade (ex: (1/2)^x > (1/2)³ ⟹ x < 3)."
+      }
+    ],
+    formulasAndRules: [
+      "Decaimento por Meia-Vida: M = M_0 / (2^k), com k = tempo / meia-vida.",
+      "Técnica do log(5): log(5) = log(10 / 2) = log(10) - log(2) = 1 - log(2).",
+      "Mudança de Base: log_b(a) = log10(a) / log10(b).",
+      "Resolução Exponencial: a^t = b ⟹ t = log(b) / log(a)."
+    ],
+    enemTraps: [
+      "Condição de existência do logaritmo: o argumento deve ser estritamente positivo (x > 0). Raízes que gerem logaritmo de número negativo ou de zero devem ser descartadas!",
+      "Em inequações exponenciais, inverter o sinal se a base for menor que 1 ou se multiplicar/dividir por número negativo.",
+      "O produto das raízes auxiliares y1 · y2 não é o produto das raízes x1 · x2, mas sim a^(x1 + x2)!"
+    ],
+    mnemonics: "Se o expoente tá no alto, o logaritmo tomba ele pro chão; produto vira soma e fração vira subtração."
   }
 };
 

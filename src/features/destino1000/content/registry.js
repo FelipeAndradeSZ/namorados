@@ -27,6 +27,7 @@ export const QUESTION_MODULES = {
   "matematica/geometria-analitica": () => import("./questions/matematica/geometria-analitica.js"),
   "matematica/progressoes": () => import("./questions/matematica/progressoes.js"),
   "matematica/geometria-plana": () => import("./questions/matematica/geometria-plana.js"),
+  "matematica/exponencial-logaritmos": () => import("./questions/matematica/exponencial-logaritmos.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
