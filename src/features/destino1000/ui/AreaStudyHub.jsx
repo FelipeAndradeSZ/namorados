@@ -39,6 +39,7 @@ const AREA_TOPICS = {
     { id: "natureza/fisiologia-humana", name: "Fisiologia Humana e Imunologia", tag: "Biologia", priority: "Crítica • Top Medicina", questionsCount: 25 },
     { id: "natureza/fisica-moderna", name: "Física Moderna, Radiações e Energia Nuclear", tag: "Física", priority: "Crítica • Efeito Fotoelétrico e Nuclear", questionsCount: 25 },
     { id: "natureza/bioquimica-metabolismo", name: "Bioquímica Celular, Bioenergética e Metabolismo", tag: "Biologia", priority: "Crítica • Top Medicina & Respiração/Fotossíntese", questionsCount: 25 },
+    { id: "natureza/optica-geometrica-ondas", name: "Óptica Geométrica, Reflexão, Refração e Lentes Esféricas", tag: "Física", priority: "Crítica • Snell, Foco e Visão", questionsCount: 25 },
   ],
   matematica: [
     { id: "matematica/razao-proporcao", name: "Razão, Proporção e Escala", tag: "Aritmética", priority: "Crítica • Mais Cobrado", questionsCount: 25 },

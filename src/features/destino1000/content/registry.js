@@ -86,6 +86,7 @@ export const QUESTION_MODULES = {
   "natureza/fisiologia-humana": () => import("./questions/natureza/fisiologia-humana.js"),
   "natureza/fisica-moderna": () => import("./questions/natureza/fisica-moderna.js"),
   "natureza/bioquimica-metabolismo": () => import("./questions/natureza/bioquimica-metabolismo.js"),
+  "natureza/optica-geometrica-ondas": () => import("./questions/natureza/optica-geometrica-ondas.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),

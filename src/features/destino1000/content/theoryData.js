@@ -2197,6 +2197,56 @@ export const THEORY_CONTENT = {
     mnemonics: "A água dá o O₂ pro ar; a glicose dá o CO₂ pra expirar; e o aceptor final é o O₂ que faz a água brotar!"
   },
 
+  "natureza/optica-geometrica-ondas": {
+    topic: "Óptica Geométrica, Reflexão, Refração e Lentes Esféricas",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Competência 2 e 5 (H5, H6, H17, H18): Presente com grande regularidade na prova de Física, com forte viés de aplicação prática em saúde (ametropias da visão humana), tecnologias biomédicas (endoscopia por fibra óptica) e segurança (retrovisores convexos e sinalização marítima).",
+    highFrequencySkills: [
+      "H5 - Identificar fenômenos luminosos e trajetórias de raios em sistemas ópticos",
+      "H6 - Interpretar modelos conceituais de formação de imagens reais e virtuais",
+      "H17 - Avaliar o funcionamento de instrumentos ópticos de aumento e projeção (lupa, câmara escura, projetor)",
+      "H18 - Diagnosticar ametropias oculares (miopia, hipermetropia, astigmatismo, presbiopia) e determinar a vergência de lentes corretivas"
+    ],
+    overview: "A Óptica Geométrica trata a luz como raios que se propagam retilineamente em meios homogêneos e transparentes. O ENEM valoriza o entendimento físico e determinístico de três grandes eixos: 1) Reflexão em espelhos planos (simetria e translação/rotação) e esféricos (côncavos para dentistas/faróis e convexos para retrovisores/segurança); 2) Refração e reflexão total (Lei de Snell-Descartes, dispersão cromática no arco-íris, miragens atmosféricas por gradiente térmico e fibras ópticas em telecomunicações e endoscopia); 3) Lentes esféricas delgadas, equação de Gauss e a física da visão humana (cálculo de vergência em dioptrias para miopia e hipermetropia).",
+    keyConcepts: [
+      {
+        title: "Leis da Reflexão e Espelhos Esféricos de Gauss",
+        content: "• 1ª Lei: O raio incidente, a reta normal e o raio refletido são coplanares.\n• 2ª Lei: O ângulo de incidência é igual ao de reflexão (i = r).\n• Espelhos Planos: Produzem imagem SEMPRE virtual, direita, de mesmo tamanho e enantiomorfa (simétrica em relação ao plano). O espelho vertical mínimo para ver o corpo inteiro tem metade da altura da pessoa (H/2).\n• Espelhos Côncavos (f > 0): Podem formar imagens reais (invertidas) ou virtuais (direitas e ampliadas se p < f, como no espelho odontológico ou de maquiagem).\n• Espelhos Convexos (f < 0): Formam SEMPRE imagem virtual, direita e reduzida, ampliando o campo visual (retrovisores de veículos e vigilância patrimonial)."
+      },
+      {
+        title: "Lei de Snell-Descartes e Reflexão Total",
+        content: "• Refração: n₁ · sen(θ₁) = n₂ · sen(θ₂), onde n = c / v.\n• Ao passar para meio mais refringente (n₂ > n₁): a velocidade diminui e o raio aproxima-se da normal (θ₂ < θ₁).\n• Ao passar para meio menos refringente (n₂ < n₁): o raio afasta-se da normal (θ₂ > θ₁).\n• Ângulo Limite (θc) e Reflexão Total: Ocorre SOMENTE quando a luz tenta passar do meio MAIS refringente para o MENOS refringente e o ângulo de incidência excede θc, com sen(θc) = n_menor / n_maior. Aplicações: fibras ópticas e endoscopia médica."
+      },
+      {
+        title: "Lentes Esféricas e Equação dos Pontos Conjugados (Gauss)",
+        content: "• Equação de Gauss: 1/f = 1/p + 1/p'.\n• Aumento Linear Transversal: A = i / o = -p' / p = f / (f - p).\n• Lentes Convergentes (f > 0): Bordos finos no ar. Podem projetar imagens reais (p' > 0) em telas/sensores ou gerar imagem virtual e ampliada (lupa quando p < f).\n• Lentes Divergentes (f < 0): Bordos grossos no ar. Formam SEMPRE imagem virtual (p' < 0), direita (A > 0) e menor para qualquer objeto real."
+      },
+      {
+        title: "Óptica da Visão e Ametropias Oculares",
+        content: "• Olho Emétrope: Sistema convergente cornea-cristalino projeta foco de objetos no infinito exatamente sobre a retina sem acomodação.\n• Miopia: Globo ocular longo ou córnea hiperconvergente. Foco forma-se ANTES da retina. Correção: Lente DIVERGENTE (V < 0), com V = -1 / d_remoto (em metros).\n• Hipermetropia: Globo ocular curto. Foco de objetos próximos forma-se ATRÁS da retina. Correção: Lente CONVERGENTE (V > 0), com V = 1/0,25 - 1/d_pp.\n• Presbiopia (vista cansada): Enrijecimento do cristalino na maturidade, reduzindo a capacidade de acomodação para perto. Correção: Lente CONVERGENTE.\n• Astigmatismo: Curvatura assimétrica da córnea em diferentes meridianos, gerando múltiplos focos. Correção: Lente CILÍNDRICA ou TÓRICA."
+      }
+    ],
+    formulasAndRules: [
+      "Lei de Snell: n₁ · sen(θ₁) = n₂ · sen(θ₂).",
+      "Ângulo Limite: sen(θc) = n_menor / n_maior (luz do mais para o menos refringente).",
+      "Equação de Gauss: 1/f = 1/p + 1/p'.",
+      "Aumento Transversal: A = i / o = -p' / p = f / (f - p).",
+      "Vergência (Grau): V = 1 / f (foco em metros; unidade: dioptria, D ou m⁻¹).",
+      "Lentes Justapostas em Contato: V_eq = V₁ + V₂.",
+      "Dioptro Plano Paraxial: h' / h = n_observador / n_objeto.",
+      "Espelhos Planos Angulares: N = (360° / α) - 1."
+    ],
+    enemTraps: [
+      "Esquecer de converter a distância focal de centímetros para metros ao calcular a vergência V = 1/f.",
+      "Inverter o sinal da vergência: miopia usa lente divergente (V < 0), e hipermetropia usa convergente (V > 0).",
+      "Esquecer que o seno do ângulo limite é n_menor / n_maior (o seno não pode ser superior a 1).",
+      "Achar que lente convergente só forma imagem real: quando o objeto está entre o foco e a lente (lupa), ela forma imagem VIRTUAL, DIREITA e MAIOR.",
+      "Confundir imagem real (sempre invertida por uma lente) com imagem virtual (sempre direita)."
+    ],
+    mnemonics: "Miopia: 'Míope Diverge pra ver de longe' (Lente Divergente, foco negativo). Hipermetropia: 'Hiper Converge pra ler de perto' (Lente Convergente, foco positivo)."
+  },
+
   "matematica/aritmetica-divisibilidade": {
     topic: "Aritmética Básica, Notação Científica e MDC/MMC",
     area: "matematica",
