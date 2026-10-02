@@ -398,6 +398,407 @@ export const QUESTIONS_SOCIOLOGIA_FILOSOFIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-006",
+    area: "humanas",
+    competence: 4,
+    skill: 16,
+    topic: "Sociologia",
+    subtopic: "Pierre Bourdieu e a Reprodução Social",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em suas investigações sobre o sistema educacional francês, Pierre Bourdieu e Jean-Claude Passeron demonstraram que a instituição escolar, sob a aparência de neutralidade e de avaliação puramente meritocrática dos talentos individuais, tende a valorizar e a exigir de todos os alunos as posturas corporais, o domínio linguístico erudito e as referências simbólicas que são transmitidas espontaneamente pelas famílias das classes de maior prestígio social.",
+      source: "Pierre Bourdieu e Jean-Claude Passeron, A Reprodução: Elementos para uma Teoria do Sistema de Ensino (adaptado)."
+    },
+    prompt: "Segundo a sociologia crítica de Pierre Bourdieu, a dinâmica escolar analisada no texto atua na sociedade capitalista como:",
+    options: [
+      { id: "a", text: "um mecanismo de violência simbólica que converte o capital cultural herdado em suposto mérito individual, legitimando a reprodução das desigualdades.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "um instrumento neutro e infalível de ascensão social imediata e igualitária para todos os estudantes pertencentes aos grupos vulneráveis.", isCorrect: false, distractorRationale: "Bourdieu critica exatamente o mito da escola como elevador social automático e neutro." },
+      { id: "c", text: "um espaço autônomo e isolado que elimina integralmente a influência do ambiente familiar no rendimento acadêmico dos jovens.", isCorrect: false, distractorRationale: "O autor demonstra que a bagagem familiar (capital cultural e habitus) é decisiva para o sucesso escolar." },
+      { id: "d", text: "uma corporação medieval voltada prioritariamente ao treinamento prático de ofícios braçais manuais.", isCorrect: false, distractorRationale: "O foco da crítica de Bourdieu recai sobre a escola republicana e o sistema universitário contemporâneo." },
+      { id: "e", text: "um ambiente imune a qualquer tipo de hierarquização simbólica ou classificação de competências.", isCorrect: false, distractorRationale: "A escola opera permanentemente mediante mecanismos de veredito e classificação simbólica." }
+    ],
+    detailedExplanation: {
+      summary: "Bourdieu demonstrou que a escola trata como iguais estudantes que são socialmente desiguais, recompensando o capital cultural transmitido pela família burguesa.",
+      stepByStep: [
+        "O conceito de 'capital cultural' abrange o domínio da linguagem formal, o repertório artístico e os hábitos intelectuais herdados.",
+        "A escola exige de todos um padrão cultural que apenas as classes dominantes transmitem no ambiente doméstico.",
+        "Ao premiar os alunos que já possuem esse capital prévio como 'mais inteligentes' ou 'esforçados', a escola pratica 'violência simbólica', consagrando o privilégio de classe como mérito acadêmico legítimo."
+      ],
+      coreConcept: "Capital Cultural, Violência Simbólica e Reprodução Social em Bourdieu",
+      trapWarning: "Atenção: Bourdieu não defende que os alunos pobres sejam incapazes, mas denuncia que o critério de avaliação da escola não é neutro."
+    },
+    commonTraps: ["confundir capital cultural com capital economico direto", "achar que a teoria defende a meritocracia escolar"],
+    tags: ["pierre bourdieu", "capital cultural", "violencia simbolica", "sociologia da educacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-006",
+    area: "humanas",
+    competence: 5,
+    skill: 23,
+    topic: "Filosofia Política",
+    subtopic: "Michel Foucault: Sociedade Disciplinar e Panóptico",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao analisar a arquitetura do 'Panóptico' idealizado pelo jurista Jeremy Bentham no século XVIII — uma torre central de observação cercada por celas periféricas retroiluminadas —, o filósofo Michel Foucault observa que o efeito principal dessa disposição é induzir no detento um estado consciente e permanente de visibilidade, que assegura o funcionamento automático do poder. Faz-se com que a vigilância seja permanente em seus efeitos, mesmo que descontínua em sua ação.",
+      source: "Michel Foucault, Vigiar e Punir: Nascimento da Prisão (adaptado)."
+    },
+    prompt: "Na perspectiva foucaultiana, o dispositivo disciplinar do panóptico exemplifica uma mutação histórica crucial na mecânica do poder moderno, caracterizada por:",
+    options: [
+      { id: "a", text: "substituir os suplícios físicos espetaculares pela internalização da disciplina e pelo controle constante dos corpos e condutas dos indivíduos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "extinguir qualquer intervenção do Estado ou de instituições hierárquicas na organização da vida social.", isCorrect: false, distractorRationale: "O poder disciplinar capilarizou as instituições (hospitais, escolas, quartéis, fábricas), expandindo a vigilância." },
+      { id: "c", text: "restringir o poder punitivo unicamente a cerimônias religiosas e condenações post-mortem.", isCorrect: false, distractorRationale: "A disciplina foucaultiana é imanente, técnica, científica e laica sobre o corpo vivo dos indivíduos." },
+      { id: "d", text: "promover a emancipação anárquica da sociedade contra todas as regras institucionais de convivência.", isCorrect: false, distractorRationale: "Foucault explica o adestramento e a docilização dos corpos, não uma emancipação anárquica." },
+      { id: "e", text: "dispensar qualquer tipo de arquitetura funcional ou divisão espacial nos estabelecimentos públicos.", isCorrect: false, distractorRationale: "A arquitetura e a ordenação espacial são elementos essenciais da tecnologia disciplinar." }
+    ],
+    detailedExplanation: {
+      summary: "Foucault mostra que a modernidade substituiu a violência física do monarca pela microfísica disciplinar dos corpos e da vigilância internalizada.",
+      stepByStep: [
+        "No Antigo Regime, o poder soberano afirmava-se pelo suplício sangrento e teatral no cadafalso.",
+        "A modernidade industrial desenvolve a 'sociedade disciplinar', na qual escolas, quartéis, prisões e fábricas adestram os corpos úteis e dóceis.",
+        "O modelo panóptico torna o indivíduo o princípio de sua própria sujeição, pois, ao saber que pode estar sendo visto a qualquer momento, ele mesmo fiscaliza seu comportamento."
+      ],
+      coreConcept: "Biopolítica, Microfísica do Poder e Sociedade Disciplinar em Foucault",
+      trapWarning: "O poder em Foucault não reside em um único ponto ou soberano; ele é capilar, relacional e opera em micropoderes institucionais."
+    },
+    commonTraps: ["achar que o panoptico serve apenas para prisoes", "confundir poder disciplinar com tirania fisica direta"],
+    tags: ["michel foucault", "panoptico", "sociedade disciplinar", "poder e vigilancia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-007",
+    area: "humanas",
+    competence: 4,
+    skill: 18,
+    topic: "Sociologia",
+    subtopic: "Zygmunt Bauman e a Modernidade Líquida",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Os fluidos se movem facilmente. Eles 'fluem', 'escorrem', 'esvaem-se', 'respingam', transbordam, vazam, inundam. Ao contrário dos sólidos, não são facilmente contidos: contornam obstáculos, perfuram barreiras e infiltram-se nas menores frestas. O derretimento dos sólidos da modernidade clássica — como os compromissos comunitários duradouros, a estabilidade profissional de longo prazo e as instituições de bem-estar social estáveis — inaugurou uma era em que tudo é temporário, volátil e customizado para consumo imediato.",
+      source: "Zygmunt Bauman, Modernidade Líquida (adaptado)."
+    },
+    prompt: "A metáfora sociológica da 'liquidez' proposta por Zygmunt Bauman diagnostica que, no contexto social contemporâneo:",
+    options: [
+      { id: "a", text: "os vínculos afetivos, profissionais e identitários tornam-se frágeis, marcados pela transitoriedade e pela lógica mercantil do descarte veloz.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "as instituições políticas alcançaram estabilidade perene, blindando a cidadania contra as oscilações do mercado financeiro.", isCorrect: false, distractorRationale: "Bauman argumenta o oposto: a política perdeu o controle sobre a fluidez econômica global." },
+      { id: "c", text: "a solidariedade de classe atingiu seu ápice histórico, unificando a classe trabalhadora em greves gerais permanentes.", isCorrect: false, distractorRationale: "A modernidade líquida gera individualismo extremado e enfraquecimento das ações coletivas de classe." },
+      { id: "d", text: "os indivíduos recusam integralmente a utilização de ferramentas digitais e o consumo de bens materiais de tecnologia.", isCorrect: false, distractorRationale: "O consumo desenfreado e as conexões virtuais efêmeras são a própria marca da sociedade líquida." },
+      { id: "e", text: "as tradições comunitárias ancestrais voltaram a ser a norma inquestionável do comportamento urbano moderno.", isCorrect: false, distractorRationale: "As tradições sólidas foram justamente dissolvidas pela lógica da volatilidade contemporânea." }
+    ],
+    detailedExplanation: {
+      summary: "Bauman cunhou o termo 'Modernidade Líquida' para retratar a era da incerteza, da fragilidade das relações humanas e do hiperindividualismo consumista.",
+      stepByStep: [
+        "A fase 'sólida' da modernidade fundava-se na durabilidade: casamentos para toda a vida, carreiras lineares, engajamentos sindicais duradouros.",
+        "A fase 'líquida' transforma tudo em produtos descartáveis: as relações viram conexões substituíveis com um clique, e os cidadãos transformam-se em meros consumidores.",
+        "Essa ausência de certezas institucionais gera insegurança existencial, angústia e sensação de desamparo individual."
+      ],
+      coreConcept: "A Condição da Modernidade Líquida e Fragilização dos Laços Sociais",
+      trapWarning: "Lembre-se de que para Bauman a palavra 'líquido' simboliza ausência de forma fixa, volatilidade e rápida adaptabilidade ao mercado."
+    },
+    commonTraps: ["pensar que liquidez se refere a agua ou saneamento", "confundir liberdade de escolha com seguranca social"],
+    tags: ["zygmunt bauman", "modernidade liquida", "amor liquido", "consumo e individualismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-007",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Política",
+    subtopic: "Jürgen Habermas: Razão Comunicativa e Esfera Pública",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O agir comunicativo distingue-se fundamentalmente do agir estratégico ou instrumental. Enquanto este último visa à eficiência técnica e à dominação do outro mediante o cálculo egoísta de meios e fins, o agir comunicativo orienta-se para a obtenção do entendimento intersubjetivo mútuo. Nele, os participantes coordenam seus planos de ação não por meio de coerção armada, chantagem econômica ou autoridade dogmática, mas pelo intercâmbio racional de argumentos válidos em uma esfera pública aberta e democrática.",
+      source: "Jürgen Habermas, Teoria do Agir Comunicativo (adaptado)."
+    },
+    prompt: "De acordo com a teoria habermasiana, a validade e a legitimidade das normas éticas e das decisões políticas em um Estado democrático de direito repousam:",
+    options: [
+      { id: "a", text: "no consenso racionalmente motivado, alcançado mediante o debate público plural e livre de coerções coercitivas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "na imposição impositiva das convicções morais da autoridade clerical sobre toda a coletividade civil.", isCorrect: false, distractorRationale: "Habermas defende uma ética discursiva laica e pós-metafísica, nunca dogmas teológicos." },
+      { id: "c", text: "na predominância absoluta da razão instrumental subordinada unicamente à lucratividade das corporações.", isCorrect: false, distractorRationale: "A razão instrumental é justamente o que Habermas critica quando invade e coloniza o 'mundo da vida'." },
+      { id: "d", text: "na censura governamental aos grupos minoritários a fim de produzir uma falsa homogeneidade ideológica.", isCorrect: false, distractorRationale: "A situação ideal de fala exige a participação paritária de todas as vozes sem censura." },
+      { id: "e", text: "no confronto físico violento e na eliminação sumária dos oponentes partidários.", isCorrect: false, distractorRationale: "A violência é o exato oposto da ação comunicativa orientada ao entendimento mútuo." }
+    ],
+    detailedExplanation: {
+      summary: "Habermas sustenta que a legitimidade democrática advém da deliberação argumentativa na esfera pública (Ética do Discurso).",
+      stepByStep: [
+        "A racionalidade ocidental moderna não deve ficar restrita à razão técnica instrumental (calcular meios eficientes para dominar a natureza ou as pessoas).",
+        "A razão comunicativa busca o entendimento linguístico intersubjetivo entre sujeitos capazes de falar e agir.",
+        "Uma norma só é legítima se puder ser aprovada por todos os concernidos em um discurso prático conduzido pela força do melhor argumento."
+      ],
+      coreConcept: "Ação Comunicativa, Ética do Discurso e Deliberação Democrática em Habermas",
+      trapWarning: "Diferencie 'agir comunicativo' (busca entendimento mútuo) de 'agir estratégico' (usa o outro como instrumento para atingir uma meta particular)."
+    },
+    commonTraps: ["confundir consenso discursivo com imposicao majoritaria cega", "ignorar a diferenca entre razao instrumental e comunicativa"],
+    tags: ["jurgen habermas", "agir comunicativo", "esfera publica", "democracia deliberativa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-008",
+    area: "humanas",
+    competence: 4,
+    skill: 17,
+    topic: "Sociologia",
+    subtopic: "Escola de Frankfurt: Adorno, Horkheimer e a Indústria Cultural",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A Indústria Cultural não cria nos homens a necessidade de arte e reflexão genuínas; ela fabrica desejos artificiais para satisfazê-los com produtos em série pré-digeridos. A arte, outrora portadora de uma promessa de felicidade e de negação crítica do mundo administrado, torna-se mercadoria estandardizada, cuja função primordial é o entretenimento alienante e a conciliação do trabalhador exausto com a rotina da dominação social.",
+      source: "Theodor W. Adorno e Max Horkheimer, Dialética do Esclarecimento (adaptado)."
+    },
+    prompt: "O conceito de 'Indústria Cultural' formulado pelos teóricos da Escola de Frankfurt tem como tese central que:",
+    options: [
+      { id: "a", text: "a mercantilização da cultura e a produção midiática em escala industrial padronizam os gostos e adormecem a capacidade crítica das massas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a difusão de produtos culturais massificados é o principal veículo de conscientização revolucionária e emancipação política operária.", isCorrect: false, distractorRationale: "Os frankfurtianos sustentam exatamente o contrário: a cultura de massa gera passividade e conformismo social." },
+      { id: "c", text: "a livre concorrência entre gravadoras e estúdios cinematográficos estimula a originalidade e a autonomia radical dos artistas.", isCorrect: false, distractorRationale: "A lógica mercantil impõe fórmulas clichês repetitivas para assegurar vendas previsíveis." },
+      { id: "d", text: "a cultura popular tradicional é idêntica à cultura de massa produzida pelas grandes corporações comunicacionais.", isCorrect: false, distractorRationale: "Eles distinguem cultura popular (criada pelo próprio povo) de indústria cultural (criada pelo topo do capital para o povo)." },
+      { id: "e", text: "os consumidores exercem pleno controle soberano sobre os conteúdos estéticos que são veiculados nos meios de comunicação.", isCorrect: false, distractorRationale: "Para Adorno e Horkheimer, o consumidor é tratado como mero objeto passivo da indústria." }
+    ],
+    detailedExplanation: {
+      summary: "A Escola de Frankfurt denunciou que os meios de comunicação de massa transformaram a cultura em negócio corporativo com fins de controle ideológico.",
+      stepByStep: [
+        "A expressão 'Indústria Cultural' foi criada intencionalmente para não ser confundida com 'cultura de massa' espontânea.",
+        "Filmes, músicas e programas tornam-se mercadorias que obedecem à mesma lógica da linha de montagem: fórmulas fáceis, finais previsíveis e consumo passivo.",
+        "Em vez de libertar a imaginação e despertar o espírito crítico, a indústria cultural funciona como cimento ideológico que mantém o status quo."
+      ],
+      coreConcept: "A Indústria Cultural, Mercantilização da Arte e Conformismo Ideológico",
+      trapWarning: "Cuidado: a crítica dos frankfurtianos é dirigida à lógica econômica de padronização, e não ao valor técnico dos instrumentos de mídia em si."
+    },
+    commonTraps: ["achar que industria cultural significa democratizacao da arte", "confundir cultura de massa com folclore popular"],
+    tags: ["escola de frankfurt", "adorno e horkheimer", "industria cultural", "cultura de massa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-008",
+    area: "humanas",
+    competence: 5,
+    skill: 22,
+    topic: "Filosofia Política",
+    subtopic: "O Contratualismo Liberal de John Locke",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O homem nasce, como se provou, com título a uma perfeita liberdade e ao gozo ilimitado de todos os direitos e privilégios da lei da natureza, do mesmo modo que qualquer outro homem no mundo. Por conseguinte, tem por natureza o poder de preservar a sua propriedade — isto é, a sua vida, a sua liberdade e os seus bens — contra as ofensas e atentados de outrem. E é unicamente com vistas à proteção dessa propriedade que os homens consentem em instituir governos civis.",
+      source: "John Locke, Segundo Tratado sobre o Governo Civil (adaptado)."
+    },
+    prompt: "Em contraste com o absolutismo defendido por Thomas Hobbes, a teoria política do contrato social em John Locke sustenta que:",
+    options: [
+      { id: "a", text: "o poder do Estado é limitado pelo dever de resguardar os direitos naturais dos cidadãos, cabendo à sociedade o direito de insurreição caso o governante viole o pacto.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o soberano detém poder irrestrito e incontestável sobre a vida dos súditos em qualquer circunstância civil.", isCorrect: false, distractorRationale: "Essa é a tese de Thomas Hobbes (O Leviatã), e não a de John Locke." },
+      { id: "c", text: "a propriedade privada é a raiz de todas as discórdias e deve ser abolida coercitivamente pelo poder estatal.", isCorrect: false, distractorRationale: "Essa visão de crítica à propriedade privada aproxima-se de Rousseau, enquanto Locke a considera direito natural intocável." },
+      { id: "d", text: "o Estado de Natureza era um combate sanguinário de todos contra todos que inviabilizava qualquer moralidade.", isCorrect: false, distractorRationale: "Essa definição de 'guerra de todos contra todos' pertence a Hobbes; em Locke, o estado de natureza já possuía leis morais naturais." },
+      { id: "e", text: "a monarquia de direito divino de herança dinástica é a única instituição política moralmente legítima.", isCorrect: false, distractorRationale: "Locke é um ferrenho crítico da doutrina do direito divino dos reis (refutada em seu Primeiro Tratado)." }
+    ],
+    detailedExplanation: {
+      summary: "Locke é o pai do liberalismo político moderno: o Estado existe para proteger a tríade de direitos naturais (vida, liberdade e propriedade).",
+      stepByStep: [
+        "Para Locke, no Estado de Natureza os homens já possuíam razão e direitos inalienáveis, mas faltava um juiz imparcial para resolver litígios.",
+        "O Contrato Social é celebrado mediante o consentimento voluntário dos indivíduos para criar leis positivas e magistrados.",
+        "O poder estatal é fiduciário (baseado na confiança). Se o governante atuar como tirano e desrespeitar os direitos naturais, o povo tem o legítimo 'direito de resistência e rebelião'."
+      ],
+      coreConcept: "Liberalismo Clássico, Direitos Naturais e Direito de Resistência em John Locke",
+      trapWarning: "Não confunda a propriedade em Locke (que inclui a própria vida e liberdade) com mera posse imobiliária mercantil!"
+    },
+    commonTraps: ["confundir Locke com o absolutismo de Hobbes", "confundir Locke com o igualitarismo comunitário de Rousseau"],
+    tags: ["john locke", "contratualismo", "liberalismo politico", "direitos naturais", "propriedade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-009",
+    area: "humanas",
+    competence: 4,
+    skill: 16,
+    topic: "Sociologia",
+    subtopic: "Émile Durkheim: Coesão Social e Anomia",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Quando as transformações da vida econômica e das relações laborais ocorrem de maneira excessivamente acelerada, as instituições morais que mantinham os indivíduos coesos deixam de exercer sua autoridade pacificadora. O apetite por bens materiais cresce desenfreadamente sem encontrar um teto ético que o limite. A ausência ou a frouxidão de regras regulatórias claras debilita o tecido societário e empurra a coletividade para um estado patológico de desregulamentação.",
+      source: "Émile Durkheim, Da Divisão do Trabalho Social (adaptado)."
+    },
+    prompt: "O conceito sociológico cunhado por Émile Durkheim para definir o estado de desregramento moral e enfraquecimento das normas coletivas abordado no texto é a:",
+    options: [
+      { id: "a", text: "anomia social.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "alienação do trabalho.", isCorrect: false, distractorRationale: "Alienação é um conceito central da teoria marxista, e não da sociologia funcionalista de Durkheim." },
+      { id: "c", text: "solidariedade mecânica.", isCorrect: false, distractorRationale: "A solidariedade mecânica é típica de sociedades simples com fortíssima consciência coletiva e sem anomia generalizada." },
+      { id: "d", text: "ação social carismática.", isCorrect: false, distractorRationale: "Ação social é categoria weberiana, estranha ao vocabulário teórico de Durkheim." },
+      { id: "e", text: "violência simbólica.", isCorrect: false, distractorRationale: "Violência simbólica é conceito criado por Pierre Bourdieu na segunda metade do século XX." }
+    ],
+    detailedExplanation: {
+      summary: "Durkheim definiu a anomia como a condição na qual a sociedade deixa de fornecer regras e limites morais suficientes para guiar os indivíduos.",
+      stepByStep: [
+        "Para Durkheim, a sociedade precisa de coesão e regulação moral para que as paixões e ambições individuais não se tornem infinitas e autodestrutivas.",
+        "Em períodos de rápida transição industrial ou crises econômicas súbitas, as normas antigas perdem validade antes que novas normas se consolidem.",
+        "Esse vácuo regulatório é a 'anomia', que aumenta as taxas de suicídio, a frustração coletiva e o sentimento de desamparo normativo."
+      ],
+      coreConcept: "Anomia, Fato Social e Coesão Moral em Émile Durkheim",
+      trapWarning: "'Anomia' (a = negação, nomos = lei/regra) significa ausência ou ineficácia temporária de regras regulatórias, e não revolução política."
+    },
+    commonTraps: ["confundir anomia (Durkheim) com alienacao (Marx)", "achar que anomia e sinônimo de anarquismo político intencional"],
+    tags: ["emile durkheim", "anomia", "coesao social", "fato social", "suicidio anomico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-009",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Moral",
+    subtopic: "Immanuel Kant e o Imperativo Categórico",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Todos os imperativos ordenam ou hipoteticamente ou categoricamente. Se a ação é boa apenas como meio para qualquer outra coisa, o imperativo é hipotético; se ela é representada como boa em si mesma, por conseguinte como necessária numa vontade em si conforme à razão, então o imperativo é categórico. O imperativo categórico é, portanto, só um único, e este: Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne lei universal.",
+      source: "Immanuel Kant, Fundamentação da Metafísica dos Costumes (adaptado)."
+    },
+    prompt: "De acordo com a filosofia moral deontológica de Immanuel Kant expressa no texto, a autenticidade ética de uma conduta decorre:",
+    options: [
+      { id: "a", text: "do cumprimento estrito do dever pelo puro respeito à lei moral universal e autônoma, independentemente de desejos, utilidades ou conveniências pessoais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "do cálculo utilitarista das consequências que garantem o maior prazer físico para o maior número de indivíduos.", isCorrect: false, distractorRationale: "O cálculo utilitarista de consequências (Bentham e Stuart Mill) é rejeitado categoricamente por Kant como imperativo condicional heterônomo." },
+      { id: "c", text: "da obediência irrefletida aos mandamentos religiosos fundamentada no temor a castigos em vidas futuras.", isCorrect: false, distractorRationale: "Agir por medo de punição é agir por heteronomia, e não por respeito à razão moral autônoma." },
+      { id: "d", text: "da aquisição de vantagens econômicas e elogios sociais que enalteçam o prestígio público do indivíduo.", isCorrect: false, distractorRationale: "Buscar recompensas materiais ou aplausos é típico de imperativos hipotéticos egoístas." },
+      { id: "e", text: "do uso instrumental de outros seres humanos como meras ferramentas para a realização de planos privados.", isCorrect: false, distractorRationale: "A segunda fórmula de Kant proíbe taxativamente tratar a pessoa humana como mero meio: o ser humano é um fim em si mesmo." }
+    ],
+    detailedExplanation: {
+      summary: "Kant fundamenta a moral na autonomia racional do sujeito: o dever moral é categórico, universalizável e incondicionado.",
+      stepByStep: [
+        "Imperativo Hipotético: condicionado a um fim ('se quiser ter boa reputação, não minta'). Se o objetivo mudar, a regra cai.",
+        "Imperativo Categórico: incondicional e universal ('não minta nunca, pois a mentira não pode se tornar lei universal da razão').",
+        "A conduta moral kantiana é deontológica (baseada no dever pelo dever) e autônoma (a razão humana legisla para si mesma a lei moral)."
+      ],
+      coreConcept: "Imperativo Categórico, Autonomia Racional e Ética do Dever em Kant",
+      trapWarning: "Cuidado: para Kant, nem mesmo salvar uma vida justifica mentir em um tribunal, pois a lei moral universal não admite exceções de conveniência."
+    },
+    commonTraps: ["confundir deontologia kantiana com utilitarismo", "confundir agir por dever com agir conforme o dever por interesse"],
+    tags: ["immanuel kant", "imperativo categorico", "etica do dever", "deontologia", "autonomia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-010",
+    area: "humanas",
+    competence: 4,
+    skill: 16,
+    topic: "Sociologia",
+    subtopic: "Max Weber: Tipos Puros de Dominação Legítima",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A dominação — isto é, a probabilidade de encontrar obediência a um determinado mandato — pode apoiar-se nos mais diversos motivos de submissão. Para que a dominação perdure de modo estável, ela necessita despertar e cultivar a crença em sua legitimidade. Na história humana, essa legitimidade apoiou-se fundamentalmente em três justificações internas básicas: a autoridade do costume eterno ('ontem'), a autoridade da graça extraordinária ('herói') e a autoridade da legalidade da regra estatuída.",
+      source: "Max Weber, Economia e Sociedade (adaptado)."
+    },
+    prompt: "Com base na tipologia de Max Weber, a forma de dominação legítima que serve de alicerce organizacional para o Estado moderno e sua administração burocrática é a:",
+    options: [
+      { id: "a", text: "dominação racional-legal, sustentada na crença na validade dos estatutos jurídicos impessoais e na competência funcional regulamentada.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "dominação carismática, dependente exclusivamente da dedicação emotiva à figura magnética e milagrosa de um profeta ou caudilho.", isCorrect: false, distractorRationale: "A dominação carismática é pessoal, instável e extraordinária, oposta à previsibilidade burocrática estatal." },
+      { id: "c", text: "dominação tradicional, justificada pela fidelidade filial sagrada aos costumes patriarcais transmitidos desde tempos imemoriais.", isCorrect: false, distractorRationale: "A dominação tradicional caracteriza sociedades feudais ou clânicas patriarcais pré-modernas." },
+      { id: "d", text: "dominação despótica absolutista, que ignora deliberadamente a existência de qualquer código de leis escritas.", isCorrect: false, distractorRationale: "O Estado moderno fundamenta-se exatamente no constitucionalismo e nas leis escritas regulamentadas." },
+      { id: "e", text: "dominação clientelista feudal, baseada em laços de suserania e vassalagem sem qualquer caráter burocrático.", isCorrect: false, distractorRationale: "O feudalismo era descentralizado e baseado em juramentos pessoais, e não na burocracia racional-legal." }
+    ],
+    detailedExplanation: {
+      summary: "Weber identificou três tipos ideais de dominação legítima: Tradicional (passado), Carismática (emoção/líder) e Racional-Legal (leis impessoais).",
+      stepByStep: [
+        "Na dominação racional-legal, a obediência não é devida à pessoa física do governante, mas à lei abstrata e ao cargo público que ele ocupa temporariamente.",
+        "A burocracia moderna é o instrumento técnico mais puro dessa dominação: baseia-se em hierarquia funcional, competência técnica atestada e impessoalidade nos processos.",
+        "Essa previsibilidade jurídica e administrativa foi elemento essencial para o desenvolvimento do capitalismo racional e do Estado democrático de direito."
+      ],
+      coreConcept: "Tipos Puros de Dominação Legítima e Burocracia em Max Weber",
+      trapWarning: "Lembre-se: obedece-se à lei e ao cargo formal, e não à pessoa do funcionário público!"
+    },
+    commonTraps: ["confundir dominacao legal com dominacao carismatica", "achar que 'burocracia' para Weber e um termo pejorativo de lentidao"],
+    tags: ["max weber", "dominacao legitima", "racional-legal", "burocracia", "tipos ideais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-010",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Contemporânea",
+    subtopic: "Friedrich Nietzsche e a Crítica à Moral Tradicional",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A rebelião escrava na moral começa quando o próprio ressentimento se torna criador e gera valores: o ressentimento dos seres aos quais é negada a verdadeira reação, a dos atos, e que só encontram compensação numa vingança imaginária. Enquanto toda moral nobre nasce de um triunfal dizer-sim a si mesma, a moral dos escravos diz não, de saída, a um 'fora', a um 'outro', a um 'não-eu' — e este não é o seu ato criador.",
+      source: "Friedrich Nietzsche, Genealogia da Moral (adaptado)."
+    },
+    prompt: "A crítica genealógica de Nietzsche expressa no excerto denuncia que a moralidade ocidental hegemônica decorre da:",
+    options: [
+      { id: "a", text: "vitória da moral do ressentimento, que reprime as potências vitais e glorifica a fraqueza e a submissão como se fossem supremas virtudes espirituais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "afirmação heroica e destemida dos valores afirmativos da força física e da alegria dionisíaca no cotidiano.", isCorrect: false, distractorRationale: "Nietzsche elogia a afirmação afirmativa da força (moral nobre), e lamenta que ela tenha sido sufocada pela moral dos escravos." },
+      { id: "c", text: "instituição da dúvida metódica cartesiana como instrumento de validação da existência do pensamento consciente.", isCorrect: false, distractorRationale: "A dúvida metódica é de Descartes (Racionalismo), e não o objeto da Genealogia da Moral nietzschiana." },
+      { id: "d", text: "defesa intransigente do hedonismo corporal e da busca desenfreada pelos prazeres materiais passageiros.", isCorrect: false, distractorRationale: "A moral criticada por Nietzsche prega o ascetismo, a negação do corpo e o desprezo por este mundo terreno." },
+      { id: "e", text: "completa erradicação das noções de culpa, pecado e punição no pensamento filosófico clássico.", isCorrect: false, distractorRationale: "Para Nietzsche, a moral dos escravos inventou e hipertrofiou a má consciência e a culpa existencial." }
+    ],
+    detailedExplanation: {
+      summary: "Nietzsche realizou uma genealogia dos valores morais para demonstrar que a moral tradicional nasceu do ressentimento dos fracos contra os nobres.",
+      stepByStep: [
+        "Moral Nobre (dos Senhores): valoriza a vitalidade, a nobreza de espírito, a coragem e a afirmação afirmativa da vida terrena ('bom e ruim').",
+        "Moral dos Escravos (do Ressentimento): os fracos, incapazes de vencer pela força, invertem os valores — transformam a fraqueza em 'bondade', a subserviência em 'humildade' e a força vital em 'maldade' ('bem e mal').",
+        "Para superar o niilismo e a decadência gerada por essa negação da vida, Nietzsche propõe a 'transvaloração de todos os valores' e a afirmação da Vontade de Potência."
+      ],
+      coreConcept: "Genealogia da Moral, Moral dos Senhores e Moral dos Escravos em Nietzsche",
+      trapWarning: "Nietzsche não defendia o ódio cego aos fracos nem o nazismo; sua crítica é psicológica e filosófica contra o ressentimento existencial e a negação da vida."
+    },
+    commonTraps: ["confundir moral nobre com crueldade vulgar", "achar que Nietzsche defendia a moral tradicional crista"],
+    tags: ["friedrich nietzsche", "genealogia da moral", "ressentimento", "moral dos escravos", "transvaloracao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
 

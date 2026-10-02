@@ -412,6 +412,432 @@ export const QUESTIONS_RAZAO_PROPORCAO = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-011",
+    area: "matematica",
+    competence: 3,
+    skill: 11,
+    topic: "Razão e Proporção",
+    subtopic: "Escala Cartográfica de Áreas e Superfícies",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No planejamento territorial de uma usina solar fotovoltaica, um mapa de zoneamento ecológico foi desenhado na escala linear de 1:20 000. Na representação cartográfica, o polígono retangular reservado para a instalação dos módulos fotovoltaicos mede 12 cm de comprimento por 5 cm de largura.",
+      source: "ENEM / Cartografia e Escala de Áreas"
+    },
+    prompt: "A área real reservada para a usina solar, calculada em hectares (sabendo que 1 hectare equivale a 10 000 m²), corresponde a:",
+    options: [
+      { id: "a", text: "240 hectares", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "120 hectares", isCorrect: false, distractorRationale: "Calculou a área linear incorretamente ou usou a metade da dimensão." },
+      { id: "c", text: "12 hectares", isCorrect: false, distractorRationale: "Multiplicou a área em cm² pela escala linear (k) em vez de aplicar o quadrado da escala (k²)." },
+      { id: "d", text: "24 hectares", isCorrect: false, distractorRationale: "Cometeu erro na conversão de centímetros quadrados para metros quadrados dividindo por 100 000." },
+      { id: "e", text: "2 400 hectares", isCorrect: false, distractorRationale: "Errou uma potência de 10 na conversão final de metros quadrados para hectares." }
+    ],
+    detailedExplanation: {
+      summary: "A razão entre áreas em um mapa e na realidade é dada pelo quadrado da escala linear: Razão de Áreas = k².",
+      stepByStep: [
+        "Área no mapa: A_mapa = 12 cm × 5 cm = 60 cm².",
+        "Escala linear: k = 1 / 20 000, o que significa que 1 cm no mapa = 20 000 cm reais = 200 m.",
+        "Portanto, 1 cm² no mapa corresponde a (200 m)² = 40 000 m² no terreno real.",
+        "Área real: A_real = 60 cm² × 40 000 m²/cm² = 2 400 000 m².",
+        "Conversão para hectares (1 ha = 10 000 m²): 2 400 000 / 10 000 = 240 hectares."
+      ],
+      coreConcept: "Relação Quadrática nas Escalas de Área (A_real = A_mapa / k²)",
+      trapWarning: "Nunca multiplique a área pela escala linear direta! Em duas dimensões, a proporção é sempre k²."
+    },
+    commonTraps: ["usar escala linear em area", "erro na conversao de m² para hectare"],
+    tags: ["escala", "escala de areas", "geometria plana", "conversao de unidades"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-012",
+    area: "matematica",
+    competence: 3,
+    skill: 11,
+    topic: "Razão e Proporção",
+    subtopic: "Escala Volumétrica e Semelhança Espacial",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para calibrar um sistema automatizado de fermentação biológica destinado à produção de vacinas, um centro de biotecnologia construiu um protótipo geométrico na escala linear de 1:50. Em testes de estanqueidade, constatou-se que o modelo em miniatura possui capacidade volumétrica interna de exatamente 16 mL.",
+      source: "ENEM / Escala Volumétrica e Proporções"
+    },
+    prompt: "A capacidade volumétrica real do biorreator industrial, expressa em metros cúbicos (m³), é igual a:",
+    options: [
+      { id: "a", text: "2 m³", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "0,8 m³", isCorrect: false, distractorRationale: "Multiplicou 16 mL apenas pela escala linear 50, obtendo 800 mL." },
+      { id: "c", text: "4 m³", isCorrect: false, distractorRationale: "Multiplicou pela escala quadrática (50² = 2 500) em vez de volumétrica cúbica (50³)." },
+      { id: "d", text: "20 m³", isCorrect: false, distractorRationale: "Errou o fator de conversão de litros para metros cúbicos por um fator 10." },
+      { id: "e", text: "0,2 m³", isCorrect: false, distractorRationale: "Dividiu o volume real por 10 por confusão entre decímetros e centímetros." }
+    ],
+    detailedExplanation: {
+      summary: "Em figuras geometricamente semelhantes, a razão entre seus volumes é igual ao cubo da razão linear de semelhança: V_real = V_modelo × (escala_linear)³.",
+      stepByStep: [
+        "Razão de escala linear: 1 : 50.",
+        "Fator de escala volumétrica: 50³ = 125 000.",
+        "Volume real em mL: 16 mL × 125 000 = 2 000 000 mL.",
+        "Conversão para litros (1 L = 1 000 mL): 2 000 000 / 1 000 = 2 000 L.",
+        "Conversão para metros cúbicos (1 m³ = 1 000 L): 2 000 L = 2 m³."
+      ],
+      coreConcept: "Escala Volumétrica (V_real / V_modelo = k³)",
+      trapWarning: "Lembre-se: comprimento usa k, área usa k², e volume usa k³!"
+    },
+    commonTraps: ["usar k ou k² em vez de k³", "confundir conversao de mL para m³"],
+    tags: ["escala volumetrica", "geometria espacial", "conversao de medidas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-013",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Regra de Três Composta",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma equipe de manutenção hospitalar precisa reformar uma ala de internação emergencial. Sabe-se que 12 operários, todos com a mesma capacidade operacional diária e trabalhando 8 horas por dia, executaram 60% da reforma em 15 dias. Por determinação sanitária, os 40% restantes da obra devem ser finalizados em apenas 6 dias, mantendo-se a jornada de 8 horas diárias de trabalho.",
+      source: "ENEM / Proporcionalidade e Produtividade"
+    },
+    prompt: "Para que a reforma seja rigorosamente concluída nesse novo prazo, o número total de operários com a mesma produtividade que deve compor a equipe é:",
+    options: [
+      { id: "a", text: "20 operários", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "16 operários", isCorrect: false, distractorRationale: "Tratou a relação entre dias e operários como diretamente proporcional." },
+      { id: "c", text: "24 operários", isCorrect: false, distractorRationale: "Superestimou a necessidade de operários aplicando proporção direta em todas as grandezas." },
+      { id: "d", text: "18 operários", isCorrect: false, distractorRationale: "Calculou apenas o acréscimo de operários sem somar à equipe inicial." },
+      { id: "e", text: "25 operários", isCorrect: false, distractorRationale: "Errou a simplificação fracionária dos percentuais de obra." }
+    ],
+    detailedExplanation: {
+      summary: "Na regra de três composta, analisamos o comportamento direto ou inverso de cada grandeza em relação ao número de operários.",
+      stepByStep: [
+        "Grandezas: Operários (N), Produção (% da obra), Dias (d). As horas diárias são constantes (8 h/dia).",
+        "Relações: Operários e Produção são grandezas diretamente proporcionais (mais obra exige mais operários).",
+        "Operários e Dias são grandezas inversamente proporcionais (menos dias exigem mais operários).",
+        "Montagem da equação: N / 12 = (40 / 60) × (15 / 6).",
+        "Simplificando: (40 / 60) = 2/3 e (15 / 6) = 5/2.",
+        "Multiplicação dos fatores: (2/3) × (5/2) = 10 / 6 = 5/3.",
+        "Logo: N = 12 × (5/3) = 60 / 3 = 20 operários."
+      ],
+      coreConcept: "Regra de Três Composta e Análise Dimensional de Grandezas",
+      trapWarning: "Cuidado ao classificar grandezas como diretas ou inversas: tempo e trabalhadores são grandezas inversas!"
+    },
+    commonTraps: ["tratar dias e operarios como grandezas diretas", "esquecer que o enunciado pede a equipe total"],
+    tags: ["regra de tres composta", "proporcionalidade", "produtividade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-014",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Divisão Diretamente e Inversamente Proporcional",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Três pesquisadores de um centro biomédico (André, Beatriz e Carlos) foram contemplados com um fundo conjunto de incentivo à pesquisa no valor total de R$ 62.000,00. O regulamento estabeleceu que o valor seria distribuído de forma diretamente proporcional ao número de artigos científicos publicados por cada um (4, 3 e 5 artigos, respectivamente) e inversamente proporcional ao tempo de atraso no envio do relatório técnico de atividades (2, 1 e 4 meses de atraso, respectivamente).",
+      source: "ENEM / Divisão Proporcional Mista"
+    },
+    prompt: "O valor pecuniário individual recebido pela pesquisadora Beatriz nessa partilha foi de:",
+    options: [
+      { id: "a", text: "R$ 29.760,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 19.840,00", isCorrect: false, distractorRationale: "Esse foi o valor recebido pelo pesquisador André." },
+      { id: "c", text: "R$ 12.400,00", isCorrect: false, distractorRationale: "Esse foi o valor recebido pelo pesquisador Carlos." },
+      { id: "d", text: "R$ 24.800,00", isCorrect: false, distractorRationale: "Realizou a divisão considerando apenas o número de artigos de forma direta (3/12 de 62.000)." },
+      { id: "e", text: "R$ 20.666,67", isCorrect: false, distractorRationale: "Dividiu o prêmio em partes rigorosamente iguais entre os três pesquisadores." }
+    ],
+    detailedExplanation: {
+      summary: "Na divisão diretamente proporcional a A e inversamente a B, a cota de cada participante é proporcional à razão A / B.",
+      stepByStep: [
+        "Razão de André: 4 artigos / 2 meses = 2.",
+        "Razão de Beatriz: 3 artigos / 1 mês = 3.",
+        "Razão de Carlos: 5 artigos / 4 meses = 1,25 (ou 5/4).",
+        "Para trabalhar com coeficientes inteiros, multiplicamos todas as razões por 4: André = 8 partes, Beatriz = 12 partes, Carlos = 5 partes.",
+        "Soma total das partes: 8 + 12 + 5 = 25 partes.",
+        "Valor de cada parte: R$ 62.000,00 / 25 = R$ 2.480,00.",
+        "Valor de Beatriz (12 partes): 12 × R$ 2.480,00 = R$ 29.760,00."
+      ],
+      coreConcept: "Divisão Proporcional Composta (Direta e Inversa Simultânea)",
+      trapWarning: "Quando uma grandeza é inversamente proporcional, divida pelo seu valor (ou multiplique pelo seu inverso)."
+    },
+    commonTraps: ["ignorar a proporcionalidade inversa", "erro na soma das partes fracionarias"],
+    tags: ["divisao proporcional", "razao composta", "aritmetica aplicada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-015",
+    area: "matematica",
+    competence: 3,
+    skill: 11,
+    topic: "Razão e Proporção",
+    subtopic: "Densidade Demográfica e Distribuição Populacional",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "contextualized",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A Secretaria de Planejamento de Saúde monitora dois distritos sanitários, Alfa e Beta, para alocação de equipes de Saúde da Família. O distrito Alfa possui uma área de 120 km² e abriga 180 000 habitantes. Já o distrito Beta possui área territorial de 80 km² e sua densidade demográfica é 50% superior à densidade demográfica do distrito Alfa.",
+      source: "ENEM / Razão Demográfica e Saúde Pública"
+    },
+    prompt: "Com base nessas informações, a população total residente no distrito sanitário Beta é igual a:",
+    options: [
+      { id: "a", text: "180 000 habitantes", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "120 000 habitantes", isCorrect: false, distractorRationale: "Multiplicou a densidade de Alfa pela área de Beta sem aplicar o acréscimo de 50%." },
+      { id: "c", text: "270 000 habitantes", isCorrect: false, distractorRationale: "Multiplicou a população de Alfa diretamente por 1,5 sem considerar a diferença de áreas." },
+      { id: "d", text: "150 000 habitantes", isCorrect: false, distractorRationale: "Calculou a média aritmética das áreas e multiplicou pela densidade básica." },
+      { id: "e", text: "225 000 habitantes", isCorrect: false, distractorRationale: "Confundiu a densidade de Beta (2 250 hab/km²) com a sua população total." }
+    ],
+    detailedExplanation: {
+      summary: "Densidade demográfica é a razão entre população e área (D = P / A). A população é dada por P = D × A.",
+      stepByStep: [
+        "Densidade demográfica do distrito Alfa: D_Alfa = 180 000 hab / 120 km² = 1 500 hab/km².",
+        "Densidade do distrito Beta (50% superior): D_Beta = 1 500 × 1,50 = 2 250 hab/km².",
+        "População total do distrito Beta: P_Beta = D_Beta × Área_Beta = 2 250 hab/km² × 80 km².",
+        "Calculando o produto: 2 250 × 80 = 180 000 habitantes.",
+        "Conclusão: embora a área seja menor, a densidade proporcionalmente maior faz com que o distrito Beta tenha exatamente o mesmo contingente populacional de Alfa."
+      ],
+      coreConcept: "Conceito e Operações com Densidade Demográfica",
+      trapWarning: "A densidade maior compensa a área menor; não confunda densidade por km² com população total!"
+    },
+    commonTraps: ["aplicar porcentagem na populacao ao inves da densidade", "confundir densidade com populacao absoluta"],
+    tags: ["densidade demografica", "razao", "proporcao", "geografia quantitativa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-016",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Semelhança e Proporção Linear (Teorema de Tales)",
+    difficulty: 2,
+    estimatedTimeSeconds: 110,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um engenheiro de segurança hospitalar precisa verificar a altura de uma chaminé vertical de incineração de resíduos químicos. Em um instante do dia com incidência de raios solares paralelos, uma haste vertical padrão de 1,80 m de altura projeta no solo plano uma sombra de 1,20 m. No mesmo instante, a sombra projetada pela chaminé mede exatamente 28,0 m.",
+      source: "ENEM / Semelhança Geométrica e Sombras"
+    },
+    prompt: "A altura real calculada dessa chaminé hospitalar, em metros, é igual a:",
+    options: [
+      { id: "a", text: "42,0 m", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "36,0 m", isCorrect: false, distractorRationale: "Inverteu a razão entre altura e sombra da haste (multiplicou por 1,2 / 1,8 = 2/3)." },
+      { id: "c", text: "48,0 m", isCorrect: false, distractorRationale: "Errou a simplificação da razão 1,80 / 1,20 assumindo 1,7." },
+      { id: "d", text: "21,0 m", isCorrect: false, distractorRationale: "Dividiu a sombra pela metade em vez de multiplicar pela razão de proporção 1,5." },
+      { id: "e", text: "50,4 m", isCorrect: false, distractorRationale: "Multiplicou 28 por 1,8 sem dividir por 1,20." }
+    ],
+    detailedExplanation: {
+      summary: "Pela semelhança de triângulos retângulos formados pelos raios solares paralelos, a razão entre altura e sombra é constante.",
+      stepByStep: [
+        "Razão de semelhança: Altura / Sombra = constante.",
+        "Para a haste: 1,80 m / 1,20 m = 1,5.",
+        "Para a chaminé de altura H: H / 28,0 m = 1,5.",
+        "Isolando H: H = 28,0 × 1,5 = 42,0 metros."
+      ],
+      coreConcept: "Proporcionalidade Direta e Semelhança Geométrica (Teorema de Tales)",
+      trapWarning: "Verifique se a haste e a chaminé estão sob o mesmo ângulo de incidência solar e no mesmo instante."
+    },
+    commonTraps: ["inverter a razao da sombra com a altura", "esquecer de dividir pelo comprimento da sombra da haste"],
+    tags: ["semelhanca", "proporcionalidade", "sombras", "teorema de tales"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-017",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Eficiência Energética e Rendimento Operacional",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A coordenação de logística de uma central de pronto atendimento analisa os custos operacionais de abastecimento de duas ambulâncias urbanas. A ambulância convencional 1 apresenta rendimento médio de 8 km por litro de diesel. A ambulância 2 foi substituída por um modelo com motor híbrido que é 25% mais eficiente em rendimento (percorre 25% mais quilômetros por litro de diesel). Cada litro de combustível custa R$ 6,00.",
+      source: "ENEM / Eficiência e Custos Operacionais"
+    },
+    prompt: "Em um mês em que cada uma das ambulâncias percorre 2 400 km em deslocamentos de socorro municipal, a economia financeira proporcionada pela ambulância 2 em comparação à ambulância 1 é de:",
+    options: [
+      { id: "a", text: "R$ 360,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 450,00", isCorrect: false, distractorRationale: "Calculou 25% diretamente sobre a despesa da primeira ambulância, desconsiderando que o rendimento está no denominador do consumo." },
+      { id: "c", text: "R$ 300,00", isCorrect: false, distractorRationale: "Calculou economia de 50 litros em vez de 60 litros." },
+      { id: "d", text: "R$ 240,00", isCorrect: false, distractorRationale: "Confundiu a quantidade de litros consumidos pela ambulância 2 (240 L) com a economia em reais." },
+      { id: "e", text: "R$ 180,00", isCorrect: false, distractorRationale: "Calculou metade do valor correto de economia." }
+    ],
+    detailedExplanation: {
+      summary: "O consumo de combustível é inversamente proporcional ao rendimento em km/L: Consumo (L) = Distância / Rendimento.",
+      stepByStep: [
+        "Ambulância 1: Rendimento = 8 km/L. Consumo para 2 400 km = 2 400 / 8 = 300 litros.",
+        "Custo da ambulância 1: 300 litros × R$ 6,00/L = R$ 1 800,00.",
+        "Ambulância 2: Rendimento = 8 × 1,25 = 10 km/L. Consumo para 2 400 km = 2 400 / 10 = 240 litros.",
+        "Custo da ambulância 2: 240 litros × R$ 6,00/L = R$ 1 440,00.",
+        "Economia gerada: R$ 1 800,00 - R$ 1 440,00 = R$ 360,00 (ou economia de 60 L × R$ 6,00 = R$ 360,00)."
+      ],
+      coreConcept: "Razão Inversa em Rendimento e Consumo de Combustível",
+      trapWarning: "Aumentar a eficiência em 25% (km/L) não significa reduzir o consumo total em 25%! A relação é inversamente proporcional."
+    },
+    commonTraps: ["subtrair 25% do custo direto", "esquecer de multiplicar pelo preco do combustivel"],
+    tags: ["razao", "proporcionalidade inversa", "eficiencia energetica", "economia aplicada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-018",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Concentração e Misturas Químico-Farmacêuticas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na farmácia hospitalar de um hospital público, um farmacêutico necessita preparar 2,0 litros de uma solução salina glicosada com concentração exata de 25 g/L de glicose para uso pediátrico. No estoque, encontram-se disponíveis apenas dois frascos padronizados: o Frasco A (com concentração de 10 g/L) e o Frasco B (com concentração de 50 g/L).",
+      source: "ENEM / Concentração e Misturas Proporcionais"
+    },
+    prompt: "Para obter rigorosamente a concentração e o volume pretendidos na mistura final, o volume do Frasco A que deve ser adicionado é de:",
+    options: [
+      { id: "a", text: "1,25 L (1 250 mL)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "0,75 L (750 mL)", isCorrect: false, distractorRationale: "Esse é o volume correspondente ao Frasco B, não ao Frasco A." },
+      { id: "c", text: "1,00 L (1 000 mL)", isCorrect: false, distractorRationale: "Calculou a média aritmética ingênua dos dois volumes sem ponderar pelas concentrações." },
+      { id: "d", text: "1,50 L (1 500 mL)", isCorrect: false, distractorRationale: "Errou a resolução da equação de balanço de massa de soluto." },
+      { id: "e", text: "0,50 L (500 mL)", isCorrect: false, distractorRationale: "Subtraiu 25 de 50 e dividiu por 50." }
+    ],
+    detailedExplanation: {
+      summary: "A massa total de soluto na mistura é igual à soma das massas de soluto das partes: C_total × V_total = C_A × V_A + C_B × V_B.",
+      stepByStep: [
+        "Volume total: V_A + V_B = 2,0 L, portanto V_B = 2,0 - V_A.",
+        "Massa total de glicose necessária: M = C_final × V_final = 25 g/L × 2,0 L = 50 g.",
+        "Equação de conservação de massa: 10 × V_A + 50 × V_B = 50.",
+        "Substituindo V_B: 10 V_A + 50 (2,0 - V_A) = 50.",
+        "10 V_A + 100 - 50 V_A = 50  =>  -40 V_A = -50  =>  V_A = 50 / 40 = 1,25 L (1 250 mL).",
+        "Consequentemente, V_B = 2,0 - 1,25 = 0,75 L."
+      ],
+      coreConcept: "Balanço de Massa e Média Ponderada em Soluções",
+      trapWarning: "Verifique sempre se a pergunta pede o volume do frasco A ou do frasco B para não marcar o distrator invertido!"
+    },
+    commonTraps: ["inverter Frasco A e Frasco B", "usar media simples ao inves de ponderada"],
+    tags: ["misturas", "concentracao", "balanco de massa", "media ponderada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-019",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Vazão Simultânea e Balanço Hídrico",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O sistema de lavagem e sanitização de um hospital possui um reservatório de abastecimento com capacidade volumétrica de 1 200 litros. A tubulação de entrada T1 enche o reservatório vazio em 4 horas. A tubulação auxiliar T2 é capaz de enchê-lo completamente em 6 horas. No fundo do reservatório, uma válvula de dreno de segurança D1, quando acionada, esvazia o reservatório totalmente cheio em 12 horas.",
+      source: "ENEM / Vazão Hidráulica e Razão Temporal"
+    },
+    prompt: "Com o reservatório inicialmente vazio, se as duas tubulações de abastecimento (T1 e T2) e a válvula de dreno (D1) forem abertas simultaneamente com fluxo contínuo, em quantas horas o reservatório ficará completamente cheio?",
+    options: [
+      { id: "a", text: "3 horas", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2 horas e 30 minutos", isCorrect: false, distractorRationale: "Somou os tempos individuais e dividiu pelo número de tubulações." },
+      { id: "c", text: "4 horas", isCorrect: false, distractorRationale: "Ignorou o efeito da tubulação auxiliar T2." },
+      { id: "d", text: "3 horas e 45 minutos", isCorrect: false, distractorRationale: "Errou o cálculo do mínimo múltiplo comum das frações de vazão." },
+      { id: "e", text: "2 horas", isCorrect: false, distractorRationale: "Esqueceu de subtrair o escoamento provocado pelo dreno." }
+    ],
+    detailedExplanation: {
+      summary: "A taxa horária líquida de enchimento é a soma das taxas de entrada menos a taxa de saída por unidade de tempo.",
+      stepByStep: [
+        "Vazão de entrada de T1: 1/4 do tanque por hora.",
+        "Vazão de entrada de T2: 1/6 do tanque por hora.",
+        "Vazão de escoamento do dreno D1: -1/12 do tanque por hora.",
+        "Vazão líquida total = 1/4 + 1/6 - 1/12.",
+        "MMC entre 4, 6 e 12 é 12: (3/12) + (2/12) - (1/12) = 4/12 = 1/3 do tanque por hora.",
+        "Tempo para encher 1 tanque completo: T = 1 / (1/3) = 3 horas."
+      ],
+      coreConcept: "Soma e Subtração de Taxas de Vazão (1/T = 1/T1 + 1/T2 - 1/TD)",
+      trapWarning: "O dreno subtrai vazão! Sempre coloque sinal negativo para saídas e positivo para entradas."
+    },
+    commonTraps: ["somar o dreno ao inves de subtrair", "fazer media simples de tempos"],
+    tags: ["vazao", "torneiras e drenos", "taxas temporais", "fracoes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-020",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Proporcionalidade em Engrenagens e Transmissão Mecânica",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um aparelho de diagnóstico médico por imagem computadorizada, a calibração do braço giratório é operada por um trem de três engrenagens acopladas em série: a engrenagem motora A possui 18 dentes; a engrenagem intermediária B possui 36 dentes; e a engrenagem receptora final C, acoplada ao leitor óptico, possui 54 dentes. O princípio mecânico fundamental determina que o número de rotações efetuadas por engrenagens acopladas é inversamente proporcional ao seu respectivo número de dentes.",
+      source: "ENEM / Física Aplicada e Engrenagens"
+    },
+    prompt: "Quando a engrenagem motora A executa 60 rotações completas, o número correspondente de rotações efetuadas pela engrenagem receptora C é igual a:",
+    options: [
+      { id: "a", text: "20 rotações", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "30 rotações", isCorrect: false, distractorRationale: "Calculou as rotações da engrenagem intermediária B (60 × 18 / 36 = 30)." },
+      { id: "c", text: "180 rotações", isCorrect: false, distractorRationale: "Tratou a rotação como diretamente proporcional ao número de dentes (multiplicou por 54/18 = 3)." },
+      { id: "d", text: "15 rotações", isCorrect: false, distractorRationale: "Dividiu o número de dentes de C por 3,6." },
+      { id: "e", text: "10 rotações", isCorrect: false, distractorRationale: "Multiplicou pelo inverso do quadrado da razão de transmissão." }
+    ],
+    detailedExplanation: {
+      summary: "Em engrenagens acopladas sem deslizamento, a transmissão de dentes é idêntica: N1 × Z1 = N2 × Z2. A engrenagem intermediária atua apenas como condutora.",
+      stepByStep: [
+        "A relação de transmissão direta entre a engrenagem motora A e a final C independe da intermediária B.",
+        "Equação: N_A × Z_A = N_C × Z_C.",
+        "Substituindo os valores conhecidos: 60 rotações × 18 dentes = N_C × 54 dentes.",
+        "1 080 = 54 × N_C.",
+        "N_C = 1 080 / 54 = 20 rotações completas."
+      ],
+      coreConcept: "Proporcionalidade Inversa em Transmissão Mecânica de Engrenagens",
+      trapWarning: "A engrenagem intermediária não altera a relação final de rotações entre a primeira e a última engrenagem!"
+    },
+    commonTraps: ["considerar proporcao direta", "marcar o valor da engrenagem intermediaria B"],
+    tags: ["engrenagens", "proporcionalidade inversa", "mecanica aplicada", "transmissao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
 
