@@ -32,6 +32,7 @@ export const QUESTION_MODULES = {
   "matematica/sistemas-equacoes": () => import("./questions/matematica/sistemas-equacoes.js"),
   "matematica/aritmetica-divisibilidade": () => import("./questions/matematica/aritmetica-divisibilidade.js"),
   "matematica/matrizes-tabelas": () => import("./questions/matematica/matrizes-tabelas.js"),
+  "matematica/circunferencia-conicas": () => import("./questions/matematica/circunferencia-conicas.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),

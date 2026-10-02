@@ -58,6 +58,7 @@ const AREA_TOPICS = {
     { id: "matematica/sistemas-equacoes", name: "Álgebra, Equações e Sistemas Lineares", tag: "Álgebra", priority: "Crítica • Modelagem Algébrica", questionsCount: 25 },
     { id: "matematica/aritmetica-divisibilidade", name: "Aritmética Básica, Notação Científica e MDC/MMC", tag: "Aritmética", priority: "Crítica • Base de Ouro da TRI", questionsCount: 25 },
     { id: "matematica/matrizes-tabelas", name: "Matrizes, Determinantes e Modelagem em Tabelas", tag: "Álgebra", priority: "Crítica • Tabelas e Sistemas", questionsCount: 25 },
+    { id: "matematica/circunferencia-conicas", name: "Circunferência, Posições Relativas e Cônicas na Geometria Analítica", tag: "Geometria", priority: "Crítica • Cônicas & Cobertura", questionsCount: 25 },
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 25 },

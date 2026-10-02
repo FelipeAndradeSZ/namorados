@@ -2345,6 +2345,56 @@ export const THEORY_CONTENT = {
     mnemonics: "Linha deita na coluna pra somar o produto; na ordem 3, o escalar k eleva ao cubo no determinante resoluto!"
   },
 
+  "matematica/circunferencia-conicas": {
+    topic: "Circunferência, Posições Relativas e Cônicas na Geometria Analítica",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Competência 2 e 7 (H7, H8, H21, H22): Aplicações essenciais em áreas de cobertura celular (antenas 4G/5G), radares meteorológicos, triangulação de epicentros sismológicos, órbitas elípticas de satélites e leis de Kepler, refletores parabólicos de telecomunicações e posições relativas de retas e circunferências.",
+    highFrequencySkills: [
+      "H7 - Identificar características de figuras planas ou espaciais por meio de suas representações algébricas no plano cartesiano",
+      "H8 - Resolver situações-problema que envolvam a posição relativa de pontos, retas e circunferências",
+      "H21 - Utilizar conhecimentos geométricos de cônicas para realizar a leitura de modelos astronômicos e tecnológicos",
+      "H22 - Aplicar as propriedades reflexivas e de distância de parábolas, elipses e hipérboles em problemas práticos"
+    ],
+    overview: "A Geometria Analítica das curvas de segundo grau estabelece a ponte direta entre a álgebra e a modelagem espacial no plano cartesiano. No ENEM, as questões envolvem: 1) A equação reduzida e geral da circunferência, obtenção de centro e raio por completamento de quadrados e determinação de áreas de cobertura (antenas e radares); 2) Posições relativas de retas e circunferências (tangência mecânica de esteiras, cordas secantes e segmento tangente exterior); 3) Cônicas clássicas (elipse em órbitas planetárias e semieixos a, b, c; hipérbole em navegação hiperbólica LORAN e assíntotas; e parábola em antenas concentradoras de sinal e arcos arquitetônicos).",
+    keyConcepts: [
+      {
+        title: "Equação da Circunferência: Reduzida, Geral e Região do Plano",
+        content: "• Equação Reduzida: (x - a)² + (y - b)² = R², onde C(a, b) é o centro e R é o raio.\n• Equação Geral: x² + y² - 2ax - 2by + (a² + b² - R²) = 0. Para obter o centro, dividem-se os coeficientes lineares de x e y por -2.\n• Condição de Existência de Circunferência Real: R² = a² + b² - c > 0 (se igual a 0, é um ponto; se menor que 0, conjunto vazio).\n• Inequação da Região Circular: (x - a)² + (y - b)² ≤ R² representa o disco fechado (área de cobertura de sinal ou segurança)."
+      },
+      {
+        title: "Posições Relativas entre Reta e Circunferência",
+        content: "• Distância do centro C(x₀, y₀) à reta r: Ax + By + C = 0 dada por d = |A·x₀ + B·y₀ + C| / √(A² + B²).\n• Reta Exterior: d > R (nenhum ponto de intersecção, sem contato).\n• Reta Tangente: d = R (exatamente um ponto de contato mútuo, raio perpendicular à tangente no ponto T).\n• Reta Secante: d < R (dois pontos de corte distintos). O comprimento da corda interceptada L satisfaz o teorema de Pitágoras: R² = d² + (L/2)² ⟹ L = 2√(R² - d²)."
+      },
+      {
+        title: "Elipse: Elementos, Relação Fundamental e Excentricidade",
+        content: "• Equação Reduzida Horizontal: x²/a² + y²/b² = 1 (com a > b > 0). Centro na origem e focos no eixo x.\n• Equação Reduzida Vertical: x²/b² + y²/a² = 1. Centro na origem e focos no eixo y.\n• Relação Fundamental da Elipse: a² = b² + c², onde 'a' é o semieixo maior, 'b' é o semieixo menor e 'c' é a semidistância focal.\n• Eixo Maior: 2a; Eixo Menor: 2b; Distância Focal: 2c.\n• Excentricidade: e = c / a (com 0 ≤ e < 1). Quanto mais próxima de 0, mais circular é a órbita; quanto mais próxima de 1, mais achatada."
+      },
+      {
+        title: "Parábola e Hipérbole: Focos, Diretrizes e Assíntotas",
+        content: "• Parábola Canônica: x² = 4py (concavidade vertical). Vértice na origem (0, 0), foco F(0, p) e reta diretriz y = -p. Todo raio paralelo ao eixo focal reflete no foco (antenas parabólicas).\n• Hipérbole Canônica: x²/a² - y²/b² = 1. Relação fundamental: c² = a² + b² (a semidistância focal c é a hipotenusa!).\n• Assíntotas da Hipérbole: y = ± (b/a)x. Direções limites para as quais os ramos da hipérbole convergem no infinito."
+      }
+    ],
+    formulasAndRules: [
+      "Circunferência Reduzida: (x - a)² + (y - b)² = R².",
+      "Distância Ponto-Reta: d = |A·x₀ + B·y₀ + C| / √(A² + B²).",
+      "Comprimento da Corda: L = 2√(R² - d²).",
+      "Relação Fundamental da Elipse: a² = b² + c² (onde a > b e a > c).",
+      "Excentricidade da Elipse: e = c / a (0 ≤ e < 1).",
+      "Relação Fundamental da Hipérbole: c² = a² + b² (onde c > a).",
+      "Assíntotas da Hipérbole Horizontal: y = ± (b/a)x.",
+      "Parábola com Vértice na Origem: x² = 4py com foco em (0, p)."
+    ],
+    enemTraps: [
+      "Confundir a relação fundamental da elipse (a² = b² + c²) com a da hipérbole (c² = a² + b²).",
+      "Ao determinar o centro a partir da equação geral, esquecer de dividir os coeficientes lineares por -2 (e inverter o sinal).",
+      "Confundir semieixo 'a' com eixo maior completo '2a', ou semidistância focal 'c' com distância focal '2c'.",
+      "Esquecer a raiz quadrada ao obter o raio: em (x-a)² + (y-b)² = 25, o raio é R = 5 e NÃO 25.",
+      "Calcular a excentricidade como b/a em vez de c/a."
+    ],
+    mnemonics: "Na Elipse o 'a' é o Maior (a² = b² + c²); na Hipérbole o 'c' é o Campeão da soma (c² = a² + b²); e o centro divide por menos dois pra achar sem errar!"
+  },
+
   "linguagens/literatura-contemporanea-cancao": {
     topic: "Literatura Contemporânea, Canção e Poesia Periférica",
     area: "linguagens",
