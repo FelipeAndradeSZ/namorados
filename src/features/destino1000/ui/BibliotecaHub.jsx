@@ -16,17 +16,43 @@ import {
   Lightbulb, 
   CheckSquare,
   Target,
-  Activity
+  Activity,
+  List,
+  Bookmark,
+  Sun,
+  Moon,
+  Type
 } from "lucide-react";
 import { ALL_ENEM_BOOKS, BOOKS_BY_AREA } from "../content/books/index";
-import { RichMarkdownReader } from "./RichMarkdownReader";
+import { RichMarkdownReader, extractHeadings } from "./RichMarkdownReader";
 
 export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
   const [selectedArea, setSelectedArea] = useState("todas");
   const [searchQuery, setSearchQuery] = useState("");
   const [activeBook, setActiveBook] = useState(null);
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
-  const [fontSize, setFontSize] = useState("normal"); // 'normal' | 'large'
+  const [fontSize, setFontSize] = useState(() => {
+    try {
+      return localStorage.getItem("destino1000_font_size") || "normal";
+    } catch {
+      return "normal";
+    }
+  }); // 'sm' | 'normal' | 'large'
+  const [fontFamily, setFontFamily] = useState(() => {
+    try {
+      return localStorage.getItem("destino1000_font_family") || "sans";
+    } catch {
+      return "sans";
+    }
+  }); // 'sans' | 'serif'
+  const [readingTheme, setReadingTheme] = useState(() => {
+    try {
+      return localStorage.getItem("destino1000_reading_theme") || "slate";
+    } catch {
+      return "slate";
+    }
+  }); // 'slate' | 'sepia'
+  const [showToc, setShowToc] = useState(false);
   const [completedChapters, setCompletedChapters] = useState(() => {
     try {
       const saved = localStorage.getItem("destino1000_completed_chapters");
@@ -137,55 +163,190 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
       ...(Array.isArray(currentChapter.quickReviewPoints) ? currentChapter.quickReviewPoints : [])
     ];
 
+    const isSepia = readingTheme === "sepia";
+    const headings = useMemo(() => extractHeadings(mainText), [mainText]);
+
+    const handleCycleFontSize = () => {
+      setFontSize((curr) => {
+        const next = curr === "sm" ? "normal" : curr === "normal" ? "large" : "sm";
+        try { localStorage.setItem("destino1000_font_size", next); } catch (e) {}
+        return next;
+      });
+    };
+
+    const handleToggleFontFamily = () => {
+      setFontFamily((curr) => {
+        const next = curr === "sans" ? "serif" : "sans";
+        try { localStorage.setItem("destino1000_font_family", next); } catch (e) {}
+        return next;
+      });
+    };
+
+    const handleToggleReadingTheme = () => {
+      setReadingTheme((curr) => {
+        const next = curr === "slate" ? "sepia" : "slate";
+        try { localStorage.setItem("destino1000_reading_theme", next); } catch (e) {}
+        return next;
+      });
+    };
+
     return (
-      <div className="min-h-screen bg-slate-950 text-slate-100 pb-24">
+      <div className={`min-h-screen transition-colors duration-200 pb-24 ${
+        isSepia ? "bg-[#181411] text-[#e8e0d5]" : "bg-slate-950 text-slate-100"
+      }`}>
         {/* Barra superior de leitura */}
-        <header className="sticky top-0 z-30 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-4 py-3">
-          <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+        <header className={`sticky top-0 z-30 backdrop-blur-md border-b px-4 py-3 transition-colors ${
+          isSepia 
+            ? "bg-[#1f1914]/90 border-[#3d3126]" 
+            : "bg-slate-900/90 border-slate-800"
+        }`}>
+          <div className="max-w-4xl mx-auto flex items-center justify-between gap-3">
             <button
               onClick={() => setActiveBook(null)}
-              className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors bg-slate-800/80 hover:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 cursor-pointer"
+              className={`inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold transition-colors px-3 py-1.5 rounded-lg border cursor-pointer ${
+                isSepia
+                  ? "bg-[#29221a] hover:bg-[#342b21] text-[#e8e0d5] border-[#44372b]"
+                  : "bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white border-slate-700"
+              }`}
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Estante de Livros</span>
+              <span>Estante</span>
             </button>
 
-            <div className="text-center truncate flex-1 hidden sm:block">
+            <div className="text-center truncate flex-1 hidden md:block">
               <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">
                 {getAreaLabel(activeBook)} • Cap. {chapterNum} de {activeBook.chapters.length}
               </span>
-              <p className="text-sm font-bold text-white truncate">{currentChapter.title}</p>
+              <p className="text-sm font-bold truncate">{currentChapter.title}</p>
             </div>
 
-            <div className="flex items-center gap-2">
+            {/* Ferramentas de Leitura & Conforto Visual */}
+            <div className="flex items-center gap-1.5">
+              {headings.length > 0 && (
+                <button
+                  onClick={() => setShowToc((v) => !v)}
+                  className={`text-xs font-semibold px-2.5 py-1.5 rounded border transition-colors flex items-center gap-1 cursor-pointer ${
+                    showToc
+                      ? "bg-amber-500 text-slate-950 border-amber-400 font-bold shadow-xs"
+                      : isSepia
+                      ? "bg-[#29221a] text-[#e8e0d5] border-[#44372b] hover:border-amber-500/60"
+                      : "bg-slate-800 border-slate-700 text-slate-300 hover:text-white"
+                  }`}
+                  title="Sumário de tópicos do capítulo"
+                >
+                  <List className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Índice ({headings.length})</span>
+                </button>
+              )}
+
               <button
-                onClick={() => setFontSize((f) => (f === "normal" ? "large" : "normal"))}
-                className="text-xs font-semibold px-2.5 py-1.5 rounded bg-slate-800 border border-slate-700 text-slate-300 hover:text-white cursor-pointer"
-                title="Ajustar tamanho da fonte"
+                onClick={handleToggleFontFamily}
+                className={`text-xs font-semibold px-2.5 py-1.5 rounded border transition-colors flex items-center gap-1 cursor-pointer ${
+                  fontFamily === "serif"
+                    ? "bg-amber-950/60 text-amber-300 border-amber-700 font-serif"
+                    : isSepia
+                    ? "bg-[#29221a] text-[#e8e0d5] border-[#44372b]"
+                    : "bg-slate-800 border-slate-700 text-slate-300 hover:text-white"
+                }`}
+                title={fontFamily === "serif" ? "Fonte Serifada Ativa (Editorial)" : "Fonte Moderna (Sans-serif)"}
               >
-                {fontSize === "normal" ? "Fonte: A+" : "Fonte: A"}
+                <Type className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">{fontFamily === "serif" ? "Serif" : "Sans"}</span>
               </button>
+
+              <button
+                onClick={handleToggleReadingTheme}
+                className={`text-xs font-semibold px-2.5 py-1.5 rounded border transition-colors flex items-center gap-1 cursor-pointer ${
+                  isSepia
+                    ? "bg-[#33271d] text-amber-200 border-[#533f2e]"
+                    : "bg-slate-800 border-slate-700 text-slate-300 hover:text-white"
+                }`}
+                title={isSepia ? "Tema Sépia Ativo (Conforto Papel)" : "Tema Escuro Noturno Ativo"}
+              >
+                {isSepia ? <Sun className="w-3.5 h-3.5 text-amber-300" /> : <Moon className="w-3.5 h-3.5 text-sky-300" />}
+                <span className="hidden sm:inline">{isSepia ? "Sépia" : "Escuro"}</span>
+              </button>
+
+              <button
+                onClick={handleCycleFontSize}
+                className={`text-xs font-semibold px-2.5 py-1.5 rounded border transition-colors cursor-pointer ${
+                  isSepia
+                    ? "bg-[#29221a] text-[#e8e0d5] border-[#44372b]"
+                    : "bg-slate-800 border-slate-700 text-slate-300 hover:text-white"
+                }`}
+                title="Ajustar tamanho da fonte (Pequeno, Normal, Grande)"
+              >
+                {fontSize === "sm" ? "A-" : fontSize === "large" ? "A+" : "A"}
+              </button>
+
               <button
                 onClick={() => handleToggleChapterComplete(chapterId)}
-                className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors cursor-pointer ${
+                className={`inline-flex items-center gap-1 text-xs font-bold px-2.5 sm:px-3 py-1.5 rounded-lg border transition-colors cursor-pointer ${
                   isCompleted
                     ? "bg-emerald-950/80 border-emerald-600 text-emerald-300"
+                    : isSepia
+                    ? "bg-[#29221a] border-[#44372b] text-[#dfd7cc] hover:border-slate-500"
                     : "bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500"
                 }`}
               >
                 <CheckCircle2 className={`w-3.5 h-3.5 ${isCompleted ? "text-emerald-400" : "text-slate-400"}`} />
-                <span className="hidden sm:inline">{isCompleted ? "Concluído" : "Marcar Lido"}</span>
+                <span className="hidden sm:inline">{isCompleted ? "Concluído" : "Lido"}</span>
               </button>
             </div>
           </div>
+
+          {/* Gaveta / Dropdown do Sumário (TOC) */}
+          {showToc && headings.length > 0 && (
+            <div className={`max-w-4xl mx-auto mt-3 p-4 rounded-2xl border shadow-2xl backdrop-blur-md animate-in fade-in slide-in-from-top-2 duration-150 ${
+              isSepia 
+                ? "bg-[#211a14]/95 border-[#423425] text-[#e8e0d5]" 
+                : "bg-slate-900/95 border-slate-800 text-slate-200"
+            }`}>
+              <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800/80">
+                <span className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                  <Bookmark className="w-3.5 h-3.5" /> Sumário do Capítulo ({headings.length} tópicos)
+                </span>
+                <button 
+                  onClick={() => setShowToc(false)}
+                  className="text-xs text-slate-400 hover:text-white cursor-pointer px-2 py-0.5 rounded hover:bg-slate-800/50"
+                >
+                  Fechar
+                </button>
+              </div>
+              <div className="max-h-64 overflow-y-auto space-y-1 text-xs pr-1">
+                {headings.map((h, hIdx) => (
+                  <button
+                    key={hIdx}
+                    onClick={() => {
+                      setShowToc(false);
+                      const el = document.getElementById(h.id);
+                      if (el) el.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className={`w-full text-left py-1.5 px-2.5 rounded-lg transition-colors flex items-center gap-2 cursor-pointer ${
+                      h.level === 1 
+                        ? "font-bold text-white hover:bg-amber-500/10 hover:text-amber-300" 
+                        : h.level === 2 
+                        ? "pl-4 text-slate-300 hover:bg-slate-800/60 hover:text-white" 
+                        : "pl-6 text-slate-400 hover:bg-slate-800/40"
+                    }`}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80 flex-shrink-0" />
+                    <span className="truncate">{h.text}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </header>
 
         {/* Conteúdo do Capítulo */}
         <main className="max-w-3xl mx-auto px-4 pt-6">
           {/* Breadcrumb & Metadados */}
-          <div className="mb-6 pb-6 border-b border-slate-800">
+          <div className={`mb-6 pb-6 border-b ${isSepia ? "border-[#3d3126]" : "border-slate-800"}`}>
             <div className="flex items-center gap-2 text-xs text-slate-400 mb-2">
-              <span className="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 font-semibold text-amber-300">
+              <span className={`px-2 py-0.5 rounded border font-semibold text-amber-300 ${
+                isSepia ? "bg-[#29221a] border-[#44372b]" : "bg-slate-800 border-slate-700"
+              }`}>
                 {activeBook.title}
               </span>
               <span>•</span>
@@ -204,13 +365,17 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
               {currentChapter.title}
             </h1>
             {currentChapter.subtitle && (
-              <p className="text-slate-400 text-sm sm:text-base font-medium mb-3">
+              <p className={`text-sm sm:text-base font-medium mb-3 ${isSepia ? "text-[#c2b6a6]" : "text-slate-400"}`}>
                 {currentChapter.subtitle}
               </p>
             )}
             {currentChapter.summary && (
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
-                💡 <span className="font-semibold text-slate-200">Visão Geral:</span> {currentChapter.summary}
+              <p className={`text-sm sm:text-base leading-relaxed p-3.5 rounded-xl border ${
+                isSepia 
+                  ? "bg-[#211a14] border-[#3d3126] text-[#dfd7cc]" 
+                  : "bg-slate-900/60 border-slate-800 text-slate-300"
+              }`}>
+                💡 <span className="font-semibold text-white">Visão Geral:</span> {currentChapter.summary}
               </p>
             )}
 
@@ -242,6 +407,8 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
                       ? "bg-amber-500 text-slate-950 font-bold border-amber-400 shadow-md shadow-amber-500/20"
                       : completed
                       ? "bg-emerald-950/40 text-emerald-300 border-emerald-800 hover:border-emerald-600"
+                      : isSepia
+                      ? "bg-[#251f18] text-[#c2b6a6] border-[#3d3126] hover:text-white"
                       : "bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-slate-200"
                   }`}
                 >
@@ -254,14 +421,22 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
 
           {/* Objetivos de Aprendizagem do Capítulo */}
           {Array.isArray(currentChapter.learningObjectives) && currentChapter.learningObjectives.length > 0 && (
-            <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-md">
+            <div className={`mb-8 p-4 sm:p-5 rounded-2xl border shadow-md ${
+              isSepia 
+                ? "bg-[#221b15] border-[#3d3126]" 
+                : "bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border-slate-800"
+            }`}>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
                 <Target className="w-4 h-4 text-amber-400" />
                 <span>Objetivos de Domínio deste Capítulo</span>
               </div>
               <ul className="grid sm:grid-cols-2 gap-2 text-xs text-slate-300">
                 {currentChapter.learningObjectives.map((obj, oIdx) => (
-                  <li key={oIdx} className="flex items-start gap-2 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80">
+                  <li key={oIdx} className={`flex items-start gap-2 p-2.5 rounded-xl border ${
+                    isSepia 
+                      ? "bg-[#1d1712] border-[#382b20] text-[#dfd7cc]" 
+                      : "bg-slate-950/60 border-slate-800/80"
+                  }`}>
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 mt-0.5 flex-shrink-0" />
                     <span className="leading-relaxed">{obj}</span>
                   </li>
@@ -282,7 +457,12 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
                       <span>{sec.heading}</span>
                     </h2>
 
-                    <RichMarkdownReader content={sec.content} fontSize={fontSize} />
+                    <RichMarkdownReader 
+                      content={sec.content} 
+                      fontSize={fontSize} 
+                      fontFamily={fontFamily} 
+                      theme={readingTheme} 
+                    />
 
                     {sec.didacticBox && (
                       <div className="my-5 p-4 rounded-xl bg-gradient-to-r from-amber-950/50 via-amber-900/30 to-slate-900 border border-amber-600/50 shadow-inner">
@@ -303,7 +483,12 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
             {/* Conteúdo contínuo enriquecido (deepContent ou content) */}
             {mainText && (
               <div className="space-y-6">
-                <RichMarkdownReader content={mainText} fontSize={fontSize} />
+                <RichMarkdownReader 
+                  content={mainText} 
+                  fontSize={fontSize} 
+                  fontFamily={fontFamily} 
+                  theme={readingTheme} 
+                />
               </div>
             )}
 

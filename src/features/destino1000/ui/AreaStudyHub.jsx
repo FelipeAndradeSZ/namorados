@@ -64,6 +64,7 @@ const AREA_TOPICS = {
     { id: "matematica/circunferencia-conicas", name: "Circunferência, Posições Relativas e Cônicas na Geometria Analítica", tag: "Geometria", priority: "Crítica • Cônicas & Cobertura", questionsCount: 25 },
     { id: "matematica/geometria-espacial-metrica", name: "Geometria Espacial Métrica, Corpos Redondos e Sólidos de Revolução", tag: "Geometria", priority: "Crítica • Volumes, Cilindros e Troncos", questionsCount: 25 },
     { id: "matematica/estatistica-dispersao-desvio-padrao", name: "Estatística de Dispersão, Variância e Desvio Padrão", tag: "Estatística", priority: "Crítica • Homogeneidade e Incerteza", questionsCount: 25 },
+    { id: "matematica/probabilidade-bayes-testes-diagnosticos", name: "Teoria Bayesiana, Testes Diagnósticos e Incerteza", tag: "Probabilidade", priority: "Crítica • Medicina & Bayes", questionsCount: 25 },
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 25 },
@@ -85,6 +86,7 @@ const AREA_TOPICS = {
     { id: "humanas/geografia-urbana-segregacao", name: "Geografia Urbana, Metropolização e Segregação Socioespacial", tag: "Geografia", priority: "Crítica • Gentrificação & Milton Santos", questionsCount: 25 },
     { id: "humanas/iluminismo-revolucoes-burguesas", name: "Iluminismo, Revoluções Burguesas e Pensamento Liberal", tag: "História", priority: "Crítica • Luzes, 1789 e Direitos", questionsCount: 25 },
     { id: "humanas/republica-oligarquica-revoltas", name: "República Oligárquica, Coronelismo e Revoltas Sociais (1889-1930)", tag: "História", priority: "Crítica • Vacina, Canudos, Chibata e 1930", questionsCount: 25 },
+    { id: "humanas/historia-brasil-ditadura-cidadania", name: "Ditadura Civil-Militar (1964-1985), Resistência e Redemocratização", tag: "História", priority: "Crítica • AI-5, Anistia e Diretas Já", questionsCount: 25 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 25 },
@@ -106,6 +108,7 @@ const AREA_TOPICS = {
     { id: "linguagens/teoria-literaria-poetica", name: "Teoria Literária, Gêneros Canônicos e Poética", tag: "Literatura", priority: "Crítica • Narratologia & Bakhtin", questionsCount: 25 },
     { id: "linguagens/semiotica-multimodal-charges", name: "Semiótica Multimodal, Charges, Cartuns e Humor Gráfico", tag: "Comunicação", priority: "Crítica • Ironia, Verbo-Visual e Tiras", questionsCount: 25 },
     { id: "linguagens/estrategias-argumentativas-persuasao", name: "Estratégias Argumentativas, Recursos Persuasivos e Falácias Lógicas", tag: "Argumentação", priority: "Crítica • Retórica e Desconstrução de Falácias", questionsCount: 25 },
+    { id: "linguagens/norma-culta-sintaxe-crase-concordancia", name: "Norma Padrão, Sintaxe de Regência, Crase e Concordância", tag: "Gramática", priority: "Crítica • C1 da Redação e Sintaxe ENEM", questionsCount: 25 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },

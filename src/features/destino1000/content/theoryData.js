@@ -3100,6 +3100,127 @@ export const THEORY_CONTENT = {
       "Achar que o Tenentismo dos anos 1920 era socialista: o tenentismo original era um movimento reformista cívico-moralizador burguês focado em voto secreto e autoridade central."
     ],
     mnemonics: "Engrenagem da República Velha: 'Coronel toca o cabresto na roça; governador degola na comissão; presidente compra café com empréstimo do gringo em Taubaté; em 1904 a vacina explode com o bota-abaixo; em 1910 João Cândido cala a chibata no mar; e em 1930 a crise quebra o café e Vargas fecha o congresso pro novo Brasil começar!'"
+  },
+
+  "matematica/probabilidade-bayes-testes-diagnosticos": {
+    topic: "Teoria Bayesiana, Testes Diagnósticos e Incerteza",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Competência 7 (Habilidades 28 e 29). Alta incidência em questões contextualizadas de probabilidade condicional, árvores de decisão, bioestatística e testes laboratoriais de triagem médica.",
+    highFrequencySkills: ["H28 - Resolver situação-problema que envolva conhecimentos de probabilidade", "H29 - Utilizar conhecimentos de probabilidade como recurso para a tomada de decisões"],
+    overview: "O Teorema de Bayes e a probabilidade condicional constituem a espinha dorsal matemática da epidemiologia e da prática médica baseada em evidências. Para Beatriz (foco em Medicina), dominar a diferença entre Sensibilidade (probabilidade do teste positivo dado que o paciente está doente), Especificidade (probabilidade do teste negativo dado que o paciente é saudável), Valor Preditivo Positivo (VPP) e Valor Preditivo Negativo (VPN) é vital tanto para gabaritar o ENEM quanto para desconstruir a célebre Falácia da Taxa Básica (Base-Rate Fallacy) e o Paradoxo dos Falsos Positivos em programas de triagem populacional.",
+    keyConcepts: [
+      {
+        title: "Probabilidade Condicional e Espaço Amostral Reduzido",
+        content: "• P(A|B) quantifica a probabilidade de ocorrência do evento A uma vez que o evento B já ocorreu comprovadamente.\n• Fórmula canônica: P(A|B) = P(A ∩ B) / P(B) = n(A ∩ B) / n(B).\n• Princípio da Restrição: O evento B substitui o espaço amostral original Ω. Elementos fora de B são descartados; entre os que restam em B, contamos apenas os que também pertencem a A."
+      },
+      {
+        title: "Teorema da Probabilidade Total e Árvores de Decisão",
+        content: "• Se B1, B2, ..., Bn formam uma partição do espaço amostral (disjuntos e cobrem todo Ω), a probabilidade incondicional de um evento A é dada por: P(A) = Σ [P(Bi) · P(A|Bi)].\n• Em árvore de decisão: Multiplicam-se as probabilidades ao longo de um mesmo ramo (regra do produto) e somam-se os resultados dos ramos alternativos que chegam ao desfecho de interesse (regra da adição)."
+      },
+      {
+        title: "Métricas Laboratoriais: Sensibilidade vs. Especificidade",
+        content: "• Sensibilidade (S): Fração de doentes identificados corretamente pelo teste. S = P(+|Doente) = VP / (VP + FN).\n• Especificidade (E): Fração de saudáveis identificados corretamente como negativos. E = P(-|Sadio) = VN / (VN + FP).\n• Falsos Positivos: Fração de saudáveis que testam positivo por erro técnico. Taxa de FP = 1 - E.\n• Falsos Negativos: Fração de doentes que testam negativo por erro técnico. Taxa de FN = 1 - S."
+      },
+      {
+        title: "O Teorema de Bayes e o Valor Preditivo Positivo (VPP)",
+        content: "• O VPP responde à pergunta clínica essencial: 'O teste deu positivo; qual é a chance real de o paciente ter a doença?'\n• VPP = P(Doente|+) = [P(Doente) · P(+|Doente)] / P(+) = VP / (VP + FP).\n• Paradoxo dos Falsos Positivos: Se a prevalência da doença for muito baixa (ex: 0,1%), o número de sadios na população é tão esmagador que mesmo uma taxa minúscula de falso positivo (ex: 1%) gera mais pessoas positivas sadias do que doentes reais!"
+      },
+      {
+        title: "Distribuição Binomial em Ensaios Clínicos e Genética",
+        content: "• Modela n ensaios de Bernoulli independentes com probabilidade constante de sucesso p: P(X = k) = C(n, k) · p^k · (1 - p)^(n - k).\n• O coeficiente binomial C(n, k) = n! / [k! · (n - k)!] é obrigatório porque os k sucessos podem ocorrer em diferentes ordens ao longo das n tentativas."
+      }
+    ],
+    formulasAndRules: [
+      "Probabilidade Condicional: P(A|B) = P(A ∩ B) / P(B).",
+      "Teorema da Probabilidade Total: P(A) = P(D)·P(A|D) + P(Dc)·P(A|Dc).",
+      "Teorema de Bayes: P(D|+) = [Prevalência · Sensibilidade] / [ (Prevalência · Sensibilidade) + ( (1 - Prevalência) · (1 - Especificidade) ) ].",
+      "Valor Preditivo Positivo (VPP): VPP = VP / (VP + FP).",
+      "Valor Preditivo Negativo (VPN): VPN = VN / (VN + FN).",
+      "Distribuição Binomial: P(X = k) = C(n, k) · p^k · (1 - p)^(n - k)."
+    ],
+    enemTraps: [
+      "Responder que a chance de estar doente é a Sensibilidade do teste (ex: achar que teste com 95% de sensibilidade significa 95% de chance de o paciente com teste positivo estar doente — confundir P(+|D) com P(D|+)).",
+      "Ignorar a prevalência da doença na população ao julgar a eficácia de um teste de triagem em massa.",
+      "Esquecer de multiplicar pelo coeficiente binomial C(n, k) ao calcular a probabilidade de k eventos em n tentativas de Bernoulli."
+    ],
+    mnemonics: "Regra Mnemônica Bayes: 'Sensibilidade é achar o doente no hospital (P(+|D)); VPP é acalmar o paciente com o exame na mão (P(D|+)); se a doença é rara, o falso positivo dispara!'"
+  },
+
+  "linguagens/norma-culta-sintaxe-crase-concordancia": {
+    topic: "Norma Padrão, Sintaxe de Regência, Crase e Concordância",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 8 (H25, H26, H27) e Competência 1 da Redação Nota 1000: Base indispensável para precisão textual, clareza cirúrgica e domínio da modalidade formal escrita.",
+    highFrequencySkills: ["H25 - Identificar marcas linguísticas que singularizam as variedades da norma-padrão", "H26 - Relacionar o emprego de recursos coesivos e sintáticos aos efeitos de sentido em textos formais", "H27 - Avaliar a adequação de estruturas sintáticas e concordâncias a gêneros acadêmico-científicos"],
+    overview: "A sintaxe padrão no ENEM não é avaliada como decoreba mecanicista, mas como ferramenta de precisão argumentativa, clareza referencial e eficácia comunicativa em contextos formais, biomédicos e institucionais. O domínio de regência verbal/nominal, crase e concordância verbal/nominal separa os textos medianos das notas de excelência.",
+    keyConcepts: [
+      {
+        title: "Emprego Rigoroso do Sinal Indicativo de Crase",
+        content: "A crase é a fusão fonética e gráfica da preposição 'a' (exigida por regência verbal ou nominal) com o artigo definido feminino 'a(s)' ou pronomes demonstrativos ('aquele', 'aquela', 'aquilo'). Ocorre obrigatoriamente antes de nomes femininos determinados regidos de preposição e em locuções adverbiais, prepositivas e conjuntivas femininas ('à medida que', 'à proporção que', 'às vezes'). Casos proibitivos: antes de verbos, de palavras masculinas, de pronomes de tratamento (exceto senhora/senhorita/dona) e quando o 'a' singular antecede plural genérico ('a pessoas'). Casos facultativos: antes de pronomes possessivos femininos singulares, antes de nomes próprios femininos e após a preposição 'até'."
+      },
+      {
+        title: "Regência Verbal e Nominal de Alta Frequência",
+        content: "Verbos cruciais: 'Aspirar' (inalar = VTD / almejar = VTI com preposição 'a'); 'Visar' (mirar/rubricar = VTD / ter como meta = VTI com preposição 'a'); 'Assistir' (socorrer/ajudar = VTD / presenciar/ver = VTI com preposição 'a'); 'Implicar' (acarretar consequências = VTD estrito sem preposição 'em'); 'Preferir' (VTD e VTI: prefere X a Y, rejeitando 'do que' ou 'mais que'). Regência nominal: 'acesso a', 'relativo a', 'essencial a/para', 'prejudicial a'."
+      },
+      {
+        title: "Concordância Verbal e Sujeitos Especiais",
+        content: "Regra mestra: o verbo concorda em número e pessoa com o núcleo do sujeito. Casos especiais: com expressões partitivas ('a maioria de', 'grande parte de' + plural), o verbo aceita concordância lógica com o núcleo singular ou atrativa com o especificador plural. Com a partícula 'se': como pronome apassivador (com VTD), o verbo concorda com o sujeito paciente ('identificaram-se sintomas'); como índice de indeterminação do sujeito (com VTI, VI ou VL), o verbo fica invariavelmente na 3ª pessoa do singular ('necessita-se de leitos')."
+      },
+      {
+        title: "Concordância Nominal e Funções Predicativas",
+        content: "O adjetivo concorda em gênero e número com os substantivos a que se refere. Expressões como 'é proibido', 'é necessário', 'é bom': sem determinante artigo, o adjetivo permanece invariável no masculino singular ('é proibido entrada'); com determinante, a concordância é obrigatória ('é proibida a entrada'). Expressões de reforço: 'anexo', 'incluso' e 'próprio' concordam com o nome; 'em anexo' e 'menos' são invariáveis."
+      }
+    ],
+    formulasAndRules: [
+      "Teste Prático da Crase: Troque a palavra feminina por uma equivalente masculina. Se surgir 'ao' ou 'aos', há crase ('fui ao hospital' -> 'fui à clínica'). Se surgir 'o' ou 'um', não há crase.",
+      "Regra do SE Apassivador: Verbo Transitivo Direto + SE = Voz Passiva Sintética. O termo seguinte é o sujeito paciente e determina o número do verbo ('Prescrevem-se medicamentos', 'Analisa-se o exame').",
+      "Regra do Verbo HAVER: No sentido de existir, ocorrer ou tempo decorrido, o verbo 'haver' é impessoal (sem sujeito) e fica estritamente na 3ª pessoa do singular ('Havia dezenas de pacientes', e NUNCA 'Haviam')."
+    ],
+    enemTraps: [
+      "Usar 'implicar em': Na norma-padrão culta, 'implicar' no sentido de acarretar é transitivo direto: 'A automedicação implica riscos severos' (e não 'implica em riscos').",
+      "Colocar crase antes de pronomes indefinidos ou indefinidos plurais ('a todas as pessoas', 'a qualquer hora' não levam crase).",
+      "Flexionar o verbo haver no plural quando acompanhado de auxiliar impessoal: o auxiliar herda a impessoalidade ('Deve haver muitos casos', e não 'Devem haver muitos casos')."
+    ],
+    mnemonics: "Macete do SE: Se o verbo aceita 'por algo' (VTD), vira passiva e pluraliza ('Vendem-se casas'); se pede preposição fixa (VTI), trava no singular ('Precisa-se de médicos')."
+  },
+
+  "humanas/historia-brasil-ditadura-cidadania": {
+    topic: "Ditadura Civil-Militar Brasileira (1964-1985), Repressão, Cidadania e Redemocratização",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Competência 3 (H11, H12, H13, H14) e Competência 5 (H21, H22): Um dos temas históricos mais densos e recorrentes do ENEM, conectando censura, autoritarismo de Estado, desenvolvimento dependente e a construção da Cidadania na Carta de 1988.",
+    highFrequencySkills: ["H11 - Identificar registros sobre o papel das instituições no enfrentamento de conflitos sociopolíticos", "H12 - Analisar o papel da justiça, dos atos institucionais e da repressão em regimes de exceção", "H13 - Analisar a atuação dos movimentos sociais na luta pela redemocratização e direitos civis"],
+    overview: "O regime instaurado em 1964 é caracterizado pela historiografia contemporânea como 'civil-militar', ressaltando o consórcio entre Forças Armadas, elites empresariais, setores conservadores da Igreja e apoio geopolítico norte-americano na Doutrina de Segurança Nacional. O período combinou fechamento institucional escalonado (Atos Institucionais até o AI-5), repressão sistemática (DOI-CODI, OBAN), modernização autoritária e endividamento externo ('Milagre Econômico'), culminando na abertura 'lenta, gradual e segura' (Geisel/Figueiredo), nas greves do ABC, nas Diretas Já e na transição negociada para a Nova República.",
+    keyConcepts: [
+      {
+        title: "A Construção do Aparato Repressivo e os Atos Institucionais (AI-1 ao AI-5)",
+        content: "A legitimação do regime deu-se por decretos extraordinários. O AI-1 (1964) cassou mandatos e suspendeu direitos políticos; o AI-2 (1965) extinguiu partidos tradicionais e impôs o bipartidarismo (ARENA governista e MDB oposicionista consentido); o AI-5 (13 de dezembro de 1968, governo Costa e Silva) marcou o 'golpe dentro do golpe', suspendendo o habeas corpus para crimes políticos, fechando o Congresso por tempo indeterminado e institucionalizando a censura prévia aos meios de comunicação e à cultura."
+      },
+      {
+        title: "O 'Milagre Econômico' (1968-1973) e a Concentração de Renda",
+        content: "Sob o comando de Delfim Netto no governo Médici, o PIB cresceu a taxas médias superiores a 10% ao ano, impulsionado por obras faraônicas (Ponte Rio-Niterói, Transamazônica, Usina de Itaipu), expansão da indústria de bens de consumo duráveis e massiva atração de capital externo. A fórmula de Delfim — 'fazer o bolo crescer para depois dividir' — resultou em forte arrocho salarial e disparada da desigualdade de renda (coeficiente de Gini bateu recordes), enquanto a dívida externa explodiu com as crises do petróleo de 1973 e 1979."
+      },
+      {
+        title: "Resistência Cultural, Luta Armada e Movimentos Sociais",
+        content: "A oposição ao regime desdobrou-se em múltiplas frentes: guerrilhas urbanas (ALN de Carlos Marighella, MR-8) e rural (Guerrilha do Araguaia); resistência cultural através do Cinema Novo, do Teatro de Opinião e da Tropicália e MPB de protesto (músicas como 'Cálice' e 'Pra Não Dizer que Não Falei das Flores'); a reorganização estudantil (UNE clandestina) e o sindicalismo combativo do ABC paulista a partir de 1978 com as greves metalúrgicas de São Bernardo do Campo."
+      },
+      {
+        title: "Abertura 'Lenta, Gradual e Segura', Anistia e Diretas Já",
+        content: "Iniciada no governo Geisel (1974-1979) com o fim do AI-5 e a revogação da censura prévia, a transição enfrentou a resistência da 'linha dura' militar (atentado do Riocentro em 1981). No governo Figueiredo, a Lei da Anistia de 1979 possibilitou o retorno dos exilados, mas impôs a autoanistia aos agentes do Estado acusados de tortura. A campanha das Diretas Já (1983-1984) mobilizou milhões pela Emenda Dante de Oliveira; apesar de rejeitada no Congresso, conduziu à eleição de Tancredo Neves no Colégio Eleitoral (1985) e desaguou na Assembleia Nacional Constituinte de 1987-1988 ('Constituição Cidadã')."
+      }
+    ],
+    formulasAndRules: [
+      "Equação do Golpe: Guerra Fria + Doutrina de Segurança Nacional (ESG) + Aliança Civil-Militar + Apoio Logístico dos EUA (Operação Brother Sam) = Rompimento da Legalidade Democrática de 1946.",
+      "Equação Econômica do Milagre: Crescimento de 10% a.a. + Arrocho Salarial + Obras Faraônicas + Dívida Externa = Concentração Recorde de Renda e 'Década Perdida' nos anos 1980.",
+      "Princípio da Transição Negociada: A redemocratização brasileira não ocorreu por colapso bélico do regime (como na Argentina pós-Malvinas), mas por transição pactuada com elites políticas tradicionais."
+    ],
+    enemTraps: [
+      "Afirmar que o golpe foi um ato exclusivamente militar de caserna: o termo 'civil-militar' atesta o protagonismo ativo de empresários (IPES/IBAD), da grande mídia e de setores conservadores da sociedade civil.",
+      "Supor que a Lei da Anistia de 1979 foi uma concessão exclusiva da oposição vitoriosa: o texto legal aprovado foi uma fórmula pactuada que anistiou também torturadores e agentes repressores de Estado.",
+      "Acreditar que as Diretas Já aprovaram a eleição direta de Tancredo Neves: a emenda Dante de Oliveira foi derrotada por não atingir dois terços no plenário da Câmara, e a eleição de Tancredo ocorreu via voto indireto no Colégio Eleitoral."
+    ],
+    mnemonics: "Linha do Tempo dos Generais: C-C-M-G-F -> Castelo Branco (início institucional), Costa e Silva (AI-5 em 68), Médici (Milagre e auge da repressão), Geisel (abertura lenta), Figueiredo (anistia e fim da ditadura)."
   }
 };
 

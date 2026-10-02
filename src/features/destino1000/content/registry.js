@@ -35,6 +35,7 @@ export const QUESTION_MODULES = {
   "matematica/circunferencia-conicas": () => import("./questions/matematica/circunferencia-conicas.js"),
   "matematica/geometria-espacial-metrica": () => import("./questions/matematica/geometria-espacial-metrica.js"),
   "matematica/estatistica-dispersao-desvio-padrao": () => import("./questions/matematica/estatistica-dispersao-desvio-padrao.js"),
+  "matematica/probabilidade-bayes-testes-diagnosticos": () => import("./questions/matematica/probabilidade-bayes-testes-diagnosticos.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
@@ -56,6 +57,7 @@ export const QUESTION_MODULES = {
   "linguagens/teoria-literaria-poetica": () => import("./questions/linguagens/teoria-literaria-poetica.js"),
   "linguagens/semiotica-multimodal-charges": () => import("./questions/linguagens/semiotica-multimodal-charges.js"),
   "linguagens/estrategias-argumentativas-persuasao": () => import("./questions/linguagens/estrategias-argumentativas-persuasao.js"),
+  "linguagens/norma-culta-sintaxe-crase-concordancia": () => import("./questions/linguagens/norma-culta-sintaxe-crase-concordancia.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
@@ -77,6 +79,7 @@ export const QUESTION_MODULES = {
   "humanas/geografia-urbana-segregacao": () => import("./questions/humanas/geografia-urbana-segregacao.js"),
   "humanas/iluminismo-revolucoes-burguesas": () => import("./questions/humanas/iluminismo-revolucoes-burguesas.js"),
   "humanas/republica-oligarquica-revoltas": () => import("./questions/humanas/republica-oligarquica-revoltas.js"),
+  "humanas/historia-brasil-ditadura-cidadania": () => import("./questions/humanas/historia-brasil-ditadura-cidadania.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),

@@ -1,159 +1,406 @@
-// Livro Didático 06: Linguagens, Códigos e suas Tecnologias - Gêneros Textuais, Análise do Discurso e Argumentação
+/**
+ * LIVRO DIDÁTICO DIGITAL: Dominando Gêneros Textuais e a Engenharia da Argumentação no ENEM
+ * Área: Linguagens, Códigos e suas Tecnologias
+ * Autor: Equipe Pedagógica Destino 1000
+ * Versão: 2.0.0 (Edição de Alta Densidade Didática 2026 - Padrão Medicina)
+ * Regra Estrita: ZERO termos de deslocamento turístico.
+ * Foco Pedagógico: Tipologia vs Gênero, esferas discursivas bakhtinianas, modelo de Toulmin,
+ * operadores argumentativos de Ducrot, falácias lógicas, semiótica multimodal e sociolinguística crítica.
+ */
+
 export const BOOK_LINGUAGENS_GENEROS_ARGUMENTACAO = {
-  id: 'livro-lin-generos-argumentacao',
-  areaId: 'linguagens',
-  areaLabel: 'Linguagens e Códigos',
-  title: 'Dominando Gêneros Textuais e a Engenharia da Argumentação no ENEM',
-  subtitle: 'Da tipologia textual às estratégias discursivas: leitura crítica, intencionalidade e recursos estilísticos',
-  author: 'Prof. Coordenador de Linguagens - Destino 1000',
-  edition: '2ª Edição Revisada (2026/2027)',
-  coverGradient: 'from-amber-600 via-orange-600 to-rose-700',
-  targetExam: 'ENEM (Competências 1, 3, 7 e 8 da Matriz do INEP)',
-  estimatedReadTimeMinutes: 50,
+  id: "livro-lin-generos-argumentacao",
+  areaId: "linguagens",
+  areaLabel: "Linguagens e Códigos",
+  title: "Dominando Gêneros Textuais e a Engenharia da Argumentação no ENEM",
+  subtitle: "Da teoria dos gêneros discursivos à dissecação de falácias lógicas e estratégias persuasivas",
+  author: "Banca Examinadora de Linguagens — Destino 1000",
+  edition: "2ª Edição Revisada (2026/2027) • Padrão Alta Performance",
+  coverGradient: "from-amber-600 via-orange-600 to-rose-700",
+  targetExam: "ENEM (Competências 1, 3, 7 e 8 da Matriz do INEP)",
+  estimatedReadTimeMinutes: 90,
+  badge: "Livro Essencial • Análise do Discurso & Retórica",
+  prerequisites: [
+    "Compreensão de leitura e identificação de intencionalidade discursiva",
+    "Noções básicas de sintaxe oracional e mecanismos coesivos",
+    "Reconhecimento de variedades estilísticas da língua portuguesa"
+  ],
+  learningObjectives: [
+    "Diferenciar com rigor científico sequências tipológicas (fechadas) de gêneros discursivos (infinitos e históricos)",
+    "Identificar recursos de hibridismo e intergenericidade em textos multimodais contemporâneos",
+    "Desconstruir a pretensa neutralidade da imprensa através da análise de modalizadores e verbos dicendi",
+    "Dominar o modelo de Stephen Toulmin e mapear falácias argumentativas de alta frequência no ENEM",
+    "Compreender os operadores argumentativos de Oswald Ducrot como direcionadores de sentido e escalas de força",
+    "Aplicar os princípios da sociolinguística moderna contra o preconceito linguístico segundo a matriz do INEP"
+  ],
   chapters: [
     {
-      id: 'cap-lin-01',
+      id: "cap-lin-01",
       number: 1,
-      title: 'Tipologia Textual vs. Gênero Textual: A Fronteira Teórica Essencial',
-      practiceModuleId: 'generos',
-      readingTimeMin: 12,
-      summary: 'Diferenciação precisa entre sequências tipológicas (fechadas e formais) e gêneros discursivos (abertos, fluidos e situados socialmente), com análise de hibridismo no ENEM.',
-      sections: [
-        {
-          heading: '1. O Conceito de Tipologia Textual (Sequências Linguísticas)',
-          content: `No ENEM, uma das armadilhas conceituais mais frequentes é a confusão entre **tipo textual** e **gênero textual**. Bakhtin e Marcuschi estabeleceram distinções fundamentais que o INEP cobra rigorosamente:
+      title: "Tipologia Textual vs. Gênero Textual: A Fronteira Teórica Essencial",
+      practiceModuleId: "generos",
+      readingTimeMin: 18,
+      summary: "Diferenciação precisa entre sequências tipológicas e gêneros discursivos. A teoria de Mikhail Bakhtin, as esferas de atividade humana e o fenômeno do hibridismo intergenérico nas provas do ENEM.",
+      deepContent: `
+# 1. A Fronteira Científica: Tipo Textual versus Gênero Textual
 
-* **Tipos Textuais (ou Modos de Organização do Discurso):**
-  Constituem uma categoria finita e de natureza estritamente linguística/estrutural (geralmente cinco ou seis tipos reconhecidos):
-  1. **Narrativo:** Caracterizado por sucessão cronológica de eventos transformadores de estado, presença de narrador, personagens, tempo e espaço. Tempos verbais predominantes: Pretérito Perfeito e Imperfeito do Indicativo.
-  2. **Descritivo:** Retrato de aspectos estáticos ou simultâneos (objetos, paisagens, estados psicológicos) através de adjetivação rica, verbos de ligação e ausência de progressão temporal linear.
-  3. **Dissertativo-Expositivo:** Apresentação neutra, didática ou conceitual de um tema ou fenômeno, sem pretensão explícita de persuasão ou defesa apaixonada de tese (ex.: verbetes enciclopédicos, manuais didáticos, relatórios descritivos).
-  4. **Dissertativo-Argumentativo:** Estruturação lógica voltada à defesa irrefutável de uma tese (ponto de vista), sustentada por operadores argumentativos, relações de causa-consequência e dados comprobatórios.
-  5. **Injuntivo / Instrucional:** Caracterizado por direcionamento de conduta, presença de verbos no imperativo, no infinitivo com valor prescritivo ou locuções modais de dever/obrigação (ex.: bulas, receitas, editais, regulamentos).
-  6. **Dialogal / Conversacional:** Estrutura baseada na alternância de turnos de fala (diálogos teatrais, transcrições de entrevistas).`,
-          didacticBox: {
-            title: 'Princípio Inegociável de Marcuschi para o ENEM',
-            body: 'Enquanto os tipos textuais são teóricos, formais e contáveis nos dedos de uma mão, os gêneros textuais são infinitos, históricos, dinâmicos e inseparáveis da situação de comunicação.'
-          }
-        },
-        {
-          heading: '2. O Gênero Textual como Ação Social e Discursiva',
-          content: `Para Mikhail Bakhtin, os gêneros são formas relativamente estáveis de enunciados produzidos pelas diversas esferas da atividade humana. Eles respondem a:
-* **Quem fala?** (Locutor / Posição de sujeito).
-* **Para quem fala?** (Interlocutor presumido e horizonte de recepção).
-* **Com qual finalidade comunicativa?** (Objetivo social: denunciar, entreter, ensinar, cobrar, vender).
-* **Em qual suporte/veículo?** (Feed de rede social, jornal impresso, cartaz em posto de saúde, revista acadêmica).
+No ENEM, uma das armadilhas teóricas mais recorrentes nos distratores da área de Linguagens é a confusão deliberada entre **tipo textual** (ou sequência tipológica) e **gênero discursivo**.
 
-**Hibridismo de Gêneros:** O ENEM privilegia textos contemporâneos que misturam gêneros ou subvertem expectativas funcionais (ex.: um anúncio publicitário disfarçado de charge política; um poema estruturado sob a forma visual de receita médica; uma postagem de Instagram que articula microconto literário e manifesto feminista). A questão do ENEM perguntará invariavelmente: *"O recurso a essa estrutura mista confere ao texto o efeito de..."* ou *"A finalidade comunicativa predominante revela-se na..."*`
-        },
-        {
-          heading: '3. Exemplos Resolvidos e Comentados Modelo ENEM',
-          content: `**Questão Analisada:**
-Texto I: Uma bula farmacêutica que utiliza versos rimados e linguagem lírica para instruir sobre o combate à solidão na terceira idade.
-*Pergunta típica:* Ao adotar traços líricos em um suporte tradicionalmente prescritivo, o autor busca:
-*A) Invalidar o rigor científico das orientações sanitárias.*
-*B) Humanizar a comunicação e sensibilizar o leitor por meio do estranhamento estético.* (Gabarito Correto)
-*C) Reduzir o público-alvo a especialistas em crítica poética.*
-*D) Substituir tratamentos médicos por contemplação artística.*
-*E) Criticar a linguagem excessivamente técnica das indústrias de medicamentos.*
+Os linguistas Mikhail Bakhtin e Luiz Antônio Marcuschi estabeleceram distinções conceituais fundamentais que balizam a matriz de referência do exame:
 
-*Comentário pedagógico:* O aluno treinado identifica que o gênero híbrido opera pela quebra de expectativa funcional. O efeito pretendido é a sensibilização (estranhamento positivo), mantendo a intencionalidade de cuidado e saúde.`
+\```
+┌──────────────────────────────────────────────┐       ┌──────────────────────────────────────────────┐
+│           TIPO TEXTUAL (SEQUÊNCIA)           │       │          GÊNERO TEXTUAL (DISCURSIVO)         │
+├──────────────────────────────────────────────┤       ├──────────────────────────────────────────────┤
+│ • Natureza estritamente linguística/estrutural│       │ • Ação social comunicativa situada na história│
+│ • Conjunto finito e limitado (5 a 6 tipos)    │       │ • Conjunto infinito, aberto e dinâmico      │
+│ • Foco na forma: verbos, tempos, sintaxe     │       │ • Foco no propósito social e na recepção    │
+│ • Abstrato, teórico e descontextualizado     │       │ • Concreto, mutável e atrelado a suportes    │
+│ Ex.: Narração, Descrição, Injunção, etc.     │       │ Ex.: Artigo científico, bula, meme, podcast  │
+└──────────────────────────────────────────────┘       └──────────────────────────────────────────────┘
+\```
+
+---
+
+# 2. As Seis Sequências Tipológicas Canônicas
+
+Todo texto concreto é construído por blocos ou sequências tipológicas elementares:
+
+### 1. Sequência Narrativa
+* **Traços dominantes:** Sucessão cronológica de acontecimentos transformadores de estado, presença de narrador, personagens e cronotopo (tempo e espaço).
+* **Marcas gramaticais:** Predomínio de verbos de ação no pretérito perfeito do indicativo (ações pontuais acabadas) e pretérito imperfeito (ações habituais ou de fundo).
+
+### 2. Sequência Descritiva
+* **Traços dominantes:** Retrato de aspectos simultâneos ou estáticos de seres, ambientes ou estados emocionais, sem progressão de tempo linear.
+* **Marcas gramaticais:** Adjetivação abundante, substantivos concretos e verbos de ligação ou de estado.
+
+### 3. Sequência Dissertativo-Expositiva
+* **Traços dominantes:** Apresentação neutra, informativa ou didática de dados, conceitos e teorias, sem compromisso ostensivo de persuasão unilateral.
+* **Exemplos no cotidiano:** Verbetes de enciclopédia, manuais de laboratório, relatórios técnicos.
+
+### 4. Sequência Dissertativo-Argumentativa
+* **Traços dominantes:** Defesa categórica de um ponto de vista (tese) por meio do encadeamento lógico de argumentos, refutações e evidências.
+* **Marcas gramaticais:** Operadores argumentativos, orações subordinadas causais/consecutivas e modalizadores epistêmicos.
+
+### 5. Sequência Injuntiva / Instrucional
+* **Traços dominantes:** Prescrição ou orientação do comportamento do interlocutor.
+* **Marcas gramaticais:** Verbos no modo imperativo, no infinitivo de valor normativo ou locuções de obrigatoriedade (*"deve-se"*, *"é obrigatório"*).
+* **Exemplos:** Bulas de remédio, manuais de aparelhos médicos, receitas culinárias, regulamentos sanitários.
+
+### 6. Sequência Dialogal / Conversacional
+* **Traços dominantes:** Alternância sistemática de turnos de fala entre dois ou mais interlocutores (diálogos, entrevistas transcritas).
+
+---
+
+# 3. Gênero Textual como Ação Social e o Fenômeno da Intergenericidade
+
+Para Bakhtin, os gêneros são *"tipos relativamente estáveis de enunciados"* produzidos nas diversas esferas da atividade humana (cotidiana, acadêmica, jornalística, biomédica, jurídica).
+
+### Intergenericidade (Hibridismo de Gêneros) no ENEM
+O exame do INEP tem predileção por textos que subvertem expectativas formais, mesclando a estrutura de um gênero com a finalidade de outro:
+* Uma **campanha de vacinação** desenhada como se fosse uma história em quadrinhos infantil;
+* Um **poema moderno** que imita a tipografia rígida e a linguagem técnica de uma receita médica;
+* Um **anúncio institucional** que utiliza o formato de um aviso de óbito para alertar sobre os perigos da automedicação.
+
+> [!IMPORTANT]
+> **Como o ENEM cobra a intergenericidade:**
+> A pergunta da banca invariavelmente indaga: *"Ao incorporar recursos característicos do gênero X ao contexto Y, o texto cumpre a função de..."*
+> A resposta correta sempre aponta para o efeito pragmático gerado no leitor: **estranhamento positivo, ampliação do alcance comunicativo, ironia crítica ou quebra de expectativa receptiva**.
+      `,
+      workedExamples: [
+        {
+          title: "Identificação de Intergenericidade em Texto de Saúde Pública",
+          enunciado: "Considere um texto publicado pelo Ministério da Saúde em redes sociais que adota o formato gráfico de uma bula farmacêutica tradicional, mas traz como 'indicação terapêutica': 'Doses diárias de empatia e acolhimento para combater o sofrimento psíquico juvenil'. A pergunta do ENEM questiona a razão do recurso a esse suporte específico.",
+          stepByStep: [
+            "Passo 1: Reconhecer a estrutura de origem: Gênero Bula (sequência predominantemente injuntiva/instrucional e técnica).",
+            "Passo 2: Reconhecer a função de destino: Campanha educativa de conscientização em saúde mental coletiva.",
+            "Passo 3: Avaliar a intencionalidade: A apropriação lúdica da linguagem farmacológica não visa prescrever remédio químico, mas simbolizar metaforicamente o cuidado comunitário como remédio eficaz.",
+            "Conclusão: O hibridismo potencializa a persuasão através do contraste verbo-visual."
+          ],
+          gabarito: "Alternativa que destaca a exploração da linguagem biomédica para ressignificar o cuidado comunitário.",
+          comentarioTRI: "Candidatos medianos erram ao marcar distratores literais que dizem que o texto 'invalida o papel dos remédios psiquiátricos'."
         }
+      ],
+      activeRecallChecklist: [
+        "Por que os tipos textuais são finitos e os gêneros textuais são infinitos?",
+        "Quais tempos verbais predominam na sequência narrativa em oposição à descritiva?",
+        "Qual é a intencionalidade primordial da intergenericidade nas campanhas sociais cobradas no ENEM?"
       ]
     },
     {
-      id: 'cap-lin-02',
+      id: "cap-lin-02",
       number: 2,
-      title: 'O Discurso Jornalístico e Opinativo: Notícia, Reportagem, Editorial e Artigo',
-      practiceModuleId: 'interpretacao',
-      readingTimeMin: 14,
-      summary: 'Desmontando a ilusão de neutralidade na imprensa. Como o ENEM cobra a distinção entre relato de fatos e posicionamento institucional ou autoral.',
-      sections: [
-        {
-          heading: '1. A Pirâmide Discursiva da Esfera Jornalística',
-          content: `A imprensa não é um espelho neutro da realidade, mas uma instância de mediação social que seleciona, recorta e enquadra os fatos. O ENEM explora essa dimensão exigindo a leitura atenta de modalizadores discursivos:
+      title: "O Discurso Jornalístico e a Ilusão de Neutralidade",
+      practiceModuleId: "interpretacao",
+      readingTimeMin: 18,
+      summary: "Desmontando o mito da imparcialidade absoluta na imprensa. A distinção analítica entre notícia, reportagem, editorial e artigo de opinião. Modalizadores discursivos, verbos dicendi e enquadramento ideológico.",
+      deepContent: `
+# 1. A Tipologia dos Gêneros da Esfera Jornalística
 
-| Gênero Jornalístico | Autoria / Voz | Finalidade Principal | Presença de Opinião |
+A esfera jornalística constitui uma das fontes mais ricas de textos de apoio na prova de Linguagens do ENEM. O primeiro passo para o gabarito é dominar a classificação funcional dos seus quatro pilares:
+
+| Gênero Jornalístico | Voz / Autoria | Finalidade Social Central | Grau de Subjetividade |
 | :--- | :--- | :--- | :--- |
-| **Notícia** | Repórter / Redação (impessoal) | Informar fato imediato e recente (*lead*: o quê, quem, quando, onde, como, por quê) | Implícita (seleção lexical, adjetivação sutil, recorte de fontes) |
-| **Reportagem** | Jornalista investigativo (assinado) | Aprofundar causa, histórico, repercussão e pluralidade de perspectivas sobre um tema | Moderada a reflexiva (enquadramento e cotejo de dados) |
-| **Editorial** | O Veículo de Comunicação (impessoal, voz institucional do jornal) | Expressar formalmente a posição político-institucional da empresa jornalística | Total e explícita (tese institucional firme e justificada) |
-| **Artigo de Opinião** | Articulista convidado / Especialista externo | Defender tese pessoal, com argumentação autoral assinada e estilo próprio | Total e nominalmente assumida pelo autor assinante |
-| **Crônica Jornalística** | Cronista | Refletir poeticamente, ironicamente ou filosoficamente sobre o cotidiano | Estética e reflexiva, oscilando entre literatura e jornalismo |`
-        },
+| **Notícia** | Impessoal (Redação) | Relato factual de evento pontual recente (*Lead*: quem, o quê, onde, quando, como, por quê). | Implícita (revelada na seleção lexical e enquadramento de fontes). |
+| **Reportagem** | Jornalista investigativo (assinado) | Investigação profunda de causa, desdobramentos, dados estatísticos e contextualização histórica de um problema. | Moderada (análise crítica fundamentada em dados multifacetados). |
+| **Editorial** | O Jornal / Empresa (sem assinatura individual) | Posicionamento político-institucional formal do veículo de comunicação sobre assunto de interesse público. | Total e explícita (defesa institucional de uma linha editorial). |
+| **Artigo de Opinião** | Especialista / Articulista convidado (assinado) | Defesa autoral de uma tese controversa, com emprego livre de estilo pessoal, retórica e juízo de valor. | Total e nominalmente assumida pelo autor assinante. |
+
+---
+
+# 2. Como Rastrear a Parcialidade Oculta: Modalizadores Discursivos
+
+Nenhum texto informativo é uma fotografia absolutamente neutra da realidade. Todo ato de escrita exige recortes, exclusões e escolhas lexicais que revelam a ideologia do enunciador:
+
+### 1. Adjetivos e Advérbios Axiológicos (Julgamento de Valor)
+Compare as manchetes fictícias sobre a mesma assembleia de profissionais de saúde:
+* Manchete A: *"Médicos encerram assembleia após caloroso debate democrático."*
+* Manchete B: *"Médicos encerram assembleia após tumultuada e tensa reunião."*
+* *Análise*: Na Manchete A, os modalizadores conferem legitimidade cívica ao movimento; na B, induzem o leitor a enxergar desordem e beligerância.
+
+### 2. A Escolha dos Verbos de Dizer (Verba Dicendi)
+O verbo introdutório de uma fala citada direciona a credibilidade atribuída à fonte:
+* *"O pesquisador **afirmou** que os dados são seguros"* (Declaração neutra e objetiva).
+* *"O pesquisador **comprovou** que os dados são seguros"* (O veículo assume a tese do pesquisador como verdade científica consumada).
+* *"O porta-voz **alegou** que não houve falha no atendimento"* (O verbo *alegar* insinua desconfiança e sugere que a justificativa pode ser mera desculpa).
+* *"O deputado **insinuou** irregularidades no programa"* (Sugere falta de provas cabais).
+
+### 3. A Voz Passiva como Estratégia de Apagamento do Agente
+A escolha da voz passiva permite omitir quem realizou a ação (apagamento do agente da passiva):
+* *"Verbas para hospitais regionais foram congeladas"* (Esconde quem ordenou o congelamento, diluindo a responsabilidade governamental).
+* Em contrapartida: *"Ministério da Economia congela verbas de hospitais regionais"* (Atribui autoria direta e responsabilidade institucional).
+      `,
+      workedExamples: [
         {
-          heading: '2. Modalizadores Discursivos e Marcas de Subjetividade',
-          content: `Mesmo em notícias que aparentam ser 100% "objetivas", vestígios lexicais e gramaticais revelam a posição ideológica do locutor:
-* **Adjetivos e advérbios axiológicos:** *"O projeto foi aprovado após tumultuada sessão"* vs. *"O projeto foi aprovado após caloroso debate democrático"*. O primeiro sugere desordem; o segundo, vitalidade cívica.
-* **Verbos de dizer (dicendi):** Dizer que um entrevistado *"afirmou"*, *"revelou"*, *"alegou"* ou *"insinuou"*. O verbo *"alegou"* lança dúvida sobre a veracidade do depoimento; *"revelou"* confere status de verdade irrefutável anteriormente oculta.
-* **Voz Passiva com omissão do agente da passiva:** *"Trabalhadores foram demitidos"* esconde quem demitiu (a direção da empresa), reduzindo a responsabilidade corporativa na manchete.`
+          title: "Identificação da Voz Editorial em Textos do ENEM",
+          enunciado: "O candidato lê dois textos: o Texto 1 descreve os números brutos de uma paralisação hospitalar; o Texto 2 conclui com a frase: 'É inaceitável que a intransigência burocrática dos gestores mantenha a população desassistida'. A questão pergunta sobre a natureza do Texto 2.",
+          stepByStep: [
+            "Passo 1: Notar o modalizador axiológico forte: 'inaceitável' e 'intransigência burocrática'.",
+            "Passo 2: Reconhecer que o texto emite julgamento moral e político direto sobre a conduta dos gestores.",
+            "Passo 3: Identificar que se trata de um texto opinativo (editorial ou artigo de opinião), e não de uma notícia estritamente factual.",
+            "Conclusão: O texto busca persuadir o leitor a adotar um posicionamento de condenação à postura da gestão."
+          ],
+          gabarito: "Gênero opinativo com presença conspícua de modalizadores avaliativos.",
+          comentarioTRI: "A banca pune severamente quem confunde dados factuais com apreciação axiológica do veículo."
         }
+      ],
+      activeRecallChecklist: [
+        "Qual é a diferença funcional entre um editorial e um artigo de opinião?",
+        "Como a escolha de verbos como 'alegar' versus 'demonstrar' modula a credibilidade de uma fonte?",
+        "Por que o apagamento do agente da passiva é uma manobra discursiva de desresponsabilização?"
       ]
     },
     {
-      id: 'cap-lin-03',
+      id: "cap-lin-03",
       number: 3,
-      title: 'A Engenharia da Argumentação: Estruturas Lógicas, Tipos de Argumentos e Falácias',
-      practiceModuleId: 'argumentacao',
-      readingTimeMin: 13,
-      summary: 'Como sustentar uma tese sólida e identificar falácias e manobras persuasivas nos textos de apoio do ENEM e na prova de redação.',
-      sections: [
-        {
-          heading: '1. O que Constitui uma Tese e suas Estruturas de Sustentação',
-          content: `Argumentar é o ato de convencer ou persuadir um auditório mediante o oferecimento de razões aceitáveis. O modelo clássico de Stephen Toulmin elucida como as proposições se organizam:
-* **Tese (Claim):** A afirmação central ou ponto de vista defendido.
-* **Dado / Fato (Data):** O fundamento empírico que serve de base imediata.
-* **Garantia (Warrant):** O princípio de legitimação que conecta o dado à conclusão.
-* **Apoio (Backing):** A autoridade, dado estatístico, teoria científica ou base jurídica que legitima a garantia.
+      title: "Retórica e Engenharia da Argumentação: O Modelo de Toulmin e Falácias Lógicas",
+      practiceModuleId: "argumentacao",
+      readingTimeMin: 20,
+      summary: "A anatomia lógica do argumento segundo Stephen Toulmin. Tipologia de argumentos legítimos no ENEM. O catálogo das principais falácias lógicas e armadilhas retóricas exploradas nas provas.",
+      deepContent: `
+# 1. A Anatomia do Argumento: O Modelo de Stephen Toulmin
 
-**Tipos Clássicos de Argumentos Cobrados no ENEM:**
-1. **Argumento de Autoridade:** Invocação de pensador, cientista, instituição consagrada (Fiocruz, OMS, IBGE, filósofos clássicos) para lastrear a tese.
-2. **Argumento por Evidência / Dados Concretos:** Utilização de estatísticas, levantamentos demográficos e medições empíricas incontestáveis.
-3. **Argumento por Relação de Causa e Consequência:** Demonstração lógica de que o fenômeno X decorre inevitavelmente da condição Y, permitindo prever desdobramentos futuros.
-4. **Argumento por Comparação / Analogia:** Confronto entre situações análogas em países, momentos históricos ou contextos sociais diferentes.
-5. **Argumento por Redução ao Absurdo (Ad Absurdum):** Admissão temporária da tese do adversário para demonstrar que sua consequência lógica final é insustentável ou contraditória.`
-        },
+Para o filósofo Stephen Toulmin, uma argumentação sólida não é mero acúmulo de impressões, mas uma estrutura geométrica de justificação composta por seis componentes interligados:
+
+\```
+           [ DADOS / EVIDÊNCIAS ] (Data) ────────► [ CONCLUSÃO / TESE ] (Claim)
+                          │                               ▲
+                          ▼                               │
+              [ GARANTIA ] (Warrant) ─────────────────────┤
+                          ▲
+                          │
+               [ APOIO ] (Backing)
+\```
+
+1. **Conclusão / Tese (Claim):** A proposição que o autor pretende fazer o auditório aceitar.
+2. **Dados / Evidências (Data):** Os fatos concretos, estatísticas ou constatações que servem de matéria-prima.
+3. **Garantia (Warrant):** A regra lógica ou princípio que autoriza a passagem dos dados para a conclusão.
+4. **Apoio / Fundamento (Backing):** A teoria científica, lei jurídica ou autoridade consolidada que sustenta a garantia.
+5. **Qualificador Modal (Qualifier):** O grau de certeza da tese (*"provavelmente"*, *"necessariamente"*, *"na maioria dos casos"*).
+6. **Ressalva / Refutação (Rebuttal):** As circunstâncias excepcionais em que a tese não se sustentaria.
+
+---
+
+# 2. Catálogo de Argumentos Legítimos Cobrados pelo ENEM
+
+### 1. Argumento de Autoridade (Argumentum ad Verecundiam Legítimo)
+Invocação do testemunho de um especialista consagrado em sua respectiva área de saber (ex.: citar a Organização Mundial da Saúde para discutir protocolos de vacinação).
+* *Atenção à falácia:* O argumento torna-se falacioso quando a autoridade citada fala fora de sua especialidade (ex.: usar um físico para opinar sobre psicologia clínica sem embasamento).
+
+### 2. Argumento por Evidência Empírica / Dados Concretos
+Apresentação de séries temporais do IBGE, taxas de incidência epidemiológica do Ministério da Saúde ou medições experimentais. É o argumento de maior peso na redação e nas questões de ciências.
+
+### 3. Argumento por Causalidade Direta (Causa e Efeito)
+Demonstração encadeada de que o fenômeno A produz organicamente o efeito B através de mediações verificáveis.
+
+### 4. Argumento por Comparação / Analogia Estruturada
+Confronto sistemático entre duas realidades distintas (ex.: comparar a eficiência da triagem ambulatorial de dois estados brasileiros) para demonstrar a viabilidade de uma política pública.
+
+### 5. Argumento por Redução ao Absurdo (Reductio ad Absurdum)
+Admissão temporária da tese do opositor para demonstrar que seu desdobramento lógico rigoroso conduz a uma contradição insustentável ou a um absurdo prático.
+
+---
+
+# 3. Falácias Lógicas e Manobras Sofísticas Frequentes no ENEM
+
+As falácias são raciocínios que parecem logicamente válidos, mas contêm erros estruturais que invalidam a conclusão:
+
+* **Falácia do Espantalho (Straw Man):** O debatedor distorce e caricatura a tese adversária para criar uma versão fragilizada e ridícula que seja fácil de rebater.
+* **Argumento Ad Hominem:** Em vez de rebater o conteúdo da proposta, o locutor ataca as características pessoais, o caráter, a aparência ou os interesses do debatedor.
+* **Falsa Causalidade (Post hoc ergo propter hoc):** Supor que, porque o evento Y ocorreu cronologicamente após o evento X, o evento X é a causa necessária de Y (ex.: *"O paciente tomou o chá e melhorou no dia seguinte, logo o chá cura a doença"* — ignora a história natural de resolução imune da patologia).
+* **Falso Dilema (Falsa Dicotomia):** Reduzir um espectro complexo a apenas duas alternativas extremas excludentes (*"Ou você apoia esse projeto de lei sem alterações, ou você é inimigo da saúde pública"*).
+* **Generalização Apressada:** Extrair uma regra universal a partir de um punhado insignificante de observações particulares anedóticas.
+* **Apelo à Tradição (Ad Antiquitatem):** Sustentar que uma conduta deve ser mantida indefinidamente apenas porque *"sempre foi feita dessa maneira ao longo de gerações"*.
+      `,
+      workedExamples: [
         {
-          heading: '2. Falácias Argumentativas Frequentes no Exame',
-          content: `* **Ad Hominem:** Ataque à pessoa do debatedor em vez de confrontar o mérito de seu argumento.
-* **Falácia do Espantalho:** Distorção proposital da posição do oponente para torná-la fácil de refutar.
-* **Generalização Apressada:** Conclusão categórica universal extraída a partir de uma amostragem ínfima ou anedótica.
-* **Falsa Causalidade (Post hoc ergo propter hoc):** Supor que, porque o evento B aconteceu cronologicamente depois do evento A, A é necessariamente a causa de B.
-* **Apelo à Tradição / Apelo à Emoção:** Justificar uma prática exclusivamente porque "sempre foi feita assim" ou apelar desmedidamente para sentimentos de compaixão/ira sem suporte racional.`
+          title: "Desconstrução de Falácia do Espantalho em Debate de Saúde Pública",
+          enunciado: "Em um debate sobre vigilância sanitária, o Proponente A defende: 'Devemos intensificar a fiscalização da cadeia de refrigeração de vacinas nos postos periféricos'. O Opositor B replica: 'O que o senhor quer é gastar verbas com burocracia inútil enquanto as crianças necessitam de leitos nas filas'. A questão indaga sobre o recurso retórico empregado pelo Opositor B.",
+          stepByStep: [
+            "Passo 1: Comparar o argumento original de A com a réplica de B.",
+            "Passo 2: Notar que B desfigurou a proposta de melhoria da cadeia de frio sanitária, transformando-a em 'gasto inútil que desampara crianças'.",
+            "Passo 3: Identificar a criação de uma caricatura absurda para facilitar o ataque.",
+            "Conclusão: Trata-se da Falácia do Espantalho."
+          ],
+          gabarito: "Distorção da tese contrária com o propósito de refutar uma caricatura artificial (Falácia do Espantalho).",
+          comentarioTRI: "Distratores frequentes tentarão classificar erroneamente a réplica como 'argumento por evidência' ou 'apelo à autoridade'."
         }
+      ],
+      activeRecallChecklist: [
+        "Quais são os quatro componentes primários do modelo de Toulmin?",
+        "Qual é a falha lógica da falácia 'Post hoc ergo propter hoc' em alegações médicas?",
+        "O que caracteriza a Falácia do Falso Dilema e como identificá-la em artigos de opinião?"
       ]
     },
     {
-      id: 'cap-lin-04',
+      id: "cap-lin-04",
       number: 4,
-      title: 'Mecanismos de Coesão, Operadores Argumentativos e Variação Linguística',
-      practiceModuleId: 'recursos-linguisticos',
-      readingTimeMin: 11,
-      summary: 'Operadores de oposição, concessão, causa, conclusão e conformidade. O fenômeno sociolinguístico do preconceito linguístico e a adequação contextual no ENEM.',
-      sections: [
-        {
-          heading: '1. O Papel Estratégico dos Operadores Argumentativos (Ducrot)',
-          content: `Conectivos não são simples cola gramatical entre frases; são **vetores de direcionamento argumentativo** (Oswald Ducrot). Eles determinam para onde o raciocínio do leitor deve convergir:
+      title: "Semiótica da Argumentação em Saúde, Ciência e Sociedade",
+      practiceModuleId: "publicidade-semiotica",
+      readingTimeMin: 18,
+      summary: "A comunicação pública em temas de saúde coletiva, bioética e campanhas institucionais. Leitura crítica de textos multimodais: interação entre texto verbal, elementos cromáticos, tipografia e enquadramento visual.",
+      deepContent: `
+# 1. A Multimodalidade como Vetor Argumentativo
 
-* **Operadores que contrapõem argumentos orientados para conclusões contrárias:**
-  - *Adversativos:* *mas, porém, contudo, todavia, no entanto, entretanto*. **Atenção:** O argumento após a conjunção adversativa tem força argumentativa preponderante.
-  - *Concessivos:* *embora, ainda que, mesmo que, conquanto, a despeito de, posto que*. O argumento introduzido pela oração concessiva é enfraquecido em favor da oração principal.
-* **Operadores que somam argumentos a favor de uma mesma conclusão:**
-  - *e, além disso, não apenas... mas também, outrossim, ademais*.
-* **Operadores que introduzem o argumento mais forte de uma escala (argumento decisivo):**
-  - *inclusive, até mesmo, e até*.
-* **Operadores que introduzem uma justificativa ou explicação:**
-  - *pois (anteposto ao verbo), porque, já que, visto que, dado que*.
-* **Operadores conclusivos:**
-  - *portanto, logo, por conseguinte, dessarte, por isso, pois (posposto ao verbo)*.`
-        },
+Nas provas modernas do ENEM, mais de 40% das questões de Linguagens trazem textos multimodais: cartazes institucionais, infográficos científicos, charges políticas e anúncios de utilidade pública.
+
+> [!NOTE]
+> **O Princípio da Multimodalidade (Kress e van Leeuwen):**
+> O sentido de um texto não reside exclusivamente nas palavras escritas, mas na **sinergia indissociável** entre texto verbal, composição espacial, código cromático, vetorização de olhares e tipografia.
+
+---
+
+# 2. As Camadas de Leitura da Semiótica Visual
+
+### 1. Sistema Cromático e Apelo Afetivo
+* **Cores quentes (Vermelho, Laranja, Amarelo):** Associadas a alerta epidemiológico, urgência, calor, risco biológico ou convocação imediata à ação.
+* **Cores frias e sóbrias (Azul, Verde hospitalar, Branco):** Transmitem serenidade, assepsia, rigor técnico-científico, confiabilidade institucional e saúde.
+
+### 2. Vetores de Contato Visual e Posicionamento do Sujeito
+* **Olhar Direto (Imagem de Demanda):** Quando a pessoa retratada no cartaz fixa os olhos diretamente no observador. O efeito é de interrogação pessoal, cobrança ética e responsabilização individual (*"Você já vacinou seu filho hoje?"*).
+* **Olhar Desviado (Imagem de Oferta):** Quando o sujeito olha para o horizonte ou para um ponto fora da imagem. O observador é colocado na posição de espectador analítico que contempla uma situação social a ser compreendida.
+
+### 3. Hierarquia Tipográfica e Disposição Espacial
+* Elementos situados na **parte superior** representam o ideal, o conceito abstrato ou a aspiração da campanha.
+* Elementos situados na **parte inferior** trazem o real, o contato institucional, a assinatura do órgão público e as orientações operacionais práticas.
+
+---
+
+# 3. Análise Crítica de Comunicação em Bioética e Saúde
+
+No contexto da saúde pública, campanhas institucionais frequentemente operam em tensões éticas delicadas:
+* **Persuasão ética vs. Culpabilização da vítima (Victim Blaming):** Campanhas que responsabilizam exclusivamente o indivíduo por contrair uma doença negligenciada, ocultando a ausência estatal de saneamento básico e água tratada.
+* **Polifonia e Intertextualidade:** Incorporação de vozes de agentes comunitários, líderes indígenas ou cientistas para dialogar com diferentes estratos sociais e superar resistências culturais à medicina preventiva.
+      `,
+      workedExamples: [
         {
-          heading: '2. Sociolinguística e Variação Linguística no ENEM',
-          content: `O ENEM nunca considera uma variante linguística popular como "errada" ou "inferior". Para a linguística moderna (Marcos Bagno, Ataliba de Castilho):
-* Toda variante dialetal possui lógica interna coerente, sintaxe estruturada e funcionalidade comunicativa plena.
-* O conceito de **erro gramatical** é substituído pelo conceito de **adequação situacional**: o registro formal é exigido em documentos públicos, artigos e vestibulares; registros informais, gírias e dialetos regionais são legítimos e riquíssimos em seus contextos comunitários e artísticos.
-* As questões do ENEM cobram a identificação dos fatores de variação: **diatópica** (geográfica/regional), **diacrônica** (temporal/histórica), **diastrática** (social/geracional/nível de escolaridade) e **diafásica** (estilística/formalidade do contexto).`
+          title: "Decodificação de Cartaz Multimodal de Prevenção Sanitária",
+          enunciado: "Analise uma campanha com a imagem de uma seringa em primeiro plano, ladeada por tons azuis e brancos, com a frase em caixa alta: 'A CIÊNCIA SALVA. A VACINA PROTEGE'. Abaixo, em fonte menor, o selo da Anvisa e do Ministério da Saúde. O ENEM indaga sobre a relação entre o código visual e a mensagem verbal.",
+          stepByStep: [
+            "Passo 1: Cor azul e branca: Evoca confiabilidade, legitimidade científica e assepsia hospitalar.",
+            "Passo 2: Texto em caixa alta enfático: Afirmação categórica de natureza incontestável.",
+            "Passo 3: Selos institucionais na base: Legitimam a informação através da chancela estatal de autoridade sanitária.",
+            "Conclusão: A convergência dos códigos busca conferir segurança e mitigar a desinformação antivacina."
+          ],
+          gabarito: "Articulação de elementos visuais institucionais para reforçar a confiabilidade do discurso biomédico.",
+          comentarioTRI: "Questões multimodais exigem que o aluno integre texto e imagem, penalizando quem lê apenas as palavras escritas."
         }
+      ],
+      activeRecallChecklist: [
+        "Qual é a diferença entre uma imagem de demanda e uma imagem de oferta na semiótica de Kress e van Leeuwen?",
+        "Como a paleta de cores influencia a recepção de uma campanha de saúde pública?",
+        "O que significa a culpabilização da vítima (victim blaming) em comunicações sanitárias?"
+      ]
+    },
+    {
+      id: "cap-lin-05",
+      number: 5,
+      title: "Semântica Argumentativa e Sociolinguística Crítica",
+      practiceModuleId: "recursos-linguisticos",
+      readingTimeMin: 18,
+      summary: "Os operadores argumentativos de Oswald Ducrot como escalas de força lógica. O combate ao preconceito linguístico no ENEM: a transição do falso conceito de erro para a matriz científica da adequação contextual.",
+      deepContent: `
+# 1. Os Operadores Argumentativos de Oswald Ducrot
+
+Para a semântica da enunciação formulada por Oswald Ducrot, a linguagem não serve prioritariamente para descrever o mundo, mas para **orientar o leitor em direção a determinadas conclusões**.
+
+Os operadores argumentativos são os vetores gramaticais dessa orientação:
+
+### 1. Operadores de Escala Argumentativa (Força Ascendente)
+Introduzem o argumento mais contundente de uma hierarquia persuasiva:
+* *"O novo protocolo reduziu os custos, acelerou os diagnósticos e **até mesmo** / **inclusive** zerou a mortalidade intra-hospitalar."*
+* O operador *até mesmo* posiciona o último elemento no topo da força argumentativa.
+
+### 2. O Duelo de Forças: Conjunção Adversativa versus Concessiva
+Esta é uma das distinções mais cobradas na prova de Linguagens:
+* **Adversativa (*mas, porém, contudo*):**
+  *"O tratamento é oneroso, **mas** apresenta eficácia de 99%."*
+  * O argumento vencedor que dita a conclusão do texto é o que vem **após** a conjunção: o tratamento deve ser adotado!
+* **Concessiva (*embora, a despeito de, conquanto*):**
+  *"**Embora** apresente eficácia de 99%, o tratamento é excessivamente oneroso."*
+  * O operador concessivo enfraquece a oração que o acompanha. O argumento preponderante é a oração principal: o tratamento é caro demais para a rede pública.
+
+---
+
+# 2. A Sociolinguística Moderna e o Preconceito Linguístico no ENEM
+
+O ENEM apoia-se firmemente nas teorias sociolinguísticas contemporâneas (William Labov, Marcos Bagno, Ataliba de Castilho). Em todas as edições do exame, a postura da banca em relação à variação linguística segue três axiomas universais:
+
+\```
+[ OS TRÊS AXIOMAS SOCIOLINGUÍSTICOS DO ENEM ]
+   ├── 1. NENHUMA VARIEDADE É INFERIOR ── Toda variante linguística possui lógica interna rigorosa.
+   ├── 2. ADEQUAÇÃO vs. ERRO ───────────── Substitui-se o conceito moral de 'erro' pela 'adequação ao contexto'.
+   └── 3. PRECONCEITO LINGUÍSTICO É SOCIAL ─ A discriminação contra certas falas é reflexo de preconceito de classe.
+\```
+
+### Os Quatro Vetores de Variação Linguística:
+1. **Variação Diatópica (Geográfica):** Diferenças lexicais e fonéticas regionais (*mandioca* / *aipim* / *macaxeira*; pronúncia do "r" caipira vs. "r" carioca).
+2. **Variação Diacrônica (Histórica):** Evolução da língua no tempo (*vossa mercê* -> *vosmecê* -> *você* -> *vc*).
+3. **Variação Diastrática (Social / de Grupo):** Jargões técnicos de profissionais (médicos, advogados), gírias de grupos etários (jovens) ou classes socioculturais.
+4. **Variação Diafásica (Estilística / Situacional):** Adaptação do registro (formal vs. informal) de acordo com o grau de intimidade e a solenidade do ambiente comunicativo.
+
+> [!CAUTION]
+> **Armadilha Frequente do ENEM:**
+> Qualquer alternativa que classifique uma fala popular, regional ou periférica como *"corrompida"*, *"preguiçosa"*, *"gramaticalmente errada"* ou *"desprovida de lógica"* é **obrigatoriamente um distrator falso**. O ENEM valoriza a riqueza polifônica da língua falada pelo povo brasileiro.
+      `,
+      workedExamples: [
+        {
+          title: "Análise Sociolinguística de Poema Regional no ENEM",
+          enunciado: "Ao analisar versos populares que utilizam construções como 'nóis vai' ou 'as coisa tão difícil', a questão indaga sobre a funcionalidade estética e social dessa escolha lexical pelo autor modernista.",
+          stepByStep: [
+            "Passo 1: Descartar distratores que apontam 'desconhecimento da norma culta pelo poeta' ou 'apologia ao erro gramatical'.",
+            "Passo 2: Reconhecer a valorização da identidade cultural e da fala autêntica do homem do interior como projeto estético de brasilidade.",
+            "Passo 3: Identificar a regra interna da variedade: no português popular, a marcação do plural desloca-se para o determinante ('as coisa'), mantendo a inteligibilidade plena.",
+            "Conclusão: A escolha confere verossimilhança, expressividade poética e representatividade sociocultural."
+          ],
+          gabarito: "Valorização da expressividade estética e identidade sociocultural do falante regional.",
+          comentarioTRI: "A habilidade 25 e 26 avalia o respeito à pluralidade sociolinguística como patrimônio cultural imaterial da nação."
+        }
+      ],
+      activeRecallChecklist: [
+        "Qual oração tem maior peso argumentativo: a introduzida por conjunção concessiva ou a oração principal subordinante?",
+        "Quais são os quatro eixos clássicos de variação linguística na sociolinguística?",
+        "Por que o ENEM substitui o conceito de 'erro gramatical' pelo princípio de 'adequação à situação comunicativa'?"
       ]
     }
   ]
