@@ -2285,6 +2285,55 @@ export const THEORY_CONTENT = {
       "Em poemas concretos, não busque uma ordem tradicional de leitura da esquerda para a direita de cima para baixo: a leitura é simultânea e espacial."
     ],
     mnemonics: "No concreto o espaço fala; no mimeógrafo a censura cala; no rap o povo rima; e a escrevivência o silêncio desanima!"
+  },
+
+  "humanas/trabalho-globalizacao-cultura": {
+    topic: "Trabalho, Globalização, Indústria Cultural e Teoria Social Contemporânea",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Relevância Crítica: Sociologia do Trabalho (Taylorismo, Fordismo, Toyotismo, Uberização), Teoria Crítica de Frankfurt (Adorno, Horkheimer, Walter Benjamin), Meio Técnico-Científico-Informacional (Milton Santos), Pierre Bourdieu (Habitus e Violência Simbólica), Zygmunt Bauman e Sociedade do Cansaço (Byung-Chul Han).",
+    highFrequencySkills: [
+      "H16 - Identificar a presença na atualidade de processos sociais consolidados no passado",
+      "H17 - Analisar a atuação dos movimentos sociais que contribuíram para mudanças ou rupturas em processos de disputa pelo poder",
+      "H18 - Comparar pontos de vista analíticos sobre o poder, o trabalho e as instituições sociais",
+      "H19 - Reconhecer as transformações técnicas que determinam o uso e apropriação do espaço e do trabalho"
+    ],
+    overview: "Este módulo analisa as transformações estruturais do mundo do trabalho da Revolução Industrial ao capitalismo de dados contemporâneo, os impactos da globalização na reconfiguração territorial e cultural segundo Milton Santos, a mercantilização da cultura pela Escola de Frankfurt e as categorias centrais da sociologia crítica contemporânea (Bourdieu, Bauman, Ricardo Antunes, Zuboff e Byung-Chul Han).",
+    keyConcepts: [
+      {
+        title: "Modelos Produtivos: Taylorismo, Fordismo e Toyotismo",
+        content: "• Taylorismo (1911): gerência científica, separação radical entre concepção (gerência) e execução (operário), cronometragem milimétrica dos tempos e movimentos para eliminar desperdícios.\n• Fordismo (1913): introdução da esteira mecânica contínua (o ritmo dita o trabalho), produção em massa padronizada em grandes estoques rígidos, aliada à política de salários (Five-Dollar Day) para transformar operários em consumidores de bens duráveis.\n• Toyotismo (pós-1970, Japão): acumulação flexível, produção 'just-in-time' puxada pela demanda sem estoques intermediários (kanban), multifuncionalidade/polivalência do operário, círculos de controle de qualidade (CCQ), terceirização massiva de etapas periféricas e precarização de direitos."
+      },
+      {
+        title: "Meio Técnico-Científico-Informacional e as Faces da Globalização (Milton Santos)",
+        content: "Milton Santos define o espaço geográfico atual como união indissociável de ciência, tecnologia e informação. A globalização manifesta-se em três dimensões:\n1. O mundo como nos fazem ver: a Globalização como FÁBULA (o mito da aldeia global harmoniosa e da igualdade de acesso digital transmitido pelas mídias corporativas).\n2. O mundo como ele é: a Globalização como PERVERSIDADE (desemprego estrutural, aprofundamento das desigualdades Norte-Sul, imperialismo das finanças e tirania do dinheiro e da informação concentrada).\n3. O mundo como pode ser: uma OUTRA GLOBALIZAÇÃO possível, forjada pela solidariedade e pelos saberes dos excluídos (o espaço luminoso versus os espaços opacos)."
+      },
+      {
+        title: "Escola de Frankfurt: Indústria Cultural vs. Democratização Técnica",
+        content: "• Indústria Cultural (Theodor Adorno e Max Horkheimer, 'Dialética do Esclarecimento', 1947): mercantilização e padronização dos bens culturais e artísticos. A cultura vira mercadoria em série gerando conformismo, pseudoindividuação, apaziguamento das tensões de classe e atrofia do senso crítico das massas.\n• Reprodutibilidade Técnica (Walter Benjamin, 1936): a fotografia e o cinema destroem a 'aura' aristocrática e o valor de culto/ritual da obra de arte única, criando a possibilidade de fruição coletiva e de politização revolucionária da estética pelas massas."
+      },
+      {
+        title: "Teoria Social Contemporânea: Bourdieu, Bauman e Byung-Chul Han",
+        content: "• Pierre Bourdieu: a dominação social opera via Violência Simbólica (imposição de sentidos aceita como legítima pelos próprios dominados). Os quatro capitais: Econômico (renda, ativos), Cultural (incorporado em títulos e erudição), Social (redes de influência/qi) e Simbólico (prestígio e reconhecimento). O 'habitus' como sistema de disposições duráveis e incorporadas que reproduz a estratificação escolar e de classe.\n• Zygmunt Bauman (Modernidade Líquida): desregulamentação, fragilidade dos vínculos afetivos e comunitários, privatização dos riscos sociais e transformação do indivíduo de cidadão engajado em consumidor descartável.\n• Byung-Chul Han (Sociedade do Cansaço): transição da sociedade disciplinar de Foucault (do 'deve') para a sociedade do desempenho (do 'pode'). O sujeito do rendimento explora a si mesmo voluntariamente sob a ilusão da liberdade, culminando em esgotamento psíquico crônico (burnout e depressão)."
+      },
+      {
+        title: "Capitalismo de Plataforma, Datificação e Uberização",
+        content: "• Uberização (Ricardo Antunes): nova morfologia do trabalho marcada pela subordinação algorítmica em tempo real, ausência de proteção social/previdenciária, transferência de todos os custos dos meios de produção (veículo, smartphone, combustível) para o trabalhador ('trabalhador-perdedor'), travestida ideologicamente pelo discurso do 'empreendedor de si mesmo'.\n• Capitalismo de Vigilância (Shoshana Zuboff): expropriação do excedente comportamental dos usuários por corporações de Big Data para modelagem preditiva de condutas e monetização corporativa."
+      }
+    ],
+    formulasAndRules: [
+      "Evolução dos Modelos de Produção: Taylor (cronômetro) → Ford (esteira rolante e estoque em massa) → Toyota (flexibilidade, just-in-time e terceirização) → Plataformas de App (subordinação algorítmica e uberização).",
+      "Conceito de Habitus (Bourdieu): Estrutura estruturada predisposta a funcionar como estrutura estruturante.",
+      "As Três Dimensões da Globalização (Milton Santos): Fábula (discurso ideológico) ⟹ Perversidade (realidade empírica excludente) ⟹ Possibilidade (outra globalização solidária).",
+      "Violência Simbólica = Dominação social internalizada sem coerção física imediata, naturalizada pela cultura e aceita pelos dominados."
+    ],
+    enemTraps: [
+      "Cuidado: Toyotismo NÃO aumentou a estabilidade e os salários do trabalhador; ao terceirizar e exigir polivalência ('operário multifuncional'), reduziu postos de trabalho fixos e ampliou a precarização estrutural.",
+      "Walter Benjamin NÃO tinha visão puramente pessimista da técnica: ao contrário de Adorno e Horkheimer, Benjamin viu na reprodutibilidade do cinema e da fotografia uma potencial democratização do acesso à arte ao destruir a 'aura' aristocrática e ritualística da obra original.",
+      "A 'uberização' NÃO é empreendedorismo nem autonomia genuína no ENEM: trata-se de subordinação algorítmica sem direitos trabalhistas, disfarçada de flexibilidade pelo discurso neoliberal corporativo.",
+      "Não confunda Meio Técnico-Científico-Informacional com neutralidade tecnológica: Milton Santos ressalta que as redes técnicas concentram poder em 'espaços luminosos' corporativos, segregando os 'espaços opacos'."
+    ],
+    mnemonics: "Taylor cronometra, Ford põe na esteira, Toyota enxuga o estoque e a plataforma algorítmica uberiza a carteira!"
   }
 };
 

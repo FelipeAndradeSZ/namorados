@@ -64,6 +64,7 @@ export const QUESTION_MODULES = {
   "humanas/afro-indigena": () => import("./questions/humanas/afro-indigena.js"),
   "humanas/geografia-agraria": () => import("./questions/humanas/geografia-agraria.js"),
   "humanas/filosofia-teoria-conhecimento": () => import("./questions/humanas/filosofia-teoria-conhecimento.js"),
+  "humanas/trabalho-globalizacao-cultura": () => import("./questions/humanas/trabalho-globalizacao-cultura.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),

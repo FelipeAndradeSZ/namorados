@@ -72,6 +72,7 @@ const AREA_TOPICS = {
     { id: "humanas/afro-indigena", name: "História e Cultura Afro-Brasileira e Indígena", tag: "História/Sociologia", priority: "Crítica • Leis 10.639 e 11.645", questionsCount: 25 },
     { id: "humanas/geografia-agraria", name: "Geografia Agrária, Agronegócio e Terra", tag: "Geografia", priority: "Crítica • MATOPIBA e Conflitos", questionsCount: 25 },
     { id: "humanas/filosofia-teoria-conhecimento", name: "Filosofia, Ética e Teoria do Conhecimento", tag: "Filosofia", priority: "Crítica • Sócrates a Kant", questionsCount: 25 },
+    { id: "humanas/trabalho-globalizacao-cultura", name: "Trabalho, Globalização, Indústria Cultural e Teoria Social", tag: "Sociologia", priority: "Crítica • Taylorismo a Big Techs", questionsCount: 25 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 25 },
