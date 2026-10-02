@@ -2635,6 +2635,54 @@ export const THEORY_CONTENT = {
       "O monopólio da violência em Max Weber exige LEGITIMIDADE; força bruta arbitrária sem reconhecimento legal não configura a autoridade do Estado moderno."
     ],
     mnemonics: "Hobbes teme o lobo e faz o Leviatã; Locke salva a propriedade pro cidadão de manhã; Rousseau canta a Vontade Geral soberana; e Montesquieu separa o poder em três pra lei ser humana!"
+  },
+
+  "humanas/geografia-urbana-segregacao": {
+    topic: "Geografia Urbana, Metropolização e Segregação Socioespacial",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Competência 2 e 4 (H8, H9, H10, H18, H19): Tema essencial e recorrente no ENEM: urbanização brasileira acelerada e desordenada, metropolização e conurbação, gentrificação e expulsão de populações vulneráveis, mobilidade pendular e cidades-dormitório, teoria dos dois circuitos de Milton Santos, enclaves fortificados de Teresa Caldeira, Estatuto da Cidade (função social da propriedade e IPTU progressivo), e impactos socioambientais (ilhas de calor, inundações em fundos de vale e deslizamentos em encostas).",
+    highFrequencySkills: [
+      "H8 - Analisar a ação dos estados nacionais no que se refere à dinâmica dos fluxos populacionais e às políticas de ocupação do espaço urbano",
+      "H9 - Comparar o significado histórico-geográfico das organizações das instituições e da gestão territorial metropolitana",
+      "H10 - Reconhecer a dinâmica da organização do espaço urbano e as formas de segregação socioespacial",
+      "H18 - Analisar as contradições socioeconômicas e ambientais geradas pela expansão do espaço urbano no Brasil",
+      "H19 - Reconhecer as transformações técnicas que determinam o uso e apropriação do espaço e do solo urbano"
+    ],
+    overview: "A Geografia Urbana no ENEM analisa a produção social do espaço e as profundas contradições da urbanização no Sul Global. O exame problematiza: 1) A urbanização brasileira rápida e concentrada a partir da década de 1950, gerando macrocefalia urbana, hipertrofia do setor terciário informal e espoliação urbana nas periferias desprovidas de infraestrutura; 2) Fenômenos metropolitanos como a conurbação (fusão contígua de municípios), migrações pendulares desgastantes e o surgimento de enclaves fortificados das elites em contraposição às favelas e assentamentos precários; 3) A disputa pelo solo urbano: gentrificação de centros históricos, déficit habitacional de 6 milhões versus 11 milhões de imóveis vagos, e o marco legal do Estatuto da Cidade (Lei 10.257/2001) para garantia da função social da propriedade e do direito à cidade.",
+    keyConcepts: [
+      {
+        title: "Gentrificação, Especulação e Segregação Socioespacial",
+        content: "• Gentrificação: Processo de valorização e elitização imobiliária de áreas centrais ou históricas sob o pretexto de 'revitalização', que encarece o custo de vida e os aluguéis, expulsando as populações pobres históricas para periferias distantes.\n• Enclaves Fortificados (Teresa Caldeira): Condomínios horizontais murados e torres de luxo com segurança privada armada, operando a autossegregação voluntária das classes altas e esvaziando a convivência pública democrática na cidade.\n• Espoliação Urbana (Lúcio Kowarick): Dupla exploração da classe trabalhadora periférica: baixos salários na jornada de trabalho formal e carência de serviços básicos coletivos (saúde, esgoto, transporte), forçando a autoconstrução em mutirões no tempo livre."
+      },
+      {
+        title: "Dinâmicas Metropolitanas: Conurbação e Migração Pendular",
+        content: "• Conurbação: Fusão física e espacial contínua da mancha edificada de dois ou mais municípios contíguos decorrente do crescimento horizontal, exigindo gestão integrada nas Regiões Metropolitanas (RMs).\n• Migração Pendular: Deslocamento diário e regular de ida e volta entre o município de residência (cidades-dormitório) e o polo central de emprego e serviços, consumindo horas diárias dos trabalhadores em transportes coletivos lotados.\n• Macrocefalia Urbana: Inchaço desproporcional de uma metrópole que concentra população e serviços muito acima da capacidade da rede urbana regional.\n• Desmetropolização Relativa: Desaceleração do crescimento populacional das megacidades nos últimos censos em favor da atração exercida pelas cidades médias do interior (deseconomias de aglomeração nas capitais e guerra fiscal)."
+      },
+      {
+        title: "Os Dois Circuitos da Economia Urbana (Milton Santos)",
+        content: "• Circuito Superior: Moderno, intensivo em capital e tecnologia, conectado a bancos, corporações multinacionais, shoppings e empregos formais seletivos.\n• Circuito Inferior: Intensivo em trabalho, baseado em pequenos comércios populares, ambulantes, feirantes e redes de solidariedade cotidiana. Atua como amortecedor social estrutural da pobreza, garantindo a sobrevivência das massas excluídas do mercado formal."
+      },
+      {
+        title: "O Estatuto da Cidade e a Função Social da Propriedade",
+        content: "• Estatuto da Cidade (Lei 10.257/2001): Regulamenta a política urbana da CF/88.\n• Função Social da Propriedade: O direito à propriedade subordina-se ao interesse coletivo da cidade. Terrenos centrais vazios mantidos ociosos para pura especulação podem sofrer sanções coercitivas: parcelamento e edificação compulsórios, IPTU progressivo no tempo e desapropriação com títulos da dívida pública.\n• Plano Diretor Participativo: Instrumento obrigatório de planejamento municipal para cidades com mais de 20 mil habitantes."
+      }
+    ],
+    formulasAndRules: [
+      "Conurbação = União física ininterrupta de manchas urbanas de municípios limítrofes.",
+      "Movimento Pendular = Deslocamento diário diurno (moradia periférica ⇄ emprego central).",
+      "Gentrificação = Investimento em área degradada + Especulação imobiliária ⟹ Expulsão das classes populares.",
+      "Função Social da Propriedade: Solo urbano dotado de infraestrutura deve servir à moradia e ao bem-estar coletivo.",
+      "Hierarquia Urbana REGIC/IBGE: Grande Metrópole Nacional (São Paulo) → Metrópole Nacional → Metrópole → Capital Regional → Centro Sub-regional."
+    ],
+    enemTraps: [
+      "Gentrificação NÃO é apenas 'melhoria ou embelezamento'; no ENEM, é enfatizado o caráter excludente que encarece o bairro e expulsa os antigos moradores pobres.",
+      "Movimento pendular NÃO é migração definitiva nem sazonal (transumância); o trabalhador vai e volta no mesmo dia.",
+      "Conurbação NÃO une as administrações políticas em uma única prefeitura; os municípios continuam existindo de forma autônoma.",
+      "O déficit habitacional NÃO é causado por falta física de imóveis construídos (há 11 milhões de imóveis vagos no Brasil), mas pela especulação imobiliária que encarece o solo.",
+      "As ilhas de calor ocorrem pelo baixo albedo do asfalto (absorve calor) e falta de árvores, e NÃO por proximidade com o lençol freático."
+    ],
+    mnemonics: "Conurbação junta a cidade no asfalto; o Pêndulo vai e volta no salto; a Gentrificação expulsa o pobre pro alto; e o Estatuto da Cidade pune o terreno ocioso de assalto!"
   }
 };
 

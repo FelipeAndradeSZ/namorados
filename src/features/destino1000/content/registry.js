@@ -70,6 +70,7 @@ export const QUESTION_MODULES = {
   "humanas/filosofia-teoria-conhecimento": () => import("./questions/humanas/filosofia-teoria-conhecimento.js"),
   "humanas/trabalho-globalizacao-cultura": () => import("./questions/humanas/trabalho-globalizacao-cultura.js"),
   "humanas/filosofia-politica-poder": () => import("./questions/humanas/filosofia-politica-poder.js"),
+  "humanas/geografia-urbana-segregacao": () => import("./questions/humanas/geografia-urbana-segregacao.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),
