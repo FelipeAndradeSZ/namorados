@@ -2490,6 +2490,52 @@ export const THEORY_CONTENT = {
     mnemonics: "No hipertexto você clica e navega; no meme a ironia pega; na bolha o algoritmo te cega; e no fact-checking o boato se desmantela!"
   },
 
+  "linguagens/teoria-literaria-poetica": {
+    topic: "Teoria Literária, Gêneros Canônicos e Poética",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 5 e 6 (H15, H16, H17): Conceitos estruturantes da crítica e teoria literária cobrados no ENEM: tripartição de gêneros (épico/narrativo, lírico, dramático), foco narrativo e narrador não confiável (Machado de Assis), polifonia e dialogismo de Bakhtin, metapoética (João Cabral e Drummond), estranhamento estético (formalistas russos), catarse trágica aristotélica, discurso indireto livre e paródia subversiva.",
+    highFrequencySkills: [
+      "H15 - Estabelecer relações entre o texto literário e o momento de sua produção, situando aspectos do contexto histórico, social e político",
+      "H16 - Relacionar informações sobre concepções artísticas e procedimentos de construção do texto literário",
+      "H17 - Reconhecer a presença de valores sociais e humanos atualizáveis e permanentes no patrimônio literário nacional"
+    ],
+    overview: "A Teoria Literária fornece as ferramentas críticas e narratológicas para desmontar o mecanismo da criação artística. No ENEM, a literatura não é cobrada como memorização de datas ou biografias de autores, mas como análise fina dos procedimentos formais: quem narra e qual o grau de confiabilidade dessa voz (narrador-personagem x narrador onisciente); como o tempo e o espaço são manipulados; de que maneira o gênero dramático prescinde de narrador mediador para presentificar a ação nos diálogos e rubricas; como o dialogismo e a polifonia bakhtiniana orquestram múltiplas consciências; e como a poesia moderna rompe a métrica tradicional para fazer da palavra um objeto de estranhamento perceptivo, crítica social e metalinguagem.",
+    keyConcepts: [
+      {
+        title: "A Tríade dos Gêneros Clássicos: Lírico, Épico e Dramático",
+        content: "• Gênero Lírico: Centrado na subjetividade, na emoção íntima de um eu lírico, atemporalidade e prevalência da função emotiva/poética.\n• Gênero Épico/Narrativo: Caracterizado pela presença obrigatória de um narrador mediador que relata uma sucessão de ações no tempo e espaço (enredo, personagens, clímax e desfecho).\n• Gênero Dramático: Concebido para a encenação cênica teatral. Não possui narrador mediador; a ação desenrola-se diretamente perante o público por meio de diálogos e rubricas (didascálias) de instrução de cena."
+      },
+      {
+        title: "Foco Narrativo e o Narrador Não Confiável",
+        content: "• Narrador em 1ª Pessoa (Homodiegético/Personagem): Participa da história como protagonista ou testemunha. Visão subjetiva, parcial e restrita. Em obras como 'Dom Casmurro', a narração retrospectiva do ciúme transforma o narrador em 'não confiável', cuja versão dos fatos deve ser permanentemente posta em dúvida pelo leitor.\n• Narrador em 3ª Pessoa (Heterodiegético): Não participa dos fatos. Pode ser observador (registra apenas o visível) ou onisciente (penetra na consciência e pensamentos dos personagens).\n• Discurso Indireto Livre: Amálgama entre a 3ª pessoa do narrador e a interioridade psíquica da personagem sem marcas pontuais de aspas ou travessões (marca registrada de Graciliano Ramos e Clarice Lispector)."
+      },
+      {
+        title: "Estranhamento Estético (Shklovsky) e Polifonia (Bakhtin)",
+        content: "• Estranhamento / Desfamiliarização (Ostranenie): Procedimento artístico fundamental de romper o automatismo da percepção cotidiana, tornando a linguagem densa e difícil para renovar a sensação do mundo.\n• Polifonia Bakhtiniana: Multiplicidade de vozes e consciências autônomas e equipolentes que dialogam no tecido ficcional sem que o autor imponha uma verdade monológica única soberana."
+      },
+      {
+        title: "Metalinguagem, Paródia e Antropofagia na Poética Brasileira",
+        content: "• Metapoética: Poema que reflete sobre o próprio fazer poético (o trabalho de seleção em 'Catar Feijão' de João Cabral; o lirismo libertário em Manuel Bandeira).\n• Paródia vs. Paráfrase: A paráfrase reafirma o texto-fonte; a paródia transgride, ironiza e subverte o texto canônico (Oswald parodiando Gonçalves Dias: 'Minha terra tem palmares').\n• Antropofagia Cultural: Teoria pós-colonial de 1928 que propõe deglutir criticamente as influências estrangeiras para refundi-las com as raízes brasileiras ('Tupy or not tupy')."
+      }
+    ],
+    formulasAndRules: [
+      "Gênero Dramático = Diálogo Direto + Rubricas Cênicas (SEM narrador mediador).",
+      "Discurso Indireto Livre = 3ª pessoa do narrador + Pensamentos íntimos da personagem (sem aspas/travessões).",
+      "Paródia = Texto Fonte + Deslocamento Crítico/Irônico/Subversivo.",
+      "Escansão Poética = Contagem silábica fonética contada rigorosamente até a ÚLTIMA SÍLABA TÔNICA.",
+      "Redondilha Menor (5 sílabas) / Redondilha Maior (7 sílabas) / Decassílabo (10 sílabas) / Alexandrino (12 sílabas)."
+    ],
+    enemTraps: [
+      "Nunca confunda o autor real empírico da obra (quem assina o livro) com a entidade ficcional do narrador ou eu lírico.",
+      "No narrador-personagem de 1ª pessoa, NUNCA assuma suas declarações como verdade factual incontestável da narrativa.",
+      "No texto dramático teatral, lembre-se de que não há narrador; o enredo acontece diretamente pelas falas e didascálias.",
+      "A paródia NÃO é uma homenagem reverente; ela desmonta e ressignifica o texto original com intenção crítica ou satírica.",
+      "Ao contar sílabas poéticas (escansão), lembre-se de que se para na última tônica e deve-se unir as vogais em elisão."
+    ],
+    mnemonics: "No drama é diálogo puro sem narrador; na 1ª pessoa o relato é parcial e enganador; e a paródia subverte o cânone com humor e fervor!"
+  },
+
   "humanas/trabalho-globalizacao-cultura": {
     topic: "Trabalho, Globalização, Indústria Cultural e Teoria Social Contemporânea",
     area: "humanas",

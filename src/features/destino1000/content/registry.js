@@ -51,6 +51,7 @@ export const QUESTION_MODULES = {
   "linguagens/publicidade-semiotica": () => import("./questions/linguagens/publicidade-semiotica.js"),
   "linguagens/literatura-contemporanea-cancao": () => import("./questions/linguagens/literatura-contemporanea-cancao.js"),
   "linguagens/generos-digitais-hipertexto": () => import("./questions/linguagens/generos-digitais-hipertexto.js"),
+  "linguagens/teoria-literaria-poetica": () => import("./questions/linguagens/teoria-literaria-poetica.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
