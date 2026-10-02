@@ -1869,6 +1869,82 @@ export const THEORY_CONTENT = {
       "Não confunda a abolição jurídica de 1888 com cidadania plena: Florestan Fernandes demonstrou que a abolição foi inconclusa e marginalizou deliberadamente a população negra."
     ],
     mnemonics: "Krenak adia o fim, Lélia cruza a opressão; o indigenato é originário e garante a posse do chão."
+  },
+
+  "linguagens/espanhol-instrumental": {
+    topic: "Língua Estrangeira: Espanhol Instrumental",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 2 do ENEM (H5 a H8): 5 questões com alto índice de pegadinhas baseadas em falsos cognatos e conectores.",
+    highFrequencySkills: ["H5 - Identificar intenções comunicativas e ironia", "H6 - Acessar informações em textos de imprensa e divulgação científica", "H7 - Reconhecer heterossemânticos, heterotônicos e heterogenéricos", "H8 - Interpretar manifestações literárias e charges hispano-americanas"],
+    overview: "Leitura instrumental focada em textos jornalísticos, de divulgação científica, tirinhas críticas (Quino/Maitena) e literatura latino-americana (García Márquez, Galeano, Neruda), com domínio das armadilhas da proximidade entre português e espanhol.",
+    keyConcepts: [
+      {
+        title: "Heterossemânticos Críticos (Falsos Amigos)",
+        content: "Palavras de grafia semelhante mas significados completamente distintos: • Exquisito = delicioso, saboroso (não esquisito); • Apellido = sobrenome (apelido é 'apodo'); • Embarazada = grávida (envergonhada é 'avergonzada'); • Rato = momento, instante (roedor é 'ratón'); • Propina = gorjeta legal de atendimento (suborno é 'soborno' ou 'coima'); • Berro = agrião (verdura comestível); • Cuello = pescoço; • Rodilla = joelho (cotovelo é 'codo'); • Taller = oficina mecânica ou estúdio de arte; • Borrador = apagador de lousa ou rascunho; • Cola = fila de pessoas."
+      },
+      {
+        title: "Artigo Neutro LO vs. Artigo Masculino EL",
+        content: "O artigo neutro 'LO' NUNCA acompanha substantivos! Une-se exclusivamente a adjetivos e advérbios para substantivar conceitos abstratos (ex: 'lo importante', 'lo difícil' = aquilo que é importante, a parte difícil). O artigo definido masculino que acompanha substantivos é unicamente 'EL' (el libro, el hombre)."
+      },
+      {
+        title: "Conectores e Operadores Argumentativos",
+        content: "• Oposição/Contraste: Sin embargo / No obstante (no entanto, contudo), Pero (mas). • Concessão: Aunque / A pesar de que (embora, ainda que). • Conclusão: Por lo tanto / Por consiguiente (portanto, logo). • Adição: Además / Incluso (além disso, inclusive). • Condição: A no ser que / Siempre que."
+      },
+      {
+        title: "Heterogenéricos e Heterotônicos",
+        content: "Heterogenéricos mudam de gênero: em espanhol são femininos 'la leche', 'la sangre', 'la sal', 'la miel', 'la nariz' (masculinos em português); são masculinos 'el color', 'el dolor', 'el árbol' (femininos em português). Heterotônicos mudam de sílaba tônica: limite (li-MI-te no espanhol vs. LÍ-mi-te no português), nivel (ni-VEL vs. NÍ-vel), cerebro (ce-RE-bro vs. CÉ-re-bro)."
+      }
+    ],
+    formulasAndRules: [
+      "Regra do LO: LO + adjetivo = conceito abstrato. Nunca escreva nem marque 'lo menino' ou 'lo problema'. Substantivo masculino leva EL (el problema).",
+      "Leitura do Enunciado Primeiro: Leia o comando e as cinco opções em português antes do texto em espanhol para captar o foco da questão.",
+      "Tilde Diacrítica: Diferencia monossílabos homônimos: él (ele) vs. el (o); tú (você) vs. tu (teu); sí (sim) vs. si (se); té (chá) vs. te (te)."
+    ],
+    enemTraps: [
+      "Cuidado com a alternativa que traduz 'apellido' por apelido ou 'exquisito' por esquisito/bizarro.",
+      "Em tirinhas da Mafalda e de Maitena, o humor nasce da quebra de expectativa entre o texto verbal e a opressão das rotinas cotidianas.",
+      "Não confunda 'propina' (gorjeta legítima a garçons) com crime de corrupção."
+    ],
+    mnemonics: "Apellido é sobrenome, apodo é apelido; exquisito é saboroso e LO nunca anda com substantivo vestido."
+  },
+
+  "humanas/geografia-agraria": {
+    topic: "Geografia Agrária, Agronegócio e Questão Fundiária",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Cai todo ano (2 a 4 questões no primeiro dia). Tema central para a prova de Humanas e repertório indispensável para a Redação.",
+    highFrequencySkills: ["H6 - Interpretar a estrutura fundiária e índices de desigualdade no campo", "H7 - Analisar impactos de inovações tecnológicas agrícolas", "H17 - Avaliar as relações de trabalho no campo e conflitos pela posse da terra", "H18 - Compreender a função social da terra e políticas públicas agroalimentares"],
+    overview: "Estudo crítico da formação histórica do latifúndio no Brasil (Lei de Terras de 1850), modernização conservadora na ditadura militar, dinâmica da fronteira agrícola (MATOPIBA), contradição entre agronegócio de exportação e agricultura familiar, conflitos fundiários e transição agroecológica.",
+    keyConcepts: [
+      {
+        title: "Estrutura Fundiária e Índice de Gini da Terra",
+        content: "O Brasil possui uma das estruturas fundiárias mais concentradas do mundo (Índice de Gini fundiário > 0,85). Menos de 1% dos estabelecimentos agrícolas monopolizam quase metade de toda a área agricultável do país, herança secular das sesmarias coloniais, da escravidão e da Lei de Terras nº 601 de 1850 (que transformou a terra pública em mercadoria acessível apenas por compra com dinheiro à vista)."
+      },
+      {
+        title: "Modernização Conservadora e Revolução Verde",
+        content: "A partir dos anos 1960 e 1970, o Estado militar injetou crédito rural subsidiado (SNCR) e tecnologia (tratores, adubos químicos solúveis, agrotóxicos e sementes híbridas da Revolução Verde) sem alterar a propriedade da terra. O modelo modernizou as máquinas, mas conservou a desigualdade arcaica, provocando desemprego em massa de meeiros e parceiros e acelerando o êxodo rural desordenado rumo às periferias das metrópoles."
+      },
+      {
+        title: "Agronegócio de Exportação vs. Agricultura Familiar",
+        content: "O agronegócio patronal é altamente mecanizado, gera poucos empregos diretos e foca em commodities para a balança comercial (soja, milho, cana, carne bovina), controlado por multinacionais químicas e tradings globais (Cargill, Bunge). Em contraste, a agricultura familiar responde por ~70% dos alimentos frescos da mesa brasileira (mandioca, feijão, leite, legumes) e emprega mais de 67% da mão de obra rural, sendo apoiada pelo PRONAF, PAA e PNAE (30% da merenda escolar)."
+      },
+      {
+        title: "Fronteira Agrícola, MATOPIBA e Conflitos Fundiários",
+        content: "A expansão da soja sobre os chapadões do MATOPIBA (Maranhão, Tocantins, Piauí e Bahia) e o Arco do Desmatamento amazônico compromete a recarga dos aquíferos do Cerrado ('caixa d'água do Brasil'). Práticas de grilagem de terras públicas devolutas e pistoleirismo geram violência crônica contra posseiros e povos tradicionais (geraizeiros, vazanteiros, quebradeiras de coco babaçu com a Lei do Babaçu Livre). O Artigo 186 da CF/88 exige a função social da terra contra o latifúndio improdutivo."
+      }
+    ],
+    formulasAndRules: [
+      "Função Social da Propriedade (CF/88, Art. 186): Produtividade econômica + Respeito ao meio ambiente + Observância trabalhista + Bem-estar coletivo.",
+      "Lei do Babaçu Livre: Garante o acesso comum de mulheres extrativistas aos babaçuais nativos, vedando derrubadas e agrotóxicos mesmo em terras privadas.",
+      "PNAE (Lei 11.947/09): No mínimo 30% da verba federal da merenda escolar deve comprar alimentos da agricultura familiar e assentamentos."
+    ],
+    enemTraps: [
+      "O agronegócio de exportação NÃO é o produtor da cesta básica do brasileiro; ele produz commodities para ração animal externa e biocombustíveis.",
+      "A Lei de Terras de 1850 não visava democratizar a terra; foi criada para impedir o acesso à terra por libertos e imigrantes pobres.",
+      "Trabalho escravo contemporâneo (CP, art. 149) não exige correntes físicas; caracteriza-se por condições degradantes, servidão por dívida e jornada exaustiva."
+    ],
+    mnemonics: "A máquina modernizou, a terra concentrou; o familiar põe comida e o Gini disparou."
   }
 };
 
