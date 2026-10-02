@@ -99,6 +99,7 @@ const AREA_TOPICS = {
     { id: "linguagens/literatura-contemporanea-cancao", name: "Literatura Contemporânea, Canção e Poesia Periférica", tag: "Literatura", priority: "Crítica • MPB, Slams, Rap e Escrevivência", questionsCount: 25 },
     { id: "linguagens/generos-digitais-hipertexto", name: "Gêneros Digitais, Hipertexto e Cultura da Conexão", tag: "Cibercultura", priority: "Crítica • Memes, IA, Podcasts e Redes", questionsCount: 25 },
     { id: "linguagens/teoria-literaria-poetica", name: "Teoria Literária, Gêneros Canônicos e Poética", tag: "Literatura", priority: "Crítica • Narratologia & Bakhtin", questionsCount: 25 },
+    { id: "linguagens/semiotica-multimodal-charges", name: "Semiótica Multimodal, Charges, Cartuns e Humor Gráfico", tag: "Comunicação", priority: "Crítica • Ironia, Verbo-Visual e Tiras", questionsCount: 25 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },

@@ -2777,6 +2777,53 @@ export const THEORY_CONTENT = {
       "Cilindro equilátero: a altura é igual ao DIÂMETRO (h = 2r), e NÃO ao raio (h ≠ r)!"
     ],
     mnemonics: "TRI dos Corpos Redondos: 'Cilindro é área da base vezes altura inteira; Cone divide por três na brincadeira; Esfera é quatro terços de pi r três na carreira; e na Semelhança linear k, o volume sobe ao cubo de primeira!'"
+  },
+
+  "linguagens/semiotica-multimodal-charges": {
+    topic: "Semiótica Multimodal, Charges, Cartuns e Humor Gráfico",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 7 (H21, H22, H23) e Competência 3 (H12): Cobrança massiva e obrigatória em todas as edições do ENEM. Envolve a integração entre linguagem verbal e não verbal em textos sincréticos (charges, cartuns, tirinhas, caricaturas e quadrinhos mudos), a identificação de efeitos de sentido (ironia, paródia, metáfora visual, quebra de expectativa e hipérbole gráfica), o reconhecimento de recursos expressivos da gramática visual (planos, enquadramento plongée e contra-plongée, tipos de balões, linhas cinéticas e semiótica das cores) e a crítica sociopolítica contundente (cidadania, precarização do trabalho, vigilância algorítmica, preconceitos, fake news, desmatamento e hipocrisia institucional).",
+    highFrequencySkills: [
+      "H21 - Reconhecer em textos de diferentes gêneros recursos verbais e não verbais utilizados com a finalidade de criar e mudar comportamentos e hábitos",
+      "H22 - Relacionar, em diferentes textos, opiniões, temas, assuntos e recursos linguísticos e visuais",
+      "H23 - Inferir em um texto quais são os objetivos de seu produtor e quem é seu público-alvo pela análise dos procedimentos argumentativos e estéticos",
+      "H12 - Reconhecer diferentes funções da arte, do trabalho da produção dos artistas em seus meios culturais e de intervenção social"
+    ],
+    overview: "O módulo capacita o estudante na leitura crítica de textos multimodais e artes gráficas. Desenvolve a distinção teórica e funcional entre Charge (conjuntural, datada, voltada à crítica de eventos políticos imediatos e figuras públicas da atualidade), Cartum (atemporal, universal, ironizando comportamentos e dilemas da condição humana), Tirinha (narrativa sequencial curta com clímax e quebra de expectativa no último quadro) e Caricatura (deformação hiperbólica de traços fisionômicos e psicológicos). Examina a mecânica da ironia verbo-visual, a intertextualidade paródica com obras canônicas e a denúncia de contradições sociais contemporâneas.",
+    keyConcepts: [
+      {
+        title: "Diferenciação Canônica: Charge, Cartum, Tirinha e Caricatura",
+        content: "• Charge: Gênero jornalístico opinativo marcado pela CONJUNTURALIDADE e temporalidade efêmera. Ancora-se em fatos políticos e sociais imediatos da atualidade e requer conhecimento do noticiário.\n• Cartum: Humor gráfico de temática ATEMPORAL e UNIVERSAL. Critica condutas humanas (vaidade, ganância, solidão, amor, morte) sem depender de um evento datado ou figura pública específica.\n• Tirinha (Comic Strip): Narrativa sequencial em múltiplos quadrinhos (geralmente 3 ou 4) com progressão dramática temporal e quebra cômica/reflexiva no desfecho.\n• Caricatura: Retrato satírico focado na distorção metonímica e exagero hiperbólico de traços anatômicos e traços de caráter de uma personalidade reconhecível."
+      },
+      {
+        title: "Gramática do Design Visual e Perspectiva (Kress & van Leeuwen)",
+        content: "• Enquadramento Picado (Plongée / Visto de Cima): Apequena a figura, transmitindo vulnerabilidade, subordinação, inferioridade, fragilidade ou opressão social.\n• Enquadramento Contra-Plongée (Visto de Baixo): Engrandece o objeto ou personagem, conferindo autoridade, poder intimidador, superioridade ou imponência monumental.\n• Semiótica das Cores: Áreas monocromáticas cinzentas (opressão, alienação, frieza urbana) em choque com cores quentes e saturadas (vida, afeto, esperança, foco de resistência)."
+      },
+      {
+        title: "Recursos Expressivos e Retórica do Humor Gráfico",
+        content: "• Metáfora Visual: Associação de campos conceituais distintos em um único signo visual (ex: ampulheta esvaziando florestas para empilhar dinheiro).\n• Paródia Intertextual: Apropriação subversiva e irônica de obras canônicas da história da arte e da literatura para ridicularizar hábitos modernos (ex: 'O Pensador' de Rodin convertido em 'O Rolador de Feed').\n• Quebra de Expectativa: O texto verbal inicial induz o leitor a uma dedução lógica que é subvertida de forma desconcertante pelo elemento visual ou fala final.\n• Polissemia: Exploração de palavras com múltiplos sentidos para criar trocadilhos críticos (ex: 'rombo nas contas públicas' versus 'cratera na rua')."
+      },
+      {
+        title: "Linguagem dos Quadrinhos e Paralinguagem Icônica",
+        content: "• Balão de Fala: Borda lisa (fala normal); tracejado (sussurro/segredo); formato de nuvem com círculos (pensamento/sonho); pontiagudo espinhoso com caixa-alta e negrito (grito/fúria/ordem estridente); retangular rígido (voz robótica/eletrônica).\n• Signos Cinéticos e Emocionais: Linhas cinéticas (velocidade, tremor, choque); gotas de suor voadoras (ansiedade, constrangimento, esforço físico extremo); lâmpada (ideia súbita); espirais nos olhos (tontura, hipnose)."
+      }
+    ],
+    formulasAndRules: [
+      "Charge = Temporal + Conjuntural + Noticiário Político/Social Imediato.",
+      "Cartum = Atemporal + Universal + Comportamento Humano Geral.",
+      "Tirinha = Sequencial + Progressão Temporal + Quebra de Expectativa no Clímax Final.",
+      "Plongée (de cima) = Fragilidade / Opressão  |  Contra-Plongée (de baixo) = Poder / Imponência.",
+      "Sentido Multimodal = Texto Verbal + Imagem Visual + Contexto Sociocultural Integrados."
+    ],
+    enemTraps: [
+      "A presença de texto verbal NÃO define se é charge ou cartum: ambos podem ser verbais ou puramente visuais (mudos)!",
+      "A charge NÃO é neutra nem imparcial: ela é um gênero intrinsecamente opinativo e crítico!",
+      "Paródia NÃO é homenagem passiva nem paráfrase: a paródia subverte e recria o original com viés irônico e crítico!",
+      "A quebra de expectativa nunca é erro de coerência do autor: é o dispositivo retórico fundamental para gerar humor e reflexão!",
+      "O cartum mudo NÃO é incompleto por não ter palavras: a imagem não verbal constitui um texto pleno e autônomo com gramática própria."
+    ],
+    mnemonics: "Quadrinho Crítico: 'Charge é fato da hora e do jornal; Cartum é o homem em dilema universal; Plongée de cima põe o fraco no chão; e no fim da tirinha a quebra gera reflexão!'"
   }
 };
 
