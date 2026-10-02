@@ -398,6 +398,417 @@ export const QUESTIONS_BRASIL_REPUBLICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-011",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "História do Brasil",
+    subtopic: "Revolta da Vacina e Reforma Pereira Passos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No Rio de Janeiro do início do século XX, a reforma urbana do prefeito Pereira Passos (1902-1906) demoliu centenas de habitações coletivas e cortiços no centro da capital sob o lema do 'bota-abaixo' para abrir avenidas inspiradas em Paris. Paralelamente, o sanitarista Oswaldo Cruz liderou campanhas obrigatórias e invasivas de vacinação contra a varíola e combate à febre amarela. Em novembro de 1904, a população insurgiu-se em barricadas e enfrentamentos armados com a polícia.",
+      source: "Nicolau Sevcenko, A Revolta da Vacina. São Paulo: Brasiliense."
+    },
+    prompt: "A eclosão da Revolta da Vacina em 1904 não pode ser compreendida apenas como uma recusa à imunização médica, mas sim como a culminância de:",
+    options: [
+      { id: "a", text: "um complô monarquista financiado por potências estrangeiras que pretendia restaurar a dinastia dos Bragança no trono imperial.", isCorrect: false, distractorRationale: "Embora houvesse descontentamento político, a revolta popular foi impulsionada pela opressão cotidiana e pela exclusão urbana das classes trabalhadoras." },
+      { id: "b", text: "um processo de descontentamento popular acumulado diante do despejo forçado, da alta do custo de vida e da invasão policial autoritária dos lares pobres.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "uma greve geral liderada pelo Partido Comunista Brasileiro para estatizar os hospitais e laboratórios da capital.", isCorrect: false, distractorRationale: "Anacronismo histórico: o Partido Comunista Brasileiro (PCB) só foi fundado em 1922." },
+      { id: "d", text: "um conflito entre médicos sanitaristas que defendiam a homeopatia contra a introdução de medicamentos industriais.", isCorrect: false, distractorRationale: "O debate não girava em torno de disputas acadêmicas de homeopatia, mas sobre autoritarismo estatal e higienismo excludente." },
+      { id: "e", text: "uma reação dos grandes cafeicultores paulistas contra o aumento de impostos alfandegários federais no porto do Rio de Janeiro.", isCorrect: false, distractorRationale: "Os cafeicultores dominavam a presidência na República Oligárquica e não formaram as barricadas populares da revolta." }
+    ],
+    detailedExplanation: {
+      summary: "A Revolta da Vacina foi o estopim de um acúmulo de insatisfações das camadas populares submetidas a despejos sumários da reforma Pereira Passos e à perda de moradia no centro.",
+      stepByStep: [
+        "Passo 1: Compreender o cenário da reforma Pereira Passos: demolição em massa de cortiços no centro ('bota-abaixo') empurrou as camadas populares para os morros periféricos, gerando as primeiras favelas.",
+        "Passo 2: Analisar a campanha sanitária de Oswaldo Cruz: brigadas de mata-mosquitos e agentes de saúde tinham prerrogativa de invadir residências para vistoria e aplicação compulsória da vacina.",
+        "Passo 3: Integrar a mentalidade da época: a vacinação compulsória, sem diálogo pedagógico e em um contexto de repressão policial violenta, foi percebida como uma afronta à intimidade e à dignidade familiar.",
+        "Passo 4: Concluir que a revolta popular expressou o repúdio generalizado à modernização autoritária e excludente da Primeira República."
+      ],
+      coreConcept: "Reforma urbana de Pereira Passos, higienismo social, segregação socioespacial e a Revolta da Vacina de 1904.",
+      trapWarning: "Reduzir o movimento a um suposto 'obscurantismo anticientífico' dos pobres, desconsiderando a violência social da reforma urbana e a violação de domicílios."
+    },
+    commonTraps: ["reduzir_a_revolta_a_ignorancia_cientifica", "anacronismo_com_partidos_posteriores"],
+    tags: ["revolta_da_vacina", "primeira_republica", "higienismo", "rio_de_janeiro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-012",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "História do Brasil",
+    subtopic: "Revolta da Chibata e Cidadania Negra",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 22 de novembro de 1910, marinheiros a bordo dos encouraçados Minas Geraes e São Paulo rebelaram-se contra os castigos corporais na Marinha de Guerra brasileira. Sob a liderança de João Cândido Felisberto, conhecido como o 'Almirante Negro', os marinheiros apontaram os canhões dos navios para a cidade do Rio de Janeiro exigindo o fim imediato das chibatadas, o aumento de soldos e uma escala justa de serviço.",
+      source: "Edmar Morel, A Revolta da Chibata. Rio de Janeiro: Graal."
+    },
+    prompt: "A eclosão da Revolta da Chibata evidenciou as contradições da recém-proclamada República brasileira ao demonstrar:",
+    options: [
+      { id: "a", text: "a sobrevivência de práticas disciplinares herdeiras do escravagismo colonial aplicadas sobre um contingente de praças majoritariamente negro e mestiço.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o controle absoluto de oficiais operários anarquistas sobre as altas patentes da Marinha brasileira.", isCorrect: false, distractorRationale: "O oficialato da Marinha era composto pela elite aristocrática branca; os revoltosos eram marujos subalternos." },
+      { id: "c", text: "a recusa dos marinheiros em aceitar a modernização bélica trazida pelos encouraçados de modelo Dreadnought.", isCorrect: false, distractorRationale: "Os marinheiros operavam os navios mais modernos com maestria exemplar; revoltavam-se contra os abusos corporais e a fome." },
+      { id: "d", text: "o alinhamento ideológico dos revoltosos com os regimes socialistas da Europa Oriental.", isCorrect: false, distractorRationale: "A revolta ocorreu em 1910, antes da Revolução Russa de 1917, com pautas focadas em direitos humanos e dignidade profissional." },
+      { id: "e", text: "a eficácia imediata do governo de Hermes da Fonseca em cumprir a anistia prometida sem prender os revoltosos.", isCorrect: false, distractorRationale: "O governo traiu a anistia: prendeu João Cândido, expulsou marujos e enviou centenas para trabalhos forçados no Acre." }
+    ],
+    detailedExplanation: {
+      summary: "Mais de vinte anos após a Lei Áurea (1888), a Marinha ainda açoitava corpos de marinheiros negros e pobres, revelando o racismo estrutural da Primeira República.",
+      stepByStep: [
+        "Passo 1: Contextualizar a composição da Marinha: os altos oficiais pertenciam às famílias nobres e brancas, enquanto as praças eram homens negros, caboclos e pobres, muitos alistados à força.",
+        "Passo 2: Analisar a contradição da modernidade: a República comprou os encouraçados mais modernos do mundo (Dreadnoughts), mas mantinha regulamentos disciplinares com chicoteamento herdados da escravidão.",
+        "Passo 3: Identificar a liderança de João Cândido: os revoltosos exigiam ser tratados como cidadãos de uma República, e não como cativos de galés.",
+        "Passo 4: Concluir que a revolta desmascarou o abismo entre a retórica republicana liberal e a brutalidade racial cotidiana."
+      ],
+      coreConcept: "A Revolta da Chibata (1910), racismo estrutural, direitos humanos e cidadania dos afrodescendentes no pós-abolição.",
+      trapWarning: "Acreditar que com a Proclamação da República (1889) a cidadania foi imediatamente universalizada e as práticas de violência física contra trabalhadores foram abolidas."
+    },
+    commonTraps: ["achar_que_o_governo_cumpriu_a_anistia", "desconsiderar_o_recorte_racial_do_conflito"],
+    tags: ["revolta_da_chibata", "joao_candido", "cidadania_negra", "pos_abolicao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-013",
+    area: "humanas",
+    competence: 3,
+    skill: 14,
+    topic: "História do Brasil",
+    subtopic: "Tenentismo e Crise da Primeira República",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na década de 1920, uma série de insurreições promovidas por jovens oficiais de baixa e média patente do Exército — como os 18 do Forte de Copacabana (1922), a Revolta Paulista de 1924 e a marcha épica da Coluna Prestes (1925-1927) — abalou os alicerces do regime oligárquico. Os chamados 'tenentes' reivindicavam reformas morais na política, a introdução do voto secreto e o fortalecimento do poder centralizador do Estado nacional.",
+      source: "Boris Fausto, História do Brasil. São Paulo: Edusp."
+    },
+    prompt: "O movimento tenentista dos anos 1920 expressou os anseios das camadas médias urbanas brasileiras ao combater prioritariamente:",
+    options: [
+      { id: "a", text: "a política do café com leite e a hegemonia das oligarquias agrárias tradicionais baseadas no controle eleitoral fraudulento.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o modelo capitalista industrial, propondo a coletivização imediata dos latifúndios rurais sob controle soviético.", isCorrect: false, distractorRationale: "O tenentismo inicial tinha programa reformista liberal-burguês, moralista e patriótico, sem intenção de abolir a propriedade privada." },
+      { id: "c", text: "a presença das Forças Armadas no cenário político, defendendo o desarmamento total do Exército nacional.", isCorrect: false, distractorRationale: "Os tenentes viam o próprio Exército como a instituição moralmente capacitada para 'salvar a pátria'." },
+      { id: "d", text: "a criação do salário mínimo e das primeiras leis de proteção aos trabalhadores fabris urbanos.", isCorrect: false, distractorRationale: "A legislação trabalhista não era combatida pelos tenentes; muitos aderiram à Revolução de 1930 que criou o Ministério do Trabalho." },
+      { id: "e", text: "a laicização do Estado consagrada na Constituição de 1891, exigindo o retorno do catolicismo como religião oficial.", isCorrect: false, distractorRationale: "O movimento não tinha aspirações clericais, mantendo a defesa do Estado laico republicano." }
+    ],
+    detailedExplanation: {
+      summary: "O tenentismo canalizou o descontentamento das classes médias das cidades contra o controle exclusivo das oligarquias paulistas e mineiras sobre a República.",
+      stepByStep: [
+        "Passo 1: Identificar a base social do tenentismo: setores médios urbanos em crescimento que não tinham representação política efetiva no sistema coronelista da Primeira República.",
+        "Passo 2: Analisar as bandeiras do movimento: voto secreto (para acabar com o voto de cabresto), independência do Poder Judiciário, educação pública obrigatória e moralização da administração pública.",
+        "Passo 3: Reconhecer os desdobramentos: a insatisfação militar e civil culminou na Revolução de 1930, que derrubou Washington Luís e colocou Getúlio Vargas no poder.",
+        "Passo 4: A alternativa 'a' sintetiza com exatidão o alvo central de contestação do movimento."
+      ],
+      coreConcept: "Tenentismo, crise da República Velha e transição para a modernidade do Estado brasileiro.",
+      trapWarning: "Confundir o tenentismo da década de 1920 com comunismo (Luís Carlos Prestes só aderiu formalmente ao marxismo e ao PCB anos depois de liderar a marcha da Coluna)."
+    },
+    commonTraps: ["confundir_tenentismo_com_comunismo", "achar_que_eram_contra_a_centralizacao_estatal"],
+    tags: ["tenentismo", "coluna_prestes", "crise_oligárquica", "anos_1920"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-014",
+    area: "humanas",
+    competence: 3,
+    skill: 14,
+    topic: "História do Brasil",
+    subtopic: "Movimento Operário e a Greve Geral de 1917",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em julho de 1917, a cidade de São Paulo parou diante da primeira grande greve geral do operariado brasileiro. Fábricas têxteis, bondes, comércio e oficinas foram paralisados por mais de 40 mil trabalhadores. O estopim da revolta foi o assassinato do jovem sapateiro anarquista José Martinez pela polícia durante uma manifestação pacífica no bairro do Brás.",
+      source: "Paulo Sérgio Pinheiro, O Proletariado Industrial na Primeira República."
+    },
+    prompt: "A eclosão e a articulação da Greve Geral de 1917 na Primeira República foram impulsionadas preponderantemente pela corrente ideológica do:",
+    options: [
+      { id: "a", text: "trabalhismo varguista, organizado sob sindicatos atrelados financeiramente ao Ministério do Trabalho.", isCorrect: false, distractorRationale: "O Ministério do Trabalho e a CLT foram criações varguistas das décadas de 1930 e 1940; em 1917, não existia legislação sindical oficial." },
+      { id: "b", text: "anarcossindicalismo, que defendia a ação direta dos trabalhadores sem intermediação de partidos políticos ou do Estado burguês.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "integralismo fascista, que combatia as greves operárias em prol da conciliação corporativista nacional.", isCorrect: false, distractorRationale: "A Ação Integralista Brasileira (AIB) só surgiu em 1932 com Plínio Salgado e combatia as lideranças operárias de esquerda." },
+      { id: "d", text: "socialismo parlamentar, focado exclusivamente na eleição de deputados federais pelo voto facultativo.", isCorrect: false, distractorRationale: "O operariado não tinha acesso efetivo ao parlamento na Primeira República e os anarquistas rejeitavam a via parlamentar." },
+      { id: "e", text: "liberalismo econômico, articulado pelos grandes donos das fábricas paulistas para diminuir tarifas alfandegárias.", isCorrect: false, distractorRationale: "A greve era uma revolta dos operários explorados contra as jornadas abusivas de até 14 horas impostas pelos industriais liberais." }
+    ],
+    detailedExplanation: {
+      summary: "O anarcossindicalismo, trazido por levas de imigrantes europeus (sobretudo italianos e espanhóis), foi a força motriz do movimento operário brasileiro até a década de 1920.",
+      stepByStep: [
+        "Passo 1: Reconhecer o contexto fabril em 1917: jornadas extenuantes de 12 a 16 horas diárias, trabalho infantil, ausência de descanso remunerado, falta de indenização por acidentes e inflação gerada pela Primeira Guerra Mundial.",
+        "Passo 2: Identificar a ideologia predominante da época: anarcossindicalismo (ação direta, greve geral como arma de emancipação e independência absoluta em relação ao Estado e aos partidos).",
+        "Passo 3: Lembrar da célebre frase atribuída a Washington Luís: 'A questão social é um caso de polícia', resumindo a resposta repressiva do Estado oligárquico aos protestos.",
+        "Passo 4: A opção 'b' descreve corretamente a liderança anarcossindicalista de 1917."
+      ],
+      coreConcept: "Anarcossindicalismo, movimento operário na Primeira República e a Greve Geral de 1917.",
+      trapWarning: "Atribuir a greve de 1917 ao comunismo varguista ou a sindicatos atrelados ao Estado, os quais só surgiram a partir dos anos 1930."
+    },
+    commonTraps: ["associar_a_greve_a_vargas_ou_clt", "confundir_anarquismo_com_integralismo"],
+    tags: ["greve_geral_1917", "anarcossindicalismo", "movimento_operario", "sao_paulo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-015",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "Golpe de 1964 e as Reformas de Base",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No dia 13 de março de 1964, no Comício da Central do Brasil, o presidente João Goulart assinou decretos que encampavam refinarias privadas de petróleo e desapropriavam terras às margens de rodovias federais para a reforma agrária, conclamando o Congresso a votar as 'Reformas de Base' (agrária, tributária, eleitoral e universitária). Em reação, em 19 de março, milhares de manifestantes de classe média e membros da Igreja Católica marcharam na 'Marcha da Família com Deus pela Liberdade' em São Paulo.",
+      source: "Thomas Skidmore, Brasil: de Castelo a Tancredo. Rio de Janeiro: Paz e Terra."
+    },
+    prompt: "A deposição de João Goulart em 31 de março de 1964 resultou de uma coalizão civil-militar que utilizou politicamente o contexto da Guerra Fria para:",
+    options: [
+      { id: "a", text: "justificar a intervenção militar contra uma suposta 'ameaça comunista' e deter reformas estruturais que contrariavam elites latifundiárias e empresariais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "implantar imediatamente um modelo econômico autossuficiente e fechar as fronteiras a multinacionais norte-americanas.", isCorrect: false, distractorRationale: "O regime militar aliou-se estreitamente aos capitais norte-americanos e estimulou a entrada de empresas multinacionais." },
+      { id: "c", text: "garantir a aprovação integral da reforma agrária radical sob a coordenação das Ligas Camponesas.", isCorrect: false, distractorRationale: "O golpe reprimiu violentamente as Ligas Camponesas e suspendeu as propostas de reforma agrária de Jango." },
+      { id: "d", text: "atender às ordens diretas da União Soviética para desestabilizar os governos democráticos do Cone Sul.", isCorrect: false, distractorRationale: "O golpe foi abertamente anticomunista e teve apoio diplomático e logístico dos Estados Unidos (Operação Brother Sam)." },
+      { id: "e", text: "restaurar a Constituição de 1891 e restituir o voto de cabresto nos estados nordestinos.", isCorrect: false, distractorRationale: "Os militares outorgaram novos Atos Institucionais e a Constituição de 1967, não restaurando a de 1891." }
+    ],
+    detailedExplanation: {
+      summary: "O Golpe de 1964 articulou setores das Forças Armadas, empresários (IPES/IBAD), proprietários rurais e a classe média conservadora sob o pretexto do perigo vermelho para abortar as Reformas de Base.",
+      stepByStep: [
+        "Passo 1: Entender o projeto de João Goulart: as Reformas de Base pretendiam democratizar o acesso à terra, modernizar a estrutura tributária e estender o direito de voto aos analfabetos.",
+        "Passo 2: Analisar a oposição das elites: fazendeiros e industriais viam na reforma agrária e nos limites à remessa de lucros uma ameaça direta à propriedade privada e a seus privilégios.",
+        "Passo 3: Considerar a Guerra Fria: após a Revolução Cubana de 1959, os Estados Unidos e a mídia hegemônica brasileira alimentaram o pânico moral de que o Brasil se tornaria uma 'segunda Cuba'.",
+        "Passo 4: Concluir que a justificativa do 'anticomunismo' serviu de biombo ideológico para barrar a modernização distributiva do país."
+      ],
+      coreConcept: "Golpe Civil-Militar de 1964, Reformas de Base de Jango e Guerra Fria na América Latina.",
+      trapWarning: "Achar que o golpe foi um movimento exclusivo de quartéis sem suporte de setores civis da sociedade (empresários, Igreja, classe média)."
+    },
+    commonTraps: ["ignorar_o_carater_civil_militar_do_golpe", "desconsiderar_as_reformas_de_base_como_pivô"],
+    tags: ["golpe_1964", "reformas_de_base", "jango", "ditadura_militar"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-016",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "O Ato Institucional nº 5 (AI-5) e os Anos de Chumbo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 13 de dezembro de 1968, o presidente militar Arthur da Costa e Silva promulgou o Ato Institucional nº 5 (AI-5). O ato autorizou o fechamento discricionário do Congresso Nacional, a cassação de mandatos eletivos, a suspensão da garantia constitucional do habeas corpus para acusados de crimes contra a segurança nacional e a imposição da censura prévia irrestrita à imprensa, música e teatro.",
+      source: "Carlos Fico, Como Eles Agiam: Os subterrâneos da Ditadura Militar."
+    },
+    prompt: "A decretação do AI-5 marcou o início da fase mais autoritária da ditadura militar brasileira (os chamados 'anos de chumbo') ao provocar:",
+    options: [
+      { id: "a", text: "o aniquilamento dos instrumentos jurídicos de defesa do cidadão perante o Estado, oficializando a perseguição e a tortura contra opositores.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a abertura democrática ampla e irrestrita exigida pelas passeatas estudantis daquele ano.", isCorrect: false, distractorRationale: "O AI-5 foi o endurecimento máximo da repressão, exatamente o oposto de qualquer abertura." },
+      { id: "c", text: "a convocação de uma Assembleia Constituinte livre eleita pelo sufrágio universal secreto.", isCorrect: false, distractorRationale: "O Congresso foi fechado e centenas de parlamentares foram cassados e presos." },
+      { id: "d", text: "a extinção de todas as empresas estatais para privatizar os setores de energia e siderurgia.", isCorrect: false, distractorRationale: "O regime militar ampliou o número de estatais (como Telebras e Nuclebras) sob a doutrina de segurança e desenvolvimento." },
+      { id: "e", text: "o rompimento unilateral das relações diplomáticas e comerciais com o governo dos Estados Unidos.", isCorrect: false, distractorRationale: "O Brasil manteve forte alinhamento geopolítico com o bloco ocidental liderado por Washington." }
+    ],
+    detailedExplanation: {
+      summary: "O AI-5 representou o 'golpe dentro do golpe', eliminando as últimas aparências de legalidade institucional e permitindo a tortura sistemática de dissidentes políticos.",
+      stepByStep: [
+        "Passo 1: Entender a perda de direitos fundamentais: a suspensão do habeas corpus significava que qualquer cidadão podia ser sequestrado, detido incomunicável e torturado sem que a Justiça pudesse intervir.",
+        "Passo 2: Reconhecer a censura de Estado: redações de jornais passaram a abrigar censores policiais, obrigando jornais a publicarem receitas de bolo e poemas no lugar de notícias censuradas.",
+        "Passo 3: Identificar o período que se seguiu (Governo Médici, 1969-1974): ápice da repressão policial-militar e dos aparatos clandestinos de interrogatório (DOI-CODI e OBAN).",
+        "Passo 4: A opção 'a' sintetiza com precisão o impacto civil e humanitário devastador do ato."
+      ],
+      coreConcept: "Ato Institucional nº 5 (AI-5), terrorismo de Estado e suspensão das liberdades civis na ditadura militar.",
+      trapWarning: "Pensar que o AI-5 atingiu apenas grupos da guerrilha armada; ele atingiu deputados moderados, intelectuais, artistas, juízes e estudantes desarmados."
+    },
+    commonTraps: ["achar_que_o_habeas_corpus_foi_mantido", "confundir_ai5_com_abertura_politica"],
+    tags: ["ai_5", "ditadura_militar", "direitos_humanos", "anos_de_chumbo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-017",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "Milagre Econômico e Concentração de Renda",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Entre 1969 e 1973, durante o governo do general Emílio Garrastazu Médici, a economia brasileira cresceu a taxas médias superiores a 10% ao ano, impulsionada pela construção de megaobras públicas (como a Ponte Rio-Niterói e a Rodovia Transamazônica). Ao mesmo tempo, o ministro da Fazenda Antônio Delfim Netto defendia a célebre metáfora de que era preciso 'primeiro fazer o bolo crescer para depois reparti-lo'. Os censos do IBGE de 1970 e 1980 revelaram que os 10% mais ricos aumentaram sua participação na renda nacional de 38% para quase 51%, enquanto os 50% mais pobres perderam renda relativa.",
+      source: "Edmar Bacha e Herbert Klein, A Transição Incompleta: Brasil desde 1945."
+    },
+    prompt: "A análise crítica do chamado 'Milagre Econômico' demonstra que o expressivo crescimento dos índices macroeconômicos foi viabilizado socialmente por meio de:",
+    options: [
+      { id: "a", text: "uma ampla reforma tributária progressiva com taxação de grandes fortunas e heranças.", isCorrect: false, distractorRationale: "Não houve taxação de fortunas; a tributação permaneceu regressiva sobre o consumo." },
+      { id: "b", text: "uma política deliberada de arrocho salarial e repressão aos sindicatos, que concentrou renda no topo da pirâmide social.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "um aumento massivo do poder de compra real do salário mínimo concedido aos trabalhadores rurais.", isCorrect: false, distractorRationale: "O salário mínimo real despencou durante a ditadura militar em função da fórmula de reajuste abaixo da inflação real (arrocho salarial)." },
+      { id: "d", text: "um superávit primário obtido pelo desmantelamento total da dívida externa brasileira.", isCorrect: false, distractorRationale: "A dívida externa explodiu com empréstimos de petrodólares, tornando o país vulnerável à crise dos juros internacionais em 1979." },
+      { id: "e", text: "uma erradicação inédita da mortalidade infantil e do analfabetismo nas periferias urbanas.", isCorrect: false, distractorRationale: "Indicadores de saneamento básico e saúde infantil pioraram em diversas capitais durante a fase do Milagre." }
+    ],
+    detailedExplanation: {
+      summary: "O modelo econômico da ditadura militar acelerou o PIB através de empréstimos internacionais e compressão salarial da base operária, aprofundando o abismo social brasileiro.",
+      stepByStep: [
+        "Passo 1: Compreender o arrocho salarial: o governo militar impôs um controle rígido sobre os reajustes de salários, manipulando índices oficiais de inflação para baratear o custo da mão de obra.",
+        "Passo 2: Entender o destino dos lucros: os subsídios fiscais e os ganhos de produtividade foram direcionados para empresas multinacionais e a classe média alta compradora de bens de consumo duráveis (automóveis e eletrodomésticos).",
+        "Passo 3: A metáfora do bolo de Delfim Netto prometia repartição futura, mas o resultado concreto foi a explosão da desigualdade medida pelo coeficiente de Gini.",
+        "Passo 4: A alternativa 'b' expõe a essência contraditória do Milagre: crescimento do PIB com empobrecimento relativo dos trabalhadores."
+      ],
+      coreConcept: "Milagre Econômico, arrocho salarial, endividamento externo e desigualdade socioeconômica no ENEM.",
+      trapWarning: "Avaliar o Milagre apenas pelo crescimento numérico do PIB sem considerar a brutal disparidade distributiva e o salto da dívida externa."
+    },
+    commonTraps: ["confundir_aumento_do_pib_com_melhoria_da_distribuicao_de_renda"],
+    tags: ["milagre_economico", "desigualdade", "arrocho_salarial", "ditadura_militar"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-018",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "Abertura Política e a Lei da Anistia de 1979",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No final dos anos 1970, o governo do general Ernesto Geisel iniciou um processo de distensão política formulado como 'lenta, gradual e segura'. Em agosto de 1979, já sob o governo de João Figueiredo, foi promulgada a Lei nº 6.683 (Lei da Anistia), em meio a grandes campanhas lideradas pelo Comitê Brasileiro pela Anistia e pelo Movimento Feminino pela Anistia.",
+      source: "Lúcio Flávio de Almeida, Ideologia do Desenvolvimento e Abertura Política."
+    },
+    prompt: "O desenho jurídico e político da Lei da Anistia de 1979 refletiu os limites da transição pactuada coordenada pelos militares ao estabelecer:",
+    options: [
+      { id: "a", text: "o julgamento público em tribunais civis de todos os oficiais envolvidos na tortura e no desaparecimento forçado de presos políticos.", isCorrect: false, distractorRationale: "Ao contrário de países como a Argentina, o Brasil não levou oficiais da repressão militar a julgamentos penais em 1979." },
+      { id: "b", text: "uma anistia recíproca (ampla e irrestrita), estendendo o perdão legal também aos agentes do Estado acusados de crimes conexos e violações de direitos humanos.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "a perda imediata de aposentadorias de militares que serviram durante o regime autoritário.", isCorrect: false, distractorRationale: "Os militares preservaram integralmente seus postos, pensões e prerrogativas na transição." },
+      { id: "d", text: "o fechamento compulsório de todos os partidos políticos de oposição recém-criados.", isCorrect: false, distractorRationale: "Em 1979 ocorreu o fim do bipartidarismo (Arena e MDB), permitindo a formação de legendas pluripartidárias (PMDB, PT, PDT, PTB, PDS)." },
+      { id: "e", text: "a entrega da presidência da República no mesmo dia a um conselho civil independente.", isCorrect: false, distractorRationale: "Figueiredo permaneceu no poder militar até 1985, governando por mais seis anos após a anistia." }
+    ],
+    detailedExplanation: {
+      summary: "A Lei da Anistia permitiu o retorno dos exilados políticos à vida pública, mas foi desenhada como um autoindulto que blindou os torturadores do regime militar contra punições penais.",
+      stepByStep: [
+        "Passo 1: Reconhecer a conquista popular: a lei atendeu a uma demanda cívica histórica ao libertar presos políticos e viabilizar o retorno de intelectuais, artistas e líderes sindicais exilados.",
+        "Passo 2: Analisar a 'pegadinha' jurídica: o artigo 1º concedeu anistia a todos que cometeram crimes políticos ou 'conexos com estes'.",
+        "Passo 3: Interpretação militar: os 'crimes conexos' foram interpretados pelo regime como escudo protetor para torturadores, delegados do DOPS e oficiais, impedindo a apuração das mortes e ocultações de cadáver.",
+        "Passo 4: Concluir que a anistia de 1979 selou o pacto conservador de tutela e impunidade que marcou a redemocratização brasileira."
+      ],
+      coreConcept: "A Lei da Anistia (1979), justiça de transição e os limites do modelo de distensão controlada.",
+      trapWarning: "Achar que a anistia beneficiou apenas a oposição; ela foi deliberadamente construída como anistia de 'mão dupla' para blindar agentes estatais da repressão."
+    },
+    commonTraps: ["achar_que_os_torturadores_foram_presos_em_1979", "desconhecer_o_conceito_de_crimes_conexos"],
+    tags: ["lei_da_anistia", "geisel", "figueiredo", "justica_de_transicao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-019",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "A Constituição Cidadã de 1988 e os Direitos Sociais",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 5 de outubro de 1988, Ulisses Guimarães proclamou a nova Constituição brasileira na Assembleia Nacional Constituinte declarando:\n'A sociedade foi Rubens Paiva, não os facínoras que o mataram (...) A Nação quer mudar. A Nação deve mudar. A Nação vai mudar (...) Temos ódio à ditadura. Ódio e nojo!' Conhecida como a 'Constituição Cidadã', a Carta de 1988 instituiu o mais abrangente rol de direitos sociais da história do país.",
+      source: "Discurso de Promulgação da CF/88, Ulysses Guimarães."
+    },
+    prompt: "Entre as conquistas históricas consagradas pelo texto constitucional de 1988 que transformaram a cidadania no Brasil, destaca-se:",
+    options: [
+      { id: "a", text: "a restrição do acesso à saúde pública apenas aos trabalhadores com carteira assinada vinculados à previdência.", isCorrect: false, distractorRationale: "Esse era o modelo excludente do INAMPS antes de 1988; a CF/88 criou o SUS com acesso universal e gratuito a toda a população." },
+      { id: "b", text: "a instituição do Sistema Único de Saúde (SUS) como direito de todos e dever do Estado, além da demarcação de terras indígenas e o reconhecimento das comunidades quilombolas.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "o estabelecimento da censura prévia como prerrogativa legal do Ministério da Justiça sobre jornais e emissoras de TV.", isCorrect: false, distractorRationale: "O artigo 220 da CF/88 vedou taxativamente qualquer tipo de censura de natureza política, ideológica e artística." },
+      { id: "d", text: "a extinção do voto feminino e do voto dos analfabetos para restringir a participação política aos graduados.", isCorrect: false, distractorRationale: "A CF/88 garantiu o voto facultativo aos jovens de 16 e 17 anos e aos analfabetos, além de consagrar o voto universal feminino." },
+      { id: "e", text: "a proibição absoluta de greves e a subordinação obrigatória dos sindicatos ao Executivo federal.", isCorrect: false, distractorRationale: "A CF/88 assegurou a plena liberdade e autonomia sindical e o direito de greve a trabalhadores civis." }
+    ],
+    detailedExplanation: {
+      summary: "A Constituição de 1988 representou a refundação democrática da República com o estado de bem-estar social, universalização da saúde (SUS) e direitos territoriais e identitários de minorias.",
+      stepByStep: [
+        "Passo 1: Reconhecer a ruptura com o autoritarismo militar: criminalização da tortura como crime inafiançável e imprescritibilidade do racismo.",
+        "Passo 2: Analisar a universalização social: criação do tripé da Seguridade Social (Saúde, Previdência e Assistência Social), dando origem ao SUS universal.",
+        "Passo 3: Identificar a cidadania originária: reconhecimento dos direitos territoriais originários dos povos indígenas (Art. 231) e o direito de posse aos remanescentes de quilombos (ADCT 68).",
+        "Passo 4: A alternativa 'b' contempla fielmente o núcleo cidadão da Constituição de 1988."
+      ],
+      coreConcept: "Constituição de 1988, cidadania ampliada, Seguridade Social e direitos das populações tradicionais no ENEM.",
+      trapWarning: "Achar que o SUS existia antes da CF/88; antes de 1988, quem não tinha carteira assinada dependia de Santas Casas de caridade para internação."
+    },
+    commonTraps: ["confundir_sus_com_inamps", "desconhecer_o_reconhecimento_indigena_e_quilombola_na_cf88"],
+    tags: ["constituicao_1988", "sus", "cidadania", "direitos_indigenas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-020",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "O Plano Real e o Fim da Hiperinflação Inercial",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na primeira metade da década de 1990, o Brasil enfrentava taxas astronômicas de hiperinflação que chegavam a ultrapassar 2.000% ao ano, corroendo diariamente os salários da população de baixa renda. Planos anteriores (Plano Cruzado, Plano Bresser, Plano Collor) haviam fracassado por recorrer a congelamentos forçados de preços. Em 1993-1994, a equipe econômica do Ministério da Fazenda no governo Itamar Franco concebeu e implementou o Plano Real em três fases sequenciais.",
+      source: "Gustavo Franco, A Moeda e a Lei: Uma história do Real."
+    },
+    prompt: "O elemento técnico e estratégico inovador que permitiu ao Plano Real eliminar a hiperinflação inercial sem recorrer ao confisco de poupanças ou ao congelamento de preços foi:",
+    options: [
+      { id: "a", text: "a dolarização integral de todas as transações comerciais do país com abandono permanente do Banco Central.", isCorrect: false, distractorRationale: "O Brasil nunca dolarizou sua economia (ao contrário de países como o Equador); criou uma nova moeda nacional (o Real)." },
+      { id: "b", text: "a adoção prévia da Unidade Real de Valor (URV) como indexador virtual diário para sincronizar preços relativos antes da emissão da nova moeda.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "a estatização de todos os supermercados e redes de distribuição atacadista de alimentos.", isCorrect: false, distractorRationale: "O governo não estatizou o comércio; adotou abertura comercial com redução de tarifas alfandegárias." },
+      { id: "d", text: "o perdão generalizado de todas as dívidas tributárias das grandes empresas exportadoras.", isCorrect: false, distractorRationale: "Pelo contrário, o plano exigiu disciplina fiscal inicial com o Fundo Social de Emergência (FSE)." },
+      { id: "e", text: "a proibição legal de emissão de cartões de crédito e cheques em território nacional.", isCorrect: false, distractorRationale: "Os meios de pagamento bancários continuaram operando plenamente durante a transição monetária." }
+    ],
+    detailedExplanation: {
+      summary: "A URV (Unidade Real de Valor) atuou como uma moeda virtual estável de conta que alinhou e sincronizou a memória inflacionária de preços e contratos antes da conversão para a cédula do Real em 1º de julho de 1994.",
+      stepByStep: [
+        "Passo 1: Compreender o diagnóstico da inflação inercial: todos reajustavam preços preventivamente olhando para a inflação passada, gerando uma espiral descontrolada de aumentos diários.",
+        "Passo 2: A estratégia das três fases do Plano Real:\n- 1ª Fase: Ajuste fiscal (Fundo Social de Emergência);\n- 2ª Fase: Criação da URV como unidade de conta estável que corrigia valores diariamente em relação ao Cruzeiro Real;\n- 3ª Fase: Transformação da URV na nova moeda soberana (o Real - R$) na proporção de 1 Real = 1 URV = 2.750 Cruzeiros Reais.",
+        "Passo 3: A ausência de choques heterodoxos: não houve surpresa, quebra de contratos nem confisco de contas (como no Plano Collor em 1990), o que garantiu credibilidade e estabilidade sustentada.",
+        "Passo 4: A opção 'b' descreve o mecanismo da URV com exatidão pedagógica."
+      ],
+      coreConcept: "Plano Real (1994), Unidade Real de Valor (URV), combate à inflação inercial e estabilidade monetária.",
+      trapWarning: "Confundir o Plano Real com os planos heterodoxos anteriores (Cruzado e Collor) que congelavam preços na canetada ou confiscavam poupança."
+    },
+    commonTraps: ["confundir_o_real_com_congelamento_ou_confisco_do_plano_collor", "achar_que_o_brasil_dolarizou_sua_moeda"],
+    tags: ["plano_real", "urv", "inflacao_inercial", "itamar_franco"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
 

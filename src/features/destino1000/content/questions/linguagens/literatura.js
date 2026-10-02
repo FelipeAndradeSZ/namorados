@@ -381,6 +381,417 @@ export const QUESTIONS_LITERATURA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-011",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura Brasileira",
+    subtopic: "Romantismo Condoreiro e Castro Alves",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Senhor Deus dos desgraçados!\nDizei-me vós, Senhor Deus!\nSe é loucura... se é verdade\nTanto horror perante os céus?!\nÓ mar, por que não apagas\nCo'a esponja de tuas vagas\nDe teu manto este borrão?...\nAstros! noites! tempestades!\nRolai das imensidades!\nVarrei os mares, tufão!...\n(Castro Alves, O Navio Negreiro, 1869)",
+      source: "Castro Alves, Os Escravos."
+    },
+    prompt: "O fragmento de 'O Navio Negreiro', expoente da terceira geração da poesia romântica brasileira (geração condoreira), caracteriza-se no plano estético e ideológico por:",
+    options: [
+      { id: "a", text: "tom de oratória inflamada, recursos hiperbólicos e indignação moral a serviço da causa abolicionista e da denúncia da escravidão.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "intimismo melancólico e desejo de evasão na morte decorrente da frustração amorosa individual (mal do século).", isCorrect: false, distractorRationale: "Esse intimismo escapista e doentio é marca da 2ª geração romântica (ultrarromantismo de Álvares de Azevedo), não do condoreirismo social." },
+      { id: "c", text: "impassibilidade descritiva objetiva e rigor métrico sonetista desprovido de engajamento social.", isCorrect: false, distractorRationale: "Essa é a estética parnasiana (como Olavo Bilac), avessa à oratória engajada dos condoreiros." },
+      { id: "d", text: "idealização cavalheiresca do colonizador português como civilizador harmonioso do Novo Mundo.", isCorrect: false, distractorRationale: "O poema denuncia com horror a crueldade do tráfico transatlântico de escravizados promovido pelas elites coloniais." },
+      { id: "e", text: "linguagem experimental concreta com neologismos fragmentados e abolição da métrica clássica.", isCorrect: false, distractorRationale: "Trata-se de poema romântico rimado e estrófico do século XIX, não de vanguarda concretista do século XX." }
+    ],
+    detailedExplanation: {
+      summary: "A poesia condoreira de Castro Alves utiliza o condor (ave que voa alto) como metáfora da visão ampla dos problemas republicanos e da urgência da abolição da escravidão.",
+      stepByStep: [
+        "Passo 1: Identificar a geração romântica: 3ª Geração (Condoreirismo / Hugoana, inspirada em Victor Hugo).",
+        "Passo 2: Analisar os recursos estilísticos: exclamações enfáticas, apóstrofes ao divino e aos elementos da natureza ('Ó mar', 'Astros! noites! tempestades!'), vocabulário grandiloquente e tom declamatório de palanque.",
+        "Passo 3: Reconhecer a função social: a poesia não é feita para o isolamento do quarto do poeta, mas para ser recitada em praça pública para mobilizar a sociedade contra a desumanidade do cativeiro negro.",
+        "Passo 4: A opção 'a' sintetiza com perfeição a poética condoreira de Castro Alves."
+      ],
+      coreConcept: "Terceira Geração Romântica (Condoreirismo), poesia social abolicionista de Castro Alves e retórica oratória.",
+      trapWarning: "Confundir a denúncia grandiloquente de Castro Alves com a introspecção melancólica e a tuberculose de Álvares de Azevedo (2ª Geração)."
+    },
+    commonTraps: ["confundir_3a_geracao_com_2a_geracao_ultrarromantica", "ignorar_o_engajamento_abolicionista"],
+    tags: ["castro_alves", "condoreirismo", "abolicionismo", "romantismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-012",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura Brasileira",
+    subtopic: "Naturalismo e O Cortiço de Aluísio Azevedo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Eram cinco horas da manhã e o cortiço acordava, abrindo, não os olhos, mas a sua infinidade de portas e janelas alinhadas. Um acordar alegre e farto de quem dormiu de um puxão (...) O rumor crescia, condensando-se; o zunzum de todos os dias acentuava-se; já se não destacavam vozes dispersas, mas um só ruído grosso e amplo, que enchia o grande pátio (...) As mulheres lavavam a roupa, com as saias arregaçadas, mostrando as coxas grossas e lustrosas de sabão; homens sem camisa esfregavam-se com violência sob a bica d'água.",
+      source: "Aluísio Azevedo, O Cortiço (1890)"
+    },
+    prompt: "No romance naturalista 'O Cortiço', o procedimento estético-ideológico empregado por Aluísio Azevedo para representar o espaço e as personagens fundamenta-se no(a):",
+    options: [
+      { id: "a", text: "personificação do espaço urbano, tratado como organismo biológico vivo, aliado à zoomorfização e ao determinismo ambiental sobre os indivíduos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "lirismo espiritualista e busca por redenção mística dos trabalhadores por meio da contemplação da natureza virgem.", isCorrect: false, distractorRationale: "O Naturalismo é estritamente materialista e cientificista, avesso ao misticismo espiritual." },
+      { id: "c", text: "psicologismo refinado e ceticismo sutil que preserva as personagens de influências exteriores biológicas.", isCorrect: false, distractorRationale: "Essa é a marca do Realismo machadiano; o Naturalismo enxerga o homem governado pelo instinto animal e pelo meio." },
+      { id: "d", text: "elogio aristocrático às virtudes higiênicas e à ordem exemplar das habitações coletivas proletárias.", isCorrect: false, distractorRationale: "O romance retrata o cortiço sob a ótica patológica de proliferação promíscua e degenerescência moral." },
+      { id: "e", text: "idealização romântica das relações de trabalho como reflexo da pureza da infância rural.", isCorrect: false, distractorRationale: "A estética naturalista não idealiza; pelo contrário, expõe a crueza dos apetites sexuais e da exploração econômica." }
+    ],
+    detailedExplanation: {
+      summary: "Em 'O Cortiço', o espaço coletivo é animalizado e atua como força determinista implacável que molda e corrompe o comportamento das personagens.",
+      stepByStep: [
+        "Passo 1: Observar a personificação do cortiço: o prédio 'acorda', 'abre portas como olhos' e 'respira como animal coletivo'.",
+        "Passo 2: Identificar a zoomorfização: os moradores são descritos como enxame de insetos ('zunzum', 'larvas'), movidos por instintos corporais primários (fome, sexo, calor).",
+        "Passo 3: Aplicar as teorias científicas do Naturalismo do século XIX: determinismo do meio (Taine), da raça e do momento; quem entra no cortiço (como o português Jerônimo) é gradualmente 'abrasileirado' e vencido pelo calor e pela cachaça.",
+        "Passo 4: A opção 'a' sintetiza com exatidão a poética naturalista de Aluísio Azevedo."
+      ],
+      coreConcept: "Naturalismo brasileiro, zoomorfização, personificação do espaço e determinismo biológico em Aluísio Azevedo.",
+      trapWarning: "Confundir Naturalismo com Realismo. O Realismo foca na análise psicológica e hipocrisia burguesa; o Naturalismo foca na patologia social, instintos e determinismo biológico."
+    },
+    commonTraps: ["confundir_naturalismo_com_realismo", "esquecer_da_zoomorfizacao"],
+    tags: ["o_cortico", "aluisio_azevedo", "naturalismo", "determinismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-013",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Literatura Brasileira",
+    subtopic: "Simbolismo e a Poesia de Cruz e Sousa",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Vozes veladas, veludosas vozes,\nVolúpias dos violões, vozes veladas,\nVagam nos velhos vórtices velozes\nDos ventos, vivas, vãs, vulcanizadas.\n\nTudo nas vastidões ermas viaja...\nMais ermas, mais sonâmbulas que o vago,\nNo velário da noite que ultraja\nA alma que treme como límpido lago.\n(Cruz e Sousa, Violões que Choram, 1898)",
+      source: "Cruz e Sousa, Últimos Sonetos."
+    },
+    prompt: "No soneto de Cruz e Sousa, expoente do Simbolismo no Brasil, a construção do projeto estético evidencia-se prioritariamente através de:",
+    options: [
+      { id: "a", text: "uso expressivo de figuras de som (aliterações em /v/), sinestesia e sugestão sensorial musical, buscando traduzir estados anímicos e espirituais intangíveis.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "descrição cientificista e impessoal de um experimento de acústica física em ambiente laboratorial.", isCorrect: false, distractorRationale: "O poema é metafísico e espiritualista, diametralmente oposto ao cientificismo empírico." },
+      { id: "c", text: "linguagem coloquial despojada e temática nacionalista folclórica inspirada no cotidiano indígena.", isCorrect: false, distractorRationale: "O Simbolismo utiliza vocabulário hermético, litúrgico e cósmico, avesso ao coloquialismo folclórico." },
+      { id: "d", text: "denúncia panfletária e engajada contra as políticas de urbanização das capitais republicanas.", isCorrect: false, distractorRationale: "O Simbolismo afasta-se da crônica política imediata para investigar a angústia da transcendência do espírito." },
+      { id: "e", text: "rejeição de qualquer esquema rímico ou métrico tradicional em favor do verso livre modernista.", isCorrect: false, distractorRationale: "O poema mantém a forma clássica do soneto decassílabo rigorosamente rimado." }
+    ],
+    detailedExplanation: {
+      summary: "O Simbolismo valoriza a musicalidade pura ('A música antes de tudo', dizia Verlaine), a aliteração, o mistério e a sinestesia para aproximar a poesia do indizível.",
+      stepByStep: [
+        "Passo 1: Ouvir a acústica dos versos: 'Vozes veladas, veludosas vozes' — repetição obsessiva da consoante fricativa /v/ (aliteração) e vogais fechadas /o/ e /e/ (assonância).",
+        "Passo 2: Reconhecer a sinestesia: 'veludosas vozes' funde o sentido do tato (veludo) com o da audição (vozes).",
+        "Passo 3: Identificar a trajetória de Cruz e Sousa: o poeta negro ('o Cisne Negro'), marcado pelo preconceito racial e pela dor existencial, canalizou seu sofrimento para uma poesia de purificação cósmica e comunhão espiritual.",
+        "Passo 4: A opção 'a' sintetiza o programa estético simbolista com rigor técnico."
+      ],
+      coreConcept: "Simbolismo brasileiro, Cruz e Sousa, aliteração, musicalidade e sugestão sinestésica.",
+      trapWarning: "Confundir Simbolismo com Parnasianismo. O Parnasianismo busca a perfeição plástica da forma (como uma escultura de mármore fria); o Simbolismo busca a música do espírito, o mistério e a transcendência."
+    },
+    commonTraps: ["confundir_simbolismo_com_parnasianismo", "ignorar_o_efeito_da_aliteracao_expressiva"],
+    tags: ["cruz_e_sousa", "simbolismo", "aliteracao", "musicalidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-014",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura Brasileira",
+    subtopic: "Pré-Modernismo e Os Sertões de Euclides da Cunha",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O sertanejo é, antes de tudo, um forte. Não tem o raquitismo enfesado dos mestiços neurastênicos do litoral (...) A sua aparência, entretanto, no primeiro lance de vista, revela o contrário. Falta-lhe a plástica impecável, o desempeno, a estrutura corretíssima das organizações atléticas. É desgracioso, desengonçado, torto (...) Entretanto, toda essa aparência de cansaço ilude (...) Basta o aparecimento de qualquer incidente exigindo-lhe o desencadear das energias adormecidas, e o homem se transfigura.\n(Euclides da Cunha, Os Sertões, 1902)",
+      source: "Euclides da Cunha, Os Sertões."
+    },
+    prompt: "Na obra inaugural do Pré-Modernismo, a representação do habitante do sertão nordestino formulada por Euclides da Cunha reflete a tensão entre:",
+    options: [
+      { id: "a", text: "as teorias deterministas e raciais importadas da Europa e a constatação empírica da extraordinária bravura e capacidade de adaptação física do sertanejo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a rejeição radical da ciência moderna e a defesa do misticismo messiânico de Antônio Conselheiro como verdade teológica absoluta.", isCorrect: false, distractorRationale: "Euclides era positivista e engenheiro militar; ele não aceitava o misticismo do Conselheiro, mas admirava a fibra do sertanejo." },
+      { id: "c", text: "o apoio incondicional à violência militar republicana e o desprezo racista pela população cabocla e sertaneja.", isCorrect: false, distractorRationale: "A obra de Euclides é, no fundo, uma denúncia demolidora do massacre estúpido promovido pelo Exército contra Canudos." },
+      { id: "d", text: "o conformismo com a dominação latifundiária tradicional e o desinteresse por questões territoriais do semiárido.", isCorrect: false, distractorRationale: "O livro dedica sua primeira parte ('A Terra') à minuciosa análise geomorfológica e hídrica da Caatinga." },
+      { id: "e", text: "a exaltação romântica do homem litorâneo como o único exemplo de força moral do país.", isCorrect: false, distractorRationale: "O autor critica expressamente os homens do litoral ('mestiços neurastênicos') em comparação com a firmeza do sertanejo." }
+    ],
+    detailedExplanation: {
+      summary: "Euclides da Cunha foi a Canudos acreditando nas teorias racistas europeias de que o sertanejo era 'degenerado', mas a realidade do conflito desmentiu suas teorias, forçando-o a reconhecer o sertanejo como 'um forte'.",
+      stepByStep: [
+        "Passo 1: Reconhecer a bagagem teórica do autor: Euclides compartilhava o determinismo e o darwinismo social do final do século XIX, que viam na mestiçagem um fator de enfraquecimento biológico.",
+        "Passo 2: Observar o choque com a realidade de Canudos: diante da resistência monumental dos conselheiristas contra quatro expedições do Exército brasileiro, Euclides é obrigado a rever suas certezas de gabinete.",
+        "Passo 3: Identificar a contradição no texto: o sertanejo parece desengonçado e frágil no repouso, mas 'se transfigura' e revela vigor heróico diante da hostilidade da caatinga.",
+        "Passo 4: A opção 'a' expressa a ruptura epistemológica central que marca 'Os Sertões'."
+      ],
+      coreConcept: "Pré-Modernismo, Os Sertões de Euclides da Cunha, determinismo racial versus resistência empírica sertaneja.",
+      trapWarning: "Achar que Euclides idealizou Canudos; ele via o messianismo como retrocesso, mas denunciou a campanha militar como um crime de Estado bárbaro."
+    },
+    commonTraps: ["ignorar_a_ambivalencia_teorica_do_autor", "confundir_euclides_com_romantico_idealizador"],
+    tags: ["os_sertoes", "euclides_da_cunha", "pre_modernismo", "canudos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-015",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura Brasileira",
+    subtopic: "Pré-Modernismo e Lima Barreto",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Policarpo Quaresma, funcionário exemplar da Secretaria de Guerra, dedicou a vida a estudar as riquezas e tradições nacionais. Em seu fervor patriótico, enviou um ofício ao Congresso Nacional requerendo a decretação do tupi-guarani como língua oficial do Brasil, sob a alegação de que a língua portuguesa era um idioma estrangeiro e colonial. O requerimento transformou-o em motivo de chacota no Rio de Janeiro e culminou em sua internação temporária em um hospício.",
+      source: "Lima Barreto, Triste Fim de Policarpo Quaresma (1915)"
+    },
+    prompt: "Por meio do trágico destino de Policarpo Quaresma, Lima Barreto constrói uma contundente crítica literária que alveja:",
+    options: [
+      { id: "a", text: "o nacionalismo ingênuo e quixotesco do protagonista confrontado com o autoritarismo militar e a hipocrisia das elites oligárquicas da República Velha.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a superioridade moral dos diplomatas estrangeiros na condução da política externa do país.", isCorrect: false, distractorRationale: "O romance não elogia estrangeiros, mas zomba das convenções da política nacional." },
+      { id: "c", text: "o desinteresse total da população pobre suburbana pelo ensino da língua portuguesa padrão.", isCorrect: false, distractorRationale: "O alvo da crítica não é a população pobre do subúrbio, mas o oficialismo burocrático e a tirania governamental." },
+      { id: "d", text: "a obrigatoriedade do serviço militar para a concessão de diplomas de ensino superior.", isCorrect: false, distractorRationale: "Tema inexistente no conflito da obra de Lima Barreto." },
+      { id: "e", text: "a necessidade urgente de restaurar a monarquia constitucional absolutista de D. Pedro I.", isCorrect: false, distractorRationale: "Lima Barreto era republicano convicto e progressista; criticava os desvios autoritários da República, não o ideal republicano." }
+    ],
+    detailedExplanation: {
+      summary: "Lima Barreto desconstrói o ufanismo patriótico cego e denuncia como o Estado brasileiro descarta seus cidadãos idealistas em benefício do arbítrio do Marechal Floriano Peixoto.",
+      stepByStep: [
+        "Passo 1: Entender a figura de Policarpo Quaresma: um 'Dom Quixote' brasileiro, cuja obsessão em salvar a pátria pelas vias teóricas (o tupi, a agricultura folclórica, a defesa de Floriano) fracassa diante da realidade.",
+        "Passo 2: Mapear as desilusões de Policarpo: primeiro é visto como louco pela proposta do tupi; depois sua fazenda no interior é destruída por pragas e políticos locais; finalmente, ao defender prisioneiros da Revolta da Armada contra fuzilamentos sumários de Floriano, é condenado à morte.",
+        "Passo 3: Identificar a postura de Lima Barreto: escritor negro, periférico e marginalizado pelos círculos acadêmicos nobres, usou sua literatura para desmascarar a violência simbólica e institucional da Primeira República.",
+        "Passo 4: A alternativa 'a' resume perfeitamente a tese central do romance."
+      ],
+      coreConcept: "Pré-Modernismo, Lima Barreto, crítica ao ufanismo nacionalista e denúncia do autoritarismo florianista.",
+      trapWarning: "Achar que Lima Barreto concordava com a ingenuidade de Policarpo; o autor mostra que o patriotismo abstrato sem crítica social profunda conduz ao desengano e ao sacrifício inútil."
+    },
+    commonTraps: ["achar_que_o_autor_apoiava_o_tupi_literalmente", "desconsiderar_a_critica_ao_marechal_de_ferro"],
+    tags: ["lima_barreto", "policarpo_quaresma", "pre_modernismo", "ufanismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-016",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Literatura Brasileira",
+    subtopic: "Modernismo de 1922 e Macunaíma",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No fundo do mato-virgem nasceu Macunaíma, herói de nossa gente. Era preto retinto e filho do medo da noite. Houve um momento em que o silêncio foi tão grande escutando o murmurejo do Uraricoera, que a índia tapanhumas pariu uma criança feia. Essa criança é que chamaram de Macunaíma. Já na meninice fez coisas de sarapantar. De primeiro passou mais de seis anos não falando. Si o incitavam a falar exclamava:\n— Ai! que preguiça!...\n(Mário de Andrade, Macunaíma: o herói sem nenhum caráter, 1928)",
+      source: "Mário de Andrade, Macunaíma."
+    },
+    prompt: "Ao definir Macunaíma como 'o herói sem nenhum caráter' e articular uma narrativa que transita fluidamente entre o mito indígena, o folclore e a metrópole industrial de São Paulo, Mário de Andrade propõe:",
+    options: [
+      { id: "a", text: "uma caracterização da identidade nacional como algo inacabado, plural, mutável e sincrético, rompendo com as representações monolíticas e idealizadas do homem brasileiro.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "um manual de conduta moral para demonstrar que a preguiça congênita impede o desenvolvimento econômico do país.", isCorrect: false, distractorRationale: "Interpretação moralista equivocada; a frase de Macunaíma é deboche modernista contra a ética utilitarista e puritana do trabalho burguês." },
+      { id: "c", text: "uma defesa irrestrita da pureza biológica das populações indígenas em oposição à mestiçagem cosmopolita.", isCorrect: false, distractorRationale: "O livro celebra precisamente a metamorfose e a mistura: Macunaíma nasce negro de mãe indígena e depois embranquece na água mágica." },
+      { id: "d", text: "a reprodução estrita da gramática parnasiana clássica sem interferências de termos da oralidade popular brasileira.", isCorrect: false, distractorRationale: "Mário de Andrade elaborou a 'gramatiquinha brasileira', fundamentada na linguagem oral e no sincretismo linguístico de várias regiões." },
+      { id: "e", text: "uma cópia servil dos romances épicos gregos da Antiguidade Clássica sem referências à paisagem nativa.", isCorrect: false, distractorRationale: "Macunaíma é uma rapsódia modernista revolucionária profundamente enraizada na mitologia amazônica recolhida por Koch-Grünberg." }
+    ],
+    detailedExplanation: {
+      summary: "O termo 'sem nenhum caráter' não significa 'mau caráter' (falta de ética), mas sim 'sem uma forma fixa ou acabada' (ausência de definição imutável), refletindo o caráter em formação do povo brasileiro.",
+      stepByStep: [
+        "Passo 1: Desconstruir o conceito de caráter: para Mário de Andrade, os povos europeus tinham caracteres cristalizados há séculos; o brasileiro é uma cultura jovem, sincrética e em perpétua transformação.",
+        "Passo 2: Analisar a forma da rapsódia: o autor costura lendas amazônicas, causos do sertão e o ritmo frenético de São Paulo (o gigante Piaimã/Venceslau Pietro Pietra), criando um mosaico cultural híbrido.",
+        "Passo 3: Identificar a revolução linguística: emprego da linguagem falada no Brasil ('Si o incitavam', 'De primeiro'), rejeitando a vassalagem aos padrões lusitanos.",
+        "Passo 4: A opção 'a' sintetiza com excelência o significado cultural e estético de Macunaíma."
+      ],
+      coreConcept: "Modernismo de 22, Macunaíma de Mário de Andrade, identidade nacional sincrética e antropofagia cultural.",
+      trapWarning: "Entender 'sem nenhum caráter' como um insulto moral aos brasileiros; na estética modernista, trata-se de liberdade e indeterminação criativa."
+    },
+    commonTraps: ["entender_sem_carater_como_ofensa_moral", "ignorar_a_rapsodia_e_a_antropofagia_cultural"],
+    tags: ["macunaima", "mario_de_andrade", "modernismo_1922", "antropofagia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-017",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Literatura Brasileira",
+    subtopic: "Drummond e a Poesia Social da Fase de 30",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma flor nasceu na rua!\nPassem de longe, bondes, ônibus, rio de aço do tráfego.\nUma flor ainda desbotada\nilude a polícia, rompe o asfalto.\nFaçam completo silêncio, paralisem os negócios,\ngarantam que uma flor nasceu.\n\nSua cor não se percebe.\nNão tem nome.\nÉ feia. Mas é realmente uma flor.\n(Carlos Drummond de Andrade, A Flor e a Náusea, 1945)",
+      source: "Carlos Drummond de Andrade, A Rosa do Povo."
+    },
+    prompt: "No livro 'A Rosa do Povo', escrito sob o impacto da Segunda Guerra Mundial e do Estado Novo varguista, Drummond constrói no poema 'A Flor e a Náusea' a imagem da flor que rompe o asfalto como símbolo da:",
+    options: [
+      { id: "a", text: "resistência poética e da esperança vital que brota em meio à opressão, à desumanização e à rigidez cinzenta da ordem estabelecida.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "vitória definitiva da tecnologia automobilística sobre a fragilidade dos ecossistemas naturais.", isCorrect: false, distractorRationale: "O poema ordena que o tráfego de aço paralise diante do milagre da flor, valorizando a flor contra a máquina opressora." },
+      { id: "c", text: "fuga alienada do poeta para a infância campestre como forma de ignorar os horrores da guerra mundial.", isCorrect: false, distractorRationale: "O poema é profundamente engajado na realidade histórica urbana; não é alienação nostálgica." },
+      { id: "d", text: "superioridade biológica das pragas vegetais capazes de destruir rodovias públicas pavimentadas.", isCorrect: false, distractorRationale: "Leitura excessivamente literal e sem sensibilidade lírica da metáfora drummondiana." },
+      { id: "e", text: "adesão incondicional do autor aos discursos propagandísticos do autoritarismo fascista.", isCorrect: false, distractorRationale: "Drummond era anti-fascista convicto e 'A Rosa do Povo' é o ápice da sua lírica humanitária e democrática de esquerda." }
+    ],
+    detailedExplanation: {
+      summary: "A flor que 'rompe o asfalto' e 'ilude a polícia' simboliza a força indomável da beleza, da arte e da liberdade humana brotando no solo mais árido e opressor da modernidade.",
+      stepByStep: [
+        "Passo 1: Reconhecer a fase poética: Segunda Fase do Modernismo (Fase de 1930 / Poesia Social e Política de Drummond).",
+        "Passo 2: Analisar o contraste imagético: de um lado, o asfalto duro, o tráfego cinzento, a polícia, os negócios, a náusea existencial perante o mundo conflagrado; de outro lado, a flor feia, desbotada, mas viva e teimosa.",
+        "Passo 3: Interpretar o gesto subversivo: a flor desafia a ordem e exige a paralisação do maquinário burocrático, afirmando a primazia da vida sobre o cimento.",
+        "Passo 4: A opção 'a' sintetiza com refinamento a chave de leitura existencial e política do poema."
+      ],
+      coreConcept: "A Rosa do Povo de Drummond, poesia social de 30, metáfora da flor no asfalto e resistência humanitária.",
+      trapWarning: "Fazer uma interpretação meramente botânica da flor, desconsiderando o contexto histórico do fascismo e da censura contra os quais o livro se insurge."
+    },
+    commonTraps: ["leitura_literal_botanica", "descontextualizar_da_segunda_guerra_mundial"],
+    tags: ["drummond", "a_rosa_do_povo", "poesia_social", "modernismo_1930"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-018",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura Brasileira",
+    subtopic: "Jorge Amado e Capitães da Areia",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Sob a lua, num velho trapiche abandonado perto do porto de Salvador, dormiam os Capitães da Areia. Crianças vestidas de farrapos, sujas e semi-esfomeadas, donas da cidade que as temia e as repelia. Pedro Bala, o líder corajoso; Professor, o leitor que contava histórias; Sem-Pernas, o espião amargo; Volta-Seca, o afilhado de Lampião; Pirulito, o devoto. Ninguém cuidava deles a não ser eles próprios. E o reformatório da cidade era apenas uma masmorra de espancamentos que os transformava em feras.",
+      source: "Jorge Amado, Capitães da Areia (1937)"
+    },
+    prompt: "No romance 'Capitães da Areia', inserido no regionalismo de 30 do Modernismo, a abordagem de Jorge Amado sobre os menores em situação de rua em Salvador combina:",
+    options: [
+      { id: "a", text: "denúncia da violência e da omissão das instituições estatais com um lirismo poético que resgata a dignidade, a solidariedade e os sonhos da infância marginalizada.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "criminalização higienista dos jovens infratores, defendendo penas de trabalhos forçados como solução civilizatória.", isCorrect: false, distractorRationale: "O romance denuncia a violência do reformatório e toma partido incondicionalmente ao lado dos meninos." },
+      { id: "c", text: "romantização aristocrática que atribui aos meninos a posse de tesouros coloniais esquecidos nas praias baianas.", isCorrect: false, distractorRationale: "Não é uma narrativa fantástica de caça ao tesouro, mas um romance social realista de denúncia política." },
+      { id: "d", text: "desprezo pelas manifestações religiosas de matriz africana praticadas nos terreiros de candomblé da Bahia.", isCorrect: false, distractorRationale: "Jorge Amado valoriza intensamente o candomblé (Ogum, Iemanjá, Mãe Aninha) como esteio cultural e afetivo dos marginalizados." },
+      { id: "e", text: "defesa do isolamento rural estrito, condenando qualquer interação com a vida da cidade portuária.", isCorrect: false, distractorRationale: "O livro é urbano por excelência; os meninos conhecem e dominam as ladeiras e a vida urbana de Salvador." }
+    ],
+    detailedExplanation: {
+      summary: "Jorge Amado humaniza os meninos do trapiche ao revelar que a delinquência não é desvio inato, mas resultado da exclusão social e da brutalidade institucional do Estado.",
+      stepByStep: [
+        "Passo 1: Identificar a temática do romance de 30: engajamento social, foco nos despossuídos e denúncia das desigualdades estruturais.",
+        "Passo 2: Reconhecer a ambivalência dos personagens: cometem pequenos furtos para sobreviver, mas possuem lealdade inabalável entre si, sensibilidade artística e sede de justiça.",
+        "Passo 3: Mapear a crítica institucional: o Reformatório e a Polícia são mostrados como máquinas de repressão covarde que apenas geram mais violência.",
+        "Passo 4: A opção 'a' expressa com sensibilidade a síntese entre engajamento ideológico e lirismo humanista característica de Jorge Amado."
+      ],
+      coreConcept: "Romance de 30, Capitães da Areia de Jorge Amado, infância marginalizada e crítica ao sistema penal juvenil.",
+      trapWarning: "Ver os Capitães da Areia sob a ótica policial simplista de meros criminosos; Jorge Amado constrói a narrativa para despertar a compaixão e a indignação cidadã do leitor."
+    },
+    commonTraps: ["criminalizar_os_meninos_desconsiderando_o_lirismo_do_autor", "desconhecer_o_papel_do_trapiche"],
+    tags: ["jorge_amado", "capitaes_da_areia", "romance_de_30", "marginalidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-019",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Literatura Brasileira",
+    subtopic: "Guimarães Rosa e a Travessia Metafísica",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nonada. Tiros que o senhor ouviu foram de briga de homem não, Deus esteja (...) O diabo não há! É o que eu digo, se todo o mundo repete, amor em Deus me dê força. O diabo não existe de por si, mas em nós, nas forças nossas (...) O sertão está em toda parte. Sertão é o sozinho, é o perigoso (...) O sertão é do tamanho do mundo. Viver é muito perigoso...\n(João Guimarães Rosa, Grande Sertão: Veredas, 1956)",
+      source: "João Guimarães Rosa, Grande Sertão: Veredas."
+    },
+    prompt: "No monólogo de Riobaldo que abre 'Grande Sertão: Veredas', marco da Geração de 45, Guimarães Rosa reinventa a tradição do regionalismo brasileiro ao transformar o sertão em:",
+    options: [
+      { id: "a", text: "um espaço metafísico e universal da existência humana, onde as batalhas de jagunços e a linguagem recriada espelham o enigma do bem, do mal e da alma.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "um documento estritamente geográfico voltado a subsidiar o traçado de ferrovias federais no norte de Minas Gerais.", isCorrect: false, distractorRationale: "A obra é literatura existencial e filosófica de altíssimo nível, não relatório técnico de engenharia de transportes." },
+      { id: "c", text: "uma narrativa ingênua e documental que reproduz passivamente o linguajar arcaico sem qualquer inovação neológica.", isCorrect: false, distractorRationale: "A linguagem rosiana é uma reinvenção culta e neológica revolucionária, fundindo latim, grego e oralidade arcaica." },
+      { id: "d", text: "um panfleto político defendendo a entrega do poder judicial aos bandos armados de jagunços.", isCorrect: false, distractorRationale: "O livro questiona a violência e a tragédia da jagunçagem, refletindo sobre a culpa e o perdão." },
+      { id: "e", text: "uma sátira cômica destinada a ridicularizar as crendices dos vaqueiros perante os acadêmicos da capital.", isCorrect: false, distractorRationale: "O tom da narrativa é grandioso, trágico e sagrado, distante de qualquer caricatura zombeteira." }
+    ],
+    detailedExplanation: {
+      summary: "Guimarães Rosa universalizou o sertão: 'O sertão é o mundo'. A travessia de Riobaldo entre o amor por Diadorim e o medo do pacto diabólico é a alegoria da travessia existencial de todo ser humano.",
+      stepByStep: [
+        "Passo 1: Entender a superação do regionalismo tradicional: até Guimarães Rosa, o regionalismo era visto como retrato folclórico ou denúncia sociológica externa do sertão exótico.",
+        "Passo 2: Reconhecer a dimensão metafísica: Rosa coloca no sertão as questões cósmicas de Fausto (Goethe), a dúvida shakespeariana e a pergunta agostiniana sobre a origem do mal ('O diabo existe?').",
+        "Passo 3: Analisar a revolução estilística: neologismos geniais ('nonada', 'desafastou', 'enxadrezar'), inversões sintáticas e sonoridades que reinventam a língua portuguesa.",
+        "Passo 4: A opção 'a' sintetiza magistralmente a transcendência ontológica de Grande Sertão: Veredas."
+      ],
+      coreConcept: "Geração de 45, Grande Sertão: Veredas de Guimarães Rosa, sertão como metáfora metafísica e universalidade ontológica.",
+      trapWarning: "Rotular Grande Sertão como mero romance pitoresco de fazenda ou bandidismo sertanejo; no ENEM, Rosa é cobrado pela elevação do regional ao plano universal da condição humana."
+    },
+    commonTraps: ["reduzir_rosa_a_regionalismo_folclorico", "desconhecer_o_carater_filosofico_da_obra"],
+    tags: ["guimaraes_rosa", "grande_sertao_veredas", "geracao_de_45", "neologismos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-LIT-020",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Literatura Brasileira",
+    subtopic: "Concretismo e Vanguarda Poética no Brasil",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No Manifesto da Poesia Concreta (1956), poetas paulistas como Décio Pignatari, Augusto de Campos e Haroldo de Campos proclamaram o fim do verso tradicional como unidade rítmico-formal da poesia, defendendo a criação do 'poema-objeto' sustentado no trinômio 'verbi-voco-visual' (a palavra compreendida simultaneamente pelo seu sentido semântico, pelo seu som vocal e pela sua geometria visual no espaço em branco da página).",
+      source: "Teoria da Poesia Concreta / Grupo Noigandres"
+    },
+    prompt: "A ruptura formal proposta pelo Concretismo na literatura brasileira da década de 1950 relacionava-se estreitamente com:",
+    options: [
+      { id: "a", text: "o contexto de otimismo desenvolvimentista e industrialização do país (plano de metas de JK, construção de Brasília), integrando o design gráfico, a publicidade e a velocidade dos meios de comunicação à linguagem poética.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o retorno saudosista aos sonetos parnasianos decassílabos com rimas ricas e temáticas da mitologia greco-romana.", isCorrect: false, distractorRationale: "O Concretismo explodiu o soneto e o verso; era a vanguarda mais radicalmente antinostálgica da poesia brasileira." },
+      { id: "c", text: "a condenação da matemática e da arquitetura moderna em prol do misticismo religioso medieval.", isCorrect: false, distractorRationale: "Pelo contrário, o Concretismo dialogava intimamente com a arquitetura racionalista de Niemeyer e o design construtivista." },
+      { id: "d", text: "a rejeição de qualquer tecnologia de impressão visual, exigindo que os poemas fossem transmitidos apenas por via oral nas feiras livres.", isCorrect: false, distractorRationale: "Os concretistas exploravam tipografia gráfica industrial sofisticada e cartazes urbanos." },
+      { id: "e", text: "a defesa do ufanismo romântico do século XIX com a exaltação da fauna e da flora tropicais intocadas.", isCorrect: false, distractorRationale: "O concretismo era cosmopolita, urbano e internacionalista, rompendo com o nacionalismo ingênuo." }
+    ],
+    detailedExplanation: {
+      summary: "O Concretismo nasceu no mesmo caldo cultural do desenvolvimentismo dos anos 50 que ergueu Brasília e inventou a Bossa Nova, alinhando a poesia ao design e à modernidade técnica.",
+      stepByStep: [
+        "Passo 1: Situar a década de 1950 no Brasil: anos JK, desenvolvimentismo, modernismo arquitetônico de Brasília, surgimento do design industrial e aceleração da cultura de massas.",
+        "Passo 2: Analisar a proposta estética: abolir a sintaxe discursiva linear (sujeito-verbo-objeto); a palavra deve ocupar o espaço como arquitetura geométrica na página em branco.",
+        "Passo 3: Compreender o conceito de 'verbivocovisual': ver a forma da letra (visual), ouvir a ressonância do fonema (vocal) e captar o significado dinâmico (verbal), como nos poemas 'Beba Coca-Cola' e 'Velocidade'.",
+        "Passo 4: A alternativa 'a' contextualiza historicamente o Concretismo dentro do projeto modernizador brasileiro com exatidão."
+      ],
+      coreConcept: "Concretismo brasileiro (1956), Grupo Noigandres, estrutura verbivocovisual e desenvolvimentismo dos anos 50.",
+      trapWarning: "Pensar que o Concretismo foi apenas 'brincadeira gráfica' sem relação com a história; ele refletiu a modernização industrial e o salto técnico do Brasil dos anos 1950."
+    },
+    commonTraps: ["achar_que_concretismo_e_apenas_desenho_sem_conteudo", "desconectar_a_poesia_da_industrializacao_dos_anos_50"],
+    tags: ["concretismo", "decio_pignatari", "augusto_de_campos", "vanguarda_poetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
 
