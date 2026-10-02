@@ -2824,6 +2824,54 @@ export const THEORY_CONTENT = {
       "O cartum mudo NÃO é incompleto por não ter palavras: a imagem não verbal constitui um texto pleno e autônomo com gramática própria."
     ],
     mnemonics: "Quadrinho Crítico: 'Charge é fato da hora e do jornal; Cartum é o homem em dilema universal; Plongée de cima põe o fraco no chão; e no fim da tirinha a quebra gera reflexão!'"
+  },
+
+  "humanas/iluminismo-revolucoes-burguesas": {
+    topic: "Iluminismo, Revoluções Burguesas e Pensamento Liberal",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Competência 3 (H11, H12, H13, H14) e Competência 5 (H21, H22): Um dos eixos estruturantes mais recorrentes e interdisciplinares do ENEM. Articula a crise do Antigo Regime europeu (absolutismo, privilégios estamentais do clero e da nobreza, mercantilismo e intolerância religiosa), a emergência da filosofia ilustrada (Voltaire, Montesquieu, Rousseau, Diderot, Locke, Kant, Beccaria), a economia política clássica (Adam Smith e a Fisiocracia), as Revoluções Burguesas (Revolução Inglesa de 1688, Independência dos EUA de 1776, Revolução Francesa de 1789 e a Revolução Haitiana de 1791) e os seus impactos diretos na América Portuguesa (Inconfidência Mineira de 1789 e Conjuração Baiana de 1798), problematizando as contradições entre a universalidade dos direitos proclamados e a exclusão concreta de mulheres, pessoas escravizadas e classes subalternas.",
+    highFrequencySkills: [
+      "H11 - Identificar registros sobre o papel das técnicas e das tecnologias na organização do trabalho e da sociedade",
+      "H12 - Analisar o papel da justiça como instituição na conformação dos direitos de cidadania nas sociedades ocidentais",
+      "H13 - Analisar a atuação dos movimentos sociais que contribuíram para mudanças ou rupturas em processos de disputa pelo poder",
+      "H14 - Comparar diferentes pontos de vista presentes em documentos históricos sobre a fundação do Estado de Direito moderno"
+    ],
+    overview: "O módulo aprofunda a transição revolucionária do Antigo Regime para a Modernidade burguesa. Examina: 1) A crítica das Luzes ao obscurantismo, ao direito divino dos reis e aos privilégios feudais; 2) A formulação dos pilares políticos do Estado de Direito (isonomia jurídica, tripartição e autonomia dos poderes de Montesquieu, soberania popular e Vontade Geral de Rousseau, tolerância religiosa de Voltaire e direito de resistência à tirania de John Locke); 3) A crítica ao mercantilismo e a gênese do liberalismo econômico (a mão invisível e divisão do trabalho em Adam Smith e o 'laissez-faire' fisiocrata); 4) O ciclo das Revoluções Burguesas no Ocidente (a monarquia parlamentar britânica de 1689, a ruptura anticolonial norte-americana e a Revolução Francesa de 1789); 5) As vozes silenciadas e as contradições da cidadania liberal: a denúncia androcêntrica de Olympe de Gouges em 1791, a radicalidade antiescravista e anticolonial dos 'Jacobinos Negros' na Revolução do Haiti (1791-1804), e o contraste no Brasil colonial entre a Inconfidência Mineira (republicana e escravista) e a Conjuração Baiana (popular, abolicionista e antirracista).",
+    keyConcepts: [
+      {
+        title: "As Luzes e a Concepção de Estado de Direito",
+        content: "• Isonomia e Direitos Naturais: Todos os seres humanos nascem dotados de razão e direitos inatos inalienáveis (vida, liberdade, propriedade e busca da felicidade).\n• Montesquieu (1748): Separação harmônica e autônoma dos três poderes (Executivo, Legislativo e Judiciário) no sistema de freios e contrapesos (checks and balances) para impedir a tirania despótica.\n• Rousseau (1762): Soberania popular inalienável fundada na 'Vontade Geral' (busca do bem comum ético, e não mera soma de egoísmos privados). O povo reunido é o único soberano legítimo; parlamentares são comissários revogáveis.\n• Voltaire: Defesa irrestrita da tolerância religiosa, combate ao fanatismo eclesial ('Écrasez l'infâme') e primazia da liberdade de expressão na esfera pública laica.\n• Kant (1784): Aufklärung como saída da menoridade moral e intelectual através da coragem de pensar por si mesmo ('Sapere aude!')."
+      },
+      {
+        title: "Liberalismo Econômico e Fisiocracia",
+        content: "• Adam Smith (A Riqueza das Nações, 1776): A verdadeira riqueza de uma nação advém da capacidade produtiva do trabalho humano e de sua especialização fabril (divisão do trabalho). A 'mão invisível' do mercado autorregula os preços e aloca recursos com eficiência social a partir do livre interesse individual, exigindo que o Estado não intervenha nas trocas privadas.\n• Fisiocracia (Quesnay e Gournay): A terra e a agricultura são a única fonte autêntica de riqueza nova geradora de excedente líquido; indústria e comércio são 'classes estéreis' transformadoras. Defendiam o livre comércio desimpedido: 'Laissez faire, laissez passer'."
+      },
+      {
+        title: "A Era das Revoluções Burguesas (1688, 1776, 1789)",
+        content: "• Revolução Gloriosa (1688): Aprovação da Bill of Rights (1689) na Inglaterra, subordinando o monarca ao Parlamento e criando a primeira monarquia constitucional do mundo moderno.\n• Independência dos EUA (1776): Aplicação direta do jusnaturalismo lockeano contra a tirania tributária britânica ('No taxation without representation'), fundando uma república federativa liberal que, contraditoriamente, preservou a escravidão negra e dizimou populações indígenas.\n• Revolução Francesa (1789): Queda da Bastilha e proclamação da Declaração dos Direitos do Homem e do Cidadão (igualdade civil formal, liberdade e propriedade sagrada). Passou pela fase moderada da Assembleia Constituinte, pela radicalização jacobina da Convenção (Terror de Robespierre, aliança com os sans-culottes, controle de preços e abolição colonial) e estabilizou-se no Diretório burguês que culminou no 18 de Brumário de Napoleão Bonaparte (1799)."
+      },
+      {
+        title: "Limites, Contradições e apropriações no Sul Global",
+        content: "• Olympe de Gouges (1791): Denunciou a hipocrisia androcêntrica da Revolução Francesa ao publicar a Declaração dos Direitos da Mulher e da Cidadã, reivindicando que se as mulheres tinham o direito de subir ao cadafalso, deveriam ter o de subir à tribuna política.\n• Revolução do Haiti (1791-1804): Liderada por Toussaint Louverture e Dessalines, radicalizou o Iluminismo ao proclamar a independência e a abolição imediata da escravidão pelas mãos dos próprios cativos, fundando a primeira república negra do mundo ocidental.\n• América Portuguesa: Enquanto a Inconfidência Mineira (1789) foi um movimento de elite letrada e mineradora que reivindicava república mas se omitia quanto ao fim do cativeiro, a Conjuração Baiana (1798 / Revolta dos Búzios) foi protagonizada por alfaiates, soldados e negros forros, exigindo abolição total da escravidão, fim do preconceito de cor e igualdade racial."
+      }
+    ],
+    formulasAndRules: [
+      "Isonomia Jurídica = Fim dos privilégios hereditários de nascimento; todos iguais perante a mesma lei civil.",
+      "Tripartição de Poderes = Executivo + Legislativo + Judiciário fiscalizando-se mutuamente (Montesquieu).",
+      "Vontade Geral (Rousseau) ≠ Vontade de Todos (soma de interesses particulares).",
+      "Contratualismo Lockeano: Violação da vida, liberdade ou propriedade ⟹ Legitimidade do Direito de Resistência à Tirania.",
+      "Liberalismo Econômico: Trabalho produtivo + Divisão do trabalho + Livre concorrência de mercado (Adam Smith).",
+      "Inconfidência Mineira (1789) = Elitista e escravista  |  Conjuração Baiana (1798) = Popular, abolicionista e antirracista."
+    ],
+    enemTraps: [
+      "A igualdade pregada pela burguesia iluminista é JURÍDICA (isonomia formal), e NÃO igualdade econômica ou material de renda!",
+      "A Revolução Francesa NÃO aboliu a propriedade privada; a Declaração de 1789 consagrou a propriedade privada como um direito natural sagrado e inviolável!",
+      "A Independência dos EUA de 1776 NÃO acabou com a escravidão; o cativeiro negro continuou plenamente legal no Sul por mais 89 anos até a Guerra Civil!",
+      "Despotismo Esclarecido NÃO abriu mão do absolutismo; monarcas adotaram a razão técnica apenas para modernizar a arrecadação de impostos e a burocracia!",
+      "A Inconfidência Mineira NÃO foi uma revolta abolicionista popular; foi um levante de elites que temiam a derrama e queriam perdoar suas próprias dívidas fiscais."
+    ],
+    mnemonics: "As Luzes e as Revoluções: 'Locke defende a propriedade e a resistência cidadã; Montesquieu divide o poder em três pela manhã; Rousseau canta a Vontade Geral soberana; Smith solta a mão do mercado que aplana; e na França a Bastilha cai pra lei ser humana!'"
   }
 };
 
