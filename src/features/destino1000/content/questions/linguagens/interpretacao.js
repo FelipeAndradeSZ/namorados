@@ -378,6 +378,417 @@ export const QUESTIONS_INTERPRETACAO = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-011",
+    area: "linguagens",
+    competence: 6,
+    skill: 18,
+    topic: "Interpretação de Texto",
+    subtopic: "Implícitos do Texto: Pressupostos e Subentendidos",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte título de uma reportagem econômica sobre os índices de inflação divulgados pelo Banco Central:\n\n'O país finalmente voltou a registrar desaceleração sustentada nos preços dos alimentos da cesta básica.'",
+      source: "Caderno de Economia e Conjuntura"
+    },
+    prompt: "No plano discursivo, a presença dos marcadores linguísticos 'finalmente' e 'voltou a registrar' introduz no enunciado a pressuposição de que:",
+    options: [
+      { id: "a", text: "os preços dos alimentos jamais haviam experimentado períodos de estabilidade ou queda na história econômica recente do país.", isCorrect: false, distractorRationale: "O verbo 'voltou a' indica que a desaceleração já ocorreu no passado e agora se repete, contradizendo a ideia de que 'jamais' ocorrera." },
+      { id: "b", text: "a desaceleração era um evento aguardado há considerável tempo após um período prévio de alta ininterrupta de preços.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "o Banco Central cessará em definitivo qualquer intervenção monetária sobre as taxas de juros futuros.", isCorrect: false, distractorRationale: "Extrapolação sem qualquer respaldo semântico nos marcadores linguísticos analisados." },
+      { id: "d", text: "a população de baixa renda foi a única beneficiária dos novos índices apresentados no relatório.", isCorrect: false, distractorRationale: "O enunciado não delimita classes sociais específicas; trata do índice macroeconômico agregado." },
+      { id: "e", text: "o processo inflacionário foi integralmente extinto em todos os setores da economia nacional.", isCorrect: false, distractorRationale: "O texto fala estritamente de 'desaceleração' (ritmo de crescimento menor) e não de extinção da inflação ou deflação geral." }
+    ],
+    detailedExplanation: {
+      summary: "Pressupostos são informações implícitas ancoradas em marcas linguísticas explícitas na superfície textual (como verbos iterativos e advérbios modais).",
+      stepByStep: [
+        "Passo 1: Analisar o advérbio 'finalmente': denota que a ocorrência era intensamente esperada ou demandou uma espera prolongada e desgastante.",
+        "Passo 2: Analisar a locução aspectual iterativa 'voltou a': indica que o fenômeno já existia em momento pretérito, foi interrompido e agora retornou.",
+        "Passo 3: Conectar os dois marcadores semânticos: a desaceleração já aconteceu no passado, passou por um intervalo de aumento de preços e seu retorno era urgentemente aguardado.",
+        "Passo 4: Portanto, a opção correta expressa precisamente essa pressuposição discursiva."
+      ],
+      coreConcept: "Diferenciação entre pressuposto (inscrito linguisticamente no léxico) e subentendido (dedução pragmática do contexto).",
+      trapWarning: "Ignorar marcas linguísticas gramaticais e buscar interpretações baseadas apenas na opinião geral sobre a inflação."
+    },
+    commonTraps: ["confundir_desaceleracao_com_queda_absoluta_ou_extincao", "ignorar_o_aspecto_verbal_iterativo"],
+    tags: ["pressuposto", "implicitos", "operadores_discursivos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-012",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Interpretação de Texto",
+    subtopic: "Intertextualidade Crítica e Paródia",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Texto I (Gonçalves Dias, Canção do Exílio, 1843):\n'Minha terra tem palmeiras,\nOnde canta o Sabiá;\nAs aves, que aqui gorjeiam,\nNão gorjeiam como lá.'\n\nTexto II (Carlos Drummond de Andrade, Nova Canção do Exílio, 1945):\n'Um sabiá\nna palmeira, longe.\nEstas aves cantam\num outro canto.\nO céu cintila\nsobre flores úmidas.\nVoam nuvens\ncomo se fossem asas.\nOnde estás, terra amiga?'",
+      source: "Antologia Poética do Modernismo"
+    },
+    prompt: "Ao dialogar intertextualmente com o poema romântico de Gonçalves Dias, o texto de Drummond constrói um efeito de sentido que se caracteriza por:",
+    options: [
+      { id: "a", text: "reiterar o ufanismo ingênuo da primeira geração romântica através da exaltação das riquezas da flora nativa.", isCorrect: false, distractorRationale: "O poema de Drummond é marcado por tom melancólico, reticente e cético, oposto ao ufanismo nacionalista romântico." },
+      { id: "b", text: "reinterpretar a imagem da pátria sob uma perspectiva de desilusão e distanciamento crítico típico do Modernismo.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "plagiar a métrica redondilha maior de Gonçalves Dias sem apresentar inovações estilísticas relevantes.", isCorrect: false, distractorRationale: "A intertextualidade poética modernista é uma apropriação consciente e estética, jamais plágio; além disso, emprega versos livres e concisão." },
+      { id: "d", text: "ridicularizar a fauna brasileira ao insinuar a inexpressividade do canto das aves nativas.", isCorrect: false, distractorRationale: "O poema não busca zombar da natureza, mas expressar a solidão e o desencanto com a própria condição humana e política." },
+      { id: "e", text: "defender o retorno imediato da monarquia brasileira como solução para a crise de representação social.", isCorrect: false, distractorRationale: "Extrapolação descabida sem relação com o lirismo drummondiano." }
+    ],
+    detailedExplanation: {
+      summary: "A intertextualidade entre Drummond e Gonçalves Dias desconstrói o nacionalismo idílico do Romantismo por meio da sobriedade e do ceticismo da poesia de 30.",
+      stepByStep: [
+        "Passo 1: Reconhecer o Texto I como o marco fundador do Romantismo ufanista brasileiro, onde a pátria distante é idealizada como um paraíso sem defeitos.",
+        "Passo 2: Analisar a releitura de Drummond no Texto II: o sabiá está 'longe', as aves 'cantam um outro canto' e a pergunta final ('Onde estás, terra amiga?') revela perda de referências e sentimento de inadequação.",
+        "Passo 3: Identificar a função intertextual: não é repetição passiva (paráfrase ingênua), mas uma reavaliação crítica e nostálgica do sentimento de pertencimento pátrio sob as tensões históricas do século XX.",
+        "Passo 4: Concluir que se trata de uma perspectiva de distanciamento e desilusão perante a idealização original."
+      ],
+      coreConcept: "Intertextualidade paródica e crítica no Modernismo brasileiro frente aos cânones do Romantismo.",
+      trapWarning: "Confundir intertextualidade com cópia ou plágio; no ENEM, o diálogo entre textos é sempre analisado como recurso de renovação e tensão estética."
+    },
+    commonTraps: ["confundir_intertextualidade_com_plagio", "ignorar_a_ruptura_tonal_do_modernismo"],
+    tags: ["intertextualidade", "drummond", "romantismo_vs_modernismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-013",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Interpretação de Texto",
+    subtopic: "Polifonia e Discurso Indireto Livre",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o fragmento extraído do romance Vidas Secas, de Graciliano Ramos:\n\n'Fabiano sentia-se satisfeito com a sua profissão de vaqueiro. Conhecia as reses como gente, sabia onde a água brotava nas estiagens. Olhou as mãos calejadas, os pés cascudos. Era um bicho, sim senhor. Mas que bicho valente! Tinha direito de viver naquelas brenhas, resistindo como raiz de pau de ferro.'",
+      source: "Graciliano Ramos, Vidas Secas (1938)"
+    },
+    prompt: "No excerto lido, o emprego do recurso estilístico do discurso indireto livre tem como efeito de sentido:",
+    options: [
+      { id: "a", text: "isolar completamente a voz do narrador culto, impedindo que o leitor tenha acesso à psicologia íntima do sertanejo.", isCorrect: false, distractorRationale: "O discurso indireto livre faz exatamente o inverso: funde a voz do narrador ao íntimo do personagem." },
+      { id: "b", text: "reproduzir as falas dos personagens exclusivamente entre aspas e travessões em linguagem coloquial documental.", isCorrect: false, distractorRationale: "Essa descrição corresponde ao discurso direto tradicional, e não ao indireto livre, que dispensa pontuações de diálogo." },
+      { id: "c", text: "fundir a voz do narrador em terceira pessoa aos pensamentos e sentimentos do personagem, criando uma intimidade psicológica dramática.", isCorrect: true, distractorRationale: null },
+      { id: "d", text: "afirmar que Fabiano desprezava seu trabalho e planejava abandonar o sertão imediatamente para viver na capital.", isCorrect: false, distractorRationale: "O texto afirma explicitamente que ele 'sentia-se satisfeito' e 'tinha direito de viver naquelas brenhas'." },
+      { id: "e", text: "denunciar a ineficiência técnica do vaqueiro na condução do gado durante o período das secas.", isCorrect: false, distractorRationale: "O texto valoriza sua perícia ('Conhecia as reses como gente, sabia onde a água brotava')." }
+    ],
+    detailedExplanation: {
+      summary: "O discurso indireto livre mescla a narração em terceira pessoa com o fluxo de consciência e as exclamações próprias do personagem ('Era um bicho, sim senhor. Mas que bicho valente!').",
+      stepByStep: [
+        "Passo 1: Notar a ausência de verbos de elocução (disse, pensou) e de pontuação de diálogo (dois-pontos, travessões).",
+        "Passo 2: Observar as expressões tipicamente orais do personagem inseridas na prosa do narrador: 'sim senhor', 'Mas que bicho valente!'.",
+        "Passo 3: Identificar que o narrador onisciente 'empresta' sua voz para verbalizar as emoções e a autoimagem de Fabiano.",
+        "Passo 4: Esse procedimento caracteriza o discurso indireto livre, conferindo profundidade psicológica e empatia ao drama da vulnerabilidade humana."
+      ],
+      coreConcept: "Tipos de discurso narrativo: direto, indireto e indireto livre como recurso de polifonia.",
+      trapWarning: "Achar que quando não há aspas nem travessões o texto é apenas a opinião neutra do narrador distante."
+    },
+    commonTraps: ["confundir_discurso_indireto_livre_com_direto", "achar_que_narrador_esta_apenas_descrevendo_de_fora"],
+    tags: ["discurso_indireto_livre", "vidas_secas", "graciliano_ramos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-014",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Interpretação de Texto",
+    subtopic: "Operadores Argumentativos e Conexão de Sentido",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a estrutura sintática de um período formulado em um editorial sobre sustentabilidade e transição energética:\n\n'O país possui a matriz elétrica mais limpa do hemisfério ocidental; não obstante, continua subsidiando a queima de combustíveis fósseis em termelétricas ineficientes durante períodos de estiagem.'",
+      source: "Editorial de Meio Ambiente e Energia"
+    },
+    prompt: "A locução conjuntiva 'não obstante' estabelece entre as duas orações do período uma relação de sentido de:",
+    options: [
+      { id: "a", text: "conclusão, confirmando que os subsídios aos combustíveis fósseis são decorrência lógica e necessária de uma matriz hidrelétrica limpa.", isCorrect: false, distractorRationale: "Os subsídios contradizem a política limpa; não são uma decorrência natural esperada." },
+      { id: "b", text: "concessão/adversidade, ressaltando o contraste entre a vantagem ambiental existente e uma prática governamental incoerente com esse potencial.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "temporalidade, indicando que a transição limpa ocorrerá apenas após o término definitivo de todas as secas.", isCorrect: false, distractorRationale: "A locução não expressa passagem de tempo ou sucessão cronológica." },
+      { id: "d", text: "causa, justificando que a matriz é limpa justamente em função da ampliação das usinas termelétricas a carvão.", isCorrect: false, distractorRationale: "Inversão lógica total: queimar fóssil não é causa de matriz limpa." },
+      { id: "e", text: "conformidade, demonstrando que o plano energético segue estritamente os acordos internacionais do clima.", isCorrect: false, distractorRationale: "A expressão sublinha uma oposição crítica e não uma conformidade de diretrizes." }
+    ],
+    detailedExplanation: {
+      summary: "A locução 'não obstante' possui valor adversativo ou concessivo, introduzindo uma ideia que se opõe ou quebra a expectativa gerada pela oração antecedente.",
+      stepByStep: [
+        "Passo 1: Analisar a primeira asserção: 'O país possui a matriz elétrica mais limpa' (aspecto altamente positivo e sustentável).",
+        "Passo 2: Observar a expectativa lógica criada: espera-se que o país priorize investimentos exclusivamente renováveis.",
+        "Passo 3: Analisar a segunda asserção: 'continua subsidiando a queima de combustíveis fósseis' (ação contraditória com a diretriz ecológica).",
+        "Passo 4: A locução 'não obstante' equivale a 'apesar disso', 'contudo', 'no entanto', marcando a quebra de expectativa e contraste argumentativo."
+      ],
+      coreConcept: "Coesão sequencial e operadores argumentativos de oposição e concessão (não obstante, contudo, conquanto).",
+      trapWarning: "Confundir 'não obstante' com locução conclusiva ('portanto') ou conformativa ('consoante')."
+    },
+    commonTraps: ["desconhecer_o_sentido_da_locucao_nao_obstante", "confundir_adversidade_com_conclusao"],
+    tags: ["operadores_argumentativos", "coesao_textual", "adversidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-015",
+    area: "linguagens",
+    competence: 6,
+    skill: 19,
+    topic: "Interpretação de Texto",
+    subtopic: "Linguagem Não Verbal e Multimodalidade",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um cartaz de utilidade pública contra o sedentarismo e o uso excessivo de telas por crianças, visualiza-se a ilustração de um menino sentado em uma poltrona, cujas pernas fundem-se gradualmente à madeira do móvel, transformando-se em raízes grossas e estáticas que penetram no assoalho. Ao fundo, uma janela aberta exibe um parque iluminado pelo sol com pipas e bicicletas. A legenda curta na parte inferior afirma: 'A infância não foi feita para criar raízes. Desconecte.'",
+      source: "Campanha de Saúde da Criança e do Adolescente"
+    },
+    prompt: "A metáfora visual das pernas da criança transformadas em raízes no chão cumpre a função persuasiva de:",
+    options: [
+      { id: "a", text: "enfatizar o profundo contato e a integração harmônica da criança com a natureza orgânica dentro de casa.", isCorrect: false, distractorRationale: "A fusão à poltrona denota paralisia e artificialismo, não integração ecológica com a natureza viva lá fora." },
+      { id: "b", text: "alertar sobre a imobilidade física prejudicial induzida pela passividade diante das telas digitais em contraste com o dinamismo do mundo real.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "estimular o aprendizado precoce de botânica e plantio de hortas domésticas em ambientes urbanos.", isCorrect: false, distractorRationale: "Interpretação literal ingênua do símbolo botânico da raiz." },
+      { id: "d", text: "comprovar cientificamente que o uso de computadores retarda o crescimento esquelético de membros inferiores.", isCorrect: false, distractorRationale: "Trata-se de uma metáfora artística de alerta e não de um diagnóstico biológico de deformação óssea." },
+      { id: "e", text: "recomendar que as crianças realizem brincadeiras preferencialmente sentadas para evitar fraturas.", isCorrect: false, distractorRationale: "O cartaz prega exatamente o oposto: incentiva a movimentação ativa ao ar livre." }
+    ],
+    detailedExplanation: {
+      summary: "Em textos multimodais, a imagem não apenas ilustra o texto verbal, mas constrói metáforas conceituais que materializam a crítica ao comportamento passivo.",
+      stepByStep: [
+        "Passo 1: Analisar os elementos icônicos: pernas virando raízes conectadas à poltrona = imobilidade forçada, aprisionamento e fixidez.",
+        "Passo 2: Analisar o plano de fundo: parque ensolarado, pipas e bicicletas = liberdade, movimento corporal, socialização ativa.",
+        "Passo 3: Integrar a legenda verbal: 'A infância não foi feita para criar raízes. Desconecte.'",
+        "Passo 4: A conjunção entre a raiz física e o imperativo 'desconecte' sinaliza que o tempo excessivo nas telas imobiliza as crianças, privando-as das experiências vitais do desenvolvimento motor."
+      ],
+      coreConcept: "Leitura multimodal, metáfora visual e interpretação de campanhas sociais no ENEM.",
+      trapWarning: "Fazer uma leitura literal do elemento imagético (achar que o cartaz trata de botânica ou doenças biológicas que transformam pernas em raízes)."
+    },
+    commonTraps: ["leitura_literal_de_metafora_visual", "desconsiderar_o_contraste_com_o_fundo"],
+    tags: ["multimodalidade", "metafora_visual", "campanha_publicitaria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-016",
+    area: "linguagens",
+    competence: 5,
+    skill: 17,
+    topic: "Interpretação de Texto",
+    subtopic: "Crônica Urbana e Ironia Social",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de uma crônica contemporânea sobre a vida nos grandes centros urbanos:\n\n'Entramos no elevador do condomínio comercial. Seis pessoas. Ninguém se conhece, ninguém se olha. Todos sacam instantaneamente seus aparelhos celulares e passam a dedilhar telas iluminadas com ar de urgência corporativa. É uma solenidade comovente: a tecnologia nos salvou do terrível perigo de ter que trocar um 'bom dia' com outro ser humano.'",
+      source: "Crônica de Costumes Contemporâneos"
+    },
+    prompt: "O efeito de humor e de crítica do texto constrói-se fundamentalmente por meio do recurso da ironia, que se evidencia quando o cronista:",
+    options: [
+      { id: "a", text: "afirma com seriedade científica que os celulares causam dependência neurológica em ambientes fechados.", isCorrect: false, distractorRationale: "O texto não se ancora em jargão neurológico; trata de uma observação de convivência social e humorística." },
+      { id: "b", text: "qualifica como 'terrível perigo' uma atitude simples de cortesia social (dar bom dia), invertendo o valor real da situação.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "elogia a eficiência e a alta produtividade dos executivos que não perdem tempo nos elevadores.", isCorrect: false, distractorRationale: "O cronista zomba do 'ar de urgência', mostrando que muitas vezes as pessoas fingem ocupação para evitar contato." },
+      { id: "d", text: "reivindica a proibição imediata de aparelhos celulares em áreas comuns de edifícios.", isCorrect: false, distractorRationale: "A crônica não tem finalidade regulatória ou legislativa." },
+      { id: "e", text: "demonstra revolta agressiva contra a arquitetura dos edifícios comerciais de alta densidade.", isCorrect: false, distractorRationale: "O tom do cronista é espirituoso, irônico e reflexivo, e não de revolta furiosa contra a arquitetura." }
+    ],
+    detailedExplanation: {
+      summary: "A ironia consiste em afirmar o contrário do que se pensa ou conferir peso desmedido a algo banal para evidenciar o absurdo do comportamento humano.",
+      stepByStep: [
+        "Passo 1: Identificar a contradição central: trocar um cumprimento amigável ('bom dia') é uma convenção social elementar e inofensiva.",
+        "Passo 2: Analisar a formulação do narrador: 'nos salvou do terrível perigo de ter que trocar um bom dia'.",
+        "Passo 3: O autor classifica o bom dia como uma ameaça terrível para ressaltar como a fobia social e o isolamento digital tornaram o contato humano algo evitado a todo custo.",
+        "Passo 4: Essa inversão semântica e hiperbólica caracteriza a ironia refinada da crônica de costumes."
+      ],
+      coreConcept: "A ironia como instrumento de crítica comportamental e desnaturalização do cotidiano.",
+      trapWarning: "Interpretar 'terrível perigo' ao pé da letra, acreditando que o autor realmente considera dar bom dia algo arriscado."
+    },
+    commonTraps: ["leitura_literal_da_ironia", "ignorar_o_tom_critico_da_cronica"],
+    tags: ["ironia", "cronica", "critica_social", "tecnologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-017",
+    area: "linguagens",
+    competence: 9,
+    skill: 28,
+    topic: "Interpretação de Texto",
+    subtopic: "Cultura Digital, Hipertexto e Leitura Não Linear",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Diferentemente do texto impresso clássico, estruturado sobre um fluxo contínuo e sequencial de linhas e páginas, o hipertexto em plataformas digitais organiza-se em nós conectivos e links de navegação dinâmica. O leitor não é mais um receptor passivo conduzido pelo fio narrativo unilinear do autor; ele toma decisões a cada clique, bifurca o percurso, aprofunda verbetes enciclopédicos ou salta para novos conteúdos audiovisuais, atuando como coautor de sua própria trajetória de leitura.",
+      source: "Pierre Lévy, Cibercultura / Teoria da Hipertextualidade"
+    },
+    prompt: "De acordo com o texto analítico, a principal transformação cognitiva e estrutural introduzida pelo hipertexto digital na relação entre o leitor e a informação consiste na:",
+    options: [
+      { id: "a", text: "manutenção obrigatória da ordem cronológica concebida pelo escritor original para evitar equívocos de interpretação.", isCorrect: false, distractorRationale: "O hipertexto é exatamente caracterizado pela superação e quebra da ordem unilinear prescrita." },
+      { id: "b", text: "autonomia do leitor para estruturar itinerários não lineares de aprendizagem, alternando múltiplos percursos e conexões semânticas.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "impossibilidade definitiva de construir conhecimento consistente em ambientes que disponham de links virtuais.", isCorrect: false, distractorRationale: "O texto não invalida a aprendizagem virtual; apresenta seu potencial de dinamismo e coautoria." },
+      { id: "d", text: "substituição total da linguagem verbal alfabética por ícones visuais exclusivos e sonoplásticos.", isCorrect: false, distractorRationale: "O hipertexto continua fundamentado primariamente em textos e verbetes, agora interconectados por links." },
+      { id: "e", text: "redução drástica da capacidade de intervenção do usuário no processo de seleção das fontes consultadas.", isCorrect: false, distractorRationale: "A capacidade de seleção é ampliada ao máximo, já que o leitor escolhe ativamente cada nó da navegação." }
+    ],
+    detailedExplanation: {
+      summary: "O hipertexto redefine a recepção textual ao substituir a linearidade estrita pela navegação em rede ('hiperlinks'), concedendo protagonismo e percursos personalizados ao leitor.",
+      stepByStep: [
+        "Passo 1: Contrastar o modelo analógico (impresso: linear, sequencial, página por página) com o modelo hipertextual (digital: modular, em nós de rede, links de acesso imediato).",
+        "Passo 2: Identificar a posição do usuário no hipertexto: ele decide os caminhos ('toma decisões a cada clique, bifurca o percurso'), configurando uma navegação multilinear e descentralizada.",
+        "Passo 3: Essa autonomia transforma o leitor em agente ativo e formulador de seu próprio roteiro de conhecimento.",
+        "Passo 4: A opção 'b' resume com precisão a essência da hipertextualidade defendida na teoria da comunicação contemporânea."
+      ],
+      coreConcept: "Hipertexto, letramento digital e autonomia de leitura multilinear.",
+      trapWarning: "Ver o hipertexto apenas como 'distração' ou achar que todo texto digital abole as palavras escritas."
+    },
+    commonTraps: ["confundir_hipertexto_com_ausencia_de_texto_escrito", "ignorar_o_conceito_de_nao_linearidade"],
+    tags: ["hipertexto", "letramento_digital", "leitura_nao_linear"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-018",
+    area: "linguagens",
+    competence: 6,
+    skill: 18,
+    topic: "Interpretação de Texto",
+    subtopic: "Metáforas Conceituais na Divulgação Científica",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um artigo de divulgação científica sobre imunologia médica, o pesquisador escreve:\n\n'Quando o organismo é desafiado por um patógeno agressivo, nosso sistema imune não envia apenas sentinelas isoladas: ele desencadeia uma verdadeira 'tempestade de citocinas'. Essa enxurrada química sinalizadora age como uma sirene de incêndio em escala celular, convocando um exército de macrófagos e neutrófilos para conter a brecha na muralha dos tecidos antes que o invasor colonize os órgãos vitais.'",
+      source: "Revista Ciência & Sociedade"
+    },
+    prompt: "No texto de divulgação científica, o emprego reiterado de vocábulos do campo semântico militar e bélico ('sentinelas', 'exército', 'muralha', 'invasor') cumpre a função didática de:",
+    options: [
+      { id: "a", text: "provar que o corpo humano é geneticamente programado para a hostilidade bélica e para a violência entre espécies.", isCorrect: false, distractorRationale: "Interpretação distorcida que confunde a metáfora explicativa com uma apologia ou natureza bélica humana." },
+      { id: "b", text: "tornar compreensível para o público leigo um complexo mecanismo biológico microscópico por meio de analogias com conceitos cotidianos de defesa e ataque.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "substituir integralmente os termos médicos verdadeiros por gírias informais desprovidas de valor pedagógico.", isCorrect: false, distractorRationale: "O texto mantém os termos técnicos corretos ('citocinas', 'macrófagos', 'neutrófilos') integrados às analogias estruturantes." },
+      { id: "d", text: "exigir dos leitores conhecimentos aprofundados sobre táticas de infantaria naval militar do século XIX.", isCorrect: false, distractorRationale: "O artigo é de divulgação para o público leigo; a analogia serve para facilitar, não para exigir histórico bélico." },
+      { id: "e", text: "criticar o gasto excessivo do Ministério da Defesa em pesquisas voltadas à produção de armas biológicas.", isCorrect: false, distractorRationale: "O tema do texto é puramente fisiológico/imunológico e não discute orçamentos militares governamentais." }
+    ],
+    detailedExplanation: {
+      summary: "A metáfora conceitual na divulgação científica traduz processos biológicos abstratos ou invisíveis a olho nu em esquemas cognitivos familiares e intuitivos (Defesa Imune = Guerra/Defesa de Fortaleza).",
+      stepByStep: [
+        "Passo 1: Reconhecer o gênero textual: divulgação científica destinada à mediação entre o saber acadêmico especializado e o leitor comum.",
+        "Passo 2: Identificar a metáfora conceitual clássica: O SISTEMA IMUNE É UMA FORTALEZA EM GUERRA (patógeno = invasor; pele/mucosa = muralha; leucócitos = exército/sentinelas; inflamação = sirene).",
+        "Passo 3: Compreender o papel pedagógico: a metáfora não distorce o conteúdo biológico, mas ancora termos densos (citocinas, macrófagos) em uma narrativa compreensível e memorável.",
+        "Passo 4: A alternativa 'b' explicita com rigor essa transposição didática."
+      ],
+      coreConcept: "Metáfora conceitual (Lakoff & Johnson) e recursos didáticos em textos de divulgação científica.",
+      trapWarning: "Achar que metáforas desvalorizam o texto científico; no ENEM, o uso de analogias é visto como uma competência discursiva essencial para a democratização da ciência."
+    },
+    commonTraps: ["leitura_literal_da_guerra", "desqualificar_a_funcao_pedagogica_da_analogia"],
+    tags: ["divulgacao_cientifica", "metafora_conceitual", "recursos_didaticos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-019",
+    area: "linguagens",
+    competence: 8,
+    skill: 25,
+    topic: "Interpretação de Texto",
+    subtopic: "Variação Linguística e Preconceito Linguístico",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a reflexão de Marcos Bagno em Preconceito Linguístico:\n\n'A língua é como um rio: ela não para, muda de curso, ganha novos afluentes e molda sua paisagem. Pretender que todos falem e escrevam o tempo todo de acordo com a norma-padrão dos gramáticos do século XIX é como tentar conter as águas de um rio caudaloso com as mãos. Não existe falar 'certo' ou 'errado' sob o ponto de vista da ciência linguística: existem variedades adequadas ou inadequadas aos diferentes contextos sociais e comunicativos.'",
+      source: "Marcos Bagno, Preconceito Linguístico: o que é, como se faz (adaptado)"
+    },
+    prompt: "Com base na perspectiva sociolinguística expressa pelo autor, o princípio fundamental que orienta o uso da linguagem em sociedade é o da:",
+    options: [
+      { id: "a", text: "imutabilidade estrutural do idioma, que deve ser preservado rigorosamente contra qualquer interferência de fala popular.", isCorrect: false, distractorRationale: "O texto compara a língua a um rio que 'não para e muda de curso', afirmando a constante mutabilidade do idioma." },
+      { id: "b", text: "adequação comunicativa às exigências do contexto de interação, superando o julgamento preconceituoso de 'erro' absoluto na fala espontânea.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "supremacia da escrita literária clássica como modelo único a ser imposto em todas as conversas do cotidiano familiar.", isCorrect: false, distractorRationale: "O autor critica veementemente a imposição da norma arcaica sobre os usos cotidianos vivos da língua." },
+      { id: "d", text: "eliminação compulsória do ensino da norma-padrão nas escolas públicas para nivelar os dialetos regionais.", isCorrect: false, distractorRationale: "A linguística não defende extinguir a norma-padrão, mas ensiná-la como uma ferramenta social a mais sem desvalorizar as demais variedades." },
+      { id: "e", text: "condenação de neologismos gerados pela internet por corromperem a integridade etimológica das palavras.", isCorrect: false, distractorRationale: "A sociolinguística acolhe a inovação lexical como parte natural da evolução dinâmica da língua." }
+    ],
+    detailedExplanation: {
+      summary: "A sociolinguística moderna substitui a dicotomia normativa 'certo vs errado' pelo paradigma funcional da 'adequação contextual'.",
+      stepByStep: [
+        "Passo 1: Compreender a crítica ao purismo: a língua viva é dinâmica, histórica e heterogênea.",
+        "Passo 2: Reconhecer a distinção entre erro formal e adequação pragmática: o que se considera 'desvio' na norma culta escrita é, em muitos contextos orais populares, uma regra perfeitamente sistematizada de variação.",
+        "Passo 3: Identificar a proposta pedagógica do autor: saber utilizar a norma culta quando a situação formal exigir (como numa redação do ENEM ou entrevista de emprego), mas respeitar as variedades regionais e informais nos ambientes compatíveis.",
+        "Passo 4: Concluir que a alternativa 'b' sintetiza o conceito científico de adequação comunicativa."
+      ],
+      coreConcept: "Variação linguística, combate ao preconceito linguístico e adequação discursiva segundo a sociolinguística.",
+      trapWarning: "Achar que combater o preconceito linguístico significa dizer que não se deve aprender a norma culta na escola. O domínio da norma é cidadania; o erro é estigmatizar quem não teve acesso a ela."
+    },
+    commonTraps: ["confundir_combate_ao_preconceito_com_abandono_da_norma_padrao"],
+    tags: ["variacao_linguistica", "preconceito_linguistico", "sociolinguistica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-INT-020",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Interpretação de Texto",
+    subtopic: "Discurso Institucional e Carta Aberta",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de uma carta aberta assinada pela Sociedade Brasileira para o Progresso da Ciência (SBPC) endereçada às autoridades federais:\n\n'Diante dos sucessivos contingenciamentos orçamentários que asfixiam os programas de bolsas de pós-graduação e a manutenção de laboratórios estratégicos, os signatários deste documento vêm a público manifestar profunda consternação e alertar: desmantelar a ciência nacional não é uma economia de gastos; é hipotecar o futuro da soberania tecnológica e da saúde pública de nossa população.'",
+      source: "Manifesto Público SBPC"
+    },
+    prompt: "Considerando as convenções e a intencionalidade discursiva do gênero textual 'carta aberta', o texto utiliza a primeira pessoa do plural ('vêm a público manifestar', 'nossa população') com o objetivo de:",
+    options: [
+      { id: "a", text: "ocultar a identidade dos pesquisadores para protegê-los de retaliações jurídicas e financeiras imediatas.", isCorrect: false, distractorRationale: "O texto é assinado pela entidade e seus membros ('signatários'), com autoria declarada abertamente." },
+      { id: "b", text: "conferir legitimidade coletiva à denúncia e engajar a sociedade civil como coparticipante da urgência do apelo político.", isCorrect: true, distractorRationale: null },
+      { id: "c", text: "confessar o desinteresse dos cientistas em buscar financiamento junto a empresas privadas da indústria farmacêutica.", isCorrect: false, distractorRationale: "O manifesto reivindica verbas públicas soberanas de pesquisa, sem relação com desinteresse corporativo." },
+      { id: "d", text: "limitar a circulação do documento exclusivamente aos gabinetes fechados do Poder Legislativo.", isCorrect: false, distractorRationale: "O gênero 'carta aberta' é por definição publicado na imprensa e redes para ampla visibilidade popular." },
+      { id: "e", text: "adotar um tom de conversa informal e descontraída próprio das cartas íntimas de correspondência familiar.", isCorrect: false, distractorRationale: "O registro é altamente formal, grave e institucional, condizente com um manifesto público oficial." }
+    ],
+    detailedExplanation: {
+      summary: "A carta aberta é um gênero discursivo de protesto público em que a primeira pessoa do plural corporifica uma coletividade mobilizada para sensibilizar tanto o destinatário oficial quanto a opinião pública.",
+      stepByStep: [
+        "Passo 1: Reconhecer as características da Carta Aberta: destinatário nominal (autoridades), mas leitor real múltiplo (a sociedade civil em geral).",
+        "Passo 2: Analisar a estratégia enunciativa da primeira pessoa do plural ('nós/vêm a público'): confere autoridade corporativa, peso moral e representatividade unificada de uma classe.",
+        "Passo 3: Ao incluir 'nossa população', o texto convoca o cidadão comum a perceber que a perda científica impactará sua própria saúde e qualidade de vida.",
+        "Passo 4: Portanto, o objetivo é construir engajamento coletivo e conferir máxima gravidade política à denúncia pública."
+      ],
+      coreConcept: "Gênero textual Carta Aberta, estratégias de enunciação coletiva e mobilização pública no ENEM.",
+      trapWarning: "Confundir carta aberta com carta pessoal ou carta de reclamação individual restrita."
+    },
+    commonTraps: ["confundir_carta_aberta_com_carta_pessoal", "ignorar_a_intencionalidade_coletiva_do_genero"],
+    tags: ["carta_aberta", "generos_textuais", "discurso_coletivo", "argumentacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
 
