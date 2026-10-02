@@ -54,7 +54,7 @@ export const QUESTIONS_MECANICA = [
     requiresCalculation: false,
     requiresInterpretation: true,
     context: {
-      supportText: "O teleférico de uma serra turística transporta cabines de passageiros sustentadas por cabos de aço. Imagine a cabine lotada de passageiros, subindo em linha reta com velocidade constante após ter vencido a inércia inicial da partida.",
+      supportText: "O sistema de transporte por teleférico de uma estação de pesquisa meteorológica em área montanhosa transporta cabines com instrumentos e técnicos sustentadas por cabos de aço. A cabine sobe em linha reta com velocidade constante após ter vencido a inércia inicial da partida.",
       source: "Inspirada em ENEM"
     },
     prompt: "Durante a subida, enquanto a cabine se move em linha reta com velocidade escalar constante, a relação entre as forças que atuam nela (peso total P e força de tração T dos cabos, desprezando a resistência do ar) é explicada por qual princípio da Física?",
@@ -423,5 +423,428 @@ export const QUESTIONS_MECANICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-011",
+    area: "natureza",
+    competence: 6,
+    skill: 20,
+    topic: "Mecânica",
+    subtopic: "Conservação da Energia Mecânica",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema de esteiras gravitacionais de um centro de distribuição farmacêutica hospitalar, um carrinho com medicamentos de massa total 40 kg parte do repouso do topo de uma rampa suave a uma altura vertical de 5,0 metros em relação ao piso plano horizontal. Despreze quaisquer forças de atrito ou resistência do ar durante o trajeto e adote a aceleração da gravidade g = 10 m/s².",
+      source: "ENEM / Energia Mecânica e Sistemas Conservativos"
+    },
+    prompt: "A velocidade escalar alcançada pelo carrinho ao atingir a base plana inferior da rampa é de:",
+    options: [
+      { id: "a", text: "10 m/s", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "20 m/s", isCorrect: false, distractorRationale: "Esqueceu de extrair a raiz quadrada na relação v = √(2gh), calculando v = 2gh / 5." },
+      { id: "c", text: "14 m/s", isCorrect: false, distractorRationale: "Calculou com base em 200 sob a raiz quadrada por erro aritmético." },
+      { id: "d", text: "5 m/s", isCorrect: false, distractorRationale: "Dividiu a altura pela metade e igualou à velocidade." },
+      { id: "e", text: "25 m/s", isCorrect: false, distractorRationale: "Multiplicou a aceleração da gravidade pela metade da altura." }
+    ],
+    detailedExplanation: {
+      summary: "Em um sistema conservativo sem forças dissipativas, a energia mecânica total se conserva: E_mec(topo) = E_mec(base).",
+      stepByStep: [
+        "No topo da rampa: o carrinho parte do repouso (v₀ = 0), logo possui apenas energia potencial gravitacional: E_p = m · g · h.",
+        "Na base da rampa: a altura é nula (h = 0), logo toda a energia foi convertida em energia cinética: E_c = (1/2) · m · v².",
+        "Igualando as energias: m · g · h = (1/2) · m · v².",
+        "Cancelando a massa m em ambos os lados: g · h = v² / 2  =>  v² = 2 · g · h.",
+        "Substituindo os valores: v² = 2 × 10 m/s² × 5,0 m = 100 m²/s².",
+        "Calculando a velocidade: v = √100 = 10 m/s."
+      ],
+      coreConcept: "Conservação da Energia Mecânica (Transformação de Gravitacional em Cinética)",
+      trapWarning: "Observe que a velocidade final não depende da massa do carrinho nem da inclinação da rampa, apenas da altura vertical h!"
+    },
+    commonTraps: ["esquecer de tirar a raiz quadrada de 2gh", "achar que a massa de 40 kg altera a velocidade final"],
+    tags: ["energia mecanica", "energia cinetica", "energia potencial", "conservacao da energia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-012",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Mecânica",
+    subtopic: "Atrito Estático e Cinético em Superfície Horizontal",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para deslocar um gerador de emergência de massa 100 kg sobre o piso de concreto horizontal de uma unidade básica de saúde, a equipe de apoio técnico aplica forças horizontais. O contato entre a base do equipamento e o solo apresenta coeficiente de atrito estático μ_e = 0,50 e coeficiente de atrito cinético μ_c = 0,40. Adote g = 10 m/s².",
+      source: "ENEM / Leis de Newton e Forças de Atrito"
+    },
+    prompt: "A intensidade da força horizontal mínima necessária para tirar o gerador do repouso e a intensidade da força para mantê-lo deslizando em movimento retilíneo uniforme (velocidade constante) são, respectivamente:",
+    options: [
+      { id: "a", text: "500 N e 400 N", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "400 N e 500 N", isCorrect: false, distractorRationale: "Inverteu os coeficientes de atrito (o atrito estático máximo é sempre maior que o cinético)." },
+      { id: "c", text: "500 N e 500 N", isCorrect: false, distractorRationale: "Assumiu que a força para manter o movimento é idêntica à força necessária para rompimento da inércia estática." },
+      { id: "d", text: "1 000 N e 400 N", isCorrect: false, distractorRationale: "Confundiu a força normal (peso de 1 000 N) com a força de atrito estático." },
+      { id: "e", text: "50 N e 40 N", isCorrect: false, distractorRationale: "Esqueceu de multiplicar a massa pela aceleração da gravidade g." }
+    ],
+    detailedExplanation: {
+      summary: "A força de atrito estático máxima (F_at,e = μ_e · N) determina a força para iniciar o movimento; o atrito cinético (F_at,c = μ_c · N) equilibra a força motora na velocidade constante.",
+      stepByStep: [
+        "Força Normal de apoio no plano horizontal: N = Peso = m · g = 100 kg × 10 m/s² = 1 000 N.",
+        "Força mínima para iniciar o movimento (destacar da inércia): deve superar o atrito estático máximo: F_início = F_at,e = μ_e · N = 0,50 × 1 000 N = 500 N.",
+        "Força para manter o corpo em MRU (velocidade constante, aceleração nula): a força resultante deve ser zero, logo a força motora equilibra o atrito cinético: F_manter = F_at,c = μ_c · N = 0,40 × 1 000 N = 400 N."
+      ],
+      coreConcept: "Atrito Estático Máximo vs. Atrito Cinético e Primeira Lei de Newton",
+      trapWarning: "O atrito estático máximo é sempre superior ao cinético (μ_e > μ_c): é mais difícil começar a empurrar do que manter empurrando!"
+    },
+    commonTraps: ["achar que μ_c e maior que μ_e", "usar 100 kg diretamente sem multiplicar por g = 10"],
+    tags: ["atrito estatico", "atrito cinetico", "leis de newton", "dinamica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-013",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Mecânica",
+    subtopic: "Teorema do Impulso e Segurança Veicular (Airbag)",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Os airbags e as zonas de deformação estrutural programada da carroceria são inovações da engenharia de tráfego que reduziram dramaticamente a mortalidade em colisões frontais. Em um teste de impacto balístico veicular, um motorista de 70 kg sofre desaceleração abrupta, passando de 20 m/s (72 km/h) ao repouso completo (0 m/s). O Teorema do Impulso estabelece que I = F_média · Δt = ΔQ, onde ΔQ é a variação da quantidade de movimento do ocupante.",
+      source: "ENEM / Física Aplicada e Segurança no Trânsito"
+    },
+    prompt: "A atuação do airbag reduz a gravidade dos traumas torácicos e cranianos do passageiro porque:",
+    options: [
+      { id: "a", text: "prolonga o tempo de frenagem (Δt) durante a desaceleração do corpo, diminuindo a intensidade da força média de impacto para uma mesma variação de quantidade de movimento.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "reduz a zero a variação da quantidade de movimento do corpo ao anular a massa inercial do passageiro.", isCorrect: false, distractorRationale: "A variação de quantidade de movimento (ΔQ = m·Δv) é rigorosamente fixa pela velocidade e massa do motorista." },
+      { id: "c", text: "converte toda a energia mecânica do veículo em energia gravitacional estática instantânea.", isCorrect: false, distractorRationale: "A energia é dissipada em deformação térmica e mecânica, sem ganho de energia gravitacional." },
+      { id: "d", text: "acelera o passageiro para trás antes da colisão, neutralizando a inércia da cabeça.", isCorrect: false, distractorRationale: "O airbag não puxa o motorista para trás; ele atua como uma barreira deformável inflável que amortece o avanço do corpo." },
+      { id: "e", text: "aumenta a taxa de aceleração sobre os órgãos internos para acelerar a ejeção do passageiro.", isCorrect: false, distractorRationale: "Acelerações elevadas causam ruptura de artérias e lesões fatais; a meta é exatamente DIMINUIR a aceleração." }
+    ],
+    detailedExplanation: {
+      summary: "O airbag aumenta o tempo de contato (Δt), reduzindo a força média (F = ΔQ / Δt) suportada pelo organismo para um mesmo impulso.",
+      stepByStep: [
+        "A variação da quantidade de movimento do passageiro é constante: ΔQ = m · (v_final - v_inicial) = 70 × (0 - 20) = -1 400 kg·m/s.",
+        "Pelo Teorema do Impulso: I = F_média · Δt = ΔQ  =>  F_média = |ΔQ| / Δt.",
+        "Se o motorista atinge o volante rígido, a colisão dura milésimos de segundo (ex: Δt = 0,01 s), gerando força colossal: F_média = 1 400 / 0,01 = 140 000 N (letal).",
+        "Ao colidir contra a bolsa do airbag inflada que se esvazia progressivamente, o tempo de frenagem é aumentado dez vezes (ex: Δt = 0,10 s), reduzindo a força média para 14 000 N (suportável com cinto de segurança)."
+      ],
+      coreConcept: "Teorema do Impulso (I = F·Δt = ΔQ) e Mecanismos de Amortecimento",
+      trapWarning: "Lembre-se: o airbag NÃO diminui o impulso total (pois a parada é a mesma); ele diminui a FORÇA MÉDIA ao aumentar o TEMPO de impacto!"
+    },
+    commonTraps: ["achar que o airbag anula o impulso total", "confundir diminuicao de forca com reducao da variacao de velocidade"],
+    tags: ["teorema do impulso", "quantidade de movimento", "airbag", "seguranca veicular", "forca media"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-014",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Hidrostática: Princípio de Arquimedes e Empuxo",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para monitorar o nível de água potável em uma cisterna hospitalar de emergência, instala-se um sensor mecânico acoplado a uma boia esférica selada de volume total V = 0,020 m³ e massa total 6,0 kg. A boia flutua em equilíbrio estável na superfície da água doce (densidade da água d = 1 000 kg/m³ e aceleração da gravidade g = 10 m/s²).",
+      source: "ENEM / Hidrostática e Princípio de Arquimedes"
+    },
+    prompt: "A fração percentual do volume total da boia que permanece submersa na água durante o equilíbrio estático de flutuação é igual a:",
+    options: [
+      { id: "a", text: "30%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "70%", isCorrect: false, distractorRationale: "Calculou a fração do volume que fica emersa (fora da água), em vez da submersa." },
+      { id: "c", text: "60%", isCorrect: false, distractorRationale: "Confundiu a massa de 6,0 kg diretamente com 60% sem calcular a razão com a capacidade volumétrica." },
+      { id: "d", text: "50%", isCorrect: false, distractorRationale: "Assumiu flutuação na metade exata do volume por intuição geométrica." },
+      { id: "e", text: "20%", isCorrect: false, distractorRationale: "Errou a divisão fracionária dividindo 6 por 30." }
+    ],
+    detailedExplanation: {
+      summary: "Na flutuação em equilíbrio hidrostático, o Empuxo é numericamente igual ao Peso do corpo (E = P), onde E = d_líquido · V_submerso · g.",
+      stepByStep: [
+        "Peso da boia: P = m · g = 6,0 kg × 10 m/s² = 60 N.",
+        "Condição de flutuação em equilíbrio: Empuxo = Peso.",
+        "Fórmula do empuxo de Arquimedes: E = d_água · V_submerso · g.",
+        "Igualando: 1 000 kg/m³ × V_submerso × 10 m/s² = 60 N.",
+        "10 000 · V_submerso = 60  =>  V_submerso = 60 / 10 000 = 0,006 m³.",
+        "Fração percentual submersa: Fração = (V_submerso / V_total) = 0,006 m³ / 0,020 m³ = 6 / 20 = 3 / 10 = 0,30 = 30%."
+      ],
+      coreConcept: "Princípio de Arquimedes, Empuxo e Condição de Flutuação",
+      trapWarning: "Na flutuação, a fração submersa de um corpo homogêneo é simplesmente a razão entre a densidade média do corpo e a densidade do líquido (d_corpo / d_líquido)!"
+    },
+    commonTraps: ["inverter volume emerso e volume submerso", "esquecer de converter a razao em porcentagem"],
+    tags: ["hidrostatica", "empuxo", "arquimedes", "flutuacao", "densidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-015",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Hidrostática: Princípio de Pascal e Prensa Hidráulica",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma maca de centro cirúrgico hospitalar equipada com regulagem hidráulica de altura, a elevação do leito é acionada por um pedal que funciona com base no Princípio de Pascal. O pistão menor acoplado ao pedal possui área de seção transversal A₁ = 10 cm², enquanto o pistão maior que sustenta o leito com o paciente possui área A₂ = 250 cm².",
+      source: "ENEM / Hidrostática e Transmissão de Pressão em Fluidos"
+    },
+    prompt: "Para elevar um leito cuja massa total combinada com o paciente é de 150 kg (peso P = 1 500 N), a intensidade da força mínima perpendicular que o profissional de saúde deve aplicar no pedal do pistão menor é de:",
+    options: [
+      { id: "a", text: "60 N", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "150 N", isCorrect: false, distractorRationale: "Dividiu o peso diretamente pela área do pistão menor." },
+      { id: "c", text: "300 N", isCorrect: false, distractorRationale: "Errou a razão das áreas considerando proporção de 5 para 1." },
+      { id: "d", text: "25 N", isCorrect: false, distractorRationale: "Inverteu a multiplicação na proporção hidráulica." },
+      { id: "e", text: "600 N", isCorrect: false, distractorRationale: "Errou por um fator 10 no produto cruzado." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo Princípio de Pascal, a pressão aplicada em um fluido incompressível confinado transmite-se integralmente a todos os pontos: F₁ / A₁ = F₂ / A₂.",
+      stepByStep: [
+        "Relação fundamental da prensa hidráulica: Pressão 1 = Pressão 2  =>  F₁ / A₁ = F₂ / A₂.",
+        "Identificação das variáveis: Força resistente no leito F₂ = 1 500 N; Área maior A₂ = 250 cm²; Área menor A₁ = 10 cm².",
+        "Substituição na igualdade: F₁ / 10 cm² = 1 500 N / 250 cm².",
+        "Cálculo da pressão: 1 500 / 250 = 6 N/cm².",
+        "Cálculo da força motora F₁: F₁ = 6 N/cm² × 10 cm² = 60 N.",
+        "Vantagem mecânica: o dispositivo multiplica a força em 25 vezes (250 / 10 = 25), permitindo que uma força de apenas 60 N (equivalente a 6 kg) levante 150 kg."
+      ],
+      coreConcept: "Princípio de Pascal, Prensa Hidráulica e Multiplicação de Força",
+      trapWarning: "A força é multiplicada na proporção das áreas, mas o deslocamento do pedal é 25 vezes maior do que a subida do leito (conservação do trabalho)!"
+    },
+    commonTraps: ["esquecer de igualar as pressoes F1/A1 = F2/A2", "inverter as areas maior e menor"],
+    tags: ["principio de pascal", "prensa hidraulica", "hidrostatica", "vantagem mecanica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-016",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Mecânica",
+    subtopic: "Movimento Circular Uniforme e Aceleração Centrípeta",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No laboratório de hematologia de um hemocentro, uma centrífuga de alta rotação é empregada para acelerar a sedimentação celular e separar eritrócitos e plaquetas do plasma líquido. Os tubos de ensaio giram em movimento circular uniforme com raio de trajetória R = 0,10 m (10 cm) em relação ao eixo central, operando a uma frequência estável de 60 rotações por segundo (f = 60 Hz). Adote a aproximação π ≈ 3,0.",
+      source: "ENEM / Cinemática Circular e Dinâmica Centrípeta"
+    },
+    prompt: "A aceleração centrípeta gerada sobre as hemácias na extremidade dos tubos de ensaio é de:",
+    options: [
+      { id: "a", text: "12 960 m/s²", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2 160 m/s²", isCorrect: false, distractorRationale: "Calculou a velocidade escalar linear (v = ω · R) sem elevar a velocidade ao quadrado na aceleração centrípeta." },
+      { id: "c", text: "360 m/s²", isCorrect: false, distractorRationale: "Confundiu a velocidade angular em radianos por segundo (ω = 360 rad/s) com a aceleração centrípeta." },
+      { id: "d", text: "6 480 m/s²", isCorrect: false, distractorRationale: "Esqueceu o fator 2 na fórmula da velocidade angular (usou ω = π·f)." },
+      { id: "e", text: "3 600 m/s²", isCorrect: false, distractorRationale: "Multiplicou a frequência pela gravidade g e raio." }
+    ],
+    detailedExplanation: {
+      summary: "A aceleração centrípeta no movimento circular uniforme é dada por a_c = ω² · R, onde a velocidade angular é ω = 2·π·f.",
+      stepByStep: [
+        "Velocidade angular: ω = 2 · π · f = 2 × 3,0 × 60 Hz = 360 rad/s.",
+        "Aceleração centrípeta: a_c = ω² · R.",
+        "Cálculo do quadrado de ω: 360² = 129 600 rad²/s².",
+        "Multiplicação pelo raio R = 0,10 m: a_c = 129 600 × 0,10 = 12 960 m/s².",
+        "Nota científica: isso corresponde a aproximadamente 1 300 vezes a aceleração da gravidade terrestre (1 300 g), explicando por que a sedimentação ocorre em minutos."
+      ],
+      coreConcept: "Aceleração Centrípeta no Movimento Circular Uniforme (a_c = ω²·R = v²/R)",
+      trapWarning: "Lembre-se de converter o raio para metros (10 cm = 0,10 m) antes de aplicar na fórmula com a frequência em Hz!"
+    },
+    commonTraps: ["usar raio em centimetros obtendo valor cem vezes maior", "esquecer de elevar a velocidade angular ao quadrado"],
+    tags: ["movimento circular", "aceleracao centripeta", "centrifuga", "frequencia e periodo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-017",
+    area: "natureza",
+    competence: 6,
+    skill: 20,
+    topic: "Mecânica",
+    subtopic: "Potência Mecânica e Rendimento de Máquinas",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O elevador de suprimentos de um hospital geral precisa elevar uma carga de insumos de massa m = 400 kg até uma altura vertical de 15 metros em um intervalo de tempo de 20 segundos, mantendo velocidade escalar constante. O motor elétrico que traciona o cabo consome da rede elétrica uma potência total de 4 000 W. Considere a gravidade local g = 10 m/s².",
+      source: "ENEM / Trabalho, Potência Mecânica e Rendimento"
+    },
+    prompt: "A potência mecânica útil desenvolvida pelo motor na elevação dos suprimentos e o rendimento mecânico (η) dessa operação são, respectivamente:",
+    options: [
+      { id: "a", text: "3 000 W e 75%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "4 000 W e 100%", isCorrect: false, distractorRationale: "Assumiu motor ideal sem perdas por atrito ou calor, violando a Segunda Lei da Termodinâmica." },
+      { id: "c", text: "2 000 W e 50%", isCorrect: false, distractorRationale: "Errou o cálculo do trabalho útil considerando altura de 10 metros." },
+      { id: "d", text: "3 000 W e 60%", isCorrect: false, distractorRationale: "Dividiu a potência útil por 5 000 W em vez de 4 000 W." },
+      { id: "e", text: "1 500 W e 37,5%", isCorrect: false, distractorRationale: "Dividiu a potência útil pela metade." }
+    ],
+    detailedExplanation: {
+      summary: "A potência útil é o trabalho contra a gravidade dividido pelo tempo (P_útil = m·g·h / Δt); o rendimento é a razão entre a potência útil e a potência total consumida (η = P_útil / P_total).",
+      stepByStep: [
+        "Trabalho mecânico útil realizado contra a força peso: W = m · g · h = 400 kg × 10 m/s² × 15 m = 60 000 Joules.",
+        "Potência mecânica útil desenvolvida: P_útil = W / Δt = 60 000 J / 20 s = 3 000 Watts (J/s).",
+        "Potência total consumida da rede: P_total = 4 000 W.",
+        "Cálculo do rendimento mecânico: η = P_útil / P_total = 3 000 W / 4 000 W = 3 / 4 = 0,75 = 75%."
+      ],
+      coreConcept: "Potência Mecânica Média e Eficiência Energética de Motores",
+      trapWarning: "Potência total é o que a máquina consome; potência útil é o que realiza trabalho efetivo. O rendimento é sempre menor que 100% nas máquinas reais!"
+    },
+    commonTraps: ["confundir potencia consumida com potencia util", "esquecer de converter a fracao de rendimento em porcentagem"],
+    tags: ["potencia mecanica", "rendimento", "trabalho da forca peso", "energia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-018",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Hidrostática: Teorema de Stevin e Pressão Arterial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na prática clínica, a pressão arterial humana é aferida com o manguito posicionado no braço, rigorosamente no mesmo nível horizontal do coração. Se a medição for realizada com o paciente na posição ereta (em pé) e o manguito for colocado na artéria tibial da perna, a uma profundidade vertical de 1,20 m abaixo do coração, o valor medido será significativamente maior em virtude da coluna de sangue acumulada. Considere a densidade média do sangue d = 1 050 kg/m³, g = 10 m/s² e a equivalência aproximada 1 mmHg ≈ 133 Pa.",
+      source: "ENEM / Hidrostática Aplicada à Biofísica e Medicina"
+    },
+    prompt: "Pelo Teorema Fundamental da Hidrostática (Lei de Stevin: ΔP = d · g · Δh), o acréscimo hidrostático de pressão registrado na artéria da perna em relação ao nível do coração, expresso em mmHg, é de aproximadamente:",
+    options: [
+      { id: "a", text: "95 mmHg", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "126 mmHg", isCorrect: false, distractorRationale: "Dividiu a pressão em Pascals por 100 em vez de converter usando a constante 133 Pa/mmHg." },
+      { id: "c", text: "50 mmHg", isCorrect: false, distractorRationale: "Assumiu altura vertical de apenas 0,60 m." },
+      { id: "d", text: "133 mmHg", isCorrect: false, distractorRationale: "Confundiu o acréscimo de pressão com a constante de conversão barométrica." },
+      { id: "e", text: "20 mmHg", isCorrect: false, distractorRationale: "Subestimou o peso específico da coluna líquida sanguínea." }
+    ],
+    detailedExplanation: {
+      summary: "O Teorema de Stevin estabelece que a diferença de pressão entre dois pontos de um mesmo fluido homogêneo em repouso é ΔP = d · g · Δh.",
+      stepByStep: [
+        "Cálculo da variação de pressão hidrostática em Pascals (N/m²):",
+        "ΔP = d_sangue · g · Δh = 1 050 kg/m³ × 10 m/s² × 1,20 m = 12 600 Pa.",
+        "Conversão para milímetros de mercúrio (1 mmHg ≈ 133 Pa):",
+        "ΔP (em mmHg) = 12 600 Pa / 133 Pa/mmHg ≈ 94,74 mmHg ≈ 95 mmHg.",
+        "Implicação clínica: se a pressão no coração for de 120/80 mmHg, a pressão na artéria do pé de um homem em pé atinge cerca de 215/175 mmHg, demonstrando a necessidade de válvulas venosas e bomba muscular da panturrilha para o retorno venoso!"
+      ],
+      coreConcept: "Teorema de Stevin, Pressão Hidrostática e Fisiologia Cardiovascular",
+      trapWarning: "Lembre-se: em Pascals a unidade é N/m²; para obter mmHg, divida o valor em Pascals por 133!"
+    },
+    commonTraps: ["esquecer de converter Pascals para mmHg", "desconsiderar a aceleracao da gravidade no calculo de Stevin"],
+    tags: ["teorema de stevin", "hidrostatica", "pressao arterial", "biofisica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-019",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Mecânica",
+    subtopic: "Conservação da Quantidade de Movimento em Colisão Inelástica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na pista de acesso aos ambulatórios de um complexo de saúde, uma van de suprimentos de massa m₁ = 2 500 kg trafega em linha reta a 12 m/s e colide na traseira de um carrinho de bagagem hospitalar de massa m₂ = 500 kg que se encontrava inicialmente em repouso sobre o asfalto. Imediatamente após a colisão, os dois veículos engatam-se mecanicamente e passam a se mover juntos na mesma direção e sentido (colisão perfeitamente inelástica).",
+      source: "ENEM / Colisões Mecânicas e Conservação de Movimento"
+    },
+    prompt: "A velocidade escalar do conjunto acoplado imediatamente após o choque e a quantidade de energia cinética dissipada na colisão foram, respectivamente:",
+    options: [
+      { id: "a", text: "10 m/s e 30 000 J", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "12 m/s e 0 J", isCorrect: false, distractorRationale: "Tratou como colisão perfeitamente elástica na qual a velocidade e a energia cinética seriam integralmente conservadas." },
+      { id: "c", text: "8 m/s e 60 000 J", isCorrect: false, distractorRationale: "Errou o cálculo da conservação da quantidade de movimento." },
+      { id: "d", text: "10 m/s e 150 000 J", isCorrect: false, distractorRationale: "Confundiu a energia cinética final restante com a energia cinética dissipada." },
+      { id: "e", text: "6 m/s e 90 000 J", isCorrect: false, distractorRationale: "Dividiu a velocidade inicial pela metade por estimativa arbitrária." }
+    ],
+    detailedExplanation: {
+      summary: "Em qualquer colisão isolada, a quantidade de movimento total se conserva (Q_antes = Q_depois); na colisão perfeitamente inelástica, há a máxima perda de energia cinética em deformação e calor.",
+      stepByStep: [
+        "Quantidade de movimento inicial: Q_antes = m₁ · v₁ + m₂ · v₂ = 2 500 × 12 + 500 × 0 = 30 000 kg·m/s.",
+        "Quantidade de movimento final (massa acoplada): Q_depois = (m₁ + m₂) · V_final = (2 500 + 500) · V_final = 3 000 · V_final.",
+        "Igualando pela conservação do momento: 3 000 · V_final = 30 000  =>  V_final = 10 m/s.",
+        "Energia cinética inicial: E_c,antes = (1/2) · 2 500 · 12² = 1 250 × 144 = 180 000 Joules.",
+        "Energia cinética final: E_c,depois = (1/2) · 3 000 · 10² = 1 500 × 100 = 150 000 Joules.",
+        "Energia cinética dissipada na deformação plástica: ΔE = 180 000 J - 150 000 J = 30 000 Joules."
+      ],
+      coreConcept: "Colisão Perfeitamente Inelástica e Balanço de Energia Cinética",
+      trapWarning: "Em colisões inelásticas, a quantidade de movimento SEMPRE se conserva, mas a energia cinética NUNCA se conserva (parte vira calor e amassamento dos veículos)!"
+    },
+    commonTraps: ["achar que energia cinetica se conserva em colisao inelastica", "confundir energia final com energia perdida"],
+    tags: ["colisao inelastica", "quantidade de movimento", "energia cinetica", "dinamica impulsiva"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-020",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Mecânica",
+    subtopic: "Cinemática Vetorial: Lançamento Oblíquo no Vácuo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma simulação de lançamento de cápsulas de suprimentos de socorro médico em terrenos acidentados, um canhão pneumático posicionado no solo plano dispara um projétil com velocidade inicial de módulo v₀ = 50 m/s, sob um ângulo de inclinação de 30° em relação à linha horizontal do solo. Despreze a resistência do ar e adote g = 10 m/s², sen 30° = 0,50 e cos 30° ≈ 0,87.",
+      source: "ENEM / Lançamento de Projéteis e Cinemática Vetorial"
+    },
+    prompt: "A altura máxima vertical (H_máx) alcançada pela cápsula e o tempo total de voo (T_voo) até o impacto com o solo plano são, respectivamente:",
+    options: [
+      { id: "a", text: "31,25 m e 5,0 s", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "62,50 m e 2,5 s", isCorrect: false, distractorRationale: "Esqueceu o fator 2 no denominador da fórmula da altura máxima e utilizou apenas o tempo de subida." },
+      { id: "c", text: "125,0 m e 10,0 s", isCorrect: false, distractorRationale: "Utilizou a velocidade total de 50 m/s no eixo vertical sem multiplicar por sen 30°." },
+      { id: "d", text: "31,25 m e 2,5 s", isCorrect: false, distractorRationale: "Calculou a altura correta, mas informou apenas o tempo de subida até o vértice em vez do tempo total de voo." },
+      { id: "e", text: "25,00 m e 5,0 s", isCorrect: false, distractorRationale: "Errou a potenciação na fórmula de Torricelli vertical." }
+    ],
+    detailedExplanation: {
+      summary: "O lançamento oblíquo decompõe-se em Movimento Uniforme (MRU) na horizontal e Movimento Uniformemente Variado (MRUV) na vertical.",
+      stepByStep: [
+        "Decomposição da velocidade inicial nos eixos cartesianos:",
+        "Eixo Vertical (Y): v₀y = v₀ · sen 30° = 50 m/s × 0,50 = 25 m/s.",
+        "Eixo Horizontal (X): v₀x = v₀ · cos 30° = 50 m/s × 0,87 = 43,5 m/s.",
+        "Tempo de subida até a altura máxima (onde v_y = 0): v_y = v₀y - g · t_subida  =>  0 = 25 - 10 · t_subida  =>  t_subida = 2,5 s.",
+        "Tempo total de voo em solo nivelado: T_voo = 2 · t_subida = 2 × 2,5 s = 5,0 segundos.",
+        "Altura máxima por Torricelli vertical: v_y² = v₀y² - 2 · g · H_máx  =>  0 = 25² - 2 × 10 × H_máx.",
+        "625 = 20 · H_máx  =>  H_máx = 625 / 20 = 31,25 metros."
+      ],
+      coreConcept: "Lançamento Oblíquo no Vácuo e Princípio da Independência dos Movimentos de Galileu",
+      trapWarning: "Cuidado: o tempo total de voo até o solo é o DOBRO do tempo de subida (subida + descida simétricas em solo plano)!"
+    },
+    commonTraps: ["usar o tempo de subida como tempo total de voo", "esquecer de decompor a velocidade no eixo vertical"],
+    tags: ["lancamento obliquo", "cinematica vetorial", "altura maxima", "tempo de voo", "galileu"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

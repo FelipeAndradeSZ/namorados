@@ -458,5 +458,447 @@ export const QUESTIONS_GEOMETRIA_ANALITICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-011",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Equação Reduzida da Reta e Coeficiente Angular",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema de calibração espacial de um acelerador linear para radioterapia oncológica, um feixe de elétrons colimado desloca-se em linha reta ao longo de um plano de coordenadas cartesianas, passando exatamente pelos sensores situados nos pontos A(1, 4) e B(5, 12), com coordenadas em centímetros.",
+      source: "ENEM / Geometria Analítica e Equações da Reta"
+    },
+    prompt: "A equação reduzida da reta que descreve a trajetória retilínea desse feixe terapêutico de radiação é:",
+    options: [
+      { id: "a", text: "y = 2x + 2", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "y = 2x + 4", isCorrect: false, distractorRationale: "Utilizou a ordenada do ponto A como coeficiente linear sem ajustar para x = 0." },
+      { id: "c", text: "y = 4x + 2", isCorrect: false, distractorRationale: "Calculou a inclinação errada dividindo a variação vertical por 2." },
+      { id: "d", text: "y = 0,5x + 3,5", isCorrect: false, distractorRationale: "Inverteu a fórmula do coeficiente angular calculando Δx / Δy." },
+      { id: "e", text: "y = 2x - 2", isCorrect: false, distractorRationale: "Errou o sinal na passagem dos termos na equação fundamental." }
+    ],
+    detailedExplanation: {
+      summary: "O coeficiente angular é m = (y₂ - y₁) / (x₂ - x₁); a equação reduzida é dada por y - y₀ = m·(x - x₀) => y = mx + n.",
+      stepByStep: [
+        "Cálculo do coeficiente angular (declividade m):",
+        "m = (y_B - y_A) / (x_B - x_A) = (12 - 4) / (5 - 1) = 8 / 4 = 2.",
+        "Aplicação na equação fundamental da reta usando o ponto A(1, 4):",
+        "y - y_A = m · (x - x_A)  =>  y - 4 = 2 · (x - 1).",
+        "Distribuindo: y - 4 = 2x - 2.",
+        "Isolando y (forma reduzida): y = 2x - 2 + 4  =>  y = 2x + 2.",
+        "Verificação com o ponto B(5, 12): y = 2(5) + 2 = 10 + 2 = 12 (correto!)."
+      ],
+      coreConcept: "Coeficiente Angular (m = Δy/Δx) e Equação Reduzida da Reta (y = mx + n)",
+      trapWarning: "Cuidado: coeficiente angular é variação de Y sobre variação de X (Δy/Δx), e nunca o contrário!"
+    },
+    commonTraps: ["inverter a razao do coeficiente angular (Δx/Δy)", "esquecer de ajustar o coeficiente linear ao isolar y"],
+    tags: ["equacao da reta", "coeficiente angular", "geometria analitica", "radioterapia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-012",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Retas Perpendiculares e Ortogonalidade no Plano",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No projeto de drenagem de efluentes pluviais de um novo pavilhão de isolamento biológico hospitalar, a tubulação mestra é representada no plano cadastral pela reta de equação geral r: 2x - 3y + 6 = 0. Uma galeria de escoamento secundária ortogonal (perpendicular) à tubulação mestra deve ser instalada passando exatamente pelo ponto P(4, 1).",
+      source: "ENEM / Geometria Analítica e Condição de Perpendicularismo"
+    },
+    prompt: "A equação geral da reta que define o alinhamento dessa galeria secundária de escoamento é:",
+    options: [
+      { id: "a", text: "3x + 2y - 14 = 0", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2x - 3y - 5 = 0", isCorrect: false, distractorRationale: "Essa é a equação de uma reta paralela (mesma inclinação 2/3), não perpendicular." },
+      { id: "c", text: "3x - 2y - 10 = 0", isCorrect: false, distractorRationale: "Inverteu a fração do coeficiente angular mas esqueceu de trocar o sinal (usou m = +3/2 em vez de -3/2)." },
+      { id: "d", text: "2x + 3y - 11 = 0", isCorrect: false, distractorRationale: "Inverteu apenas os coeficientes de forma incorreta sem balancear pelo ponto P." },
+      { id: "e", text: "3x + 2y + 14 = 0", isCorrect: false, distractorRationale: "Errou o sinal do termo independente C." }
+    ],
+    detailedExplanation: {
+      summary: "Duas retas não verticais são perpendiculares se, e somente se, o produto de seus coeficientes angulares for igual a -1: m_s = -1 / m_r.",
+      stepByStep: [
+        "1. Coeficiente angular da reta mestra r (2x - 3y + 6 = 0):",
+        "Isolando y: 3y = 2x + 6  =>  y = (2/3)x + 2. Logo, m_r = 2/3.",
+        "2. Coeficiente angular da reta perpendicular s:",
+        "m_s = -1 / m_r = -1 / (2/3) = -3/2.",
+        "3. Equação da reta s passando pelo ponto P(4, 1):",
+        "y - 1 = (-3/2) · (x - 4).",
+        "Multiplicando ambos os lados por 2: 2(y - 1) = -3(x - 4)  =>  2y - 2 = -3x + 12.",
+        "Reorganizando na forma geral (Ax + By + C = 0): 3x + 2y - 14 = 0."
+      ],
+      coreConcept: "Condição de Perpendicularismo entre Retas (m₁ · m₂ = -1)",
+      trapWarning: "Para ser perpendicular, inverta o valor E troque o sinal! O oposto e inverso de 2/3 é -3/2."
+    },
+    commonTraps: ["esquecer de inverter o sinal (usar 3/2 em vez de -3/2)", "achar que retas perpendiculares tem a mesma inclinacao"],
+    tags: ["retas perpendiculares", "ortogonalidade", "coeficiente angular", "geometria analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-013",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Distância de Ponto a Reta",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma planta baixa de segurança acústica de um centro de terapia intensiva pediátrico, um compressor de vácuo está instalado no ponto G(1, 2) do plano cartesiano. A barreira acústica de proteção mais próxima estende-se linearmente sobre a reta descrita pela equação geral 4x + 3y + 15 = 0, com as coordenadas expressas em metros.",
+      source: "ENEM / Geometria Analítica e Distância Ponto-Reta"
+    },
+    prompt: "A distância euclidiana mais curta entre o compressor ruidoso no ponto G e a barreira acústica é de:",
+    options: [
+      { id: "a", text: "5,0 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2,5 metros", isCorrect: false, distractorRationale: "Dividiu o numerador por 10 em vez de 5." },
+      { id: "c", text: "25,0 metros", isCorrect: false, distractorRationale: "Calculou apenas o módulo do numerador |Ax₀ + By₀ + C| = 25, esquecendo de dividir pela raiz de A² + B²." },
+      { id: "d", text: "4,0 metros", isCorrect: false, distractorRationale: "Considerou apenas a componente horizontal da distância." },
+      { id: "e", text: "7,5 metros", isCorrect: false, distractorRationale: "Errou a potenciação dos coeficientes A e B no denominador." }
+    ],
+    detailedExplanation: {
+      summary: "A menor distância de um ponto P(x₀, y₀) a uma reta Ax + By + C = 0 é dada por d = |Ax₀ + By₀ + C| / √(A² + B²).",
+      stepByStep: [
+        "Ponto: x₀ = 1, y₀ = 2. Coeficientes da reta: A = 4, B = 3, C = 15.",
+        "Cálculo do numerador em módulo:",
+        "|Ax₀ + By₀ + C| = |4(1) + 3(2) + 15| = |4 + 6 + 15| = |25| = 25.",
+        "Cálculo do denominador (norma do vetor normal):",
+        "√(A² + B²) = √(4² + 3²) = √(16 + 9) = √25 = 5.",
+        "Cálculo da distância perpendicular mínima:",
+        "d = 25 / 5 = 5,0 metros."
+      ],
+      coreConcept: "Fórmula da Distância de Ponto a Reta no Plano Cartesiano",
+      trapWarning: "O numerador é SEMPRE em módulo (a distância nunca é negativa) e o denominador é √(A² + B²), e NÃO √(x² + y²)!"
+    },
+    commonTraps: ["esquecer de dividir por √(A² + B²)", "usar as coordenadas do ponto dentro da raiz no denominador"],
+    tags: ["distancia ponto a reta", "geometria analitica", "acustica hospitalar", "pitagoras"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-014",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Baricentro e Centro de Massa de Triângulos",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para otimizar o tempo de resposta e o alcance de sinais de telemedicina entre três postos de saúde da família localizados nos vértices de um triângulo no mapa municipal: Posto A(2, 4), Posto B(8, 2) e Posto C(5, 9), com coordenadas cartesianas em quilômetros. A central de roteamento de dados deve ser instalada exatamente no baricentro geométrico (centro de gravidade) desse triângulo.",
+      source: "ENEM / Geometria Analítica e Pontos Notáveis do Triângulo"
+    },
+    prompt: "As coordenadas cartesianas do ponto ideal de instalação da central de roteamento são:",
+    options: [
+      { id: "a", text: "(5, 5)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "(7, 5)", isCorrect: false, distractorRationale: "Somou apenas os postos A e B e dividiu por 2, calculando o ponto médio do lado em vez do baricentro dos 3 vértices." },
+      { id: "c", text: "(4, 6)", isCorrect: false, distractorRationale: "Errou a média aritmética das abscissas e ordenadas." },
+      { id: "d", text: "(5, 6)", isCorrect: false, distractorRationale: "Errou a soma das ordenadas (4 + 2 + 9 = 15, e 15 / 3 = 5, não 6)." },
+      { id: "e", text: "(6, 5)", isCorrect: false, distractorRationale: "Inverteu os valores parciais das coordenadas." }
+    ],
+    detailedExplanation: {
+      summary: "As coordenadas do baricentro G(x_G, y_G) de um triângulo são as médias aritméticas simples das coordenadas de seus três vértices: x_G = (x_A + x_B + x_C) / 3 e y_G = (y_A + y_B + y_C) / 3.",
+      stepByStep: [
+        "Cálculo da abscissa do baricentro:",
+        "x_G = (2 + 8 + 5) / 3 = 15 / 3 = 5.",
+        "Cálculo da ordenada do baricentro:",
+        "y_G = (4 + 2 + 9) / 3 = 15 / 3 = 5.",
+        "Portanto, o baricentro situa-se no ponto G(5, 5)."
+      ],
+      coreConcept: "Baricentro do Triângulo no Plano Cartesiano",
+      trapWarning: "Lembre-se: no ponto médio divide-se por 2 (dois pontos); no baricentro do triângulo divide-se SEMPRE por 3 (três vértices)!"
+    },
+    commonTraps: ["dividir por 2 em vez de 3", "confundir baricentro com incentro ou circuncentro"],
+    tags: ["baricentro", "triangulo", "ponto medio", "media aritmetica", "geometria analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-015",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Área de Polígonos por Coordenadas (Método do Determinante)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No zoneamento ambiental de bacias hidrográficas, uma reserva florestal de preservação permanente de nascentes possui formato triangular, com seus vértices delimitados no plano cartográfico pelos marcos P(1, 1), Q(7, 3) e R(3, 7), com coordenadas em quilômetros.",
+      source: "ENEM / Geometria Analítica e Áreas no Plano"
+    },
+    prompt: "A área territorial delimitada por essa reserva ecológica florestal, expressa em quilômetros quadrados (km²), é de:",
+    options: [
+      { id: "a", text: "16 km²", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "32 km²", isCorrect: false, distractorRationale: "Esqueceu de dividir o módulo do determinante por 2 na fórmula da área do triângulo (Área = |D| / 2)." },
+      { id: "c", text: "24 km²", isCorrect: false, distractorRationale: "Errou a expansão das diagonais secundárias do determinante." },
+      { id: "d", text: "12 km²", isCorrect: false, distractorRationale: "Subtraiu 4 da área correta por erro operacional." },
+      { id: "e", text: "8 km²", isCorrect: false, distractorRationale: "Dividiu por 4 em vez de 2." }
+    ],
+    detailedExplanation: {
+      summary: "A área de um triângulo no plano cartesiano é dada pela metade do valor absoluto do determinante das coordenadas de seus vértices: Área = (1/2) · |D|.",
+      stepByStep: [
+        "Montagem da matriz 3x3 das coordenadas com a última coluna unitária:",
+        "D = | 1  1  1 |",
+        "    | 7  3  1 |",
+        "    | 3  7  1 |",
+        "Cálculo do determinante pela regra de Sarrus:",
+        "Diagonais principais: (1·3·1) + (1·1·3) + (1·7·7) = 3 + 3 + 49 = 55.",
+        "Diagonais secundárias: (1·3·3) + (1·7·1) + (1·7·1) = 9 + 7 + 7 = 23.",
+        "Determinante: D = 55 - 23 = 32.",
+        "Cálculo da área triangular: Área = |D| / 2 = 32 / 2 = 16 km²."
+      ],
+      coreConcept: "Cálculo de Área Triangular por Determinante de Coordenadas Cartesianas",
+      trapWarning: "NUNCA esqueça de dividir o determinante por 2! O determinante calcula a área do paralelogramo formado pelos vetores, o triângulo é a metade."
+    },
+    commonTraps: ["esquecer de dividir por 2 no final", "errar os sinais das diagonais secundarias no determinante"],
+    tags: ["area de triangulo", "determinante", "geometria analitica", "reserva ambiental"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-016",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Posição Relativa entre Reta e Circunferência",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A área de monitoramento meteorológico de um radar hospitalar de previsão de temporais é delimitada por uma circunferência centrada na origem com raio de 5 km, descrita pela equação x² + y² = 25. Uma linha de cabeamento de fibra óptica de emergência segue retilínea no mapa conforme a reta de equação y = x + 7.",
+      source: "ENEM / Geometria Analítica: Cônicas e Retas"
+    },
+    prompt: "Com base nas equações cartesianas, a posição geométrica relativa entre a reta do cabeamento e a circunferência do radar é classificada como:",
+    options: [
+      { id: "a", text: "secante, interceptando a circunferência em dois pontos distintos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "tangente, tocando a circunferência em um único ponto de contato.", isCorrect: false, distractorRationale: "Para ser tangente, a distância do centro à reta deveria ser rigorosamente igual ao raio (d = 5), mas calculou-se d ≈ 4,95 < 5." },
+      { id: "c", text: "externa, não possuindo nenhum ponto de contato com a área circular.", isCorrect: false, distractorRationale: "Para ser externa, a distância do centro deveria ser estritamente maior que 5 km." },
+      { id: "d", text: "concêntrica, compartilhando o mesmo centro da circunferência.", isCorrect: false, distractorRationale: "Uma reta não pode ser concêntrica a um círculo; esse termo se aplica a círculos que compartilham o mesmo centro." },
+      { id: "e", text: "assintótica, aproximando-se infinitamente sem nunca tocar a curva.", isCorrect: false, distractorRationale: "Círculos não possuem assíntotas no plano euclidiano (hipérboles possuem)." }
+    ],
+    detailedExplanation: {
+      summary: "A posição relativa é determinada comparando a distância do centro à reta com o raio R: d < R => secante; d = R => tangente; d > R => externa.",
+      stepByStep: [
+        "1. Dados da circunferência: centro C(0, 0) e raio R = √25 = 5 km.",
+        "2. Equação geral da reta: x - y + 7 = 0 (com A = 1, B = -1, C = 7).",
+        "3. Distância do centro C(0, 0) à reta:",
+        "d = |1(0) - 1(0) + 7| / √(1² + (-1)²) = 7 / √2 = 7 / 1,414 ≈ 4,95 km.",
+        "4. Como d (4,95 km) é estritamente MENOR que o raio R (5,0 km), a reta cruza o interior do círculo, interceptando a borda em dois pontos distintos (reta secante).",
+        "5. Confirmação algébrica: substituindo y = x + 7 em x² + y² = 25, obtém-se x² + (x + 7)² = 25 => 2x² + 14x + 24 = 0 => x² + 7x + 12 = 0, cujas raízes reais são x = -3 e x = -4 (Δ > 0, duas interseções reais distintas)."
+      ],
+      coreConcept: "Posição Relativa de Reta e Circunferência (Secante, Tangente, Externa)",
+      trapWarning: "Você pode resolver tanto comparando a distância d com o raio R quanto calculando o discriminante Δ do sistema (Δ > 0 secante, Δ = 0 tangente, Δ < 0 externa)!"
+    },
+    commonTraps: ["achar que d = 7/√2 e maior que 5 sem fazer o calculo decimal (7/1,414 ≈ 4,95)", "confundir tangente com secante"],
+    tags: ["reta e circunferencia", "secante", "posicao relativa", "discriminante", "distancia do centro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-017",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Interseção entre Duas Retas Concorrentes",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema de abastecimento de água de uma cidade universitária, duas adutoras subterrâneas retilíneas cruzam-se em uma válvula de distribuição comum V. No mapa cadastral do município, a adutora 1 segue a reta r₁: 2x + y = 11 e a adutora 2 segue a reta r₂: 3x - 2y = 6, com coordenadas em quilômetros.",
+      source: "ENEM / Sistemas Lineares e Geometria Analítica"
+    },
+    prompt: "As coordenadas cartesianas (x, y) do ponto de cruzamento onde a válvula V está instalada são:",
+    options: [
+      { id: "a", text: "(4, 3)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "(3, 4)", isCorrect: false, distractorRationale: "Inverteu a ordem das coordenadas (trocou x por y)." },
+      { id: "c", text: "(5, 1)", isCorrect: false, distractorRationale: "Esse ponto satisfaz a equação r₁ (2·5 + 1 = 11), mas não satisfaz r₂ (3·5 - 2·1 = 13 ≠ 6)." },
+      { id: "d", text: "(2, 7)", isCorrect: false, distractorRationale: "Satisfaz apenas r₁, não sendo o ponto comum de interseção." },
+      { id: "e", text: "(6, 6)", isCorrect: false, distractorRationale: "Errou a resolução do sistema linear." }
+    ],
+    detailedExplanation: {
+      summary: "O ponto de interseção de duas retas concorrentes é a solução única do sistema linear formado por suas equações.",
+      stepByStep: [
+        "Sistema de equações:",
+        "Equação 1: 2x + y = 11  =>  y = 11 - 2x.",
+        "Equação 2: 3x - 2y = 6.",
+        "Substituindo a expressão de y na Equação 2:",
+        "3x - 2(11 - 2x) = 6.",
+        "3x - 22 + 4x = 6.",
+        "7x = 6 + 22  =>  7x = 28  =>  x = 4.",
+        "Encontrando y: y = 11 - 2(4) = 11 - 8 = 3.",
+        "Ponto de interseção: V(4, 3)."
+      ],
+      coreConcept: "Ponto de Interseção entre Retas como Solução de Sistema Linear",
+      trapWarning: "Sempre teste o ponto encontrado em AMBAS as equações para garantir que não houve erro algébrico de sinal!"
+    },
+    commonTraps: ["inverter x e y na resposta", "testar o ponto em apenas uma das retas"],
+    tags: ["intersecao de retas", "sistema linear", "retas concorrentes", "geometria analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-018",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Distância Entre Duas Retas Paralelas",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um projeto de ampliação de leitos de um hospital infantil, duas paredes paralelas de blindagem contra interferência magnética são representadas no plano pelas retas r: 3x - 4y + 10 = 0 e s: 3x - 4y - 15 = 0, com as grandezas mensuradas em metros.",
+      source: "ENEM / Retas Paralelas e Distância entre Retas"
+    },
+    prompt: "A distância constante perpendicular entre essas duas paredes paralelas de blindagem é de:",
+    options: [
+      { id: "a", text: "5,0 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "1,0 metro", isCorrect: false, distractorRationale: "Subtraiu diretamente 10 - 15 = -5 e dividiu por 5 sem considerar a subtração dos termos independentes (|10 - (-15)| = 25)." },
+      { id: "c", text: "25,0 metros", isCorrect: false, distractorRationale: "Calculou apenas a diferença dos termos independentes (|C₁ - C₂| = 25), esquecendo de dividir pelo módulo do vetor normal." },
+      { id: "d", text: "3,5 metros", isCorrect: false, distractorRationale: "Errou a raiz quadrada de 3² + (-4)²." },
+      { id: "e", text: "7,0 metros", isCorrect: false, distractorRationale: "Somou os coeficientes das retas." }
+    ],
+    detailedExplanation: {
+      summary: "A distância entre duas retas paralelas de mesma inclinação Ax + By + C₁ = 0 e Ax + By + C₂ = 0 é d = |C₁ - C₂| / √(A² + B²).",
+      stepByStep: [
+        "Verificação do paralelismo: coeficientes A = 3 e B = -4 são idênticos em ambas as equações (mesmo coeficiente angular m = 3/4).",
+        "Termos independentes: C₁ = +10 e C₂ = -15.",
+        "Diferença dos termos independentes em módulo:",
+        "|C₁ - C₂| = |10 - (-15)| = |10 + 15| = 25.",
+        "Denominador: √(A² + B²) = √(3² + (-4)²) = √(9 + 16) = √25 = 5.",
+        "Distância entre as retas paralelas: d = 25 / 5 = 5,0 metros."
+      ],
+      coreConcept: "Fórmula da Distância entre Retas Paralelas no Plano Cartesiano",
+      trapWarning: "Cuidado com o sinal negativo ao subtrair os termos independentes: 10 - (-15) vira 10 + 15 = 25!"
+    },
+    commonTraps: ["fazer 10 - 15 = -5 esquecendo o sinal negativo de C2", "esquecer de dividir por √(A² + B²)"],
+    tags: ["retas paralelas", "distancia entre retas", "geometria analitica", "blindagem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-019",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Condição de Alinhamento de Três Pontos (Colinearidade)",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante a demarcação topográfica de um novo campus universitário de saúde, um agrimensor precisa que três marcos de concreto M₁(1, 2), M₂(3, k) e M₃(7, 14) estejam rigorosamente alinhados sobre a mesma linha reta limite do terreno.",
+      source: "ENEM / Colinearidade e Determinante no Plano"
+    },
+    prompt: "O valor da coordenada desconhecida k para que os três marcos estejam perfeitamente alinhados (colineares) é igual a:",
+    options: [
+      { id: "a", text: "6", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "8", isCorrect: false, distractorRationale: "Somou 4 com 4 por engano de cálculo." },
+      { id: "c", text: "5", isCorrect: false, distractorRationale: "Calculou a média aritmética ingênua entre 2 e 14 dividida por 2." },
+      { id: "d", text: "7", isCorrect: false, distractorRationale: "Assumiu k = 7 por ser o valor de x no ponto M₃." },
+      { id: "e", text: "4", isCorrect: false, distractorRationale: "Errou a igualdade dos coeficientes angulares." }
+    ],
+    detailedExplanation: {
+      summary: "Três pontos são colineares se o coeficiente angular entre quaisquer pares for idêntico (ou se o determinante de suas coordenadas for nulo).",
+      stepByStep: [
+        "Método pelo Coeficiente Angular: o coeficiente angular do segmento M₁M₃ deve ser igual ao do segmento M₁M₂.",
+        "m(M₁M₃) = (y₃ - y₁) / (x₃ - x₁) = (14 - 2) / (7 - 1) = 12 / 6 = 2.",
+        "m(M₁M₂) = (k - 2) / (3 - 1) = (k - 2) / 2.",
+        "Igualando as inclinações: (k - 2) / 2 = 2.",
+        "Multiplicando por 2: k - 2 = 4  =>  k = 4 + 2 = 6.",
+        "Verificação por Determinante:",
+        "| 1  2  1 |",
+        "| 3  6  1 | = (6 + 14 + 12) - (42 + 6 + 4) = 32 - 52 = 0? Não, com k = 6: (1·6·1 + 2·1·7 + 1·3·14) - (1·6·7 + 2·3·1 + 1·14·1) = (6 + 14 + 42) - (42 + 6 + 14) = 62 - 62 = 0 (perfeito!)."
+      ],
+      coreConcept: "Condição de Colinearidade de Três Pontos (m constante ou Det = 0)",
+      trapWarning: "Usar coeficientes angulares costuma ser muito mais rápido e imune a erros de sinal do que calcular determinantes com incógnitas!"
+    },
+    commonTraps: ["esquecer de subtrair as coordenadas ao calcular a inclinacao", "errar o produto cruzado na equacao linear"],
+    tags: ["colinearidade", "alinhamento de pontos", "coeficiente angular", "geometria analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-020",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Circunferência Tangente aos Eixos Cartesianos",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A pista de pouso de helicópteros de socorro médico de um hospital metropolitano possui formato circular e foi construída no primeiro quadrante do plano diretor da instituição. A circunferência que delimita a pista é tangente simultaneamente ao eixo das abscissas (eixo x) e ao eixo das ordenadas (eixo y), e o seu raio de curvatura mede R = 15 metros.",
+      source: "ENEM / Equação Reduzida da Circunferência e Tangência"
+    },
+    prompt: "A equação reduzida da circunferência que descreve os limites dessa pista de pouso é:",
+    options: [
+      { id: "a", text: "(x - 15)² + (y - 15)² = 225", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "(x + 15)² + (y + 15)² = 225", isCorrect: false, distractorRationale: "Essa equação posicionaria o centro no 3º quadrante (-15, -15), e o enunciado especifica 1º quadrante." },
+      { id: "c", text: "(x - 15)² + (y - 15)² = 15", isCorrect: false, distractorRationale: "Esqueceu de elevar o raio ao quadrado no segundo membro da equação (R² = 15² = 225)." },
+      { id: "d", text: "x² + y² = 225", isCorrect: false, distractorRationale: "Essa circunferência tem centro na origem (0, 0), não sendo tangente aos eixos no 1º quadrante." },
+      { id: "e", text: "(x - 30)² + (y - 30)² = 225", isCorrect: false, distractorRationale: "Utilizou o diâmetro (30 m) como coordenadas do centro." }
+    ],
+    detailedExplanation: {
+      summary: "Uma circunferência no 1º quadrante tangente a ambos os eixos cartesianos possui centro C(R, R) e equação (x - R)² + (y - R)² = R².",
+      stepByStep: [
+        "1. Propriedade de tangência aos eixos: se o círculo tangencia o eixo x e o eixo y, a distância perpendicular do centro a ambos os eixos é igual ao raio R = 15.",
+        "2. Como está localizada no PRIMEIRO quadrante (onde x > 0 e y > 0), as coordenadas do centro são C(a, b) = C(15, 15).",
+        "3. Equação reduzida da circunferência com centro C(a, b) e raio R:",
+        "(x - a)² + (y - b)² = R².",
+        "Substituindo a = 15, b = 15 e R = 15:",
+        "(x - 15)² + (y - 15)² = 15²  =>  (x - 15)² + (y - 15)² = 225."
+      ],
+      coreConcept: "Circunferência Tangente aos Eixos Cartesianos e Equação Reduzida",
+      trapWarning: "Lembre-se: o segundo membro da equação reduzida da circunferência é SEMPRE o raio elevado ao quadrado (R²), nunca R isolado!"
+    },
+    commonTraps: ["esquecer de elevar o raio ao quadrado (colocar 15 em vez de 225)", "inverter os sinais de a e b colocando +15 na formula"],
+    tags: ["circunferencia", "equacao reduzida", "tangente aos eixos", "primeiro quadrante"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

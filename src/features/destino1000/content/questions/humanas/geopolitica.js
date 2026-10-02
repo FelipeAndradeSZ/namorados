@@ -421,5 +421,440 @@ export const QUESTIONS_GEOPOLITICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-011",
+    area: "humanas",
+    competence: 2,
+    skill: 8,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Ordem Multipolar e a Articulação dos BRICS",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A ampliação do bloco dos BRICS em 2024, incorporando países do Oriente Médio e da África, consolidou uma plataforma representativa de mais de 45% da população global e cerca de 36% do PIB mundial em paridade de poder de compra. Entre as pautas centrais do bloco, destacam-se o fortalecimento do Novo Banco de Desenvolvimento (NDB), o incentivo ao comércio bilateral liquidado em moedas locais e a cobrança por reformas estruturais no Conselho de Segurança da ONU e no FMI.",
+      source: "Declaração de Cúpula dos Países do Sul Global, Análise Geopolítica Contemporânea, 2024."
+    },
+    prompt: "A consolidação e a expansão desse arranjo interestatal expressam uma dinâmica geopolítica orientada a:",
+    options: [
+      { id: "a", text: "promover o multilateralismo e contrabalançar a hegemonia econômico-financeira ocidental, reivindicando maior poder decisório para os países emergentes.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "estabelecer uma aliança militar formal nos moldes da OTAN com vistas à dissolução imediata do comércio internacional.", isCorrect: false, distractorRationale: "Os BRICS não configuram uma aliança militar de defesa coletiva, mas sim uma cooperação geoeconômica e diplomática." },
+      { id: "c", text: "restringir toda a produção fabril e agrícola exclusivamente ao continente africano com isolamento autárquico.", isCorrect: false, distractorRationale: "O bloco promove a integração comercial e financeira global, não a autarquia isolacionista." },
+      { id: "d", text: "restabelecer a ordem bipolar da Guerra Fria dividida unicamente entre dois polos ideológicos rígidos.", isCorrect: false, distractorRationale: "O mundo contemporâneo é multipolar, e o bloco reúne países com regimes e interesses geopolíticos heterogêneos." },
+      { id: "e", text: "subordinar as decisões fiscais e soberanas de todos os membros a um banco central unificado com moeda única compulsória.", isCorrect: false, distractorRationale: "Não há banco central único nem moeda compulsória entre os BRICS; há incentivo ao uso de moedas locais nas transações bilaterais." }
+    ],
+    detailedExplanation: {
+      summary: "A ampliação dos BRICS simboliza o fortalecimento da multipolaridade e do Sul Global, desafiando a supremacia do dólar no comércio mundial e a sobrerrepresentação do Ocidente nas instituições de Bretton Woods.",
+      stepByStep: [
+        "Identificação do tema: Relações internacionais, governança global e Nova Ordem Mundial pós-Guerra Fria.",
+        "Análise da atuação dos BRICS: Foco na desdolarização parcial das trocas, criação de mecanismos alternativos de crédito (NDB) e pressão por reforma dos organismos multilaterais.",
+        "Conclusão: A iniciativa busca diversificar os centros de poder político e financeiro internacional sem recorrer à unificação militar."
+      ],
+      coreConcept: "Multipolaridade, Sul Global e Reforma das Instituições Internacionais",
+      trapWarning: "Não confunda bloco de cooperação diplomático-financeira (BRICS) com pacto militar (OTAN) ou união monetária com banco central único (Zona do Euro)."
+    },
+    commonTraps: [
+      "Achar que os BRICS criaram uma aliança militar vinculante",
+      "Confundir incentivo ao uso de moedas locais com criação forçada de moeda física única compulsória"
+    ],
+    tags: ["brics", "multipolaridade", "sul-global", "geopolitica-financeira"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-012",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Transição Energética e a Geopolítica dos Minerais Críticos",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A descarbonização da economia mundial e a eletrificação dos transportes geraram uma corrida desenfreada por minerais críticos indispensáveis à fabricação de baterias, turbinas eólicas e redes de alta voltagem. Países da América do Sul detentores do chamado 'Triângulo do Lítio' (Argentina, Bolívia e Chile), a República Democrática do Congo (que responde por mais de 70% da extração de cobalto) e a China (que monopoliza o processamento e refino de terras raras) passaram a ocupar o epicentro dos novos fluxos geoestratégicos.",
+      source: "Agência Internacional de Energia (IEA), Relatório de Minerais Críticos para a Transição Energética, 2023."
+    },
+    prompt: "O cenário geopolítico descrito demonstra que a transição energética global:",
+    options: [
+      { id: "a", text: "desloca a dependência estratégica dos combustíveis fósseis para novas cadeias de suprimento mineral, gerando assimetrias e disputas geoeconômicas pelo controle dos insumos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "elimina completamente qualquer tipo de conflito geopolítico e assegura a autossuficiência de todas as nações.", isCorrect: false, distractorRationale: "A transição não acaba com os conflitos; cria novas dependências em torno de minerais finitos e concentrados geograficamente." },
+      { id: "c", text: "torna os minerais metálicos e os recursos do subsolo obsoletos na fabricação de equipamentos de alta tecnologia.", isCorrect: false, distractorRationale: "O texto demonstra o exato oposto: a demanda por lítio, cobalto e terras raras cresceu exponencialmente." },
+      { id: "d", text: "transfere todo o poder financeiro e as sedes das montadoras globais para os países extrativistas africanos e sul-americanos.", isCorrect: false, distractorRationale: "A cadeia de refino, tecnologia de baterias e controle financeiro segue concentrada em grandes potências industriais." },
+      { id: "e", text: "restringe o uso de eletricidade às nações que possuem reservas comprovadas de petróleo cru.", isCorrect: false, distractorRationale: "A energia elétrica pode ser gerada por múltiplas fontes renováveis (solar, eólica, hídrica), desvinculadas do petróleo." }
+    ],
+    detailedExplanation: {
+      summary: "A substituição dos combustíveis fósseis por tecnologias limpas não elimina a geopolítica de recursos; transfere a vulnerabilidade para os minerais críticos (lítio, cobalto, níquel, terras raras), cuja concentração geográfica gera novas tensões globais.",
+      stepByStep: [
+        "Compreensão do cenário: Eletrificação de veículos e equipamentos verdes requer minerais específicos.",
+        "Geografia da extração vs. refino: Extração concentrada em poucos países (América do Sul, África) e refino químico concentrado na China.",
+        "Conclusão: O controle das cadeias produtivas desses insumos críticos tornou-se matéria de segurança nacional e política industrial das potências."
+      ],
+      coreConcept: "Geopolítica da Transição Energética: Minerais Críticos e Segurança de Suprimentos",
+      trapWarning: "No ENEM, cuidado para não assumir que energia limpa significa ausência de impactos socioambientais ou de disputas por matérias-primas."
+    },
+    commonTraps: [
+      "Acreditar que fontes limpas extinguem as disputas por matérias-primas minerais",
+      "Supor que os países exportadores de minério bruto dominam automaticamente a tecnologia de baterias acabadas"
+    ],
+    tags: ["transicao-energetica", "litio", "minerais-criticos", "geopolitica-ambiental"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-013",
+    area: "humanas",
+    competence: 2,
+    skill: 9,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Iniciativa Cinturão e Rota (Nova Rota da Seda) e o Poder Chinês",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Lançada em 2013, a Iniciativa Cinturão e Rota (Belt and Road Initiative - BRI) transformou-se no maior programa de infraestrutura global da história contemporânea. Financiando a construção de corredores logísticos multimodais, ferrovias de carga, portos de águas profundas, gasodutos e usinas energéticas na Ásia Central, África, Europa e América Latina, Pequim busca garantir canais seguros para suas exportações de bens manufaturados e o abastecimento contínuo de commodities vitais.",
+      source: "Estudos Geopolíticos Globais, Relações Internacionais, 2024."
+    },
+    prompt: "Sob a perspectiva da geopolítica contemporânea, a implementação dessa megainfraestrutura representa:",
+    options: [
+      { id: "a", text: "um instrumento de projeção geoeconômica e de influência diplomática, reduzindo a vulnerabilidade a bloqueios marítimos e reconfigurando os fluxos de comércio a partir de Pequim.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "uma iniciativa altruísta sem qualquer interesse comercial ou geoestratégico por parte do governo financiador.", isCorrect: false, distractorRationale: "Megaprojetos de infraestrutura financiam rotas comerciais e asseguram influência geopolítica direta sobre os países devedores." },
+      { id: "c", text: "uma estratégia para abolir todo o uso de combustíveis fósseis e proibir o transporte marítimo de mercadorias no planeta.", isCorrect: false, distractorRationale: "O projeto inclui grandes portos marítimos e gasodutos de combustíveis fósseis." },
+      { id: "d", text: "o isolamento completo da economia chinesa em relação aos mercados consumidores mundiais.", isCorrect: false, distractorRationale: "O projeto é o oposto do isolamento: conecta a China a mais de uma centena de países parceiros comerciais." },
+      { id: "e", text: "um mecanismo estritamente militar destinado a invadir militarmente e anexar os países da Europa Ocidental.", isCorrect: false, distractorRationale: "A BRI atua prioritariamente no plano econômico e diplomático (soft power, empréstimos e obras de engenharia civil)." }
+    ],
+    detailedExplanation: {
+      summary: "A Iniciativa Cinturão e Rota combina investimentos maciços em logística com objetivos geoestratégicos: integrar a Eurásia e o Sul Global aos mercados chineses, diversificar canais de abastecimento e consolidar a China como polo central da economia global.",
+      stepByStep: [
+        "Dimensão logística: Obras de infraestrutura de transporte (portos comerciais e malhas ferroviárias continentais de carga).",
+        "Dimensão geopolítica: Superar o 'Dilema de Malaca' (dependência de estreitos marítimos patrulhados por forças navais adversárias) e ampliar alianças no Sul Global.",
+        "Conclusão: Trata-se de geoeconomia aplicada à expansão do poder e liderança internacional."
+      ],
+      coreConcept: "Iniciativa Cinturão e Rota (BRI), Geoeconomia e Projeção de Poder Global",
+      trapWarning: "Atenção: a BRI envolve tanto uma rota terrestre (cinturão ferroviário eurasiático) quanto uma rota marítima (portos comerciais no Índico e Mediterrâneo)."
+    },
+    commonTraps: [
+      "Achar que o projeto se limita a estradas de rodagem sem envolver portos e telecomunicações",
+      "Ignorar os interesses estratégicos de segurança energética e escoamento fabril da China"
+    ],
+    tags: ["china", "bri", "infraestrutura", "geoeconomia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-014",
+    area: "humanas",
+    competence: 5,
+    skill: 23,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Questão Palestina e os Impasses Territoriais no Oriente Médio",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Desde a Resolução 181 da Assembleia Geral da ONU em 1947, que propôs a partilha da Palestina sob mandato britânico em dois Estados independentes (um judeu e um árabe) com regime internacional para Jerusalém, o território é palco de sucessivas guerras e ocupações militares. Os confrontos de 1948 e 1967 (Guerra dos Seis Dias), a fragmentação territorial na Cisjordânia resultante da expansão contínua de assentamentos e o bloqueio terrestre, aéreo e marítimo imposto à Faixa de Gaza constituem barreiras históricas à viabilização de um Estado palestino soberano e contíguo.",
+      source: "Dossiê Conflitos Históricos no Oriente Médio, Análise Geopolítica Territorial, 2024."
+    },
+    prompt: "Entre os principais obstáculos de ordem territorial e geopolítica que dificultam a concretização da Solução de Dois Estados na região, destaca-se:",
+    options: [
+      { id: "a", text: "a descontinuidade territorial dos territórios palestinos decorrente da malha de assentamentos e postos de controle na Cisjordânia, somada à disputa pelo estatuto de Jerusalém.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a inexistência completa de populações civis residindo nas áreas urbanas e rurais da Cisjordânia.", isCorrect: false, distractorRationale: "A região é densamente habitada por milhões de palestinos e centenas de milhares de colonos israelenses." },
+      { id: "c", text: "a recusa de todas as nações do planeta em reconhecer a existência de conflitos ou disputas fronteiriças na área.", isCorrect: false, distractorRationale: "O conflito é um dos mais debatidos e documentados pela diplomacia internacional e pela ONU." },
+      { id: "d", text: "a total uniformidade cultural, linguística e religiosa entre todos os habitantes dos dois lados da contenda.", isCorrect: false, distractorRationale: "A diversidade e as divergências étnico-religiosas e nacionais são marcas centrais das tensões históricas na região." },
+      { id: "e", text: "o esgotamento absoluto de todos os recursos hídricos subterrâneos e a desertificação total irreversível do solo fértil.", isCorrect: false, distractorRationale: "A disputa pela água (Aquífero da Montanha e bacia do Rio Jordão) é fator de conflito por sua importância vital, não por sua inexistência." }
+    ],
+    detailedExplanation: {
+      summary: "A criação de um Estado palestino viável esbarra na fragmentação física do território (Cisjordânia retalhada por assentamentos, rodovias restritas e muros de separação), no enclave isolado de Gaza, no controle de recursos hídricos e na indefinição sobre o estatuto jurídico de Jerusalém.",
+      stepByStep: [
+        "Raízes históricas: Partilha da ONU (1947), Guerra de 1948 (criação de Israel e Nakba palestina), Guerra de 1967 (ocupação da Cisjordânia, Faixa de Gaza, Colinas de Golã e Jerusalém Oriental).",
+        "Geografia do conflito atual: Assentamentos israelenses na Cisjordânia que inviabilizam a contiguidade territorial de um futuro Estado palestino.",
+        "Pontos nevrálgicos: Status de Jerusalém (reivindicada por ambos como capital), retorno de refugiados e controle de fronteiras e aquíferos."
+      ],
+      coreConcept: "A Questão Palestina: Fragmentação Espacial, Ocupação e a Solução de Dois Estados",
+      trapWarning: "No ENEM, questões sobre o Oriente Médio cobram a análise territorial crítica (mapa, fronteiras, colônias e água) e não apenas estereótipos religiosos simplistas."
+    },
+    commonTraps: [
+      "Achar que o conflito é puramente religioso milenar, ignorando a disputa material moderna por terra, fronteiras e soberania",
+      "Desconsiderar a descontinuidade espacial entre a Cisjordânia e a Faixa de Gaza"
+    ],
+    tags: ["oriente-medio", "palestina", "israel", "territorio", "soberania"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-015",
+    area: "humanas",
+    competence: 5,
+    skill: 22,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Segurança Alimentar Global e o Papel dos Celeiros Agrícolas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A eclosão do conflito armado no Leste Europeu em 2022 colocou em evidência a fragilidade da cadeia global de suprimentos agrícolas. A região do Mar Negro, frequentemente denominada de 'celeiro do mundo' devido à fertilidade excepcional do solo de 'tchernozion' (terra negra), concentrava cerca de um terço de todas as exportações mundiais de trigo e cevada, além de insumos fertilizantes nitrogenados e potássicos. A interrupção de safras e os bloqueios navais provocaram picos inflacionários imediatos e risco de desabastecimento em nações do Oriente Médio e do Chifre da África.",
+      source: "Organização das Nações Unidas para a Alimentação e a Agricultura (FAO), Relatório de Crise e Mercados de Grãos, 2023."
+    },
+    prompt: "A vulnerabilidade alimentar observada em escala internacional evidencia que a globalização agroalimentar:",
+    options: [
+      { id: "a", text: "produziu uma elevada dependência de cadeias de suprimento concentradas geograficamente, tornando países importadores vulneráveis a choques geopolíticos e climáticos em regiões produtoras-chave.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "garantiu que todos os países do mundo se tornassem autossuficientes na produção de grãos básicos e fertilizantes.", isCorrect: false, distractorRationale: "O texto demonstra o oposto: nações inteiras no Oriente Médio e África dependem criticamente de importações do Mar Negro." },
+      { id: "c", text: "eliminou as leis de mercado e estabeleceu a distribuição gratuita e irrestrita de alimentos por navios humanitários.", isCorrect: false, distractorRationale: "Os preços dos alimentos são cotados em bolsas de commodities mundiais e sofreram disparada inflacionária." },
+      { id: "d", text: "tornou o cultivo de grãos irrelevante diante da produção massificada de alimentos artificiais sintetizados em laboratórios.", isCorrect: false, distractorRationale: "O trigo e a cevada continuam sendo a base calórica elementar de bilhões de seres humanos." },
+      { id: "e", text: "desvinculou a agricultura moderna da utilização de qualquer insumo químico ou fertilizante mineral.", isCorrect: false, distractorRationale: "A agricultura em larga escala depende visceralmente de fertilizantes nitrogenados, fosfatados e potássicos." }
+    ],
+    detailedExplanation: {
+      summary: "A globalização agrícola gerou hiperespecialização produtiva em certas regiões do planeta. Quando guerras ou embargos afetam esses polos exportadores, o efeito cascata atinge a segurança alimentar de países vulneráveis e eleva custos de produção globalmente.",
+      stepByStep: [
+        "Compreensão do papel do solo tchernozion: Região de estepe ucraniana e russa de altíssima produtividade cerealífera natural.",
+        "Dependência de importações: Países como Egito, Líbano e Somália importavam mais de 70% de seu trigo dessa bacia geográfica.",
+        "Efeito no agronegócio global: Aumento nos custos de fertilizantes (dos quais o Brasil também é altamente dependente da Rússia e Belarus).",
+        "Conclusão: A segurança alimentar é indissociável da estabilidade geopolítica das rotas mercantis e das regiões produtoras."
+      ],
+      coreConcept: "Segurança Alimentar Global, Cadeias de Grãos e Dependência de Fertilizantes",
+      trapWarning: "Lembre-se de que o Brasil, apesar de ser potência agroexportadora de grãos e carne, é altamente dependente da importação externa de adubos e fertilizantes."
+    },
+    commonTraps: [
+      "Supor que os países mais ricos são os que mais sofrem fome em crises de desabastecimento de grãos",
+      "Ignorar a importância dos fertilizantes químicos na determinação do preço final dos alimentos"
+    ],
+    tags: ["seguranca-alimentar", "commodities", "fertilizantes", "geopolitica-agricola"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-016",
+    area: "humanas",
+    competence: 4,
+    skill: 19,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Geopolítica da Água e Conflitos em Bacias Hidrográficas Transfronteiriças",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A construção da Grande Represa do Renascimento Etíope (GERD) no Nilo Azul, iniciada em 2011 pela Etiópia, tornou-se foco de intensas controvérsias diplomáticas com o Sudão e, especialmente, com o Egito. Enquanto Adis Abeba reivindica a represa como obra indispensável para eletrificar o país e impulsionar o desenvolvimento industrial, o Cairo argumenta que a retenção do fluxo das águas ameaça a vazão hídrica histórica necessária para irrigar o fértil vale do Nilo, do qual dependem mais de 100 milhões de egípcios.",
+      source: "Relatório de Recursos Hídricos e Tensões Geopolíticas no Nordeste Africano, 2023."
+    },
+    prompt: "O impasse em torno do aproveitamento das águas do Rio Nilo ilustra que:",
+    options: [
+      { id: "a", text: "rios transfronteiriços demandam governança compartilhada, pois intervenções de engenharia realizadas a montante impactam a segurança hídrica e alimentar dos países situados a jusante.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "as bacias hidrográficas deixaram de ter valor econômico devido à dessalinização barata e instantânea de toda a água salgada do planeta.", isCorrect: false, distractorRationale: "A água doce fluvial continua insubstituível para irrigação agrícola em escala massiva." },
+      { id: "c", text: "os países localizados na foz de um rio têm autoridade soberana inquestionável para proibir qualquer uso da água nas nascentes situadas em outros territórios.", isCorrect: false, distractorRationale: "O direito internacional não outorga poder unilateral irrestrito ao país da foz sobre as nascentes em territórios soberanos estrangeiros." },
+      { id: "d", text: "a geração de energia hidrelétrica em países africanos não interfere no fluxo volumétrico nem na sazonalidade das cheias fluviais.", isCorrect: false, distractorRationale: "O enchimento do reservatório altera a vazão a jusante e pode reter volumes críticos durante anos secos." },
+      { id: "e", text: "o regime de vazão dos rios internacionais é imutável e independente de qualquer intervenção antrópica de barragens.", isCorrect: false, distractorRationale: "Grandes barragens modificam profundamente o regime hidrológico, transporte de sedimentos e vazão dos rios." }
+    ],
+    detailedExplanation: {
+      summary: "A hidrogeopolítica analisa como recursos hídricos compartilhados geram disputas de poder. O controle da cabeceira (montante) confere vantagem estratégica sobre os países ribeirinhos inferiores (jusante), exigindo tratados de gestão equitativa para evitar conflitos armados.",
+      stepByStep: [
+        "Conceitos hidrológicos fundamentais: Montante (onde o rio nasce / altitude superior) vs. Jusante (direção da foz / altitude inferior).",
+        "Geografia do Nilo: O Nilo Azul nasce na Etiópia e fornece cerca de 85% do volume d'água total do Rio Nilo principal.",
+        "Egito a jusante: Depende quase que totalmente das águas do Nilo para agricultura e consumo urbano.",
+        "Conclusão: Obras unilaterais em rios internacionais geram tensões severas sobre soberania e subsistência coletiva."
+      ],
+      coreConcept: "Hidrogeopolítica: Gestão de Bacias Transfronteiriças, Montante e Jusante",
+      trapWarning: "Lembre-se da distinção geográfica entre 'montante' (rio acima) e 'jusante' (rio abaixo), termo técnico frequentemente cobrado em questões ambientais e geopolíticas do ENEM."
+    },
+    commonTraps: [
+      "Inverter o sentido do fluxo fluvial (confundir montante com jusante)",
+      "Supor que rios internacionais pertencem exclusivamente a uma única nação por onde passam"
+    ],
+    tags: ["hidrogeopolitica", "recursos-hidricos", "africa", "rio-nilo", "conflitos-ambientais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-017",
+    area: "humanas",
+    competence: 5,
+    skill: 25,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Disputa Tecnológica Global: Semicondutores e Soberania Digital",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No século XXI, os microchips e semicondutores de litografia avançada tornaram-se o equivalente estratégico do petróleo no século XX. A ilha de Taiwan responde por mais de 60% da fabricação de todos os semicondutores do planeta e por mais de 90% dos chips mais miniaturizados e avançados (abaixo de 5 nanômetros), utilizados em supercomputadores, sistemas de inteligência artificial e vetores de defesa militar. Essa extrema concentração fabril levou potências como os Estados Unidos e a União Europeia a subsidiarem maciçamente fábricas domésticas e a imporem restrições à exportação de maquinário tecnológico para a China.",
+      source: "Relatório de Segurança da Informação e Cadeia de Semicondutores, 2024."
+    },
+    prompt: "Essa disputa tecnológica e a tentativa de 'nacionalização' das cadeias de manufatura de microchips revelam que:",
+    options: [
+      { id: "a", text: "o controle sobre a fabricação de semicondutores é percebido como componente essencial da segurança nacional, da liderança econômica e do poder bélico na era da informação.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "os componentes eletrônicos perderam a importância em prol da mecanização a vapor e do carvão mineral.", isCorrect: false, distractorRationale: "O texto enfatiza que os chips são o recurso estratégico central do século XXI." },
+      { id: "c", text: "as nações industrializadas abriram mão de seus direitos de propriedade intelectual em prol de uma tecnologia 100% aberta e sem patentes.", isCorrect: false, distractorRationale: "Há disputa ferrenha por patentes de litografia, códigos-fonte e propriedades intelectuais entre as superpotências." },
+      { id: "d", text: "a produção de computadores modernos independe inteiramente de matérias-primas e de plantas industriais físicas.", isCorrect: false, distractorRationale: "A produção de semicondutores exige plantas físicas multibilionárias de silício, salas limpas de altíssima pureza e água ultrapura." },
+      { id: "e", text: "qualquer país em desenvolvimento pode produzir chips de 3 nanômetros em oficinas manuais sem investimentos de capital.", isCorrect: false, distractorRationale: "Produzir chips de litografia extrema exige dezenas de bilhões de dólares e maquinário de precisão atômica monopolizado por pouquíssimas empresas globais." }
+    ],
+    detailedExplanation: {
+      summary: "A 'guerra dos chips' evidencia que a hegemonia no século XXI repousa sobre o domínio da computação de ponta e dos semicondutores. Quem domina os microprocessadores controla o avanço da Inteligência Artificial, sistemas de guiagem de mísseis, criptografia e finanças mundiais.",
+      stepByStep: [
+        "O papel de Taiwan: A TSMC (Taiwan Semiconductor Manufacturing Company) opera como nó vital da cadeia produtiva global.",
+        "Vulnerabilidade geopolítica: Uma eventual crise no Estreito de Taiwan paralisaria montadoras de veículos, fábricas de computadores e servidores no mundo inteiro.",
+        "Respostas estatais: O 'CHIPS Act' nos EUA e o 'European Chips Act' representam o retorno da política industrial estatal e da busca por autonomia estratégica.",
+        "Conclusão: A tecnologia de ponta é tratada como pilar indiscutível de segurança e soberania nacional."
+      ],
+      coreConcept: "Geopolítica dos Semicondutores: Hardware Estratégico e Soberania Digital",
+      trapWarning: "Observe que, contrariando o dogma neoliberal dos anos 1990 de que o mercado global sempre resolveria tudo, as grandes potências voltaram a gastar bilhões em subsídios estatais diretos para garantir produção industrial estratégica dentro de seus limites."
+    },
+    commonTraps: [
+      "Achar que inovação tecnológica opera sem base industrial material pesada",
+      "Subestimar o papel geopolítico de Taiwan no equilíbrio de poder entre EUA e China"
+    ],
+    tags: ["semicondutores", "tecnologia", "taiwan", "soberania-digital", "geopolitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-018",
+    area: "humanas",
+    competence: 2,
+    skill: 8,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Contradição da Globalização: Fluxos de Capitais vs. Muros para Pessoas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A contemporaneidade é marcada por uma contradição flagrante do processo de globalização: enquanto as transações financeiras, os dados digitais e os produtos industrializados circulam pelos continentes em velocidades vertiginosas e com tarifas alfandegárias historicamente baixas, multiplicam-se barreiras físicas, cercas eletrificadas, patrulhas de fronteira e leis migratórias cada vez mais restritivas destinadas a deter a circulação de populações vulneráveis e requerentes de asilo que fogem da miséria e de conflitos armados.",
+      source: "Estudos de Sociologia Urbana e Fronteiras Globais, 2023."
+    },
+    prompt: "Essa discrepância entre a desregulamentação para o capital e o recrudescimento das barreiras para as pessoas explicita:",
+    options: [
+      { id: "a", text: "o caráter seletivo e assimétrico da globalização, que privilegia a livre circulação de mercadorias e finanças enquanto criminaliza ou segrega os fluxos migratórios do Sul Global.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a eficácia total dos acordos multilaterais em acolher e dar cidadania plena a todos os migrantes do mundo sem qualquer burocracia.", isCorrect: false, distractorRationale: "O texto enfatiza a multiplicação de muros, restrições e cerceamento de direitos contra migrantes." },
+      { id: "c", text: "o fim das fronteiras territoriais e o estabelecimento de uma cidadania universal única regida pela ONU.", isCorrect: false, distractorRationale: "As fronteiras nacionais foram, na verdade, reforçadas e militarizadas para a circulação de trabalhadores pobres." },
+      { id: "d", text: "a ausência de qualquer diferença socioeconômica entre os países do Norte e do Sul Global.", isCorrect: false, distractorRationale: "As desigualdades abissais entre o Norte e o Sul são justamente o motor da pressão migratória." },
+      { id: "e", text: "a extinção do sistema financeiro internacional e o isolamento autárquico de todos os mercados consumidores.", isCorrect: false, distractorRationale: "O capital financeiro transnacional circula com velocidade recorde e liberdade nas bolsas mundiais." }
+    ],
+    detailedExplanation: {
+      summary: "Zygmunt Bauman e outros sociólogos descrevem a globalização como profundamente estratificada: a elite e o capital financeiro desfrutam de hiperconectividade e mobilidade sem barreiras, enquanto os despossuídos e refugiados são contidos por muros, detenções e xenofobia institucional.",
+      stepByStep: [
+        "Identificação do contraste: Livre trânsito de capitais e patentes versus contenção física e securitização das fronteiras humanas.",
+        "Exemplos práticos: Muro entre México e EUA, agência Frontex no Mediterrâneo, campos de retenção na Líbia e Turquia.",
+        "Conclusão: A globalização não é universal nem igualitária; sua abertura é moldada pelos interesses do capital transnacional."
+      ],
+      coreConcept: "A Seletividade da Globalização: Mobilidade do Capital e Securitização das Fronteiras",
+      trapWarning: "No ENEM, essa contradição é cobrada com frequência em conexão com autores contemporâneos (como Milton Santos ao analisar a 'globalização como perversidade')."
+    },
+    commonTraps: [
+      "Acreditar que a globalização eliminou as fronteiras políticas para todas as pessoas indistintamente",
+      "Ignorar a dimensão socioeconômica que diferencia o expatriado corporativo de elite do imigrante clandestino vulnerável"
+    ],
+    tags: ["migracao", "fronteiras", "globalizacao-seletiva", "direitos-humanos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-019",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Geopolítica e Globalização",
+    subtopic: "O Descongelamento do Ártico e as Novas Rotas de Carga Marítima",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O recuo acelerado da calota de gelo marinho no Oceano Glacial Ártico, intensificado pelas mudanças climáticas globais, tem transformado uma região antes inacessível em um novo tabuleiro geoeconômico. A abertura da Rota Marítima do Norte (ao longo da costa da Sibéria) e da Passagem Noroeste (no norte do Canadá) permite encurtar em até 40% a distância marítima de transporte de contêineres entre os portos da Ásia Oriental e da Europa Ocidental, em comparação com os trajetos tradicionais pelo Canal de Suez e Estreito de Malaca, além de viabilizar o acesso a reservas intocadas de hidrocarbonetos na plataforma polar.",
+      source: "Conselho do Ártico, Boletim de Estudos Marítimos e Climáticos Polares, 2024."
+    },
+    prompt: "A transformação climática do Ártico acarreta impactos geopolíticos globais ao:",
+    options: [
+      { id: "a", text: "despertar disputas de soberania sobre plataformas continentais e criar novos corredores logísticos para a circulação comercial de navios cargueiros em altas latitudes.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "garantir que nenhum país litorâneo tenha interesse em explorar as reservas do leito submarino ártico.", isCorrect: false, distractorRationale: "Países como Rússia, Noruega, EUA e Canadá disputam avidamente os direitos de perfuração submarina." },
+      { id: "c", text: "provocar o fechamento definitivo de todos os canais de navegação comercial no restante do planeta.", isCorrect: false, distractorRationale: "Os canais de Suez e Panamá continuam operando e transportando imensos volumes de carga global." },
+      { id: "d", text: "congelar permanentemente os portos europeus e asiáticos durante todos os meses do ano.", isCorrect: false, distractorRationale: "O fenômeno descrito é de aquecimento global e descongelamento marinho polar, não de glaciação extrema." },
+      { id: "e", text: "extinguir os tratados de direito internacional e as convenções da ONU sobre os mares.", isCorrect: false, distractorRationale: "A Convenção da ONU sobre o Direito do Mar (UNCLOS) é justamente a base jurídica onde as nações reivindicam a extensão de suas plataformas." }
+    ],
+    detailedExplanation: {
+      summary: "O derretimento do gelo ártico exemplifica como o aquecimento global tem consequências geopolíticas diretas: a criação de novas hidrovias de transporte marítimo de mercadorias e a corrida pela exploração de petróleo e gás submarino em águas antes inavegáveis.",
+      stepByStep: [
+        "Vantagem logística da Rota do Norte: Economia de tempo, combustível fóssil de propulsão náutica e tarifas de passagem em canais artificiais (Suez).",
+        "Disputas de jurisdição: Reivindicações territoriais sobre a Plataforma Continental Estendida junto à Comissão de Limites da ONU.",
+        "Militarização polar: Reativação de bases militares costeiras pelas nações do Conselho do Ártico.",
+        "Conclusão: O derretimento ambiental abre um novo fronte de expansão mercantil e disputa hegemônica."
+      ],
+      coreConcept: "Geopolítica do Ártico: Rota Marítima do Norte, Descongelamento e Recursos Submarinos",
+      trapWarning: "Cuidado: a Antártica (Polo Sul) é regida pelo Tratado da Antártica (área dedicada exclusivamente à paz e pesquisa científica internacional), enquanto o Ártico (Polo Norte) é um oceano cercado por Estados soberanos que disputam suas zonas econômicas exclusivas."
+    },
+    commonTraps: [
+      "Confundir o regime geopolítico do Ártico (disputado comercialmente) com o da Antártica (protegido por tratado científico internacional)",
+      "Achar que o degelo marinho polar traz apenas impactos biológicos locais, ignorando os efeitos no comércio marítimo mundial de carga"
+    ],
+    tags: ["artico", "mudancas-climaticas", "rotas-maritimas", "geopolitica-dos-recursos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-020",
+    area: "humanas",
+    competence: 4,
+    skill: 17,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Desindustrialização, 'Rust Belt' e a Reação Antiglobalista",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao longo das últimas quatro décadas, o fenômeno da deslocalização industrial (offshoring) transferiu milhões de postos de trabalho da manufatura tradicional dos Estados Unidos e da Europa Ocidental em direção ao Leste e Sudeste Asiático, atraídos por custos salariais reduzidos e subsídios fiscais. O esvaziamento fabril de regiões como o 'Cinturão da Ferrugem' (Rust Belt) norte-americano gerou bolsões de depressão econômica, endividamento das famílias e estagnação da classe trabalhadora local. Esse cenário alimentou um forte ressentimento social, que se converteu em bandeira política de movimentos nacionalistas partidários de barreiras protecionistas e discursos antiglobalistas.",
+      source: "Sociologia Econômica e Geografia do Trabalho Global, 2024."
+    },
+    prompt: "A crise social do 'Rust Belt' e o ressurgimento do protecionismo comercial nas economias centrais evidenciam:",
+    options: [
+      { id: "a", text: "que a globalização produziu ganhos desiguais no interior dos próprios países desenvolvidos, gerando contingentes de trabalhadores desfavorecidos que passaram a apoiar políticas de resgate nacionalista e retaliação alfandegária.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o sucesso irrestrito da divisão internacional do trabalho em enriquecer igualmente todos os operários do planeta Terra.", isCorrect: false, distractorRationale: "O texto demonstra claramente que a classe operária do Rust Belt empobreceu e perdeu empregos para a deslocalização asiática." },
+      { id: "c", text: "a superação definitiva de qualquer sentimento nacionalista ou de barreiras alfandegárias no mundo moderno.", isCorrect: false, distractorRationale: "O texto aponta justamente a volta com força do nacionalismo, das tarifas alfandegárias e das tensões protecionistas." },
+      { id: "d", text: "que as grandes corporações multinacionais preferem pagar salários mais altos em vez de reduzir seus custos de fabricação.", isCorrect: false, distractorRationale: "A deslocalização fabril foi motivada precisamente pela busca desenfreada de redução de custos de mão de obra e encargos." },
+      { id: "e", text: "a completa extinção de indústrias pesadas e fábricas em qualquer parte do território asiático.", isCorrect: false, distractorRationale: "A Ásia tornou-se a grande fábrica manufatureira do mundo moderno, absorvendo os empregos transferidos do Ocidente." }
+    ],
+    detailedExplanation: {
+      summary: "A globalização econômica não divide o mundo apenas entre 'países ricos' e 'países pobres', mas também cria vencedores e perdedores internamente nas nações ricas. O desmonte do parque produtor tradicional ocidental gerou descontentamento popular capitalizado por projetos políticos antiglobalização e pró-tarifas de importação.",
+      stepByStep: [
+        "Causas da desindustrialização ocidental: Empresas transnacionais transferiram linhas de montagem para a Ásia em busca de maior lucratividade.",
+        "Consequências no Rust Belt: Cidades decadentes (como Detroit), perda de benefícios trabalhistas e desemprego estrutural de trabalhadores industriais.",
+        "Desdobramentos políticos: Crescimento do ceticismo em relação a tratados de livre comércio, aumento da polarização eleitoral e ascensão de tarifas protecionistas.",
+        "Conclusão: A assimetria da globalização desestabilizou o pacto social do pós-Segunda Guerra no coração dos países centrais."
+      ],
+      coreConcept: "Desindustrialização, Deslocalização Fabril (Offshoring) e Tensões Sociais da Globalização",
+      trapWarning: "No ENEM, observe como a geografia econômica se entrelaça com a sociologia política para explicar fenômenos eleitorais contemporâneos (como o Brexit e a votação em tarifas industriais nos EUA)."
+    },
+    commonTraps: [
+      "Achar que todos os cidadãos dos países ricos foram beneficiados uniformemente pela globalização",
+      "Ignorar as raízes econômico-materiais do ressentimento político e do nacionalismo contemporâneo"
+    ],
+    tags: ["desindustrializacao", "rust-belt", "protecionismo", "offshoring", "geopolitica-do-trabalho"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
