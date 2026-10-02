@@ -31,6 +31,7 @@ export const QUESTION_MODULES = {
   "matematica/analise-combinatoria": () => import("./questions/matematica/analise-combinatoria.js"),
   "matematica/sistemas-equacoes": () => import("./questions/matematica/sistemas-equacoes.js"),
   "matematica/aritmetica-divisibilidade": () => import("./questions/matematica/aritmetica-divisibilidade.js"),
+  "matematica/matrizes-tabelas": () => import("./questions/matematica/matrizes-tabelas.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),

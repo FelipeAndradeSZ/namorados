@@ -2243,6 +2243,58 @@ export const THEORY_CONTENT = {
     mnemonics: "MDC reparte no maior sem sobrar; MMC espera a periodicidade encontrar; e 0,4 hora é 24 minutos pra não vacilar!"
   },
 
+  "matematica/matrizes-tabelas": {
+    topic: "Matrizes, Determinantes e Modelagem em Tabelas",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Competência 2 e 7 (H6, H7, H19, H27, H28): Matrizes como tabelas de dupla entrada, multiplicação matricial em custos fabris e dietas, matrizes de adjacência em redes e grafos, determinantes de ordem 2 e 3 (Regra de Sarrus e Teorema de Binet), áreas cartesianas e condição de colinearidade.",
+    highFrequencySkills: [
+      "H6 - Interpretar informações de natureza científica e social obtidas da leitura de tabelas e matrizes",
+      "H7 - Identificar características de figuras planas por meio de relações métricas e determinantes",
+      "H19 - Identificar representações algébricas que expressem a relação entre grandezas em tabelas",
+      "H27 - Calcular medidas de grandezas por meio de operações com matrizes e determinantes",
+      "H28 - Resolver situações-problema envolvendo sistemas lineares representados matricialmente"
+    ],
+    overview: "O ENEM valoriza a matemática matricial como uma poderosa ferramenta de organização e processamento de dados relacionais. Questões frequentes abordam tabelas de insumo-produto em logística, pontuação em ligas esportivas, transformações de coordenadas em computação gráfica 2D, grafos de redes de dados e o cálculo determinístico de áreas na geometria analítica.",
+    keyConcepts: [
+      {
+        title: "Multiplicação de Matrizes e Condição de Existência",
+        content: "• Para que o produto A · B exista, o número de colunas de A deve ser rigorosamente igual ao número de linhas de B: A(m × k) · B(k × n) = C(m × n).\n• Cada elemento c_ij é a soma dos produtos da linha i de A pela coluna j de B.\n• A multiplicação de matrizes NÃO É COMUTATIVA em geral: A · B ≠ B · A.\n• O elemento neutro é a matriz identidade I_n (com 1s na diagonal principal e 0s nos demais elementos)."
+      },
+      {
+        title: "Matriz de Adjacência e Grafos de Redes",
+        content: "• Em uma matriz de adjacência M, a_ij = 1 indica conexão direta entre os nós i e j; a_ij = 0 indica ausência de conexão direta.\n• O elemento (i, j) da matriz potência M² expressa o número exato de caminhos de comprimento 2 (com um nó intermediário) entre o ponto i e o ponto j.\n• De forma geral, em M^k, a entrada (i, j) informa a quantidade de rotas com exatamente k passos entre os dois vértices."
+      },
+      {
+        title: "Determinantes de Ordem 2 e 3 (Regra de Sarrus)",
+        content: "• Ordem 2: det([[a, b], [c, d]]) = a·d - b·c.\n• Ordem 3 (Regra de Sarrus): repete-se as duas primeiras colunas à direita e calcula-se a soma dos produtos das diagonais principais subtraída da soma dos produtos das diagonais secundárias.\n• Matriz Triangular: se todos os elementos acima ou abaixo da diagonal principal forem nulos, o determinante é simplesmente o produto dos elementos da diagonal principal."
+      },
+      {
+        title: "Geometria Analítica e Determinantes: Área e Colinearidade",
+        content: "• Área do Triângulo: dados os vértices A(x_A, y_A), B(x_B, y_B) e C(x_C, y_C), a área é calculada por Área = (1/2) · |det(D)|, onde D é a matriz 3x3 com as coordenadas dos pontos e a terceira coluna preenchida por 1s.\n• Condição de Alinhamento: se det(D) = 0, a área é nula e os três pontos são rigorosamente colineares (pertencem à mesma reta no plano cartesiano)."
+      },
+      {
+        title: "Teorema de Binet e Propriedades Fundamentais",
+        content: "• Teorema de Binet: det(A · B) = det(A) · det(B).\n• Multiplicação por Escalar: se A é de ordem n, então det(k · A) = k^n · det(A) (o fator k multiplica cada uma das n linhas).\n• Inversa: det(A⁻¹) = 1 / det(A), provando que A é invertível se, e somente se, det(A) ≠ 0.\n• Transposta: det(A^T) = det(A)."
+      }
+    ],
+    formulasAndRules: [
+      "Produto Matricial: C(m × n) = A(m × k) · B(k × n).",
+      "Teorema de Binet: det(A · B) = det(A) · det(B).",
+      "Escalar no Determinante: det(k · A_n×n) = kⁿ · det(A).",
+      "Área do Triângulo: Área = (1/2) · |det(D)|.",
+      "Determinante da Inversa: det(A⁻¹) = 1 / det(A).",
+      "Matriz Ortogonal: Q · Q^T = I ⟹ det(Q) = ±1."
+    ],
+    enemTraps: [
+      "Multiplicação de matrizes NÃO é feita termo a termo! É sempre o produto escalar da linha pela coluna.",
+      "Ao multiplicar uma matriz 3×3 por 2, o determinante é multiplicado por 2³ = 8, e NÃO por 2!",
+      "Matrizes NÃO comutam em geral: nunca assuma que A·B = B·A sem demonstração prévia.",
+      "Ao calcular a área do triângulo pelo determinante de Gauss, nunca esqueça de dividir por 2 ao final!"
+    ],
+    mnemonics: "Linha deita na coluna pra somar o produto; na ordem 3, o escalar k eleva ao cubo no determinante resoluto!"
+  },
+
   "linguagens/literatura-contemporanea-cancao": {
     topic: "Literatura Contemporânea, Canção e Poesia Periférica",
     area: "linguagens",
