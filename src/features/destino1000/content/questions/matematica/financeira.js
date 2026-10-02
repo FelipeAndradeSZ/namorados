@@ -434,5 +434,429 @@ export const QUESTIONS_FINANCEIRA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-011",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Inflação e Taxa Real vs. Taxa Aparente (Equação de Fisher)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A administração financeira de um hospital universitário aplicou recursos de doações em um fundo de investimentos que rendeu uma taxa nominal aparente de 15,5% ao longo de 12 meses. No mesmo período, o índice oficial de inflação (IPCA) acumulou uma variação de 5,0%. A relação entre taxa aparente (i_ap), taxa de inflação (i_inf) e taxa real de ganho (i_real) é dada pela Equação de Fisher: (1 + i_ap) = (1 + i_real) · (1 + i_inf).",
+      source: "ENEM / Matemática Financeira e Poder de Compra"
+    },
+    prompt: "A taxa real de rendimento (ganho efetivo de poder de compra) obtida pelo hospital nessa aplicação financeira foi de:",
+    options: [
+      { id: "a", text: "10,0%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10,5%", isCorrect: false, distractorRationale: "Realizou a subtração direta ingênua 15,5% - 5,0% = 10,5%, ignorando a perda inflacionária sobre o rendimento." },
+      { id: "c", text: "11,0%", isCorrect: false, distractorRationale: "Arredondou o valor ou utilizou taxa inflacionária de 4,5%." },
+      { id: "d", text: "9,5%", isCorrect: false, distractorRationale: "Subtraiu mais 1% arbitrário do cálculo." },
+      { id: "e", text: "8,0%", isCorrect: false, distractorRationale: "Dividiu a taxa nominal pela metade e somou 0,25." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Equação de Fisher, a taxa real desconta o impacto da inflação: (1 + i_real) = (1 + i_aparente) / (1 + i_inflação).",
+      stepByStep: [
+        "Taxa aparente: i_ap = 15,5% = 0,155, logo (1 + i_ap) = 1,155.",
+        "Taxa de inflação: i_inf = 5,0% = 0,05, logo (1 + i_inf) = 1,05.",
+        "Equação de Fisher: 1 + i_real = 1,155 / 1,05.",
+        "Efetuando a divisão: 1,155 / 1,05 = 1,10.",
+        "Portanto: i_real = 1,10 - 1 = 0,10 = 10,0% ao ano."
+      ],
+      coreConcept: "Taxa Real vs. Taxa Aparente e Efeito Corrosivo da Inflação",
+      trapWarning: "A taxa real NÃO é a simples subtração das taxas percentuais! Em matemática financeira rigorosa, divide-se os fatores de correção."
+    },
+    commonTraps: ["subtrair as taxas diretamente (15,5 - 5 = 10,5%)", "esquecer de subtrair 1 no final"],
+    tags: ["taxa real", "taxa aparente", "inflacao", "equacao de fisher", "poder de compra"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-012",
+    area: "matematica",
+    competence: 4,
+    skill: 16,
+    topic: "Matemática Financeira",
+    subtopic: "Sistema de Amortização Constante (SAC)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma cooperativa de profissionais de saúde financiou a compra de um tomógrafo computadorizado no valor total de R$ 360.000,00 pelo Sistema de Amortização Constante (SAC). O contrato foi firmado para quitação em 36 parcelas mensais sucessivas, com juros fixados em 1,0% ao mês incidentes sempre sobre o saldo devedor remanescente antes de cada pagamento.",
+      source: "ENEM / Sistemas de Amortização e Crédito"
+    },
+    prompt: "Os valores da primeira parcela (P₁) e da segunda parcela (P₂) a serem pagas pela cooperativa médica correspondem, respectivamente, a:",
+    options: [
+      { id: "a", text: "R$ 13.600,00 e R$ 13.500,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 13.600,00 e R$ 13.600,00", isCorrect: false, distractorRationale: "Assumiu parcelas fixas típicas da Tabela Price em vez de parcelas decrescentes do SAC." },
+      { id: "c", text: "R$ 10.000,00 e R$ 10.000,00", isCorrect: false, distractorRationale: "Calculou apenas a amortização constante sem incluir os juros contratuais." },
+      { id: "d", text: "R$ 13.500,00 e R$ 13.400,00", isCorrect: false, distractorRationale: "Calculou os juros da primeira parcela sobre o saldo já amortizado." },
+      { id: "e", text: "R$ 14.000,00 e R$ 13.800,00", isCorrect: false, distractorRationale: "Errou o cálculo dos juros aplicando taxa de 1,11%." }
+    ],
+    detailedExplanation: {
+      summary: "No Sistema SAC, a amortização mensal é fixa (A = Saldo / N) e as parcelas são decrescentes porque o saldo devedor diminui mês a mês (P = A + Juros).",
+      stepByStep: [
+        "Cálculo da amortização constante: A = R$ 360.000,00 / 36 parcelas = R$ 10.000,00 por mês.",
+        "Mês 1: Saldo devedor inicial = R$ 360.000,00. Juros do 1º mês = 1% de 360.000 = R$ 3.600,00. Parcela 1: P₁ = A + J₁ = 10.000 + 3.600 = R$ 13.600,00.",
+        "Mês 2: Saldo devedor após a 1ª amortização = 360.000 - 10.000 = R$ 350.000,00. Juros do 2º mês = 1% de 350.000 = R$ 3.500,00. Parcela 2: P₂ = A + J₂ = 10.000 + 3.500 = R$ 13.500,00.",
+        "Conclusão: a cada mês que passa, a parcela reduz exatamente R$ 100,00 (1% de R$ 10.000)."
+      ],
+      coreConcept: "Sistema de Amortização Constante (SAC): Amortização Fixa e Parcelas Decrescentes",
+      trapWarning: "No SAC as parcelas diminuem a cada mês; se as parcelas fossem iguais, seria a Tabela Price (Sistema Francês)!"
+    },
+    commonTraps: ["confundir SAC com Tabela Price", "esquecer de abater a amortizacao do saldo devedor para o calculo dos proximos juros"],
+    tags: ["SAC", "amortizacao", "financiamento", "juros sobre saldo devedor"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-013",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Juros Embutidos em Compras Parceladas com Entrada",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na aquisição de computadores e servidores para o setor de telemedicina de um posto de saúde, a distribuidora apresenta duas propostas de pagamento para um lote cujo preço nominal de tabela é R$ 10.000,00:\nProposta 1: Pagamento à vista com 10% de desconto sobre o valor de tabela (R$ 9.000,00 no ato).\nProposta 2: Pagamento em duas parcelas de R$ 5.000,00 cada, sendo a primeira no ato da compra e a segunda após 30 dias.",
+      source: "ENEM / Educação Financeira e Juros Reais Embutidos"
+    },
+    prompt: "A taxa mensal efetiva de juros cobrada na Proposta 2 em relação ao preço real à vista praticado na Proposta 1 é de:",
+    options: [
+      { id: "a", text: "25% ao mês", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10% ao mês", isCorrect: false, distractorRationale: "Confundiu a taxa de juros com a porcentagem de desconto do anúncio à vista." },
+      { id: "c", text: "20% ao mês", isCorrect: false, distractorRationale: "Calculou a taxa dividindo os R$ 1.000 de juros pela parcela de R$ 5.000 (1.000 / 5.000 = 20%)." },
+      { id: "d", text: "5% ao mês", isCorrect: false, distractorRationale: "Dividiu o percentual de desconto de 10% por 2 parcelas." },
+      { id: "e", text: "15% ao mês", isCorrect: false, distractorRationale: "Somou o desconto de 10% com metade da taxa nominal." }
+    ],
+    detailedExplanation: {
+      summary: "O valor à vista real é o montante com desconto (R$ 9.000,00). Ao pagar R$ 5.000,00 de entrada, financia-se apenas R$ 4.000,00 para pagar R$ 5.000,00 no mês seguinte.",
+      stepByStep: [
+        "Preço real à vista (com desconto): R$ 9.000,00.",
+        "Entrada paga na Proposta 2: R$ 5.000,00 no ato da compra.",
+        "Saldo que ficou efetivamente financiado: R$ 9.000,00 - R$ 5.000,00 = R$ 4.000,00.",
+        "Valor pago após 30 dias pela segunda parcela: R$ 5.000,00.",
+        "Juros pagos em 30 dias sobre o saldo financiado: R$ 5.000,00 - R$ 4.000,00 = R$ 1.000,00.",
+        "Taxa efetiva mensal: i = Juros / Saldo Financiado = 1.000 / 4.000 = 0,25 = 25% ao mês."
+      ],
+      coreConcept: "Cálculo da Taxa Efetiva de Juros em Vendas com Entrada",
+      trapWarning: "CUIDADO: A entrada não sofre juros! O capital financiado é (Preço à vista - Entrada), e NÃO o valor total ou a parcela."
+    },
+    commonTraps: ["calcular os juros sobre R$ 5.000 ao inves de R$ 4.000", "achar que 'sem juros' significa juro zero quando ha desconto a vista"],
+    tags: ["juros embutidos", "compras a prazo", "taxa efetiva", "desconto a vista"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-014",
+    area: "matematica",
+    competence: 4,
+    skill: 16,
+    topic: "Matemática Financeira",
+    subtopic: "Equivalência de Taxas de Juros Compostos e Período Fracionário",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para modernizar a biblioteca digital acadêmica de uma faculdade pública de medicina, uma verba suplementar de R$ 40.000,00 foi aplicada em um Certificado de Depósito Bancário (CDB) que remunera a uma taxa composta de 20% ao ano. A gestão financeira necessitou resgatar a totalidade do montante acumulado exatamente após 6 meses (meio ano) de aplicação. (Dado: utilize a aproximação √1,20 ≈ 1,095).",
+      source: "ENEM / Taxas Equivalentes e Juros Compostos Fracionários"
+    },
+    prompt: "O valor bruto do montante resgatado pela faculdade ao término desse semestre foi de aproximadamente:",
+    options: [
+      { id: "a", text: "R$ 43.800,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 44.000,00", isCorrect: false, distractorRationale: "Utilizou taxa proporcional simples de 10% no semestre (40 000 × 1,10 = 44 000), ignorando a equivalência geométrica dos juros compostos." },
+      { id: "c", text: "R$ 48.000,00", isCorrect: false, distractorRationale: "Aplicou a taxa anual integral de 20% sobre o período de apenas 6 meses." },
+      { id: "d", text: "R$ 42.000,00", isCorrect: false, distractorRationale: "Dividiu a taxa anual por 4 em vez de calcular a taxa semestral equivalente." },
+      { id: "e", text: "R$ 41.900,00", isCorrect: false, distractorRationale: "Errou a multiplicação decimal de 40 000 por 1,095." }
+    ],
+    detailedExplanation: {
+      summary: "Em juros compostos, a taxa semestral equivalente à taxa anual é obtida pela raiz quadrada: (1 + i_semestral)² = (1 + i_anual).",
+      stepByStep: [
+        "Capital inicial: C = R$ 40.000,00.",
+        "Prazo da aplicação: 6 meses = 0,5 ano (t = 1/2 ano).",
+        "Taxa anual: i = 20% = 0,20. Fator anual: (1 + i) = 1,20.",
+        "Fórmula do montante com tempo fracionário: M = C · (1 + i)^t = 40.000 · (1,20)^0,5 = 40.000 · √1,20.",
+        "Substituindo o dado √1,20 ≈ 1,095: M = 40.000 × 1,095 = R$ 43.800,00."
+      ],
+      coreConcept: "Taxas Equivalentes no Regime Composto e Exponentes Fracionários",
+      trapWarning: "No regime composto, metade do ano NÃO rende metade da taxa! A taxa semestral equivalente a 20% ao ano é 9,5% (√1,20 - 1), e não 10%."
+    },
+    commonTraps: ["usar taxa proporcional simples (10%) no regime composto", "aplicar o periodo inteiro de 1 ano"],
+    tags: ["taxas equivalentes", "juros compostos", "expoente fracionario", "investimentos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-015",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Desconto Racional Simples (Por Dentro) vs. Desconto Comercial (Por Fora)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma empresa fornecedora de medicamentos detém uma duplicata mercantil com valor nominal de face de R$ 13.200,00 com vencimento em 4 meses. Precisando de liquidez para pagamento de salários, ela desconta o título em uma instituição de fomento que pratica a taxa de desconto racional simples ('por dentro') de 2,5% ao mês. Na modalidade racional simples, o valor nominal (N) relaciona-se com o valor atual resgatado (A) pela relação N = A · (1 + i · t).",
+      source: "ENEM / Operações de Crédito e Desconto Comercial vs. Racional"
+    },
+    prompt: "O valor líquido atual recebido pela fornecedora e o respectivo desconto financeiro racional obtido nessa operação foram de:",
+    options: [
+      { id: "a", text: "R$ 12.000,00 e R$ 1.200,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 11.880,00 e R$ 1.320,00", isCorrect: false, distractorRationale: "Calculou pela modalidade de desconto comercial simples ('por fora'), onde o juro incide sobre o valor nominal futuro: 13 200 × (1 - 0,10) = 11 880." },
+      { id: "c", text: "R$ 12.200,00 e R$ 1.000,00", isCorrect: false, distractorRationale: "Errou a divisão fracionária dividindo por 1,08." },
+      { id: "d", text: "R$ 10.000,00 e R$ 3.200,00", isCorrect: false, distractorRationale: "Aplicou taxa de juros de 8% ao mês." },
+      { id: "e", text: "R$ 13.000,00 e R$ 200,00", isCorrect: false, distractorRationale: "Considerou apenas 1 mês de desconto em vez de 4 meses." }
+    ],
+    detailedExplanation: {
+      summary: "No desconto racional simples (por dentro), a taxa incide sobre o valor atual A (capital real): N = A · (1 + i·t), logo A = N / (1 + i·t).",
+      stepByStep: [
+        "Dados: Valor nominal N = R$ 13.200,00; taxa i = 2,5% = 0,025 ao mês; prazo t = 4 meses.",
+        "Produto taxa × tempo: i · t = 0,025 × 4 = 0,10 (10%).",
+        "Valor atual A: 13.200 = A · (1 + 0,10)  =>  A = 13.200 / 1,10 = R$ 12.000,00.",
+        "Desconto racional (D_r): D_r = N - A = R$ 13.200,00 - R$ 12.000,00 = R$ 1.200,00.",
+        "Nota: Se a operação utilizasse desconto comercial ('por fora'), o desconto seria D_c = N · i · t = 13.200 · 0,10 = R$ 1.320,00, gerando menor valor líquido para o cliente."
+      ],
+      coreConcept: "Diferença entre Desconto Racional (Por Dentro) e Comercial (Por Fora)",
+      trapWarning: "Desconto racional é calculado sobre o valor PRESENTE (divide por 1+it); desconto comercial é calculado sobre o valor NOMINAL futuro (multiplica por it)!"
+    },
+    commonTraps: ["aplicar formula de desconto comercial quando a questao pede racional", "esquecer que o desconto e a diferenca N - A"],
+    tags: ["desconto racional", "desconto por dentro", "valor nominal", "valor atual"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-016",
+    area: "matematica",
+    competence: 4,
+    skill: 16,
+    topic: "Matemática Financeira",
+    subtopic: "Séries Uniformes de Depósitos e Poupança Programada",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para constituir um fundo de reserva emergencial para aquisição de testes diagnósticos rápidos, o diretor financeiro de um hemocentro planejou três depósitos mensais consecutivos de exatamente R$ 10.000,00 cada um, realizados sempre no último dia dos meses de janeiro, fevereiro e março. O dinheiro é depositado em uma conta remunerada que rende juros compostos de 2% ao mês sobre o saldo credor a cada virada de mês.",
+      source: "ENEM / Matemática Financeira e Poupança Programada"
+    },
+    prompt: "Logo após a realização do terceiro depósito (no último dia de março), o montante total acumulado nessa conta de reserva será de:",
+    options: [
+      { id: "a", text: "R$ 30.604,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 30.600,00", isCorrect: false, distractorRationale: "Calculou pelo regime de juros simples somando 2% e 4% sobre R$ 10.000." },
+      { id: "c", text: "R$ 31.200,00", isCorrect: false, distractorRationale: "Aplicou juros de 3 meses cheios para todos os três depósitos indiscriminadamente." },
+      { id: "d", text: "R$ 30.000,00", isCorrect: false, distractorRationale: "Somou apenas os depósitos nominais sem considerar o rendimento dos juros compostos." },
+      { id: "e", text: "R$ 30.800,00", isCorrect: false, distractorRationale: "Errou a potência de (1,02)² assumindo 1,06." }
+    ],
+    detailedExplanation: {
+      summary: "Cada parcela depositada rende por um intervalo de tempo diferente até a data final de apuração do saldo.",
+      stepByStep: [
+        "Depósito 1 (fim de janeiro): rende durante fevereiro e março (2 meses). Montante 1 = 10.000 × (1,02)² = 10.000 × 1,0404 = R$ 10.404,00.",
+        "Depósito 2 (fim de fevereiro): rende durante março (1 mês). Montante 2 = 10.000 × (1,02)¹ = R$ 10.200,00.",
+        "Depósito 3 (fim de março): acabou de ser depositado no dia da apuração (0 meses). Montante 3 = R$ 10.000,00.",
+        "Montante total acumulado: 10.404 + 10.200 + 10.000 = R$ 30.604,00."
+      ],
+      coreConcept: "Valor Futuro de Séries Uniformes de Pagamentos (Anuidades)",
+      trapWarning: "Atenção ao momento de cada depósito: o último depósito não rende juros se o saldo for medido no mesmo instante em que ele é feito!"
+    },
+    commonTraps: ["aplicar o mesmo tempo de rendimento para todos os depositos", "ignorar o juro sobre juro no primeiro deposito"],
+    tags: ["series de pagamentos", "poupanca programada", "juros compostos", "montante acumulado"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-017",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Erosão Inflacionária e Perda Real de Poder de Compra",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante um período de 12 meses marcado por fortes oscilações econômicas, a cesta de medicamentos e insumos básicos de um ambulatório municipal sofreu uma inflação de preços acumulada de 25%. No mesmo intervalo, a dotação orçamentária do ambulatório recebeu um reajuste nominal de apenas 10%.",
+      source: "ENEM / Poder de Compra e Economia Aplicada"
+    },
+    prompt: "Com base nesses dados econômicos, a perda real do poder de compra sofrida pelo orçamento desse ambulatório ao final do período foi de:",
+    options: [
+      { id: "a", text: "12,0%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "15,0%", isCorrect: false, distractorRationale: "Realizou a subtração direta ingênua dos índices percentuais (25% - 10% = 15%)." },
+      { id: "c", text: "13,6%", isCorrect: false, distractorRationale: "Calculou a razão 15 / 110 em vez de ponderar pelo novo índice inflacionado." },
+      { id: "d", text: "10,0%", isCorrect: false, distractorRationale: "Confundiu a perda com a taxa do reajuste concedido." },
+      { id: "e", text: "8,0%", isCorrect: false, distractorRationale: "Dividiu a diferença percentual por 2." }
+    ],
+    detailedExplanation: {
+      summary: "O poder de compra relativo é a razão entre o índice de reajuste e o índice de preços: Poder de Compra = (1 + reajuste) / (1 + inflação).",
+      stepByStep: [
+        "Fator de aumento da renda orçamentária: 1 + 0,10 = 1,10.",
+        "Fator de aumento dos preços de mercado: 1 + 0,25 = 1,25.",
+        "Novo poder de compra relativo: P = 1,10 / 1,25.",
+        "Multiplicando numerador e denominador por 4: P = 4,40 / 5 = 0,88 (ou seja, 88% do poder de compra original).",
+        "Perda percentual de poder de compra: 1,00 - 0,88 = 0,12 = 12,0%."
+      ],
+      coreConcept: "Cálculo da Variação do Poder de Compra da Moeda",
+      trapWarning: "Subtrair porcentagens de reajuste e inflação é um erro clássico do ENEM! O poder de compra é SEMPRE a divisão entre os fatores de correção."
+    },
+    commonTraps: ["subtrair 25% - 10% = 15%", "esquecer de subtrair de 1 para achar a perda"],
+    tags: ["poder de compra", "inflacao", "orcamento", "variacao percentual"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-018",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Custo Efetivo Total (CET) e Taxas Administrativas Embutidas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A diretoria de uma clínica de hemodiálise negociou um empréstimo bancário de R$ 50.000,00 para liquidação integral em parcela única após 1 ano. A taxa nominal de juros pactuada no contrato foi de 12% ao ano. Entretanto, a instituição financeira descontou no ato da liberação uma taxa de abertura de crédito (TAC) de R$ 2.000,00, liberando em conta corrente exatamente R$ 48.000,00. Ao final do ano, a clínica quitou o montante contratual de R$ 56.000,00 (correspondente ao principal de 50.000 corrigido em 12%).",
+      source: "ENEM / Custo Efetivo Total (CET) e Transparência Bancária"
+    },
+    prompt: "O Custo Efetivo Total (CET) anual dessa operação de empréstimo, medido sobre os recursos efetivamente recebidos pela clínica, foi de:",
+    options: [
+      { id: "a", text: "16,67% ao ano", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "12,00% ao ano", isCorrect: false, distractorRationale: "Considerou apenas a taxa nominal de juros contratual, ignorando a taxa TAC descontada na largada." },
+      { id: "c", text: "16,00% ao ano", isCorrect: false, distractorRationale: "Calculou os R$ 8.000 de acréscimo sobre os R$ 50.000 nominais (8.000 / 50.000 = 16%)." },
+      { id: "d", text: "14,00% ao ano", isCorrect: false, distractorRationale: "Fez a média aritmética simples entre 12% e 16%." },
+      { id: "e", text: "18,50% ao ano", isCorrect: false, distractorRationale: "Superestimou a incidência das taxas contratuais." }
+    ],
+    detailedExplanation: {
+      summary: "O Custo Efetivo Total (CET) reflete o custo real do dinheiro em relação ao montante que realmente entrou no caixa do tomador.",
+      stepByStep: [
+        "Capital que a clínica realmente recebeu: C_efetivo = R$ 50.000,00 - R$ 2.000,00 = R$ 48.000,00.",
+        "Montante total pago pela clínica ao final de 1 ano: M = R$ 50.000,00 × 1,12 = R$ 56.000,00.",
+        "Custo financeiro total da operação: R$ 56.000,00 - R$ 48.000,00 = R$ 8.000,00.",
+        "Taxa efetiva anual (CET): i_efetivo = 8.000 / 48.000 = 1 / 6 ≈ 0,16667 = 16,67% ao ano.",
+        "Observe como o desconto da taxa de cadastro elevou o juro real de 12% para mais de 16,6%!"
+      ],
+      coreConcept: "Custo Efetivo Total (CET) e Impacto de Tarifas na Taxa Efetiva",
+      trapWarning: "O CET deve ser SEMPRE calculado sobre o capital líquido efetivamente liberado, e não sobre o valor bruto do contrato!"
+    },
+    commonTraps: ["calcular o encargo sobre o valor nominal de 50.000", "ignorar a tarifa inicial na taxa efetiva"],
+    tags: ["CET", "custo efetivo total", "tarifas bancarias", "taxa real de emprestimo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-019",
+    area: "matematica",
+    competence: 4,
+    skill: 16,
+    topic: "Matemática Financeira",
+    subtopic: "Duplicação de Capital sob Juros Compostos (Equação Exponencial)",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "contextualized",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um fundo patrimonial de um hospital filantrópico realizou uma aplicação de longo prazo em títulos públicos remunerados à taxa fixa de juros compostos de 6% ao ano. Para o planejamento de expansão das instalações físicas, os gestores necessitam saber o tempo mínimo necessário para que o montante acumulado dobre em relação ao capital investido inicialmente. (Dados: 1,06¹⁰ ≈ 1,791; 1,06¹¹ ≈ 1,898; 1,06¹² ≈ 2,012).",
+      source: "ENEM / Funções Exponenciais e Matemática Financeira"
+    },
+    prompt: "O número mínimo de anos inteiros necessários para que o valor aplicado atinja pelo menos o dobro do capital inicial é de:",
+    options: [
+      { id: "a", text: "12 anos", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "17 anos", isCorrect: false, distractorRationale: "Calculou pelo regime de juros simples fazendo 100% / 6% ≈ 16,7 anos." },
+      { id: "c", text: "10 anos", isCorrect: false, distractorRationale: "Estimou que 10 anos seriam suficientes, mas em 10 anos o capital cresce apenas 79% (fator 1,791)." },
+      { id: "d", text: "11 anos", isCorrect: false, distractorRationale: "Em 11 anos o fator é 1,898, ainda inferior ao dobro (2,000)." },
+      { id: "e", text: "8 anos", isCorrect: false, distractorRationale: "Subestimou grosseiramente o tempo de duplicação." }
+    ],
+    detailedExplanation: {
+      summary: "Para dobrar o capital sob juros compostos, busca-se t tal que (1 + i)ᵗ ≥ 2.",
+      stepByStep: [
+        "Fórmula do montante: M = C · (1 + i)ᵗ.",
+        "Condição de duplicação: M ≥ 2 C  =>  (1,06)ᵗ ≥ 2.",
+        "Analisando os dados fornecidos:",
+        "Para t = 10 anos: 1,06¹⁰ ≈ 1,791 < 2.",
+        "Para t = 11 anos: 1,06¹¹ ≈ 1,898 < 2 (ainda não dobrou).",
+        "Para t = 12 anos: 1,06¹² ≈ 2,012 ≥ 2 (dobrou e ultrapassou ligeiramente o dobro).",
+        "Logo, são necessários no mínimo 12 anos inteiros de aplicação.",
+        "(Regra empírica dos 72: 72 / 6 = 12 anos)."
+      ],
+      coreConcept: "Duplicação de Capital em Juros Compostos e Comparação com Dados de Potência",
+      trapWarning: "Certifique-se de escolher o primeiro número inteiro de anos em que o fator ultrapassa 2,000!"
+    },
+    commonTraps: ["calcular por juros simples obtendo 17 anos", "escolher 11 anos onde o capital quase dobrou mas nao atingiu o dobro"],
+    tags: ["duplicacao de capital", "regra dos 72", "juros compostos", "funcao exponencial"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-FIN-020",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Matemática Financeira",
+    subtopic: "Ponto de Equilíbrio (Break-Even) e Payback de Investimento",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um laboratório de análises clínicas investiu R$ 120.000,00 na aquisição de um analisador bioquímico automatizado. Para cada exame realizado, o custo variável de reagentes e descartáveis é de R$ 15,00, e o preço médio repassado pelos convênios é de R$ 55,00 por exame. O custo fixo mensal de manutenção preventiva e calibração do aparelho é de R$ 2.000,00. O laboratório opera com uma demanda estável de 500 exames por mês.",
+      source: "ENEM / Matemática Aplicada à Gestão e Análise de Investimentos"
+    },
+    prompt: "Considerando que o faturamento e os pagamentos ocorrem ao término de cada mês civil, o prazo mínimo de meses completos necessários para amortizar integralmente o investimento inicial de R$ 120.000,00 (payback simples) é de:",
+    options: [
+      { id: "a", text: "7 meses", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "6 meses", isCorrect: false, distractorRationale: "Ao término de 6 meses o retorno acumulado é de R$ 108.000,00, ainda insuficiente para quitar os R$ 120.000,00." },
+      { id: "c", text: "8 meses", isCorrect: false, distractorRationale: "Adicionou um mês a mais desnecessariamente." },
+      { id: "d", text: "10 meses", isCorrect: false, distractorRationale: "Errou a margem de contribuição dividindo o investimento apenas pelo faturamento bruto." },
+      { id: "e", text: "5 meses", isCorrect: false, distractorRationale: "Desconsiderou o custo fixo mensal de manutenção de R$ 2.000,00." }
+    ],
+    detailedExplanation: {
+      summary: "O payback simples calcula em quanto tempo o lucro líquido acumulado cobre o custo inicial do investimento.",
+      stepByStep: [
+        "Margem de contribuição por exame: Preço - Custo Variável = R$ 55,00 - R$ 15,00 = R$ 40,00 por exame.",
+        "Margem de contribuição total para 500 exames mensais: 500 × R$ 40,00 = R$ 20.000,00.",
+        "Lucro operacional líquido mensal: Margem Total - Custos Fixos = R$ 20.000,00 - R$ 2.000,00 = R$ 18.000,00 por mês.",
+        "Tempo de retorno: R$ 120.000,00 / R$ 18.000,00/mês = 120 / 18 = 6,67 meses.",
+        "Como a apuração contábil se dá em meses fechados: ao fim de 6 meses têm-se R$ 108.000,00 (falta pagar R$ 12.000); ao fim do 7º mês atingem-se R$ 126.000,00, liquidando integralmente o investimento.",
+        "Portanto, são necessários 7 meses completos."
+      ],
+      coreConcept: "Ponto de Retorno de Investimento (Payback) e Margem de Contribuição",
+      trapWarning: "Cuidado ao arredondar frações de tempo: se são necessários 6,67 meses, a liquidação total só é atingida no 7º mês!"
+    },
+    commonTraps: ["arredondar 6,67 para baixo (6 meses)", "esquecer de subtrair os custos fixos mensais"],
+    tags: ["payback", "ponto de equilibrio", "margem de contribuicao", "gestao financeira"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

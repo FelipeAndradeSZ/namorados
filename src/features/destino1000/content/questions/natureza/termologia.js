@@ -418,5 +418,423 @@ export const QUESTIONS_TERMOLOGIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-011",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Equilíbrio Térmico e Mudança de Fase em Calorímetro",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um laboratório hospitalar, para resfriar rapidamente uma solução biológica aquosa até 0 °C, colocam-se 200 g de água líquida inicialmente a 25 °C dentro de um calorímetro ideal de capacidade térmica desprezível. Em seguida, adicionam-se cubos de gelo fundente que estão a 0 °C. Considere o calor específico da água como 1,0 cal/(g·°C) e o calor latente de fusão do gelo como 80 cal/g. Desconsidere quaisquer perdas para o ambiente externo.",
+      source: "ENEM / Calorimetria e Mudanças de Fase"
+    },
+    prompt: "A massa mínima de gelo a 0 °C que deve se fundir completamente para reduzir toda a massa de água líquida até a temperatura de 0 °C é de:",
+    options: [
+      { id: "a", text: "62,5 g", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "50,0 g", isCorrect: false, distractorRationale: "Dividiu o calor cedido por 100 em vez de 80 cal/g." },
+      { id: "c", text: "80,0 g", isCorrect: false, distractorRationale: "Confundiu a massa necessária com o valor numérico do calor latente de fusão." },
+      { id: "d", text: "125,0 g", isCorrect: false, distractorRationale: "Errou a simplificação matemática multiplicando por 2 em vez de dividir." },
+      { id: "e", text: "25,0 g", isCorrect: false, distractorRationale: "Calculou a massa assumindo variação de temperatura de apenas 10 °C." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo princípio da conservação da energia térmica, a soma das trocas de calor em um sistema isolado é nula: Q_cedido + Q_absorvido = 0.",
+      stepByStep: [
+        "Calor cedido pela água líquida para resfriar de 25 °C a 0 °C: Q_água = m · c · Δθ = 200 g × 1,0 cal/(g·°C) × (0 - 25) °C = -5 000 cal.",
+        "Calor absorvido pelo gelo para fundir a 0 °C: Q_fusão = m_gelo × L_f = m_gelo × 80 cal/g.",
+        "Balanço térmico: |Q_água| = Q_fusão  =>  5 000 = m_gelo × 80.",
+        "Isolando a massa de gelo: m_gelo = 5 000 / 80 = 62,5 g de gelo fundido."
+      ],
+      coreConcept: "Equilíbrio Térmico e Calor Latente de Mudança de Fase (Q = m·L)",
+      trapWarning: "Como o gelo já está a 0 °C e a temperatura final é 0 °C, o gelo sofre apenas calor latente de fusão, sem aquecimento sensível posterior!"
+    },
+    commonTraps: ["somar calor sensivel ao gelo que ja esta a zero grau", "esquecer de igualar o calor cedido ao absorvido"],
+    tags: ["calorimetria", "mudanca de fase", "calor latente", "equilibrio termico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-012",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Primeira Lei da Termodinâmica e Expansão Isobárica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema pneumático de gases medicinais de uma unidade cirúrgica, um cilindro dotado de êmbolo móvel sem atrito contém uma massa de gás ideal que recebe 1 500 J de energia na forma de calor de um aquecedor elétrico. Sob pressão manométrica constante de 2,0 × 10⁵ N/m², o gás expande-se isobaricamente, aumentando seu volume de 0,003 m³ para 0,007 m³.",
+      source: "ENEM / Termodinâmica Clássica e Conservação de Energia"
+    },
+    prompt: "Com base na Primeira Lei da Termodinâmica, a variação da energia interna (ΔU) experimentada por esse gás ideal durante o processo é igual a:",
+    options: [
+      { id: "a", text: "700 J", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2 300 J", isCorrect: false, distractorRationale: "Somou o calor ao trabalho (Q + W) violando a equação ΔU = Q - W." },
+      { id: "c", text: "800 J", isCorrect: false, distractorRationale: "Calculou apenas o trabalho mecânico realizado na expansão e o confundiu com a energia interna." },
+      { id: "d", text: "1 500 J", isCorrect: false, distractorRationale: "Desconsiderou o trabalho realizado pelo gás, assumindo erroneamente transformação isocórica." },
+      { id: "e", text: "-700 J", isCorrect: false, distractorRationale: "Inverteu a convenção de sinais do trabalho na expansão térmica." }
+    ],
+    detailedExplanation: {
+      summary: "A Primeira Lei da Termodinâmica estabelece que a variação de energia interna é o calor líquido absorvido menos o trabalho realizado pelo sistema: ΔU = Q - W.",
+      stepByStep: [
+        "Variação de volume: ΔV = V_final - V_inicial = 0,007 m³ - 0,003 m³ = 0,004 m³.",
+        "Trabalho realizado pelo gás sob pressão constante (isobárica): W = P · ΔV = (2,0 × 10⁵ N/m²) × 0,004 m³ = 800 J.",
+        "Como é uma expansão, o gás realiza trabalho sobre o meio (W = +800 J).",
+        "Calor fornecido ao gás: Q = +1 500 J.",
+        "Primeira Lei da Termodinâmica: ΔU = Q - W = 1 500 J - 800 J = +700 J."
+      ],
+      coreConcept: "Primeira Lei da Termodinâmica (ΔU = Q - W) e Trabalho Isobárico",
+      trapWarning: "Atenção aos sinais: na expansão, W > 0 (gás realiza trabalho). Se fosse compressão, W < 0."
+    },
+    commonTraps: ["somar calor com trabalho ao invés de subtrair", "confundir variacao de volume com volume final"],
+    tags: ["primeira lei", "termodinamica", "trabalho isobarico", "energia interna"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-013",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Segunda Lei da Termodinâmica e Ciclo de Carnot",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para suprir energia em situações emergenciais, uma usina termoelétrica auxiliar hospitalar foi modelada como operando sob o ciclo teórico ideal de Carnot. O vapor opera retirando calor de uma caldeira a 227 °C (fonte quente) e rejeitando o excesso térmico para um condensador resfriado por água a 27 °C (fonte fria). A cada ciclo motor completo, a máquina absorve 60 000 J de calor da fonte quente.",
+      source: "ENEM / Máquinas Térmicas e Ciclo de Carnot"
+    },
+    prompt: "O rendimento térmico máximo teórico dessa máquina de Carnot e o trabalho mecânico útil produzido por ciclo são, respectivamente:",
+    options: [
+      { id: "a", text: "40% e 24 000 J", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "88% e 52 800 J", isCorrect: false, distractorRationale: "Calculou o rendimento utilizando temperaturas em graus Celsius em vez da escala absoluta Kelvin (1 - 27/227 ≈ 0,88)." },
+      { id: "c", text: "60% e 36 000 J", isCorrect: false, distractorRationale: "Confundiu o calor rejeitado para a fonte fria (36 000 J) com o trabalho útil do ciclo." },
+      { id: "d", text: "50% e 30 000 J", isCorrect: false, distractorRationale: "Estimou uma média grosseira sem converter rigorosamente as temperaturas." },
+      { id: "e", text: "20% e 12 000 J", isCorrect: false, distractorRationale: "Errou a razão das temperaturas absolutas calculando 1 - 400/500." }
+    ],
+    detailedExplanation: {
+      summary: "O rendimento de Carnot representa o limite termodinâmico máximo de conversão de calor em trabalho: η = 1 - (T_fria / T_quente), obrigatoriamente com T em Kelvin.",
+      stepByStep: [
+        "Conversão das temperaturas para a escala Kelvin: T_quente = 227 + 273 = 500 K; T_fria = 27 + 273 = 300 K.",
+        "Cálculo do rendimento de Carnot: η = 1 - (300 / 500) = 1 - 0,60 = 0,40 (ou 40%).",
+        "Trabalho útil realizado por ciclo: W = η · Q_quente = 0,40 × 60 000 J = 24 000 J.",
+        "Calor residual rejeitado para a fonte fria: Q_frio = Q_quente - W = 36 000 J."
+      ],
+      coreConcept: "Ciclo de Carnot e Rendimento Termodinâmico Máximo Teórico",
+      trapWarning: "ERRO GRAVE: Nunca aplique a fórmula de Carnot com temperaturas em Celsius! A conversão para Kelvin (+273) é compulsória."
+    },
+    commonTraps: ["usar temperatura em Celsius na formula de Carnot", "confundir calor rejeitado com trabalho util"],
+    tags: ["ciclo de carnot", "segunda lei", "maquinas termicas", "rendimento"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-014",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Dilatação Térmica Linear de Sólidos",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na estrutura de tubulação de vapor de esterilização de uma lavanderia central, uma tubulação metálica de aço carbono com 15,0 m de comprimento é montada em repouso térmico a 10 °C. Durante o funcionamento contínuo com vapor superaquecido, a tubulação atinge a temperatura estável de 60 °C. O coeficiente de dilatação linear do aço carbono utilizado é α = 1,2 × 10⁻⁵ °C⁻¹.",
+      source: "ENEM / Dilatação Térmica dos Sólidos"
+    },
+    prompt: "Para evitar deformações plásticas e ruptura das conexões, o espaçamento mínimo das juntas de dilatação deve absorver uma variação de comprimento linear (ΔL) de:",
+    options: [
+      { id: "a", text: "9,0 mm", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10,8 mm", isCorrect: false, distractorRationale: "Utilizou a temperatura final de 60 °C em vez da variação de temperatura (Δθ = 50 °C)." },
+      { id: "c", text: "0,9 mm", isCorrect: false, distractorRationale: "Errou a conversão de metros para milímetros por uma ordem de grandeza." },
+      { id: "d", text: "15,0 mm", isCorrect: false, distractorRationale: "Confundiu o comprimento inicial da barra (15 m) com a variação em milímetros." },
+      { id: "e", text: "4,5 mm", isCorrect: false, distractorRationale: "Dividiu a variação pela metade supondo dilatação apenas em uma das extremidades." }
+    ],
+    detailedExplanation: {
+      summary: "A dilatação térmica linear é calculada pela relação ΔL = L₀ · α · Δθ.",
+      stepByStep: [
+        "Comprimento inicial: L₀ = 15,0 m = 15 000 mm.",
+        "Variação térmica: Δθ = θ_final - θ_inicial = 60 °C - 10 °C = 50 °C.",
+        "Aplicação da fórmula: ΔL = 15 000 mm × (1,2 × 10⁻⁵ °C⁻¹) × 50 °C.",
+        "Multiplicação: 15 000 × 50 = 750 000.",
+        "Cálculo final: 750 000 × 1,2 × 10⁻⁵ = 9,0 mm."
+      ],
+      coreConcept: "Dilatação Linear de Sólidos e Juntas de Dilatação Estruturais",
+      trapWarning: "Cuidado ao converter metros para milímetros (1 m = 1 000 mm) e certifique-se de usar Δθ e não θ final!"
+    },
+    commonTraps: ["usar temperatura final no lugar do delta T", "erro de conversao de metros para milimetros"],
+    tags: ["dilatacao linear", "coeficiente de dilatacao", "fisica termica", "materiais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-015",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Comportamento Térmico Anômalo da Água",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em lagos e rios de zonas temperadas sujeitos a invernos rigorosos, a água superficial congela, formando uma camada espessa de gelo na superfície que permite a patinação humana. No entanto, no leito profundo desses mesmos lagos, a água permanece líquida a aproximadamente 4 °C, garantindo a sobrevivência ininterrupta da flora e fauna aquática durante toda a estação fria.",
+      source: "ENEM / Propriedades Anômalas da Água e Ecologia"
+    },
+    prompt: "A manutenção da água líquida no fundo dos lagos e o congelamento restrito à superfície decorrem da dilatação anômala da água, que é caracterizada por:",
+    options: [
+      { id: "a", text: "apresentar densidade máxima no estado líquido exatamente a 4 °C, fazendo com que a água a essa temperatura desça para o fundo e o gelo menos denso flutue como isolante térmico.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "possuir calor de condensação negativo, o que impede a transmissão de energia mecânica por ondas submarinas.", isCorrect: false, distractorRationale: "Calor de condensação não tem relação com a estratificação térmica do lago no inverno." },
+      { id: "c", text: "ter condutividade térmica superior à dos metais, transferindo calor geotérmico imediato para a atmosfera.", isCorrect: false, distractorRationale: "A água e o gelo são maus condutores térmicos (bons isolantes térmicos)." },
+      { id: "d", text: "expandir-se continuamente ao ser aquecida desde -10 °C até 100 °C sem qualquer anomalia volumétrica.", isCorrect: false, distractorRationale: "A água contrai-se entre 0 °C e 4 °C; essa contração é a própria anomalia." },
+      { id: "e", text: "impedir a oxigenação biológica de profundidade abaixo de 10 °C.", isCorrect: false, distractorRationale: "A água fria dissolve mais oxigênio molecular do que a água quente." }
+    ],
+    detailedExplanation: {
+      summary: "A água atinge seu volume mínimo e sua densidade máxima a 4 °C devido ao arranjo espacial das pontes de hidrogênio.",
+      stepByStep: [
+        "A maioria das substâncias contrai de volume e fica mais densa à medida que esfria até a solidificação.",
+        "A água comporta-se de forma anômala entre 0 °C e 4 °C: ao ser resfriada de 4 °C a 0 °C, ela se EXPENDE e sua densidade DIMINUI.",
+        "Por isso, a água mais densa (a 4 °C) afunda e permanece no fundo do lago.",
+        "A água a 0 °C e o gelo (densidade ~0,92 g/cm³) flutuam na superfície, formando uma barreira isolante que protege as camadas inferiores do congelamento."
+      ],
+      coreConcept: "Dilatação Anômala da Água e Densidade Máxima a 4 °C",
+      trapWarning: "Lembre-se: o gelo flutua porque é MENOS DENSO que a água líquida devido à estrutura hexagonal aberta das pontes de hidrogênio."
+    },
+    commonTraps: ["achar que a agua no fundo esta a zero grau", "confundir anomalia da agua com mudanca quimica de composicao"],
+    tags: ["dilatacao anomala", "densidade da agua", "pontes de hidrogenio", "ecologia aquatica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-016",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Potência Térmica e Aquecimento Específico",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma autoclave de bancada utilizada na central de esterilização de materiais médicos possui uma resistência elétrica com potência térmica útil constante de 2 000 W. O operador abastece a câmara interna com 1 500 g de água destilada a 20 °C para ser levada até o início da fervura a 100 °C. Considere o calor específico da água como 1,0 cal/(g·°C) e a equivalência termodinâmica de 1,0 cal = 4,2 J. Desconsidere perdas térmicas para o invólucro.",
+      source: "ENEM / Potência Térmica e Calorimetria"
+    },
+    prompt: "O intervalo de tempo mínimo necessário para que a água atinja os 100 °C e inicie a fervura é de:",
+    options: [
+      { id: "a", text: "4 minutos e 12 segundos (252 s)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "1 minuto (60 s)", isCorrect: false, distractorRationale: "Esqueceu a conversão de calorias para joules (dividiu 120 000 cal diretamente por 2 000 W)." },
+      { id: "c", text: "5 minutos (300 s)", isCorrect: false, distractorRationale: "Arredondou o cálculo grosseiramente ou errou a variação de temperatura." },
+      { id: "d", text: "3 minutos e 30 segundos (210 s)", isCorrect: false, distractorRationale: "Utilizou 1 cal = 3,5 J em vez de 4,2 J." },
+      { id: "e", text: "2 minutos e 6 segundos (126 s)", isCorrect: false, distractorRationale: "Dividiu o tempo correto pela metade." }
+    ],
+    detailedExplanation: {
+      summary: "A potência é a taxa de energia fornecida por unidade de tempo (P = E / Δt), com energia convertida em Joules.",
+      stepByStep: [
+        "Calor necessário em calorias: Q = m · c · Δθ = 1 500 g × 1,0 cal/(g·°C) × (100 - 20) °C = 1 500 × 80 = 120 000 cal.",
+        "Conversão para Joules (1 cal = 4,2 J): E = 120 000 cal × 4,2 J/cal = 504 000 J.",
+        "Potência da resistência: P = 2 000 W = 2 000 J/s.",
+        "Tempo em segundos: Δt = E / P = 504 000 J / 2 000 J/s = 252 segundos.",
+        "Conversão para minutos: 252 s = (4 × 60) + 12 s = 4 minutos e 12 segundos."
+      ],
+      coreConcept: "Relação entre Potência (W = J/s), Calorimetria (Q = mcΔθ) e Equivalente Mecânico do Calor",
+      trapWarning: "Sempre converta calorias em joules ao trabalhar com potência em Watts (W = J/s)!"
+    },
+    commonTraps: ["esquecer de converter caloria para Joule", "confundir variacao de temperatura com temperatura final"],
+    tags: ["potencia termica", "calorimetria", "equivalente mecanico", "joule e caloria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-017",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Transformações Gasosas: Lei de Charles (Isovolumétrica)",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um cilindro metálico selado indeformável contendo oxigênio gasoso hospitalar tem capacidade interna de 50 L e suporta pressões elevadas. Em uma sala climatizada a 27 °C, o manômetro acusa uma pressão interna de 150 atm. Em virtude de uma avaria no ar-condicionado e exposição ao calor ambiente, a temperatura do cilindro eleva-se até 87 °C, mantendo-se o volume rigorosamente inalterado.",
+      source: "ENEM / Gases Ideais e Transformação Isovolumétrica"
+    },
+    prompt: "Tratando o oxigênio como um gás ideal em regime isocórico (volume constante), a nova pressão interna indicada pelo manômetro será de:",
+    options: [
+      { id: "a", text: "180 atm", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "483 atm", isCorrect: false, distractorRationale: "Calculou a proporção usando temperaturas em graus Celsius (150 × 87 / 27 ≈ 483 atm)." },
+      { id: "c", text: "165 atm", isCorrect: false, distractorRationale: "Somou 15 atm por estimativa linear incorreta." },
+      { id: "d", text: "200 atm", isCorrect: false, distractorRationale: "Superestimou a pressão aplicando a razão das temperaturas em Celsius somada a 50." },
+      { id: "e", text: "125 atm", isCorrect: false, distractorRationale: "Inverteu a razão calculando que a pressão diminuiria com o aquecimento." }
+    ],
+    detailedExplanation: {
+      summary: "Na transformação isovolumétrica (isocórica), a pressão de uma massa fixa de gás ideal é diretamente proporcional à sua temperatura absoluta: P₁ / T₁ = P₂ / T₂.",
+      stepByStep: [
+        "Temperaturas absolutas em Kelvin: T₁ = 27 + 273 = 300 K; T₂ = 87 + 273 = 360 K.",
+        "Equação da transformação isocórica: P₁ / T₁ = P₂ / T₂.",
+        "Substituição dos dados: 150 atm / 300 K = P₂ / 360 K.",
+        "Simplificação: 150 / 300 = 0,5 atm/K.",
+        "Cálculo de P₂: P₂ = 0,5 × 360 = 180 atm."
+      ],
+      coreConcept: "Transformação Isovolumétrica (Lei de Charles e Gay-Lussac) e Temperatura Absoluta",
+      trapWarning: "A Lei Geral dos Gases exige SEMPRE a temperatura na escala absoluta Kelvin (K = °C + 273)."
+    },
+    commonTraps: ["usar temperatura em Celsius na equacao dos gases", "achar que o volume varia em cilindro rigido selado"],
+    tags: ["gases ideais", "transformacao isovolumetrica", "lei de charles", "pressao e temperatura"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-018",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Condução Térmica e Lei de Fourier",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para estocagem de vacinas termossensíveis em uma central de imunização, projetou-se uma câmara fria estática. Uma das paredes de isolamento possui área superficial de 20 m² e espessura de 5,0 cm (0,05 m), sendo constituída de poliuretano expandido com coeficiente de condutividade térmica k = 0,025 W/(m·K). A face externa da parede encontra-se exposta ao ambiente a 24 °C e a face interna é mantida a 4 °C.",
+      source: "ENEM / Propagação de Calor e Lei de Fourier"
+    },
+    prompt: "Pela Lei de Fourier da condução térmica [Φ = k · A · (ΔT / e)], a taxa de transferência de calor (fluxo térmico Φ) que atravessa essa parede para o interior da câmara fria é de:",
+    options: [
+      { id: "a", text: "200 W", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "100 W", isCorrect: false, distractorRationale: "Utilizou espessura de 0,10 m em vez de 0,05 m." },
+      { id: "c", text: "400 W", isCorrect: false, distractorRationale: "Duplicou a área ou esqueceu de dividir pela espessura correta." },
+      { id: "d", text: "20 W", isCorrect: false, distractorRationale: "Errou a conversão da espessura usando 5 m no denominador." },
+      { id: "e", text: "500 W", isCorrect: false, distractorRationale: "Calculou a condução assumindo condutividade térmica de concreto." }
+    ],
+    detailedExplanation: {
+      summary: "A Lei de Fourier calcula o fluxo de calor conduzido através de uma parede plana: Φ = k · A · ΔT / e.",
+      stepByStep: [
+        "Diferença de temperatura entre as faces: ΔT = 24 °C - 4 °C = 20 K (a variação em Kelvin é idêntica à em Celsius).",
+        "Área da parede: A = 20 m².",
+        "Espessura convertida para metros: e = 5,0 cm = 0,05 m.",
+        "Condutividade térmica: k = 0,025 W/(m·K).",
+        "Aplicação da fórmula: Φ = [0,025 W/(m·K) × 20 m² × 20 K] / 0,05 m.",
+        "Numerador: 0,025 × 400 = 10.",
+        "Resultado: Φ = 10 / 0,05 = 200 W (Joules por segundo)."
+      ],
+      coreConcept: "Condução Térmica Estacionária e Lei de Fourier",
+      trapWarning: "A espessura da parede DEVE estar em metros para compatibilidade com as unidades de k (W/m·K)!"
+    },
+    commonTraps: ["usar espessura em centimetros no lugar de metros", "confundir variacao de temperatura com temperatura absoluta"],
+    tags: ["conducao termica", "lei de fourier", "isolamento termico", "fluxo de calor"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-019",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Sensação Térmica e Termorregulação por Sudorese",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em dias de temperatura elevada (em torno de 35 °C), o organismo humano depende crucialmente da secreção de suor pelas glândulas sudoríparas para manter a temperatura interna estável a cerca de 36,5 °C. No entanto, quando a umidade relativa do ar atinge valores próximos a 90%, os indivíduos experimentam uma intensa sensação de sufocamento e calor extremo, muito superior à sentida sob a mesma temperatura em um ambiente com ar seco.",
+      source: "ENEM / Termofisiologia Humana e Calor Latente"
+    },
+    prompt: "O agravamento do desconforto térmico provocado pela alta umidade do ar decorre do fato de que:",
+    options: [
+      { id: "a", text: "a alta saturação de vapor d'água na atmosfera reduz o gradiente de pressão de vapor, dificultando a evaporação do suor e a retirada do calor latente da pele.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o vapor d'água ambiente bloqueia o fluxo de sangue nas artérias coronárias do indivíduo.", isCorrect: false, distractorRationale: "A umidade afeta a taxa de evaporação cutânea superficial, não o calibre vascular coronário primário." },
+      { id: "c", text: "a água atmosférica acelera desordenadamente a taxa de evaporação do suor, provocando hipotermia rápida.", isCorrect: false, distractorRationale: "O ar úmido DIMINUI a taxa de evaporação, impedindo o resfriamento natural." },
+      { id: "d", text: "a radiação infravermelha do corpo é refletida pelas moléculas de nitrogênio do ar de volta aos pulmões.", isCorrect: false, distractorRationale: "O nitrogênio não atua como refletor seletivo de calor corporal interno." },
+      { id: "e", text: "o suor acumula calor sensível e entra em combustão espontânea em contato com o ar saturado.", isCorrect: false, distractorRationale: "O suor é composto predominantemente por água e cloreto de sódio, sendo incombustível." }
+    ],
+    detailedExplanation: {
+      summary: "A evaporação do suor resfria o corpo porque a água retira calor latente de vaporização da pele ao passar para o estado gasoso (~540 cal/g).",
+      stepByStep: [
+        "O suor sozinho não resfria o corpo: é o ato da água EVAPORAR que retira calor da derme (calor latente de vaporização).",
+        "Em ambiente de ar seco, o gradiente de concentração de vapor entre a pele e o ar é grande, propiciando evaporação rápida e resfriamento eficaz.",
+        "Em ar saturado (alta umidade relativa), a capacidade do ar de receber novas moléculas de vapor é mínima; o suor apenas escorre sem evaporar, e o calor corporal fica retido.",
+        "Isso causa elevação drástica da temperatura corporal e da sensação de calor sufocante."
+      ],
+      coreConcept: "Mecanismo de Termorregulação por Evaporação e Efeito da Umidade Relativa",
+      trapWarning: "Lembre-se: suar em si não resfria; é a EVAPORAÇÃO do suor que extrai calor do corpo!"
+    },
+    commonTraps: ["achar que suar em excesso resfria mesmo sem evaporar", "confundir sensacao termica com radiacao ultravioleta"],
+    tags: ["sudorese", "calor latente de vaporizacao", "umidade relativa", "termoregulacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-020",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Segunda Lei da Termodinâmica e Entropia",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A Primeira Lei da Termodinâmica assegura a conservação quantitativa da energia em qualquer transformação. Entretanto, se ela fosse a única lei regente, uma xícara de café quente poderia absorver calor espontaneamente do ar ao seu redor e ferver ainda mais, desde que a energia total fosse conservada. A constatação empírica de que processos naturais possuem um sentido temporal único e espontâneo levou à formulação da Segunda Lei da Termodinâmica.",
+      source: "ENEM / Entropia e a Flecha do Tempo Termodinâmica"
+    },
+    prompt: "A Segunda Lei da Termodinâmica e o conceito de entropia estabelecem que em qualquer sistema isolado:",
+    options: [
+      { id: "a", text: "os processos espontâneos ocorrem sempre no sentido de aumentar a entropia total do universo, degradando a disponibilidade de energia para realizar trabalho útil.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o calor pode fluir de forma espontânea e contínua de um corpo frio para um corpo quente sem fornecimento externo de trabalho.", isCorrect: false, distractorRationale: "O enunciado de Clausius da Segunda Lei afirma exatamente o oposto: calor jamais flui espontaneamente do frio para o quente." },
+      { id: "c", text: "é fisicamente viável construir uma máquina térmica que converta 100% do calor retirado de uma única fonte em trabalho útil sem perdas.", isCorrect: false, distractorRationale: "O enunciado de Kelvin-Planck proíbe qualquer máquina térmica com rendimento de 100%." },
+      { id: "d", text: "a quantidade total de massa do universo é convertida integralmente em calor a cada ciclo motor.", isCorrect: false, distractorRationale: "A conservação de massa-energia não prevê aniquilação espontânea da massa em ciclos térmicos comuns." },
+      { id: "e", text: "a entropia de um sistema aberto diminui necessariamente até atingir o zero absoluto em regime contínuo.", isCorrect: false, distractorRationale: "O zero absoluto é inatingível por processos finitos e a entropia do universo tende a crescer, não diminuir a zero." }
+    ],
+    detailedExplanation: {
+      summary: "A Segunda Lei da Termodinâmica impõe restrições qualitativas: o calor flui espontaneamente do corpo mais quente para o mais frio e a entropia total do universo sempre aumenta (ΔS ≥ 0).",
+      stepByStep: [
+        "Enunciado de Clausius: É impossível transferir calor de um corpo mais frio para um mais quente sem a realização de trabalho externo (como faz uma geladeira).",
+        "Enunciado de Kelvin-Planck: Nenhuma máquina térmica operando em ciclos pode ter 100% de rendimento (sempre há rejeição de calor para a fonte fria).",
+        "Visão estatística da entropia (Boltzmann): A entropia mede a probabilidade de distribuição dos microestados; estados mais desordenados e distribuídos são estatisticamente muito mais prováveis.",
+        "Por isso, a energia útil vai se dispersando e a entropia do universo cresce continuamente (a flecha do tempo)."
+      ],
+      coreConcept: "Segunda Lei da Termodinâmica, Irreversibilidade e Aumento da Entropia",
+      trapWarning: "Energia se conserva (1ª Lei), mas sua QUALIDADE para produzir trabalho se degrada irreversivelmente (2ª Lei)!"
+    },
+    commonTraps: ["confundir Primeira Lei (conservacao) com Segunda Lei (sentido dos processos)", "achar que rendimento de 100% e possivel se nao houver atrito"],
+    tags: ["segunda lei", "entropia", "irreversibilidade", "flecha do tempo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

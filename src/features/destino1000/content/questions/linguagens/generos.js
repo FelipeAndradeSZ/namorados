@@ -679,5 +679,406 @@ export const QUESTIONS_GENEROS = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-011",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Bula de Medicamento e Texto Prescritivo",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "POSOLOGIA E MODO DE USAR: Administrar 1 comprimido revestido de 500 mg por via oral a cada 8 horas, acompanhado de um copo de água, preferencialmente após as refeições. Não partir, mastigar ou triturar o comprimido. Caso ocorra esquecimento de uma dose, tome-a assim que se lembrar; todavia, se estiver próximo do horário da próxima tomada, desconsidere a dose esquecida e retome o esquema posológico regular. NUNCA tome duas doses simultâneas para compensar a dose esquecida. CONTRAINDICAÇÕES: Hipersensibilidade aos componentes da fórmula e histórico de úlcera péptica ativa.",
+      source: "Fragmento adaptado de bula padronizada de medicamento antimicrobiano (ANVISA)."
+    },
+    prompt: "A bula de medicamento é um exemplar clássico de gênero textual regulatório. A sua funcionalidade sociocomunicativa essencial ancora-se na tipologia injuntiva/prescritiva, caracterizada predominantemente por:",
+    options: [
+      { id: "a", text: "orientar e disciplinar de maneira inequívoca as condutas práticas do paciente, empregando verbos no modo imperativo e formulações normativas isentas de ambiguidades.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "sensibilizar o leitor por meio de recursos poéticos e relatos subjetivos sobre a fragilidade da saúde humana.", isCorrect: false, distractorRationale: "A linguagem da bula é estritamente técnica, objetiva e denotativa, desprovida de apelos poéticos subjetivos." },
+      { id: "c", text: "fomentar o debate sociológico sobre o monopólio da indústria farmacêutica transnacional.", isCorrect: false, distractorRationale: "O objetivo é exclusivamente a orientação terapêutica segura do usuário, não a reflexão sociopolítica." },
+      { id: "d", text: "seduzir o consumidor com estratégias publicitárias de incentivo à automedicação preventiva diária.", isCorrect: false, distractorRationale: "A bula visa à segurança do paciente e segue normas sanitárias estritas, combatendo a automedicação." },
+      { id: "e", text: "narrar em ordem cronológica os experimentos biográficos da equipe de cientistas que isolou a molécula.", isCorrect: false, distractorRationale: "Isso caracterizaria um relato biográfico ou artigo historiográfico, e não uma bula terapêutica." }
+    ],
+    detailedExplanation: {
+      summary: "Textos prescritivos e injuntivos (bulas, leis, manuais, editais) visam orientar a ação do interlocutor com linguagem unívoca, imperativa e técnica.",
+      stepByStep: [
+        "A tipologia injuntiva/prescritiva tem como objetivo central direcionar o comportamento do leitor ('como fazer, o que fazer e o que não fazer').",
+        "Presença marcante de verbos no imperativo ou infinitivo com valor deontológico ('administrar', 'não partir', 'tome-a', 'nunca tome').",
+        "A precisão terminológica e a ausência de duplo sentido são indispensáveis para resguardar a vida do paciente e prevenir intoxicações ou erros de dosagem."
+      ],
+      coreConcept: "Tipologia Injuntiva/Prescritiva e Gênero Bula de Remédio",
+      trapWarning: "Cuidado: enquanto a receita médica é individualizada para um paciente, a bula é um documento técnico normativo padronizado voltado a todos os usuários do fármaco."
+    },
+    commonTraps: ["confundir bula com anuncio publicitario de farmaco", "achar que textos prescritivos admitem interpretacao subjetiva livre"],
+    tags: ["bula", "injuncao", "prescricao", "modo imperativo", "generos tecnicos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-012",
+    area: "linguagens",
+    competence: 5,
+    skill: 17,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Infográfico e Multimodalidade Estatística",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Descrição de infográfico institucional de saúde pública: Um mapa cartográfico do Brasil utiliza cores contrastantes em escala térmica (de verde a vermelho escuro) para indicar a cobertura vacinal contra poliomielite por estado da federação. Ao lado do mapa, pictogramas em formato de seringas graduadas expressam a meta de 95% preconizada pela OMS em contraste com a média nacional alcançada de 78%. Abaixo, pequenos quadros com porcentagens e ícones de alerta destacam as capitais com índices críticos de abandono vacinal.",
+      source: "Painel Epidemiológico Multimodal do Ministério da Saúde / Fiocruz, 2024."
+    },
+    prompt: "No gênero infográfico, a articulação sinérgica entre a linguagem verbal (palavras e porcentagens) e a linguagem visual (mapas, cores e pictogramas) atua no sentido de:",
+    options: [
+      { id: "a", text: "sintetizar grandes volumes de dados epidemiológicos complexos, permitindo ao leitor apreender visualmente correlações territoriais e comparativas de forma ágil e intuitiva.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "substituir integralmente a precisão das informações numéricas por ilustrações meramente decorativas desprovidas de rigor factual.", isCorrect: false, distractorRationale: "O infográfico integra dados rigorosos à imagem; os gráficos e pictogramas são ferramentas de precisão quantitativa." },
+      { id: "c", text: "ocultar deliberadamente as deficiências das políticas públicas sob um arranjo artístico rebuscado.", isCorrect: false, distractorRationale: "A visualização rápida de cores contrastantes (alerta vermelho) serve justamente para evidenciar as disparidades e metas não cumpridas." },
+      { id: "d", text: "limitar o acesso das informações a especialistas que dominem softwares avançados de design gráfico.", isCorrect: false, distractorRationale: "O objetivo primordial do infográfico é democratizar e tornar acessível a informação estatística para o grande público." },
+      { id: "e", text: "transformar a comunicação em uma peça humorística fictícia de entretenimento infanto-juvenil.", isCorrect: false, distractorRationale: "Trata-se de gênero de divulgação técnica e conscientização cidadã de alta relevância social." }
+    ],
+    detailedExplanation: {
+      summary: "O infográfico combina elementos visuais (gráficos, cores, mapas) e textos verbais concisos para facilitar a compreensão imediata de dados complexos.",
+      stepByStep: [
+        "A multimodalidade é o traço distintivo do infográfico: o texto verbal e a imagem dependem mutuamente um do outro para a construção integral do sentido.",
+        "A hierarquização visual de dados (cores quentes para alerta, ícones para fixação de conceitos) auxilia na leitura não linear e na retenção rápida de informações.",
+        "No contexto do ENEM, o infográfico é amplamente cobrado para testar a competência leitora de gráficos, tabelas e mapas articulados à análise crítica da realidade."
+      ],
+      coreConcept: "Infográfico, Multimodalidade e Letramento Visual em Linguagens",
+      trapWarning: "Lembre-se: em infográficos, a imagem não é mero enfeite; ela contém dados fundamentais que complementam ou explicam o texto escrito!"
+    },
+    commonTraps: ["desprezar as imagens ao ler o infografico", "achar que o infografico e menos rigoroso que um texto corrido tradicional"],
+    tags: ["infografico", "multimodalidade", "letramento visual", "saude publica", "dados estatisticos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-013",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Carta de Reclamação e Cidadania Institucional",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ilmo. Sr. Secretário de Saneamento e Infraestrutura Urbana do Município de Bela Vista.\nAssunto: Solicitação urgente de reparo na rede coletora de esgoto do Bairro Esperança.\nA Associação de Moradores do Bairro Esperança vem, por meio desta, expor e reivindicar a urgente resolução do transbordamento contínuo de efluentes sanitários na Rua das Acácias, ocorrido há mais de 25 dias consecutivos. A omissão na contenção do vazamento tem gerado odor insuportável e exposto dezenas de crianças a riscos graves de contaminação por agentes de veiculação hídrica, em frontal desrespeito ao direito à saúde preconizado pelo Art. 196 da Constituição Federal. Solicitamos o envio imediato de equipe técnica para desobstrução e saneamento da via no prazo improrrogável de 72 horas, sob pena de acionamento do Ministério Público Estadual.\nAtenciosamente, Coordenação Geral da Associação.",
+      source: "Documento oficial adaptado de correspondência comunitária reivindicatória."
+    },
+    prompt: "O gênero textual 'carta de reclamação' estrutura-se na esfera pública da cidadania. A característica pragmática e estilística que o legitima perante a administração pública e o diferencia de um desabafo pessoal reside no fato de:",
+    options: [
+      { id: "a", text: "empregar a norma-padrão culta, fundamentar as queixas em fatos objetivos e argumentos legais e demandar providências institucionais formais com prazo determinado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "utilizar ataques difamatórios subjetivos e ameaças anônimas para intimidar a autoridade pública destinatária.", isCorrect: false, distractorRationale: "A carta formal é assinada pela entidade e respalda-se no direito constitucional, sem ameaças ilegais ou ofensas gratuitas." },
+      { id: "c", text: "adotar registro coloquial com gírias juvenis para demonstrar espontaneidade e aproximação afetiva com o secretário.", isCorrect: false, distractorRationale: "A interação oficial com autoridades públicas exige rigorosamente o registro formal e respeitoso de tratamento." },
+      { id: "d", text: "estruturar o texto sob a forma de versos rimados líricos para sensibilizar a alma dos funcionários públicos.", isCorrect: false, distractorRationale: "Trata-se de correspondência em prosa técnico-argumentativa, e não de poesia." },
+      { id: "e", text: "abster-se de indicar os problemas reais da localidade a fim de evitar mal-estar nas relações com a prefeitura.", isCorrect: false, distractorRationale: "A explicitação detalhada do dano e da localização é a própria essência do gênero reivindicatório." }
+    ],
+    detailedExplanation: {
+      summary: "A carta de reclamação é um gênero dissertativo-argumentativo da esfera pública que formaliza uma demanda cívica com registro padrão, dados concretos e solicitação de providências.",
+      stepByStep: [
+        "Estrutura padrão do gênero epistolar: cabeçalho com vocativo formal de autoridade, identificação precisa do remetente e do objeto da queixa.",
+        "Corpo do texto argumentativo: narrativa fática objetiva (vazamento há 25 dias) amparada em embasamento jurídico-constitucional (Art. 196 da CF/88).",
+        "Conclusão e fecho: pedido formal com prazo estipulado para resposta e advertência de judicialização caso persista a inércia administrativa."
+      ],
+      coreConcept: "Carta de Reclamação: Argumentação Cívica, Formalidade e Exercício de Cidadania",
+      trapWarning: "Atenção: a carta de reclamação não é um mero desabafo; é um instrumento jurídico-administrativo dotado de intencionalidade propositiva clara!"
+    },
+    commonTraps: ["confundir carta de reclamacao com desabafo informal em rede social", "achar que linguagem formal enfraquece a contundencia da reivindicacao"],
+    tags: ["carta de reclamacao", "esfera publica", "cidadania", "argumentacao formal", "generos epistolares"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-014",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Ensaio Literário-Filosófico e Crítica Cultural",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Chamarei de literatura, da maneira mais ampla possível, todas as criações de toque poético, ficcional ou dramático em todos os níveis de uma sociedade, em todos os tipos de cultura [...]. Ora, se ninguém pode passar vinte e quatro horas sem mergulhar no universo do sonho e da fantasia, a literatura é tão indispensável para o equilíbrio do espírito humano quanto a alimentação e a moradia o são para o equilíbrio do corpo. Negar a fruição da literatura a uma parcela da população significa mutilar sua condição humana e perpetuar uma espoliação perversa que vai muito além da privação material.",
+      source: "Antonio Candido, O Direito à Literatura (ensaio publicado em Vários Escritos, adaptado)."
+    },
+    prompt: "O texto de Antonio Candido exemplifica o gênero ensaio literário-filosófico. Esse gênero discursivo singulariza-se predominantemente pela:",
+    options: [
+      { id: "a", text: "reflexão livre, aprofundada e autoral sobre um tema humanístico, articulando erudição teórica, sensibilidade estilística e defesa de uma tese ética sobre a dignidade humana.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "subordinação irrestrita a tabelas quantitativas e fórmulas químicas que visam comprovar a eficácia farmacológica de livros.", isCorrect: false, distractorRationale: "O ensaio humanístico não opera com protocolos experimentais laboratoriais quantitativos." },
+      { id: "c", text: "construção de diálogos cômicos entre personagens caricatos com vistas a entreter o público leitor descompromissado.", isCorrect: false, distractorRationale: "O texto aborda a questão com extrema gravidade ética e rigor conceitual crítico." },
+      { id: "d", text: "elaboração de um manual técnico que ensina passo a passo como diagramar páginas de romances comerciais.", isCorrect: false, distractorRationale: "Isso seria uma apostila técnica instrucional de editoração gráfica." },
+      { id: "e", text: "ausência intencional de qualquer ponto de vista autoral, limitando-se a registrar citações de outros pensadores.", isCorrect: false, distractorRationale: "O ensaio é marcado pela voz original, potente e posicionada do autor que propõe uma tese inovadora." }
+    ],
+    detailedExplanation: {
+      summary: "O ensaio é um gênero discursivo reflexivo em que o autor investiga livremente um tema cultural ou filosófico sem a rigidez burocrática dos tratados acadêmicos.",
+      stepByStep: [
+        "Origem: criado por Michel de Montaigne no século XVI, o ensaio combina liberdade de pensamento, estilo pessoal refinado e debate ético de grande alcance.",
+        "Tese de Antonio Candido: a literatura não é mero luxo supérfluo para as elites, mas um 'bem incompressível' indispensável para a humanização de todo cidadão.",
+        "Estilo ensaístico: clareza argumentativa, analogias elucidativas (literatura como alimento para o espírito) e compromisso explícito com a justiça social."
+      ],
+      coreConcept: "Gênero Ensaio: Subjetividade Reflexiva, Erudição e Crítica Cultural",
+      trapWarning: "O ensaio não é uma dissertação escolar padrão nem um artigo científico fechado; ele goza de flexibilidade de forma aliada à profundidade de conteúdo."
+    },
+    commonTraps: ["confundir ensaio com artigo de opiniao jornalistico curto", "achar que ensaio nao defende uma tese argumentativa solida"],
+    tags: ["ensaio", "antonio candido", "direito a literatura", "critica cultural", "humanizacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-015",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Abaixo-Assinado e Textos Reivindicatórios Coletivos",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nós, abaixo-assinados, estudantes, docentes, pesquisadores e servidores técnico-administrativos da Universidade Federal, dirigimo-nos à Magnífica Reitoria para manifestar veemente apoio à criação de uma creche universitária no campus sede e à instituição de auxílio-permanência integral para mães em vulnerabilidade socioeconômica. A evasão forçada de dezenas de alunas-mães por ausência de infraestrutura básica compromete o princípio republicano da igualdade de acesso ao ensino superior. Conclamamos a administração central a pautar em caráter de urgência a destinação orçamentária para a implementação das creches no próximo Conselho Universitário.",
+      source: "Fragmento de petição pública universitária (abaixo-assinado), 2023."
+    },
+    prompt: "No gênero abaixo-assinado, a força argumentativa e a eficácia persuasiva do ato de linguagem apoiam-se primordialmente na:",
+    options: [
+      { id: "a", text: "legitimação democrática demonstrada pela adesão coletiva de múltiplos signatários que respaldam conjuntamente uma causa de interesse público comum.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ameaça direta de depredação das instalações patrimoniais caso as reivindicações não sejam atendidas em 24 horas.", isCorrect: false, distractorRationale: "O abaixo-assinado opera pelas vias da legalidade institucional e do debate de direitos, rejeitando atos de violência." },
+      { id: "c", text: "imposição autoritária de multas pecuniárias aos gestores universitários que lerem o cabeçalho.", isCorrect: false, distractorRationale: "Estudantes e servidores não detêm poder judicial de impor multas; exercem o direito de petição." },
+      { id: "d", text: "descrição lírica intimista de sentimentos de culpa familiar expressos em primeira pessoa do singular.", isCorrect: false, distractorRationale: "A voz enunciativa é eminentemente coletiva ('Nós, abaixo-assinados'), centrada no interesse comunitário." },
+      { id: "e", text: "cobrança de ingressos pagos para os membros que quiserem assinar a manifestação.", isCorrect: false, distractorRationale: "A petição cívica é gratuita e aberta aos membros da comunidade universitária." }
+    ],
+    detailedExplanation: {
+      summary: "O abaixo-assinado é um gênero de apelo e reivindicação coletiva cuja força política advém do número e da representatividade dos signatários reunidos.",
+      stepByStep: [
+        "Voz enunciativa plurivocal: o pronome 'Nós' e a lista nominativa de assinaturas conferem peso social e representatividade democrática ao pleito.",
+        "Estrutura retórica: apresentação da demanda legítima, fundamentação ética/legal e interpelação formal da autoridade competente.",
+        "Diferencial com outros gêneros epistolares: enquanto uma carta individual representa uma única vontade, o abaixo-assinado mobiliza a força quantitativa e qualitativa da sociedade civil organizada."
+      ],
+      coreConcept: "Abaixo-Assinado, Direito de Petição e Participação Coletiva",
+      trapWarning: "Lembre-se: no abaixo-assinado, a quantidade e a idoneidade das assinaturas são parte indissociável da estratégia de convencimento!"
+    },
+    commonTraps: ["confundir abaixo-assinado com carta aberta ou manifesto", "achar que o abaixo-assinado tem poder de lei impositiva imediata"],
+    tags: ["abaixo-assinado", "reivindicacao coletiva", "direito de peticao", "participacao democratica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-016",
+    area: "linguagens",
+    competence: 5,
+    skill: 17,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Podcast e Oralidade Mediada pela Tecnologia",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "APRESENTADOR: E aí, pessoal do 'Ciência Sem Rodeios', bem-vindos a mais um episódio! Hoje estamos com a Dra. Mariana, que é ecóloga e pesquisadora de biomas brasileiros. Mariana, o pessoal no Twitter vive perguntando: afinal, o que explica essas ondas de calor insanas nas periferias?\nDRA. MARIANA: Pois é, Lucas... Veja bem, tem um conceito fundamental aqui que são as ilhas de calor urbanas. Mas o ponto-chave — e isso precisa ficar muito claro — é a justiça climática. Porque onde tem árvore e praça com sombra? Nos bairros nobres. Onde você tem asfalto pelando e telha de amianto sem saneamento? Na quebrada. Então, a crise do clima não afeta todo mundo igual. Tem corte de classe e tem corte de raça escancarado aí.",
+      source: "Transcrição adaptada de episódio de podcast de divulgação científica, 2023."
+    },
+    prompt: "O fragmento transcrito pertence a um podcast de divulgação científica. As marcas linguísticas e discursivas presentes revelam a dinâmica desse gênero contemporâneo pelo equilíbrio entre:",
+    options: [
+      { id: "a", text: "o rigor conceitual do conhecimento científico e a coloquialidade dialógica espontânea característica da oralidade mediada pelas mídias digitais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o uso exclusivo de termos herméticos em latim e a total ausência de preocupação com a compreensão dos ouvintes.", isCorrect: false, distractorRationale: "O texto busca exatamente a clareza e o diálogo com o público por meio de analogias simples e linguagem acessível." },
+      { id: "c", text: "a leitura mecânica e monótona de relatórios governamentais sem nenhuma interação afetiva entre os interlocutores.", isCorrect: false, distractorRationale: "Há marcadores conversacionais expressivos ('E aí, pessoal', 'Pois é', 'Veja bem') que denotam interação viva e calorosa." },
+      { id: "d", text: "a adesão cega aos preceitos poéticos do Arcadismo bucólico do século XVIII.", isCorrect: false, distractorRationale: "O gênero é contemporâneo digital e trata de questões ecológicas e sociais urbanas do século XXI." },
+      { id: "e", text: "o sigilo absoluto das fontes para manter o anonimato dos pesquisadores participantes.", isCorrect: false, distractorRationale: "Os participantes são nominalmente apresentados com suas credenciais científicas." }
+    ],
+    detailedExplanation: {
+      summary: "O podcast combina a credibilidade temática da ciência com os recursos expressivos da oralidade informal para democratizar o saber especializado.",
+      stepByStep: [
+        "Marcas de oralidade e proximidade: gírias leves ('ondas de calor insanas', 'quebrada'), saudações informais ('E aí, pessoal') e marcadores discursivos de turno ('Veja bem', 'Pois é').",
+        "Conteúdo acadêmico crítico: introdução de conceitos científicos sólidos ('ilhas de calor urbanas', 'justiça climática') articulados à crítica social da desigualdade.",
+        "A tecnologia do podcast cria uma atmosfera de conversa íntima e acessível, quebrando as barreiras formais tradicionais da academia."
+      ],
+      coreConcept: "Podcast, Gêneros Orais Emergentes e Letramento Digital",
+      trapWarning: "No ENEM, as questões sobre podcasts e gêneros digitais focam em como a linguagem se adapta à mídia e ao público-alvo sem perder o propósito comunicativo."
+    },
+    commonTraps: ["achar que coloquialismo desqualifica o rigor do conteudo cientifico", "ignorar as marcas tipicas da linguagem falada"],
+    tags: ["podcast", "oralidade mediada", "divulgacao cientifica", "justica climatica", "generos digitais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-017",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Notícia Jornalística e a Técnica da Pirâmide Invertida",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Instituto Nacional de Pesquisas Espaciais (INPE) colocou em órbita com sucesso, na madrugada desta terça-feira (14), a partir da base espacial de Alcântara (MA), o satélite de monitoramento ambiental Amazônia-2B. Desenvolvido inteiramente por engenheiros brasileiros em parceria com universidades públicas, o equipamento possui sensores multiespectrais capazes de detectar focos de desmatamento em tempo real mesmo sob densa cobertura de nuvens, permitindo alertas automáticos para as brigadas de fiscalização ambiental do Ibama.",
+      source: "Agência Brasil / Noticiário Científico, 2024 (adaptado)."
+    },
+    prompt: "O parágrafo de abertura da notícia jornalística (denominado lide) adota o modelo composicional da 'pirâmide invertida'. Esse recurso estrutural atende ao objetivo comunicativo de:",
+    options: [
+      { id: "a", text: "concentrar de imediato as respostas às indagações essenciais do leitor (quem, o quê, quando, onde, como e por quê), assegurando apreensão rápida do fato principal.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "reter a informação mais importante até o final do texto para gerar suspense no leitor.", isCorrect: false, distractorRationale: "O suspense é recurso típico de narrativas literárias ficcionais ou policiais, e não do lide jornalístico factual." },
+      { id: "c", text: "emitir a opinião pessoal subjetiva do repórter sobre a política aeroespacial brasileira.", isCorrect: false, distractorRationale: "A notícia preza pela impessoalidade e objetividade do relato de fatos, sem primeira pessoa opinativa." },
+      { id: "d", text: "inserir enigmas gramaticais e termos cifrados para restringir a informação a assinantes pagos.", isCorrect: false, distractorRationale: "O jornalismo visa à clareza máxima e à comunicabilidade transparente com toda a sociedade." },
+      { id: "e", text: "prescrever ordens governamentais compulsórias que os cidadãos devem executar obrigatoriamente.", isCorrect: false, distractorRationale: "Notícias são textos informativos, não injunções legais prescritivas." }
+    ],
+    detailedExplanation: {
+      summary: "A pirâmide invertida posiciona as informações cruciais no topo (o lide) e detalhamentos secundários nos parágrafos posteriores em ordem decrescente de relevância.",
+      stepByStep: [
+        "No lide clássico, respondem-se às 6 perguntas fundamentais do jornalismo anglo-saxão: Quem? (INPE e universidades); O quê? (lançamento do satélite Amazônia-2B); Quando? (madrugada de terça-feira); Onde? (Alcântara-MA); Como? (com sensores multiespectrais); Por quê? (para combater o desmatamento).",
+        "Essa técnica surgiu no telégrafo para garantir que, se a transmissão caísse ou o jornal precisasse ser cortado de baixo para cima na impressão, a essência do fato estaria preservada.",
+        "Para o leitor moderno, permite leitura dinâmica e informação instantânea sem necessidade de ler todo o corpo secundário do texto."
+      ],
+      coreConcept: "Gênero Notícia: O Lide e a Técnica da Pirâmide Invertida",
+      trapWarning: "Diferencie NOTÍCIA (relato objetivo e conciso de fato recente no lide) de REPORTAGEM (investigação aprofundada, com múltiplas fontes e interpretação contextual)."
+    },
+    commonTraps: ["confundir noticia com editorial opinativo", "achar que o lide deixa a conclusao para o final"],
+    tags: ["noticia", "lide", "piramide invertida", "jornalismo", "informacao factual"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-018",
+    area: "linguagens",
+    competence: 5,
+    skill: 17,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Gêneros Digitais: Threads e Hipertextualidade",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Post 1/4: Você sabia que o cérebro humano consome cerca de 20% de toda a energia do corpo em repouso, mesmo pesando só 2% da nossa massa corporal? 🧵 Segue o fio para entender por que pensar cansa tanto! #CiênciaParaTodos #Neurociência\nPost 2/4: O 'combustível' quase exclusivo dos seus neurônios é a glicose. Quando você estuda focado para o ENEM, a taxa de disparo elétrico das sinapses dispara o consumo metabólico de ATP nas áreas pré-frontais.\nPost 3/4: É por isso que depois de um simulado de 5 horas bate aquela 'fome de carboidrato' e cansaço físico real. Não é preguiça, é bioquímica celular em ação! [link para artigo completo da USP na íntegra]\nPost 4/4: Dica de ouro: durma bem para consolidar a memória e tome água. Gostou? Dá um RT e salva nos favoritos para revisar depois! ✨🧠",
+      source: "Exemplo de thread (fio explicativo) em microblogging digital de divulgação acadêmica, 2024."
+    },
+    prompt: "O fragmento explora as potencialidades do gênero digital conhecido como thread (fio em redes sociais). A especificidade da linguagem e da arquitetura composicional desse gênero caracteriza-se por:",
+    options: [
+      { id: "a", text: "fragmentar conteúdos temáticos densos em microblocos encadeados, incorporando recursos de hipertextualidade, emojis e chamadas explícitas de interação com a comunidade de leitores.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "exigir a redação em manuscrito caligráfico sem possibilidade de conexão hipertextual ou réplica pública.", isCorrect: false, distractorRationale: "O gênero é estritamente digital, hiperconectado e aberto a comentários instantâneos dos seguidores." },
+      { id: "c", text: "empregar vocabulário arcaico do século XVI para criar distanciamento intelectual deliberado em relação aos jovens.", isCorrect: false, distractorRationale: "A linguagem das redes sociais aposta na jovialidade, clareza e termos comunicativos contemporâneos ('dá um RT', 'salva nos favoritos')." },
+      { id: "d", text: "proibir qualquer menção a descobertas científicas ou referências a artigos acadêmicos sérios.", isCorrect: false, distractorRationale: "O texto inclui explicitamente link de acesso a artigo de pesquisa da USP." },
+      { id: "e", text: "limitar o tamanho do texto a um único caractere por publicação diária.", isCorrect: false, distractorRationale: "O fio é uma sequência articulada de postagens complementares para aprofundar um tema." }
+    ],
+    detailedExplanation: {
+      summary: "Threads e postagens em redes sociais criam novas modalidades de letramento digital: textos fragmentados, hipertextuais, multimodais e altamente interativos.",
+      stepByStep: [
+        "A restrição de caracteres das plataformas digitais gerou o recurso do 'fio' (thread): dividir um assunto complexo em partes numeradas para leitura fluida em telas móveis.",
+        "Uso de marcadores de engajamento (#hashtags) e chamadas para ação (CTA: 'dá um RT', 'salva nos favoritos').",
+        "Hipertextualidade: inserção de links externos que conectam o texto breve às fontes primárias aprofundadas da pesquisa científica."
+      ],
+      coreConcept: "Gêneros Digitais, Hipertextualidade e Novos Letramentos",
+      trapWarning: "No ENEM, reconheça que os gêneros digitais não 'destroem a língua', mas inovam e ampliam as formas de comunicação social de acordo com as novas mídias."
+    },
+    commonTraps: ["considerar a linguagem da internet como 'erro' ou 'degeneracao' da lingua", "ignorar a funcao integradora dos links e hashtags"],
+    tags: ["generos digitais", "threads", "hipertexto", "redes sociais", "letramento digital"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-019",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Entrevista Jornalística (Formato Perguntas e Respostas)",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "REPÓRTER: Dra. Helena, nas últimas décadas o Brasil avançou expressivamente no controle de doenças imunopreveníveis, mas recentemente tem enfrentado recrudescimento de surtos de sarampo e febre amarela. Qual é a raiz principal dessa regressão sanitária?\nDRA. HELENA: O problema é multifatorial, mas o epicentro reside na disseminação sistemática de desinformação científica em grupos digitais e no falso sentimento de segurança gerado exatamente pelas gerações anteriores que não viram essas doenças mutilarem crianças. Quando a sociedade esquece o terror da pólio, o medo da agulha supera o medo do vírus. Essa amnésia coletiva é o combustível mais perigoso das epidemias contemporâneas.",
+      source: "Trecho adaptado de entrevista temática para caderno especial de saúde pública, 2024."
+    },
+    prompt: "No gênero entrevista no formato pingue-pongue (perguntas e respostas), as intervenções do repórter operam como instrumento estratégico discursivo para:",
+    options: [
+      { id: "a", text: "balizar e delimitar o foco do debate, provocando o especialista convidado a elucidar contradições e aspectos cruciais de um tema de interesse público.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "impor dogmaticamente suas próprias respostas ideológicas e calar as considerações da entrevistada.", isCorrect: false, distractorRationale: "O repórter faz perguntas instigantes para dar voz à especialista, sem monopolizar o discurso." },
+      { id: "c", text: "impedir que o leitor compreenda os dados técnicos sobre a história das campanhas de vacinação.", isCorrect: false, distractorRationale: "A meta primordial da entrevista jornalística é justamente tornar os dados acessíveis e compreensíveis ao cidadão comum." },
+      { id: "d", text: "transformar o texto em um monólogo poético sem nenhuma réplica ou alternância de interlocutores.", isCorrect: false, distractorRationale: "A entrevista assenta-se na polifonia e na alternância conversacional entre dois interlocutores definidos." },
+      { id: "e", text: "reproduzir sem autorização gravações judiciais sob sigilo de Estado.", isCorrect: false, distractorRationale: "Trata-se de uma entrevista pública consentida entre jornalista profissional e médica sanitarista." }
+    ],
+    detailedExplanation: {
+      summary: "A entrevista jornalística é um gênero dialógico orientado em que as perguntas do jornalista funcionam como condutoras que extraem a reflexão qualificada da fonte entrevistada.",
+      stepByStep: [
+        "A pergunta jornalística não é neutra ou ingênua: ela contextualiza o tema ('o Brasil avançou expressivamente... mas recentemente enfrenta recrudescimento') e aponta a pergunta nuclear ('Qual é a raiz principal?').",
+        "A entrevistada responde desenvolvendo um raciocínio sofisticado com metáforas conceituais contundentes ('amnésia coletiva', 'quando a sociedade esquece o terror da pólio, o medo da agulha supera o medo do vírus').",
+        "Esse gênero possibilita o confronto produtivo de ideias e a difusão democrática de conhecimentos técnicos especializados."
+      ],
+      coreConcept: "Entrevista Jornalística, Mediação Dialógica e Polifonia Enunciativa",
+      trapWarning: "Lembre-se de que a entrevista publicada passa por edição e revisão gramatical para adequação ao veículo, preservando a autenticidade do pensamento da fonte."
+    },
+    commonTraps: ["achar que o entrevistador e uma figura passiva sem intencionalidade discursiva", "confundir entrevista jornalistica com inquerito policial"],
+    tags: ["entrevista", "jornalismo", "dialogo", "polifonia", "saude coletiva"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-020",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Anúncio Publicitário Institucional e Função Conativa",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Descrição de cartaz de campanha institucional: No centro da imagem, o desenho estilizado de uma árvore frondosa em que as folhas são formadas por impressões digitais humanas de diferentes cores. Ao lado do tronco, lê-se em letras garrafais: 'PRESERVAR O BIOMA É PRESERVAR A NOSSA PRÓPRIA IDENTIDADE. Não deixe o fogo apagar a sua marca na história. Denuncie queimadas ilegais: ligue 181. O futuro do país brota das suas atitudes hoje.' No rodapé, a assinatura do Ministério do Meio Ambiente e de órgãos ambientais.",
+      source: "Campanha nacional de conscientização ambiental contra queimadas e incêndios florestais, 2024."
+    },
+    prompt: "O gênero anúncio publicitário de caráter institucional diferencia-se da propaganda comercial mercantil porque o seu objetivo comunicativo prioritário é:",
+    options: [
+      { id: "a", text: "estimular a adesão voluntária a uma causa ética e de cidadania, mobilizando recursos expressivos para transformar atitudes e comportamentos da sociedade em prol do bem comum.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "incentivar a compra imediata de mercadorias florestais e ferramentas de corte com desconto promocional.", isCorrect: false, distractorRationale: "Publicidade institucional não vende mercadorias nem visa lucro; visa à conscientização cívica e proteção ambiental." },
+      { id: "c", text: "comercializar maquinário pesado e defensivos químicos agrícolas em feiras agropecuárias privadas.", isCorrect: false, distractorRationale: "O texto combate queimadas ilegais com finalidade de interesse público, não vende insumos comerciais agrícolas." },
+      { id: "d", text: "expor um tratado botânico acadêmico sobre a classificação taxonômica das árvores nativas do cerrado.", isCorrect: false, distractorRationale: "Não é um compêndio botânico escolar; é uma peça publicitária de apelo comportamental urgente." },
+      { id: "e", text: "estimular a queima controlada de florestas públicas para facilitar o cultivo de soja transgênica.", isCorrect: false, distractorRationale: "A mensagem é expressamente contra queimadas ilegais, conclamando o cidadão a denunciar o fogo criminoso pelo telefone 181." }
+    ],
+    detailedExplanation: {
+      summary: "A publicidade institucional foca na persuasão para a adoção de valores éticos, cidadãos e preventivos (bem público), sem finalidade lucrativa de venda de produtos.",
+      stepByStep: [
+        "Metáfora visual: impressões digitais compondo as folhas da árvore significam que a sobrevivência da natureza está diretamente ligada à responsabilidade de cada indivíduo humano.",
+        "Função conativa/apelativa da linguagem: verbos no imperativo ('Não deixe', 'Denuncie', 'ligue 181') direcionados ao interlocutor para induzir uma ação concreta de preservação.",
+        "Diferença essencial: a publicidade comercial busca gerar consumo mercantil e lucro privado; a publicidade institucional visa conscientizar e proteger patrimônios coletivos da sociedade."
+      ],
+      coreConcept: "Publicidade Institucional vs. Comercial e a Função Conativa da Linguagem",
+      trapWarning: "No ENEM, fique atento: campanhas do Ministério da Saúde, do Meio Ambiente ou da Educação são PUBLICIDADES INSTITUCIONAIS, não comerciais!"
+    },
+    commonTraps: ["confundir publicidade institucional com venda de produtos", "ignorar a funcao conativa presente nos verbos de comando"],
+    tags: ["publicidade institucional", "funcao conativa", "meio ambiente", "campanha educativa", "cidadania"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

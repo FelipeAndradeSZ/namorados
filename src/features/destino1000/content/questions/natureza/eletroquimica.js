@@ -422,5 +422,420 @@ export const QUESTIONS_ELETROQUIMICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-011",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Leis de Faraday e Eletrodeposição Quantitativa (Galvanoplastia)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No processo de acabamento superficial de instrumentais cirúrgicos em uma fábrica de equipamentos hospitalares, realiza-se a eletrodeposição protetora de cromo metálico a partir de um banho eletrolítico contendo íons cromo(III) (Cr³⁺). A célula eletrolítica opera sob corrente elétrica contínua e constante de 9,65 A durante exatamente 1 000 segundos. Considere a constante de Faraday como F = 96 500 C/mol de elétrons e a massa molar do cromo como 52 g/mol.",
+      source: "ENEM / Eletroquímica Quantitativa e Leis de Faraday"
+    },
+    prompt: "A massa aproximada de cromo metálico sólido que se deposita sobre as pinças cirúrgicas ao término dessa etapa é de:",
+    options: [
+      { id: "a", text: "1,73 g", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "5,20 g", isCorrect: false, distractorRationale: "Esqueceu de dividir pelo número de elétrons transferidos (n = 3 e⁻ por átomo de Cr³⁺): 0,1 mol × 52 g/mol = 5,2 g." },
+      { id: "c", text: "0,58 g", isCorrect: false, distractorRationale: "Dividiu a carga por 3 repetidamente." },
+      { id: "d", text: "3,46 g", isCorrect: false, distractorRationale: "Assumiu que o cromo possuía carga +2 em vez de +3 na semirreação catódica." },
+      { id: "e", text: "52,0 g", isCorrect: false, distractorRationale: "Calculou a massa correspondente a 1 mol inteiro de cromo sem ponderar a carga circulada." }
+    ],
+    detailedExplanation: {
+      summary: "Pela 1ª e 2ª Leis de Faraday, a massa eletrodepositada é proporcional à carga elétrica total que atravessa o sistema: m = (M · Q) / (n · F).",
+      stepByStep: [
+        "Semirreação catódica de redução do cromo: Cr³⁺(aq) + 3e⁻ → Cr⁰(s). Portanto, são necessários 3 mols de elétrons para cada mol de cromo metálico formado.",
+        "Carga elétrica circulada: Q = i · t = 9,65 A × 1 000 s = 9 650 Coulombs.",
+        "Quantidade de matéria de elétrons: n_e = Q / F = 9 650 C / 96 500 C/mol = 0,10 mol de e⁻.",
+        "Quantidade de matéria de cromo depositado: n_Cr = 0,10 mol / 3 = 0,0333 mol de Cr.",
+        "Massa depositada: m = n_Cr × M_Cr = (0,10 / 3) × 52 g/mol = 5,20 / 3 ≈ 1,73 g."
+      ],
+      coreConcept: "Leis de Faraday e Eletrodeposição Quantitativa de Metais",
+      trapWarning: "Atenção ao número de elétrons (n): o cromo(III) requer 3 elétrons por átomo; dividir por n é indispensável!"
+    },
+    commonTraps: ["esquecer de dividir pela valencia do cation", "errar a conversao de tempo para segundos"],
+    tags: ["leis de faraday", "eletrodeposicao", "galvanoplastia", "calculo eletroquimico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-012",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Eletrólise Aquosa de NaCl e Indústria de Cloro-Álcalis",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A indústria química de saneamento básico e higiene hospitalar depende massivamente da eletrólise de soluções aquosas concentradas de cloreto de sódio (salmoura). Nesse sistema aquoso com eletrodos inertes de grafite, coexistem cátions Na⁺ e H⁺ (da autoionização da água), além de ânions Cl⁻ e OH⁻, disputando a descarga nos polos elétricos sob diferença de potencial aplicada.",
+      source: "ENEM / Eletroquímica Aplicada e Indústria de Cloro-Soda"
+    },
+    prompt: "Com base na fila de prioridade de descarga de íons em meio aquoso, as espécies gasosas liberadas no cátodo e no ânodo e a substância remanescente dissolvida na solução são, respectivamente:",
+    options: [
+      { id: "a", text: "gás hidrogênio (H₂), gás cloro (Cl₂) e hidróxido de sódio (NaOH).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "sódio metálico (Na), gás cloro (Cl₂) e água pura.", isCorrect: false, distractorRationale: "O sódio metálico só é produzido na eletrólise ÍGNEA (sem água), pois em meio aquoso o H⁺ descarrega antes do Na⁺." },
+      { id: "c", text: "gás oxigênio (O₂), gás hidrogênio (H₂) e cloreto de sódio inalterado.", isCorrect: false, distractorRationale: "O ânion Cl⁻ (haleto não fluoretado) tem prioridade de descarga sobre o OH⁻ da água no ânodo, liberando Cl₂ e não O₂." },
+      { id: "d", text: "gás cloro (Cl₂), gás hidrogênio (H₂) e ácido hipocloroso líquido.", isCorrect: false, distractorRationale: "A solução restante acumula íons Na⁺ e OH⁻, formando solução fortemente básica de NaOH, não ácida." },
+      { id: "e", text: "gás metano (CH₄), vapor de água e carbonato de sódio.", isCorrect: false, distractorRationale: "Não há carbono na salmoura; metano é impossível como subproduto." }
+    ],
+    detailedExplanation: {
+      summary: "Na eletrólise aquosa do NaCl, os íons que descarregam são o H⁺ (no cátodo, formando H₂) e o Cl⁻ (no ânodo, formando Cl₂), restando Na⁺ e OH⁻ na solução (NaOH).",
+      stepByStep: [
+        "Fila de descarga catódica (cátions): H⁺ tem prioridade sobre metais alcalinos (Na⁺), alcalinoterrosos e alumínio. Logo, 2 H⁺ + 2e⁻ → H₂(g) no polo negativo (cátodo).",
+        "Fila de descarga anódica (ânions): Ânions não oxigenados (como Cl⁻) e HSO₄⁻ têm prioridade sobre o OH⁻ da água e ânions oxigenados. Logo, 2 Cl⁻ → Cl₂(g) + 2e⁻ no polo positivo (ânodo).",
+        "Substâncias remanescentes na solução aquosa: sobram os íons Na⁺ e OH⁻ livres.",
+        "Associação em solução: Na⁺(aq) + OH⁻(aq) formam o hidróxido de sódio (soda cáustica), elevando acentuadamente o pH do meio aquoso."
+      ],
+      coreConcept: "Prioridade de Descarga em Eletrólise Aquosa de Sais",
+      trapWarning: "CUIDADO: Sódio metálico (Na⁰) NUNCA se forma na eletrólise aquosa! Ele reage instantaneamente e violentamente com a água."
+    },
+    commonTraps: ["confundir eletrolise aquosa com eletrolise ignea do NaCl", "achar que o oxigenio descarrega antes do cloro"],
+    tags: ["eletrolise aquosa", "cloro-soda", "prioridade de descarga", "industria quimica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-013",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Baterias Recarregáveis de Íon-Lítio (Células Secundárias)",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Prêmio Nobel de Química de 2019 condecorou o desenvolvimento das baterias recarregáveis de íon-lítio (Li-ion), as quais permitiram a miniaturização de aparelhos médicos essenciais, tais como marcapassos cardíacos modernos, monitores de sinais vitais portáteis e aparelhos de telemetria ambulatorial. Durante o ciclo de descarga da bateria, os átomos de lítio intercalados nos planos de grafite (ânodo) liberam elétrons para a corrente externa, enquanto os cátions Li⁺ migram através do eletrólito orgânico para o óxido metálico lamelar (cátodo).",
+      source: "ENEM / Eletroquímica Moderna e Tecnologias de Energia"
+    },
+    prompt: "A superioridade tecnológica das baterias de íon-lítio em densidade energética e leveza mecânica frente às antigas baterias de chumbo-ácido e níquel-cádmio decorre do fato de o lítio:",
+    options: [
+      { id: "a", text: "possuir a menor massa molar entre todos os elementos metálicos e um potencial padrão de oxidação extremamente elevado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "atuar como metal nobre inerte com facilidade espontânea de sofrer redução catódica direta.", isCorrect: false, distractorRationale: "O lítio é o metal alcalino mais reativo e tem o mais negativo potencial padrão de redução (~ -3,04 V), sendo péssimo metal nobre." },
+      { id: "c", text: "ser um elemento radioativo natural que fornece energia por decaimento alfa em circuito selado.", isCorrect: false, distractorRationale: "O lítio estável utilizado em baterias comerciais não é radioativo." },
+      { id: "d", text: "formar ligações covalentes perfeitas que anulam totalmente a resistência ôhmica interna.", isCorrect: false, distractorRationale: "Baterias Li-ion operam com transporte de íons Li⁺ por difusão iônica e elétrons em condução metálica comum." },
+      { id: "e", text: "possuir ponto de ebulição inferior a zero grau Celsius, atuando como condutor supercrítico gasoso.", isCorrect: false, distractorRationale: "O lítio é um metal sólido com ponto de fusão superior a 180 °C." }
+    ],
+    detailedExplanation: {
+      summary: "O lítio (Z = 3, M ≈ 6,94 g/mol) combina leveza atômica recorde com o maior potencial de oxidação da tabela periódica (Eºox ≈ +3,04 V).",
+      stepByStep: [
+        "Densidade de energia gravimétrica: a quantidade de energia gerada por quilograma de material é máxima quando o átomo é leve (baixo M) e fornece alta voltagem.",
+        "O lítio é o terceiro elemento da tabela periódica e o metal mais leve existente.",
+        "Seu potencial padrão de redução é o mais negativo de todos (-3,04 V), o que confere às células de lítio uma força eletromotriz de célula muito alta (3,7 V a 4,2 V por célula individual, contra apenas 2,0 V do chumbo-ácido e 1,2 V do níquel-cádmio).",
+        "Além disso, a tecnologia de intercalação (shuttle de íons Li⁺) não destrói a microestrutura dos eletrodos, garantindo centenas de ciclos de recarga sem memória."
+      ],
+      coreConcept: "Eletroquímica do Lítio e Densidade Energética de Baterias Secundárias",
+      trapWarning: "Lembre-se: quanto mais negativo o Eºred de um metal, MAIS FORTE é seu poder redutor e maior sua tendência a oxidar (doar elétrons)!"
+    },
+    commonTraps: ["confundir facilidade de oxidar com nobreza metalica", "achar que baterias de litio utilizam fusao nuclear"],
+    tags: ["bateria de litio", "ion-litio", "potencial de reducao", "densidade energetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-014",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Células a Combustível de Hidrogênio (H₂/O₂)",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em infraestruturas hospitalares sustentáveis, pesquisam-se geradores movidos a células a combustível de membrana trocadora de prótons (PEMFC). Esses dispositivos são abastecidos continuamente com gás hidrogênio (H₂) no compartimento anódico e oxigênio atmosférico (O₂) no compartimento catódico. Sob catálise de nanopartículas de platina, as semirreações que ocorrem são:\nÂnodo: 2 H₂(g) → 4 H⁺(aq) + 4 e⁻   (Eº = 0,00 V)\nCátodo: O₂(g) + 4 H⁺(aq) + 4 e⁻ → 2 H₂O(l)   (Eº = +1,23 V)",
+      source: "ENEM / Células a Combustível e Transição Energética"
+    },
+    prompt: "Em relação ao funcionamento e ao impacto ambiental da célula a combustível descrita, é correto afirmar que:",
+    options: [
+      { id: "a", text: "converte diretamente energia química em energia elétrica com alta eficiência, emitindo exclusivamente vapor de água líquida como subproduto direto.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "opera com rendimento térmico limitado pelo ciclo de Carnot por depender de uma combustão com chamas a altas pressões.", isCorrect: false, distractorRationale: "Células a combustível NÃO são máquinas térmicas; convertem energia livre eletroquímica diretamente em eletricidade sem combustão com chama." },
+      { id: "c", text: "consome monóxido de carbono e libera óxidos de enxofre altamente corrosivos para a rede elétrica hospitalar.", isCorrect: false, distractorRationale: "O CO é na verdade um veneno catalítico para a platina da célula; o combustível limpo é H₂ puro e o produto é H₂O." },
+      { id: "d", text: "apresenta diferença de potencial padrão negativa (-1,23 V), exigindo um gerador de corrente alternada permanente para operar.", isCorrect: false, distractorRationale: "ΔEº = +1,23 V - 0,00 V = +1,23 V (reação galvânica perfeitamente espontânea)." },
+      { id: "e", text: "utiliza o oxigênio atmosférico como agente redutor anódico na geração de radicais livres.", isCorrect: false, distractorRationale: "O O₂ é o oxidante (agente oxidante que se reduz no cátodo), enquanto o H₂ é o agente redutor no ânodo." }
+    ],
+    detailedExplanation: {
+      summary: "A célula a combustível H₂/O₂ é um dispositivo galvânico contínuo que produz água e eletricidade com emissão zero de gases do efeito estufa no ponto de uso.",
+      stepByStep: [
+        "A reação global é: 2 H₂(g) + O₂(g) → 2 H₂O(l), com ΔEº = +1,23 V.",
+        "Como a conversão é eletroquímica direta (eletrodo-eletrólito), ela não passa pela conversão intermediária em calor mecânico, contornando o limite de Carnot das máquinas a vapor.",
+        "Isso confere às células a combustível rendimentos elétricos de 50% a 70% (superiores aos 25-35% de motores a combustão interna).",
+        "O único resíduo direto da reação eletroquímica é água quimicamente pura."
+      ],
+      coreConcept: "Célula a Combustível, Reações Redox Limpas e Eficiência Energética",
+      trapWarning: "Lembre-se: célula a combustível é um gerador químico direto, NÃO é um motor a combustão que queima gás!"
+    },
+    commonTraps: ["achar que celula a combustivel e maquina termica de Carnot", "inverter quem oxida e quem reduz entre H2 e O2"],
+    tags: ["celula a combustivel", "hidrogenio verde", "eletroquimica limpa", "potencial padrao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-015",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Obtenção do Alumínio por Eletrólise Ígnea (Processo Hall-Héroult)",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A obtenção industrial de alumínio metálico a partir do mineral bauxita (rico em Al₂O₃) não pode ser realizada por eletrólise aquosa, pois o potencial padrão de redução da água (-0,83 V) é muito superior ao do cátion alumínio (Al³⁺ + 3e⁻ → Al⁰, com Eº = -1,66 V), de modo que apenas o gás hidrogênio seria gerado no cátodo. Por isso, a metalurgia emprega o processo Hall-Héroult, no qual a alumina anidra é dissolvida em criolita fundida (Na₃AlF₆) a cerca de 950 °C em cubas eletrolíticas.",
+      source: "ENEM / Metalurgia Eletrolítica e Sustentabilidade"
+    },
+    prompt: "A necessidade de conduzir o processo por via ígnea anidra e a adição da criolita fundida justificam-se, respectivamente, para:",
+    options: [
+      { id: "a", text: "impedir a descarga prioritária da água no cátodo e diminuir o ponto de fusão da alumina de mais de 2 000 °C para cerca de 950 °C, reduzindo custos de energia.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "aumentar a temperatura do forno para 4 000 °C e favorecer a formação de ligas ferrosas no fundo da cuba.", isCorrect: false, distractorRationale: "A criolita atua como fundente, BAIXANDO o ponto de fusão de 2 050 °C para ~950 °C, e não aumentando." },
+      { id: "c", text: "prover um cátodo gasoso que reaja espontaneamente com o carbono para liberar ácido fluorídrico.", isCorrect: false, distractorRationale: "O objetivo é precipitar alumínio líquido denso no fundo, e a liberação de HF é um passivo indesejado a ser evitado." },
+      { id: "d", text: "eliminar o consumo de energia elétrica, tornando o processo uma síntese endotérmica espontânea a frio.", isCorrect: false, distractorRationale: "A eletrólise ígnea do alumínio é um dos processos industriais que mais consomem eletricidade na economia mundial." },
+      { id: "e", text: "substituir o oxigênio por sódio metálico no revestimento refratário externo das cubas.", isCorrect: false, distractorRationale: "O sódio metálico destruiria a estrutura de sustentação da cuba." }
+    ],
+    detailedExplanation: {
+      summary: "A alumina pura funde a 2 050 °C; a criolita atua como solvente fundente baixando o ponto de fusão para 950 °C, viabilizando a eletrólise ígnea que evita a descarga da água.",
+      stepByStep: [
+        "Em meio aquoso, cátions com Eºred muito negativo (como Al³⁺, Na⁺, K⁺, Ca²⁺) não reduzem porque a água sofre redução antes (2 H₂O + 2e⁻ → H₂ + 2 OH⁻). Logo, a eletrólise TEM que ser ígnea (sem água).",
+        "A alumina pura (Al₂O₃) possui ponto de fusão altíssimo (> 2 050 °C), inviável técnica e economicamente para manter em cubas de aço.",
+        "A adição de criolita (Na₃AlF₆) forma uma mistura eutética que funde a ~950 °C, economizando bilhões de quilowatts-hora de energia térmica.",
+        "No cátodo de carbono, ocorre a redução: Al³⁺ + 3e⁻ → Al(l), que se deposita no fundo da cuba e é drenado periodicamente."
+      ],
+      coreConcept: "Eletrólise Ígnea de Metais Muito Eletropositivos e Papel de Fundentes",
+      trapWarning: "A reciclagem de latinhas de alumínio economiza cerca de 95% da energia elétrica gasta na produção primária por eletrólise Hall-Héroult!"
+    },
+    commonTraps: ["achar que criolita aumenta a temperatura de fusao", "ignorar porque a eletrolise nao pode ser aquosa"],
+    tags: ["eletrolise ignea", "aluminio", "hall-heroult", "criolita", "fundente"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-016",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Acumulador de Chumbo-Ácido: Descarga e Recarga",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema de no-breaks dos centros cirúrgicos hospitalares, utilizam-se baterias estacionárias de chumbo-ácido. O funcionamento desse acumulador secundário baseia-se na equação global reversível:\nPb(s) + PbO₂(s) + 2 H₂SO₄(aq)  ⇌  2 PbSO₄(s) + 2 H₂O(l)   (sentido direto = descarga; sentido inverso = recarga).",
+      source: "ENEM / Baterias Automotivas e Acumuladores de Chumbo"
+    },
+    prompt: "Durante o período de interrupção da rede elétrica, enquanto a bateria de chumbo opera fornecendo energia aos monitores cardíacos (processo de descarga espontânea), verifica-se que:",
+    options: [
+      { id: "a", text: "o ácido sulfúrico é consumido e a água é produzida, provocando diminuição progressiva da densidade e elevação do pH da solução eletrolítica.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a concentração de ácido sulfúrico no eletrólito se eleva bruscamente, tornando o meio cem vezes mais ácido.", isCorrect: false, distractorRationale: "O H₂SO₄ é REAGENTE na descarga, logo sua concentração DIMINUI com o tempo de uso." },
+      { id: "c", text: "ambos os eletrodos metálicos são corroídos completamente na forma de sulfeto de chumbo gasoso.", isCorrect: false, distractorRationale: "O produto precipitado em ambos os eletrodos é sulfato de chumbo sólido insolúvel (PbSO₄), sem emissão gasosa." },
+      { id: "d", text: "a massa sólida das placas dos eletrodos diminui até a dissolução aquosa integral dos metais.", isCorrect: false, distractorRationale: "A massa das placas AUMENTA na descarga devido à incorporação do ânion sulfato formando PbSO₄ sólido." },
+      { id: "e", text: "o oxigênio molecular é liberado sob borbulhamento violento na placa de chumbo puro.", isCorrect: false, distractorRationale: "A reação de descarga não libera O₂ gasoso." }
+    ],
+    detailedExplanation: {
+      summary: "Na descarga do acumulador de chumbo, consome-se H₂SO₄ e forma-se H₂O líquida e PbSO₄ sólido aderido às placas, fazendo a densidade da solução cair.",
+      stepByStep: [
+        "Ânodo na descarga (oxidação): Pb(s) + SO₄²⁻(aq) → PbSO₄(s) + 2e⁻.",
+        "Cátodo na descarga (redução): PbO₂(s) + 4 H⁺(aq) + SO₄²⁻(aq) + 2e⁻ → PbSO₄(s) + 2 H₂O(l).",
+        "Reação global: Pb(s) + PbO₂(s) + 2 H₂SO₄(aq) → 2 PbSO₄(s) + 2 H₂O(l).",
+        "Efeito na solução aquosa: consome-se ácido concentrado e gera-se água; logo, a concentração de H⁺ diminui (pH sobe) e a densidade da solução líquida cai.",
+        "Por isso, mecânicos mediam a carga da bateria antiga com um densímetro de líquidos!"
+      ],
+      coreConcept: "Química do Acumulador de Chumbo-Ácido e Monitoramento de Densidade",
+      trapWarning: "Lembre-se: no processo de descarga, sulfato de chumbo (PbSO₄) sólido se forma e se deposita em AMBOS os eletrodos!"
+    },
+    commonTraps: ["achar que a densidade do liquido aumenta na descarga", "confundir o sentido da descarga com o da recarga"],
+    tags: ["bateria de chumbo", "acumulador", "densidade eletrolitica", "reversibilidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-017",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Potencial Não-Padrão e Equilíbrio Químico em Pilhas (Equação de Nernst)",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere uma pilha eletroquímica reversível montada no laboratório de análises clínicas operando segundo a seguinte equação iônica global:\nCu(s) + 2 Ag⁺(aq)  ⇌  Cu²⁺(aq) + 2 Ag(s)    (ΔEº = +0,46 V a 25 °C e concentrações molares de 1,0 mol/L).\nO pesquisador pretende maximizar a força eletromotriz instantânea (ddp) gerada pela célula para realizar leituras biossensoriais de alta sensibilidade.",
+      source: "ENEM / Equilíbrio Químico e Eletroquímica"
+    },
+    prompt: "Com base no Princípio de Le Chatelier e na dependência dos potenciais elétricos em relação às concentrações iônicas, a ddp dessa pilha aumentará se o operador:",
+    options: [
+      { id: "a", text: "elevar a concentração molar de íons Ag⁺ na semicela catódica ou diluir a concentração de íons Cu²⁺ na semicela anódica.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "adicionar sulfato de cobre solúvel na semicela anódica para aumentar a concentração de íons Cu²⁺.", isCorrect: false, distractorRationale: "Aumentar produtos (Cu²⁺) desloca o equilíbrio para a esquerda e DIMINUI a ddp da pilha." },
+      { id: "c", text: "adicionar gotas de cloreto de sódio na semicela catódica para precipitar a prata na forma de AgCl sólido.", isCorrect: false, distractorRationale: "Precipitar Ag⁺ reduz a concentração de reagentes, diminuindo a ddp da pilha." },
+      { id: "d", text: "duplicar a espessura e a massa da lâmina de prata metálica inserida no cátodo.", isCorrect: false, distractorRationale: "Espécies sólidas puras têm atividade unitária e não alteram o potencial eletroquímico da célula." },
+      { id: "e", text: "remover metade da solução aquosa de ambos os recipientes mantendo as concentrações inalteradas.", isCorrect: false, distractorRationale: "Alterar apenas o volume sem modificar a concentração molar não muda a ddp da pilha." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Equação de Nernst [ΔE = ΔEº - (RT/nF) · ln(Q)], a ddp aumenta quando aumentamos a concentração de reagentes aquosos (Ag⁺) ou reduzimos produtos aquosos (Cu²⁺).",
+      stepByStep: [
+        "Quociente reacional da pilha: Q = [Cu²⁺] / [Ag⁺]² (metais sólidos não entram na expressão).",
+        "Pelo Princípio de Le Chatelier: perturbações que deslocam o equilíbrio no sentido direto (formação de produtos) aumentam a espontaneidade e elevam a ddp.",
+        "Ao aumentar [Ag⁺] (reagente), o sistema é forçado a caminhar para a direita (sentido direto), aumentando a ddp.",
+        "Ao diminuir [Cu²⁺] (produto), o quociente Q diminui, o que também desloca o equilíbrio para a direita e aumenta a ddp.",
+        "Quando uma pilha 'descarrega' até o fim, ela atinge o equilíbrio químico dinâmico e sua ddp torna-se nula (ΔE = 0 V)."
+      ],
+      coreConcept: "Influência das Concentrações Iônicas na Força Eletromotriz (Le Chatelier e Nernst)",
+      trapWarning: "Lembre-se: adicionar mais metal sólido (como prata ou cobre) NÃO altera a ddp da pilha!"
+    },
+    commonTraps: ["achar que aumentar a lamina de metal aumenta a voltagem", "confundir ddp com capacidade de carga total"],
+    tags: ["nernst", "le chatelier", "ddp nao-padrao", "equilibrio quimico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-018",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Mecanismo Eletroquímico de Corrosão do Ferro e Ferrugem",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A corrosão galvânica atmosférica das estruturas metálicas de ferro expostas ao ar úmido provoca perdas orçamentárias anuais bilionárias. O processo químico espontâneo ocorre na superfície do aço quando gotas de água atuam como microcélulas galvânicas: regiões anódicas do ferro oxidam a Fe²⁺, enquanto nas bordas da gota o oxigênio atmosférico se reduz a hidroxila (OH⁻) na presença de água. A reação contínua produz hidróxido de ferro(II), que é ulteriormente superoxidado pelo ar a óxido de ferro(III) hidratado (ferrugem porosa: Fe₂O₃ · xH₂O).",
+      source: "ENEM / Eletroquímica Ambiental e Mecanismo de Corrosão"
+    },
+    prompt: "A taxa de corrosão do ferro acelera-se dramaticamente em ambientes urbanos litorâneos ou de intensa poluição atmosférica ácida porque:",
+    options: [
+      { id: "a", text: "a presença de íons cloreto e sódio trazidos pela maresia e de ácidos na precipitação aumenta exponencialmente a condutividade elétrica do filme de água superficial.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o sal marinho atua como redutor biológico que catalisa a fissão nuclear dos átomos de carbono da liga.", isCorrect: false, distractorRationale: "O sal não realiza fissão nuclear; atua como eletrólito iônico que fecha o circuito elétrico." },
+      { id: "c", text: "a alta concentração de vapor d'água atmosférico impede o ferro de receber calor sensível da radiação solar.", isCorrect: false, distractorRationale: "A corrosão é um fenômeno redox eletroquímico, não de bloqueio de calor sensível." },
+      { id: "d", text: "o ar costeiro possui teor de oxigênio gasoso três vezes superior ao ar do interior dos continentes.", isCorrect: false, distractorRationale: "A proporção de O₂ no ar é constante em ~21% na baixa troposfera." },
+      { id: "e", text: "os íons cloreto reduzem o ferro oxidado de volta a ferro puro amorfo que sublima no ar.", isCorrect: false, distractorRationale: "O íon cloreto na verdade ataca a camada de passivação do metal e acelera a destruição do aço." }
+    ],
+    detailedExplanation: {
+      summary: "A água pura é péssima condutora de eletricidade; a adição de eletrólitos solúveis (sais da maresia ou ácidos da poluição) fecha o circuito eletroquímico e dispara a corrosão.",
+      stepByStep: [
+        "A ferrugem exige simultaneamente FERRO, OXIGÊNIO e ÁGUA LÍQUIDA.",
+        "A gota de água funciona como eletrólito de uma micropilha de corrosão galvânica.",
+        "Quando a água contém íons dissolvidos (Na⁺, Cl⁻ da maresia; H⁺, SO₄²⁻ da chuva ácida), sua resistividade elétrica despenca e sua condutividade iônica salta ordens de grandeza.",
+        "Além disso, o íon Cl⁻ rompe a camada protetora passivante natural dos metais (corrosão por pites), provocando perfurações rápidas e severas na estrutura metálica."
+      ],
+      coreConcept: "Mecanismo Eletroquímico de Corrosão e Fatores de Aceleração por Eletrólitos",
+      trapWarning: "Ferro NÃO enferruja apenas em água desaerada (sem oxigênio) nem em ar seco (sem umidade); ambos são obrigatórios!"
+    },
+    commonTraps: ["achar que a maresia reage quimicamente sozinha sem agua", "esquecer que o oxigenio gasoso e o agente oxidante"],
+    tags: ["corrosao do ferro", "ferrugem", "maresia", "eletrolito", "micropilhas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-019",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Refino Eletrolítico do Cobre (Eletrorrefino)",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O cobre bruto obtido a partir da ustulação da calcopirita possui pureza de cerca de 98% a 99% (cobre blister), inadequada para a fiação de equipamentos hospitalares de alta precisão, que exigem condutividade elétrica máxima com pureza superior a 99,99%. Essa purificação é realizada industrialmente por refino eletrolítico em uma cuba contendo solução aquosa ácida de sulfato de cobre (CuSO₄).",
+      source: "ENEM / Eletrometalurgia e Refino de Metais"
+    },
+    prompt: "Para que o eletrorrefino do cobre ocorra com máxima pureza, as placas de cobre bruto impuro e a lâmina de cobre puro de partida devem ser conectadas, respectivamente, aos polos:",
+    options: [
+      { id: "a", text: "positivo (ânodo), onde o cobre bruto sofre oxidação e se dissolve na solução, e negativo (cátodo), onde íons Cu²⁺ purificados se reduzem e se depositam.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "negativo (cátodo), onde as impurezas metálicas são atraídas, e positivo (ânodo), onde o cobre puro evapora na forma de plasma.", isCorrect: false, distractorRationale: "No cátodo ocorre redução seletiva do Cu²⁺ puro; no ânodo ocorre oxidação do bloco impuro." },
+      { id: "c", text: "positivo (cátodo) e negativo (ânodo), em conformidade com as pilhas espontâneas de Daniell.", isCorrect: false, distractorRationale: "Na eletrólise (processo não espontâneo forçado por gerador), o cátodo é o polo NEGATIVO e o ânodo é o polo POSITIVO." },
+      { id: "d", text: "ambos ao polo neutro aterrado para permitir difusão capilar mecânica espontânea.", isCorrect: false, distractorRationale: "O refino eletrolítico necessita obrigatoriamente de fonte externa de corrente contínua." },
+      { id: "e", text: "positivo em corrente alternada para alternar o sentido dos elétrons a cada segundo.", isCorrect: false, distractorRationale: "A eletrólise requer rigorosamente corrente contínua (CC), pois a corrente alternada desmancharia a deposição." }
+    ],
+    detailedExplanation: {
+      summary: "No refino eletrolítico, o cobre impuro é oxidado no ânodo (+) e deposita-se seletivamente purificado no cátodo (-).",
+      stepByStep: [
+        "Polo Positivo (Ânodo da eletrólise): placa grossa de cobre impuro (blister). O cobre e metais mais reativos (como ferro e zinco) sofrem oxidação e passam para a solução na forma de cátions.",
+        "Impurezas menos nobres que o cobre (como ouro e prata) não oxidam nessa voltagem e caem no fundo da cuba como preciosa 'lama anódica'.",
+        "Polo Negativo (Cátodo da eletrólise): lâmina fina de cobre de altíssima pureza. Na voltagem controlada da cuba, apenas os íons Cu²⁺ sofrem redução seletiva: Cu²⁺(aq) + 2e⁻ → Cu⁰(s).",
+        "Resultado: cobre eletrolítico com mais de 99,99% de pureza depositado no cátodo."
+      ],
+      coreConcept: "Eletrorrefino de Metais e Formação da Lama Anódica",
+      trapWarning: "Lembre-se: na ELETRÓLISE, o Cátodo é NEGATIVO e o Ânodo é POSITIVO (o inverso da pilha, onde Cátodo é + e Ânodo é -)!"
+    },
+    commonTraps: ["inverter a polaridade dos eletrodos na eletrolise", "achar que o ouro vai para a solucao aquosa"],
+    tags: ["eletrorrefino", "cobre", "eletrolise", "lama anodica", "pureza metalica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-020",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Eletrodo Padrão de Hidrogênio (EPH) e Potenciais de Redução",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A determinação absoluta do potencial de uma semirreação isolada é experimentalmente impossível, pois uma oxidação necessita acoplar-se obrigatoriamente a uma redução para que haja circulação de cargas. Por convenção internacional da IUPAC, definiu-se como referência universal o Eletrodo Padrão de Hidrogênio (EPH), ao qual se atribuiu o potencial padrão de exatamente 0,00 V a 25 °C, sob pressão de 1 atm de gás H₂ e concentração de 1,0 mol/L de íons H⁺.",
+      source: "ENEM / Eletrodo Padrão e Termodinâmica Eletroquímica"
+    },
+    prompt: "Se uma espécie metálica hipotética M conectada ao EPH apresentar potencial padrão de redução de Eº(M²⁺/M) = -0,76 V, infere-se cientificamente que, nas condições-padrão:",
+    options: [
+      { id: "a", text: "o metal M na forma neutra possui maior tendência a oxidar (perder elétrons) do que o gás hidrogênio molecular (H₂).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "os cátions M²⁺ em solução reduzem-se espontaneamente na presença de íons H⁺.", isCorrect: false, distractorRationale: "Como Eºred é negativo (-0,76 V < 0,00 V), o cátion M²⁺ é mais difícil de reduzir do que o H⁺." },
+      { id: "c", text: "o eletrodo de platina do EPH sofrerá dissolução corrosiva imediata.", isCorrect: false, distractorRationale: "A platina é um metal inerte que atua apenas como condutor de elétrons e suporte catalítico." },
+      { id: "d", text: "a diferença de potencial da pilha formada entre esse metal e o EPH será rigorosamente igual a zero.", isCorrect: false, distractorRationale: "A ddp da pilha será ΔEº = 0,00 - (-0,76) = +0,76 V, perfeitamente mensurável e positiva." },
+      { id: "e", text: "a espécie metálica M comportar-se-á como um oxidante mais enérgico do que o gás flúor.", isCorrect: false, distractorRationale: "Metais com potencial de redução muito negativo são agentes REDUTORES fortes, não oxidantes." }
+    ],
+    detailedExplanation: {
+      summary: "O Eletrodo Padrão de Hidrogênio (Eº = 0,00 V) é a referência: potenciais negativos indicam maior tendência a oxidar do que o H₂.",
+      stepByStep: [
+        "Semirreação padrão de referência: 2 H⁺(aq) + 2e⁻ ⇌ H₂(g), Eº = 0,00 V.",
+        "Se Eº(M²⁺/M) = -0,76 V, o metal M²⁺ tem menor tendência a receber elétrons do que o H⁺.",
+        "Por consequência direta, o metal neutro M⁰ tem MAIOR tendência a doar elétrons (oxidar) do que o H₂ gasoso:",
+        "M⁰(s) + 2 H⁺(aq) → M²⁺(aq) + H₂(g)  (ΔEº = +0,76 V, reação espontânea com desprendimento de gás hidrogênio).",
+        "Metais com Eºred < 0 reagem com ácidos minerais diluídos desprendendo gás H₂."
+      ],
+      coreConcept: "Escala Padrão de Potenciais Eletroquímicos e Eletrodo de Hidrogênio",
+      trapWarning: "Lembre-se: metal com potencial de redução NEGATIVO é reativo e reage espontaneamente com ácidos liberando bolhas de H₂!"
+    },
+    commonTraps: ["achar que potencial negativo significa que nao funciona como pilha", "inverter tendencia de oxidacao com reducao"],
+    tags: ["eletrodo de hidrogenio", "potencial padrao", "escala de potenciais", "reatividade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
