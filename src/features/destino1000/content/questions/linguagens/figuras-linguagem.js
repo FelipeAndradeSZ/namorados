@@ -368,5 +368,438 @@ export const QUESTIONS_FIGURAS_LINGUAGEM = [
       trapWarning: "Na frase 2, é muito comum alunos confundirem 'O estádio aplaudiu' com Prosopopeia. Lembre-se: se o objeto físico está apenas representando geograficamente as pessoas que estão nele (continente/conteúdo), a figura é sempre Metonímia."
     },
     tags: ['figuras de linguagem', 'revisão', 'metáfora', 'metonímia', 'eufemismo', 'sinestesia']
+  },
+  {
+    id: "LIN-FIG-011",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Antítese vs. Paradoxo (Oxímoro) na Poética Clássica",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere os fragmentos poéticos a seguir:\n\nFragmento 1 (Gregório de Matos, Barroco):\n'Nasce o Sol, e não dura mais que um dia,\nDepois da Luz se segue a noite escura,\nEm tristes sombras morre a formosura,\nEm contínuas tristezas a alegria.'\n\nFragmento 2 (Luís de Camões, Classicismo):\n'Amor é fogo que arde sem se ver;\nÉ ferida que dói e não se sente;\nÉ um contentamento descontente;\nÉ dor que desatina sem doer.'",
+      source: "Estudos de Teoria Poética e Figuras de Linguagem, 2024."
+    },
+    prompt: "Ao analisar a construção retórica das oposições semânticas nos dois poemas, a distinção teórica entre Antítese e Paradoxo (Oxímoro) comprova-se porque:",
+    options: [
+      { id: "a", text: "no Fragmento 1 opera-se a Antítese pela simples aproximação de palavras de sentidos contrários ('Luz / noite', 'tristezas / alegria') sem ferir a lógica natural; enquanto no Fragmento 2 opera-se o Paradoxo pela fusão simultânea de ideias inconciliáveis ('contentamento descontente', 'dói e não se sente') que desafiam a coerência racional.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "em ambos os fragmentos ocorrem unicamente metáforas zoológicas sobre animais da savana africana.", isCorrect: false, distractorRationale: "Os poemas tratam da efemeridade do tempo e das contradições amorosas, sem alusão zoológica." },
+      { id: "c", text: "o Fragmento 1 é um exemplo clássico de eufemismo para suavizar uma notícia fúnebre familiar.", isCorrect: false, distractorRationale: "O poema de Gregório de Matos reflete sobre o tempo transitório (carpe diem) através de antíteses dramáticas." },
+      { id: "d", text: "no Fragmento 2 todas as afirmações são fatos empíricos comprováveis pela medicina ortopédica tradicional.", isCorrect: false, distractorRationale: "Dizer que uma ferida dói sem doer é uma contradição poética e lógica insolúvel (paradoxo)." },
+      { id: "e", text: "ambos os textos constituem pleonasmos viciosos que deveriam ser censurados das antologias escolares.", isCorrect: false, distractorRationale: "Trata-se de obras-primas canônicas da literatura em língua portuguesa ricas em figuras de pensamento." }
+    ],
+    detailedExplanation: {
+      summary: "Antítese e Paradoxo lidam com ideias contrárias, mas de maneiras diferentes: a Antítese coloca opostos lado a lado (alto e baixo, dia e noite; é perfeitamente lógico). O Paradoxo (ou Oxímoro) funde os opostos na mesma coisa ao mesmo tempo, criando uma contradição lógica insolúvel (um silêncio ensurdecedor, ferida que dói e não se sente).",
+      stepByStep: [
+        "Antítese: Contraposição de termos contrários. Luz vs. Noite; Tristeza vs. Alegria. Um existe após o outro, sem quebrar a lógica da realidade.",
+        "Paradoxo: Coexistência de elementos mutuamente excludentes. Como algo pode doer e não doer ao mesmo tempo? Isso choca a razão cartesiana e expressa a natureza misteriosa do amor.",
+        "Dica clássica do ENEM: Antítese = oposição possível; Paradoxo = oposição absurda/ilógica."
+      ],
+      coreConcept: "Diferenciação Estilística: Antítese (Oposição Lógica) vs. Paradoxo (Contradição Insolúvel)",
+      trapWarning: "Cuidado no ENEM: 'oxímoro' é o nome técnico mais erudito do paradoxo (fusão de conceitos opostos no mesmo sintagma, como 'claridade escura' ou 'doce amargura')."
+    },
+    commonTraps: [
+      "Confundir antítese com paradoxo em questões de interpretação de poemas barrocos",
+      "Achar que paradoxo é um 'erro gramatical' do poeta em vez de uma figura de pensamento profunda"
+    ],
+    tags: ["figuras-de-linguagem", "antitese", "paradoxo", "oximoro", "camoes", "gregorio-de-matos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-012",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Prosopopeia (Personificação) e a Humanização da Natureza",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o fragmento do poema abolicionista 'Vozes d'África' (1868), de Castro Alves:\n\n'O mar revolto geme de pavor na escuridão...\nAs vagas trêmulas ajoelham-se na areia deserta,\nE o vento da noite soluça baixinho segredos de dor,\nEnquanto a lua pranteia o destino dos filhos escravizados.'",
+      source: "ALVES, Castro Alves. Os Escravos. São Paulo: Martin Claret."
+    },
+    prompt: "Ao atribuir ao mar a ação de 'gemer de pavor', às ondas a atitude de 'ajoelhar-se' e à lua o ato de 'prantear', o poeta constrói a figura de linguagem denominada:",
+    options: [
+      { id: "a", text: "prosopopeia (ou personificação), conferindo sentimentos, reações corporais e consciência humana a elementos inanimados da natureza para amplificar a dor cósmica perante o horror da escravidão.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "eufemismo, para amenizar a gravidade do tráfico negreiro e transformá-lo em conto de fadas infantil.", isCorrect: false, distractorRationale: "O poema é uma denúncia monumental e dramática, o oposto de qualquer suavização atenuadora." },
+      { id: "c", text: "catacrese, motivada pela carência de termos adequados para nomear a água salgada dos oceanos.", isCorrect: false, distractorRationale: "Catacrese é uso desgastado (como 'pé da mesa'); aqui há criação poética vívida e dramática." },
+      { id: "d", text: "metonímia anatômica, substituindo os marinheiros pelos joelhos das ondas.", isCorrect: false, distractorRationale: "As ondas não têm joelhos de carne; estão sendo poeticamente personificadas." },
+      { id: "e", text: "ironia sarcástica com o intuito de fazer os leitores darem gargalhadas descontraídas.", isCorrect: false, distractorRationale: "O tom do Condoreirismo de Castro Alves é de indignação moral, comoção ética e gravidade trágica." }
+    ],
+    detailedExplanation: {
+      summary: "A prosopopeia (ou personificação) consiste em emprestar qualidades humanas (sentimentos, fala, choro, ações morais) a animais, objetos inanimados ou forças da natureza.",
+      stepByStep: [
+        "Ações humanas no texto: Gemer de pavor, ajoelhar-se, soluçar segredos, prantear (chorar copiosamente).",
+        "Seres inanimados receptores: O mar, as ondas, o vento, a lua.",
+        "Efeito expressivo no Condoreirismo: O universo inteiro parece comover-se e protestar contra a crueldade da escravidão no Atlântico.",
+        "Gêneros comuns da prosopopeia: Fábulas infantis (animais que falam), poesia romântica e crônicas animistas."
+      ],
+      coreConcept: "Prosopopeia / Personificação: Atribuição de Ações e Sentimentos Humanos a Seres Inanimados",
+      trapWarning: "No ENEM, prosopopeia e personificação são sinônimos perfeitos; se a opção trouxer um ou outro termo, o significado técnico é o mesmo!"
+    },
+    commonTraps: [
+      "Confundir prosopopeia (dar vida/humanidade a coisas) com metonímia (trocar a parte pelo todo)",
+      "Supor que personificação ocorre apenas em historinhas de animais falantes"
+    ],
+    tags: ["figuras-de-linguagem", "prosopopeia", "personificacao", "castro-alves", "condoreirismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-013",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Ironia e Sarcasmo como Ferramentas de Crítica Social",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma crônica jornalística sobre os atrasos crônicos nas obras de infraestrutura e a burocracia dos órgãos públicos, lê-se o seguinte comentário de um cidadão após esperar cinco horas em uma fila interminável sob chuva torrencial:\n\n'Que primor de agilidade e respeito ao cidadão! Fiquei emocionado com a pontualidade britânica da repartição pública: cheguei às sete da manhã e ao meio-dia finalmente descobri que o funcionário que assina o formulário está de folga até o próximo mês. Um verdadeiro espetáculo de eficiência!'",
+      source: "Crônicas do Cotidiano Urbano, 2024."
+    },
+    prompt: "O recurso estilístico que estrutura fundamentalmente a manifestação do cidadão revoltado na crônica é a:",
+    options: [
+      { id: "a", text: "ironia, processo retórico em que o enunciador afirma literalmente o oposto daquilo que pretende comunicar, valendo-se da contradição contextual para expressar sarcasmo, indignação e crítica contundente.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "antítese simétrica, para demonstrar que o funcionário público é um modelo de disciplina a ser premiado.", isCorrect: false, distractorRationale: "O enunciador não está elogiando o funcionário; está denunciando a incompetência do atendimento através do deboche." },
+      { id: "c", text: "sinestesia sensorial, por misturar sensações térmicas de frio com sabores agridoces.", isCorrect: false, distractorRationale: "Não há mistura de órgãos dos sentidos no fragmento." },
+      { id: "d", text: "pleonasmo descritivo redundante que repete termos desnecessários sem produzir sentido.", isCorrect: false, distractorRationale: "O texto é ágil e afiado na construção da sátira social." },
+      { id: "e", text: "catacrese de dicionário empregada por falta de palavras adequadas para nomear filas de espera.", isCorrect: false, distractorRationale: "A expressão é intencional, sarcástica e com duplo sentido mordaz." }
+    ],
+    detailedExplanation: {
+      summary: "A ironia consiste em dizer uma coisa para significar o seu exato oposto, contando com a inteligência e o contexto do ouvinte/leitor para captar a sátira e o tom de denúncia.",
+      stepByStep: [
+        "O que o texto diz explicitamente: 'Primor de agilidade', 'pontualidade britânica', 'espetáculo de eficiência'.",
+        "A situação fática real: Cinco horas na chuva, fila parada, funcionário ausente.",
+        "O choque discursivo: Como as duas coisas são incompatíveis, o receptor decodifica que se trata de uma crítica sarcástica mordaz (Ironia)."
+      ],
+      coreConcept: "Ironia: Inversão Semântica Intencional, Sarcasmo e Crítica Institucional",
+      trapWarning: "No ENEM, a compreensão da ironia é avaliada em crônicas, charges e tirinhas (como Mafalda, Armandinho e Calvin). Sempre analise a DISCREPÂNCIA entre o texto e a imagem/situação para identificar a crítica!"
+    },
+    commonTraps: [
+      "Ler o texto com ingenuidade literal e acreditar que o autor estava elogiando o serviço público",
+      "Confundir ironia fina com insulto direto sem figuração"
+    ],
+    tags: ["figuras-de-linguagem", "ironia", "sarcasmo", "cronica", "critica-social"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-014",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Hipérbole vs. Eufemismo: Contrastes de Intensidade Expressiva",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere dois enunciados colhidos na linguagem cotidiana contemporânea:\n\nEnunciado 1: 'Eu já te mandei essa mensagem dezenas de milhões de vezes e estou morrendo de fome depois de esperar uma eternidade na sala de espera!'\n\nEnunciado 2: 'O comitê de ética informou que o parlamentar faltou com a verdade durante a sessão plenária e subtraiu bens públicos em benefício próprio.'",
+      source: "Manual Prático de Figuras de Pensamento, 2024."
+    },
+    prompt: "A análise dos recursos expressivos empregados nos enunciados 1 e 2 revela que eles se estruturam, respectivamente, a partir de:",
+    options: [
+      { id: "a", text: "hipérbole no Enunciado 1 (exagero desmedido e dramático para intensificar a queixa) e eufemismo no Enunciado 2 (atenuação de expressões rudes para suavizar acusações graves como mentir e roubar).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "metonímia no Enunciado 1 e prosopopeia mitológica no Enunciado 2.", isCorrect: false, distractorRationale: "Não há contiguidade metonímica no primeiro nem humanização de objetos inanimados no segundo." },
+      { id: "c", text: "paradoxo insolúvel no Enunciado 1 e metáfora biológica no Enunciado 2.", isCorrect: false, distractorRationale: "Esperar uma eternidade é exagero evidente (hipérbole), não paradoxo lógico." },
+      { id: "d", text: "eufemismo no Enunciado 1 e hipérbole descontrolada no Enunciado 2.", isCorrect: false, distractorRationale: "A ordem está exatamente invertida: o Enunciado 1 exagera (hipérbole) e o 2 suaviza (eufemismo)." },
+      { id: "e", text: "ambiguidade sintática viciosa em ambos os períodos analisados.", isCorrect: false, distractorRationale: "Os períodos são perfeitamente claros em sua intenção discursiva." }
+    ],
+    detailedExplanation: {
+      summary: "Hipérbole e Eufemismo operam em direções opostas na balança da intensidade: a Hipérbole 'aumenta o volume' ao extremo pelo exagero; o Eufemismo 'abaixa o volume' para suavizar palavras duras, ofensivas ou tabus.",
+      stepByStep: [
+        "Enunciado 1: 'Milhões de vezes', 'morrendo de fome', 'uma eternidade' ⟹ ninguém espera uma eternidade biológica real; trata-se de HIPÉRBOLE para expressar cansaço extremo.",
+        "Enunciado 2: 'Faltou com a verdade' (suavização para mentiu); 'subtraiu bens públicos' (suavização formal jurídica para roubou/desviou) ⟹ trata-se de EUFEMISMO para evitar o termo direto estigmatizante.",
+        "Gêneros do eufemismo: Necrológios ('faleceu', 'descansou'), notícias diplomáticas e comunicados corporativos."
+      ],
+      coreConcept: "Hipérbole (Exagero Intencional) versus Eufemismo (Atenuação Suavizadora)",
+      trapWarning: "No ENEM, o eufemismo é muito frequente na análise da linguagem política e jornalística, onde autoridades 'ajustam tarifas' (em vez de aumentar preços) ou anunciam 'descontinuidade contratual' (em vez de demissão em massa)."
+    },
+    commonTraps: [
+      "Inverter os conceitos de hipérbole e eufemismo",
+      "Achar que hipérbole é erro de cálculo matemático em vez de figura poética de exagero"
+    ],
+    tags: ["figuras-de-linguagem", "hiperbole", "eufemismo", "exagero", "atenuacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-015",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Gradação (Clímax e Anticlímax) no Discurso Literário",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o trecho oratório do Sermão da Sexagésima (1655), proferido pelo Padre Antônio Vieira:\n\n'O trigo semeado na terra boa primeiro germina em segredo, depois brota em tenra haste verde, eleva-se em espiga dourada, amadurece sob os raios do sol e multiplica-se em celeiros cheios de pão abundante para alimentar a multidão faminta.'",
+      source: "VIEIRA, Pe. Antônio. Sermões Escolhidos. São Paulo: Cultrix."
+    },
+    prompt: "A enumeração progressiva das fases do cultivo ('germina ⟹ brota ⟹ eleva-se ⟹ amadurece ⟹ multiplica-se') constitui a figura de linguagem da:",
+    options: [
+      { id: "a", text: "gradação (ou clímax), encadeando ideias em sequência ascendente cumulativa de intensidade e desenvolvimento temporal para persuadir o ouvinte sobre a fecundidade da palavra de Deus.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "catacrese de cozinha, por fazer menção implícita a receitas de padarias de Lisboa.", isCorrect: false, distractorRationale: "Trata-se de oratória sacra barroca com rigor estilístico clássico, não linguagem de culinária caseira." },
+      { id: "c", text: "ironia depreciativa, destinada a demonstrar que plantar trigo é uma ocupação inútil para o ser humano.", isCorrect: false, distractorRationale: "O tom é solene, de exaltação da fecundidade e do trabalho evangélico." },
+      { id: "d", text: "sinestesia auditiva que combina o som dos sinos da igreja com a dor de dente dos fiéis.", isCorrect: false, distractorRationale: "Não há cruzamento sensorial desse tipo no sermão." },
+      { id: "e", text: "pleonasmo vicioso que repete vocábulos idênticos sem acrescentar qualquer avanço narrativo.", isCorrect: false, distractorRationale: "Cada verbo acrescenta uma etapa nova e superior na evolução da semente até o pão." }
+    ],
+    detailedExplanation: {
+      summary: "A gradação é a disposição de termos em ordem progressiva de ideias. Pode ser ascendente (clímax - do menor para o maior) ou descendente (anticlímax - do maior para o menor, como 'virou pó, cinza, nada').",
+      stepByStep: [
+        "Sequência temporal ascendente: Germina ⟹ brota ⟹ eleva-se ⟹ amadurece ⟹ multiplica-se.",
+        "Finalidade retórica no Barroco: O Padre Antônio Vieira utiliza a gradação para demonstrar que o bom pregador precisa plantar a semente da fé com paciência até colher frutos monumentais.",
+        "Gradação descendente (anticlímax): Muito comum no Romantismo e Realismo para retratar decadência ('O herói perdeu o trono, a honra, o dinheiro, os amigos e a própria dignidade')."
+      ],
+      coreConcept: "Gradação: Progressão Ascendente (Clímax) e Descendente (Anticlímax)",
+      trapWarning: "No ENEM, observe o dinamismo dos verbos ou adjetivos alinhados: se há uma 'escada' de ideias subindo ou descendo em intensidade, a resposta é GRADAÇÃO!"
+    },
+    commonTraps: [
+      "Confundir gradação com mera lista aleatória de substantivos",
+      "Esquecer que a gradação pode ser tanto ascendente quanto descendente"
+    ],
+    tags: ["figuras-de-linguagem", "gradacao", "climax", "anticlimax", "padre-antonio-vieira", "barroco"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-016",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Catacrese: A Metáfora Desgastada e Incorporada ao Dicionário",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes expressões corriqueiras utilizadas espontaneamente no cotidiano:\n\n1. 'Apoiei o prato no braço do sofá enquanto assistia à aula.'\n2. 'Quebrei sem querer o dente de alho que estava descascando.'\n3. 'A caminhonete parou no pé da serra antes de iniciar a subida íngreme.'\n4. 'Segurei a xícara de café quente pela sua asa de cerâmica.'",
+      source: "Manual de Semântica e Lexicologia, 2024."
+    },
+    prompt: "Termos como 'braço do sofá', 'dente de alho', 'pé da serra' e 'asa da xícara' exemplificam a figura de linguagem denominada catacrese, que se define linguisticamente por ser:",
+    options: [
+      { id: "a", text: "o uso figurado de uma palavra preexistente adotada em razão da ausência de um vocábulo específico próprio no léxico da língua para nomear determinado objeto ou parte dele, tornando-se uma metáfora cristalizada pelo uso popular.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "um erro de sintaxe que demonstra falta de instrução formal dos falantes que o utilizam.", isCorrect: false, distractorRationale: "Catacrese não é erro; é um recurso lexical legítimo e consagrado por todos os dicionários formais da língua." },
+      { id: "c", text: "uma hipérbole deliberada que exagera as dimensões físicas dos móveis e dos temperos de cozinha.", isCorrect: false, distractorRationale: "Não há exagero enfático nessas expressões cotidianas; trata-se de nomeação lexical comum." },
+      { id: "d", text: "uma rima poética rara criada exclusivamente por escritores simbolistas herméticos.", isCorrect: false, distractorRationale: "São expressões coloquiais e populares usadas por todas as classes sociais." },
+      { id: "e", text: "a tradução equivocada de expressões náuticas do mandarim clássico.", isCorrect: false, distractorRationale: "São criações semânticas orgânicas da história da própria língua portuguesa." }
+    ],
+    detailedExplanation: {
+      summary: "A catacrese é a 'metáfora de que ninguém mais lembra que era metáfora': ocorre quando a língua não tem uma palavra própria para algo e toma emprestada uma palavra do corpo humano ou da natureza ('boca da noite', 'céu da boca', 'cabeça de prego', 'maçã do rosto').",
+      stepByStep: [
+        "Falta de termo específico: Como se chama a parte lateral da poltrona onde se apoia o braço? Não há outro nome senão 'braço da poltrona'.",
+        "Perda da força poética: O uso repetido e contínuo ao longo de gerações cristalizou o termo, que passou a ser percebido como denotativo.",
+        "Outros exemplos consagrados: 'Enterrar uma farpa no dedo' (embora enterrar venha de terra), 'maçã do rosto', 'veia d'água'."
+      ],
+      coreConcept: "Catacrese: Metáfora Cristalizada por Lacuna Lexical",
+      trapWarning: "No ENEM, lembre-se: catacrese é a figura que 'tapa um buraco' no vocabulário! Diferente da metáfora viva criada pelo poeta na hora, a catacrese já está há séculos dicionarizada pelo uso popular."
+    },
+    commonTraps: [
+      "Julgar expressões como 'dente de alho' ou 'asa da xícara' como personificação ou prosopopeia",
+      "Achar que expressões consagradas pelo uso cotidiano são erros gramaticais em vez de catacreses legítimas"
+    ],
+    tags: ["figuras-de-linguagem", "catacrese", "metafora-cristalizada", "lexico", "semantica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-017",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Anáfora e Aliteração: O Ritmo Hipnótico em 'Águas de Março'",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a célebre letra de Tom Jobim em 'Águas de Março' (1972):\n\n'É pau, é pedra, é o fim do caminho\nÉ um resto de toco, é um pouco sozinho\nÉ um caco de vidro, é a vida, é o sol\nÉ a noite, é a morte, é um laço, é o anzol\nSão as águas de março fechando o verão\nÉ a promessa de vida no teu coração...'",
+      source: "JOBIM, Tom. Matita Perê. Rio de Janeiro: Philips."
+    },
+    prompt: "A repetição sistemática e contínua da estrutura verbal 'É...' no início de sucessivos versos e sintagmas atua como recurso expressivo denominado:",
+    options: [
+      { id: "a", text: "anáfora, criando um efeito rítmico cumulativo e hipnótico que emula o gotejar incessante da chuva e a torrente ininterrupta de elementos que compõem o fluxo da existência humana.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "pleonasmo vicioso, gerando cansaço auditivo que empobrece a qualidade melódica da canção popular.", isCorrect: false, distractorRationale: "A repetição é uma escolha estilística genial e consciente que consagrou a canção internacionalmente." },
+      { id: "c", text: "paradoxo teológico, por afirmar que paus e pedras são animais que respiram ar.", isCorrect: false, distractorRationale: "A letra justapõe fragmentos da paisagem brasileira de forma acumulativa, sem contradições teológicas insolúveis." },
+      { id: "d", text: "ironia depreciativa voltada a zombar da estação chuvosa do clima tropical.", isCorrect: false, distractorRationale: "A canção é uma celebração poética do ciclo da vida e da renovação da natureza ('promessa de vida')." },
+      { id: "e", text: "eufemismo funerário para ocultar qualquer menção à finitude dos seres vivos.", isCorrect: false, distractorRationale: "O verso diz explicitamente 'é a morte', sem qualquer ocultação ou suavização eufêmica." }
+    ],
+    detailedExplanation: {
+      summary: "A anáfora é a figura de linguagem de construção sintática que consiste na repetição da mesma palavra (ou conjunto de palavras) no início de frases, orações ou versos seguidos para criar ritmo, ênfase e musicalidade.",
+      stepByStep: [
+        "Identificação formal: 'É pau', 'é pedra', 'é o fim', 'é um resto', 'é a noite', 'é a vida' ⟹ repetição do verbo de ligação 'é' no começo de cada segmento.",
+        "Efeito poético e semântico: A enxurrada de imagens atomizadas cria a sensação sinestésica da chuva de verão lavando a terra, unindo coisas insignificantes ('caco de vidro', 'resto de toco') a coisas sublimes ('o sol', 'a vida').",
+        "Importância no ENEM: A anáfora é muito cobrada tanto na literatura quanto na retórica de discursos célebres (como Martin Luther King repetindo 'I have a dream')."
+      ],
+      coreConcept: "Anáfora: Repetição Inicial Enfática, Musicalidade e Construção Rítmica",
+      trapWarning: "Atenção para a distinção terminológica: na sintaxe textual, 'anáfora' pode se referir à retomada de um termo anterior; nas FIGURAS DE LINGUAGEM poéticas, 'anáfora' é a repetição da mesma palavra no início de versos consecutivos!"
+    },
+    commonTraps: [
+      "Confundir repetição estética rítmica (anáfora) com pobreza lexical ou erro gramatical",
+      "Não perceber a correspondência entre a repetição formal e o tema das águas da chuva descendo"
+    ],
+    tags: ["figuras-de-linguagem", "anafora", "tom-jobim", "aguas-de-marco", "ritmo-poetico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-018",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Sinestesia e o Cruzamento Sensorial na Poesia Simbolista",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere os versos simbolistas de Cruz e Sousa em 'Broquéis' (1893):\n\n'Nas amplidões dos céus uma canção desce veludina...\nOuviam-se perfumes límpidos e doces no ar,\nE um aroma azul e gelado cortava a noite\nCom a pureza virginal de uma luz de prata.'",
+      source: "CRUZ E SOUSA, J. Poesia Completa. Florianópolis: Fundação Catarinense de Cultura."
+    },
+    prompt: "Expressões como 'canção veludina' (som + tato), 'ouviam-se perfumes doces' (audição + olfato + paladar) e 'aroma azul e gelado' (olfato + visão + tato) configuram a figura de linguagem da sinestesia. Na estética simbolista, esse recurso tem como objetivo primordial:",
+    options: [
+      { id: "a", text: "fundir múltiplos canais sensoriais humanos em uma única percepção sensorial transcendente, sugerindo estados de espírito etéreos, misteriosos e inefáveis que desafiam a descrição objetiva do mundo material.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "fornecer um guia anatômico preciso para cirurgias otorrinolaringológicas em hospitais públicos.", isCorrect: false, distractorRationale: "A poesia simbolista é metafísica e espiritualizada, distante de tratados cirúrgicos hospitalares." },
+      { id: "c", text: "comprovar que todas as pessoas nascem biologicamente desprovidas do sentido da visão.", isCorrect: false, distractorRationale: "O poema mobiliza ricas imagens visuais associadas a perfumes e toques." },
+      { id: "d", text: "proibir o uso de instrumentos musicais de corda em orquestras filarmônicas.", isCorrect: false, distractorRationale: "Não há relação alguma com proibição instrumental; trata-se de evocação poética sensorial." },
+      { id: "e", text: "demonstrar que a poesia não possui nenhum valor sonoro ou estético.", isCorrect: false, distractorRationale: "O Simbolismo valoriza o aspecto musical da palavra acima de todas as coisas ('Da música antes de tudo', dizia Verlaine)." }
+    ],
+    detailedExplanation: {
+      summary: "A sinestesia é a mistura e cruzamento deliberado de sentidos físicos humanos (visão, audição, tato, olfato, paladar) na mesma expressão poética.",
+      stepByStep: [
+        "Cruzamentos sensoriais no texto: Canção (audição) veludina (tato macio do veludo); Ouvir (audição) perfumes (olfato) doces (paladar); Aroma (olfato) azul (visão) gelado (tato térmico).",
+        "O Simbolismo e a Sinestesia: Os poetas simbolistas acreditavam que o mundo físico material era apenas uma casca superficial; a sinestesia permitia ultrapassar essa casca e conectar a alma com planos astrais e correspondências secretas da natureza.",
+        "Uso coloquial cotidiano: Também usamos sinestesia todo dia sem perceber ('voz áspera' = audição + tato; 'cor quente' = visão + tato térmico)."
+      ],
+      coreConcept: "Sinestesia: Fusão de Planos Sensoriais e a Mística dos Sentidos no Simbolismo",
+      trapWarning: "No ENEM, identifique a sinestesia perguntando a si mesmo: 'essas duas palavras pertencem a órgãos do sentido diferentes?' (ex.: perfume doce = nariz + língua ⟹ Sinestesia!)."
+    },
+    commonTraps: [
+      "Confundir sinestesia (mistura de sentidos físicos) com metáfora comum sem apelo sensorial",
+      "Achar que sinestesia é apenas um erro de percepção psicológica em vez de recurso poético"
+    ],
+    tags: ["figuras-de-linguagem", "sinestesia", "cruz-e-sousa", "simbolismo", "sensacoes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-019",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Pleonasmo Literário (Enfático) vs. Pleonasmo Vicioso",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes ocorrências de repetição de sentido na língua portuguesa:\n\nTexto 1 (Fernando Pessoa, 'Mensagem'):\n'Ó mar salgado, quanto do teu sal\nSão lágrimas de Portugal!'\n(E Vinicius de Moraes em 'Soneto de Felicidade': 'E rir meu riso e derramar meu pranto...')\n\nTexto 2 (Comentários orais desatentos):\n'Vamos subir para cima para ver a vista'; 'A prefeitura estabeleceu um elo de ligação entre as secretarias'; 'O paciente sofreu uma hemorragia de sangue'.",
+      source: "Estilística da Língua Portuguesa, 2024."
+    },
+    prompt: "Ao comparar o fenômeno da redundância nos dois textos, a distinção gramatical e estilística entre o pleonasmo literário (enfático) e o pleonasmo vicioso fundamenta-se no fato de que:",
+    options: [
+      { id: "a", text: "no Texto 1 a reiteração da ideia ('mar salgado', 'rir meu riso') cumpre uma função poética intencional de intensidade emotiva e refinamento estético; enquanto no Texto 2 a repetição ('subir para cima', 'hemorragia de sangue') constitui um vício redutivo desnecessário que compromete a clareza e a concisão da comunicação.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "em ambos os textos as repetições configuram erros gramaticais crassos que desclassificam qualquer candidato em exames vestibulares.", isCorrect: false, distractorRationale: "O pleonasmo literário de Fernando Pessoa e Vinicius de Moraes é recurso estilístico magistral amplamente celebrado na literatura." },
+      { id: "c", text: "no Texto 1 o mar é composto de água doce desprovida de cloreto de sódio mineral.", isCorrect: false, distractorRationale: "O mar é biologicamente salgado; a redundância é poética para conectá-lo às lágrimas de sal dos portugueses." },
+      { id: "d", text: "o Texto 2 é um modelo exemplar da norma-padrão erudita que deve ser reproduzido em redações nota mil.", isCorrect: false, distractorRationale: "Pleonasmos viciosos como 'subir para cima' e 'hemorragia de sangue' são severamente penalizados na Competência 1 da redação." },
+      { id: "e", text: "as expressões do Texto 2 são casos legítimos de sinestesia poética abstrata.", isCorrect: false, distractorRationale: "Não há cruzamento de sentidos na expressão 'subir para cima'; trata-se de tautologia viciosa." }
+    ],
+    detailedExplanation: {
+      summary: "O pleonasmo é a repetição da mesma ideia com palavras diferentes. Quando é intencional e poético (para reforçar um sentimento dramático), é uma figura de linguagem de valor estético (pleonasmo literário). Quando é involuntário e inútil (fruto de descuido), é um vício de linguagem a ser eliminado (pleonasmo vicioso).",
+      stepByStep: [
+        "Pleonasmo literário (figura de estilo): 'Chorou um choro amargo', 'morrer uma morte gloriosa', 'mar salgado' ⟹ amplia a densidade afetiva e o lirismo da mensagem.",
+        "Pleonasmo vicioso (defeito de redação): 'Entrar para dentro', 'sair para fora', 'elo de ligação' (todo elo é de ligação), 'certeza absoluta' (certeza já é plena), 'hemorragia de sangue' (toda hemorragia é de sangue) ⟹ empobrece a concisão do texto dissertativo.",
+        "Aplicação na Redação do ENEM: Elimine pleonasmos viciosos para garantir nota máxima no critério de precisão vocabular e concisão."
+      ],
+      coreConcept: "Pleonasmo Estilístico (Enfático) versus Pleonasmo Vicioso (Redundância Desnecessária)",
+      trapWarning: "No ENEM, distinga a intenção do autor: na poesia e na música, 'viver a vida' e 'sonhar um sonho' é arte; no relatório técnico da empresa, 'monopólio exclusivo' é pleonasmo vicioso!"
+    },
+    commonTraps: [
+      "Classificar todo pleonasmo como vício gramatical sem avaliar o contexto literário",
+      "Deixar passar pleonasmos viciosos ocultos na própria redação (como 'duas metades iguais' ou 'panorama geral')"
+    ],
+    tags: ["figuras-de-linguagem", "pleonasmo", "pleonasmo-vicioso", "fernando-pessoa", "vinicius-de-moraes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-020",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Metonímia na Comunicação Midiática e Geopolítica",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as manchetes jornalísticas a seguir extraídas do noticiário contemporâneo:\n\n1. 'Brasília aprovou ontem o novo plano de investimentos em energia renovável.' (A capital pelo governo federal)\n2. 'A Casa Branca anunciou sanções econômicas adicionais no início da manhã.' (A sede do governo pelo presidente)\n3. 'A fabricante com as três listras revolucionou a tecnologia de amortecimento esportivo.' (O logotipo gráfico pela empresa comercial)\n4. 'O Brasil vibrou com a medalha de ouro inédita conquistada na ginástica artística.' (O território nacional pelos cidadãos torcedores)",
+      source: "Linguagem Jornalística e Figuras de Palavras na Mídia, 2024."
+    },
+    prompt: "Nas quatro manchetes apresentadas, a linguagem informativa emprega diferentes modalidades de uma mesma figura de linguagem fundamental: a metonímia. Essa figura caracteriza-se pela:",
+    options: [
+      { id: "a", text: "substituição de um termo por outro com base em uma relação lógica e factual de contiguidade (como o lugar pela instituição, o continente pelo conteúdo, o símbolo pelo fabricante e o país pela sua população).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "criação de analogias metafóricas subjetivas e poéticas fundamentadas na semelhança visual imaginária.", isCorrect: false, distractorRationale: "Isso definiria a metáfora; a metonímia não opera por semelhança subjetiva, mas por relação objetiva real de proximidade física, espacial ou institucional." },
+      { id: "c", text: "tentativa de enganar deliberadamente os leitores com notícias falsas não verificadas.", isCorrect: false, distractorRationale: "A metonímia é uma convenção textual perfeitamente inteligível e cotidiana na imprensa séria." },
+      { id: "d", text: "proposta de abolição definitiva de todas as capitais e sedes de governo do planeta.", isCorrect: false, distractorRationale: "O texto usa os nomes de cidades e prédios como recursos de economia discursiva." },
+      { id: "e", text: "deformação gramatical incorreta punível pelo código penal de imprensa.", isCorrect: false, distractorRationale: "Trata-se de uma das figuras de linguagem mais prestigiadas, naturais e eficazes da língua." }
+    ],
+    detailedExplanation: {
+      summary: "A metonímia é a rainha da linguagem jornalística e cotidiana. Diferente da metáfora (que une coisas distantes por uma semelhança poética, como 'seus olhos são duas jabuticabas'), a metonímia opera por CONTIGUIDADE REAL (coisas que estão conectadas na realidade concreta).",
+      stepByStep: [
+        "Lugar pela instituição: 'Brasília votou' (os congressistas votaram); 'A Casa Branca anunciou' (o governo dos EUA anunciou).",
+        "Símbolo pela empresa: 'As três listras' (Adidas); 'A maçã mordida' (Apple).",
+        "O continente pelo conteúdo: 'O Brasil vibrou' (os brasileiros que moram no Brasil vibraram); 'Comi dois pratos' (comi a comida que estava dentro dos pratos).",
+        "O autor pela obra: 'Li Machado de Assis' (li os livros de Machado).",
+        "A matéria pelo objeto: 'Os bronzes soaram na torre' (os sinos feitos de bronze soaram)."
+      ],
+      coreConcept: "Metonímia: Relação de Contiguidade Real e suas Múltiplas Modalidades no Cotidiano",
+      trapWarning: "No ENEM, grave a diferença definitiva: METÁFORA = relação de semelhança (analogia no plano imaginário); METONÍMIA = relação de contiguidade (proximidade na realidade prática)!"
+    },
+    commonTraps: [
+      "Confundir metonímia com metáfora",
+      "Achar que 'Brasília aprovou' é prosopopeia (é metonímia: o lugar pelo poder político sediado nele)"
+    ],
+    tags: ["figuras-de-linguagem", "metonimia", "contiguidade", "jornalismo", "linguagem-midiática"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

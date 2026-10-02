@@ -420,5 +420,438 @@ export const QUESTIONS_VANGUARDAS_ARTES = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-011",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Expressionismo: Deformação da Realidade e Angústia Existencial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No final do século XIX e início do século XX, movimentos de vanguarda como a Ponte (Die Brücke) e o Cavaleiro Azul (Der Blaue Reiter) na Alemanha, inspirados em obras precursoras como 'O Grito' (1893) do norueguês Edvard Munch, consolidaram a estética do Expressionismo. Em oposição radical à cópia objetiva do mundo exterior preconizada pelo Realismo e pelo Impressionismo, os artistas expressionistas utilizavam pinceladas sinuosas e violentas, cores saturadas não naturalistas e figuras intencionalmente distorcidas.",
+      source: "História das Artes Visuais e Vanguardas Modernas, 2024."
+    },
+    prompt: "A deformação deliberada das formas visuais no Expressionismo cumpre a função estética primordial de:",
+    options: [
+      { id: "a", text: "exteriorizar a turbulência psicológica interior, o sofrimento humano, a solidão e as angústias existenciais desencadeadas pelas tensões da vida na metrópole industrial moderna.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "copiar com fidelidade fotográfica a anatomia muscular perfeita dos atletas da Grécia Antiga.", isCorrect: false, distractorRationale: "O Expressionismo rompe conscientemente com o cânone clássico de proporção anatômica." },
+      { id: "c", text: "celebrar de modo otimista a harmonia eterna e a ausência de quaisquer conflitos sociais no continente europeu.", isCorrect: false, distractorRationale: "A temática expressionista é marcada pelo pessimismo, dor, crise moral e prenúncio de guerras." },
+      { id: "d", text: "ensinar cálculos de engenharia civil para a construção de pontes metálicas de ferro.", isCorrect: false, distractorRationale: "A arte expressionista é um canal de expressão existencial e emocional humana, não um manual didático de cálculo técnico." },
+      { id: "e", text: "proibir o uso de tintas coloridas na pintura em favor exclusivo de carvão vegetal fosco.", isCorrect: false, distractorRationale: "O Expressionismo usava cores vibrantes, dramáticas e intensas para potencializar a força emocional da imagem." }
+    ],
+    detailedExplanation: {
+      summary: "O Expressionismo inverte o fluxo da arte: não é o mundo exterior que impressiona o artista (Impressionismo), mas o mundo interior do artista (angústia, dor, medo) que é expelido e impresso violentamente sobre a tela (Expressionismo).",
+      stepByStep: [
+        "Ruptura com a mimese: A beleza não está mais na harmonia das proporções clássicas, mas na autenticidade da emoção crua.",
+        "Recursos formais: Cores contrastantes e irreais (céu vermelho-sangue, rostos esverdeados), linhas retorcidas e figuras cadavéricas.",
+        "Contexto histórico: Sociedade europeia pré-Primeira Guerra Mundial, alienação do operariado fabril e desespero existencial."
+      ],
+      coreConcept: "Expressionismo: Deformação Formal, Subjetivismo Trágico e Crítica à Modernidade",
+      trapWarning: "No ENEM, contraste sempre Impressionismo (registro da luz solar instantânea na retina) com Expressionismo (projeção dramática dos sentimentos da alma na tela)."
+    },
+    commonTraps: [
+      "Confundir Impressionismo (luz e atmosfera) com Expressionismo (sentimento trágico e angústia)",
+      "Avaliar a deformação das figuras como 'falta de habilidade de desenho' do pintor"
+    ],
+    tags: ["expressionismo", "munch", "angustia", "vanguardas-europeias"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-012",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Cubismo: Perspectiva Múltipla e Denúncia Política em 'Guernica'",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 1937, impactado pela destruição aérea da cidadezinha basca de Guernica durante a Guerra Civil Espanhola perpetrada pelas forças da Legião Condor, Pablo Picasso pintou o gigantesco mural 'Guernica'. Abolindo totalmente as cores e empregando apenas preto, branco e gradações de cinza, o mestre cubista justapôs figuras humanas dilaceradas, uma mãe em prantos com um bebê morto nos braços, um cavalo agonizante e um guerreiro decepado sob a luz fria de uma lâmpada elétrica.",
+      source: "Picasso e a Pintura Política do Século XX, Estudos de Arte Contemporânea, 2024."
+    },
+    prompt: "A desconstrução cubista das figuras em múltiplos planos simultâneos combinada à opção pela paleta monocromática em 'Guernica' atua artisticamente para:",
+    options: [
+      { id: "a", text: "potencializar o impacto trágico e universal da barbárie bélica, desfazendo a ilusão de harmonia espacial para retratar a fragmentação caótica, a dor e o horror do massacre de civis.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "estimular o apoio popular entusiástico ao armamento militar e aos bombardeios aéreos estratégicos.", isCorrect: false, distractorRationale: "O mural é considerado o maior libelo pacifista e antifascista da história da arte mundial." },
+      { id: "c", text: "homenagear os imperadores romanos com técnicas clássicas de afresco renascentista de perspectiva linear única.", isCorrect: false, distractorRationale: "Picasso rompe totalmente com o ponto de fuga renascentista e retrata o drama contemporâneo do século XX." },
+      { id: "d", text: "ocultar qualquer sentido ético ou político da obra, transformando-a em mero papel de parede decorativo burguês.", isCorrect: false, distractorRationale: "Picasso declarou expressamente: 'A pintura não foi feita para decorar apartamentos; é um instrumento de guerra ofensivo e defensivo contra o inimigo'." },
+      { id: "e", text: "provar que bombardeios de guerra não produzem qualquer dano à integridade de construções civis.", isCorrect: false, distractorRationale: "A tela retrata o massacre e a destruição total causada pelo bombardeio aéreo fascista." }
+    ],
+    detailedExplanation: {
+      summary: "Em 'Guernica', o Cubismo de Picasso deixa de ser apenas uma pesquisa geométrica de ateliê e atinge a plenitude da intervenção política: a fragmentação geométrica traduz a fragmentação dos corpos e das vidas destruídas pelas bombas fascistas.",
+      stepByStep: [
+        "Inovação cubista: Apresentação simultânea de frente e perfil dos rostos; eliminação da perspectiva tradicional de profundidade.",
+        "Escolha do monocromatismo (cinza/preto/branco): Evoca as fotografias dos jornais de guerra da época e confere sobriedade trágica, despindo a cena de qualquer beleza ornamental sedutora.",
+        "Simbologia universal: O touro, o cavalo, a lâmpada (olho mecânico do terror tecnológico), a mãe com o filho (uma 'pietà' moderna).",
+        "Conclusão: A vanguarda serve à denúncia intransigente dos horrores do fascismo."
+      ],
+      coreConcept: "Cubismo Político: Desconstrução Geométrica, Monocromatismo e Pacifismo",
+      trapWarning: "No ENEM, analise 'Guernica' tanto do ponto de vista formal (Cubismo sintético, planos múltiplos, ausência de cores) quanto ético-político (denúncia do bombardeio fascista na Guerra Civil Espanhola)."
+    },
+    commonTraps: [
+      "Achar que o Cubismo foi apenas um exercício formal sem engajamento político",
+      "Ignorar o significado da escolha do preto e branco como referência à imprensa gráfica de guerra"
+    ],
+    tags: ["cubismo", "picasso", "guernica", "arte-politica", "antifascismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-013",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "O Futurismo: Culto à Máquina e Dinamismo Tecnológico",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "'Declaramos que o esplendor do mundo se enriqueceu com uma beleza nova: a beleza da velocidade. Um automóvel de corrida com seu capô adornado de grossos tubos semelhantes a serpentes de fôlego explosivo (...) é mais belo que a Vitória de Samotrácia. Queremos cantar o homem ao volante, cuja haste ideal atravessa a Terra lançada sobre o circuito de sua própria órbita.' — Filippo Tommaso Marinetti, Manifesto Futurista (1909).",
+      source: "Manifesto Futurista, Publicado no jornal Le Figaro, Paris, 1909."
+    },
+    prompt: "O ideário vanguardista do Futurismo italiano expressava uma visão de mundo pautada pela:",
+    options: [
+      { id: "a", text: "exaltação apologética do progresso industrial, da máquina a combustão, da velocidade e da violência redentora, demandando a destruição de bibliotecas, museus e de todo o passadismo acadêmico.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "defesa intransigente da vida bucólica no campo e da preservação intocada de ruínas medievais.", isCorrect: false, distractorRationale: "Os futuristas odiavam o passado, as ruínas e a calmaria campestre; queriam cidades mecânicas aceleradas." },
+      { id: "c", text: "proposta de desarmamento pacífico de todas as forças militares do planeta.", isCorrect: false, distractorRationale: "Marinetti glorificava a guerra como 'a única higiene do mundo', aproximando o movimento do fascismo." },
+      { id: "d", text: "recusa total de automóveis, fábricas e trens em benefício de carruagens puxadas por cavalos.", isCorrect: false, distractorRationale: "O automóvel e o maquinismo industrial eram o centro estético supremo venerado pelos futuristas." },
+      { id: "e", text: "proibição de manifestações literárias ou poéticas impressas em jornais.", isCorrect: false, distractorRationale: "Eles publicavam ativamente manifestos poéticos com 'palavras em liberdade' e tipografia dinâmica." }
+    ],
+    detailedExplanation: {
+      summary: "O Futurismo de Marinetti foi a vanguarda mais agressiva contra a tradição: defendia que a arte devia incorporar a vertigem da velocidade da fábrica moderna, rejeitando o culto aos museus e à história passada ('passadismo').",
+      stepByStep: [
+        "Inovações formais: Na pintura, linhas de força e repetição de membros para simular movimento contínuo (Balla, Boccioni); na literatura, fim da pontuação gramatical e uso de 'palavras em liberdade'.",
+        "Ideologia política polêmica: A veneração da agressividade e da técnica levou grande parte dos futuristas italianos a apoiar o regime fascista de Mussolini.",
+        "Repercussão no Brasil: Influenciou a poesia de Mário de Andrade ('Pauliceia Desvairada'), embora os modernistas brasileiros tenham rejeitado o militarismo fascista de Marinetti."
+      ],
+      coreConcept: "Futurismo: Velocidade, Iconoclastia Antipassadista e Dinamismo da Máquina",
+      trapWarning: "Atenção: embora compartilhasse da ânsia de modernidade, o Modernismo brasileiro de 1922 criticou duramente a visita de Marinetti a São Paulo devido ao alinhamento fascista e belicista do autor italiano."
+    },
+    commonTraps: [
+      "Achar que o Futurismo apoiava a preservação ecológica ou o pacifismo",
+      "Confundir a valorização da velocidade futurista com a busca existencial intimista do Expressionismo"
+    ],
+    tags: ["futurismo", "marinetti", "velocidade", "maquinas", "vanguardas-europeias"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-014",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Surrealismo e a Lógica do Inconsciente e dos Sonhos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Lançado em Paris em 1924 sob a liderança do poeta André Breton, o Surrealismo buscou romper com o racionalismo burguês estreito e com o pragmatismo utilitarista do pós-guerra. Fortemente influenciados pela psicanálise de Sigmund Freud, artistas como Salvador Dalí, René Magritte e Max Ernst empregavam a livre associação de ideias, o automatismo psíquico e a atmosfera onírica em suas composições visuais.",
+      source: "Teoria e Prática do Surrealismo, Síntese Crítica, 2024."
+    },
+    prompt: "Ao reunir objetos cotidianos em contextos ilógicos — como os famosos relógios maleáveis derretidos em 'A Persistência da Memória' de Dalí —, a proposta estética surrealista busca:",
+    options: [
+      { id: "a", text: "desafiar a percepção convencional da realidade desperta, revelando os impulsos, os desejos ocultos e a lógica misteriosa do inconsciente e do delírio dos sonhos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "fornecer manuais exatos para o conserto mecânico de engrenagens de relógios de bolso suíços.", isCorrect: false, distractorRationale: "O surrealismo descontextualiza os objetos e não tem qualquer finalidade utilitária mecânica." },
+      { id: "c", text: "comprovar cientificamente que o tempo físico cronológico nunca varia em nenhuma parte do universo.", isCorrect: false, distractorRationale: "Os relógios moles deformados questionam justamente a rigidez e a tirania do tempo cronológico mecânico." },
+      { id: "d", text: "promover o retorno à pintura acadêmica religiosa estritamente disciplinada pela Igreja medieval.", isCorrect: false, distractorRationale: "O movimento é moderno, libertário e fundamentado na transgressão psicanalítica do inconsciente." },
+      { id: "e", text: "eliminar qualquer elemento imaginário para valorizar apenas relatórios estatísticos contábeis.", isCorrect: false, distractorRationale: "O Surrealismo é a exaltação suprema da imaginação sem censura racional." }
+    ],
+    detailedExplanation: {
+      summary: "O Surrealismo valoriza a realidade psíquica superior (a 'sobre-realidade' ou 'sur-realité'): o reino dos sonhos, do inconsciente e dos desejos reprimidos, onde as leis da física e da lógica cartesiana são suspensas.",
+      stepByStep: [
+        "Influência de Freud: A descoberta de que a maior parte da mente humana opera abaixo da consciência desperta (o inconsciente).",
+        "Método paranoico-crítico de Dalí: Pintar com técnica hiper-realista e minuciosa imagens completamente absurdas e oníricas (relógios deformados derretendo sobre galhos e rochas áridas).",
+        "René Magritte e a crítica da representação: Obras que desafiam a linguagem, como o quadro de um cachimbo com a legenda 'Isto não é um cachimbo' (Ceci n'est pas une pipe)."
+      ],
+      coreConcept: "Surrealismo: Inconsciente Psicanalítico, Onirismo e Ruptura com a Razão Burguesa",
+      trapWarning: "No ENEM, observe como o Surrealismo combina rigor técnico de pintura realista para representar cenas completamente impossíveis e oníricas."
+    },
+    commonTraps: [
+      "Achar que surrealismo significa apenas 'coisa doida sem sentido', ignorando as bases teóricas de Freud",
+      "Confundir automatismo surrealista com abstração geométrica pura"
+    ],
+    tags: ["surrealismo", "dali", "freud", "inconsciente", "sonhos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-015",
+    area: "linguagens",
+    competence: 4,
+    skill: 14,
+    topic: "Artes e Vanguardas",
+    subtopic: "Tarsila do Amaral e o 'Abaporu': A Síntese Antropofágica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em janeiro de 1928, Tarsila do Amaral pintou a tela 'Abaporu' (termo de raiz tupi que designa o 'homem que come carne humana') como presente de aniversário para seu marido, o escritor Oswald de Andrade. A imagem exibe uma figura nua solitária, com o pé e a mão desmedidamente agigantados ancorados no solo, encimados por uma cabeça minúscula e pensativa, tendo ao fundo a terra nua, um cacto mandacaru e um sol amarelo escaldante.",
+      source: "Pinacoteca do Estado de São Paulo, Catálogo de Modernismo Brasileiro, 2024."
+    },
+    prompt: "A deformação anatômica das proporções do corpo humano concebida por Tarsila em 'Abaporu' simboliza visualmente:",
+    options: [
+      { id: "a", text: "o enraizamento profundo do trabalhador e do homem nativo na terra brasileira, valorizando a dimensão telúrica, braçal e sensorial em contraponto à hipertrofia do intelecto acadêmico colonizado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "uma patologia médica degenerativa sem qualquer intenção artística ou metafórica moderna.", isCorrect: false, distractorRationale: "Trata-se de uma poética moderna e deliberada de representação da identidade nacional." },
+      { id: "c", text: "a superioridade inquestionável dos modelos estéticos do classicismo grego sobre qualquer tema tropical.", isCorrect: false, distractorRationale: "A obra é o maior símbolo de ruptura contra o academicismo europeu colonial." },
+      { id: "d", text: "uma denúncia contra o uso de sapatos de couro no trabalho agrícola.", isCorrect: false, distractorRationale: "A desproporção é uma metáfora telúrica e poética, não uma crítica comercial de calçados." },
+      { id: "e", text: "a recusa definitiva do Modernismo brasileiro em tratar de qualquer elemento cultural nativo.", isCorrect: false, distractorRationale: "A obra deu origem ao Manifesto Antropófago e celebra justamente os elementos indígenas e populares do Brasil." }
+    ],
+    detailedExplanation: {
+      summary: "'Abaporu' é o marco inaugural do Movimento Antropofágico: apropria-se das lições da vanguarda europeia (geometrização de Fernand Léger) para criar uma imagem telúrica, conectada ao chão e à ancestralidade do povo brasileiro.",
+      stepByStep: [
+        "Pé e mão agigantados: Conexão física com a terra, trabalho corporal, raízes culturais no solo nacional.",
+        "Cabeça minúscula: Crítica à pretensão cerebral e abstrata das elites cultas colonizadas que só copiavam a Europa sem sentir o próprio país.",
+        "Paisagem e cores: Cores caipiras puras (verde, amarelo, azul) e a vegetação do sertão (cacto), sintetizando a identidade visual brasileira."
+      ],
+      coreConcept: "Abaporu e a Fase Antropofágica: Telurismo, Cores Nacionais e a Ruptura com o Academicismo",
+      trapWarning: "No ENEM, lembre-se: o 'Abaporu' de Tarsila inspirou diretamente o 'Manifesto Antropófago' de Oswald de Andrade; pintura e literatura modernistas caminhavam de mãos dadas."
+    },
+    commonTraps: [
+      "Achar que 'Abaporu' retrata um monstro folclórico assustador",
+      "Ignorar o diálogo fecundo entre a pintura de Tarsila e o manifesto literário de Oswald"
+    ],
+    tags: ["tarsila-do-amaral", "abaporu", "antropofagia", "modernismo", "artes-visuais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-016",
+    area: "linguagens",
+    competence: 4,
+    skill: 13,
+    topic: "Artes e Vanguardas",
+    subtopic: "Anita Malfatti e o Choque Modernista de 1917",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em dezembro de 1917, a pintora Anita Malfatti abriu uma exposição em São Paulo trazendo 53 obras produzidas sob o impacto das vanguardas expressionistas que conhecera na Alemanha e nos Estados Unidos, como 'O Homem Amarelo' e 'A Estudante Russa'. Poucos dias depois, o escritor Monteiro Lobato publicou no jornal O Estado de S. Paulo o violento artigo 'Paranoia ou Mistificação?', no qual atacava a mostra: 'Há duas espécies de artistas. Uma composta dos que veem normalmente as coisas (...). A outra espécie é formada pelos que veem anormalmente a natureza, e interpretam-na à luz de teorias efêmeras (...). Essas considerações são provocadas pela exposição da sra. Malfatti (...)'.",
+      source: "Documentos Históricos do Modernismo Brasileiro, Coleção Letras, 2024."
+    },
+    prompt: "O confronto entre a arte inovadora de Anita Malfatti e a crítica conservadora de Monteiro Lobato é considerado um marco na história da cultura brasileira porque:",
+    options: [
+      { id: "a", text: "evidenciou a resistência do meio acadêmico tradicional diante de novas linguagens estéticas e catalisou a união dos intelectuais e artistas que culminaria na Semana de Arte Moderna de 1922.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "provocou a renúncia imediata de todos os jovens modernistas e o retorno perpétuo ao Parnasianismo estrito.", isCorrect: false, distractorRationale: "O ataque indignou jovens como Mário e Oswald de Andrade, que se mobilizaram para defender Anita e aprofundar o projeto de ruptura." },
+      { id: "c", text: "resultou na destruição física de todas as telas expostas por ordem da polícia civil.", isCorrect: false, distractorRationale: "Algumas telas foram devolvidas por compradores assustados, mas as obras foram preservadas e hoje são patrimônio nacional." },
+      { id: "d", text: "provou que Anita Malfatti não possuía nenhum conhecimento de técnicas de pintura ou gravura.", isCorrect: false, distractorRationale: "Anita tinha sólida formação acadêmica e internacional em Berlim e Nova York." },
+      { id: "e", text: "convenceu Monteiro Lobato a abandonar a literatura para tornar-se pintor de vanguarda cubista.", isCorrect: false, distractorRationale: "Lobato manteve suas posições estéticas conservadoras e continuou consagrado na literatura infantojuvenil e regionalista." }
+    ],
+    detailedExplanation: {
+      summary: "O artigo virulento de Lobato foi o 'estopim' do Modernismo: ao atacar Anita Malfatti por pintar com cores expressionistas e pinceladas dinâmicas, provocou uma reação de solidariedade entre Mário de Andrade, Oswald de Andrade e Menotti del Picchia, forjando o grupo que organizaria a Semana de 22.",
+      stepByStep: [
+        "A estética de Anita: Cores não realistas (homem de pele amarela), distorção expressiva, recusa da perspectiva clássica de ateliê.",
+        "A reação de Lobato: Representava o gosto acadêmico que considerava qualquer distorção visual um sinal de loucura ('paranoia') ou golpe publicitário ('mistificação').",
+        "Efeito histórico: A agressão pública aglutinou a juventude modernista paulistana em defesa da liberdade criativa."
+      ],
+      coreConcept: "A Exposição de Anita Malfatti (1917): Estopim da Semana de Arte Moderna de 1922",
+      trapWarning: "No ENEM, essa querela é cobrada para demonstrar como novas estéticas enfrentam resistências conservadoras antes de se consolidarem como valores culturais legítimos."
+    },
+    commonTraps: [
+      "Achar que o Modernismo começou do nada em 1922 sem antecedentes de crise como a exposição de 1917",
+      "Reduzir Monteiro Lobato apenas ao 'Sítio do Picapau Amarelo', ignorando sua atuação como crítico de arte conservador"
+    ],
+    tags: ["anita-malfatti", "monteiro-lobato", "semana-de-22", "modernismo", "polemica-estetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-017",
+    area: "linguagens",
+    competence: 4,
+    skill: 14,
+    topic: "Artes e Vanguardas",
+    subtopic: "Cândido Portinari e o Drama Social em 'Retirantes'",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na tela 'Retirantes' (1944), que integra a célebre série bíblico-social de Cândido Portinari pertencente ao acervo do MASP, o pintor paulista retrata uma família de sertanejos em fuga da estiagem. As figuras humanas apresentam anatomia cadavérica e esquálida, costelas aparentes sob peles ressequidas, ventres dilatados pela fome em crianças desnutridas e pés descalços desmedidamente pesados sobre um chão estéril, sob um céu plúmbeo pontilhado de urubus.",
+      source: "Acervo do Museu de Arte de São Paulo (MASP), Pintura Social Brasileira, 2024."
+    },
+    prompt: "Ao articular deformações anatômicas expressivas e uma paleta cromática de tons terrosos e sombrios, a poética visual de Portinari tem como finalidade:",
+    options: [
+      { id: "a", text: "conferir dimensão monumental e trágica ao drama social dos retirantes nordestinos, denunciando a violência da miséria e a negligência histórica frente às populações vulnerabilizadas pelo flagelo da seca.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "promover o comércio turístico de artesanato de barro com imagens caricatas e cômicas da caatinga.", isCorrect: false, distractorRationale: "A tela é solene, comovente e trágica, sem qualquer traço cômico ou publicitário." },
+      { id: "c", text: "retratar a riqueza e o luxo das famílias burguesas dos centros financeiros urbanos.", isCorrect: false, distractorRationale: "O tema é a miséria extrema dos trabalhadores rurais expulsos pela seca." },
+      { id: "d", text: "ilustrar a perfeição da saúde e da nutrição infantil na primeira metade do século XX no Brasil.", isCorrect: false, distractorRationale: "A pintura evidencia a desnutrição, o raquitismo e o sofrimento infantil causado pela fome." },
+      { id: "e", text: "defender que problemas climáticos regionais não produzem impactos na vida de famílias camponesas.", isCorrect: false, distractorRationale: "A migração forçada e o sofrimento físico são o tema central evidente da obra." }
+    ],
+    detailedExplanation: {
+      summary: "Portinari aliou a vanguarda formal (expressionismo e geometrização de volumes) a um compromisso ético e humanitário incontornável: a denúncia das chagas sociais brasileiras através da pintura monumental de protesto.",
+      stepByStep: [
+        "A linguagem da deformação: Costelas à mostra e pés gigantes ancorados ao solo transmitem a dor física real e o cansaço do caminhar forçado.",
+        "Paleta de cores: Cinzas, ocres, pretos e marrons acentuam a sensação de morte iminente e terra seca.",
+        "Conexão com a literatura: A pintura de Portinari dialoga estreitamente com obras como 'Vidas Secas' de Graciliano Ramos e 'Morte e Vida Severina' de João Cabral de Melo Neto.",
+        "Conclusão: A arte atua como espelho crítico e denúncia humanista."
+      ],
+      coreConcept: "Pintura Social de Portinari: Expressionismo, Engajamento Ético e a Tragédia dos Retirantes",
+      trapWarning: "No ENEM, questões sobre Portinari frequentemente estabelecem pontes interdisciplinares com a literatura regionalista da Geração de 30 (Graciliano Ramos, Rachel de Queiroz, Jorge Amado)."
+    },
+    commonTraps: [
+      "Achar que Portinari pintava apenas cenas festivas de camponeses brincando de pipa",
+      "Ignorar a dimensão política e social de protesto na tela 'Retirantes'"
+    ],
+    tags: ["portinari", "retirantes", "arte-social", "vidas-secas", "engajamento"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-018",
+    area: "linguagens",
+    competence: 4,
+    skill: 13,
+    topic: "Artes e Vanguardas",
+    subtopic: "Neoconcretismo: A Arte Participativa dos 'Parangolés' de Hélio Oiticica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No final dos anos 1950 e ao longo da década de 1960, o Neoconcretismo brasileiro rompeu com o rigor excessivamente racional e estático do Concretismo tradicional. Artistas como Lygia Clark (com suas esculturas dobráveis articuladas 'Bichos') e Hélio Oiticica (com os 'Parangolés') propuseram a dissolução da distância sagrada entre a obra de arte e o público. Os Parangolés consistiam em capas, estandartes e tendas tecidas em panos, tecidos coloridos, plástico e palha, concebidas não para ficarem penduradas em pregos de paredes, mas para serem vestidas por corpos em movimento, preferencialmente ao som do samba da Mangueira.",
+      source: "Arte Contemporânea Brasileira: Do Neoconcretismo à Instalação, 2024."
+    },
+    prompt: "A proposta estética e sensorial formulada por Hélio Oiticica nos 'Parangolés' revoluciona a experiência artística contemporânea ao:",
+    options: [
+      { id: "a", text: "transformar o espectador passivo em participante cocriador da obra, exigindo a ação do corpo vivo e do movimento cinético para dar existência e sentido à forma artística no espaço.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "restabelecer a adoração contemplativa silenciosa de quadros intocáveis mantidos atrás de redomas de vidro blindado.", isCorrect: false, distractorRationale: "Oiticica e Clark combatiam o fetiche do 'objeto sagrado intocável' em museus." },
+      { id: "c", text: "proibir o uso de tecidos de cores quentes em qualquer manifestação artística moderna.", isCorrect: false, distractorRationale: "Os Parangolés celebravam justamente a explosão cromática e sensorial das cores em movimento." },
+      { id: "d", text: "substituir a presença de seres humanos por robôs mecânicos automatizados de precisão matemática.", isCorrect: false, distractorRationale: "A obra depende intrinsecamente do corpo humano orgânico, do ritmo do caminhar e da dança." },
+      { id: "e", text: "restringir a participação nas obras exclusivamente a colecionadores milionários de arte clássica.", isCorrect: false, distractorRationale: "Oiticica criou os Parangolés no morro da Mangueira com passistas populares da comunidade do samba." }
+    ],
+    detailedExplanation: {
+      summary: "O Neoconcretismo e os Parangolés operaram uma virada histórica: a arte deixou de ser um objeto acabado na parede e passou a ser uma experiência viva, corporal e relacional ('o espectador vira participante').",
+      stepByStep: [
+        "Deslocamento do suporte: A pintura sai do quadro e vai para o tecido; o pedestal da escultura desaparece e vira o corpo em movimento.",
+        "Integração arte-vida: Conexão direta com a favela, com o morro da Mangueira e a dança popular, quebrando a barreira burguesa dos museus.",
+        "Lygia Clark e os Bichos: Esculturas de alumínio com dobradiças que o visitante precisava pegar nas mãos e dobrar para que ganhassem novas formas.",
+        "Conclusão: A obra só existe plenamente no ato da interação do participante."
+      ],
+      coreConcept: "Neoconcretismo: Parangolés, Arte Participativa e a Dissolução da Distância Espectador-Obra",
+      trapWarning: "No ENEM, lembre-se da fórmula de Oiticica: o observador não contempla mais de braços cruzados; ele VESTE a obra e atua como COAUTOR da experiência estética."
+    },
+    commonTraps: [
+      "Achar que os Parangolés eram apenas roupas comerciais de passarela de moda",
+      "Ignorar o conceito central de 'espectador-participante' no Neoconcretismo brasileiro"
+    ],
+    tags: ["neoconcretismo", "helio-oiticica", "parangoles", "lygia-clark", "arte-participativa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-019",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Pop Art: Sociedade de Consumo e Reprodutibilidade Serial em Andy Warhol",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na década de 1960, a Pop Art despontou em Nova York e Londres assimilando deliberadamente a linguagem visual dos anúncios publicitários, das histórias em quadrinhos e dos bens de consumo de massa. Ao reproduzir em serigrafia industrial dezenas de imagens idênticas de latas de sopa Campbell, garrafas de refrigerante e o rosto de celebridades da indústria do entretenimento como Marilyn Monroe, Andy Warhol batizou seu ateliê novaiorquino de 'The Factory' (A Fábrica).",
+      source: "Pop Art e Cultura de Massa no Século XX, 2024."
+    },
+    prompt: "Ao adotar procedimentos técnicos de produção serial mecânica e apropriar-se dos ícones da publicidade comercial, a Pop Art de Warhol provoca uma reflexão crítica que se caracteriza pela:",
+    options: [
+      { id: "a", text: "tensão ambivalente entre a celebração da democratização do consumo e a ironia sobre a padronização das subjetividades e a mercantilização da própria arte na sociedade capitalista de massas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "defesa intransigente do retorno ao artesanato pré-histórico com proibição de qualquer técnica de impressão gráfica.", isCorrect: false, distractorRationale: "Warhol usava serigrafia industrial em série exatamente para mimetizar a fábrica moderna." },
+      { id: "c", text: "rejeição de qualquer menção a marcas comerciais ou produtos industriais em galerias de arte.", isCorrect: false, distractorRationale: "Marcas famosas e produtos industriais eram exatamente o tema central e matéria-prima da Pop Art." },
+      { id: "d", text: "exigência de que cada obra de arte seja pintada exclusivamente à mão por monges reclusos em conventos.", isCorrect: false, distractorRationale: "O nome do ateliê era 'The Factory' com assistentes operando telas de serigrafia em linha de montagem." },
+      { id: "e", text: "proposta de abolição imediata de todos os jornais, revistas e cinemas do planeta.", isCorrect: false, distractorRationale: "A Pop Art alimentava-se diretamente da circulação de revistas, cinema e cultura pop." }
+    ],
+    detailedExplanation: {
+      summary: "A Pop Art dissolve a distinção tradicional entre 'alta cultura' (museus) e 'baixa cultura' (anúncios, supermercado). Warhol mostra que na sociedade de massas tudo vira mercadoria reprodutível: a sopa que o pobre come é a mesma que o presidente bebe, e a arte não pode fingir que está isolada desse mercado.",
+      stepByStep: [
+        "Apropriação da publicidade: Latas de sopa, caixas de sabão Brillo, rostos de ícones pop tratados como embalagens de consumo.",
+        "Repetição serial: Múltiplas imagens em serigrafia esvaziam a singularidade mística da 'obra única' (remetendo ao ensaio de Walter Benjamin sobre a reprodutibilidade técnica).",
+        "Ambiguidade crítica: Não é mera apologia nem mera condenação do capitalismo; é a exposição crua da sociedade do espetáculo e da ubiquidade do consumo."
+      ],
+      coreConcept: "Pop Art: Andy Warhol, Serigrafia Mecânica, Cultura de Massa e Fetichismo da Mercadoria",
+      trapWarning: "No ENEM, relacione Warhol à 'reprodutibilidade técnica' e ao questionamento da aura da obra de arte: fazer arte em série como salsichas em uma fábrica desafia o conceito romântico de gênio criador isolado."
+    },
+    commonTraps: [
+      "Achar que a Pop Art era um anúncio publicitário ingênuo sem segunda camada crítica",
+      "Ignorar o papel da técnica da serigrafia na reprodução mecânica de cópias"
+    ],
+    tags: ["pop-art", "andy-warhol", "sociedade-de-consumo", "serigrafia", "cultura-de-massa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-020",
+    area: "linguagens",
+    competence: 4,
+    skill: 14,
+    topic: "Artes e Vanguardas",
+    subtopic: "Fotografia Documental Contemporânea: Ética e Estética em Sebastião Salgado",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Reconhecido internacionalmente por projetos monumentais como 'Trabalhadores', 'Terra', 'Êxodos' e 'Gênesis', o fotógrafo brasileiro Sebastião Salgado constrói ensaios fotográficos em preto e branco de forte apelo plástico. Em sua emblemática cobertura do garimpo de Serra Pelada na década de 1980, Salgado registrou dezenas de milhares de homens enlameados subindo escadas de madeira sob o peso de sacos de terra, transformando o formigueiro humano em uma composição que remete às pirâmides do Egito ou a visões dantescas do trabalho arcaico.",
+      source: "História e Teoria da Fotografia Contemporânea, 2024."
+    },
+    prompt: "O impacto estético e documental da fotografia social de Sebastião Salgado decorre da sua capacidade de:",
+    options: [
+      { id: "a", text: "aliar o refinamento técnico da luz, das sombras e do enquadramento clássico ao engajamento ético e humanitário, dando visibilidade internacional à dignidade, às lutas e às penúrias dos trabalhadores e populações marginalizadas do planeta.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ocultar qualquer sofrimento humano para criar apenas anúncios de publicidade turística de mineração lucrativa.", isCorrect: false, distractorRationale: "A fotografia documental de Salgado denuncia as condições subumanas do trabalho braçal precarizado." },
+      { id: "c", text: "utilizar computação gráfica de inteligência artificial para inventar imagens fictícias de locais que nunca existiram.", isCorrect: false, distractorRationale: "Trata-se de fotografia documental analógica autêntica realizada in loco através de longas expedições de campo." },
+      { id: "d", text: "provar que o trabalho braçal em minas a céu aberto é benéfico e isento de quaisquer riscos ocupacionais para a saúde.", isCorrect: false, distractorRationale: "O trabalho retratado revela a brutalidade da exploração mineral arcaica e a vulnerabilidade humana extrema." },
+      { id: "e", text: "proibir o registro de pessoas humanas em fotografias em prol exclusivo de paisagens celestes abstratas.", isCorrect: false, distractorRationale: "O cerne da obra de Salgado é justamente a condição humana, o rosto do camponês e o trabalho manual." }
+    ],
+    detailedExplanation: {
+      summary: "Sebastião Salgado é o maior expoente da fotografia documental humanista contemporânea. Seu trabalho transcende o mero fotojornalismo factual cotidiano ao construir ensaios fotográficos em preto e branco com rigor clássico de luz e composição que elevam o trabalhador oprimido à condição de sujeito histórico monumental.",
+      stepByStep: [
+        "Estética do claro-escuro: Uso magistral da luz e sombra monocromática (preto e branco) que direciona o olhar do observador para as texturas do suor, da lama e da terra.",
+        "Dimensão ética e geopolítica: Projetos de longo fôlego denunciando a migração forçada de refugiados de guerras ('Êxodos'), o desmatamento ambiental ('Gênesis') e a labuta de camponeses sem terra ('Terra').",
+        "Debate crítico na arte: Teóricos como Susan Sontag discutiram o limiar tênue entre a 'estetização da tragédia' e a sensibilização humanitária global, consolidando Salgado como tema recorrente de reflexão no ENEM."
+      ],
+      coreConcept: "Fotografia Documental: Sebastião Salgado, Estética Humanista e Registro Social",
+      trapWarning: "No ENEM, a fotografia é abordada como linguagem artística autônoma com intenção autoral, seleção de ângulo e compromisso social, e não como simples reprodução mecânica neutra do real."
+    },
+    commonTraps: [
+      "Tratar a fotografia artística documental como um simples 'clique acidental e neutro'",
+      "Ignorar o compromisso político de denúncia social na obra de Sebastião Salgado"
+    ],
+    tags: ["sebastiao-salgado", "fotografia-documental", "serra-pelada", "trabalho-humano", "artes-visuais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

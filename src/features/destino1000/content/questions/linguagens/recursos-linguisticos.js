@@ -400,6 +400,436 @@ export const QUESTIONS_RECURSOS_LINGUISTICOS = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-011",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Variação Linguística",
+    subtopic: "Variação Diatópica (Regional) e a Diversidade Lexical Brasileira",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O português falado no Brasil apresenta uma fascinante pluralidade vocabular de acordo com a região geográfica dos falantes. O mesmo tubérculo comestível é denominado 'aipim' no Rio de Janeiro, 'mandioca' em São Paulo e 'macaxeira' em grande parte do Nordeste; a fruta cítrica com gomos fáceis de descascar é chamada de 'mexerica' no Centro-Oeste e Minas Gerais, 'bergamota' no Rio Grande do Sul e 'tangerina' no Sudeste litorâneo; e o refresco congelado em saquinhos plásticos recebe nomes como 'sacolé', 'dindin', 'chup-chup' e 'geladinho'.",
+      source: "Atlas Linguístico do Brasil (ALiB), Estudos Dialetológicos, 2024."
+    },
+    prompt: "Essa multiplicidade de denominações para um mesmo referente concreto ilustra a variação diatópica (geográfica), cuja existência evidencia:",
+    options: [
+      { id: "a", text: "a vitalidade cultural e a riqueza dialetal do português brasileiro, moldadas pela extensão territorial continental, pelos fluxos de povoamento histórico e pelo contato com matrizes indígenas e africanas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a urgência de uma lei federal que unifique compulsoriamente os nomes de alimentos em um único vocabulário oficial imposto por decreto.", isCorrect: false, distractorRationale: "A linguística moderna refuta imposições puristas artificiais que tentam sufocar a diversidade regional legítima." },
+      { id: "c", text: "o desconhecimento completo do significado dos termos pelos habitantes das capitais estaduais.", isCorrect: false, distractorRationale: "Os falantes dominam com precisão os termos de sua comunidade linguística e comunicam-se perfeitamente." },
+      { id: "d", text: "a fragmentação da língua portuguesa em dez idiomas estrangeiros completamente incompreensíveis entre si.", isCorrect: false, distractorRationale: "O português mantém unidade estrutural morfossintática plena em todo o território nacional." },
+      { id: "e", text: "que somente uma das formas regionais é correta e que todas as demais são erros gramaticais graves.", isCorrect: false, distractorRationale: "Todas as variantes regionais são igualmente válidas, legítimas e gramaticalmente consagradas." }
+    ],
+    detailedExplanation: {
+      summary: "A variação diatópica ou regional (geolinguística) atesta a pluralidade da identidade nacional. Nenhum termo é 'mais correto' que outro; aipim, macaxeira e mandioca são variantes legítimas de um patrimônio comum.",
+      stepByStep: [
+        "Variação diatópica: Variação que decorre do espaço geográfico (dialetos regionais, sotaques e vocabulário local).",
+        "Formação histórica: Diferentes ritmos de colonização, contato com diferentes povos originários (tupis, macro-jê) e povos africanos (iorubás, bantos).",
+        "Posicionamento do ENEM: O exame valoriza o Atlas Linguístico do Brasil (ALiB) e condena qualquer hierarquização preconceituosa entre as falas do Norte, Sul, Nordeste ou Sudeste."
+      ],
+      coreConcept: "Variação Diatópica: Diversidade Lexical Regional e Patrimônio Imaterial",
+      trapWarning: "No ENEM, jamais escolha opções que defendam 'unificar' ou 'padronizar à força' a fala dos brasileiros ou que classifiquem termos regionais como gírias passageiras inferiores."
+    },
+    commonTraps: [
+      "Eleger uma região como 'dona da pronúncia ou vocabulário correto'",
+      "Confundir variação regional (diatópica) com variação histórica (diacrônica)"
+    ],
+    tags: ["variacao-diatopica", "dialetos", "lexico", "diversidade-cultural"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-012",
+    area: "linguagens",
+    competence: 8,
+    skill: 25,
+    topic: "Variação Linguística",
+    subtopic: "Variação Diacrônica (Histórica) e a Dinâmica Temporal da Língua",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao longo de séculos de história da língua portuguesa, a forma de tratamento respeitosa 'Vossa Mercê', utilizada na corte renascentista, sofreu sucessivos processos de desgaste fonético e encurtamento impulsionados pela rapidez da fala oral: 'Vossa Mercê' ⟹ 'Vossemecê' ⟹ 'Vosmecê' ⟹ 'Você' ⟹ 'Cê'. Fenômeno análogo de mudança diacrônica ocorreu na ortografia com a simplificação de dígrafos arcaicos de étimo grego (como 'pharmácia' ⟹ 'farmácia' e 'orthographia' ⟹ 'ortografia').",
+      source: "História Social da Língua Portuguesa no Brasil, 2024."
+    },
+    prompt: "A trajetória histórica de evolução de 'Vossa Mercê' para o pronome contemporâneo 'você' demonstra que:",
+    options: [
+      { id: "a", text: "a língua é um sistema histórico dinâmico e flexível que se transforma no tempo (variação diacrônica), impulsionado pelas necessidades de economia fônica e expressividade dos falantes reais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o português falado hoje é uma versão corrompida e decadente que perdeu toda a sua nobreza e dignidade gramatical.", isCorrect: false, distractorRationale: "A linguística não adota noções morais de 'decadência'; a mudança linguística é natural e inerente a todas as línguas vivas." },
+      { id: "c", text: "os falantes contemporâneos são incapazes de aprender a norma-padrão da escrita formal.", isCorrect: false, distractorRationale: "A mudança do pronome ocorreu em todas as classes sociais ao longo dos séculos e consolidou-se na norma-padrão brasileira." },
+      { id: "d", text: "a ortografia oficial de uma língua nunca sofreu qualquer modificação desde o surgimento do latim.", isCorrect: false, distractorRationale: "O texto demonstra justamente que reformas ortográficas sucessivas acompanharam as mudanças temporais." },
+      { id: "e", text: "o termo 'você' deve ser banido de romances e conversas cotidianas por não constar nos textos medievais.", isCorrect: false, distractorRationale: "As línguas não são fósseis intocáveis; servem à vida prática e à comunicação dos sujeitos contemporâneos." }
+    ],
+    detailedExplanation: {
+      summary: "A variação diacrônica comprova que as línguas não são estátuas de mármore imutáveis: com o passar dos séculos, palavras mudam de som, significado e função sintática (processo de gramaticalização).",
+      stepByStep: [
+        "Variação diacrônica (temporal): A passagem do tempo transforma fonemas, léxico e estruturas gramaticais.",
+        "Princípio da economia linguística: Termos de alta frequência no discurso cotidiano tendem ao encurtamento articulatório.",
+        "Trajetória de 'você': Expressão nominal nobre de tratamento que se transformou em pronome pessoal de segunda pessoa do discurso com concordância em terceira pessoa."
+      ],
+      coreConcept: "Variação Diacrônica: Transformação Histórica da Língua e Economia Fonética",
+      trapWarning: "No ENEM, encare a mudança histórica da língua com naturalidade científica: nenhuma língua viva para no tempo; línguas que não mudam são línguas mortas (como o latim clássico)."
+    },
+    commonTraps: [
+      "Tratar a evolução linguística como 'degeneração' ou 'corrupção' da língua",
+      "Confundir variação diacrônica (ao longo do tempo) com variação sincrônica (no mesmo momento histórico)"
+    ],
+    tags: ["variacao-diacronica", "historia-da-lingua", "gramaticalizacao", "evolucao-linguistica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-013",
+    area: "linguagens",
+    competence: 8,
+    skill: 27,
+    topic: "Variação Linguística",
+    subtopic: "Variação Diafásica (Estilística) e o Conceito de Adequação Linguística",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um jovem candidato formado em Direito comparece a uma entrevista de emprego em um renomado escritório de advocacia e expressa-se com formalidade, vocabulário técnico e respeito às regras gramaticais da norma-padrão. À noite, reunido em uma pizzaria com seus amigos mais íntimos de infância, o mesmo jovem utiliza gírias coloquiais, termos abreviados e construções frasais típicas da oralidade descontraída.",
+      source: "Manual de Sociolinguística Aplicada ao Ensino, 2024."
+    },
+    prompt: "O comportamento linguístico do jovem advogado é um exemplo de variação diafásica (estilística ou situacional), demonstrando que o domínio da competência comunicativa consiste em:",
+    options: [
+      { id: "a", text: "saber adequar o nível de linguagem (formal, informal, técnico ou coloquial) ao contexto sociocomunicativo, aos propósitos da interação e ao perfil dos interlocutores.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "falar obrigatoriamente de maneira rebuscada e arcaica em todos os momentos da vida cotidiana, inclusive com familiares e amigos.", isCorrect: false, distractorRationale: "Falar com rebuscamento artificial em um encontro informal configura inadequação linguística e pedantismo." },
+      { id: "c", text: "usar gírias de internet em petições judiciais e audiências com magistrados para demonstrar modernidade.", isCorrect: false, distractorRationale: "O ambiente jurídico exige o registro formal padrão culto." },
+      { id: "d", text: "comprovar que a norma-padrão da língua não possui nenhuma utilidade na vida profissional.", isCorrect: false, distractorRationale: "A norma-padrão é essencial na esfera profissional, acadêmica e jurídica." },
+      { id: "e", text: "restringir a comunicação humana exclusivamente à linguagem corporal de mímica.", isCorrect: false, distractorRationale: "O exemplo trata do uso versátil da linguagem verbal falada." }
+    ],
+    detailedExplanation: {
+      summary: "A variação diafásica rege a adequação estilística. A língua é como uma roupa: ninguém vai a um casamento de terno e gravata à praia, nem de sunga a uma audiência com o juiz. A competência linguística madura não é falar sempre formalmente, mas saber alternar o registro conforme a ocasião.",
+      stepByStep: [
+        "Registro formal: Adequado a situações solenes, vestibulares, entrevistas de emprego e documentos jurídicos.",
+        "Registro informal/coloquial: Adequado a bate-papos familiares, redes sociais privadas e conversas espontâneas.",
+        "Substituição de paradigma no ENEM: Sai o conceito moral e ingênuo de 'certo versus errado', entra o critério científico de 'adequado versus inadequado ao contexto'."
+      ],
+      coreConcept: "Variação Diafásica: Registro Formal vs. Coloquial e Adequação Contextual",
+      trapWarning: "Esta é a regra fundamental da prova de Linguagens do ENEM: falar gíria com amigos NÃO é erro, é ADEQUADO; usar gíria na redação dissertativa-argumentativa é INADEQUADO."
+    },
+    commonTraps: [
+      "Achar que existe um único jeito 'certo' de falar para todas as ocasiões da vida",
+      "Confundir inadequação situacional com incapacidade cognitiva do falante"
+    ],
+    tags: ["variacao-diafasica", "adequacao-linguistica", "registro-formal", "coloquialismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-014",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Recursos da Língua",
+    subtopic: "Ambiguidade: Efeito Persuasivo na Publicidade vs. Vício de Linguagem",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma campanha publicitária governamental de incentivo à doação de sangue, lê-se o slogan em letras garrafais acompanhado da foto de um coração estilizado: 'DOE SANGUE. MOSTRE QUE VOCÊ TEM UM BOM CORAÇÃO'. Já em uma notícia de trânsito em um jornal local, constava o seguinte título redigido de forma desatenta: 'O policial perseguiu o suspeito em seu carro'.",
+      source: "Comunicação Social e Práticas de Linguagem, 2024."
+    },
+    prompt: "Ao confrontar os dois usos da ambiguidade (duplo sentido), constata-se que, enquanto no slogan da campanha ela opera como um recurso expressivo persuasivo, no título da notícia ela configura um vício de linguagem porque:",
+    options: [
+      { id: "a", text: "no anúncio a duplicidade de sentido (coração físico saudável / pessoa generosa) atrai o leitor e reforça o apelo solidário, enquanto na notícia o pronome possessivo ambíguo prejudica a clareza informativa, impedindo saber de quem era o carro.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "nos dois casos a ambiguidade é um erro gramatical intolerável que anula completamente a comunicação.", isCorrect: false, distractorRationale: "Na publicidade, a ambiguidade voluntária é um recurso poético e persuasivo amplamente valorizado." },
+      { id: "c", text: "no anúncio publicitário a palavra 'sangue' não possui nenhum significado biológico real.", isCorrect: false, distractorRationale: "A doação é de sangue biológico real indispensável a transfusões hospitalares." },
+      { id: "d", text: "o título da notícia deixa perfeitamente explícito que o veículo pertencia à prefeitura municipal.", isCorrect: false, distractorRationale: "O título não informa isso; a ambiguidade de 'seu carro' (do policial ou do suspeito?) gera ruído na mensagem." },
+      { id: "e", text: "a publicidade proíbe o uso de trocadilhos e metáforas sob pena de advertência legal.", isCorrect: false, distractorRationale: "Trocadilhos e polissemia são as ferramentas retóricas mais frequentes na publicidade." }
+    ],
+    detailedExplanation: {
+      summary: "A ambiguidade pode ser intencional (recurso estilístico enriquecedor na arte e na publicidade) ou não intencional (vício de linguagem sintático que prejudica a clareza no texto jornalístico e referencial).",
+      stepByStep: [
+        "Ambiguidade polissêmica intencional no slogan: 'Ter bom coração' = 1) ter saúde cardiovascular apta para doar; 2) ser altruísta e bondoso. Essa duplicidade enriquece a mensagem.",
+        "Ambiguidade estrutural defeituosa na notícia: 'O policial perseguiu o suspeito em seu carro' ⟹ o pronome 'seu' pode se referir tanto ao sujeito (policial) quanto ao objeto (suspeito), gerando dúvida prejudicial à informação factual jornalística."
+      ],
+      coreConcept: "Ambiguidade Intencional (Polissemia Persuasiva) vs. Ambiguidade Sintática Viciosa",
+      trapWarning: "No ENEM, valorize a intenção comunicativa do gênero textual: o que é defeito em uma notícia ou laudo técnico (duplo sentido involuntário) pode ser a grande sacada genial de um anúncio publicitário ou poema!"
+    },
+    commonTraps: [
+      "Condenar qualquer tipo de duplo sentido como se fosse sempre um 'erro'",
+      "Não perceber a dubiedade gerada por pronomes possessivos de terceira pessoa ('seu/sua')"
+    ],
+    tags: ["ambiguidade", "duplo-sentido", "publicidade", "vicios-de-linguagem", "polissemia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-015",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Recursos da Língua",
+    subtopic: "Operadores Argumentativos: Conectivos Concessivos vs. Adversativos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a análise semântica e argumentativa dos dois períodos a seguir extraídos de editoriais de debate político:\n\nTexto 1: 'O projeto de lei traz avanços importantes para a preservação ambiental, MAS impõe custos tributários excessivos que asfixiam a competitividade das pequenas empresas locais.'\n\nTexto 2: 'EMBORA imponha custos tributários adicionais às pequenas empresas locais, o projeto de lei traz avanços fundamentais e inadiáveis para a preservação ambiental.'",
+      source: "Práticas de Coesão Textual e Argumentação no ENEM, 2024."
+    },
+    prompt: "Embora ambos os períodos mencionem os mesmos dois fatos (avanços ecológicos e custos tributários), a escolha dos operadores argumentativos 'mas' (adversativo) e 'embora' (concessivo) produz efeitos persuasivos opostos porque:",
+    options: [
+      { id: "a", text: "o conectivo adversativo 'mas' confere maior força discursiva ao argumento que o sucede (a crítica aos custos), orientando para a rejeição do projeto; já o concessivo 'embora' rebaixa os custos a uma ressalva secundária, sustentando a defesa da aprovação da lei.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ambos os conectivos possuem rigorosamente o mesmo valor gramatical e produzem exatamente a mesma orientação argumentativa conclusiva.", isCorrect: false, distractorRationale: "A adversidade direciona para o segundo argumento, enquanto a concessão subordina e enfraquece o argumento concessivo em favor da oração principal." },
+      { id: "c", text: "o conectivo 'mas' expressa causa e efeito cronológico, enquanto 'embora' expressa conformidade com a Constituição.", isCorrect: false, distractorRationale: "'Mas' é conjunção coordenativa adversativa; 'embora' é subordinativa concessiva." },
+      { id: "d", text: "no Texto 1 o autor é terminantemente favorável ao projeto e no Texto 2 é frontalmente contrário.", isCorrect: false, distractorRationale: "É o exato inverso: o Texto 1 ataca o projeto pelo custo; o Texto 2 defende o projeto apesar do custo." },
+      { id: "e", text: "o uso de conjunções é considerado um erro gramatical que deve ser evitado em qualquer redação dissertativa.", isCorrect: false, distractorRationale: "Os operadores argumentativos são os elementos centrais avaliados na Competência 4 da Redação do ENEM." }
+    ],
+    detailedExplanation: {
+      summary: "Oswald Ducrot e a Semântica Argumentativa demonstram que conectivos não servem apenas para ligar frases, mas direcionam o ponto de vista do leitor: a oração introduzida por 'mas' prevalece sobre a anterior; a oração introduzida por 'embora' é admitida, mas derrotada pelo argumento principal.",
+      stepByStep: [
+        "Estrutura com 'MAS' (A, mas B): O locutor concede A, mas dá o golpe final em B. Conclusão direcionada para B (crítica aos custos).",
+        "Estrutura com 'EMBORA' (Embora B, A): O locutor reconhece B como obstáculo menor, mas reafirma a força imperativa de A. Conclusão direcionada para A (aprovação ambiental).",
+        "Relevância na Redação Nota 1000: O domínio dos conectivos de oposição (adversativos vs. concessivos) é decisivo para construir contra-argumentações consistentes."
+      ],
+      coreConcept: "Operadores Argumentativos: Força Discursiva da Adversidade versus Concessão",
+      trapWarning: "Lembre-se da regra de ouro: quem manda no 'mas' é quem vem DEPOIS dele; quem manda no 'embora' é a oração PRINCIPAL que vem fora dele!"
+    },
+    commonTraps: [
+      "Achar que conectivos concessivos e adversativos têm o mesmo peso argumentativo",
+      "Não perceber qual argumento sai vitorioso na hierarquia do parágrafo"
+    ],
+    tags: ["operadores-argumentativos", "conjuncoes", "adversativas", "concessivas", "coesao-textual"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-016",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Recursos da Língua",
+    subtopic: "Intertextualidade: Paródia vs. Paráfrase na 'Canção do Exílio'",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o diálogo intertextual entre o célebre poema romântico de Gonçalves Dias e a recriação modernista de Oswald de Andrade:\n\nTexto 1 (Gonçalves Dias, 1843):\n'Minha terra tem palmeiras,\nOnde canta o Sabiá;\nAs aves, que aqui gorjeiam,\nNão gorjeiam como lá.'\n\nTexto 2 (Oswald de Andrade, 1925 - 'Canto de Regresso à Pátria'):\n'Minha terra tem palmares\nOnde gorjeia o mar\nOs passarinhos daqui\nNão cantam como os de lá.'",
+      source: "Diálogos da Poesia Brasileira, Estudos Literários, 2024."
+    },
+    prompt: "A substituição de 'palmeiras' por 'palmares' e o tom coloquial adotado por Oswald de Andrade configuram um procedimento de intertextualidade classificado como:",
+    options: [
+      { id: "a", text: "paródia, pois subverte o lirismo ufanista e idealizado do texto-fonte original para introduzir uma reflexão crítica de valorização da história e da resistência afro-brasileira.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "paráfrase servil, que repete com exatidão religiosa as mesmas ideias românticas ufanistas do século XIX sem nenhuma inovação de sentido.", isCorrect: false, distractorRationale: "A paráfrase confirma o sentido original; o poema de Oswald altera profundamente o sentido ao trocar 'palmeiras' por 'palmares'." },
+      { id: "c", text: "plágio criminoso motivado pela falta de criatividade poética do autor modernista.", isCorrect: false, distractorRationale: "Oswald faz uma citação intertextual culta e deliberada, recurso legítimo e consagrado da arte moderna." },
+      { id: "d", text: "tradução literal de um soneto renascentista inglês.", isCorrect: false, distractorRationale: "Ambos os textos foram escritos originalmente em língua portuguesa por poetas brasileiros." },
+      { id: "e", text: "rejeição de qualquer menção à natureza e ao território nacional.", isCorrect: false, distractorRationale: "A natureza brasileira segue mencionada (mar, passarinhos), porém ressignificada pela lente modernista." }
+    ],
+    detailedExplanation: {
+      summary: "A paródia é a intertextualidade que subverte, satiriza ou desconstrói o texto original. Ao trocar 'palmeiras' (paisagem romântica idealizada de cartão-postal) por 'palmares' (o Quilombo dos Palmares, símbolo máximo da resistência negra contra a opressão escravista), Oswald reescreve a própria identidade do Brasil.",
+      stepByStep: [
+        "Paráfrase: Diz o mesmo com outras palavras, reafirmando e confirmando a tese do texto original.",
+        "Paródia: Retoma a estrutura formal do texto original para inverter, questionar, criticar ou produzir efeito humorístico.",
+        "Significado histórico de 'palmares': Inserção do protagonismo e da memória negra no coração da poesia nacional, desmistificando o ufanismo ingênuo do Primeiro Romantismo."
+      ],
+      coreConcept: "Intertextualidade Crítica: Paródia vs. Paráfrase e a Desconstrução do Nacionalismo Romântico",
+      trapWarning: "No ENEM, memorize: PARÁFRASE = confirma e apoia o texto original; PARÓDIA = subverte, critica ou faz rir com base no texto original!"
+    },
+    commonTraps: [
+      "Confundir paródia (ruptura/crítica) com paráfrase (reafirmação de sentido)",
+      "Não perceber a alusão política e histórica à palavra 'Palmares' (quilombo)"
+    ],
+    tags: ["intertextualidade", "parodia", "parafrase", "cancao-do-exilio", "oswald-de-andrade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-017",
+    area: "linguagens",
+    competence: 6,
+    skill: 19,
+    topic: "Recursos da Língua",
+    subtopic: "Polissemia: Denotação vs. Conotação na Linguagem Midiática",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a ocorrência da palavra 'nó' em duas situações distintas de uso da língua:\n\nEnunciado 1: 'O marinheiro experiente deu um nó cego reforçado na corda de ancoragem para prender o barco ao cais.'\n\nEnunciado 2: 'A escalada repentina das taxas de juros mundiais deu um nó no orçamento das famílias de baixa renda e nos planos da equipe econômica.'",
+      source: "Semântica do Português Contemporâneo, 2024."
+    },
+    prompt: "A respeito dos planos de significação da palavra 'nó' nos enunciados apresentados, é correto afirmar que:",
+    options: [
+      { id: "a", text: "no Enunciado 1 o vocábulo é empregado em sentido denotativo (literal, objetivo), enquanto no Enunciado 2 assume sentido conotativo (figurado, metafórico), designando um embaraço financeiro de difícil resolução.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "nos dois enunciados a palavra possui valor estritamente físico-mecânico de entrelaçamento de fibras têxteis de cordas.", isCorrect: false, distractorRationale: "No orçamento familiar não existem cordas físicas têxteis; trata-se de metáfora para dificuldade financeira." },
+      { id: "c", text: "no Enunciado 1 o uso é conotativo poético e no Enunciado 2 é uma definição científica da física dos sólidos.", isCorrect: false, distractorRationale: "No Enunciado 1 o uso é literal (dar nó na corda), que é a definição denotativa da palavra." },
+      { id: "d", text: "a palavra 'nó' no Enunciado 2 caracteriza um erro de regência verbal condenado pelos dicionários.", isCorrect: false, distractorRationale: "A linguagem figurada em expressões idiomáticas é perfeitamente legítima e enriquecedora." },
+      { id: "e", text: "em nenhuma das orações a palavra possui significado inteligível para a língua portuguesa.", isCorrect: false, distractorRationale: "A palavra é de uso comum e consagrado em ambos os registros." }
+    ],
+    detailedExplanation: {
+      summary: "Denotação é o sentido básico, de dicionário, literal (D de Dicionário). Conotação é o sentido figurado, criativo, metafórico (C de Criatividade/Coração).",
+      stepByStep: [
+        "Enunciado 1: Nó na corda = denotação (objeto concreto, laço apertado em um cabo).",
+        "Enunciado 2: Nó no orçamento = conotação (situação embaraçosa, complicação, aperto de contas que não fecham).",
+        "Polissemia: Uma mesma palavra acumula múltiplos sentidos potenciais que são ativados conforme o contexto do enunciado."
+      ],
+      coreConcept: "Denotação (Sentido Literal) versus Conotação (Sentido Figurado) e Polissemia",
+      trapWarning: "Dica mnemônica infalível para o ENEM: D-enotação = D-icionário (literal); C-onotação = C-ontexto / C-riatividade (figurado)."
+    },
+    commonTraps: [
+      "Inverter denotação e conotação na identificação das alternativas",
+      "Achar que o sentido conotativo só existe em poesias e não na imprensa econômica diária"
+    ],
+    tags: ["denotacao", "conotacao", "polissemia", "sentido-figurado", "semantica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-018",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Recursos da Língua",
+    subtopic: "Marcadores Conversacionais e a Organização do Discurso Oral",
+    difficulty: 2,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a transcrição fidedigna de um trecho de entrevista oral realizada com uma estudante universitária:\n\n'Olha só, quando eu entrei no laboratório de pesquisa, né, eu ficava meio perdida... aí o professor orientador sentou comigo e falou, tipo assim, que a gente precisava organizar o cronograma passo a passo, entende? Daí as coisas começaram a fluir...'",
+      source: "Corpus de Português Oral Culto Urbano (Projeto NURC), 2024."
+    },
+    prompt: "Na perspectiva da linguística textual e dos estudos da oralidade, termos como 'olha só', 'né', 'aí', 'tipo assim' e 'entende?' não devem ser julgados meramente como 'erros ou defeitos da fala', porque exercem a função discursiva de:",
+    options: [
+      { id: "a", text: "marcadores conversacionais indispensáveis na interação face a face para encadear ideias, negociar a atenção do interlocutor, verificar a compreensão e dar tempo para o planejamento cognitivo do discurso em tempo real.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "provar a completa incapacidade intelectual da falante de articular frases conexas na língua materna.", isCorrect: false, distractorRationale: "Marcadores conversacionais são utilizados por falantes de todos os níveis de escolaridade e são inerentes à oralidade espontânea." },
+      { id: "c", text: "substituir com vantagem todas as regras de pontuação gramatical na redação de teses acadêmicas escritas.", isCorrect: false, distractorRationale: "Na escrita formal de textos acadêmicos esses marcadores devem ser evitados em prol da coesão padrão." },
+      { id: "d", text: "demonstrar que a língua falada é idêntica em todos os aspectos à linguagem programada de computadores binários.", isCorrect: false, distractorRationale: "A fala humana é orgânica, relacional e espontânea, totalmente diferente de códigos de máquina." },
+      { id: "e", text: "indicar que a entrevistada estava fingindo não compreender as perguntas formuladas pelo pesquisador.", isCorrect: false, distractorRationale: "Os marcadores têm função de aproximação interativa e monitoramento do contato fático." }
+    ],
+    detailedExplanation: {
+      summary: "Na fala em tempo real, o cérebro humano precisa formular ideias ao mesmo tempo em que articula sons. Marcadores conversacionais ('né', 'entende?', 'aí') cumprem papéis essenciais de sustentação do canal de comunicação (função fática) e conexão textual.",
+      stepByStep: [
+        "Planejamento em tempo real: Diferente da escrita, que pode ser apagada e reescrita, a fala é produzida no calor do momento.",
+        "Monitoramento do interlocutor: 'Né?' e 'entende?' servem para checar se o ouvinte continua acompanhando e concordando.",
+        "Encadeamento temporal: 'Aí' e 'daí' servem de conectores narrativos que impulsionam a sequência cronológica dos fatos.",
+        "Conclusão sociolinguística: Trata-se de uma estratégia comunicativa sofisticada da oralidade, e não de 'pobreza vocabular'."
+      ],
+      coreConcept: "Marcadores Conversacionais da Oralidade: Função Fática, Conexão e Planejamento Discursivo",
+      trapWarning: "No ENEM, a oralidade tem gramática e dinâmicas próprias; jamais a meça com a régua preconceituosa da gramática normativa prescritiva da língua escrita formal."
+    },
+    commonTraps: [
+      "Classificar qualquer marca oral espontânea como 'vício estúpido'",
+      "Ignorar o papel interativo dos marcadores em checar a cumplicidade do interlocutor"
+    ],
+    tags: ["oralidade", "marcadores-conversacionais", "sociolinguistica", "funcao-fatica", "interacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-019",
+    area: "linguagens",
+    competence: 8,
+    skill: 25,
+    topic: "Recursos da Língua",
+    subtopic: "Neologismos e Empréstimos Linguísticos na Era Digital",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Com o avanço vertiginoso das tecnologias de comunicação e das plataformas de redes sociais, o vocabulário cotidiano dos brasileiros incorporou com naturalidade termos como 'deletar' (do inglês to delete), 'mutar' (do inglês to mute), 'printar' (do inglês to print), 'stalkear' (do inglês to stalk), além de neologismos semânticos autóctones como 'cancelamento' e 'tuitar'.",
+      source: "Linguagem e Novas Mídias, Cadernos de Letras, 2024."
+    },
+    prompt: "A assimilação desses termos e a sua adaptação morfológica pelo acréscimo de sufixos verbais portugueses (como a terminação '-ar' da primeira conjugação em 'mut-ar' e 'print-ar') revelam que:",
+    options: [
+      { id: "a", text: "a língua portuguesa possui alta plasticidade e dinamismo morfossintático, aportuguesando e gramaticalizando empréstimos lexicais para nomear com precisão novas práticas e realidades sociotécnicas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "os usuários brasileiros esqueceram completamente a gramática da língua materna e foram forçados a falar inglês.", isCorrect: false, distractorRationale: "A estrutura gramatical do verbo conjugado ('eu printo', 'ele deletou') é rigorosamente portuguesa." },
+      { id: "c", text: "a incorporação de neologismos é crime contra o patrimônio público punível com banimento de redes sociais.", isCorrect: false, distractorRationale: "O neologismo é um processo natural e legítimo de renovação lexical previsto em todas as gramáticas descritivas." },
+      { id: "d", text: "os computadores são incapazes de processar palavras criadas por seres humanos no século XXI.", isCorrect: false, distractorRationale: "Os computadores operam com essas interfaces e comandos diariamente." },
+      { id: "e", text: "a língua portuguesa parou de criar novas palavras desde o século dezesseis.", isCorrect: false, distractorRationale: "O léxico de uma língua viva expande-se continuamente todos os dias." }
+    ],
+    detailedExplanation: {
+      summary: "Empréstimos linguísticos e neologismos não ameaçam a língua; ao contrário, provam a sua força assimiladora. Ao pegar a raiz inglesa 'print' e adicionar a desinência portuguesa '-ar' (criando 'printar', que se conjuga 'eu printo, nós printamos'), a língua adapta o estrangeiro às regras de sua própria morfologia nativa.",
+      stepByStep: [
+        "Neologismo lexical: Criação de novas palavras para novos conceitos (ex.: 'hater', 'cancelamento').",
+        "Aportuguesamento morfológico: Adaptação das raízes estrangeiras às terminações verbais produtivas do português (1ª conjugação em -ar: deletar, logar, resetar).",
+        "Visão não purista no ENEM: O purismo que tenta barrar palavras estrangeiras é historicamente inócuo; o português sempre incorporou termos árabes ('arroz', 'alface'), tupis ('pipoca', 'tamanduá') e franceses ('abajur', 'sutiã')."
+      ],
+      coreConcept: "Neologismos, Empréstimos Linguísticos e a Vitalidade Morfológica do Português",
+      trapWarning: "No ENEM, rejeite visões ufanistas ou puristas que queiram proibir termos estrangeiros; a língua é enriquecida pelas trocas culturais da era globalizada."
+    },
+    commonTraps: [
+      "Achar que usar termos tecnológicos estrangeiros significa 'destruir o português'",
+      "Não perceber que o verbo ganha conjugação e desinências genuinamente portuguesas"
+    ],
+    tags: ["neologismos", "estrangeirismos", "era-digital", "morfologia", "lexico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-020",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Recursos da Língua",
+    subtopic: "A Construção dos Sentidos: Pressupostos e Subentendidos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as duas declarações a seguir proferidas em uma reunião de condomínio residencial:\n\nDeclaração 1: 'O novo síndico finalmente conseguiu equilibrar as contas do condomínio neste semestre.'\n\nDeclaração 2: 'Nossa, que calor insuportável está fazendo nesta sala fechada com todas as janelas trancadas...'",
+      source: "Semântica e Pragmática do Discurso, 2024."
+    },
+    prompt: "Com base nas noções de pressuposição e subentendido da semântica pragmática, é correto afirmar que:",
+    options: [
+      { id: "a", text: "na Declaração 1 o advérbio 'finalmente' introduz a informação pressuposta de que as contas estiveram desequilibradas antes; na Declaração 2, o enunciado veicula o subentendido pragmático de um pedido para abrir as janelas ou ligar a ventilação.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "na Declaração 1 o síndico foi destituído do cargo por desvios comprovados de verba.", isCorrect: false, distractorRationale: "O texto afirma explicitamente que ele conseguiu equilibrar as contas com sucesso." },
+      { id: "c", text: "na Declaração 2 o falante está exigindo que todos os moradores vistam casacos de lã grossos.", isCorrect: false, distractorRationale: "A reclamação é de calor extremo com janelas trancadas, insinuando o pedido de ventilação." },
+      { id: "d", text: "pressuposto e subentendido são sinônimos idênticos de informações expressas de forma explícita e literal.", isCorrect: false, distractorRationale: "Pressuposto e subentendido pertencem à dimensão do 'não dito' implícito, distinguindo-se pela presença ou ausência de marcas gramaticais formais." },
+      { id: "e", text: "nenhuma das declarações possui qualquer elemento de sentido implícito.", isCorrect: false, distractorRationale: "Ambas dependem crucialmente de implícitos para que o sentido pretendido seja compreendido plenamente." }
+    ],
+    detailedExplanation: {
+      summary: "O texto diz muito mais do que aquilo que está escrito explicitamente: o pressuposto está ancorado em pistas gramaticais indiscutíveis (verbos aspectuais, advérbios); o subentendido é uma insinuação contextual que o ouvinte deduz pelas circunstâncias da situação comunicativa.",
+      stepByStep: [
+        "Pressuposto (marcado linguisticamente): 'Finalmente' indica que houve demora ou dificuldade anterior. Se digo 'Pedro parou de fumar', pressupõe-se obrigatoriamente que Pedro fumava antes.",
+        "Subentendido (insinuação pragmática): Dizer 'está muito calor com janelas fechadas' funciona como um ato de fala indireto pedindo educadamente para alguém abrir as janelas, sem fazer a ordem explícita.",
+        "Diferença essencial: O pressuposto é indiscutível (está na gramática); o subentendido pode ser negado pelo locutor ('Eu só comentei sobre o calor, não mandei ninguém abrir janela')."
+      ],
+      coreConcept: "O Implícito no Discurso: Pressuposição (Marcada Gramaticalmente) vs. Subentendido (Pragmático)",
+      trapWarning: "No ENEM, essa distinção entre pressuposto e subentendido é uma das habilidades de interpretação e competência argumentativa mais refinadas da Matriz de Referência."
+    },
+    commonTraps: [
+      "Confundir pressuposto (com marcador linguístico claro) com subentendido (insinuação deduzida pelo contexto)",
+      "Procurar apenas o sentido explícito e ignorar o que está nas entrelinhas do texto"
+    ],
+    tags: ["pressupostos", "subentendidos", "pragmatica", "implicitos", "interpretacao-avancada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 
