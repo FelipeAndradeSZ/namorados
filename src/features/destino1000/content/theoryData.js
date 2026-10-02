@@ -2730,6 +2730,53 @@ export const THEORY_CONTENT = {
       "A calagem agrícola aumenta o pH do solo (reduz a acidez ativa) para neutralizar H+ e precipitar Al3+, e NÃO para acidificar a terra."
     ],
     mnemonics: "Le Chatelier no Sangue: 'Soprou CO2 demais? Falta ácido atrás: Alcalose voraz! Reter CO2 no pulmão? Sobe H+ de montão: Acidose na respiração!'"
+  },
+
+  "matematica/geometria-espacial-metrica": {
+    topic: "Geometria Espacial Métrica, Corpos Redondos e Sólidos de Revolução",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Competência 2 (H7, H8, H9): Um dos tópicos com maior número de questões no ENEM. Envolve cálculo de volumes e áreas superficiais de corpos redondos (cilindros, cones, esferas e seus troncos), sólidos de revolução (gerados por rotação de figuras planas no plano tridimensional), decomposição e associação de sólidos compostos (cápsulas farmacêuticas e boias marítimas), transvasamento e variação de nível por imersão (Princípio de Arquimedes métrico), taxa de vazão volumétrica e a regra de ouro da semelhança espacial (razão linear k ⇒ razão de áreas k² ⇒ razão de volumes k³).",
+    highFrequencySkills: [
+      "H7 - Identificar características de figuras planas ou espaciais em situações do cotidiano e projetos técnicos",
+      "H8 - Resolver situação-problema que envolva conhecimentos geométricos de espaço e forma (volumes e capacidades)",
+      "H9 - Utilizar conhecimentos geométricos de espaço e forma na seleção de argumentos propostos como solução de problemas do cotidiano (otimização de embalagens)"
+    ],
+    overview: "A Geometria Espacial Métrica no ENEM destaca o raciocínio volumétrico aplicado à realidade prática: cisternas de armazenamento de água no semiárido, silos agrícolas de grãos, embalagens de alimentos e cosméticos com minimização de material, dosagem de fármacos em microesferas esféricas e tanques industriais de combustíveis. Dominar as fórmulas fundamentais, as conversões de unidades métricas (1 m³ = 1 000 L; 1 dm³ = 1 L; 1 cm³ = 1 mL) e as relações de semelhança tridimensional garante dezenas de pontos na TRI.",
+    keyConcepts: [
+      {
+        title: "Cilindro Circular Reto e Cilindro Equilátero",
+        content: "• Volume: V = Ab · h = π · r² · h. Área Lateral: Al = 2 · π · r · h (planificação retangular de base 2πr e altura h). Área Total: At = Al + 2·Ab = 2πrh + 2πr².\n• Cilindro Equilátero: A seção meridiana é um quadrado de lado 2r, logo h = 2r. Assim, Al = 4πr² e V = 2πr³.\n• Transvasamento e Imergência: Ao submergir um sólido maciço em um cilindro com líquido, o volume do sólido é exatamente igual ao volume do cilindro de líquido deslocado: Vsólido = π · r² · Δh."
+      },
+      {
+        title: "Cone Circular Reto e Tronco de Cone",
+        content: "• Relação Geratriz-Raio-Altura: g² = h² + r² (Teorema de Pitágoras no triângulo gerador).\n• Volume do Cone: V = (1/3) · π · r² · h. Área Lateral: Al = π · r · g. Setor circular planificado: ângulo central θ = 360° · (r / g).\n• Cone Equilátero: A seção meridiana é triângulo equilátero (g = 2r), donde h = r√3 e a razão entre área lateral e base é rigorosamente igual a 2 (Al = 2·Ab).\n• Tronco de Cone: V = (π · h / 3) · (R² + R·r + r²). Sólido gerado pela rotação completa de 360° de um trapézio retângulo em torno de sua altura."
+      },
+      {
+        title: "Esfera, Cascas e Partes Esféricas",
+        content: "• Volume: V = (4/3) · π · r³. Área Superficial: A = 4 · π · r².\n• Casca Esférica Oca: V = (4/3) · π · (R³ - r³). A massa é dada por m = densidade · Vmetal.\n• Cunha e Fuso: Cunha esférica (volume) e Fuso esférico (área) são fatias de ângulo diedro α: Vcunha = (α / 360°) · ((4/3)·π·r³) e Afuso = (α / 360°) · (4πr²)."
+      },
+      {
+        title: "Semelhança Espacial e Razão entre Áreas e Volumes",
+        content: "• Escala Linear: Se as dimensões lineares de um sólido forem multiplicadas por um fator k, então:\n  - Qualquer comprimento (perímetro, altura, raio, geratriz, diagonal) multiplica-se por k;\n  - Qualquer área (área da base, área lateral, área superficial total) multiplica-se por k²;\n  - O volume (capacidade de armazenamento em litros ou m³) multiplica-se por k³.\n• Exemplo Clássico: Em um cone ou pirâmide preenchido até a metade da altura (h = H/2 ⇒ k = 1/2), o volume de líquido ocupa apenas (1/2)³ = 1/8 do volume total!"
+      }
+    ],
+    formulasAndRules: [
+      "Conversão Universal: 1 m³ = 1 000 dm³ = 1 000 L  |  1 dm³ = 1 L  |  1 cm³ = 1 mL  |  1 L = 1 000 mL = 1 000 cm³.",
+      "Cilindro: V = π · r² · h  |  Al = 2πrh  |  At = 2πr(h + r).",
+      "Cone: V = (1/3) · π · r² · h  |  g² = h² + r²  |  Al = πrg  |  θ = 360° · (r / g).",
+      "Tronco de Cone: V = (π · h / 3) · (R² + R·r + r²).",
+      "Esfera: V = (4/3) · π · r³  |  A = 4 · π · r²  |  Diagonal do Paralelepípedo: D = √(a² + b² + c²).",
+      "Semelhança: V2 / V1 = (L2 / L1)³ = k³  |  A2 / A1 = (L2 / L1)² = k²."
+    ],
+    enemTraps: [
+      "Diâmetro vs Raio: Se o reservatório tem diâmetro de 4 m, o raio é 2 m! Elevar o diâmetro ao quadrado quadruplica o volume erroneamente.",
+      "Metade da altura em cones NÃO é metade do volume: encher um cone até H/2 enche apenas 1/8 do volume total!",
+      "Subtração de cubos na casca esférica: (R³ - r³) é TOTALMENTE DIFERENTE de (R - r)³!",
+      "Conversão de m³ para litros: 1 m³ são 1 000 litros, e NÃO 100 litros!",
+      "Cilindro equilátero: a altura é igual ao DIÂMETRO (h = 2r), e NÃO ao raio (h ≠ r)!"
+    ],
+    mnemonics: "TRI dos Corpos Redondos: 'Cilindro é área da base vezes altura inteira; Cone divide por três na brincadeira; Esfera é quatro terços de pi r três na carreira; e na Semelhança linear k, o volume sobe ao cubo de primeira!'"
   }
 };
 

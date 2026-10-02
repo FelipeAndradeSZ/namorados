@@ -33,6 +33,7 @@ export const QUESTION_MODULES = {
   "matematica/aritmetica-divisibilidade": () => import("./questions/matematica/aritmetica-divisibilidade.js"),
   "matematica/matrizes-tabelas": () => import("./questions/matematica/matrizes-tabelas.js"),
   "matematica/circunferencia-conicas": () => import("./questions/matematica/circunferencia-conicas.js"),
+  "matematica/geometria-espacial-metrica": () => import("./questions/matematica/geometria-espacial-metrica.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
