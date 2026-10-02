@@ -399,6 +399,440 @@ export const QUESTIONS_MEIO_AMBIENTE = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-011",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia",
+    subtopic: "Rios Voadores e Serviços Ecossistêmicos da Amazônia",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A floresta amazônica atua como uma gigantesca bomba biológica de vapor d'água. Pelo processo de evapotranspiração, uma árvore adulta de grande porte pode bombear diariamente para a atmosfera mais de 500 litros de água captados no subsolo. Os ventos alísios transportam essas massas de ar saturadas de umidade para o oeste, onde encontram a barreira orográfica natural da Cordilheira dos Andes e são desviadas em direção ao Centro-Oeste, Sudeste e Sul do Brasil, constituindo os denominados 'rios voadores'.",
+      source: "Instituto Nacional de Pesquisas da Amazônia (INPA), Climatologia Aplicada, 2024."
+    },
+    prompt: "O desmatamento progressivo e a degradação da cobertura florestal contínua na bacia amazônica impactam diretamente as regiões agrícolas e urbanas do Centro-Sul brasileiro ao:",
+    options: [
+      { id: "a", text: "reduzir o aporte de umidade transportado pelos fluxos atmosféricos, desregulando o regime pluviométrico sazonal e comprometendo a recarga de aquíferos, reservatórios hidrelétricos e safras agrícolas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "gerar um aumento permanente e descontrolado nas precipitações diárias de granizo em todo o litoral tropical.", isCorrect: false, distractorRationale: "A diminuição da evapotranspiração florestal reduz as chuvas e prolonga as estiagens, não gera tempestades de granizo." },
+      { id: "c", text: "impedir completamente a atuação de qualquer frente fria proveniente do Polo Sul.", isCorrect: false, distractorRationale: "As massas polares atlânticas (mPa) continuam se deslocando pelo relevo sul-americano, embora encontrem ar mais seco." },
+      { id: "d", text: "transformar de forma imediata o Sudeste brasileiro em uma bacia marinha submersa por águas oceânicas.", isCorrect: false, distractorRationale: "O risco enfrentado pelo Sudeste é de escassez hídrica e seca severa nos mananciais, não inundação oceânica perene." },
+      { id: "e", text: "eliminar todos os tipos de ventos da atmosfera terrestre.", isCorrect: false, distractorRationale: "A circulação atmosférica geral é impulsionada pela rotação da Terra e pelo aquecimento solar diferencial, persistindo ativa." }
+    ],
+    detailedExplanation: {
+      summary: "A floresta amazônica presta um serviço ecossistêmico vital de regulação climática. O transporte de vapor d'água pelos 'rios voadores' é essencial para manter o regime de chuvas nas bacias do Prata e Paraná e garantir a segurança hídrica, energética e agropecuária do Brasil.",
+      stepByStep: [
+        "Mecanismo da evapotranspiração: A floresta bombeia água do lençol freático profundo e devolve em forma de vapor para a troposfera.",
+        "Dinâmica dos rios voadores: Ventos alísios levam a umidade até a barreira dos Andes, que redireciona os fluxos em direção ao Centro-Sul.",
+        "Impacto antrópico: A substituição da floresta densa por pastagens degradadas reduz drasticamente a evapotranspiração, alongando o período seco e esvaziando reservatórios como o Sistema Cantareira em São Paulo."
+      ],
+      coreConcept: "Rios Voadores: Evapotranspiração da Amazônia e Segurança Hídrica do Centro-Sul",
+      trapWarning: "No ENEM, conecte sempre o desmatamento no Norte com crises de água e energia no Sudeste; a ecologia não respeita fronteiras político-estaduais."
+    },
+    commonTraps: [
+      "Achar que o desmatamento afeta somente o clima local de onde as árvores foram derrubadas",
+      "Ignorar o papel da Cordilheira dos Andes no redirecionamento das massas úmidas"
+    ],
+    tags: ["rios-voadores", "amazonia", "evapotranspiracao", "seguranca-hidrica", "climatologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-012",
+    area: "humanas",
+    competence: 6,
+    skill: 29,
+    topic: "Geografia",
+    subtopic: "Arenização nos Campos Sulinos vs. Desertificação no Semiárido",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Embora frequentemente confundidos no debate público, os processos de arenização e desertificação decorrem de dinâmicas geomorfológicas, pedológicas e climáticas distintas. No sudoeste do Rio Grande do Sul (bioma Pampa), a formação de bancos de areia móveis que invadem áreas produtivas decorre da fragilidade de solos areníticos ancestrais sob clima subtropical úmido, agravada pelo pisoteio excessivo de gado e práticas agrícolas inadequadas. Já no sertão nordestino (bioma Caatinga), a degradação severa da terra com perda irreversível de capacidade biológica está associada a regimes climáticos semiáridos e subúmidos secos.",
+      source: "Geomorfologia e Degradação dos Solos no Brasil, Cadernos de Geociências, 2024."
+    },
+    prompt: "A principal distinção conceitual e ambiental entre o fenômeno da arenização gaúcha e o da desertificação nordestina reside no fato de que a arenização:",
+    options: [
+      { id: "a", text: "ocorre em zonas de clima úmido em terrenos onde o solo se origina de arenitos de fácil desagregação mecânica pela água da chuva e pelo vento, e não em climas com aridez e balanço hídrico negativo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "acontece exclusivamente em leitos de rios subterrâneos sem qualquer relação com a superfície do relevo.", isCorrect: false, distractorRationale: "A arenização manifesta-se diretamente na superfície do solo em relevos de coxilhas pampeanas." },
+      { id: "c", text: "transforma biomas úmidos em desertos de sal hipertermal com clima desértico do Saara.", isCorrect: false, distractorRationale: "O clima do Rio Grande do Sul continua chuvoso (subtropical úmido); o que surge são manchas de areia móvel (areais)." },
+      { id: "d", text: "decorre exclusivamente da queda de chuvas ácidas industriais concentradas.", isCorrect: false, distractorRationale: "A arenização tem matriz geológica natural (arenitos fluviais e eólicos) associada a manejo inadequado do solo." },
+      { id: "e", text: "é um processo restrito às zonas litorâneas marinhas sob influência direta das marés salgadas.", isCorrect: false, distractorRationale: "Ocorre no interior continental do estado (como em Alegrete, Manuel Viana e São Francisco de Assis)." }
+    ],
+    detailedExplanation: {
+      summary: "Arenização e desertificação não são sinônimos. Pela Convenção da ONU (UNCCD), a desertificação só ocorre em zonas áridas, semiáridas e subúmidas secas. No Rio Grande do Sul, onde chove bastante o ano todo (clima subtropical úmido), a exposição de depósitos arenosos frágeis é classificada tecnicamente como 'arenização'.",
+      stepByStep: [
+        "Definição de desertificação: Degradação biológica e do solo restrita por definição da ONU a climas com déficit hídrico acentuado (como o Semiárido da Caatinga).",
+        "Definição de arenização: Reativação de depósitos de areia em clima com precipitação regular (RS), desencadeada quando a vegetação de gramíneas é retirada e o gado compacta o solo, facilitando a lavagem da areia pelas águas pluviais.",
+        "Conclusão: O elemento diferenciador crucial é o regime pluviométrico (clima úmido na arenização vs. semiárido na desertificação)."
+      ],
+      coreConcept: "Diferenciação Pedoclimática: Arenização (Pampa) vs. Desertificação (Caatinga)",
+      trapWarning: "Pegadinha clássica do ENEM: chamar os areais do Rio Grande do Sul de 'deserto'. Não é deserto nem desertificação porque o clima da região é chuvoso e úmido!"
+    },
+    commonTraps: [
+      "Tratar arenização e desertificação como termos perfeitamente equivalentes",
+      "Ignorar o papel das chuvas abundantes no retrabalhamento das areias do Pampa"
+    ],
+    tags: ["arenizacao", "desertificacao", "solos", "pampa", "caatinga"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-013",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia",
+    subtopic: "Erosão Laminar, Assoreamento Fluvial e Matas Ciliares",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em muitas bacias hidrográficas brasileiras sob intensa pressão agropecuária ou ocupação imobiliária irregular, a retirada da vegetação florestal ripária (mata ciliar) deixa as margens fluviais e as encostas desprotegidas contra a força do impacto direto das gotas de chuva (efeito splash) e do escoamento superficial. Esse processo acentua o desprendimento de partículas de solo (erosão laminar e em sulcos), que são carreadas para a calha do rio.",
+      source: "Conservação de Bacias Hidrográficas e Recursos Hídricos, 2024."
+    },
+    prompt: "A deposição excessiva e contínua desses sedimentos carregados pelas enxurradas provoca o assoreamento dos rios, cujas consequências hidrológicas e ambientais imediatas incluem:",
+    options: [
+      { id: "a", text: "a redução da profundidade útil da calha do rio, diminuindo sua capacidade de escoamento e multiplicando a frequência e a amplitude de transbordamentos e inundações.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o aumento drástico da velocidade e da profundidade das correntezas com formação de cânions abissais.", isCorrect: false, distractorRationale: "O assoreamento entope o rio com areia e terra, tornando-o mais raso e lento, não mais profundo." },
+      { id: "c", text: "a eliminação definitiva de qualquer partícula suspensa na água com purificação química espontânea.", isCorrect: false, distractorRationale: "A água assoreada fica turva, com alta turbidez que impede a fotossíntese de plantas aquáticas." },
+      { id: "d", text: "o surgimento de correntes submarinas de água termal em regiões montanhosas.", isCorrect: false, distractorRationale: "O fenômeno é puramente sedimentológico e de superfície fluvial, sem ligação com fontes termais vulcânicas." },
+      { id: "e", text: "o fim das enchentes urbanas devido à retenção permanente da água no leito rochoso do fundo.", isCorrect: false, distractorRationale: "O assoreamento é uma das maiores causas do agravamento de enchentes, pois o leito raso não comporta a vazão das chuvas." }
+    ],
+    detailedExplanation: {
+      summary: "A mata ciliar funciona como um filtro mecânico protetor. Sem ela, sedimentos erodidos enchem o fundo do rio (assoreamento), tornando a calha rasa e incapaz de reter a água das chuvas, o que provoca transbordamentos desastrosos.",
+      stepByStep: [
+        "Papel da mata ciliar: As copas amortecem a chuva; as raízes fixam a margem; a serapilheira retém água e filtra partículas de terra.",
+        "Mecanismo do assoreamento: O acúmulo de terra no fundo diminui o volume disponível para a vazão de água.",
+        "Consequências: Transbordamentos mais rápidos (inundações), perda de navegabilidade para barcos de transporte de carga e sufocamento de peixes pela turbidez."
+      ],
+      coreConcept: "Mata Ciliar como Área de Preservação Permanente (APP) e Prevenção do Assoreamento",
+      trapWarning: "Lembre-se do Código Florestal Brasileiro (Lei 12.651/2012): as matas ciliares são consideradas APPs (Áreas de Preservação Permanente) de preservação obrigatória por lei."
+    },
+    commonTraps: [
+      "Achar que assoreamento aumenta a profundidade das bacias",
+      "Ignorar o papel das raízes da mata ciliar na sustentação das barrancas de terra"
+    ],
+    tags: ["mata-ciliar", "assoreamento", "erosao", "recursos-hidricos", "app"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-014",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia",
+    subtopic: "Gestão de Resíduos Sólidos: Lixões vs. Aterros Sanitários",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A Política Nacional de Resíduos Sólidos (PNRS - Lei Federal 12.305/2010) determinou o encerramento gradual de todos os lixões a céu aberto nos municípios brasileiros e a transição para aterros sanitários ambientalmente licenciados. Enquanto os lixões despejam dejetos sem controle sobre o solo, atraindo vetores de doenças e liberando efluentes tóxicos, os aterros sanitários são obras complexas de engenharia sanitária projetadas para mitigar contaminações atmosféricas e subterrâneas.",
+      source: "Manual de Saneamento Básico e Meio Ambiente Urbano, 2024."
+    },
+    prompt: "Entre os elementos de engenharia ambiental que distinguem um aterro sanitário de um lixão a céu aberto, destaca-se:",
+    options: [
+      { id: "a", text: "a impermeabilização do solo com mantas sintéticas de PEAD, drenagem e tratamento do chorume e captação do gás metano gerado pela decomposição anaeróbica.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a queima diária a céu aberto de todos os detritos para transformar cinzas em fertilizantes agrícolas.", isCorrect: false, distractorRationale: "Queimar lixo a céu aberto emite dioxinas tóxicas e é crime ambiental, proibido em aterros sanitários." },
+      { id: "c", text: "o descarte imediato dos resíduos no interior de cavernas calcárias para aproveitamento hídrico.", isCorrect: false, distractorRationale: "O relevo cárstico é extremamente vulnerável e contaminaria os aquíferos cársticos instantaneamente." },
+      { id: "d", text: "a mistura obrigatória de resíduos hospitalares contaminantes com o lixo comum doméstico.", isCorrect: false, distractorRationale: "Resíduos infectantes hospitalares exigem tratamento especial (como incineração ou autoclave) e descarte diferenciado." },
+      { id: "e", text: "a ausência de qualquer cobertura de terra sobre os dejetos depositados na superfície.", isCorrect: false, distractorRationale: "No aterro sanitário, o lixo compactado é coberto diariamente com camadas de terra para evitar proliferação de vetores." }
+    ],
+    detailedExplanation: {
+      summary: "O aterro sanitário protege o meio ambiente confinando os resíduos com tecnologia: manta impermeável no fundo para proteger o lençol freático contra o chorume (líquido escuro de alta carga biológica) e tubos para drenar e queimar o biogás metano (evitando efeito estufa e explosões).",
+      stepByStep: [
+        "Lixão: Descarte bruto no solo sem manta, sem cobertura, atraindo urubus e ratos, infiltrando chorume que contamina aquíferos subterrâneos.",
+        "Aterro sanitário: Preparação do terreno com geomenbrana de polietileno (PEAD) e argila compactada.",
+        "Drenagem de chorume: Coleta do líquido e envio para lagoas de tratamento biológico.",
+        "Drenagem de gás: Captação de metano (CH4), que pode ser queimado (reduzindo impacto de aquecimento global) ou utilizado para gerar eletricidade em usinas de biogás."
+      ],
+      coreConcept: "Aterro Sanitário: Impermeabilização, Tratamento de Chorume e Captação de Biogás",
+      trapWarning: "Cuidado para não confundir 'aterro sanitário' (com todas as mantas e tratamentos) com 'aterro controlado' (que é apenas um lixão com cobertura de terra, sem impermeabilização do solo nem tratamento de chorume)."
+    },
+    commonTraps: [
+      "Achar que aterro controlado tem as mesmas proteções ambientais que um aterro sanitário",
+      "Desconhecer que o metano de aterros pode ser aproveitado como fonte de energia limpa (biometano)"
+    ],
+    tags: ["residuos-solidos", "aterro-sanitario", "chorume", "biogas", "saneamento"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-015",
+    area: "humanas",
+    competence: 6,
+    skill: 29,
+    topic: "Geografia",
+    subtopic: "Desastres da Mineração e Alteamento a Montante de Barragens",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Os rompimentos das barragens de rejeitos de mineração em Mariana (Fundão, 2015) e em Brumadinho (Córrego do Feijão, 2019), ambas situadas no Quadrilátero Ferrífero de Minas Gerais, configuram os maiores desastres socioambientais da história brasileira. As duas estruturas utilizavam o método construtivo de alteamento a montante, considerado tecnicamente o mais econômico para as mineradoras, porém o mais suscetível à liquefação do solo sob vibrações ou saturação hídrica excessiva.",
+      source: "Relatório de Engenharia e Impactos Socioambientais da Mineração, 2023."
+    },
+    prompt: "A destruição biológica provocada pelo espalhamento de milhões de metros cúbicos de lama de rejeitos ao longo das bacias dos rios Doce e Paraopeba resultou de uma cadeia de impactos que incluiu:",
+    options: [
+      { id: "a", text: "o soterramento do leito e da vegetação ciliar por lama inorgânica compacta, provocando asfixia mecânica da fauna branquial, anóxia pela suspensão de argilas e esterilização biológica das planícies aluviais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o enriquecimento mineral benéfico das bacias, gerando um crescimento recorde na fertilidade natural da água e no comércio pesqueiro.", isCorrect: false, distractorRationale: "A lama asfixiou e exterminou milhões de peixes e inviabilizou a pesca ao longo de centenas de quilômetros de rio." },
+      { id: "c", text: "a transformação de toda a água doce dos rios em petróleo bruto utilizável em refinarias de combustível fóssil.", isCorrect: false, distractorRationale: "Os rejeitos de minério de ferro são compostos de óxidos de ferro, sílica e lama, sem conexão com hidrocarbonetos de petróleo." },
+      { id: "d", text: "a descontaminação espontânea de todas as nascentes pelo contato com os resíduos de minério.", isCorrect: false, distractorRationale: "Os rejeitos contaminaram mananciais de captação de água potável de dezenas de cidades." },
+      { id: "e", text: "o surgimento de recifes de corais de águas profundas no leito fluvial das montanhas mineiras.", isCorrect: false, distractorRationale: "Recifes de corais se formam exclusivamente em águas marinhas quentes e límpidas, não em rios continentais enlameados." }
+    ],
+    detailedExplanation: {
+      summary: "O rompimento das barragens de alteamento a montante despejou lamas compostas majoritariamente de sílica e ferro. Embora não sejam resíduos primariamente químicos venenosos como cianeto, a violência mecânica e a imensa carga sólida em suspensão obliteraram a vida aquática por falta de oxigênio e luz e cobriram solos férteis com crostas endurecidas inférteis.",
+      stepByStep: [
+        "O método de alteamento a montante: A barragem vai sendo erguida apoiada sobre os próprios rejeitos úmidos anteriores, com alto risco de liquefação súbita.",
+        "Impacto na água: A suspensão das partículas impede a penetração da luz (fotossíntese cessa) e a argila coloida obstrui as brânquias dos peixes, levando à anóxia e mortalidade massiva.",
+        "Impacto no solo: A lama seca forma uma crosta cimentada compacta que inviabiliza a germinação de sementes e a agricultura nas margens ribeirinhas."
+      ],
+      coreConcept: "Impactos da Mineração: Alteamento a Montante, Turbidez e Degradação de Bacias Hidrográficas",
+      trapWarning: "Após os desastres de Mariana e Brumadinho, a Lei Federal 14.066/2020 proibiu expressamente a construção e operação de barragens com alteamento a montante em todo o Brasil."
+    },
+    commonTraps: [
+      "Achar que o impacto ecológico decorre unicamente de metais pesados adicionados, ignorando a sufocação física mecânica por excesso de sedimentos",
+      "Confundir o método de alteamento a montante com alteamento a jusante (muito mais seguro e custoso)"
+    ],
+    tags: ["mineracao", "brumadinho", "mariana", "barragens", "quadrilatero-ferrifero"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-016",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia",
+    subtopic: "Poluição dos Oceanos e Microplásticos nas Cadeias Tróficas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Estima-se que mais de 12 milhões de toneladas de materiais plásticos sejam despejadas anualmente nos oceanos. Sob a ação mecânica das ondas marinhas e da radiação ultravioleta do Sol, polímeros descartados fragmentam-se em minúsculas partículas com dimensões inferiores a 5 milímetros denominadas microplásticos. Devido à sua estabilidade química e superfície porosa, essas partículas funcionam como 'esponjas' que atraem e concentram poluentes orgânicos persistentes (POPs), como pesticidas e bifenilas policloradas presentes na água do mar.",
+      source: "Programa das Nações Unidas para o Meio Ambiente (PNUMA), Poluição Marinha Global, 2024."
+    },
+    prompt: "Quando os microplásticos são ingeridos pelo zooplâncton marinho na base da teia alimentar, sua transferência para peixes menores e predadores de topo manifesta o processo ecológico de:",
+    options: [
+      { id: "a", text: "biomagnificação trófica, no qual a concentração dos compostos tóxicos não biodegradáveis aumenta progressivamente a cada nível alimentar subsequente da cadeia alimentar.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "biodegradação instantânea com conversão de todo o carbono polimérico em glicose nutritiva para a biota marinha.", isCorrect: false, distractorRationale: "Os plásticos não são biodegradados pelos organismos e permanecem tóxicos e persistentes no sistema." },
+      { id: "c", text: "diluição homeostática, na qual substâncias poluentes perdem qualquer capacidade tóxica ao passar para animais maiores.", isCorrect: false, distractorRationale: "Ocorre o oposto: compostos persistentes se concentram mais nos tecidos dos predadores superiores." },
+      { id: "d", text: "mineralização acelerada com formação espontânea de blocos de granito marinho.", isCorrect: false, distractorRationale: "Plásticos são materiais poliméricos orgânicos sintéticos, não minerais ígneos geológicos." },
+      { id: "e", text: "despoluição automática das águas costeiras promovida pela respiração dos mamíferos aquáticos.", isCorrect: false, distractorRationale: "Os mamíferos aquáticos (baleias, golfinhos) acumulam toxinas e sofrem graves patologias pela ingestão de plásticos." }
+    ],
+    detailedExplanation: {
+      summary: "Microplásticos não são biodegradáveis e absorvem substâncias tóxicas. Ao serem consumidos na base trófica, acumulam-se no organismo individual (bioacumulação) e amplificam sua concentração nos níveis superiores da cadeia (biomagnificação), atingindo níveis perigosos na alimentação humana.",
+      stepByStep: [
+        "Bioacumulação: Acúmulo de uma substância química nos tecidos de um organismo específico ao longo de sua vida.",
+        "Biomagnificação (magnificação trófica): Aumento progressivo da concentração da substância de um nível trófico para o seguinte ao longo da teia alimentar.",
+        "Impacto na cadeia de suprimentos: Peixes predadores (como atum e salmão) concentram teores mais elevados de contaminantes, que chegam à mesa dos consumidores humanos."
+      ],
+      coreConcept: "Microplásticos, Bioacumulação e Biomagnificação Trófica Marinha",
+      trapWarning: "Lembre-se da diferença crucial: bioacumulação ocorre dentro de UM indivíduo; biomagnificação ocorre AO LONGO da cadeia trófica (nível a nível)."
+    },
+    commonTraps: [
+      "Confundir bioacumulação (indivíduo) com biomagnificação (cadeia trófica)",
+      "Achar que animais maiores são imunes aos microplásticos por possuírem maior massa corporal"
+    ],
+    tags: ["microplasticos", "biomagnificacao", "poluicao-marinha", "cadeia-trofica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-017",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia",
+    subtopic: "Eutrofização Antrópica de Corpos Hídricos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em lagoas urbanas, represas de abastecimento e enseadas costeiras próximas a metrópoles (como a Baía de Guanabara e a Lagoa Rodrigo de Freitas), o lançamento contínuo de esgotos domésticos não tratados e o arraste de fertilizantes fosfatados e nitrogenados de lavouras deflagram o fenômeno da eutrofização antrópica ou cultural. A água adquire uma coloração esverdeada e odor fétido característico.",
+      source: "Qualidade das Águas e Ecologia de Ecossistemas Aquáticos, 2024."
+    },
+    prompt: "A cadeia causal de transformações físico-químicas e biológicas que culmina na mortandade em massa de peixes em um corpo d'água eutrofizado obedece à seguinte sequência:",
+    options: [
+      { id: "a", text: "excesso de nutrientes ⟹ proliferação explosiva de algas superficiais ⟹ bloqueio da luz solar às camadas inferiores ⟹ morte de vegetais submersos ⟹ aumento de bactérias decompositoras aeróbicas ⟹ depleção extrema do oxigênio dissolvido (anóxia).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "aumento de oxigênio ⟹ diminuição de algas ⟹ escassez de bactérias ⟹ resfriamento térmico instantâneo da lâmina d'água.", isCorrect: false, distractorRationale: "A eutrofização consome o oxigênio e gera proliferação maciça de algas, não sua redução." },
+      { id: "c", text: "acidificação por gás hélio ⟹ elevação do pH para valores alcalinos extremos ⟹ congelamento das águas rasas.", isCorrect: false, distractorRationale: "O gás liberado na fase anaeróbica é o sulfídrico (H2S) e metano (CH4), não hélio." },
+      { id: "d", text: "desaparecimento de todos os nutrientes minerais ⟹ fome generalizada do fitoplâncton ⟹ seca completa do lago.", isCorrect: false, distractorRationale: "A eutrofização decorre justamente do excesso de nutrientes (fósforo e nitrogênio), não de sua ausência." },
+      { id: "e", text: "salinização marinha da água doce ⟹ fuga espontânea de todos os microrganismos para o ar atmosférico.", isCorrect: false, distractorRationale: "O fenômeno ocorre em corpos de água doce ou salobra e é de base bioquímica de oxigenação." }
+    ],
+    detailedExplanation: {
+      summary: "A eutrofização é um ciclo clássico do ENEM: nutrientes em excesso causam 'floração' de algas superficiais. A camada verde na superfície barra o sol para o fundo. Plantas do fundo morrem. Bactérias que decompõem matéria orgânica consomem todo o oxigênio da água, sufocando peixes e moluscos.",
+      stepByStep: [
+        "1. Aporte de nutrientes: Esgoto rico em fósforo e nitrogênio.",
+        "2. Floração de algas: Multiplicação descontrolada na superfície.",
+        "3. Bloqueio da luz solar: Algas na superfície formam uma 'cortina verde' que impede a fotossíntese de plantas do fundo.",
+        "4. Acúmulo de matéria morta: Bactérias decompositoras aeróbicas proliferam e consomem vorazmente o oxigênio dissolvido.",
+        "5. Anóxia (falta de O2): Peixes morrem por asfixia; bactérias anaeróbicas passam a atuar gerando gases fétidos (como sulfeto de hidrogênio)."
+      ],
+      coreConcept: "Eutrofização Cultural: Floração de Algas, Bloqueio Luminoso e Anóxia Aquática",
+      trapWarning: "Cuidado: na primeira fase da eutrofização, a superfície pode ter alta produção de O2 pelas algas; a anóxia mortífera ocorre quando essas algas morrem e são decompostas por bactérias no fundo!"
+    },
+    commonTraps: [
+      "Achar que as algas consomem diretamente todo o oxigênio enquanto vivas (são as bactérias decompositoras de matéria morta que esgotam o O2)",
+      "Confundir eutrofização com derramamento de petróleo"
+    ],
+    tags: ["eutrofizacao", "esgoto", "poluicao-da-agua", "anoxia", "nutrientes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-018",
+    area: "humanas",
+    competence: 6,
+    skill: 29,
+    topic: "Geografia",
+    subtopic: "Agrobiodiversidade e o Modelo das Monoculturas Transgênicas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A disseminação de cultivares agrícolas geneticamente modificados resistentes a herbicidas químicos (como a soja e o milho resistentes ao glifosato) acelerou a expansão das monoculturas em larga escala pelo Centro-Oeste e pela região do Matopiba (Maranhão, Tocantins, Piauí e Bahia). Se por um lado esse pacote biotecnológico impulsionou a produtividade média por hectare e a eficiência da colheita mecanizada de exportação, pesquisadores alertam para os riscos ecológicos associados à dependência de poucas sementes patenteadas e à simplificação dos ecossistemas agrícolas.",
+      source: "Socioeconomia Rural e Biotecnologia Agrícola, 2024."
+    },
+    prompt: "Entre as principais externalidades socioambientais adversas provocadas pela hegemonia desse modelo agrícola monocultor com sementes transgênicas, destaca-se:",
+    options: [
+      { id: "a", text: "a erosão genética da agrobiodiversidade tradicional, somada à seleção biológica de plantas invasoras resistentes a doses crescentes de defensivos e à dependência econômica dos produtores em relação a conglomerados corporativos de biotecnologia.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a extinção completa de todas as máquinas agrícolas e a substituição das colheitadeiras por arados de tração animal.", isCorrect: false, distractorRationale: "O modelo de monocultura transgênica é hipertecnificado com maquinário pesado de ponta." },
+      { id: "c", text: "a recuperação espontânea de toda a vegetação primária original do Cerrado dentro dos talhões de plantio.", isCorrect: false, distractorRationale: "A monocultura substitui e elimina a rica biodiversidade do bioma Cerrado por uma única cultura exótica." },
+      { id: "d", text: "a imediata desvalorização das terras agricultáveis com colapso total da balança comercial do agronegócio.", isCorrect: false, distractorRationale: "As commodities agrícolas continuam com elevado valor de mercado e peso significativo nas exportações brasileiras." },
+      { id: "e", text: "o fim da necessidade de qualquer aplicação de defensivos químicos ou herbicidas nas lavouras.", isCorrect: false, distractorRationale: "O uso continuado selecionou 'superervas daninhas' resistentes, exigindo aplicações de volumes ainda maiores e formulações químicas mais agressivas." }
+    ],
+    detailedExplanation: {
+      summary: "O modelo das grandes monoculturas transgênicas gera alta produtividade econômica de curto prazo, mas provoca erosão da agrobiodiversidade (perda de sementes crioulas ancestrais), seleção de plantas daninhas resistentes aos herbicidas e aprisionamento dos agricultores a patentes internacionais de sementes e insumos.",
+      stepByStep: [
+        "Homogeneização da paisagem: Milhões de hectares com a mesma composição genética tornam as plantações vulneráveis a novas pragas sistêmicas.",
+        "Resistência de plantas invasoras: O uso massivo do mesmo herbicida (glifosato) selecionou biótipos de plantas daninhas resistentes (como o capim-amargoso e buva).",
+        "Concentração corporativa: O mercado de sementes e agroquímicos é concentrado em poucas multinacionais globais detentoras de patentes tecnológicas.",
+        "Erosão cultural: Desaparecimento de cultivares locais selecionados historicamente pela agricultura familiar e povos tradicionais."
+      ],
+      coreConcept: "Monoculturas Biotecnológicas: Perda de Agrobiodiversidade e Seleção de Superervas",
+      trapWarning: "No ENEM, aborde a biotecnologia agrícola de forma equilibrada: reconhecendo os ganhos expressivos de produtividade, sem ignorar as contradições ecológicas da simplificação biológica e do aumento do uso de químicos."
+    },
+    commonTraps: [
+      "Achar que plantas transgênicas eliminaram o uso de agroquímicos",
+      "Ignorar o conceito de perda de agrobiodiversidade e patentes de sementes"
+    ],
+    tags: ["transgenicos", "monocultura", "agrobiodiversidade", "matopiba", "agronegocio"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-019",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia",
+    subtopic: "Racismo Ambiental e Justiça Socioespacial Urbana",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O conceito de 'racismo ambiental', cunhado originalmente pelo sociólogo Robert Bullard nos Estados Unidos e incorporado aos estudos de geografia urbana brasileira, designa a imposição desproporcional de custos e degradações ecológicas sobre comunidades racializadas e de baixa renda. No contexto das grandes metrópoles brasileiras, essa dinâmica reflete-se na localização de habitações periféricas em encostas instáveis sujeitas a desmoronamentos, várzeas inundáveis desprovidas de microdrenagem pluvial, proximidade de vazadouros de lixo e carência crônica de saneamento básico e áreas verdes públicas.",
+      source: "Justiça Ambiental e Geografia Crítica das Cidades, 2024."
+    },
+    prompt: "A aplicação desse referencial teórico à análise dos desastres climáticos nas periferias urbanas brasileiras evidencia que os impactos das chuvas extremas:",
+    options: [
+      { id: "a", text: "não são meramente acidentes da 'natureza neutra', mas decorrem de escolhas políticas de planejamento urbano e segregação socioespacial que tornam populações historicamente vulnerabilizadas as mais expostas a riscos ambientais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "afetam igualmente todas as classes sociais com idêntica intensidade de destruição nas áreas nobres e periféricas.", isCorrect: false, distractorRationale: "Bairros nobres contam com drenagem estruturada, obras de contenção e redes pluviais, sofrendo perdas humanas incomparavelmente menores." },
+      { id: "c", text: "resultam da opção espontânea e livre dos cidadãos em viver em áreas sem saneamento e sem segurança habitacional.", isCorrect: false, distractorRationale: "A moradia em áreas de risco é fruto da especulação imobiliária, pobreza e falta de políticas públicas de habitação social." },
+      { id: "d", text: "acontecem exclusivamente devido a falhas geológicas profundas ligadas a abalos sísmicos tectônicos.", isCorrect: false, distractorRationale: "O Brasil é tectonicamente estável; os desastres decorrem de chuvas torrenciais atuando sobre encostas desmatadas e ocupadas sem contenção de engenharia." },
+      { id: "e", text: "podem ser completamente eliminados se a população deixar de consultar previsões meteorológicas na televisão.", isCorrect: false, distractorRationale: "Previsões meteorológicas e sistemas de alerta de defesa civil salvam vidas e devem ser ampliados, não ignorados." }
+    ],
+    detailedExplanation: {
+      summary: "O conceito de racismo ambiental demonstra que a degradação e o perigo ambiental têm cor e classe social. A segregação urbana relega os grupos mais pobres e negros aos piores terrenos da cidade (morros íngremes, fundos de vale alagadiços), convertendo eventos climáticos naturais em tragédias sociais previsíveis.",
+      stepByStep: [
+        "Superação do conceito de 'desastre puramente natural': O volume da chuva é físico/climático, mas quem morre soterrado é determinado pela desigualdade social e pela política habitacional.",
+        "Segregação socioespacial: O solo valorizado com infraestrutura é reservado para as classes ricas, enquanto as periferias desprovidas de serviços básicos concentram os riscos de contaminação e deslizamentos.",
+        "Conclusão crítica: Trata-se de uma questão de direitos humanos, direitos civis e justiça ambiental distributiva."
+      ],
+      coreConcept: "Racismo Ambiental: Segregação Urbana, Justiça Climática e Vulnerabilidade Social",
+      trapWarning: "No ENEM, essa abordagem interdisciplinar entre Geografia e Sociologia é fortíssima: rejeite alternativas que atribuam as mortes em enchentes e deslizamentos unicamente 'à fúria cega da natureza'."
+    },
+    commonTraps: [
+      "Tratar deslizamentos de terra como desastres 'naturais e inevitáveis'",
+      "Desconsiderar a dimensão racial e de classe na distribuição dos investimentos em infraestrutura e saneamento"
+    ],
+    tags: ["racismo-ambiental", "justica-climatica", "segregacao-socioespacial", "enchentes", "deslizamentos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-020",
+    area: "humanas",
+    competence: 6,
+    skill: 30,
+    topic: "Geografia",
+    subtopic: "Créditos de Carbono, Mecanismo REDD+ e a Economia Verde",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No âmbito das negociações multilaterais sobre o clima (como o Artigo 6 do Acordo de Paris), consolidou-se o mercado de créditos de carbono e a regulamentação de instrumentos de pagamento por serviços ambientais, com destaque para o mecanismo de REDD+ (Redução de Emissões por Desmatamento e Degradação Florestal). Pelo REDD+, países em desenvolvimento, comunidades tradicionais e proprietários de terras recebem incentivos financeiros e remuneração pelo estoque de carbono mantido na vegetação em pé que deixou de ser derrubada.",
+      source: "Governança Climática Global e Finanças Verdes, 2024."
+    },
+    prompt: "Como instrumento de política pública e diplomacia climática, a precificação do carbono florestal por meio do REDD+ visa:",
+    options: [
+      { id: "a", text: "atribuir valor econômico à floresta conservada, tornando a preservação ambiental competitiva financeiramente frente às atividades econômicas predatórias que geram desmatamento.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "autorizar as empresas poluidoras globais a queimar combustíveis fósseis de forma ilimitada sem qualquer necessidade de investimento em energia limpa.", isCorrect: false, distractorRationale: "O objetivo é mitigar emissões globais complementando a transição energética, e não criar licença irrestrita para poluir sem limites." },
+      { id: "c", text: "proibir o convívio e a permanência de povos indígenas e extrativistas nas áreas de floresta primária.", isCorrect: false, distractorRationale: "O REDD+ socioambiental prevê salvaguardas que fortalecem a governança e a remuneração de povos indígenas e comunidades ribeirinhas." },
+      { id: "d", text: "transformar todo o território florestal brasileiro em pastagem aberta para o gado confinado.", isCorrect: false, distractorRationale: "O mecanismo tem o objetivo oposto: frear a expansão da pastagem sobre a floresta nativa." },
+      { id: "e", text: "substituir a moeda corrente de todos os países por certificados de papel não conversíveis.", isCorrect: false, distractorRationale: "Os créditos de carbono são ativos financeiros negociáveis cotados nas moedas oficiais vigentes." }
+    ],
+    detailedExplanation: {
+      summary: "O mecanismo de REDD+ busca corrigir uma falha histórica de mercado: historicamente a árvore derrubada (madeira, pasto) gerava dinheiro, enquanto a árvore viva não tinha valor monetário reconhecido. A precificação do carbono cria valor financeiro para a conservação florestal viva.",
+      stepByStep: [
+        "Conceito de 1 crédito de carbono: Equivale à redução ou remoção de 1 tonelada métrica de CO2 equivalente (tCO2e) da atmosfera.",
+        "Mecanismo do REDD+: Países ricos e corporações financiam ações de fiscalização, demarcação e manejo florestal sustentável em florestas tropicais.",
+        "Desafio e vigilância crítica: Evitar o 'greenwashing' (compensação sem redução de emissões reais) e garantir que as comunidades tradicionais que guardam a floresta recebam a partilha justa dos recursos."
+      ],
+      coreConcept: "Mecanismo REDD+, Pagamento por Serviços Ambientais e Créditos de Carbono",
+      trapWarning: "Atenção: o REDD+ é uma ferramenta econômica auxiliar de incentivo, mas não substitui a necessidade imperiosa da descarbonização das matrizes energéticas e de transporte nos países industrializados."
+    },
+    commonTraps: [
+      "Achar que crédito de carbono é uma autorização irrestrita e ética para poluir sem limites",
+      "Ignorar o papel das salvaguardas socioambientais para povos originários nos projetos de conservação"
+    ],
+    tags: ["redd+", "creditos-de-carbono", "economia-verde", "acordo-de-paris", "servicos-ambientais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

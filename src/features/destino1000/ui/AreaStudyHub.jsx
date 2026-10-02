@@ -43,7 +43,7 @@ const AREA_TOPICS = {
     { id: "matematica/geometria", name: "Geometria Espacial e Plana", tag: "Geometria", priority: "Alta • Projeções e Volumes", questionsCount: 25 },
     { id: "matematica/geometria-analitica", name: "Geometria Analítica e Retas", tag: "Geometria", priority: "Alta • Coordenadas e Cônicas", questionsCount: 20 },
     { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 20 },
-    { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 10 },
+    { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 20 },
     { id: "matematica/probabilidade", name: "Probabilidade e Análise Combinatória", tag: "Combinatória", priority: "Média-Alta", questionsCount: 20 },
   ],
   humanas: [
@@ -52,10 +52,10 @@ const AREA_TOPICS = {
     { id: "humanas/geografia-urbana", name: "Geografia Urbana, Demografia e Espaço", tag: "Geografia", priority: "Crítica", questionsCount: 20 },
     { id: "humanas/geopolitica", name: "Geopolítica, Nova DIT e Globalização", tag: "Geografia", priority: "Alta • Atualidades", questionsCount: 20 },
     { id: "humanas/sociologia-filosofia", name: "Sociologia e Filosofia Contemporânea", tag: "Sociologia", priority: "Alta • Útil para Redação", questionsCount: 20 },
-    { id: "humanas/brasil-colonial", name: "Brasil Colonial: Economia e Escravidão", tag: "História", priority: "Alta", questionsCount: 10 },
-    { id: "humanas/meio-ambiente", name: "Biomas Brasileiros e Impactos Antrópicos", tag: "Geografia", priority: "Alta", questionsCount: 10 },
+    { id: "humanas/brasil-colonial", name: "Brasil Colonial: Economia e Escravidão", tag: "História", priority: "Alta", questionsCount: 20 },
+    { id: "humanas/meio-ambiente", name: "Biomas Brasileiros e Impactos Antrópicos", tag: "Geografia", priority: "Alta", questionsCount: 20 },
     { id: "humanas/era-vargas-populismo", name: "Era Vargas, CLT e Populismo", tag: "História", priority: "Crítica • Muito Cobrado", questionsCount: 20 },
-    { id: "humanas/geografia-fisica-clima", name: "Climatologia, Relevo e Domínios Naturais", tag: "Geografia", priority: "Alta • Aziz Ab'Sáber", questionsCount: 10 },
+    { id: "humanas/geografia-fisica-clima", name: "Climatologia, Relevo e Domínios Naturais", tag: "Geografia", priority: "Alta • Aziz Ab'Sáber", questionsCount: 20 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 20 },

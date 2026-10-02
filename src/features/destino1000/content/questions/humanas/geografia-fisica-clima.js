@@ -358,5 +358,438 @@ export const QUESTIONS_GEOGRAFIA_FISICA = [
       trapWarning: 'No ENEM, a Altitude e a Latitude frequentemente jogam contra si ou a favor de si na determinação dos climas. Lembre-se: quanto mais alto, mais frio; quanto maior a latitude (longe do Equador), mais frio.'
     },
     tags: ['Climatologia', 'Fatores Climáticos', 'Altitude']
+  },
+  {
+    id: "HUM-GEOBIO-011",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia Física",
+    subtopic: "Massas de Ar e a Dinâmica Climática no Brasil",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A dinâmica meteorológica brasileira é governada pelo deslocamento sazonal de cinco massas de ar principais: Massa Equatorial Continental (mEc), Massa Equatorial Atlântica (mEa), Massa Tropical Atlântica (mTa), Massa Tropical Continental (mTc) e Massa Polar Atlântica (mPa). Durante o verão austral, a mEc expande seu domínio a partir da Amazônia, impulsionando chuvas convectivas por quase todo o território nacional. No inverno, com o recuo da radiação solar no hemisfério sul, a mPa avança vigorosamente pelo corredor de planícies e depressões do interior sul-americano.",
+      source: "Climatologia Dinâmica do Brasil, Ensino Médio, 2024."
+    },
+    prompt: "No período do inverno, a penetração profunda da Massa Polar Atlântica (mPa) pelo território brasileiro é diretamente responsável por deflagrar:",
+    options: [
+      { id: "a", text: "chuvas frontais prolongadas no litoral oriental e o fenômeno da friagem com queda térmica abrupta no sudoeste da Amazônia.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "estiagem generalizada e calor escaldante em todas as serras e planaltos da Região Sul.", isCorrect: false, distractorRationale: "A mPa é uma massa fria; sua chegada derruba as temperaturas e causa geadas no Sul, não calor." },
+      { id: "c", text: "aquecimento das águas fluviais na bacia amazônica acima de 40 °C.", isCorrect: false, distractorRationale: "A friagem resfria as águas e a atmosfera amazônica, podendo fazer as temperaturas caírem para 12 °C a 15 °C." },
+      { id: "d", text: "nevascas constantes e formação permanente de geleiras nas capitais do Nordeste.", isCorrect: false, distractorRationale: "O Nordeste possui clima tropical e semiárido de baixas latitudes, sem condições térmicas para formação de geleiras." },
+      { id: "e", text: "extinção temporária de todas as correntes de ventos na troposfera.", isCorrect: false, distractorRationale: "A mPa é caracterizada por frentes de vento sul e sudoeste de intensidade moderada a forte." }
+    ],
+    detailedExplanation: {
+      summary: "A Massa Polar Atlântica (mPa) é a única massa fria atuante no Brasil. No inverno, ela se divide em três ramos: sobe pelo litoral (causando chuvas frontais com a mTa), avança pelas serras do Sul/Sudeste (causando geadas) e sobe pelo interior continental (causando a friagem na Amazônia Ocidental).",
+      stepByStep: [
+        "Origem da mPa: Subantártica, fria e úmida.",
+        "Ramo litorâneo: Encontra o ar quente e úmido tropical no litoral do Sudeste e Nordeste, formando frentes frias e chuvas frontais prolongadas.",
+        "Ramo ocidental/continental: Canalizado pelo corredor topográfico entre os Andes e o Planalto Central, atinge Rondônia, Acre e sul do Amazonas, gerando a friagem."
+      ],
+      coreConcept: "Massa Polar Atlântica (mPa): Frentes Frias, Geadas e o Fenômeno da Friagem",
+      trapWarning: "Cuidado: a Massa Equatorial Continental (mEc) é ÚMIDA, sendo a única massa de ar continental do planeta que é úmida (devido à imensa evapotranspiração da floresta amazônica)."
+    },
+    commonTraps: [
+      "Achar que massas continentais são sempre secas (a mEc amazônica é hiperúmida)",
+      "Supor que a frente fria nunca alcança o norte do Brasil"
+    ],
+    tags: ["climatologia", "massas-de-ar", "mpa", "friagem", "frentes-frias"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-012",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia Física",
+    subtopic: "Classificação do Relevo Brasileiro por Jurandyr Ross",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A classificação do relevo brasileiro proposta pelo geógrafo Jurandyr Ross no final da década de 1980 substituiu as divisões clássicas anteriores de Aroldo de Azevedo e Aziz Ab'Sáber. Apoiando-se no levantamento cartográfico de imagens de radar obtidas pelo Projeto Radambrasil, Ross dividiu o território em 28 unidades morfoestruturais distribuídas em três categorias macrogeomorfológicas: planaltos, depressões e planícies.",
+      source: "ROSS, J. L. S. Geografia do Brasil. São Paulo: EDUSP, 2023."
+    },
+    prompt: "A principal inovação teórica e conceitual introduzida por Jurandyr Ross na compreensão do relevo brasileiro consistiu em:",
+    options: [
+      { id: "a", text: "definir e mapear as depressões relativas como formas aplainadas rebaixadas por processos de erosão contínua situadas entre as bacias sedimentares e os núcleos cristalinos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "identificar dobramentos modernos cenozóicos pontilhados de vulcões ativos em atividade no litoral.", isCorrect: false, distractorRationale: "O relevo brasileiro é geologicamente antigo e não possui dobramentos modernos nem vulcanismo ativo." },
+      { id: "c", text: "classificar todo o território nacional exclusivamente como uma imensa planície aluvial inundável.", isCorrect: false, distractorRationale: "As planícies verdadeiras ocupam menos de 5% do território brasileiro na classificação de Ross." },
+      { id: "d", text: "ignorar a ação do intemperismo e considerar o relevo como uma estrutura estática imutável desde a criação da Terra.", isCorrect: false, distractorRationale: "Ross enfatiza a morfogênese e a dinâmica contínua entre intemperismo, erosão e sedimentação." },
+      { id: "e", text: "estabelecer que as montanhas brasileiras ultrapassam habitualmente os 6.000 metros de altitude.", isCorrect: false, distractorRationale: "O ponto mais alto do Brasil é o Pico da Neblina com menos de 3.000 metros (2.995 m)." }
+    ],
+    detailedExplanation: {
+      summary: "A revolução de Jurandyr Ross foi introduzir as DEPRESSÕES (como a Depressão Sertaneja, Depressão Periférica Paulista e Depressão Sanfranciscana), áreas intermediárias desgastadas pela erosão entre planaltos sedimentares e crátons cristalinos.",
+      stepByStep: [
+        "Planaltos: Relevos residuais onde os processos de erosão superam os de sedimentação (ex.: Planaltos e Chapadas da Bacia do Paraná).",
+        "Depressões: Áreas rebaixadas por erosão prolongada circundadas por terrenos mais altos (processo erosivo predominante).",
+        "Planícies: Áreas essencialmente planas onde os processos de sedimentação e deposição de matéria superam os de erosão (ex.: Planície do Pantanal, Planície Amazônica ao longo das várzeas fluviais)."
+      ],
+      coreConcept: "Classificação de Jurandyr Ross: Morfogênese e o Papel das Depressões Relativas",
+      trapWarning: "No ENEM, lembre-se: no Brasil não existem depressões absolutas (abaixo do nível do mar); todas as depressões brasileiras são DEPRESSÕES RELATIVAS (abaixo apenas dos terrenos vizinhos)!"
+    },
+    commonTraps: [
+      "Confundir depressão relativa (Brasil) com depressão absoluta (como o Mar Morto)",
+      "Achar que as planícies cobrem a maior parte do território brasileiro (são menos de 5%)"
+    ],
+    tags: ["relevo-brasileiro", "jurandyr-ross", "depressoes", "planaltos", "geomorfologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-013",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Bacias Hidrográficas e Potencial Hidrelétrico no Brasil",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A hidrografia brasileira é uma das mais ricas do mundo, caracterizada pela predominância de drenagem exorreica (rios que deságuam no mar), regime de alimentação pluvial e fozes em estuário. Entretanto, a aptidão econômica para a geração de energia hidrelétrica distribui-se de forma muito desigual: enquanto a Bacia do Rio Paraná concentra o maior parque gerador já instalado no país, a Bacia Amazônica concentra o maior potencial hidrelétrico teórico remanescente.",
+      source: "Recursos Hídricos e Matriz Elétrica Brasileira, EPE, 2024."
+    },
+    prompt: "Essa distinção no aproveitamento hidrelétrico entre as duas bacias decorre de fatores geomorfológicos e ambientais, pois a Bacia do Paraná:",
+    options: [
+      { id: "a", text: "situa-se em terreno de planalto com desníveis topográficos acentuados próximos aos grandes centros consumidores do Centro-Sul, enquanto a Amazônia é dominada por planícies e baixos platôs, exigindo usinas a fio d'água com extensas linhas de transmissão.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "possui volume d'água cem vezes superior ao da bacia amazônica durante todo o ano.", isCorrect: false, distractorRationale: "O Rio Amazonas tem vazão incomparavelmente maior que o Rio Paraná; o Paraná se destaca pelo desnível de planalto." },
+      { id: "c", text: "congela no inverno, o que facilita a retenção de água sob forma de gelo sólido nas barragens.", isCorrect: false, distractorRationale: "Rios brasileiros não congelam; o clima é tropical e subtropical." },
+      { id: "d", text: "apresenta drenagem endorreica que deságua em lagos subterrâneos fechados.", isCorrect: false, distractorRationale: "A drenagem da Bacia do Paraná é exorreica, correndo para o Rio da Prata e desembocando no Atlântico." },
+      { id: "e", text: "foi totalmente desativada em favor de termoelétricas nucleares instaladas no Pantanal.", isCorrect: false, distractorRationale: "A Bacia do Paraná segue como a espinha dorsal hidrelétrica do Sistema Interligado Nacional (Itaipu, Furnas, etc.)." }
+    ],
+    detailedExplanation: {
+      summary: "A energia hidrelétrica depende de dois fatores: vazão de água (Q) e desnível de queda (H), dados por Potência ≈ Q · H. A Bacia do Paraná alia água e quedas acentuadas de planalto perto das indústrias do Sudeste; já a Amazônia tem volume monumental mas pouco desnível, gerando grandes impactos socioambientais se alagar áreas planas.",
+      stepByStep: [
+        "Fórmula do potencial: P = densidade · gravidade · Vazão · Altura da queda.",
+        "Rios de Planalto (Paraná/São Francisco): Quedas naturais facilitam turbinas sem necessidade de alagar planícies colossais.",
+        "Rios de Planície e Baixo Planalto (Amazônia): Para evitar alagamentos monumentais, usam tecnologia a 'fio d'água' (como Belo Monte), cuja geração oscila fortemente entre épocas de seca e cheia."
+      ],
+      coreConcept: "Geomorfologia Fluvial e Potencial Hidrelétrico: Rios de Planalto vs. Rios de Planície",
+      trapWarning: "Lembre-se: Usinas a 'fio d'água' reduzem o tamanho do lago do reservatório, mas tornam a usina vulnerável à sazonalidade da seca dos rios amazônicos."
+    },
+    commonTraps: [
+      "Achar que o Amazonas é o rio com mais hidrelétricas instaladas (é o Paraná)",
+      "Esquecer que energia hidrelétrica precisa tanto de vazão volumétrica quanto de desnível do relevo"
+    ],
+    tags: ["hidrografia", "hidreletricas", "bacia-do-parana", "amazonia", "relevo-de-planalto"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-014",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia Física",
+    subtopic: "Chuva Orográfica e o Efeito de 'Sombra de Chuva' no Nordeste",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No Nordeste oriental, os ventos alísios de sudeste carregados de umidade do oceano Atlântico encontram a escarpa oriental do Planalto da Borborema. Ao subir a encosta voltada para o mar (barlavento), o ar se expande adiabaticamente, resfria-se e atinge o ponto de saturação, precipitando intensas chuvas orográficas na Zona da Mata e nas serras úmidas. Ao ultrapassar o topo e descer pela encosta ocidental (sotavento) em direção ao Sertão, a massa de ar aquece-se e torna-se seca.",
+      source: "Climatologia Regional Brasileira, 2024."
+    },
+    prompt: "O fenômeno meteorológico e geomorfológico descrito, caracterizado pelo dessecamento do ar a sotavento de uma barreira montanhosa, é denominado:",
+    options: [
+      { id: "a", text: "efeito de sombra de chuva (rain shadow), que acentua o déficit hídrico e contribui para a semiaridez do Sertão nordestino.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "efeito estufa antropogênico irreversível.", isCorrect: false, distractorRationale: "O fenômeno é natural e geomorfológico, não um efeito antrópico recente de queima de fósseis." },
+      { id: "c", text: "convecção térmica equatorial de cúmulo-nimbos.", isCorrect: false, distractorRationale: "Chuva convectiva é causada pelo aquecimento do solo em dias quentes de verão, não pelo relevo." },
+      { id: "d", text: "inversão térmica de inverno em bacias metropolitanas.", isCorrect: false, distractorRationale: "Inversão térmica prende ar frio poluído em centros urbanos no inverno, sem relação com escarpas de relevo." },
+      { id: "e", text: "radiação ultravioleta reflexiva de dunas costeiras.", isCorrect: false, distractorRationale: "A sombra de chuva decorre da compressão adiabática do ar descendente, não de reflexão de radiação em dunas." }
+    ],
+    detailedExplanation: {
+      summary: "A chuva de relevo (orográfica) ocorre quando o ar úmido é forçado a subir uma serra. No barlavento chove muito; no sotavento, o ar já desidratado desce comprimindo-se e aquecendo-se, criando uma 'sombra de chuva' seca no interior.",
+      stepByStep: [
+        "Barlavento: Lado da montanha de onde o vento sopra (úmido, condensação, nuvens e chuvas abundantes).",
+        "Subida: Resfriamento adiabático (o ar esfria à medida que sobe).",
+        "Sotavento: Lado protegido do vento (o ar desce seco e se aquece por compressão adiabática).",
+        "Consequência regional: O Planalto da Borborema atua como barreira parcial de umidade, intensificando a semiaridez do Sertão nordestino."
+      ],
+      coreConcept: "Chuva Orográfica, Barlavento, Sotavento e Sombra de Chuva (Rain Shadow)",
+      trapWarning: "Lembre-se: 'Barlavento' é onde o vento VEM e CHOVE; 'Sotavento' é onde o vento VAI e FICA SECO."
+    },
+    commonTraps: [
+      "Inverter barlavento e sotavento",
+      "Achar que o Planalto da Borborema é a única causa da seca do Sertão (a circulação atmosférica das células de Hadley e subsidência de ar também são determinantes)"
+    ],
+    tags: ["chuva-orografica", "barborema", "semiarido", "sombra-de-chuva", "relevo-e-clima"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-015",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia Física",
+    subtopic: "Intemperismo e Pedogênese: Mares de Morros vs. Caatinga",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A formação e o desenvolvimento dos solos (pedogênese) refletem a ação combinada de cinco fatores: rocha-mãe, clima, relevo, organismos vivos e tempo. Nas encostas úmidas da Serra do Mar (Mares de Morros), o intemperismo químico predomina amplamente, gerando solos profundos (latossolos e argissolos) e mantos de intemperismo que ultrapassam dezenas de metros. Já nas depressões interplanálticas do Semiárido (Caatinga), as precipitações escassas e a intensa insolação favorecem a atuação do intemperismo físico mecânico.",
+      source: "Pedologia e Geomorfologia Tropical, Cadernos de Solos, 2024."
+    },
+    prompt: "Como decorrência do predomínio do intemperismo físico mecânico no Semiárido brasileiro, os solos característicos desse domínio são predominantemente:",
+    options: [
+      { id: "a", text: "rasos, pedregosos (litólicos) e ricos em minerais primários não lixiviados, com baixa taxa de matéria orgânica e vulnerabilidade à salinização quando irrigados incorretamente.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "hiperprofundos e ácidos, com mais de vinte metros de argila lavada e desprovida de quaisquer sais minerais.", isCorrect: false, distractorRationale: "Solos profundos e lixiviados (latossolos) são típicos de climas chuvosos e quentes, não de áreas semiáridas." },
+      { id: "c", text: "formados inteiramente por cinzas vulcânicas recentes com fertilidade orgânica incomparável.", isCorrect: false, distractorRationale: "O Brasil não possui atividade vulcânica recente no período geológico atual." },
+      { id: "d", text: "compostos exclusivamente de gelo fóssil permafrost resistente ao calor.", isCorrect: false, distractorRationale: "Permafrost só existe nas regiões polares e tundras de alta latitude." },
+      { id: "e", text: "impossibilitados de sustentar qualquer espécie botânica adaptada às secas.", isCorrect: false, distractorRationale: "A Caatinga possui riquíssima vegetação xerófila e endêmica plenamente adaptada a esses solos." }
+    ],
+    detailedExplanation: {
+      summary: "Em climas chuvosos (Mares de Morros/Amazônia), a água abundante dissolve e lava os minerais (intemperismo químico e lixiviação), criando solos profundos e lixiviados. No semiárido, a falta de água faz com que a dilatação térmica rache a rocha (intemperismo físico), deixando solos rasos, cheios de pedras, porém mineralmente ricos.",
+      stepByStep: [
+        "Intemperismo químico: Requer água líquida e calor para reações de oxidação, carbonatação e hidrólise.",
+        "Intemperismo físico (termoclastia): Fragmentação mecânica pela variação de temperatura entre dia e noite.",
+        "Solos da Caatinga: Rasos e pedregosos (neossolos litólicos), porém com muitos sais minerais que não foram 'lavados' pela chuva.",
+        "Risco da salinização: Quando esses solos minerais são irrigados com drenagem ineficiente sob sol escaldante, a água evapora rapidamente e acumula sais tóxicos na superfície."
+      ],
+      coreConcept: "Intemperismo Químico vs. Físico e Solos Tropicais Brasileiros",
+      trapWarning: "No ENEM, atente para o risco da SALINIZAÇÃO do solo no Semiárido: os solos já têm muitos sais minerais naturais; a irrigação mal planejada evapora rápido e 'salga' a terra, inutilizando-a."
+    },
+    commonTraps: [
+      "Achar que solos rasos e pedregosos são quimicamente pobres em minerais",
+      "Ignorar o perigo da salinização decorrente da evapotranspiração acelerada no Nordeste"
+    ],
+    tags: ["intemperismo", "pedogenese", "solos", "caatinga", "salinizacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-016",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia Física",
+    subtopic: "O Fenômeno da Friagem no Sudoeste Amazônico",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em municípios do Acre, de Rondônia e do sul do Amazonas, é comum que entre os meses de maio e agosto os termômetros registrem quedas térmicas abruptas, despencando de médias de 32 °C para marcas inferiores a 14 °C em um intervalo de menos de vinte e quatro horas, acompanhadas de ventos constantes de quadrante sul. A população local denomina essa manifestação climática atípica de 'friagem'.",
+      source: "Cadernos de Meteorologia Tropical do Brasil, 2024."
+    },
+    prompt: "A ocorrência da friagem no sudoeste da Amazônia brasileira é possibilitada pela combinação entre:",
+    options: [
+      { id: "a", text: "o avanço meridional da Massa Polar Atlântica (mPa) e a existência de um corredor de relevo plano e rebaixado pelas bacias do Prata e Paraguai, canalizado entre os Andes e o Planalto Central.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a erupção de cinzas vulcânicas nos planaltos da Guiana Francesa que bloqueiam o calor solar.", isCorrect: false, distractorRationale: "O escudo das Guianas não tem atividade vulcânica; o resfriamento é de origem polar sul." },
+      { id: "c", text: "o congelamento repentino do Rio Amazonas em toda a sua extensão fluvial navegável.", isCorrect: false, distractorRationale: "O Rio Amazonas nunca congela; a temperatura cai na atmosfera, mas permanece positiva." },
+      { id: "d", text: "a atração gravitacional excepcional da Lua durante o solstício de verão.", isCorrect: false, distractorRationale: "As marés astronômicas lunares influenciam o oceano, não ondas polares de ar no interior continental." },
+      { id: "e", text: "a ausência completa de florestas no estado do Acre e de Rondônia.", isCorrect: false, distractorRationale: "A região abriga densa floresta tropical perenifólia." }
+    ],
+    detailedExplanation: {
+      summary: "A friagem é a invasão de ar polar antártico no coração equatorial da Amazônia. Isso só acontece porque o relevo central da América do Sul é plano e rebaixado (Planície do Chaco e Pantanal), formando uma 'avenida' sem montanhas que permite à Massa Polar Atlântica avançar diretamente até a Amazônia Ocidental.",
+      stepByStep: [
+        "Origem: Massa Polar Atlântica (mPa) deslocando-se no inverno do hemisfério sul.",
+        "Corredor geográfico: Cordilheira dos Andes a oeste e Planalto Central a leste formam uma calha de canalização do vento sul.",
+        "Impacto térmico: Queda de até 15 °C a 20 °C na temperatura da Amazônia Ocidental, provocando sensação de frio intenso na população habituada ao calor equatorial."
+      ],
+      coreConcept: "A Friagem: Canalização da Massa Polar Atlântica pelo Relevo Sul-Americano",
+      trapWarning: "No ENEM, observe como o relevo influencia a circulação atmosférica: a ausência de barreiras leste-oeste no interior da América do Sul permite que massas polares alcancem latitudes equatoriais!"
+    },
+    commonTraps: [
+      "Achar que a friagem é um fenômeno de radiação cósmica ou de altitude de montanhas",
+      "Ignorar o papel da Massa Polar Atlântica (mPa) como o motor térmico do evento"
+    ],
+    tags: ["friagem", "amazonia", "mpa", "climatologia", "relevo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-017",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Estrutura Geológica do Brasil e Recursos Minerais",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A crosta terrestre brasileira é tectonicamente estável, localizada no centro da Placa Sul-Americana e desprovida de zonas ativas de subducção ou choque de placas. Do ponto de vista morfoestrutural, o território reparte-se basicamente em dois domínios geológicos: os Escudos Cristalinos ou Crátons (formações antigas do Pré-Cambriano, cobrindo cerca de 36% do país) e as Bacias Sedimentares (depressões preenchidas por detritos sedimentares do Fanerozoico, cobrindo cerca de 64%).",
+      source: "Geologia do Brasil e Recursos Minerais Estratégicos, CPRM, 2024."
+    },
+    prompt: "Essa arquitetura geológica determina diretamente a distribuição espacial das riquezas minerais brasileiras, de modo que:",
+    options: [
+      { id: "a", text: "os minerais metálicos (como ferro, manganês, bauxita e ouro) concentram-se nos escudos cristalinos pré-cambrianos, enquanto os combustíveis fósseis (como petróleo, gás natural e carvão) encontram-se nas bacias sedimentares.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "as reservas de petróleo e gás estão localizadas exclusivamente no interior de rochas magmáticas graníticas intrusivas.", isCorrect: false, distractorRationale: "Petróleo exige rochas sedimentares porosas geradoras e reservatórios de matéria orgânica fóssil." },
+      { id: "c", text: "o minério de ferro do Quadrilátero Ferrífero formou-se durante a era quaternária recente do Cenozoico.", isCorrect: false, distractorRationale: "O minério de ferro brasileiro é pré-cambriano, tendo mais de 2 bilhões de anos de antiguidade." },
+      { id: "d", text: "as bacias sedimentares são compostas unicamente por diamantes em estado bruto e platina.", isCorrect: false, distractorRationale: "Bacias sedimentares contêm fósseis, calcário, folhelhos, arenitos e hidrocarbonetos." },
+      { id: "e", text: "não há carvão mineral nem petróleo em nenhuma bacia geológica do território brasileiro.", isCorrect: false, distractorRationale: "O Brasil possui grandes jazidas petrolíferas no Pré-Sal e carvão mineral na Bacia do Paraná (sul do país)." }
+    ],
+    detailedExplanation: {
+      summary: "Regra de ouro da geologia para o ENEM: Escudos Cristalinos (rochas magmáticas e metamórficas antigas) = MINERAIS METÁLICOS (ferro de Carajás, manganês de Urucum, bauxita do Trombetas). Bacias Sedimentares (acúmulo de sedimentos e restos orgânicos) = COMBUSTÍVEIS FÓSSEIS (petróleo na Bacia de Santos e Campos, carvão na Bacia do Paraná).",
+      stepByStep: [
+        "Escudos Cristalinos / Crátons: Idade Arqueozoica e Proterozoica. Ouro, ferro (itabarito), níquel, cobre e bauxita.",
+        "Bacias Sedimentares: Paleozoica, Mesozoica e Cenozoica. Camadas sedimentares acumuladas com restos de algas marinhas sob pressão e temperatura geram petróleo e gás.",
+        "Conclusão: A história geológica define a vocação extrativa de cada região brasileira."
+      ],
+      coreConcept: "Geologia do Brasil: Escudos Cristalinos (Minerais Metálicos) vs. Bacias Sedimentares (Combustíveis Fósseis)",
+      trapWarning: "Cuidado com o Pré-Sal: embora a rocha que armazena possa ser carbonática (calcário microbiano), ela está inserida em uma imensa Bacia Sedimentar marinha!"
+    },
+    commonTraps: [
+      "Achar que minério de ferro e ouro se formam em bacias sedimentares",
+      "Confundir escudo cristalino com dobramento moderno (que não existe no Brasil)"
+    ],
+    tags: ["geologia", "escudos-cristalinos", "bacias-sedimentares", "petroleo", "minerio-de-ferro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-018",
+    area: "humanas",
+    competence: 6,
+    skill: 29,
+    topic: "Geografia Física",
+    subtopic: "Mares de Morros e Movimentos de Massa em Encostas Serranas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Domínio dos Mares de Morros, que se estende ao longo da fachada atlântica do Sudeste e Sul brasileiro, é marcado por um relevo mamelonar erodido ('meias-laranjas') com encostas de alta declividade na Serra do Mar e Mantiqueira. A combinação entre mantos espessos de solo residual (intemperismo químico avançado), pluviosidade concentrada no verão (chuvas convectivas e orográficas) e desmatamento das encostas gera condições propícias para movimentos gravitacionais de massa (escorregamentos e corridas de lama).",
+      source: "Geomorfologia de Encostas e Riscos Geológicos no Brasil, 2024."
+    },
+    prompt: "O gatilho físico determinante que deflagra os grandes deslizamentos de terra nas encostas serranas do Sudeste durante a estação chuvosa é:",
+    options: [
+      { id: "a", text: "a saturação hídrica dos poros do solo pela água pluvial, que eleva a pressão neutra, reduz o atrito e a coesão interna entre as partículas e provoca a ruptura na interface com a rocha cristalina impermeável.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a ocorrência de abalos sísmicos de magnitude superior a 9 na escala Richter gerados no centro do estado de São Paulo.", isCorrect: false, distractorRationale: "O Brasil não possui epicentros de sismos de altíssima magnitude; a causa é hidrológica pluvial." },
+      { id: "c", text: "a solidificação do solo provocada por congelamentos glaciais em temperaturas de 50 graus abaixo de zero.", isCorrect: false, distractorRationale: "O fenômeno ocorre no pico do verão chuvoso tropical (dezembro a março), com temperaturas altas." },
+      { id: "d", text: "o ressecamento extremo que converte o solo fértil em pó eólico impulsionado por tempestades de areia do deserto.", isCorrect: false, distractorRationale: "O fator deflagrador é exatamente o excesso torrencial de água das chuvas, não a seca." },
+      { id: "e", text: "a ausência de qualquer força de gravidade atuando sobre as vertentes montanhosas.", isCorrect: false, distractorRationale: "A gravidade é o motor primário do movimento de massa das encostas em declive." }
+    ],
+    detailedExplanation: {
+      summary: "Deslizamentos de encosta no verão brasileiro resultam da água acumulada: as chuvas infiltram até que o solo fica encharcado (saturado). A água nos poros empurra os grãos de terra (pressão neutra), o solo perde sustentação e desliza encosta abaixo sobre a rocha lisa do fundo.",
+      stepByStep: [
+        "Fatores condicionantes naturais: Declividade acentuada, solo profundo e rocha cristalina impermeável subjacente.",
+        "Fator deflagrador: Chuvas intensas e prolongadas que saturam o manto de alteração.",
+        "Fator antrópico agravante: Ocupação desordenada de morros, cortes irregulares no talude, lançamento de águas servidas sem drenagem e retirada da cobertura vegetal original."
+      ],
+      coreConcept: "Movimentos Gravitacionais de Massa: Saturação de Solo, Coesão e Risco Geológico",
+      trapWarning: "No ENEM, enfatize que a vegetação nativa com raízes profundas ancora o solo e reduz a velocidade da infiltração; o desmatamento acelera a saturação e os escorregamentos."
+    },
+    commonTraps: [
+      "Achar que o deslizamento ocorre por sismos ou terremotos no Brasil",
+      "Ignorar o papel da água subterrânea saturando a interface solo-rocha"
+    ],
+    tags: ["movimentos-de-massa", "deslizamentos", "mares-de-morros", "serra-do-mar", "riscos-ambientais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-019",
+    area: "humanas",
+    competence: 6,
+    skill: 27,
+    topic: "Geografia Física",
+    subtopic: "Classificação Genética das Chuvas: Convectivas, Frontais e Orográficas",
+    difficulty: 2,
+    estimatedTimeSeconds: 140,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "As precipitações pluviométricas resultam da ascensão, resfriamento e condensação do vapor d'água na atmosfera. De acordo com o mecanismo que força a elevação do ar, a meteorologia classifica as chuvas em três tipos fundamentais: convectivas, frontais e orográficas.",
+      source: "Manual Didático de Meteorologia e Climatologia, 2024."
+    },
+    prompt: "A correspondência correta entre a dinâmica formadora e o tipo de precipitação pluviométrica predominante é expressa em:",
+    options: [
+      { id: "a", text: "Chuva Convectiva: forte aquecimento da superfície pelo Sol provocando subida rápida de ar quente e úmido com formação de nuvens cúmulo-nimbos e tempestades intensas de curta duração (típica chuva de verão).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "Chuva Frontal: decorrente unicamente da colisão de ondas sonoras no topo de cânions rochosos desérticos.", isCorrect: false, distractorRationale: "Chuva frontal decorre do choque de duas massas de ar com temperaturas e umidades distintas (ex.: mPa e mTa)." },
+      { id: "c", text: "Chuva Orográfica: gerada pelo resfriamento nuclear de átomos de hidrogênio nas planícies marítimas.", isCorrect: false, distractorRationale: "Chuva orográfica decorre da barreira mecânica do relevo que força a subida e condensação do ar." },
+      { id: "d", text: "Chuva Convectiva: precipitação contínua e uniforme que dura semanas ininterruptas sobre continentes inteiros.", isCorrect: false, distractorRationale: "Chuvas contínuas e amplas são tipicamente frontais; chuvas convectivas são localizadas, torrenciais e rápidas." },
+      { id: "e", text: "Chuva Orográfica: causada exclusivamente pela rotação da Terra sem qualquer interferência de serras ou montanhas.", isCorrect: false, distractorRationale: "O prefixo 'oro' significa relevo/montanha; depende estritamente da topografia." }
+    ],
+    detailedExplanation: {
+      summary: "Os 3 tipos clássicos de chuvas no ENEM: 1) Convectiva ('chuva de verão', ar quente sobe rápido, tempestade à tarde com raios e trovoadas); 2) Frontal (encontro de massa fria com quente, chuva persistente e contínua de vários dias); 3) Orográfica ('chuva de relevo', nuvem sobe a serra e deságua no barlavento).",
+      stepByStep: [
+        "Convectiva: Aquecimento térmico basal ⟹ convecção vertical ⟹ Cumulonimbus (pancada de chuva à tarde).",
+        "Frontal: Zona de transição entre massas de ar de densidades diferentes (frente fria avançando sobre ar quente).",
+        "Orográfica: Vento úmido encontra obstáculo de relevo e sobe condensando."
+      ],
+      coreConcept: "Mecanismos de Precipitação Pluviométrica: Convecção, Frentes e Relevo",
+      trapWarning: "No ENEM, chuvas convectivas são frequentemente associadas a ilhas de calor e alagamentos rápidos de fim de tarde nas capitais brasileiras."
+    },
+    commonTraps: [
+      "Confundir chuva frontal (longa e abrangente) com chuva convectiva (rápida, localizada e intensa)",
+      "Esquecer a relação da chuva convectiva com nuvens de grande desenvolvimento vertical (Cumulonimbus)"
+    ],
+    tags: ["chuvas-convectivas", "chuvas-frontais", "chuvas-orograficas", "climatologia", "meteorologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-020",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "O Bioma Pantanal e a Dinâmica do 'Pulso de Inundação'",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Instalado em uma vasta depressão tectônica de sedimentação quaternária na Bacia do Alto Paraguai, o Pantanal é a maior planície úmida contínua do planeta. Sua ecologia, biodiversidade e dinâmica socioeconômica são regidas pelo 'pulso de inundação'. Devido à declividade extremamente suave do terreno (com desníveis de apenas alguns centímetros por quilômetro), as águas das chuvas de verão caídas nos planaltos circundantes demoram meses para drenar pelo leito sinuoso do Rio Paraguai, fazendo com que o pico da inundação na planície ocorra em pleno inverno seco dos planaltos vizinhos.",
+      source: "Ecologia do Pantanal e Geomorfologia Fluvial, Embrapa Pantanal, 2024."
+    },
+    prompt: "Essa lentidão hidrológica e a alternância periódica entre vazante e enchente configuram um ambiente no qual:",
+    options: [
+      { id: "a", text: "a deposição de sedimentos e nutrientes aluviais durante a cheia renova a fertilidade natural das pastagens nativas, permitindo a prática secular de pecuária bovina extensiva adaptada ao calendário das águas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a vida biológica foi totalmente exterminada devido ao congelamento eterno das lagoas marginais.", isCorrect: false, distractorRationale: "O Pantanal possui uma das maiores biomassas de fauna selvagem das Américas e não sofre congelamento." },
+      { id: "c", text: "todas as espécies animais habitam permanentemente túneis subterrâneos blindados sem emergir à superfície.", isCorrect: false, distractorRationale: "A fauna desloca-se sazonalmente entre cordilheiras de terra firme e áreas alagadas." },
+      { id: "d", text: "os rios secam permanentemente de forma irreversível e transformam o bioma em um deserto de dunas rochosas.", isCorrect: false, distractorRationale: "O ciclo é hidrologicamente renovável e periódico de cheia e vazante todos os anos." },
+      { id: "e", text: "a declividade abrupta de despenhadeiros provoca cachoeiras gigantescas em toda a planície central.", isCorrect: false, distractorRationale: "O relevo do Pantanal é uma planície de declividade quase nula, sem cachoeiras no seu leito interior." }
+    ],
+    detailedExplanation: {
+      summary: "O Pantanal opera como uma imensa esponja: a planície quase perfeitamente plana retarda o escoamento das águas. Quando o rio transborda, fertiliza o solo com matéria orgânica. Quando seca (vazante), brotam pastagens nativas ricas onde o gado pantaneiro pasta há mais de dois séculos em harmonia ecológica tradicional.",
+      stepByStep: [
+        "Geomorfologia: Bacia sedimentar afundada entre planaltos sedimentares e cristalinos.",
+        "Declividade ínfima: Desnível de 1 a 2 cm por quilômetro no sentido norte-sul; a água escoa lentamente, inundando até 80% da área durante a cheia.",
+        "Pulso de inundação: Alternância rítmica anual entre fase aquática (cheia) e terrestre (vazante).",
+        "Pecuária tradicional: Pecuária extensiva em pastos nativos adaptada às migrações do rebanho para áreas mais altas (cordilheiras e capões) durante as cheias."
+      ],
+      coreConcept: "Pulso de Inundação do Pantanal: Geomorfologia de Planície e Adaptação Socioecológica",
+      trapWarning: "No ENEM, atente para as ameaças contemporâneas ao Pantanal: drenagem artificial para lavouras de soja, assoreamento do Rio Taquari decorrente do desmatamento nos planaltos circundantes e queimadas criminosas durante estiagens prolongadas."
+    },
+    commonTraps: [
+      "Achar que o Pantanal tem relevo acidentado com corredeiras e quedas d'água",
+      "Ignorar o atraso sazonal entre o período de chuva nos planaltos e a cheia máxima na planície"
+    ],
+    tags: ["pantanal", "pulso-de-inundacao", "relevo-de-planicie", "rio-paraguai", "pecuaria-pantaneira"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

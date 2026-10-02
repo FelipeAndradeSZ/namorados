@@ -435,5 +435,445 @@ export const QUESTIONS_TRIGONOMETRIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-011",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Trigonometria",
+    subtopic: "Lei dos Cossenos em Terrenos Triangulares",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um engenheiro agrimensor realiza o levantamento topográfico de um terreno delimitado por três marcos. As distâncias medidas entre o marco central e os dois outros pontos são de 50 metros e 80 metros. O teodolito posicionado no marco central aponta que o ângulo formado entre os alinhamentos desses dois lados é de 60°. (Dado: cos 60° = 0,50).",
+      source: "ENEM Topografia e Agrimensura"
+    },
+    prompt: "Qual é o comprimento, em metros, do terceiro lado que fecha esse terreno triangular?",
+    options: [
+      { id: "a", text: "70 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "94 metros", isCorrect: false, distractorRationale: "Somou o termo do cosseno em vez de subtrair: a² = b² + c² + 2bc·cos(60°)." },
+      { id: "c", text: "89 metros", isCorrect: false, distractorRationale: "Aplicou o Teorema de Pitágoras ignorando que o triângulo não é retângulo." },
+      { id: "d", text: "65 metros", isCorrect: false, distractorRationale: "Calculou a média aritmética dos dois lados conhecidos." },
+      { id: "e", text: "30 metros", isCorrect: false, distractorRationale: "Subtraiu os dois lados conhecidos (80 - 50)." }
+    ],
+    detailedExplanation: {
+      summary: "Aplica-se a Lei dos Cossenos: a² = b² + c² - 2·b·c·cos(θ) para encontrar o lado oposto ao ângulo conhecido em qualquer triângulo.",
+      stepByStep: [
+        "Identificação dos dados: b = 50 m, c = 80 m, θ = 60°, cos(60°) = 0,50.",
+        "Fórmula da Lei dos Cossenos: a² = 50² + 80² - 2 · 50 · 80 · cos(60°).",
+        "Cálculos: a² = 2.500 + 6.400 - (8.000 · 0,50) = 8.900 - 4.000 = 4.900.",
+        "Extração da raiz quadrada: a = √4.900 = 70 metros."
+      ],
+      coreConcept: "Lei dos Cossenos: a² = b² + c² - 2bc·cos(A)",
+      trapWarning: "Cuidado com o sinal: na Lei dos Cossenos, o termo com o produto dos lados é SUBTRAÍDO (- 2bc·cos θ)."
+    },
+    commonTraps: [
+      "Aplicar Pitágoras a² = b² + c² esquecendo o termo -2bc·cos θ",
+      "Errar o sinal do termo redutor somando em vez de subtrair"
+    ],
+    tags: ["lei-dos-cossenos", "triangulos", "geometria-plana", "agrimensura"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-012",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Trigonometria",
+    subtopic: "Lei dos Senos e Triangulação Geodésica",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Dois postos de observação meteorológica A e B estão situados ao longo de uma planície retilínea separados por uma distância de 60 km. Ambos registram a posição de um balão atmosférico C no mesmo instante. Os ângulos medidos na base são CÂB = 45° e C B̂ A = 75°. (Dados: sen 45° = √2/2; sen 60° = √3/2; sen 75° = (√6 + √2)/4).",
+      source: "ENEM Geodésia e Triangulação"
+    },
+    prompt: "Pelo método da triangulação e aplicando a Lei dos Senos, a distância em linha reta do balão C até o posto B (medida do segmento BC) é igual a:",
+    options: [
+      { id: "a", text: "20√6 km", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "30√2 km", isCorrect: false, distractorRationale: "Esqueceu de calcular o terceiro ângulo do triângulo e dividiu por sen 45°." },
+      { id: "c", text: "40√3 km", isCorrect: false, distractorRationale: "Inverteu os senos dos ângulos na proporção da Lei dos Senos." },
+      { id: "d", text: "60√2 km", isCorrect: false, distractorRationale: "Multiplicou a base diretamente por sen 45° sem dividir pelo seno do ângulo oposto." },
+      { id: "e", text: "15√6 km", isCorrect: false, distractorRationale: "Erro na simplificação algébrica do radical no denominador." }
+    ],
+    detailedExplanation: {
+      summary: "Descobre-se o terceiro ângulo do triângulo (Ângulo C) pela soma dos ângulos internos e aplica-se a proporção da Lei dos Senos.",
+      stepByStep: [
+        "A soma dos ângulos internos de qualquer triângulo é 180°: Ângulo C = 180° - (45° + 75°) = 180° - 120° = 60°.",
+        "O lado AB = 60 km é oposto ao ângulo C = 60°.",
+        "O lado BC é oposto ao ângulo A = 45°.",
+        "Pela Lei dos Senos: BC / sen(45°) = AB / sen(60°).",
+        "BC = 60 · sen(45°) / sen(60°) = 60 · (√2/2) / (√3/2) = 60 · (√2 / √3).",
+        "Racionalizando o denominador: BC = 60 · √6 / 3 = 20√6 km."
+      ],
+      coreConcept: "Lei dos Senos: a/sen(A) = b/sen(B) = c/sen(C)",
+      trapWarning: "Antes de aplicar a Lei dos Senos, verifique sempre se você calculou o ângulo oposto ao lado que possui medida numérica conhecida!"
+    },
+    commonTraps: [
+      "Usar 75° no denominador em vez do ângulo C de 60°",
+      "Errar a racionalização de radicais de √2/√3"
+    ],
+    tags: ["lei-dos-senos", "triangulacao", "geometria", "radicais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-013",
+    area: "matematica",
+    competence: 5,
+    skill: 20,
+    topic: "Trigonometria",
+    subtopic: "Modelagem Periódica de Roda-Gigante",
+    difficulty: 3,
+    estimatedTimeSeconds: 170,
+    questionType: "contextualized",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma roda-gigante em um parque urbano possui raio de 10 metros e tem seu centro de rotação fixado a 12 metros de altura do chão. Uma gôndola parte da posição mais baixa (ponto mais próximo do solo) no instante t = 0 segundos e efetua uma rotação completa uniforme no sentido anti-horário a cada 120 segundos. A altura h(t) da gôndola em relação ao solo é descrita pela função h(t) = 12 - 10 · cos( (π/60) · t ).",
+      source: "ENEM Funções Trigonométricas"
+    },
+    prompt: "A que altura do solo, em metros, essa gôndola se encontrará exatamente aos 40 segundos após o início do movimento?",
+    options: [
+      { id: "a", text: "17 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "7 metros", isCorrect: false, distractorRationale: "Esqueceu que cos(120°) é negativo (-0,5) e subtraiu 5 em vez de somar: 12 - 5 = 7." },
+      { id: "c", text: "12 metros", isCorrect: false, distractorRationale: "Considerou que a gôndola estaria na altura média do centro de rotação." },
+      { id: "d", text: "22 metros", isCorrect: false, distractorRationale: "Calculou a altura máxima possível da roda-gigante (12 + 10)." },
+      { id: "e", text: "15 metros", isCorrect: false, distractorRationale: "Usou cos(60°) = +0,5 diretamente na subtração sem reduzir ao segundo quadrante." }
+    ],
+    detailedExplanation: {
+      summary: "Substitui-se t = 40 na função periódica e aplica-se a redução ao segundo quadrante para o cosseno.",
+      stepByStep: [
+        "Substituição de t = 40 s: argumento = (π/60) · 40 = 40π/60 = 2π/3 radianos.",
+        "Conversão para graus: 2π/3 rad = (2 · 180°)/3 = 120°.",
+        "Cálculo do cosseno no 2º quadrante: cos(120°) = - cos(180° - 120°) = - cos(60°) = - 0,50.",
+        "Cálculo da altura: h(40) = 12 - 10 · (- 0,50) = 12 + 5,0 = 17 metros."
+      ],
+      coreConcept: "Modelagem Harmônica Circular e Redução de Cosseno ao Segundo Quadrante",
+      trapWarning: "Cuidado com a regra de sinais: o cosseno de um ângulo obtuso (entre 90° e 180°) é NEGATIVO! Menos com menos vira mais."
+    },
+    commonTraps: [
+      "Achar que cosseno no segundo quadrante é positivo",
+      "Errar a simplificação da fração 40/60"
+    ],
+    tags: ["funcoes-trigonometricas", "cosseno", "ciclo-trigonometrico", "segundo-quadrante"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-014",
+    area: "matematica",
+    competence: 2,
+    skill: 7,
+    topic: "Trigonometria",
+    subtopic: "Rampa de Acessibilidade e Inclinação com Tangente",
+    difficulty: 2,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A norma brasileira de acessibilidade NBR 9050 estabelece limites para a inclinação de rampas de pedestres e usuários de cadeiras de rodas. A inclinação percentual i de uma rampa reta de piso plano é dada pela tangente do ângulo de elevação θ multiplicada por 100%, ou seja, i = tg(θ) · 100%. Um projeto arquitetônico prevê a construção de uma rampa para vencer um desnível vertical de 1,60 metro com inclinação de 8% (tg θ = 0,08).",
+      source: "ENEM Acessibilidade e Normas Técnicas"
+    },
+    prompt: "Qual deve ser o comprimento horizontal da projeção dessa rampa no solo, em metros?",
+    options: [
+      { id: "a", text: "20 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "12,8 metros", isCorrect: false, distractorRationale: "Multiplicou a altura pela taxa: 1,60 · 8 = 12,8 m." },
+      { id: "c", text: "16 metros", isCorrect: false, distractorRationale: "Dividiu por 0,10 em vez de 0,08." },
+      { id: "d", text: "25 metros", isCorrect: false, distractorRationale: "Usou inclinação de 6,4% em vez de 8%." },
+      { id: "e", text: "8 metros", isCorrect: false, distractorRationale: "Confundiu a taxa de 8% com a extensão métrica." }
+    ],
+    detailedExplanation: {
+      summary: "A tangente do ângulo é a razão entre o desnível vertical (cateto oposto) e o comprimento horizontal (cateto adjacente).",
+      stepByStep: [
+        "Definição da tangente no triângulo retângulo da rampa: tg(θ) = Altura vertical (h) / Projeção horizontal (x).",
+        "Substituindo os valores conhecidos: 0,08 = 1,60 / x.",
+        "Isolando a variável x: x = 1,60 / 0,08 = 160 / 8 = 20 metros."
+      ],
+      coreConcept: "Definição de Tangente e Inclinação de Rampas: tg θ = h / x",
+      trapWarning: "A inclinação é a razão entre a altura e a base horizontal, e não sobre a hipotenusa da rampa!"
+    },
+    commonTraps: [
+      "Multiplicar a altura pela porcentagem em vez de dividir",
+      "Errar a divisão com casas decimais (1,60 / 0,08)"
+    ],
+    tags: ["tangente", "acessibilidade", "inclinacao", "geometria-plana"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-015",
+    area: "matematica",
+    competence: 5,
+    skill: 21,
+    topic: "Trigonometria",
+    subtopic: "Painéis Solares e Lei de Lambert do Cosseno",
+    difficulty: 2,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A potência elétrica P gerada por um painel fotovoltaico depende do ângulo de incidência dos raios solares sobre a superfície da placa. De acordo com a Lei de Lambert, a potência gerada varia proporcionalmente ao cosseno do ângulo θ formado entre os raios solares e a reta normal (perpendicular) ao painel: P(θ) = P_max · cos(θ). Em um teste sob irradiância controlada de laboratório, a potência máxima com incidência perpendicular (θ = 0°) é P_max = 400 W. (Dado: cos 60° = 0,50).",
+      source: "ENEM Energia Solar Fotovoltaica"
+    },
+    prompt: "Se os raios solares incidirem sobre o painel formando um ângulo θ = 60° com a reta normal, a potência elétrica gerada será de:",
+    options: [
+      { id: "a", text: "200 W", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "346 W", isCorrect: false, distractorRationale: "Usou sen 60° = √3/2 ≈ 0,866 (400 · 0,866 = 346,4 W)." },
+      { id: "c", text: "100 W", isCorrect: false, distractorRationale: "Dividiu a potência máxima por 4." },
+      { id: "d", text: "400 W", isCorrect: false, distractorRationale: "Desconsiderou a inclinação dos raios luminosos." },
+      { id: "e", text: "250 W", isCorrect: false, distractorRationale: "Erro na estimativa do cosseno de 60°." }
+    ],
+    detailedExplanation: {
+      summary: "Aplica-se diretamente a fórmula da projeção do fluxo luminoso: P = P_max · cos(θ).",
+      stepByStep: [
+        "Identificação dos dados: P_max = 400 W, θ = 60°.",
+        "Valor trigonométrico: cos(60°) = 0,50.",
+        "Cálculo da potência gerada: P = 400 · 0,50 = 200 W."
+      ],
+      coreConcept: "Atenuação de Fluxo e Projeção Angular com Cosseno",
+      trapWarning: "Atenção ao referencial do ângulo: se a questão desse o ângulo com o plano do painel (30°), o ângulo com a normal seria o complemento (60°)."
+    },
+    commonTraps: [
+      "Usar seno no lugar de cosseno",
+      "Confundir ângulo com a normal e ângulo com o plano da placa"
+    ],
+    tags: ["cosseno", "energia-solar", "fisica-matematica", "projecao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-016",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Trigonometria",
+    subtopic: "Área Iluminada por Refletor Cônico",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma quadra esportiva, um holofote de iluminação está instalado no teto a uma altura vertical de 9 metros do piso plano. O facho de luz forma um cone circular reto cujo vértice é o próprio refletor e cujo ângulo central de abertura total é de 60° (o que significa que o semiângulo entre a linha vertical e a geratriz externa do facho é de 30°). (Dados: tg 30° = √3/3; utilize π = 3,14 e √3 = 1,73).",
+      source: "ENEM Geometria e Iluminação"
+    },
+    prompt: "Qual é o raio R da mancha circular iluminada no piso da quadra pelo holofote?",
+    options: [
+      { id: "a", text: "3√3 metros (aproximadamente 5,19 m)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "9√3 metros (aproximadamente 15,57 m)", isCorrect: false, distractorRationale: "Multiplicou a altura por √3 em vez de multiplicar por √3/3." },
+      { id: "c", text: "4,50 metros", isCorrect: false, distractorRationale: "Dividiu a altura por 2 sem usar a razão trigonométrica tangente." },
+      { id: "d", text: "6,00 metros", isCorrect: false, distractorRationale: "Usou sen 30° = 1/2 na relação com a hipotenusa de forma incorreta." },
+      { id: "e", text: "5,77 metros", isCorrect: false, distractorRationale: "Calculou 10 · tg 30° em vez de usar a altura de 9 metros." }
+    ],
+    detailedExplanation: {
+      summary: "O semiângulo do cone com a vertical é de 30°. O raio no chão é o cateto oposto e a altura de 9 m é o cateto adjacente.",
+      stepByStep: [
+        "Abertura total = 60° ⟹ semiângulo com a vertical: θ = 60° / 2 = 30°.",
+        "No triângulo retângulo formado pela vertical, o piso e o facho: tg(30°) = Raio (R) / Altura (h).",
+        "Substituição dos valores: R = h · tg(30°) = 9 · (√3 / 3) = 3√3 metros.",
+        "Em valor decimal: 3 · 1,73 = 5,19 metros."
+      ],
+      coreConcept: "Abertura Angular Cônica e Tangente no Triângulo Retângulo",
+      trapWarning: "Sempre divida o ângulo de abertura total de um cone por 2 para obter o ângulo no triângulo retângulo com o eixo vertical de simetria!"
+    },
+    commonTraps: [
+      "Usar o ângulo total de 60° no triângulo retângulo em vez da metade (30°)",
+      "Errar a simplificação de 9√3 / 3"
+    ],
+    tags: ["tangente", "cone", "geometria-espacial", "iluminacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-017",
+    area: "matematica",
+    competence: 5,
+    skill: 21,
+    topic: "Trigonometria",
+    subtopic: "Relação Fundamental e Biomecânica Muscular",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma análise biomecânica do movimento de flexão do antebraço de um atleta, os sensores registraram que o tendão exerce tração sob um ângulo agudo α no primeiro quadrante (0 < α < 90°). Sabendo que o seno desse ângulo de tração é sen(α) = 0,60, a equipe de preparação física precisa determinar o coeficiente de atrito estático equivalente, que é proporcional à tangente desse ângulo: tg(α).",
+      source: "ENEM Biomecânica e Relações Trigonométricas"
+    },
+    prompt: "Com base nas relações trigonométricas fundamentais, o valor exato de tg(α) é igual a:",
+    options: [
+      { id: "a", text: "0,75", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "0,80", isCorrect: false, distractorRationale: "Esse é o valor do cosseno de α, não da tangente." },
+      { id: "c", text: "0,60", isCorrect: false, distractorRationale: "Esse é o próprio seno de α." },
+      { id: "d", text: "1,33", isCorrect: false, distractorRationale: "Inverteu a fração, calculando a cotangente (cos/sen = 0,80/0,60 = 4/3)." },
+      { id: "e", text: "0,48", isCorrect: false, distractorRationale: "Multiplicou seno por cosseno (0,6 · 0,8) em vez de dividir." }
+    ],
+    detailedExplanation: {
+      summary: "Calcula-se o cosseno pela Relação Fundamental da Trigonometria (sen² + cos² = 1) e em seguida a tangente (tg = sen / cos).",
+      stepByStep: [
+        "Relação Fundamental: sen²(α) + cos²(α) = 1.",
+        "Substituindo sen(α) = 0,60: (0,60)² + cos²(α) = 1 ⟹ 0,36 + cos²(α) = 1 ⟹ cos²(α) = 0,64.",
+        "Como α está no primeiro quadrante, o cosseno é positivo: cos(α) = √0,64 = 0,80.",
+        "Definição da tangente: tg(α) = sen(α) / cos(α) = 0,60 / 0,80 = 6 / 8 = 3 / 4 = 0,75."
+      ],
+      coreConcept: "Relação Fundamental da Trigonometria: sen²(x) + cos²(x) = 1 e tg(x) = sen(x)/cos(x)",
+      trapWarning: "Lembre-se do clássico triângulo pitagórico 3-4-5: quando o seno é 3/5 = 0,6, o cosseno é 4/5 = 0,8 e a tangente é 3/4 = 0,75!"
+    },
+    commonTraps: [
+      "Confundir cosseno com tangente",
+      "Calcular cotangente (cos/sen) em vez de tangente (sen/cos)"
+    ],
+    tags: ["relacao-fundamental", "seno-cosseno-tangente", "triangulo-pitagorico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-018",
+    area: "matematica",
+    competence: 2,
+    skill: 7,
+    topic: "Trigonometria",
+    subtopic: "Comprimento de Arco de Circunferência e Radianos",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma pista circular de treinamento esportivo com raio constante R = 50 metros, um corredor parte da linha de largada e corre ao longo da borda externa até completar um deslocamento correspondente a um ângulo central de 2,4 radianos.",
+      source: "ENEM Medidas de Arcos e Ângulos"
+    },
+    prompt: "A distância linear percorrida pelo atleta sobre o contorno da pista circular é de:",
+    options: [
+      { id: "a", text: "120 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "20,8 metros", isCorrect: false, distractorRationale: "Dividiu o raio pelo ângulo: 50 / 2,4." },
+      { id: "c", text: "157 metros", isCorrect: false, distractorRationale: "Calculou meia volta na pista considerando π = 3,14." },
+      { id: "d", text: "314 metros", isCorrect: false, distractorRationale: "Calculou o perímetro completo da pista circular (2πR)." },
+      { id: "e", text: "100 metros", isCorrect: false, distractorRationale: "Multiplicou o raio por 2 ignorando os decimais do radiano." }
+    ],
+    detailedExplanation: {
+      summary: "A definição de radiano estabelece que o comprimento do arco s é diretamente o produto do raio R pelo ângulo central em radianos: s = R · θ.",
+      stepByStep: [
+        "Definição da medida em radianos: θ = s / R, onde s é o comprimento do arco e R é o raio.",
+        "Isolando o comprimento linear s: s = R · θ.",
+        "Cálculo: s = 50 metros · 2,4 rad = 120 metros."
+      ],
+      coreConcept: "Comprimento do Arco de Circunferência: s = R · θ (θ em radianos)",
+      trapWarning: "Essa fórmula direta s = R · θ só é válida quando o ângulo está expresso em RADIANOS! Se estivesse em graus, precisaria converter com π/180°."
+    },
+    commonTraps: [
+      "Tentar converter desnecessariamente o radiano para graus e perder tempo",
+      "Dividir em vez de multiplicar raio por ângulo"
+    ],
+    tags: ["radiano", "arco-de-circunferencia", "geometria-plana"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-019",
+    area: "matematica",
+    competence: 5,
+    skill: 20,
+    topic: "Trigonometria",
+    subtopic: "Período e Frequência em Sinais Cardíacos",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O monitor cardíaco de uma Unidade de Terapia Intensiva registra as oscilações rítmicas de um paciente através de uma função senoidal de voltagem dada por V(t) = V_0 · sen(B · t), onde t é o tempo em segundos e B é a frequência angular em rad/s. Durante o exame em repouso, o paciente apresenta uma frequência cardíaca estável de 75 batimentos por minuto (bpm). Sabe-se que o período T (em segundos) de cada batimento é o tempo necessário para um ciclo completo, e que B = 2π / T.",
+      source: "ENEM Sinais Fisiológicos e Funções Periódicas"
+    },
+    prompt: "Com base nesses parâmetros fisiológicos, o período T de cada ciclo cardíaco e o valor de B valem, respectivamente:",
+    options: [
+      { id: "a", text: "T = 0,80 s e B = 2,5π rad/s", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "T = 1,25 s e B = 1,6π rad/s", isCorrect: false, distractorRationale: "Inverteu a razão calculando 75 / 60 em vez de 60 / 75." },
+      { id: "c", text: "T = 0,75 s e B = 2,67π rad/s", isCorrect: false, distractorRationale: "Confundiu 75 batimentos com 0,75 segundo." },
+      { id: "d", text: "T = 0,80 s e B = 5π rad/s", isCorrect: false, distractorRationale: "Esqueceu de dividir por 2 na constante angular." },
+      { id: "e", text: "T = 1,00 s e B = 2π rad/s", isCorrect: false, distractorRationale: "Considerou batimento padrão de 60 bpm." }
+    ],
+    detailedExplanation: {
+      summary: "Calcula-se o período convertendo a taxa por minuto para o tempo de 1 ciclo em segundos, e em seguida aplica-se a relação fundamental de período para funções trigonométricas B = 2π / T.",
+      stepByStep: [
+        "1 minuto possui 60 segundos.",
+        "Se ocorrem 75 batimentos em 60 segundos, o período T de cada batimento é: T = 60 / 75 = 4 / 5 = 0,80 segundo.",
+        "A relação entre a frequência angular B e o período T de sen(Bt) é: T = 2π / B ⟹ B = 2π / T.",
+        "Substituição de T = 0,80: B = 2π / (4/5) = (2 · 5)π / 4 = 10π / 4 = 2,5π rad/s."
+      ],
+      coreConcept: "Período de Funções Trigonométricas: T = 2π / |B|",
+      trapWarning: "Lembre-se de que o coeficiente multiplicador B dentro da função seno 'acelera' a oscilação, reduzindo o período proporcionalmente: T = 2π / B."
+    },
+    commonTraps: [
+      "Dividir 75 por 60 para achar período em vez de frequência em hertz",
+      "Esquecer que período é inverso da frequência (T = 1/f)"
+    ],
+    tags: ["funcoes-periodicas", "periodo-trigonometrico", "seno", "frequencia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-020",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Trigonometria",
+    subtopic: "Estruturas de Engenharia e Treliças Triangulares",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma treliça metálica em formato de tesoura triangular simétrica é projetada para sustentar a cobertura de um galpão industrial. As duas vigas inclinadas superiores que convergem na cumeeira possuem o mesmo comprimento L = 6 metros e formam entre si um ângulo de 120°. Para manter a rigidez mecânica e evitar a abertura da estrutura, um tirante de aço horizontal deve unir diretamente as extremidades inferiores das duas vigas. (Dados: cos 120° = -0,50; use √3 ≈ 1,73).",
+      source: "ENEM Estruturas e Construção Civil"
+    },
+    prompt: "Qual deve ser o comprimento total do tirante horizontal de aço na base da treliça?",
+    options: [
+      { id: "a", text: "6√3 metros (aproximadamente 10,38 m)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "6 metros", isCorrect: false, distractorRationale: "Supôs que o triângulo seria equilátero, mas o ângulo do vértice é 120°, não 60°." },
+      { id: "c", text: "12 metros", isCorrect: false, distractorRationale: "Somou os comprimentos das duas vigas (6 + 6), como se estivessem alinhadas a 180°." },
+      { id: "d", text: "6√2 metros (aproximadamente 8,48 m)", isCorrect: false, distractorRationale: "Aplicou o Teorema de Pitágoras considerando ângulo reto de 90°." },
+      { id: "e", text: "9 metros", isCorrect: false, distractorRationale: "Calculou a média aritmética entre a soma e o lado." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Lei dos Cossenos, o lado oposto ao ângulo de 120° em um triângulo com dois lados iguais a 6 metros é x = 6√3.",
+      stepByStep: [
+        "Identificação dos lados: b = 6 m, c = 6 m, ângulo θ = 120°, cos(120°) = -0,50.",
+        "Lei dos Cossenos: x² = 6² + 6² - 2 · 6 · 6 · cos(120°).",
+        "Substituição: x² = 36 + 36 - 72 · (-0,50) = 72 + 36 = 108.",
+        "Fatoração de 108: 108 = 36 · 3 ⟹ x = √108 = √(36 · 3) = 6√3 metros.",
+        "Em valor aproximado: 6 · 1,73 = 10,38 metros."
+      ],
+      coreConcept: "Lei dos Cossenos em Triângulos Obtusângulos e Relação do Triângulo Isósceles com Ângulo de 120°",
+      trapWarning: "No triângulo isósceles com ângulo de 120°, a base sempre mede exatamente L√3! Essa é uma propriedade notável que economiza tempo no ENEM."
+    },
+    commonTraps: [
+      "Errar o sinal do cosseno de 120° (lembre-se: cos 120° = - 1/2)",
+      "Supor que a base é igual aos lados laterais"
+    ],
+    tags: ["lei-dos-cossenos", "trelica", "triangulo-obtusangulo", "construcao-civil"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
