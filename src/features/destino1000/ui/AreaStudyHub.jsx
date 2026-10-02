@@ -63,6 +63,7 @@ const AREA_TOPICS = {
     { id: "matematica/matrizes-tabelas", name: "Matrizes, Determinantes e Modelagem em Tabelas", tag: "Álgebra", priority: "Crítica • Tabelas e Sistemas", questionsCount: 25 },
     { id: "matematica/circunferencia-conicas", name: "Circunferência, Posições Relativas e Cônicas na Geometria Analítica", tag: "Geometria", priority: "Crítica • Cônicas & Cobertura", questionsCount: 25 },
     { id: "matematica/geometria-espacial-metrica", name: "Geometria Espacial Métrica, Corpos Redondos e Sólidos de Revolução", tag: "Geometria", priority: "Crítica • Volumes, Cilindros e Troncos", questionsCount: 25 },
+    { id: "matematica/estatistica-dispersao-desvio-padrao", name: "Estatística de Dispersão, Variância e Desvio Padrão", tag: "Estatística", priority: "Crítica • Homogeneidade e Incerteza", questionsCount: 25 },
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 25 },

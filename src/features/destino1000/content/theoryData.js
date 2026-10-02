@@ -2966,6 +2966,54 @@ export const THEORY_CONTENT = {
       "Os IECA (enalapril) causam tosse seca por acúmulo de bradicinina, e a conduta é trocar por um BRA (losartana), e NÃO administrar xarope comum."
     ],
     mnemonics: "Fisiologia Renal e Cardiorrenal: 'B1 fecha AV pro ventrículo bater; B2 fecha semilunar pro sangue não descer; renina solta angiotensina pro vaso fechar; aldosterona guarda sódio e manda potássio pro mar; ADH abre aquaporina pra água voltar; e a tosse do IECA é bradicinina que não quer degradar!'"
+  },
+
+  "matematica/estatistica-dispersao-desvio-padrao": {
+    topic: "Estatística de Dispersão, Variância e Desvio Padrão",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Presença certa no ENEM (Competência 7, Habilidades 27, 28 e 29). Frequente em questões de regularidade, homogeneidade, controle de qualidade de medicamentos e ensaios clínicos.",
+    highFrequencySkills: ["H27 - Medidas de tendência central e dispersão", "H28 - Análise de gráficos e boxplots", "H29 - Tomada de decisão sob incerteza e variabilidade"],
+    overview: "A banca do ENEM utiliza a Estatística Descritiva não apenas para cálculos aritméticos de médias, mas para testar a capacidade de julgar homogeneidade, regularidade e dispersão de conjuntos numéricos. Para Beatriz (foco em Medicina), dominar variância, desvio padrão populacional vs. amostral, coeficiente de variação (CV) e diagramas boxplot é indispensável para interpretar desde o erro amostral de ensaios farmacológicos até a estabilidade temporal de parâmetros hemodinâmicos.",
+    keyConcepts: [
+      {
+        title: "Medidas de Tendência Central vs. Medidas de Dispersão",
+        content: "• A média aritmética (x̄) sintetiza o centro gravitacional dos dados, mas é extremamente sensível a valores discrepantes (outliers).\n• A mediana (Md) é o percentil 50%, dividindo o conjunto ordenado ao meio, sendo uma medida robusta imune a outliers.\n• Dois conjuntos com a MESMA média podem ser completamente diferentes: ex. Paciente A com glicemias [98, 100, 102] tem média 100 mg/dL e desvio mínimo (alta estabilidade); Paciente B com glicemias [40, 100, 160] tem média 100 mg/dL, mas flutuações perigosas entre choque hipoglicêmico e hiperglicemia severa. Para diferenciar essas situações, utilizam-se medidas de dispersão."
+      },
+      {
+        title: "Variância e Desvio Padrão (Populacional vs. Amostral)",
+        content: "• Desvio Individual: di = xi - x̄. A soma de todos os desvios simples é SEMPRE identicamente nula: Σ(xi - x̄) = 0.\n• Variância (s² ou σ²): Média dos quadrados dos desvios. σ² = [Σ(xi - μ)²] / N (populacional); s² = [Σ(xi - x̄)²] / (n - 1) (amostral, com correção de Bessel para eliminar viés de subestimação).\n• Desvio Padrão (s ou σ): Raiz quadrada da variância. s = √(s²). Possui a VANTAGEM FUNDAMENTAL de ser expresso na MESMA UNIDADE DE MEDIDA da variável original (ex: se a glicemia é em mg/dL, a variância é em (mg/dL)², enquanto o desvio padrão é em mg/dL)."
+      },
+      {
+        title: "Coeficiente de Variação (CV) e Dispersão Relativa",
+        content: "• O desvio padrão absoluto NÃO permite comparar a dispersão entre variáveis com ordens de grandeza distintas ou unidades diferentes.\n• Fórmula: CV = (s / x̄) × 100%.\n• Aplicação clínica: Se um elefante tem massa média 4.000 kg com desvio de 200 kg (CV = 5%), e um camundongo tem massa média 20 g com desvio de 2 g (CV = 10%), o camundongo apresenta o DOBRO da variabilidade relativa do elefante, embora seu desvio absoluto pareça insignificante. Menor CV significa MAIOR HOMOGENEIDADE e precisão relativa."
+      },
+      {
+        title: "Transformações Lineares sobre Medidas Estatísticas",
+        content: "Seja a transformação linear Y = a·X + b aplicada a cada elemento:\n1. Nova Média: Ȳ = a·X̄ + b (afetada pela multiplicação e pela soma).\n2. Nova Variância: Var(Y) = a² · Var(X) (a constante aditiva b não altera as distâncias relativas entre os pontos).\n3. Novo Desvio Padrão: s_Y = |a| · s_X (apenas o módulo do fator multiplicativo altera o desvio padrão; somar uma constante desloca a curva sem alterar sua dispersão)."
+      },
+      {
+        title: "Diagrama de Caixa (Boxplot) e Separatrizes",
+        content: "• Divide a distribuição ordenada em quatro quadrantes de 25% cada:\n  - Q1 (Primeiro Quartil / Percentil 25%): 25% dos dados estão abaixo dele.\n  - Q2 (Segundo Quartil / Mediana / Percentil 50%): 50% dos dados abaixo e 50% acima.\n  - Q3 (Terceiro Quartil / Percentil 75%): 75% dos dados estão abaixo dele.\n• Amplitude Total: AT = Máximo - Mínimo.\n• Amplitude Interquartil: IQR = Q3 - Q1 (representa o espalhamento dos 50% centrais dos dados, sendo imune a outliers extremos).\n• Critério de Outlier de Tukey: Qualquer ponto fora do intervalo [Q1 - 1,5·IQR, Q3 + 1,5·IQR] é considerado outlier."
+      }
+    ],
+    formulasAndRules: [
+      "Média Aritmética Simples: x̄ = (Σ xi) / n",
+      "Média Aritmética Ponderada: x̄_p = (Σ wi·xi) / (Σ wi)",
+      "Variância Amostral: s² = Σ (xi - x̄)² / (n - 1)",
+      "Desvio Padrão: s = √[s²]",
+      "Coeficiente de Variação: CV = (s / x̄) × 100%",
+      "Amplitude Interquartil: IQR = Q3 - Q1",
+      "Propriedade Linear: Desvio(aX + b) = |a| · Desvio(X)"
+    ],
+    enemTraps: [
+      "Afirmar que o conjunto com menor desvio padrão absoluto é sempre o mais regular quando as médias são muito diferentes: quando as médias diferem substancialmente, deve-se comparar o COEFICIENTE DE VARIAÇÃO (CV = s / x̄)!",
+      "Achar que somar um bônus a todas as notas ou somar uma constante a todos os valores altera o desvio padrão: somar ou subtrair uma constante b NÃO altera nem a variância nem o desvio padrão, pois a distância mútua entre os dados permanece idêntica!",
+      "Confundir média ponderada dividindo pela quantidade de termos em vez de dividir pela SOMA DOS PESOS!",
+      "No Boxplot, achar que o traço central da caixa é sempre a média: o traço no interior da caixa representa a MEDIANA (Q2), não a média!",
+      "Esquecer que entre Q1 e Q3 concentram-se SEMPRE exatamente 50% de todas as observações da amostra."
+    ],
+    mnemonics: "Estatística de Dispersão no ENEM: 'Média soma e divide; mediana corta no meio; variância eleva o desvio ao quadrado; desvio padrão tira a raiz e volta pra unidade; somar constante mexe na média mas não mexe na dispersão; e pra comparar grandezas diferentes, chama o CV (s sobre média) pra decidir a precisão!'"
   }
 };
 
