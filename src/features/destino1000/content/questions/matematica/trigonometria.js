@@ -875,5 +875,253 @@ export const QUESTIONS_TRIGONOMETRIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-021",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Trigonometria",
+    subtopic: "Lei dos Senos e Triangulação Topográfica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma campanha de demarcação geodésica para construção de uma ponte sobre um rio de grande largura, dois marcos topográficos A e B foram cravados na margem sul, com uma linha de base reta medindo AB = 100 metros. Na margem oposta do rio, um terceiro marco C foi avistado a partir dos dois pontos, registrando-se os ângulos horizontais medidos por teodolito: o ângulo no vértice A é de 45° e o ângulo no vértice B é de 105°. (Dados: sen 30° = 0,50; sen 45° = √2/2 ≈ 0,71; sen 105° = sen 75° ≈ 0,97).",
+      source: "Topografia e Métodos Geodésicos de Triangulação"
+    },
+    prompt: "Com base na Lei dos Senos, a distância em linha reta entre o marco A e o marco oposto C (lado AC) é igual a:",
+    options: [
+      { id: "a", text: "194 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "100 metros", isCorrect: false, distractorRationale: "Supôs que o triângulo seria isósceles com AC igual à base AB." },
+      { id: "c", text: "141 metros", isCorrect: false, distractorRationale: "Multiplicou 100 por √2 considerando triângulo retângulo isósceles." },
+      { id: "d", text: "71 metros", isCorrect: false, distractorRationale: "Multiplicou 100 por sen 45° em vez de aplicar a Lei dos Senos com o ângulo C." },
+      { id: "e", text: "200 metros", isCorrect: false, distractorRationale: "Arredondou sem rigor dividindo 100 por sen 30°." }
+    ],
+    detailedExplanation: {
+      summary: "A soma dos ângulos internos do triângulo é 180°: Ângulo C = 180° - (45° + 105°) = 180° - 150° = 30°. Pela Lei dos Senos: AC / sen B = AB / sen C -> AC / sen 105° = 100 / sen 30°. Como sen 30° = 0,50 e sen 105° ≈ 0,97: AC = 100 × (0,97 / 0,50) = 100 × 1,94 = 194 metros.",
+      stepByStep: [
+        "1. Calcular o terceiro ângulo do triângulo (vértice C):",
+        "   C = 180° - (A + B) = 180° - (45° + 105°) = 180° - 150° = 30°.",
+        "2. Identificar os pares opostos da Lei dos Senos:",
+        "   - O lado AB = 100 m opõe-se ao ângulo C = 30°.",
+        "   - O lado procurado AC opõe-se ao ângulo B = 105°.",
+        "3. Montar a proporção da Lei dos Senos: AC / sen 105° = AB / sen 30°.",
+        "4. Isolar AC: AC = AB × (sen 105° / sen 30°).",
+        "5. Substituir os valores: AC = 100 × (0,97 / 0,50) = 100 × 1,94 = 194 metros."
+      ],
+      coreConcept: "Lei dos Senos: a / sen A = b / sen B = c / sen C e Cálculo do Terceiro Ângulo Interno",
+      trapWarning: "Primeiro passo indispensável: SEMPRE determine o ângulo que falta pela soma dos ângulos internos (180°)! O lado da base AB opõe-se ao ângulo C, não a A ou B."
+    },
+    commonTraps: [
+      "Esquecer de calcular o terceiro ângulo C = 30°",
+      "Confundir a Lei dos Senos com a Lei dos Cossenos"
+    ],
+    tags: ["lei-dos-senos", "triangulacao", "topografia", "geometria-plana"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-022",
+    area: "matematica",
+    competence: 5,
+    skill: 20,
+    topic: "Trigonometria",
+    subtopic: "Modelagem de Marés Oceânicas e Funções Senoidais",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um terminal portuário graneleiro, o calado seguro para atracação de navios de grande porte depende do nível da maré. Ao longo de 24 horas, a altura h (em metros) da lâmina d'água no canal de acesso é modelada pela função periódica h(t) = 4 + 2 · cos(pi · t / 6), onde t representa o tempo decorrido em horas a partir da meia-noite (0 <= t <= 24).",
+      source: "Modelagem Matemática de Fenômenos Periódicos Costeiros"
+    },
+    prompt: "Com base nessa modelagem trigonométrica, a altura máxima atingida pela maré (maré alta) e os horários em que a maré atinge sua altura mínima de 2 metros são, respectivamente:",
+    options: [
+      { id: "a", text: "6 metros; às 6h da manhã e às 18h da tarde", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "4 metros; às 12h do meio-dia e às 24h da meia-noite", isCorrect: false, distractorRationale: "Considerou o eixo médio (4 m) como altura máxima e errou os instantes de mínimo." },
+      { id: "c", text: "8 metros; às 3h e às 15h", isCorrect: false, distractorRationale: "Somou 4 com o dobro da amplitude em vez da amplitude simples." },
+      { id: "d", text: "6 metros; apenas às 12h do meio-dia", isCorrect: false, distractorRationale: "Às 12h a maré atinge novo máximo (cos(2pi) = 1 -> h = 6 m), e não o mínimo." },
+      { id: "e", text: "5 metros; às 6h e às 12h", isCorrect: false, distractorRationale: "Errou os limites superior e inferior da imagem da função cosseno." }
+    ],
+    detailedExplanation: {
+      summary: "A imagem da função cosseno varia no intervalo [-1, +1]. A altura máxima ocorre quando cos = +1: h_max = 4 + 2(1) = 6 metros. A altura mínima ocorre quando cos = -1: h_min = 4 + 2(-1) = 2 metros. Para cos(pi·t/6) = -1, o arco deve valer pi, 3pi, etc. Assim: pi·t/6 = pi -> t = 6h; pi·t/6 = 3pi -> t = 18h.",
+      stepByStep: [
+        "1. Análise da imagem de h(t) = 4 + 2 · cos(pi·t / 6):",
+        "   - O termo cos(x) oscila estritamente entre -1 e +1.",
+        "   - Altura máxima: h_max = 4 + 2(+1) = 6 metros.",
+        "   - Altura mínima: h_min = 4 + 2(-1) = 2 metros.",
+        "2. Determinação dos horários de maré mínima (h = 2 m):",
+        "   4 + 2 · cos(pi·t / 6) = 2 -> 2 · cos(pi·t / 6) = -2 -> cos(pi·t / 6) = -1.",
+        "3. A função cosseno vale -1 nos ângulos ímpares de pi:",
+        "   - Primeiro instante: pi · t / 6 = pi -> t = 6 horas (06h da manhã).",
+        "   - Segundo instante: pi · t / 6 = 3pi -> t = 18 horas (18h da tarde).",
+        "4. Conclusão: a maré oscila com período de T = 2pi / (pi/6) = 12 horas, atingindo picos de 6 m às 0h, 12h e 24h, e mínimos de 2 m às 6h e 18h."
+      ],
+      coreConcept: "Funções Trigonométricas Senoidais: Imagem [D - |A|, D + |A|] e Equação Trigonométrica Fundamental",
+      trapWarning: "Lembre-se da forma geral f(t) = D + A · cos(B t - C): o valor médio é D = 4, a amplitude é A = 2, o máximo é D + A = 6 e o mínimo é D - A = 2."
+    },
+    commonTraps: [
+      "Achar que às 12h a maré é mínima (às 12h cos(2pi) = 1, sendo maré máxima de 6 m)",
+      "Esquecer que o cosseno vale -1 em pi radianos"
+    ],
+    tags: ["funcoes-trigonometricas", "cosseno", "fenomenos-periodicos", "ondas-de-mare", "modelagem-matematica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-023",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Trigonometria",
+    subtopic: "Relação Fundamental e Sinais nos Quadrantes Trigonométricos",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma aplicação de controle angular do braço de uma máquina de solda robótica, o ângulo de operação alfa está situado no segundo quadrante do ciclo trigonométrico (pi/2 < alfa < pi). Um sensor óptico de alta precisão registrou que o seno desse ângulo vale sen(alfa) = 3/5.",
+      source: "Robótica Industrial e Geometria Analítica Circular"
+    },
+    prompt: "Com base na Relação Fundamental da Trigonometria e nos sinais das razões trigonométricas no segundo quadrante, o valor exato da tangente de alfa (tg alfa) é:",
+    options: [
+      { id: "a", text: "-3/4", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "+3/4", isCorrect: false, distractorRationale: "Esqueceu que no 2º quadrante o cosseno e a tangente são estritamente negativos (seno positivo dividido por cosseno negativo gera tangente negativa)." },
+      { id: "c", text: "-4/3", isCorrect: false, distractorRationale: "Inverteu a razão calculando a cotangente (cos / sen) em vez da tangente (sen / cos)." },
+      { id: "d", text: "+4/5", isCorrect: false, distractorRationale: "Confundiu a tangente com o cosseno e errou o sinal." },
+      { id: "e", text: "-5/3", isCorrect: false, distractorRationale: "Calculou o inverso do seno com sinal trocado." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Relação Fundamental: sen²(alfa) + cos²(alfa) = 1. Com sen(alfa) = 3/5: (3/5)² + cos²(alfa) = 1 -> cos²(alfa) = 1 - 9/25 = 16/25. Como alfa pertence ao 2º quadrante, o cosseno é obrigatoriamente negativo: cos(alfa) = -4/5. Assim, tg(alfa) = sen(alfa) / cos(alfa) = (3/5) / (-4/5) = -3/4.",
+      stepByStep: [
+        "1. Relação Fundamental da Trigonometria: sen²(alfa) + cos²(alfa) = 1.",
+        "2. Substituição do seno: (3/5)² + cos²(alfa) = 1 -> 9/25 + cos²(alfa) = 1.",
+        "3. Isolando cos²(alfa): cos²(alfa) = 25/25 - 9/25 = 16/25.",
+        "4. Extração da raiz quadrada com análise de quadrante:",
+        "   - O enunciado informa: pi/2 < alfa < pi (SEGUNDO QUADRANTE).",
+        "   - No 2º quadrante: abscissa (cosseno) é NEGATIVA e ordenada (seno) é positiva.",
+        "   - Logo: cos(alfa) = -√(16/25) = -4/5.",
+        "5. Cálculo da tangente: tg(alfa) = sen(alfa) / cos(alfa) = (3/5) / (-4/5) = -3/4 = -0,75."
+      ],
+      coreConcept: "Relação Fundamental da Trigonometria e Análise de Sinais dos Quadrantes (Ciclo Trigonométrico)",
+      trapWarning: "Regra mnemônica de sinais dos quadrantes: no 2º quadrante, APENAS O SENO é positivo! O cosseno e a tangente são sempre negativos!"
+    },
+    commonTraps: [
+      "Esquecer o sinal negativo do cosseno no segundo quadrante",
+      "Inverter seno e cosseno no cálculo da tangente"
+    ],
+    tags: ["relacao-fundamental", "ciclo-trigonometrico", "segundo-quadrante", "tangente", "cosseno"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-024",
+    area: "matematica",
+    competence: 5,
+    skill: 20,
+    topic: "Trigonometria",
+    subtopic: "Identidade do Arco Duplo e Alcance Balístico",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na física da balística no vácuo, o alcance horizontal A de um projétil disparado com velocidade inicial v0 sob um ângulo de elevação teta é modelado por A = (v0² / g) · sen(2·teta). Ao utilizar um canhão pneumático de testes calibrado sob inclinação teta1 = 15°, obteve-se um alcance experimental de A1 = 100 metros. (Dados: sen 30° = 0,50; sen 90° = 1,00).",
+      source: "Mecânica dos Fluidos e Balística Teórica"
+    },
+    prompt: "Mantendo-se rigorosamente a mesma velocidade inicial v0 e ajustando a inclinação para teta2 = 45° (ângulo que proporciona o alcance máximo teórico), o novo alcance horizontal obtido será de:",
+    options: [
+      { id: "a", text: "200 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "300 metros", isCorrect: false, distractorRationale: "Multiplicou por 3 achando que o alcance é proporcional ao ângulo de tiro (45° / 15° = 3)." },
+      { id: "c", text: "150 metros", isCorrect: false, distractorRationale: "Estimou uma proporção linear arbitrária de 1,5x." },
+      { id: "d", text: "141 metros", isCorrect: false, distractorRationale: "Multiplicou por √2 considerando razões de 45° isoladas." },
+      { id: "e", text: "100 metros", isCorrect: false, distractorRationale: "Acreditou que o alcance seria idêntico para quaisquer ângulos agudos." }
+    ],
+    detailedExplanation: {
+      summary: "Para teta1 = 15°: sen(2 × 15°) = sen(30°) = 0,50. Assim: A1 = (v0²/g) × 0,50 = 100 -> (v0²/g) = 100 / 0,50 = 200 metros. Para teta2 = 45°: sen(2 × 45°) = sen(90°) = 1,00. Logo: A2 = (v0²/g) × 1,00 = 200 × 1,00 = 200 metros.",
+      stepByStep: [
+        "1. Escrever a fórmula de alcance: A = K · sen(2·teta), onde K = v0² / g é constante.",
+        "2. Cenário 1 (teta = 15°):",
+        "   - Argumento da função seno: 2 · teta = 2 × 15° = 30°.",
+        "   - sen(30°) = 0,50.",
+        "   - Equação: 100 = K × 0,50 -> K = 100 / 0,50 = 200 metros.",
+        "3. Cenário 2 (teta = 45°):",
+        "   - Argumento da função seno: 2 · teta = 2 × 45° = 90°.",
+        "   - sen(90°) = 1,00 (valor máximo da função seno).",
+        "   - Novo alcance: A2 = K × sen(90°) = 200 × 1,00 = 200 metros.",
+        "4. Conclusão: ao mudar a elevação de 15° para 45°, o fator trigonométrico dobra (de 0,50 para 1,00), duplicando o alcance do projétil de 100 m para 200 m."
+      ],
+      coreConcept: "Identidade do Arco Duplo sen(2·teta) e Alcance Máximo em teta = 45°",
+      trapWarning: "Cuidado: o alcance NÃO é proporcional ao ângulo teta! O ângulo está dentro da função trigonométrica sen(2·teta). Triplicar o ângulo de 15° para 45° NÃO triplica o alcance!"
+    },
+    commonTraps: [
+      "Tratar o alcance como diretamente proporcional ao ângulo (marcando 300 m)",
+      "Esquecer de multiplicar o ângulo por 2 antes de calcular o seno"
+    ],
+    tags: ["arco-duplo", "balistica", "seno", "cinematica", "trigonometria-aplicada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-TRIG-025",
+    area: "matematica",
+    competence: 5,
+    skill: 20,
+    topic: "Trigonometria",
+    subtopic: "Redução ao Primeiro Quadrante e Simetrias no Ciclo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema de rastreamento de painéis solares fotovoltaicos com rotação biaxial, o posicionamento em relação à radiação solar é calibrado através de coordenadas no ciclo trigonométrico. Em um dado instante de calibração, o sistema computacional precisa calcular o valor exato da expressão numérica trigonométrica E = cos(150°) + sen(210°) - tg(315°).",
+      source: "ENEM / Simetrias no Ciclo Trigonométrico e Redução ao 1º Quadrante"
+    },
+    prompt: "Aplicando as regras de redução ao primeiro quadrante e a determinação dos sinais algébricos, o valor numérico da expressão E é igual a:",
+    options: [
+      { id: "a", text: "1/2 - √3/2", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "-1/2 - √3/2", isCorrect: false, distractorRationale: "Errou o sinal da tangente de 315° ao esquecer o sinal de menos na frente da expressão (- tg(315°) = - (-1) = +1)." },
+      { id: "c", text: "1/2 + √3/2", isCorrect: false, distractorRationale: "Tratou cos(150°) como positivo (+√3/2) no segundo quadrante." },
+      { id: "d", text: "3/2 - √3/2", isCorrect: false, distractorRationale: "Tratou sen(210°) como positivo (+1/2) no terceiro quadrante." },
+      { id: "e", text: "0", isCorrect: false, distractorRationale: "Supôs cancelamento simétrico nulo entre os termos." }
+    ],
+    detailedExplanation: {
+      summary: "Redução ao 1º quadrante: cos(150°) = cos(180° - 30°) = -cos(30°) = -√3/2. sen(210°) = sen(180° + 30°) = -sen(30°) = -1/2. tg(315°) = tg(360° - 45°) = -tg(45°) = -1. Substituindo: E = (-√3/2) + (-1/2) - (-1) = -√3/2 - 1/2 + 1 = 1/2 - √3/2.",
+      stepByStep: [
+        "1. Redução de cos(150°) (2º Quadrante):",
+        "   - Arco correspondente no 1º Q: 180° - 150° = 30°.",
+        "   - No 2º Q, cosseno é negativo: cos(150°) = -cos(30°) = -√3/2.",
+        "2. Redução de sen(210°) (3º Quadrante):",
+        "   - Arco correspondente no 1º Q: 210° - 180° = 30°.",
+        "   - No 3º Q, seno é negativo: sen(210°) = -sen(30°) = -1/2.",
+        "3. Redução de tg(315°) (4º Quadrante):",
+        "   - Arco correspondente no 1º Q: 360° - 315° = 45°.",
+        "   - No 4º Q, tangente é negativa: tg(315°) = -tg(45°) = -1.",
+        "4. Montagem da expressão E = cos(150°) + sen(210°) - tg(315°):",
+        "   E = (-√3/2) + (-1/2) - (-1).",
+        "5. Simplificação algébrica: E = -√3/2 - 1/2 + 1 = (1 - 1/2) - √3/2 = 1/2 - √3/2."
+      ],
+      coreConcept: "Redução ao Primeiro Quadrante: Simetrias Circulares e Sinais Algébricos de cos, sen e tg",
+      trapWarning: "Atenção máxima à regra de sinais: o sinal negativo ANTES de tg(315°) com o sinal negativo DA PRÓPRIA tangente no 4º quadrante (-1) vira positivo: - (-1) = +1!"
+    },
+    commonTraps: [
+      "Errar o jogo de sinais em - tg(315°) = -(-1) = +1",
+      "Esquecer que o seno é negativo no terceiro quadrante (sen 210° = -1/2)"
+    ],
+    tags: ["reducao-ao-primeiro-quadrante", "ciclo-trigonometrico", "simetria", "arcos-notaveis", "algebrismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

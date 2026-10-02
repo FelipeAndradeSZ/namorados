@@ -839,6 +839,248 @@ export const QUESTIONS_TERMOQUIMICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERMO-021",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termoquímica",
+    subtopic: "Lei de Hess e Entalpia Padrão de Formação",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A determinação experimental direta da entalpia de formação do gás propano (C3H8) a partir de suas substâncias simples grafite e hidrogênio gasoso é inviável em laboratório devido à formação paralela de outros hidrocarbonetos. Para contornar essa limitação, aplica-se a Lei de Hess utilizando as entalpias de combustão completa padronizadas (a 25 °C e 1 atm):\nI) C(grafite) + O2(g) -> CO2(g)   Delta H1 = -394 kJ/mol\nII) H2(g) + 1/2 O2(g) -> H2O(l)   Delta H2 = -286 kJ/mol\nIII) C3H8(g) + 5 O2(g) -> 3 CO2(g) + 4 H2O(l)   Delta H3 = -2 220 kJ/mol",
+      source: "Termoquímica Experimental e Termodinâmica de Combustíveis"
+    },
+    prompt: "Com base nas equações termoquímicas I, II e III, a variação de entalpia padrão de formação do propano (3 C(grafite) + 4 H2(g) -> C3H8(g)) é igual a:",
+    options: [
+      { id: "a", text: "-106 kJ/mol", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "+106 kJ/mol", isCorrect: false, distractorRationale: "Esqueceu de inverter o sinal de Delta H da equação III ao invertê-la como produto da reação." },
+      { id: "c", text: "-4 546 kJ/mol", isCorrect: false, distractorRationale: "Somou todas as entalpias sem inverter a equação de combustão do propano." },
+      { id: "d", text: "-1 540 kJ/mol", isCorrect: false, distractorRationale: "Multiplicou apenas a equação I por 3 e esqueceu de multiplicar a equação II por 4." },
+      { id: "e", text: "-500 kJ/mol", isCorrect: false, distractorRationale: "Fez média aritmética simples dos calores de combustão." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Lei de Hess, a variação de entalpia global depende unicamente dos estados inicial e final. Multiplica-se I por 3 (Delta H = 3 × -394 = -1 182 kJ), multiplica-se II por 4 (Delta H = 4 × -286 = -1 144 kJ) e inverte-se III (Delta H = +2 220 kJ). Somando: Delta H = -1 182 - 1 144 + 2 220 = -106 kJ/mol.",
+      stepByStep: [
+        "1. Reação-alvo desejada: 3 C(grafite) + 4 H2(g) -> C3H8(g).",
+        "2. Ajuste da Equação I (fornece 3 C nos reagentes): multiplicar por 3:",
+        "   3 C(grafite) + 3 O2(g) -> 3 CO2(g)   Delta H = 3 × (-394 kJ) = -1 182 kJ.",
+        "3. Ajuste da Equação II (fornece 4 H2 nos reagentes): multiplicar por 4:",
+        "   4 H2(g) + 2 O2(g) -> 4 H2O(l)   Delta H = 4 × (-286 kJ) = -1 144 kJ.",
+        "4. Ajuste da Equação III (fornece 1 C3H8 nos produtos): inverter a reação e o sinal:",
+        "   3 CO2(g) + 4 H2O(l) -> C3H8(g) + 5 O2(g)   Delta H = +2 220 kJ.",
+        "5. Somatório algébrico dos intermediários:",
+        "   Os 3 CO2(g), 4 H2O(l) e os 5 O2(g) (3 + 2 de oxigênio nos reagentes) se cancelam perfeitamente.",
+        "6. Balanço entálpico final: Delta H_formacao = (-1 182) + (-1 144) + (+2 220) = -2 326 + 2 220 = -106 kJ/mol."
+      ],
+      coreConcept: "Lei de Hess: Manipulação Algébrica de Equações Termoquímicas Intermediárias",
+      trapWarning: "Ao inverter uma reação química, NUNCA se esqueça de inverter o sinal do Delta H (de negativo vira positivo)! Se multiplicar os coeficientes por um número, multiplique o Delta H pelo mesmo número."
+    },
+    commonTraps: [
+      "Esquecer de trocar o sinal do Delta H ao inverter a equação de combustão",
+      "Esquecer de multiplicar o Delta H pelos coeficientes estequiométricos (3 e 4)"
+    ],
+    tags: ["lei-de-hess", "entalpia-de-formacao", "termoquimica", "combustao", "hidrocarbonetos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERMO-022",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termoquímica",
+    subtopic: "Energia de Ligação e Balanço Térmico Molecular",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O processo industrial de Haber-Bosch para produção de amônia revolucionou a síntese global de fertilizantes agrícolas nitrogenados. A reação em fase gasosa é descrita por: N2(g) + 3 H2(g) -> 2 NH3(g). São fornecidas as seguintes energias médias de ligação química necessárias para romper 1 mol de ligações gasosas:\n- Ligação tripla N≡N: 945 kJ/mol\n- Ligação simples H-H: 436 kJ/mol\n- Ligação simples N-H: 391 kJ/mol",
+      source: "Química Inorgânica Industrial e Cinética Química"
+    },
+    prompt: "Com base nas energias de ligação fornecidas, o valor da variação de entalpia (Delta H) da reação de síntese de 2 mols de amônia gasosa é:",
+    options: [
+      { id: "a", text: "-93 kJ (reação exotérmica)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "+93 kJ (reação endotérmica)", isCorrect: false, distractorRationale: "Inverteu a convenção de sinais, esquecendo que a quebra de ligações é endotérmica (+) e a formação é exotérmica (-)." },
+      { id: "c", text: "-1 090 kJ", isCorrect: false, distractorRationale: "Considerou apenas 1 ligação N-H formada em cada molécula de amônia em vez de 3 ligações por molécula." },
+      { id: "d", text: "+2 253 kJ", isCorrect: false, distractorRationale: "Calculou apenas a energia absorvida para quebrar os reagentes, ignorando a energia liberada na formação dos produtos." },
+      { id: "e", text: "-2 346 kJ", isCorrect: false, distractorRationale: "Calculou apenas a energia liberada na formação do produto NH3 sem subtrair o custo energético da quebra." }
+    ],
+    detailedExplanation: {
+      summary: "A quebra de ligações dos reagentes consome energia (+), enquanto a formação de novas ligações nos produtos libera energia (-): Delta H = Soma E_quebradas - Soma E_formadas. Quebra: 1 mol N≡N (945 kJ) + 3 mols H-H (3 × 436 = 1 308 kJ) = +2 253 kJ. Formação: 2 mols NH3 contêm 2 × 3 = 6 ligações N-H (6 × 391 = 2 346 kJ liberados). Delta H = +2 253 - 2 346 = -93 kJ.",
+      stepByStep: [
+        "1. Conceito basilar: Quebrar ligação = ENDOTÉRMICO (absorve energia, sinal +). Formar ligação = EXOTÉRMICO (libera energia, sinal -).",
+        "2. Ligações rompidas nos REAGENTES:",
+        "   - 1 mol de N≡N: 1 × 945 = +945 kJ.",
+        "   - 3 mols de H-H: 3 × 436 = +1 308 kJ.",
+        "   - Total absorvido na quebra: +945 + 1 308 = +2 253 kJ.",
+        "3. Ligações formadas nos PRODUTOS:",
+        "   - Cada molécula de NH3 tem 3 ligações N-H simples.",
+        "   - Para 2 mols de NH3 produzidos: 2 × 3 = 6 mols de ligações N-H formadas.",
+        "   - Total liberado na formação: 6 × 391 kJ = 2 346 kJ (sinal -2 346 kJ).",
+        "4. Variação de entalpia da reação: Delta H = (+2 253) + (-2 346) = -93 kJ.",
+        "5. Conclusão: a síntese de amônia pelo processo Haber-Bosch é uma reação exotérmica que libera 93 kJ para cada 2 mols de amônia produzidos."
+      ],
+      coreConcept: "Energia de Ligação: Delta H = Soma E(ligações rompidas) - Soma E(ligações formadas)",
+      trapWarning: "Cuidado: na amônia (NH3), o nitrogênio está ligado a 3 hidrogênios! Como a reação forma 2 NH3, são 6 ligações N-H formadas no total!"
+    },
+    commonTraps: [
+      "Inverter os sinais (achar que quebrar ligação libera calor)",
+      "Esquecer de multiplicar por 3 as ligações N-H da amônia"
+    ],
+    tags: ["energia-de-ligacao", "termoquimica", "amonia", "haber-bosch", "entalpia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERMO-023",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termoquímica",
+    subtopic: "Cinética Química: Fatores Modificadores da Velocidade de Reação",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma demonstração prática em sala de aula de ciências, realizam-se quatro experimentos distintos medindo o tempo de efervescência de um comprimido antiácido efervescente (bicarbonato de sódio e ácido cítrico) ao reagir com 200 mL de água pura:\n- Experimento 1: Comprimido inteiro em água fria (10 °C);\n- Experimento 2: Comprimido inteiro em água morna (40 °C);\n- Experimento 3: Comprimido triturado em pó em água fria (10 °C);\n- Experimento 4: Comprimido triturado em pó em água morna (40 °C).",
+      source: "Cinética Química e Teoria das Colisões Moleculares"
+    },
+    prompt: "O experimento que apresenta o MENOR tempo de reação (maior velocidade de dissolução efervescente) e as justificativas cinéticas corretas são:",
+    options: [
+      { id: "a", text: "Experimento 4, pois a trituração amplia a superfície de contato e a temperatura mais alta aumenta a energia cinética molecular média e a frequência de colisões efetivas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "Experimento 1, pois a água fria desacelera a evaporação permitindo que o gás carbônico escape mais depressa.", isCorrect: false, distractorRationale: "Baixa temperatura reduz a energia cinética e a frequência de choques efetivos, tornando a reação a mais lenta de todas." },
+      { id: "c", text: "Experimento 2, pois o comprimido inteiro possui menor resistência mecânica à penetração de calor.", isCorrect: false, distractorRationale: "O comprimido em pó tem área de contato centenas de vezes maior, reagindo muito mais rápido que o comprimido inteiro." },
+      { id: "d", text: "Experimento 3, pois a água fria atua como catalisador biológico aumentando a energia de ativação.", isCorrect: false, distractorRationale: "A água fria não é catalisador e abaixar a temperatura reduz a rapidez da reação." },
+      { id: "e", text: "todos os quatro experimentos levam exatamente o mesmo tempo, pois a constante de velocidade é independente do estado físico do reagente.", isCorrect: false, distractorRationale: "A taxa de reação varia dramaticamente com a superfície de contato e com a temperatura da água." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Teoria das Colisões, para ocorrer reação as moléculas precisam colidir com orientação geométrica favorável e energia superior à energia de ativação. A trituração do sólido aumenta a superfície de contato (mais partículas expostas simultaneamente ao solvente) e o aquecimento da água aumenta a velocidade média das moléculas e a fração de colisões efetivas (com energia >= Ea). Logo, pó em água morna reage no menor tempo.",
+      stepByStep: [
+        "1. Fator Superfície de Contato: em um comprimido inteiro, apenas as moléculas da casca externa têm contato com a água; ao triturar em pó fino, milhões de micropartículas entram em contato direto simultâneo.",
+        "2. Fator Temperatura: o aumento de 10 °C para 40 °C eleva a energia cinética média das partículas (Boltzmann).",
+        "3. Mais moléculas superam a barreira da energia de ativação (Ea) a cada segundo.",
+        "4. Conclusão: a combinação de maior superfície de contato (pó) com maior temperatura (40 °C) maximiza a frequência de colisões efetivas por segundo, resultando na reação mais rápida de todas (Experimento 4)."
+      ],
+      coreConcept: "Cinética Química: Teoria das Colisões, Superfície de Contato e Efeito da Temperatura",
+      trapWarning: "Lembre-se: MENOR TEMPO de reação significa MAIOR VELOCIDADE! Cuidado para não confundir 'tempo menor' com 'reação lenta'."
+    },
+    commonTraps: [
+      "Confundir tempo curto com velocidade baixa (menor tempo = maior rapidez)",
+      "Achar que o estado físico sólido compacto reage mais rápido que o triturado"
+    ],
+    tags: ["cinetica-quimica", "superficie-de-contato", "temperatura", "teoria-das-colisoes", "rapidez-de-reacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERMO-024",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termoquímica",
+    subtopic: "Ação de Catalisadores no Diagrama de Energia Potencial",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nos veículos automotores modernos, o escapamento é equipado com um conversor catalítico (catalisador automotivo) contendo uma colmeia cerâmica revestida por metais nobres como platina, paládio e ródio. Esse dispositivo acelera em frações de segundo a conversão de gases poluentes altamente nocivos (monóxido de carbono e hidrocarbonetos não queimados) em dióxido de carbono e vapor d'água inócuos antes de serem expelidos para o ar.",
+      source: "Química Ambiental e Catálise Heterogênea"
+    },
+    prompt: "No perfil gráfico de energia potencial de uma reação química em função do caminho da reação, a presença do catalisador atua:",
+    options: [
+      { id: "a", text: "criando um caminho reacional alternativo com menor energia de ativação, sem alterar a entalpia dos reagentes, a dos produtos e a variação de entalpia (Delta H) do processo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "aumentando o valor da energia de ativação para tornar as moléculas reagentes mais estáveis e duradouras.", isCorrect: false, distractorRationale: "Se aumentasse a energia de ativação, o catalisador tornaria a reação mais lenta (agiria como inibidor)." },
+      { id: "c", text: "tornando exotérmica uma reação que antes era endotérmica, alterando profundamente o Delta H da reação.", isCorrect: false, distractorRationale: "O catalisador não altera a entalpia de reagentes nem de produtos, logo o Delta H permanece estritamente idêntico." },
+      { id: "d", text: "sendo totalmente consumido na reação química, transformando-se no produto gasoso desejado.", isCorrect: false, distractorRationale: "Catalisadores participam dos intermediários, mas são integralmente regenerados no final sem sofrer consumo líquido." },
+      { id: "e", text: "deslocando o equilíbrio químico no sentido de produzir 100% de rendimento de produtos puros.", isCorrect: false, distractorRationale: "Catalisadores aceleram igualmente as velocidades direta e inversa (v_direta e v_inversa), sem alterar a constante Kc ou o rendimento de equilíbrio." }
+    ],
+    detailedExplanation: {
+      summary: "O catalisador é uma substância que acelera a velocidade da reação sem ser consumida no processo. Ele atua criando uma rota mecânica alternativa com um complexo ativado de menor patamar energético, reduzindo a energia de ativação (Ea). Ele NÃO altera a entalpia inicial dos reagentes, a entalpia final dos produtos, o Delta H da reação nem o rendimento de equilíbrio.",
+      stepByStep: [
+        "1. Barreira da reação: a energia de ativação (Ea) é a energia mínima necessária para que os reagentes atinjam o complexo ativado e quebrem suas ligações.",
+        "2. Mecanismo catalítico: as moléculas de poluentes adsorvem na superfície da platina/paládio, enfraquecendo as ligações covalentes.",
+        "3. Novo complexo ativado: a rota alternativa exige muito menos energia para reagir (menor 'morro' energético no gráfico).",
+        "4. Grandezas inalteradas pelo catalisador:",
+        "   - H_reagentes: não muda.",
+        "   - H_produtos: não muda.",
+        "   - Delta H = H_produtos - H_reagentes: NÃO MUDA!",
+        "   - Constante de equilíbrio Kc: NÃO MUDA!"
+      ],
+      coreConcept: "Ação dos Catalisadores: Redução da Energia de Ativação mantendo Delta H e Kc Invariantes",
+      trapWarning: "A pegadinha clássica do ENEM: afirmar que o catalisador aumenta o rendimento ou muda o Delta H! O catalisador apenas faz a reação atingir o equilíbrio mais rápido; ele não cria mais produtos nem altera a termodinâmica!"
+    },
+    commonTraps: [
+      "Achar que o catalisador altera a variação de entalpia (Delta H)",
+      "Supor que o catalisador altera o rendimento ou a constante de equilíbrio Kc"
+    ],
+    tags: ["catalisador", "energia-de-ativacao", "cinetica-quimica", "catalise-heterogenea", "poluicao-do-ar"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERMO-025",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termoquímica",
+    subtopic: "Densidade Energética e Poder Calorífico de Combustíveis",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na transição energética de frotas de transporte público sustentável, avalia-se a eficiência calorífica de diferentes combustíveis. O poder calorífico de um combustível expressa a quantidade de energia térmica liberada na queima completa por unidade de massa (em kJ/g). Considere os seguintes dados termoquímicos:\n- Etanol hidratado (C2H5OH, massa molar 46 g/mol): entalpia de combustão Delta H = -1 380 kJ/mol;\n- Gasolina padrão (representada pelo octano C8H18, massa molar 114 g/mol): entalpia de combustão Delta H = -5 472 kJ/mol.",
+      source: "Termoquímica dos Biocombustíveis e Engenharia Mecânica"
+    },
+    prompt: "Com base nesses dados, a energia liberada na combustão de exatamente 1 grama de etanol e de 1 grama de octano é, respectivamente, de:",
+    options: [
+      { id: "a", text: "30 kJ/g e 48 kJ/g", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "46 kJ/g e 114 kJ/g", isCorrect: false, distractorRationale: "Confundiu os valores de poder calorífico com as massas molares dos compostos." },
+      { id: "c", text: "1 380 kJ/g e 5 472 kJ/g", isCorrect: false, distractorRationale: "Utilizou a entalpia molar (kJ/mol) sem dividir pela respectiva massa molar (g/mol)." },
+      { id: "d", text: "20 kJ/g e 60 kJ/g", isCorrect: false, distractorRationale: "Estimativas aproximadas com erro significativo de divisão." },
+      { id: "e", text: "15 kJ/g e 24 kJ/g", isCorrect: false, distractorRationale: "Dividiu os valores corretos por 2 sem justificativa química." }
+    ],
+    detailedExplanation: {
+      summary: "O poder calorífico em kJ/g é a razão entre a entalpia de combustão por mol (em módulo) e a massa molar em gramas: Etanol = 1 380 kJ / 46 g = 30 kJ/g. Octano = 5 472 kJ / 114 g = 48 kJ/g. Isso explica por que um automóvel consome maior volume de etanol do que de gasolina para percorrer a mesma distância.",
+      stepByStep: [
+        "1. Definição de poder calorífico específico: Poder calorífico (kJ/g) = |Delta H_combustao| / Massa Molar.",
+        "2. Cálculo para o etanol (C2H5OH):",
+        "   - 1 mol pesa 46 g e libera 1 380 kJ.",
+        "   - Energia por grama: 1 380 kJ / 46 g = 30 kJ/g.",
+        "3. Cálculo para a gasolina (octano, C8H18):",
+        "   - 1 mol pesa 114 g e libera 5 472 kJ.",
+        "   - Energia por grama: 5 472 kJ / 114 g = 48 kJ/g.",
+        "4. Análise contextual: cada grama de gasolina fornece 48 kJ contra 30 kJ do etanol (a gasolina tem densidade energética cerca de 60% superior por massa).",
+        "5. Por essa razão termoquímica, o rendimento em km/L de um carro abastecido com etanol é tradicionalmente cerca de 70% do rendimento obtido com gasolina."
+      ],
+      coreConcept: "Poder Calorífico Específico: Energia por Grama de Combustível e Análise de Biocombustíveis",
+      trapWarning: "Cuidado: não compare apenas as entalpias por mol (-1 380 vs -5 472)! A molécula de gasolina é muito mais pesada (114 g) que a de etanol (46 g), logo o que importa para o motorista no tanque é a energia por massa e volume."
+    },
+    commonTraps: [
+      "Comparar diretamente kJ/mol em vez de converter para kJ/g ou kJ/L",
+      "Errar a divisão 1 380 / 46 = 30"
+    ],
+    tags: ["poder-calorifico", "biocombustíveis", "etanol", "gasolina", "densidade-energetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

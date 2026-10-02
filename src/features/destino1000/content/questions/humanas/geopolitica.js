@@ -856,5 +856,228 @@ export const QUESTIONS_GEOPOLITICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-021",
+    area: "humanas",
+    competence: 4,
+    skill: 17,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Guerra dos Semicondutores e a Hegemonia Tecnológica Global",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Os semicondutores e microchips de alta precisão (com litografia inferior a 5 nanômetros) tornaram-se o recurso estratégico mais disputado do século XXI, indispensáveis para inteligência artificial, supercomputadores, mísseis guiados e telecomunicações 5G/6G. Mais de 60% da fabricação global desses chips avançados e cerca de 90% dos mais sofisticados concentram-se na ilha de Taiwan, sobretudo por meio da gigante corporativa TSMC, gerando o chamado 'Escudo de Silício'.",
+      source: "Relações Internacionais e Soberania Digital Contemporânea"
+    },
+    prompt: "A centralidade geopolítica de Taiwan na produção de semicondutores e as disputas entre Estados Unidos e China sobre a ilha revelam que:",
+    options: [
+      { id: "a", text: "o controle sobre as cadeias globais de suprimento de tecnologias digitais de ponta tornou-se um elemento central de segurança nacional e supremacia militar entre superpotências.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a tecnologia de microprocessadores tornou-se obsoleta frente ao retorno do carvão mineral como base computacional.", isCorrect: false, distractorRationale: "Microchips são o coração da economia digital de ponta e semicondutores são indispensáveis para qualquer automação contemporânea." },
+      { id: "c", text: "qualquer país periférico pode fabricar chips de 2 nanômetros utilizando maquinário de ferro fundido simples.", isCorrect: false, distractorRationale: "A produção de chips de ponta exige equipamentos de litografia ultravioleta extrema (EUV) monopolizados por pouquíssimas empresas globais." },
+      { id: "d", text: "os Estados Unidos abandonaram qualquer investimento em fábricas de semicondutores em seu próprio território.", isCorrect: false, distractorRationale: "Os EUA aprovaram o Chips and Science Act investindo dezenas de bilhões de dólares para subsidiar fábricas locais de semicondutores." },
+      { id: "e", text: "a China desfez completamente sua reivindicação territorial histórica sobre a reunificação da ilha de Taiwan.", isCorrect: false, distractorRationale: "A China mantém formalmente o princípio de 'Uma Só China' e considera a reunificação com Taiwan uma prioridade estatal inegociável." }
+    ],
+    detailedExplanation: {
+      summary: "A 'Guerra dos Chips' demonstra que o poder hegemônico no século XXI não depende apenas de arsenais bélicos ou jazidas de petróleo, mas do domínio monopolista das cadeias de valor de semicondutores. A concentração de fábricas em Taiwan transforma o Estreito de Taiwan em um dos pontos de estrangulamento (chokepoints) geopolíticos mais vulneráveis do planeta.",
+      stepByStep: [
+        "1. Dependência crítica: Semicondutores são os 'tijolos' de toda a indústria moderna (de smartphones a caças supersônicos).",
+        "2. Posição de Taiwan: A TSMC (Taiwan Semiconductor Manufacturing Company) detém o domínio quase monopolista dos chips de litografia mais avançada.",
+        "3. Conceito de 'Escudo de Silício': A dependência econômica mundial dos chips de Taiwan cria forte desincentivo à interrupção de sua cadeia produtiva por invasões militares.",
+        "4. Resposta das potências: Sanções americanas que barram exportação de máquinas de litografia avançada para a China e subsídios para transferir fábricas de chips para território ocidental (reshoring)."
+      ],
+      coreConcept: "Geopolítica Tecnológica: Semicondutores, Cadeias de Suprimento e Tensão no Estreito de Taiwan",
+      trapWarning: "No ENEM, compreenda que as disputas geopolíticas contemporâneas migraram fortemente do controle de terras agrícolas e petróleo para a supremacia sobre fluxos de dados, inteligência artificial e semicondutores."
+    },
+    commonTraps: [
+      "Achar que Taiwan é importante para as superpotências apenas por razões territoriais agrícolas",
+      "Ignorar o papel crucial da empresa TSMC na infraestrutura de informática global"
+    ],
+    tags: ["semicondutores", "taiwan", "guerra-comercial", "china-eua", "tecnologia-de-ponta"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-022",
+    area: "humanas",
+    competence: 4,
+    skill: 17,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Expansão dos BRICS+ e Tendências de Desdolarização",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na Cúpula de Joanesburgo (2023) e encontros subsequentes, o bloco dos BRICS formalizou uma histórica expansão para o formato 'BRICS+', admitindo novos membros como Arábia Saudita, Emirados Árabes Unidos, Irã, Egito e Etiópia. Em paralelo à ampliação geopolítica, o bloco acelerou debates sobre o incentivo ao comércio mútuo liquidado em moedas locais e a criação de canais de compensação financeira alternativos ao sistema de pagamentos SWIFT, dominado por capitais ocidentais.",
+      source: "Economia Política Internacional e Geofinanças Globais"
+    },
+    prompt: "A ampliação do bloco dos BRICS e o debate sobre a redução da dependência do dólar norte-americano nas trocas comerciais bilaterais refletem:",
+    options: [
+      { id: "a", text: "o fortalecimento de uma ordem global multipolar que busca reduzir a vulnerabilidade dos países do Sul Global frente a sanções econômicas extraterritoriais e à hegemonia monetária do Ocidente.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a dissolução definitiva do Fundo Monetário Internacional e a proibição imediata do uso de moedas fiduciárias no comércio marítimo.", isCorrect: false, distractorRationale: "O FMI e o Banco Mundial continuam existindo e o dólar ainda é a principal moeda de reserva, ocorrendo diversificação gradual e não abolição repentina." },
+      { id: "c", text: "a unificação monetária de todos os países membros em uma moeda de papel única e obrigatória com banco central sediado na Antártica.", isCorrect: false, distractorRationale: "Não há proposta de moeda única comum como o Euro; a estratégia é uso de moedas locais bilaterais (real, yuan, rúpia, dirham)." },
+      { id: "d", text: "o alinhamento diplomático e militar irrestrito de todos os países do Sul Global com as diretrizes do Conselho de Segurança da OTAN.", isCorrect: false, distractorRationale: "Os BRICS operam como contraponto autônomo à hegemonia ocidental representada pelo G7 e pela OTAN." },
+      { id: "e", text: "a extinção de qualquer exportação de petróleo e gás fóssil proveniente do Golfo Pérsico.", isCorrect: false, distractorRationale: "A entrada de Arábia Saudita e Emirados Árabes justamente fortaleceu o peso do bloco na geopolítica energética dos hidrocarbonetos." }
+    ],
+    detailedExplanation: {
+      summary: "O dólar norte-americano é historicamente utilizado como a 'moeda de reserva mundial' e instrumento de política externa (sanções, congelamento de reservas cambiais pelo SWIFT). Ao integrar os maiores produtores mundiais de energia (Oriente Médio e Rússia) com os maiores consumidores industriais (China e Índia), os BRICS+ ganham massa crítica para liquidar transações petrolíferas e agrícolas em moedas nacionais (desdolarização relativa) e consolidar a multipolaridade.",
+      stepByStep: [
+        "1. Petrodólar histórico: Desde a década de 1970, o petróleo mundial era transacionado quase compulsoriamente em dólares americanos.",
+        "2. Arma financeira (weaponization of finance): O bloqueio de centenas de bilhões de dólares em reservas da Rússia em 2022 acelerou a busca de outros países por diversificação de reservas.",
+        "3. Novo arranjo nos BRICS+: Transações de petróleo entre Arábia Saudita, Índia, Rússia e China passaram a ser liquidadas em yuan, rúpias e dirhams.",
+        "4. Multipolaridade: O Sul Global busca maior autonomia institucional, sem depender exclusivamente das regras do sistema financeiro de Bretton Woods.",
+        "5. Conclusão: Trata-se de um movimento geopolítico de reequilíbrio de poder econômico global."
+      ],
+      coreConcept: "BRICS+: Multipolaridade, Sul Global e Diversificação Monetária nas Relações Internacionais",
+      trapWarning: "Cuidado: desdolarização não significa o desaparecimento imediato do dólar! O dólar continua sendo a moeda dominante no mundo. O que ocorre é uma redução da dependência e ascensão de arranjos bilaterais em moedas locais."
+    },
+    commonTraps: [
+      "Achar que os BRICS criaram uma moeda física única para substituir o Real e o Yuan",
+      "Confundir busca por autonomia financeira multipolar com isolacionismo econômico"
+    ],
+    tags: ["brics", "desdolarizacao", "multipolaridade", "sul-global", "geofinancas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-023",
+    area: "humanas",
+    competence: 4,
+    skill: 17,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Geopolítica dos Minerais Críticos e a Transição Energética",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A descarbonização da matriz energética global exige a substituição de combustíveis fósseis por tecnologias limpas (painéis solares fotovoltaicos, turbinas eólicas e baterias eletroquímicas para veículos elétricos). No entanto, essas tecnologias verdes demandam quantidades monumentais de minerais críticos e terras raras: o lítio (concentrado no 'Triângulo do Lítio' entre Chile, Bolívia e Argentina), o cobalto (extraído majoritariamente na República Democrática do Congo) e o processamento de refino químico de terras raras, onde a China controla mais de 70% da capacidade industrial mundial.",
+      source: "Agência Internacional de Energia (IEA), Relatório de Minerais Críticos"
+    },
+    prompt: "Essa dependência material da economia verde engendra uma nova dinâmica na geopolítica dos recursos naturais caracterizada pela:",
+    options: [
+      { id: "a", text: "transferência da vulnerabilidade geopolítica do petróleo para os minerais críticos, redefinindo as alianças estratégicas e disputas de poder sobre países detentores dessas reservas e elos de refino.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "eliminação de qualquer impacto socioambiental ou conflito de interesses na mineração sustentável moderna.", isCorrect: false, distractorRationale: "A mineração de lítio (estresse hídrico em salares) e de cobalto (trabalho precarizado e impactos ecológicos) gera graves tensões socioambientais locais." },
+      { id: "c", text: "descoberta de jazidas homogêneas e infinitas de lítio e cobalto em todos os municípios do planeta.", isCorrect: false, distractorRationale: "Esses minerais possuem distribuição geológica altamente concentrada e assimétrica em poucas regiões." },
+      { id: "d", text: "perda total de relevância econômica da China no comércio e na indústria de baterias recarregáveis.", isCorrect: false, distractorRationale: "A China consolidou posição hegemônica incontestável na cadeia de suprimento e refino dos minerais de baterias." },
+      { id: "e", text: "proibição internacional definitiva do uso de eletricidade e redes elétricas até o ano de 2050.", isCorrect: false, distractorRationale: "A transição energética caminha na direção oposta: eletrificação em massa de transportes e matrizes produtivas." }
+    ],
+    detailedExplanation: {
+      summary: "A transição energética não elimina a geopolítica dos recursos, mas a reconfigura. Se no século XX a geopolítica mundial gravitava em torno do controle de poços de petróleo e gasodutos no Oriente Médio, no século XXI ela passa a gravitar em torno de salares de lítio, minas de cobalto, níquel, cobre e usinas de refino de terras raras.",
+      stepByStep: [
+        "1. Comparação histórica: Petróleo (Oriente Médio/Rússia) -> Minerais Críticos (América do Sul, África Central e refino na China).",
+        "2. Triângulo do Lítio: Bolívia, Chile e Argentina detêm mais de metade das reservas conhecidas de salares de lítio, atraindo investimentos chineses, europeus e norte-americanos.",
+        "3. Gargalo do refino: A China não controla apenas minas locais, mas detém quase o monopólio global do refino químico de lítio, níquel e terras raras.",
+        "4. Desafio socioambiental: O consumo desenfreado de água doce para evaporar salmoura de lítio em áreas áridas e a exploração precarizada de cobalto impõem debates sobre 'justiça climática' e direitos indígenas.",
+        "5. Conclusão: A transição energética gera novas dependências estratégicas globais."
+      ],
+      coreConcept: "Geopolítica dos Minerais Críticos: Lítio, Terras Raras e a Nova Dependência da Transição Verde",
+      trapWarning: "Cuidado com o mito de que 'energia renovável não tem geopolítica nem impacto ambiental'! A tecnologia é limpa na operação, mas sua cadeia de matérias-primas minerais exige intensa exploração territorial e gera novas tensões globais."
+    },
+    commonTraps: [
+      "Supor que a transição para energias limpas extingue disputas geopolíticas por matérias-primas",
+      "Ignorar o papel quase monopolista da China no beneficiamento e refino de terras raras"
+    ],
+    tags: ["minerais-criticos", "litio", "terras-raras", "transicao-energetica", "geopolitica-ambiental"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-024",
+    area: "humanas",
+    competence: 4,
+    skill: 18,
+    topic: "Geopolítica e Globalização",
+    subtopic: "Migrações Climáticas e o Vácuo Jurídico Internacional",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A elevação do nível médio dos oceanos que ameaça submergir nações insulares de baixa altitude (como Tuvalu, Kiribati e Ilhas Marshall), somada ao avanço da desertificação e secas catastróficas no Sahel africano, já força o deslocamento forçado de milhões de pessoas de suas terras ancestrais. Contudo, o Estatuto dos Refugiados da ONU (Convenção de Genebra de 1951) concede o status jurídico de refugiado unicamente a indivíduos sob fundado temor de perseguição por motivos de raça, religião, nacionalidade, grupo social ou opiniões políticas.",
+      source: "Direito Internacional Humanitário e Migrações Globais"
+    },
+    prompt: "A ausência de previsão legal expressa para os chamados 'refugiados do clima' no direito internacional acarreta como consequência imediata:",
+    options: [
+      { id: "a", text: "uma situação de desamparo jurídico internacional e vulnerabilidade humanitária, na qual populações deslocadas por colapsos ambientais não possuem direito automático a asilo ou acolhimento compulsório pelos Estados soberanos receptores.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a concessão imediata de dupla cidadania diplomática e auxílio financeiro vitalício em todos os países membros da União Europeia.", isCorrect: false, distractorRationale: "Pelo contrário, sem enquadramento jurídico como refugiados, esses migrantes são frequentemente tratados como clandestinos sujeitos à deportação." },
+      { id: "c", text: "a erradicação definitiva de qualquer seca ou inundação nas regiões periféricas do planeta.", isCorrect: false, distractorRationale: "O vácuo jurídico decorre justamente do agravamento concreto dos eventos climáticos extremos." },
+      { id: "d", text: "o fechamento de todas as embaixadas e representações consulares dos países desenvolvidos.", isCorrect: false, distractorRationale: "O direito consular opera normalmente; a questão reside na ausência de tratado vinculante de asilo ambiental." },
+      { id: "e", text: "a transferência de todas as populações insulares para bases espaciais autossuficientes na órbita terrestre.", isCorrect: false, distractorRationale: "Hipótese de ficção científica inviável que não corresponde à realidade das negociações multilaterais." }
+    ],
+    detailedExplanation: {
+      summary: "A Convenção de Genebra de 1951 foi redigida no contexto do pós-Segunda Guerra para proteger perseguidos políticos pelo Estado. Ela não contemplava catástrofes ecológicas e aquecimento global. Quem perde sua casa e seu território por secas extremas ou invasão marinha não é considerado legalmente 'refugiado' pela lei internacional, caindo na categoria desprotegida de migrante econômico ou ambiental sem garantia de asilo.",
+      stepByStep: [
+        "1. Definição restrita de refugiado (Genebra 1951): exige PERSEGUIÇÃO ativa por raça, religião, nacionalidade ou opinião política.",
+        "2. Natureza da crise climática: a causa da perda de moradia é ambiental (seca extrema, furacões repetidos, submersão de atóis), não perseguição estatal.",
+        "3. Limbo jurídico: países receptores podem recusar a entrada e deportar migrantes climáticos legalmente sob suas leis soberanas de controle de fronteiras.",
+        "4. Desafio das ilhas do Pacífico: nações inteiras correm o risco de perder sua base territorial física, criando a figura inédita de Estados soberanos sem território terrestre.",
+        "5. Pauta do Sul Global: pressão por um novo tratado internacional que reconheça o refúgio climático e estabeleça financiamento e salvaguardas migratórias vinculantes."
+      ],
+      coreConcept: "Migrações Climáticas: Convenção de Genebra de 1951 e o Limbo Jurídico do Refúgio Ambiental",
+      trapWarning: "Atenção técnica no ENEM: do ponto de vista do DIREITO INTERNACIONAL FORMAL, a expressão 'refugiado climático' ainda NÃO EXISTE juridicamente! Existe como conceito sociológico e humanitário, mas a lei de 1951 não garante asilo a eles."
+    },
+    commonTraps: [
+      "Achar que qualquer pessoa que perde a casa em um desastre climático tem direito legal automático a asilo na Europa ou EUA",
+      "Confundir a Convenção de Refugiados de 1951 com os Acordos Climáticos de Paris"
+    ],
+    tags: ["refugiados-climaticos", "convencao-de-genebra", "direitos-humanos", "migracoes", "justica-climatica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOPOL-025",
+    area: "humanas",
+    competence: 4,
+    skill: 17,
+    topic: "Geopolítica e Globalização",
+    subtopic: "A Nova Rota da Seda Chinesa e a Infraestrutura Geoeconômica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Lançada em 2013 pelo governo de Pequim, a Iniciativa Cinturão e Rota (Belt and Road Initiative - BRI), popularmente conhecida como a 'Nova Rota da Seda', já financiou e construiu centenas de bilhões de dólares em ferrovias transcontinentais, redes de gasodutos, pontes, hidrelétricas e complexos portuários ao longo da Ásia Central, Europa, África e América Latina. Em paralelo à modernização logística, analistas internacionais apontam casos de contrapartidas estratégicas quando países devedores enfrentam inadimplência, a exemplo do porto marítimo de Hambantota, no Sri Lanka, arrendado a uma estatal chinesa por 99 anos.",
+      source: "Geopolítica Eurasiana e Expansão Econômica Global"
+    },
+    prompt: "Como estratégia de política externa e projeção hegemônica de poder global, a Nova Rota da Seda chinesa visa primordialmente:",
+    options: [
+      { id: "a", text: "escoar a capacidade industrial e construtiva excedente de Pequim, garantir rotas seguras de abastecimento de commodities e expandir a influência geopolítica chinesa sobre corredores estratégicos do comércio mundial.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "financiar doações filantrópicas sem qualquer interesse econômico, comercial ou de suprimento mineral para a indústria asiática.", isCorrect: false, distractorRationale: "O projeto é um plano de Estado estratégico altamente planejado para assegurar suprimento e ampliar influência geoeconômica." },
+      { id: "c", text: "isolar comercialmente o continente asiático do restante da economia capitalista global.", isCorrect: false, distractorRationale: "A iniciativa visa integrar a Ásia com a Europa, África e América Latina por ferrovias e corredores marítimos rápidos." },
+      { id: "d", text: "substituir todas as ferrovias e rodovias por canais fluviais navegáveis subterrâneos na Cordilheira dos Andes.", isCorrect: false, distractorRationale: "Os investimentos priorizam modais ferroviários modernos de carga, rodovias e portos de contêineres." },
+      { id: "e", text: "obrigar todos os países parceiros a abolir o comércio de petróleo e derivados de carvão.", isCorrect: false, distractorRationale: "A China financiou múltiplos projetos energéticos, incluindo oleodutos, gasodutos e termelétricas ao longo da rota." }
+    ],
+    detailedExplanation: {
+      summary: "A 'Belt and Road Initiative' (BRI) é o mais ambicioso plano de infraestrutura geoeconômica da história contemporânea. Ela cumpre tríplice objetivo estratégico: 1) Absorve a sobrecapacidade de produção de aço, cimento e engenharia pesada chinesa; 2) Cria rotas terrestres alternativas ao Estreito de Malaca (vulnerável a bloqueios navais ocidentais) para importar energia e alimentos; 3) Conecta os mercados consumidores da Eurásia e África ao polo industrial chinês, consolidando a liderança de Pequim.",
+      stepByStep: [
+        "1. Cinturão Terrestre (Silk Road Economic Belt): Ferrovias conectando o interior da China até a Alemanha e Europa Ocidental cruzando a Ásia Central e a Rússia.",
+        "2. Rota Marítima (21st Century Maritime Silk Road): Rede de portos e entrepostos ao longo do Oceano Índico, Mar Vermelho e Mediterrâneo.",
+        "3. Dilema de Malaca: Cerca de 80% do petróleo importado pela China passa pelo Estreito de Malaca; corredores terrestres via Paquistão (porto de Gwadar) e Mianmar contornam esse gargalo naval.",
+        "4. Diplomacia da Dívida e influência: Empréstimos volumosos de bancos estatais chineses geram laços de dependência econômica e alinhamento diplomático na ONU com os países receptores de infraestrutura."
+      ],
+      coreConcept: "A Nova Rota da Seda (Belt and Road): Infraestrutura Global, Dilema de Malaca e Hegemonia Chinesa",
+      trapWarning: "No ENEM, analise a Nova Rota da Seda com equilíbrio crítico: por um lado, supre carências históricas gritantes de infraestrutura no Sul Global; por outro, projeta o poder econômico e militar chinês sobre nós de estrangulamento vitais da economia mundial."
+    },
+    commonTraps: [
+      "Tratar o projeto como mera 'doação filantrópica desinteressada'",
+      "Ignorar a preocupação geopolítica chinesa em contornar o Estreito de Malaca"
+    ],
+    tags: ["nova-rota-da-seda", "china", "infraestrutura", "belt-and-road", "geoeconomia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

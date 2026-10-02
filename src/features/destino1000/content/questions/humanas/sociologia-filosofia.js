@@ -798,6 +798,230 @@ export const QUESTIONS_SOCIOLOGIA_FILOSOFIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-011",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Política Contemporânea",
+    subtopic: "Hannah Arendt e o Conceito da Banalidade do Mal",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao cobrir o julgamento do oficial nazista Adolf Eichmann em Jerusalém na década de 1960, a filósofa judia-alemã Hannah Arendt esperava encontrar um monstro sádico dominado por ódio visceral. No entanto, deparou-se com um burocrata medíocre que alegava apenas 'cumprir ordens e prazos logísticos' com zelo administrativo, incapaz de refletir criticamente sobre o impacto desumanizador de suas ações no extermínio em massa.",
+      source: "Hannah Arendt, Eichmann em Jerusalém: Um Relato sobre a Banalidade do Mal"
+    },
+    prompt: "O conceito arendtiano de 'banalidade do mal' exposto na análise da conduta de Eichmann caracteriza o mal como:",
+    options: [
+      { id: "a", text: "um fenômeno que se dissemina quando indivíduos abdicam do pensamento reflexivo e da consciência moral autônoma, atuando como meras engrenagens obedientes em sistemas burocráticos violentos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "uma força demoníaca transcendente irresistível que domina biologicamente os genes de certas populações.", isCorrect: false, distractorRationale: "Arendt rejeita determinismos biológicos e místicos; o mal para ela decorre da recusa ético-política em pensar." },
+      { id: "c", text: "um impulso sádico patológico exclusivo de criminosos portadores de desvios psiquiátricos congênitos.", isCorrect: false, distractorRationale: "Eichmann foi considerado mentalmente são pelos médicos; o choque de Arendt foi justamente a normalidade assustadora do réu." },
+      { id: "d", text: "o resultado direto da leitura e do debate aprofundado dos textos de direitos humanos da Antiguidade grega.", isCorrect: false, distractorRationale: "O nazismo censurou e perseguiu a reflexão humanística e a tradição cosmopolita." },
+      { id: "e", text: "um evento que só pode se manifestar em sociedades que aboliram os tribunais de justiça e a administração pública.", isCorrect: false, distractorRationale: "O totalitarismo operou precisamente através de tribunais de exceção e aparelhamento da burocracia estatal legalizada." }
+    ],
+    detailedExplanation: {
+      summary: "Para Hannah Arendt, a 'banalidade do mal' não diminui a gravidade do Holocausto, mas revela seu traço mais aterrorizante: os piores crimes contra a humanidade não foram cometidos apenas por psicopatas sádicos, mas por pessoas comuns que abriram mão da faculdade de julgar e pensar criticamente, normalizando a crueldade como simples 'trabalho rotineiro a ser cumprido'.",
+      stepByStep: [
+        "1. Contexto: Julgamento de Adolf Eichmann (responsável pela logística ferroviária dos campos de concentração nazistas).",
+        "2. Tese de Eichmann: Ele alegava ser um 'mero funcionário zeloso' que não odiava judeus, apenas cumpria as leis do Estado nazista.",
+        "3. Formulação de Arendt: A ausência de pensamento (thoughtlessness). Eichmann era incapaz de se colocar no lugar do outro e de julgar o certo e o errado fora das regras burocráticas.",
+        "4. A banalidade do mal: O mal torna-se banal quando se institucionaliza na normalidade burocrática cotidiana e as pessoas obedecem sem qualquer questionamento ético.",
+        "5. Lição contemporânea: A defesa da democracia exige o cultivo permanente do pensamento crítico e da recusa à obediência cega a ordens injustas."
+      ],
+      coreConcept: "A Banalidade do Mal em Hannah Arendt: Incapacidade de Pensar e Cumprimento Cego de Ordens",
+      trapWarning: "Cuidado: 'banalidade do mal' NÃO significa que o mal seja 'pouco importante' ou 'tolerável'! Significa que ele se tornou corriqueiro, banalizado e executado por pessoas comuns sem reflexão ética."
+    },
+    commonTraps: [
+      "Achar que Arendt estava atenuando ou perdoando os crimes de Eichmann",
+      "Confundir banalidade do mal com mal radical ou patologia psiquiátrica clínica"
+    ],
+    tags: ["hannah-arendt", "banalidade-do-mal", "etica", "filosofia-politica", "totalitarismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-012",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Contemporânea",
+    subtopic: "Byung-Chul Han e a Sociedade do Cansaço",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O filósofo sul-coreano Byung-Chul Han argumenta que a sociedade contemporânea deixou de ser uma sociedade disciplinar foucaultiana (regida pelo 'dever' e por proibições externas expressas por muros e prisões) e converteu-se em uma sociedade do desempenho (regida pelo verbo 'poder' e pelo lema da positividade ilimitada do 'Yes, we can'). Nessa nova configuração, o indivíduo é coagido a ser 'empresário de si mesmo'.",
+      source: "Byung-Chul Han, Sociedade do Cansaço (adaptado)."
+    },
+    prompt: "Segundo a crítica de Han, a principal consequência psíquica e social dessa transição para a sociedade do desempenho é a:",
+    options: [
+      { id: "a", text: "autoexploração voluntária, na qual o sujeito explora a si mesmo sob a ilusão de estar exercendo sua liberdade individual, culminando em esgotamento profissional (burnout) e depressão.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "libertação completa dos trabalhadores de qualquer forma de cansaço ou sofrimento existencial.", isCorrect: false, distractorRationale: "O autor demonstra precisamente o contrário: o sofrimento e o estresse foram internalizados e agravados." },
+      { id: "c", text: "substituição de todas as obrigações profissionais pelo lazer comunitário contemplativo contínuo.", isCorrect: false, distractorRationale: "A sociedade do desempenho destrói o tempo contemplativo (vita contemplativa) em prol da hiperatividade produtivista ininterrupta." },
+      { id: "d", text: "eliminação total de dispositivos digitais e redes de comunicação na vida cotidiana.", isCorrect: false, distractorRationale: "Han destaca que as redes sociais e celulares são instrumentos centrais de vigilância voluntária e vigilância de desempenho." },
+      { id: "e", text: "volta compulsória ao sistema de servidão feudal mediado por senhores de terras agrícolas.", isCorrect: false, distractorRationale: "Trata-se de fenômeno do neoliberalismo hipermoderno digital, e não de retorno à Idade Média feudal." }
+    ],
+    detailedExplanation: {
+      summary: "Em 'A Sociedade do Cansaço', Byung-Chul Han teoriza que a violência atual não é mais imunológica ou externa (o patrão com chicote ou proibição), mas neuronal e autoimposta: o indivíduo vigia e explora a si mesmo para ser mais produtivo, gerando a epidemia de depressão, ansiedade e síndrome de burnout.",
+      stepByStep: [
+        "1. Sociedade Disciplinar (Foucault): hospitais, prisões e fábricas operam com proibições ('não pode', 'deve fazer'). O opressor é externo.",
+        "2. Sociedade do Desempenho (Byung-Chul Han): academias, escritórios abertos, redes sociais e startups operam com positividade ('você pode tudo', 'supere seus limites').",
+        "3. Mecanismo da autoexploração: o trabalhador explora a si mesmo achando que está se realizando ou alcançando o sucesso autônomo.",
+        "4. Culpa internalizada: o fracasso não é mais atribuído ao sistema desigual, mas à suposta falta de esforço individual ('se não deu certo, a culpa é sua').",
+        "5. Desfecho patológico: infarto psíquico gerado pelo excesso de positividade e hipercomunicação (cansaço solitário e depressão)."
+      ],
+      coreConcept: "Sociedade do Desempenho em Byung-Chul Han: Autoexploração, Positividade Tóxica e Burnout",
+      trapWarning: "No ENEM, atente para a diferença entre exploração externa clássica (Marx/Foucault) e autoexploração voluntária (Han): a autoexploração é mais eficaz porque o indivíduo acredita que é LIVRE enquanto se esgota!"
+    },
+    commonTraps: [
+      "Achar que o autor elogia o 'Yes, we can' como sinal de empoderamento (ele o critica duramente)",
+      "Confundir a sociedade disciplinar (negativa/proibitiva) com a de desempenho (positiva/autoexploradora)"
+    ],
+    tags: ["byung-chul-han", "sociedade-do-cansaco", "burnout", "autoexploracao", "filosofia-contemporanea"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-011",
+    area: "humanas",
+    competence: 1,
+    skill: 1,
+    topic: "Sociologia",
+    subtopic: "Pierre Bourdieu e as Formas de Capital e Reprodução Cultural",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na sociologia da educação de Pierre Bourdieu, a escola republicana, embora se apresente formalmente como uma instituição neutra e meritocrática que oferece as mesmas oportunidades a todos os estudantes, atua historicamente como um mecanismo de legitimação e reprodução das desigualdades de classe social existentes.",
+      source: "Pierre Bourdieu e Jean-Claude Passeron, A Reprodução: Elementos para uma Teoria do Sistema de Ensino"
+    },
+    prompt: "Para Bourdieu, a escola privilegia os estudantes das classes dominantes porque ela valoriza e cobra silenciosamente o:",
+    options: [
+      { id: "a", text: "capital cultural herdado do ambiente familiar (familiaridade com a norma culta, hábitos de leitura e códigos eruditos), tratando desigualdades sociais prévias como se fossem talentos individuais inatos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "desempenho atlético e força muscular bruta medidos em competições desportivas escolares.", isCorrect: false, distractorRationale: "O cerne da análise de Bourdieu é o capital cultural e a violência simbólica da cultura letrada burguesa, não o vigor físico." },
+      { id: "c", text: "pagamento de propinas financeiras diretas a professores em salas de aula públicas regulares.", isCorrect: false, distractorRationale: "O mecanismo opera pela via simbólica invisível e curricular, e não por corrupção vulgar direta." },
+      { id: "d", text: "conhecimento tradicional e saberes orais periféricos em detrimento da literatura clássica.", isCorrect: false, distractorRationale: "A escola tradicional historicamente desvaloriza os saberes periféricos e impõe a cultura letrada dominante." },
+      { id: "e", text: "sorteio aleatório e cego de diplomas sem a aplicação de qualquer prova ou critério avaliativo.", isCorrect: false, distractorRationale: "As provas e exames existem e conferem capital institucionalizado legítimo à hierarquia de classes." }
+    ],
+    detailedExplanation: {
+      summary: "Pierre Bourdieu desmistifica a ideologia do dom e da meritocracia escolar. Ele demonstra que o sistema educacional exige de todos os estudantes o 'capital cultural' (domínio da linguagem culta, gosto estético erudito) que apenas as famílias de elite transmitem por socialização doméstica. A escola não ensina esses códigos; ela apenas os exige, convertendo vantagens sociais de berço em mérito acadêmico aparente.",
+      stepByStep: [
+        "1. Formas de Capital em Bourdieu: Econômico (renda, patrimônio), Cultural (saberes, títulos, livros), Social (rede de contatos e influências) e Simbólico (prestígio e reconhecimento social).",
+        "2. Formas do Capital Cultural: Incorporado (disposições mentais e corporais duradouras - o habitus), Objetivado (quadros, livros, instrumentos musicais) e Institucionalizado (diplomas escolares formais).",
+        "3. Violência Simbólica: A escola impõe a cultura arbitrária da classe dominante como se fosse a única cultura universal e legítima.",
+        "4. Ilusão meritocrática: O filho da classe média alta é elogiado como 'inteligente e brilhante', enquanto o filho da classe trabalhadora é estigmatizado como 'desinteressado ou sem vocação', naturalizando a desigualdade social."
+      ],
+      coreConcept: "Capital Cultural, Habitus e Reprodução Social em Pierre Bourdieu",
+      trapWarning: "Cuidado: para Bourdieu, o capital cultural NÃO É apenas ter diploma! Ele é incorporado no falar, no vocabulário e na facilidade com textos complexos assimilada desde a primeira infância em famílias letradas."
+    },
+    commonTraps: [
+      "Achar que Bourdieu defende a meritocracia escolar ingênua (ele a desconstrói)",
+      "Reduzir o capital cultural apenas a dinheiro ou capital econômico"
+    ],
+    tags: ["pierre-bourdieu", "capital-cultural", "meritocracia", "violencia-simbolica", "sociologia-da-educacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-012",
+    area: "humanas",
+    competence: 1,
+    skill: 1,
+    topic: "Sociologia",
+    subtopic: "Zygmunt Bauman e a Modernidade Líquida",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O sociólogo polonês Zygmunt Bauman utilizou a metáfora dos fluidos para diagnosticar a transição da modernidade 'sólida' (industrial, com empregos para a vida toda, instituições estáveis e sindicatos fortes) para a modernidade 'líquida'. Os líquidos caracterizam-se pela incapacidade de reter sua forma por muito tempo, escorrendo por entre os dedos e adaptando-se instantaneamente a qualquer recipiente.",
+      source: "Zygmunt Bauman, Modernidade Líquida (adaptado)."
+    },
+    prompt: "No pensamento de Bauman, a 'liquidez' das relações sociais e institucionais contemporâneas manifesta-se no(a):",
+    options: [
+      { id: "a", text: "fragilização dos laços comunitários e afetivos, na mercantilização das relações humanas moldadas pela lógica do descarte rápido do consumo e na incerteza crônica frente ao futuro.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "garantia constitucional de estabilidade no emprego do nascimento até a velhice para todos os jovens.", isCorrect: false, distractorRationale: "A modernidade líquida gera exatamente precarização do trabalho, flexibilização e medo constante do desemprego." },
+      { id: "c", text: "fortalecimento inabalável das instituições democráticas tradicionais e dos partidos de massa.", isCorrect: false, distractorRationale: "Bauman enfatiza o descrédito e a fragilização das instituições sólidas e da esfera pública." },
+      { id: "d", text: "desinteresse total da sociedade em adquirir bens de consumo ou utilizar redes sociais digitais.", isCorrect: false, distractorRationale: "O consumo frenético é justamente o substituto ilusório da cidadania e da identidade na modernidade líquida." },
+      { id: "e", text: "solidariedade comunitária perpétua que une vizinhos e bairros em projetos de longo prazo.", isCorrect: false, distractorRationale: "Os laços comunitários foram desfeitos em favor do individualismo atomizado e da busca de satisfação imediata." }
+    ],
+    detailedExplanation: {
+      summary: "Em 'Modernidade Líquida' e 'Amor Líquido', Bauman argumenta que a desregulamentação econômica e a cultura do consumo transformaram os relacionamentos e as instituições em vínculos frágeis, temporários e facilmente descartáveis. Os indivíduos buscam 'conexões' rápidas que podem ser desconectadas com um clique, substituindo o compromisso solidário de longo prazo pela obsolescência programada das relações.",
+      stepByStep: [
+        "1. Modernidade Sólida: Projetos de longo prazo, casamento duradouro, fidelidade a uma profissão/empresa, Estado de bem-estar social garantidor.",
+        "2. Modernidade Líquida: Fluidez, desregulamentação, trabalho flexível e temporário, imediatismo nas redes.",
+        "3. Amor Líquido: Relações afetivas operam como mercadorias em vitrines; qualquer conflito ou tédio motiva a troca do parceiro por um 'modelo novo'.",
+        "4. Cidadãos versus Consumidores: A identidade pessoal é definida pelo que você compra e ostenta, não pelo engajamento político coletivo.",
+        "5. Consequência: Medo líquido, solidão e sensação perene de insegurança e desamparo existencial."
+      ],
+      coreConcept: "Modernidade Líquida em Zygmunt Bauman: Fluidez, Individualismo e Relações Descartáveis",
+      trapWarning: "Para o ENEM: a metáfora do 'líquido' não significa que o mundo ficou 'mais fácil ou suave'! Significa que nada é duradouro, nada é seguro e as pessoas vivem em ansiedade contínua frente a um futuro incerto."
+    },
+    commonTraps: [
+      "Achar que 'líquido' significa pacífico ou harmonioso",
+      "Confundir a crítica de Bauman com uma defesa saudosista irrestrita do passado autoritário"
+    ],
+    tags: ["zygmunt-bauman", "modernidade-liquida", "amor-liquido", "consumismo", "individualismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-013",
+    area: "humanas",
+    competence: 1,
+    skill: 1,
+    topic: "Sociologia Contemporânea",
+    subtopic: "Achille Mbembe e o Conceito de Necropolítica",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Dialogando com o conceito de biopoder formulado por Michel Foucault (o poder de 'fazer viver e deixar morrer'), o filósofo e historiador camaronês Achille Mbembe cunhou o conceito de 'necropolítica'. Mbembe argumenta que, nas periferias urbanas do Sul Global, nas zonas de conflito e nos territórios pós-coloniais, a expressão máxima da soberania estatal reside no poder supremo de ditar quem tem o direito de viver e quem deve ser deixado para morrer.",
+      source: "Achille Mbembe, Necropolítica: Biopoder, soberania, estado de exceção, política da morte"
+    },
+    prompt: "De acordo com o referencial teórico de Mbembe, a necropolítica opera fundamentalmente através da:",
+    options: [
+      { id: "a", text: "gestão seletiva e deliberada da morte e da precariedade de vidas de populações vulnerabilizadas e racializadas, criando 'mundos da morte' onde o estado de exceção converte-se em regra cotidiana.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "garantia universal e irrestrita dos direitos de cidadania e segurança alimentar a todas as minorias sociais.", isCorrect: false, distractorRationale: "Necropolítica é a política da morte e do abandono planejado, o inverso da universalização de direitos sociais." },
+      { id: "c", text: "extinção completa de todas as forças de segurança pública e forças armadas nacionais no mundo contemporâneo.", isCorrect: false, distractorRationale: "A necropolítica utiliza pesadamente a militarização e a violência letal armada institucionalizada." },
+      { id: "d", text: "distribuição equânime de recursos médicos de terapia intensiva sem distinção de raça ou classe social.", isCorrect: false, distractorRationale: "A necropolítica manifesta-se justamente na distribuição desigual de sobrevivência e saneamento sobre corpos periféricos." },
+      { id: "e", text: "abolição definitiva das fronteiras geopolíticas territoriais no continente africano e na América Latina.", isCorrect: false, distractorRationale: "O autor analisa o enclausuramento e a segregação espacial (muros, checkpoints e favelas sitiadas) como ferramentas da morte." }
+    ],
+    detailedExplanation: {
+      summary: "Achille Mbembe atualiza a filosofia política demonstrando que, para parcelas marginalizadas da população (sobretudo negros, indígenas e moradores de periferias e favelas), a soberania não se expressa como proteção legal do Estado, mas como a autorização tácita para a sua eliminação física ou descarte de suas vidas. O Estado cria 'zonas de morte' onde as regras constitucionais são suspensas rotineiramente.",
+      stepByStep: [
+        "1. Do Biopoder à Necropolítica: Foucault analisou o biopoder no Ocidente (controlar a vida, a saúde e a demografia). Mbembe vai além: em sociedades racistas e coloniais, o poder se expressa como gestão da MORTE (necropolítica).",
+        "2. Criação de 'Mundos da Morte': Espaços territoriais onde certas vidas são categorizadas como descartáveis ou 'inimigos a serem abatidos' (ex: ocupações militares, favelas criminalizadas, campos de contenção de refugiados).",
+        "3. O papel do racismo: O racismo opera como o critério biopolítico que justifica matar certas pessoas sem causar comoção pública moral ('são corpos matáveis').",
+        "4. Necropolítica indireta: Não se manifesta apenas pelo tiro letal de agentes armados, mas também pela negligência planejada (ausência proposital de hospitais, saneamento e saneamento em bairros pobres durante pandemias).",
+        "5. Conexão com o ENEM: Ferramenta analítica indispensável para debater letalidade policial, segurança pública e racismo estrutural nas redações e questões de Humanas."
+      ],
+      coreConcept: "Necropolítica em Achille Mbembe: Soberania, Racismo de Estado e Produção Social da Morte",
+      trapWarning: "Necropolítica não é apenas 'matar no tiro': é também DEIXAR MORRER por falta de água potável, esgoto, remédios e assistência pública. O Estado decide ativamente quem vive com dignidade e quem é exposto à morte prematura."
+    },
+    commonTraps: [
+      "Achar que necropolítica é apenas crime organizado (é uma prática gerida e tolerada pelo próprio Estado soberano)",
+      "Confundir necropolítica com biopoder sem compreender a crítica pós-colonial de Mbembe"
+    ],
+    tags: ["achille-mbembe", "necropolitica", "biopoder", "racismo-estrutural", "direitos-humanos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

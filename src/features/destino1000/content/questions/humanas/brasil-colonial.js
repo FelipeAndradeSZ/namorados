@@ -834,6 +834,231 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-021",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "Brasil Colônia",
+    subtopic: "Abertura dos Portos (1808) e o Fim do Pacto Colonial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Assim que aportou em Salvador em janeiro de 1808, fugindo da invasão napoleônica na Península Ibérica sob escolta da esquadra britânica, o príncipe regente D. João assinou a Carta Régia de Abertura dos Portos às Nações Amigas. O decreto revogou séculos de monopólio mercantil absoluto exercido por Lisboa sobre a colônia americana.",
+      source: "História Econômica do Brasil e o Período Joanino"
+    },
+    prompt: "Do ponto de vista econômico e estrutural, o significado histórico decisivo da Abertura dos Portos em 1808 foi o(a):",
+    options: [
+      { id: "a", text: "rompimento definitivo do Exclusivo Metropolitano (Pacto Colonial), inaugurando o livre comércio e a hegemonia das manufaturas da Grã-Bretanha no mercado brasileiro.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "abolição imediata do cativeiro de africanos e a reforma agrária popular nas sesmarias litorâneas.", isCorrect: false, distractorRationale: "O período joanino manteve intacta a estrutura fundiária concentrada e intensificou o tráfico transatlântico negreiro." },
+      { id: "c", text: "transferência da capital administrativa da colônia do Rio de Janeiro de volta para Salvador da Bahia.", isCorrect: false, distractorRationale: "A sede da corte instalou-se no Rio de Janeiro, que permaneceu capital até 1960." },
+      { id: "d", text: "proibição de importação de qualquer mercadoria proveniente da Europa Ocidental.", isCorrect: false, distractorRationale: "A abertura dos portos inundou o Brasil de mercadorias europeias, especialmente britânicas." },
+      { id: "e", text: "nacionalização compulsória de todas as fábricas têxteis da América portuguesa pelo Reino Unido.", isCorrect: false, distractorRationale: "A Carta Régia autorizou a liberdade fabril, mas os tratados de 1810 estrangularam a indústria nascente com importados ingleses mais baratos." }
+    ],
+    detailedExplanation: {
+      summary: "A Abertura dos Portos de 1808 liquidou a espinha dorsal do sistema colonial mercantilista: o Exclusivo Metropolitano. A partir desse ato, a colônia pôde comercializar diretamente com qualquer nação amiga (na prática, a Grã-Bretanha). Em 1810, os Tratados de Aliança e Comércio fixaram tarifas alfandegárias de apenas 15% para produtos ingleses (mais baratas que os 16% de Portugal e 24% de outros países), selando a dependência do Brasil em relação aos produtos industrializados britânicos.",
+      stepByStep: [
+        "1. Pacto Colonial pré-1808: o Brasil só podia comprar e vender mercadorias através de intermediários da burguesia de Lisboa.",
+        "2. Fuga da família real (1808): sob bloqueio continental de Napoleão, Portugal dependeu da Marinha Britânica.",
+        "3. Decreto de 1808: D. João franqueia os portos, acabando juridicamente com o exclusivo metropolitano.",
+        "4. Tratados de 1810: consolidação dos privilégios britânicos (tarifas alfandegárias privilegiadas de 15% e foro especial de juízes conservadores ingleses).",
+        "5. Consequência: independência econômica precoce em relação a Portugal, mas subordinação direta à hegemonia capitalista inglesa."
+      ],
+      coreConcept: "Abertura dos Portos (1808): Fim do Pacto Colonial e Primazia Comercial Britânica",
+      trapWarning: "Cuidado: a independência econômica do Brasil ocorreu em 1808 com a Abertura dos Portos! A independência política em 1822 foi o desfecho formal de um processo já iniciado com D. João."
+    },
+    commonTraps: [
+      "Achar que o Pacto Colonial acabou apenas no Grito do Ipiranga em 1822",
+      "Esquecer que a Grã-Bretanha pagava tarifas menores que o próprio Portugal nos portos brasileiros (Tratados de 1810)"
+    ],
+    tags: ["periodo-joanino", "abertura-dos-portos", "pacto-colonial", "gra-bretanha", "exclusivo-metropolitano"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-022",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "Brasil Colônia",
+    subtopic: "A Revolução Pernambucana de 1817",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 1817, eclodiu em Pernambuco uma revolta armada que depôs o governador régio e instaurou uma república autônoma por mais de dois meses. O movimento reuniu clérigos católicos (conhecido como a 'Revolução dos Padres'), proprietários de terras, militares e maçons, revoltados com os pesados tributos cobrados pela corte de D. João VI instalada no Rio de Janeiro para financiar o luxo da corte imperial, em pleno cenário de grave seca no Nordeste e queda nos preços internacionais do açúcar e do algodão.",
+      source: "Movimentos Emancipacionistas e Crise do Antigo Sistema Colonial"
+    },
+    prompt: "A Revolução Pernambucana de 1817 diferenciou-se das conjurações mineira e baiana do século XVIII pelo fato de:",
+    options: [
+      { id: "a", text: "ter ultrapassado a fase conspiratória teórica e assumido concretamente o poder político efetivo, instituindo um governo republicano provisório com constituição e liberdade de culto.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ter defendido a submissão voluntária incondicional de todo o Nordeste à soberania absolutista da Espanha.", isCorrect: false, distractorRationale: "O movimento era republicano, iluminista e radicalmente anticolonialista luso e ibérico." },
+      { id: "c", text: "ter sido a única revolta colonial a decretar a imediata abolição de todos os escravizados africanos das lavouras de cana.", isCorrect: false, distractorRationale: "Os líderes proprietários de 1817 mantiveram a escravidão para preservar o apoio das elites açucareiras e canavieiras." },
+      { id: "d", text: "ter sido liderada exclusivamente por operários industriais anarcossindicalistas das fábricas têxteis do Recife.", isCorrect: false, distractorRationale: "Não existiam indústrias modernas nem movimento operário no Brasil em 1817; a liderança era agrária, eclesiástica e militar." },
+      { id: "e", text: "ter contado com o apoio militar direto de tropas de Napoleão Bonaparte desembarcadas em Olinda.", isCorrect: false, distractorRationale: "Napoleão estava derrotado e preso na Ilha de Santa Helena em 1817." }
+    ],
+    detailedExplanation: {
+      summary: "A Revolução Pernambucana de 1817 foi o único movimento emancipacionista colonial que conseguiu tomar o poder e governar. Os revolucionários proclamaram a República, instituíram a Lei Orgânica Provisória (com separação de poderes, liberdade de imprensa e de consciência religiosa), mas preservaram a escravidão para manter a coesão da elite rural proprietária.",
+      stepByStep: [
+        "1. Fatores de insatisfação: Altos impostos drenados para manter o funcionalismo e a corte de D. João VI no Rio de Janeiro + seca de 1816 + crise açucareira.",
+        "2. Ideologia: Republicanismo, Iluminismo e patriotismo regional pernambucano alimentado pelo Seminário de Olinda e pela Maçonaria (Areópago de Itambé).",
+        "3. Tomada do poder: Em 6 de março de 1817, militares e civis expulsam o governador Caetano Pinto de Miranda Montenegro.",
+        "4. Governo Republicano: Durou cerca de 75 dias, enviou embaixadores aos EUA e à Inglaterra buscando reconhecimento internacional e tentou expandir a revolta para Paraíba, Rio Grande do Norte e Ceará.",
+        "5. Contradição interna: Apesar do discurso liberal avançado, manteve a escravidão negra por pressão dos grandes senhores de engenho da bancada de governo.",
+        "6. Repressão: Bloqueio naval do Recife pela frota régia e execução violenta dos principais líderes (como Domingos José Martins e Padre João Ribeiro)."
+      ],
+      coreConcept: "Revolução Pernambucana de 1817: Tomada do Poder, Republicanismo Provisório e Limites Sociais",
+      trapWarning: "Cuidado: 1817 foi republicana e liberal, MAS NÃO ABOLIU A ESCRAVIDÃO! O medo de uma rebelião haitiana de negros fez a elite pernambucana garantir a propriedade dos cativos."
+    },
+    commonTraps: [
+      "Achar que 1817 ficou apenas na conspiração como a Inconfidência Mineira (1817 GOVERNOU de fato)",
+      "Confundir 1817 com a Conjuração Baiana de 1798 no tocante à abolição da escravidão"
+    ],
+    tags: ["revolucao-pernambucana-1817", "republicanismo", "seminario-de-olinda", "periodo-joanino", "emancipacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-023",
+    area: "humanas",
+    competence: 3,
+    skill: 14,
+    topic: "Brasil Colônia",
+    subtopic: "A Sociedade do Açúcar e a Estrutura Patriarcal Colonial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na América portuguesa dos séculos XVI e XVII, o engenho de cana-de-açúcar estruturou muito mais do que um complexo agroexportador: forjou um modelo de organização social profundamente hierarquizado e polarizado. Em torno do senhor de engenho gravitavam familiares, agregados livres sem posses, trabalhadores assalariados especializados e a esmagadora massa de africanos escravizados, sob a égide moral do catolicismo tridentino.",
+      source: "Gilberto Freyre, Casa-Grande & Senzala e História Social da América Portuguesa"
+    },
+    prompt: "Essa sociedade açucareira colonial caracterizava-se essencialmente pelo(a):",
+    options: [
+      { id: "a", text: "patriarcalismo autoritário, no qual o senhor de engenho concentrava poder quase absoluto sobre a família, os agregados e os cativos, aliado a uma rígida estratificação social com baixa mobilidade vertical.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "predomínio de uma ampla classe média urbana assalariada dotada de direitos políticos e voto universal secreto.", isCorrect: false, distractorRationale: "A sociedade açucareira era eminentemente rural, bipartida entre senhores e escravizados, sem classe média expressiva ou voto democrático." },
+      { id: "c", text: "igualitarismo comunitário derivado do desapego franciscano às terras e à riqueza agroexportadora.", isCorrect: false, distractorRationale: "O sistema fundava-se na exploração violenta da mão de obra forçada e na acumulação mercantilista privada." },
+      { id: "d", text: "subordinação irrestrita dos latifundiários às ordens das assembleias operárias de manufaturas têxteis.", isCorrect: false, distractorRationale: "Não havia fábricas nem operários; os senhores de engenho ('homens bons') dominavam as Câmaras Municipais." },
+      { id: "e", text: "secularização e laicidade radical do Estado, que proibia qualquer manifestação católica nos engenhos.", isCorrect: false, distractorRationale: "A Igreja Católica era o esteio ideológico oficial e todas as fazendas possuíam capelas onde se realizavam missas e batismos compulsórios." }
+    ],
+    detailedExplanation: {
+      summary: "A sociedade açucareira do Nordeste colonial era rural, patriarcal, escravista e estratificada. A Casa-Grande concentrava o comando político e econômico nas mãos do patriarca (senhor de engenho), cujas vontades privadas se sobrepunham frequentemente às leis distantes da Coroa portuguesa, enquanto a Senzala abrigava os escravizados desprovidos de direitos jurídicos.",
+      stepByStep: [
+        "1. Ruralismo: a vida social girava em torno dos canaviais e da casa-grande, e não das cidades (que eram pequenos entrepostos portuários).",
+        "2. Patriarcalismo: o pai de família e senhor exercia domínio sobre a esposa, filhos, filhas (casamentos arranjados por interesses patrimoniais), afilhados e agregados.",
+        "3. Poder político local: os senhores de engenho controlavam as Câmaras Municipais (os 'homens bons'), detendo poder de polícia e justiça local informal.",
+        "4. Bipolaridade social: topo formado pela elite branca açucareira e base composta pela maioria escravizada negra/indígena, com um estrato intermediário reduzido de homens livres pobres e despossuídos."
+      ],
+      coreConcept: "A Sociedade do Açúcar: Patriarcalismo, Ruralismo e Escravismo Colonial",
+      trapWarning: "No ENEM, lembre-se de que patriarcalismo colonial não significa apenas 'machismo familiar', mas uma forma de poder político e social privado onde o senhor manda em toda a comunidade ao redor do engenho."
+    },
+    commonTraps: [
+      "Achar que a sociedade açucareira era urbana e dinâmica como a das cidades mineradoras",
+      "Ignorar o papel dos homens livres pobres (agregados) como dependentes clientelistas do senhor"
+    ],
+    tags: ["sociedade-do-acucar", "patriarcalismo", "casa-grande-e-senzala", "escravismo", "brasil-colonial"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-024",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "Brasil Colônia",
+    subtopic: "A Economia da Mineração e a Urbanização no Século XVIII",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A descoberta de ouro nos vales fluviais das Minas Gerais no final do século XVII e início do século XVIII provocou uma corrida populacional sem precedentes na América portuguesa. Em poucas décadas, surgiram vilas populosas e dinâmicas como Vila Rica (Ouro Preto), Mariana e Sabará, integrando rotas de tropeiros de gado do Sul e alimentos do Nordeste, em contraste gritante com a sociedade ruralizada e estática do litoral canavieiro.",
+      source: "Laura de Mello e Souza, Desclassificados do Ouro e História de Minas Colonial"
+    },
+    prompt: "Entre as transformações econômicas e socioculturais provocadas pelo ciclo da mineração no Brasil destaca-se:",
+    options: [
+      { id: "a", text: "a emergência de uma malha urbana diversificada com classes médias, escravizados de ganho com mobilidade espacial e florescimento cultural do Barroco, além do deslocamento do eixo econômico e político para o Centro-Sul.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o esvaziamento completo de todas as vilas do interior e o confinamento de 100% da população na fronteira com a Bolívia.", isCorrect: false, distractorRationale: "A mineração provocou intensa ocupação urbana e concentração demográfica no atual Sudeste brasileiro." },
+      { id: "c", text: "a extinção da tributação régia pela Coroa portuguesa que declarou a extração mineral livre de quaisquer impostos.", isCorrect: false, distractorRationale: "Portugal criou a mais pesada e severa máquina fiscal da história colonial: Quinto, Capitação, Casas de Fundição e a odiada Derrama." },
+      { id: "d", text: "a diminuição do tráfico de africanos escravizados devido à substituição integral da mão de obra por máquinas a vapor.", isCorrect: false, distractorRationale: "O século do ouro registrou a entrada de centenas de milhares de escravizados africanos no trabalho desumano das galerias e aluviões." },
+      { id: "e", text: "a manutenção definitiva de Salvador como capital perpétua de todo o Império ultramarino luso.", isCorrect: false, distractorRationale: "Em 1763, o Marquês de Pombal transferiu a capital de Salvador para o Rio de Janeiro para melhor fiscalizar o ouro minerado." }
+    ],
+    detailedExplanation: {
+      summary: "O ciclo do ouro alterou os rumos do Brasil colonial em múltiplos aspectos: 1) Integrou o território (criação do mercado interno via tropeirismo); 2) Transferiu a capital colonial de Salvador para o Rio de Janeiro (1763); 3) Criou uma sociedade urbana com maior mobilidade (artesãos, alfaiates, tropeiros, burocratas, padres, advogados); 4) Possibilitou a figura dos 'escravizados de ganho' (comércio de rua que podia juntar pecúlio para comprar a alforria); 5) Despertou o Barroco e Rococó mineiro (Aleijadinho e Mestre Ataíde).",
+      stepByStep: [
+        "1. Urbanização: surgimento de núcleos urbanos densos com intenso comércio e serviços especializados.",
+        "2. Fiscalismo metropolitano: Casas de Fundição (onde o ouro era fundido em barras, selado com o brasão real e descontado o Quinto de 20%) e a ameaça da Derrama.",
+        "3. Interiorização: povoamento do Centro-Oeste e Sudeste (Minas, Goiás e Mato Grosso).",
+        "4. Dinamismo do mercado interno: compra de charque e mulas do Rio Grande do Sul e cachaça/rapadura de São Paulo e Nordeste.",
+        "5. Conclusão: a mineração formou o embrião da integração econômica nacional."
+      ],
+      coreConcept: "Ciclo do Ouro: Urbanização, Fiscalismo Régio, Mercado Interno e Deslocamento do Eixo Colonial",
+      trapWarning: "No ENEM, contraste sempre a sociedade do AÇÚCAR (rural, patriarcal, rígida) com a da MINERAÇÃO (urbana, heterogênea, com setores médios e maior circulação social)."
+    },
+    commonTraps: [
+      "Achar que na mineração o trabalho era livre e remunerado (continuou sendo predominantemente ESCRAVISTA)",
+      "Esquecer da transferência da capital colonial para o Rio de Janeiro em 1763"
+    ],
+    tags: ["ciclo-do-ouro", "minas-gerais", "urbanizacao", "barroco-mineiro", "fiscalismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-025",
+    area: "humanas",
+    competence: 3,
+    skill: 14,
+    topic: "Brasil Colônia",
+    subtopic: "Resistência Negra e a Organização do Quilombo dos Palmares",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao longo do século XVII, na Serra da Barriga (atual estado de Alagoas), consolidou-se o Quilombo dos Palmares, a maior república de escravizados fugidos da história das Américas, abrigando mais de 20 mil habitantes em uma rede fortificada de mocambos (como Macaco, Subupira e Zumbi). Para além de um mero refúgio militar contra capatazes, Palmares constituiu uma complexa sociedade autônoma baseada na policultura camponesa (mandioca, milho, feijão, cana), na metalurgia do ferro e na recriação de tradições culturais e políticas de matriz bantu.",
+      source: "Flávio dos Santos Gomes, A Hidra e os Pântanos: Quilombos e Mocambos no Brasil"
+    },
+    prompt: "A longevidade secular e o significado histórico do Quilombo dos Palmares como símbolo máximo de resistência negra demonstraram que:",
+    options: [
+      { id: "a", text: "a escravidão nunca foi aceita passivamente pelos cativos, gerando espaços alternativos autossuficientes de liberdade e reelaboração comunitária que desafiaram frontalmente a ordem colonial escravista.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "os fugitivos pretendiam apenas negociar sua rendição imediata em troca de cargos na corte portuguesa de Lisboa.", isCorrect: false, distractorRationale: "Palmares resistiu militarmente por quase um século a dezenas de expedições holandesas e portuguesas para manter sua independência." },
+      { id: "c", text: "as fugas de escravizados eram estimuladas e financiadas pelos próprios senhores de engenho para reduzir despesas com alimentação.", isCorrect: false, distractorRationale: "Os senhores viam a fuga como roubo de patrimônio valioso e financiavam capitães-do-mato para caçar e recapturar cativos." },
+      { id: "d", text: "a resistência quilombola foi um fenômeno pacífico e sem qualquer tipo de confronto armado com forças mercenárias.", isCorrect: false, distractorRationale: "Palmares foi alvo de guerras sangrentas e foi destruído militarmente por bandeirantes paulistas armados com canhões." },
+      { id: "e", text: "a Coroa portuguesa concedeu independência política soberana perpétua a Palmares através de um tratado assinado em Roma.", isCorrect: false, distractorRationale: "A Coroa financiou o bandeirante Domingos Jorge Velho para sitiar, queimar e massacrar Palmares em 1694-1695." }
+    ],
+    detailedExplanation: {
+      summary: "O Quilombo dos Palmares desmente a visão preconceituosa e passiva da escravidão. Os quilombos não eram apenas esconderijos provisórios, mas comunidades agrícolas organizadas com economia camponesa diversificada, comércio com vilas vizinhas e sistemas defensivos sofisticados. A destruição do Mocambo do Macaco em 1694 e a morte de Zumbi em 20 de novembro de 1695 simbolizam a ferocidade com que o Estado colonial reprimia qualquer alternativa viável de liberdade negra.",
+      stepByStep: [
+        "1. Desconstrução do mito da docilidade escrava: escravizados resistiram por revoltas armadas, fugas coletivas, formação de quilombos, suicídios e quebra de ferramentas.",
+        "2. Estrutura de Palmares: confederação de mocambos autônomos na Serra da Barriga liderada por Ganga Zumba e posteriormente por Zumbi e Dandara.",
+        "3. Economia de subsistência: cultivo variado de gêneros alimentícios, criação de galinhas e porcos, cestaria e fundição de lanças de ferro.",
+        "4. Ameaça ao sistema colonial: Palmares atraía escravizados de toda a região e provava que uma sociedade livre de senhores era viável.",
+        "5. Desfecho: o governo colonial contratou o bandeirante paulista Domingos Jorge Velho, que utilizou armas pesadas para destruir a fortificação em 1694. Zumbi foi capturado e executado em 20 de novembro de 1695 (data comemorativa do Dia da Consciência Negra)."
+      ],
+      coreConcept: "Quilombo dos Palmares: Resistência Negra, Policultura Comunitária e Consciência Negra",
+      trapWarning: "No ENEM, valorize a agência e o protagonismo histórico da população negra: o 20 de novembro (Zumbi) foi escolhido pelos movimentos negros exatamente para contrapor o 13 de maio (Princesa Isabel), afirmando a liberdade como conquista e luta, e não como benesse outorgada de cima para baixo!"
+    },
+    commonTraps: [
+      "Achar que os escravizados aceitavam passivamente a violência do cativeiro",
+      "Reduzir o quilombo a um mero acampamento militar provisório, ignorando sua rica organização econômica e social"
+    ],
+    tags: ["quilombo-dos-palmares", "zumbi", "resistencia-negra", "quilombos", "consciencia-negra"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

@@ -791,5 +791,229 @@ export const QUESTIONS_GEOGRAFIA_FISICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-021",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Massas de Ar no Brasil e o Fenômeno da Friagem",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante os meses de outono e inverno no Hemisfério Sul, a Massa Polar Atlântica (mPa) intensifica seu deslocamento a partir do sul do continente. Quando avança canalizada pela calha da Bacia do Paraná e pelas planícies centrais sul-americanas, a mPa consegue atingir os estados de Rondônia, Acre e sul do Amazonas, provocando quedas abruptas de temperatura de mais de 15 °C em menos de 24 horas em plena floresta tropical.",
+      source: "Climatologia Dinâmica do Brasil e Circulação Atmosférica"
+    },
+    prompt: "O fenômeno climático regional descrito na Amazônia Ocidental e as características termohigrométricas da massa responsável são, respectivamente:",
+    options: [
+      { id: "a", text: "a friagem, ocasionada pela incursão da Massa Polar Atlântica (mPa), de natureza fria e originalmente úmida.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o El Niño canônico, impulsionado pela Massa Equatorial Continental (mEc), que é estritamente quente e seca.", isCorrect: false, distractorRationale: "A mEc é quente e extremamente ÚMIDA (alimentada pela evapotranspiração amazônica), e não explica a queda de temperatura." },
+      { id: "c", text: "a inversão térmica costeira, gerada exclusivamente pela passagem da Massa Tropical Continental (mTc) do Chaco.", isCorrect: false, distractorRationale: "A mTc é quente e seca, atuando no bloqueio atmosférico do Centro-Oeste no inverno, não causando quedas de temperatura." },
+      { id: "d", text: "a chuva orográfica perene decorrente do choque térmico de tufões subtropicais na Cordilheira dos Andes.", isCorrect: false, distractorRationale: "O Brasil não sofre tufões e o fenômeno da friagem decorre do avanço frontal da massa polar pelo interior continental." },
+      { id: "e", text: "o congelamento permanente dos rios de água preta por granizo polar na foz do Rio Amazonas.", isCorrect: false, distractorRationale: "A friagem derruba a temperatura para cerca de 12 °C a 16 °C por alguns dias, nunca congelando rios equatoriais." }
+    ],
+    detailedExplanation: {
+      summary: "A friagem é a queda súbita e acentuada de temperatura no sudoeste da Amazônia (Acre, Rondônia, sul do Amazonas e Mato Grosso) provocada pela invasão da Massa Polar Atlântica (mPa). Como o relevo da América do Sul é aberto no interior (planícies platina e pantaneira) sem barreiras montanhosas Leste-Oeste, o ar polar frio e denso avança como um 'corredor' até a bacia amazônica.",
+      stepByStep: [
+        "1. A Massa Polar Atlântica (mPa) nasce nas altas latitudes austrais; é uma massa FRIA e originalmente ÚMIDA.",
+        "2. No inverno, a mPa ganha força e bifurca-se ao atingir a costa brasileira:",
+        "   - Ramo litorâneo: causa chuvas frontais no litoral do Nordeste e resfriamento na costa Sudeste.",
+        "   - Ramo continental: sobe pelas depressões e planícies do interior (Paraguai/Pantanal/Madeira).",
+        "3. Ao chegar à Amazônia Ocidental, o ar polar expulsa o ar quente e úmido local, despencando a temperatura em poucas horas (fenômeno conhecido como FRIAGEM).",
+        "4. A população amazônica vivencia temperaturas atípicas entre 10 °C e 16 °C que duram de 2 a 4 dias."
+      ],
+      coreConcept: "Climatologia Regional: Incursão da Massa Polar Atlântica (mPa) e o Fenômeno da Friagem",
+      trapWarning: "Cuidado: lembre-se de que a Massa Equatorial Continental (mEc) na Amazônia é a grande EXCEÇÃO mundial: quase todas as massas continentais do planeta são secas, mas a mEc é HIPERÚMIDA por causa da evapotranspiração colossal da floresta!"
+    },
+    commonTraps: [
+      "Achar que a Amazônia nunca registra temperaturas amenas ou frias",
+      "Classificar a massa equatorial continental (mEc) como seca (ela é extremamente úmida)"
+    ],
+    tags: ["friagem", "massas-de-ar", "mpa", "climatologia-brasileira", "amazonia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-022",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Zona de Convergência do Atlântico Sul (ZCAS) e Rios Voadores",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No verão brasileiro, os telejornais frequentemente noticiam períodos de chuvas torrenciais contínuas que perduram por quatro a sete dias ininterruptos sobre os estados de Minas Gerais, Rio de Janeiro, Espírito Santo, São Paulo e Goiás, provocando cheias fluviais e deslizamentos em áreas serranas. Meteorologistas apontam que a precipitação prolongada é sustentada pela atuação da Zona de Convergência do Atlântico Sul (ZCAS).",
+      source: "Meteorologia Tropical e Dinâmica das Precipitações de Verão"
+    },
+    prompt: "A ZCAS caracteriza-se fisicamente por uma banda semiestacionária de nebulosidade e chuvas orientada no sentido Noroeste-Sudeste, alimentada primordialmente pelo(a):",
+    options: [
+      { id: "a", text: "transporte maciço de vapor d'água proveniente da Bacia Amazônica (os chamados 'rios voadores'), canalizado pela barreira orográfica dos Andes em direção ao Centro-Oeste e Sudeste do Brasil.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "chegada de frentes frias antárticas secas que congelam as nuvens sobre o Oceano Atlântico.", isCorrect: false, distractorRationale: "A ZCAS é um fenômeno de verão com massas de ar quentes e extremamente úmidas, sem congelamento polar." },
+      { id: "c", text: "evaporação exclusiva da água dos reservatórios artificiais do semiárido nordestino.", isCorrect: false, distractorRationale: "O semiárido sofre estiagem relativa no período e o volume de vapor d'água é gerado pela floresta amazônica equatorial." },
+      { id: "d", text: "dissolução total da camada de ozônio sobre as capitais litorâneas pelo calor solar.", isCorrect: false, distractorRationale: "A ZCAS é uma dinâmica convectiva meteorológica de circulação atmosférica troposférica ordinária." },
+      { id: "e", text: "bloqueio permanente que impede qualquer gota de chuva de atingir as áreas agrícolas de Minas Gerais.", isCorrect: false, distractorRationale: "A ZCAS gera o oposto: chuvas abundantes e volumosas contínuas por vários dias consecutivos." }
+    ],
+    detailedExplanation: {
+      summary: "A ZCAS (Zona de Convergência do Atlântico Sul) é o principal sistema meteorológico causador de chuvas volumosas no verão do Centro-Oeste e Sudeste brasileiro. Ela conecta a convecção úmida da Amazônia ao Oceano Atlântico subtropical, formando um canal contínuo de vapor ('rios voadores') que mantém o tempo nublado e chuvoso por dias seguidos.",
+      stepByStep: [
+        "1. Bomba biótica e rios voadores: A floresta amazônica evapotranspira cerca de 20 trilhões de litros de água por dia na atmosfera.",
+        "2. Barreira física dos Andes: Os ventos alísios empurram essa massa úmida para o oeste; ao bater na muralha dos Andes, o fluxo de vapor é desviado para o sul/sudeste.",
+        "3. Formação da ZCAS: No verão, esse fluxo encontra a umidade do Atlântico e frentes frias remanescentes, alinhando uma faixa de nuvens espessas da Amazônia até o Sudeste (sentido NO-SE).",
+        "4. Impactos: Abastece os reservatórios hidrelétricos (Cantareira, Furnas) e irriga lavouras de grãos, mas pode deflagrar enchentes e desmoronamentos urbanos severos se persistir por muitos dias."
+      ],
+      coreConcept: "Zona de Convergência do Atlântico Sul (ZCAS): Rios Voadores e Regime de Chuvas de Verão",
+      trapWarning: "No ENEM: o desmatamento da Amazônia afeta DIRETAMENTE as chuvas no Sudeste! Menos árvores na Amazônia = rios voadores mais fracos = ZCAS enfraquecida = secas no Sistema Cantareira e nas lavouras do Centro-Sul."
+    },
+    commonTraps: [
+      "Achar que as chuvas de verão do Sudeste vêm apenas do Oceano Atlântico (a Amazônia fornece a maior fatia de vapor)",
+      "Confundir ZCAS (Noroeste-Sudeste no verão) com ZCIT (Zona de Convergência Intertropical na faixa equatorial no outono)"
+    ],
+    tags: ["zcas", "rios-voadores", "climatologia", "amazonia", "chuvas-de-verao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-023",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Classificação do Relevo Brasileiro por Jurandyr Ross",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na década de 1990, o geógrafo Jurandyr Ross elaborou a mais completa classificação geomorfológica do território brasileiro, utilizando dados aerofotogramétricos e de radar do Projeto Radambrasil. O modelo divide o relevo do país em 28 macrocompartimentos agrupados em três grandes categorias morfoestruturais: Planaltos, Depressões e Planícies.",
+      source: "Jurandyr Ross, Geografia do Brasil e Geomorfologia Estrutural"
+    },
+    prompt: "De acordo com os critérios genéticos e morfoclimáticos estabelecidos por Ross, as principais características estruturais do relevo brasileiro consistem no(a):",
+    options: [
+      { id: "a", text: "predomínio de planaltos e depressões modelados por processos erosivos antigos, ausência de dobramentos modernos cenozóicos e planícies restritas a faixas estreitas fluviais e litorâneas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "domínio de imponentes cadeias de dobramentos modernos com vulcões ativos e frequentes terremotos de alta magnitude.", isCorrect: false, distractorRationale: "O Brasil está no centro estável da Placa Sul-Americana, sem dobramentos modernos, vulcões ativos ou abalos sísmicos graves." },
+      { id: "c", text: "cobertura do território por mais de 80% de planícies aluviais perfeitamente planas e sem qualquer escarpa de serra.", isCorrect: false, distractorRationale: "Planícies representam menos de 10% do território nacional na classificação de Ross; planaltos e depressões predominam." },
+      { id: "d", text: "inexistência de bacias sedimentares, sendo o país formado unicamente por escudos cristalinos do período Quaternário.", isCorrect: false, distractorRationale: "Cerca de 64% do território é constituído por grandes bacias sedimentares paleozóicas e mesozóicas." },
+      { id: "e", text: "presença de fiordes glaciais profundos escavados por geleiras ativas nas serras do litoral paulista.", isCorrect: false, distractorRationale: "O relevo brasileiro é modelado por intemperismo químico e biológico tropical úmido, sem glaciações recentes." }
+    ],
+    detailedExplanation: {
+      summary: "A classificação de Jurandyr Ross inovou ao introduzir a categoria das DEPRESSÕES (áreas rebaixadas por erosão em relação aos planaltos vizinhos). O relevo brasileiro assenta-se sobre crátons antigos (escudos cristalinos précambrianos, ~36%) e bacias sedimentares fanerozóicas (~64%). Por estar no centro de placa tectônica, não há dobramentos modernos (como Andes ou Himalaia). O relevo é antigo, desgastado e de altitudes modestas (pico mais alto: Neblina, ~2.995 m).",
+      stepByStep: [
+        "1. Planaltos (11 unidades): Relevos com superfícies irregulares onde os processos de EROSÃO superam os de sedimentação.",
+        "2. Depressões (11 unidades): Superfícies aplainadas geradas por erosão prolongada nas bordas de bacias sedimentares e crátons, mais baixas que os relevos ao redor.",
+        "3. Planícies (6 unidades): Áreas planas recentes (quaternárias) onde a SEDIMENTAÇÃO supera a erosão (ex: Planície do Pantanal, Planície Amazônica ao longo da calha dos rios, Planície Litorânea).",
+        "4. Estabilidade tectônica: Sem vulcanismo ativo, sem orogênese cenozóica recente e com predomínio do intemperismo químico das águas tropicais."
+      ],
+      coreConcept: "Classificação de Jurandyr Ross: Planaltos, Depressões e Planícies e Estabilidade Geológica",
+      trapWarning: "Pegadinha clássica no ENEM: A Amazônia NÃO é uma imensa planície! Na classificação de Ross, a maior parte da Amazônia é formada por PLANALTOS e DEPRESSÕES; a planície restringe-se à faixa ribeirinha estreita ao longo do Rio Amazonas e afluentes."
+    },
+    commonTraps: [
+      "Achar que a Floresta Amazônica inteira é uma planície de sedimentação",
+      "Confundir a classificação de Ross (28 unidades com depressões) com a de Aroldo de Azevedo ou Aziz Ab'Sáber"
+    ],
+    tags: ["jurandyr-ross", "relevo-brasileiro", "geomorfologia", "planaltos-e-depressoes", "geologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-024",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Bacias Hidrográficas e o Potencial Hidrelétrico Brasileiro",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A matriz elétrica brasileira é historicamente dependente da geração hidrelétrica, que responde por mais de 60% de toda a energia elétrica consumida no país. A distribuição do potencial hidrelétrico e da capacidade instalada é marcadamente assimétrica entre as bacias hidrográficas nacionais, contrapondo o Sudeste densamente urbanizado e industrializado à fronteira amazônica.",
+      source: "Agência Nacional de Energia Elétrica (ANEEL) e Planejamento Energético Nacional"
+    },
+    prompt: "Em relação ao perfil hidrográfico e à exploração energética das bacias brasileiras, constata-se que:",
+    options: [
+      { id: "a", text: "a Bacia do Paraná detém a maior capacidade instalada e geração hidrelétrica em operação (com destaque para Itaipu), enquanto a Bacia Amazônica concentra o maior potencial hidrelétrico bruto remanescente, cuja exploração impõe severos desafios socioambientais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a Bacia do Rio São Francisco é totalmente desprovida de represas e cachoeiras aproveitáveis para geração de eletricidade.", isCorrect: false, distractorRationale: "O São Francisco abriga grandes usinas como Sobradinho, Paulo Afonso, Xingó e Três Marias." },
+      { id: "c", text: "a Bacia do Paraguai gera mais de 90% de toda a eletricidade do parque fabril da Região Sudeste.", isCorrect: false, distractorRationale: "O Pantanal tem baixíssimo potencial hidrelétrico por ser planície plana com declividade quase nula." },
+      { id: "d", text: "todos os rios brasileiros possuem regime hidrográfico nival sustentado pelo derretimento de geleiras de alta montanha.", isCorrect: false, distractorRationale: "Quase todos os rios brasileiros têm regime estritamente pluvial tropical (apenas o Rio Amazonas tem regime misto pluvio-nival na nascente andina peruana)." },
+      { id: "e", text: "a construção de usinas hidrelétricas a fio d'água na Amazônia não gera qualquer alteração no modo de vida de povos indígenas.", isCorrect: false, distractorRationale: "Usinas como Belo Monte (Rio Xingu) causaram drásticos impactos na ictiofauna e terras indígenas locais." }
+    ],
+    detailedExplanation: {
+      summary: "O Brasil possui rios de planalto com elevado potencial hidráulico natural. A Bacia do Paraná (Sudeste/Sul) é o coração hidrelétrico do país, próxima aos grandes centros consumidores, mas com seu potencial quase totalmente esgotado. A fronteira de expansão deslocou-se para a Bacia Amazônica (Madeira, Xingu, Tapajós), onde a construção de usinas a fio d'água (reservatórios menores) visa reduzir alagamentos, mas ainda assim deflagra graves impactos ecológicos e expulsão de comunidades ribeirinhas e indígenas.",
+      stepByStep: [
+        "1. Bacia do Paraná: maior capacidade geradora instalada (Itaipu Binacional, Furnas, Ilha Solteira), altamente regularizada.",
+        "2. Bacia Amazônica: maior bacia hidrográfica do mundo, rios caudalosos em áreas de transição com planaltos que guardam enorme potencial remanescente.",
+        "3. Usinas a fio d'água (Belo Monte, Jirau, Santo Antônio): operam sem grandes reservatórios de acumulação para evitar alagar florestas gigantescas, mas geram pouca energia no período de seca dos rios amazônicos.",
+        "4. Regime hidrográfico: no Brasil predomina o regime PLUVIAL (rios cheios no verão chuvoso e vazantes no inverno seco).",
+        "5. Conclusão: a expansão hidrelétrica enfrenta o dilema entre transição para energias renováveis e preservação dos direitos socioterritoriais tradicionais na Amazônia."
+      ],
+      coreConcept: "Bacias Hidrográficas Brasileiras: Potencial Hidráulico, Usinas a Fio d'Água e Desafios Socioambientais",
+      trapWarning: "Lembre-se: usina a 'fio d'água' não tem um lago gigante para guardar água! Por isso, durante a seca da Amazônia, usinas como Belo Monte geram uma fração minúscula de sua capacidade máxima nominal."
+    },
+    commonTraps: [
+      "Achar que a Bacia Amazônica é a que mais GERA eletricidade atualmente (a que mais gera é a Bacia do Paraná)",
+      "Supor que rios brasileiros dependem de degelo de neve (dependem quase integralmente de chuva pluvial)"
+    ],
+    tags: ["bacias-hidrograficas", "hidreletricas", "itaipu", "belo-monte", "matriz-energetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEOBIO-025",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia Física",
+    subtopic: "Domínios Morfoclimáticos de Aziz Ab'Sáber: Faixas de Transição e Ecótonos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao conceber a clássica divisão do Brasil em seis grandes Domínios Morfoclimáticos (Amazônico, Cerrado, Mares de Morros, Caatinga, Araucárias e Pradarias), o geógrafo Aziz Nacib Ab'Sáber enfatizou que essas unidades biogeográficas e paisagísticas não são delimitadas por fronteiras rígidas, mas separadas por complexas 'faixas de transição' (ecótonos) onde elementos de dois ou mais domínios se interpenetram de forma singular.",
+      source: "Aziz Ab'Sáber, Os Domínios de Natureza no Brasil: Potencialidades Paisagísticas"
+    },
+    prompt: "Entre as faixas de transição mais emblemáticas do território brasileiro destacam-se:",
+    options: [
+      { id: "a", text: "o Meio-Norte (Mata dos Cocais), com predomínio de palmeiras de babaçu e carnaúba entre a Amazônia e a Caatinga, e o Agreste, situado entre a Zona da Mata úmida e o Sertão semiárido nordestino.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o Pantanal mato-grossense, que constitui uma tundra ártica desprovida de árvores entre o Cerrado e o Uruguai.", isCorrect: false, distractorRationale: "O Pantanal é um complexo mosaico alagável tropical, sem qualquer semelhança com tundras polares." },
+      { id: "c", text: "a Cordilheira dos Andes equatoriana, que separa o bioma Pampa da floresta de araucárias.", isCorrect: false, distractorRationale: "Os Andes estão no litoral oeste sul-americano e não fazem fronteira com o sul do Brasil." },
+      { id: "d", text: "o Deserto do Atacama, que corta o estado de São Paulo separando os Mares de Morros do litoral.", isCorrect: false, distractorRationale: "O Atacama situa-se no norte do Chile e a costa de São Paulo é coberta pela Mata Atlântica úmida." },
+      { id: "e", text: "o arquipélago de Fernando de Noronha, que divide os cerrados do Centro-Oeste da savana africana.", isCorrect: false, distractorRationale: "Fernando de Noronha é um arquipélago oceânico vulcânico litorâneo em Pernambuco." }
+    ],
+    detailedExplanation: {
+      summary: "As faixas de transição (ecótonos) ocupam milhões de quilômetros quadrados no Brasil. O Meio-Norte (Maranhão e Piauí) é o exemplo mais clássico: a Mata dos Cocais atua como amortecedor ecológico entre a exuberância úmida da Amazônia a oeste e a aridez da Caatinga a leste, onde comunidades tradicionais sobrevivem do extrativismo das quebradeiras de coco de babaçu e da cera de carnaúba. Já no Nordeste oriental, o Agreste é o ecótono entre a cana da Zona da Mata litorânea e a pecuária do Sertão seco.",
+      stepByStep: [
+        "1. Conceito de Ecótono em Ab'Sáber: Zona de contato e interpenetração ecológica com grande biodiversidade e endemismos.",
+        "2. Meio-Norte / Mata dos Cocais: Transição Amazônia-Cerrado-Caatinga. Vegetação secundária e pioneira dominada por palmeiras oleaginosas (babaçu, carnaúba, buriti).",
+        "3. Importância sociocultural da Mata dos Cocais: Movimento das Quebradeiras de Coco Babaçu e a 'Lei do Babaçu Livre' (preservação da sociobiodiversidade).",
+        "4. Agreste nordestino: Transição entre a umidade da Zona da Mata e o Semiárido sertanejo; policultura camponesa e bacia leiteira em minifúndios familiares.",
+        "5. Conclusão: As faixas de transição demonstram que a natureza opera por gradientes contínuos, e não por divisões cartográficas lineares artificiais."
+      ],
+      coreConcept: "Faixas de Transição em Aziz Ab'Sáber: Mata dos Cocais, Agreste e a Sociobiodiversidade dos Ecótonos",
+      trapWarning: "No ENEM: A Mata dos Cocais NÃO É UM DOMÍNIO MORFOCLIMÁTICO AUTÔNOMO! Ela é classificada oficialmente por Aziz Ab'Sáber como uma FAIXA DE TRANSIÇÃO entre a Amazônia, a Caatinga e o Cerrado."
+    },
+    commonTraps: [
+      "Classificar a Mata dos Cocais como um domínio à parte (ela é faixa de transição)",
+      "Confundir o Agreste (zona de transição com policultura) com o Sertão semiárido ou com a Zona da Mata canavieira"
+    ],
+    tags: ["aziz-absaber", "faixas-de-transicao", "mata-dos-cocais", "agreste", "dominios-morfoclimaticos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

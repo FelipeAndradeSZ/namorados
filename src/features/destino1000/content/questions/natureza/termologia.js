@@ -835,6 +835,240 @@ export const QUESTIONS_TERMOLOGIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-021",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Ciclo de Carnot e Rendimento Termodinâmico Teórico Máximo",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma usina termelétrica operando sob ciclo a vapor d'água superaquecido, a caldeira (fonte quente) transfere energia térmica ao fluido de trabalho na temperatura de 500 °C (aproximadamente 773 K). O circuito de condensação (fonte fria), refrigerado por água de uma torre de resfriamento, opera na temperatura constante de 27 °C (300 K). O Teorema de Carnot define o limite termodinâmico máximo inviolável para qualquer máquina térmica real que opere entre essas duas fontes térmicas.",
+      source: "Termodinâmica Aplicada e Geração de Energia"
+    },
+    prompt: "O rendimento térmico máximo teoricamente alcançável por uma máquina térmica operando entre essas temperaturas é de, aproximadamente:",
+    options: [
+      { id: "a", text: "61,2%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "94,6%", isCorrect: false, distractorRationale: "Calculou o rendimento utilizando temperaturas em graus Celsius (1 - 27/500 = 0,946 = 94,6%), violando a obrigatoriedade da escala termodinâmica absoluta em Kelvin." },
+      { id: "c", text: "38,8%", isCorrect: false, distractorRationale: "Calculou a fração de calor rejeitado para a fonte fria (300 / 773 = 38,8%) em vez do rendimento de conversão em trabalho útil." },
+      { id: "d", text: "100,0%", isCorrect: false, distractorRationale: "Violou a Segunda Lei da Termodinâmica que proíbe rendimento de 100% (Kelvin-Planck)." },
+      { id: "e", text: "5,4%", isCorrect: false, distractorRationale: "Dividiu 27 por 500 diretamente." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo ciclo ideal de Carnot, o rendimento máximo é eta = 1 - (T_fria / T_quente), onde ambas as temperaturas devem ser expressas na escala Kelvin (T_K = T_C + 273). Substituindo: T_quente = 500 + 273 = 773 K e T_fria = 27 + 273 = 300 K. Assim: eta = 1 - (300 / 773) = 1 - 0,388 = 0,612 = 61,2%.",
+      stepByStep: [
+        "1. Converter as temperaturas para a escala Kelvin: T_quente = 500 °C + 273 = 773 K; T_fria = 27 °C + 273 = 300 K.",
+        "2. Fórmula do rendimento de Carnot: eta = 1 - (T_fria / T_quente).",
+        "3. Razão entre as temperaturas absolutas: 300 / 773 ≈ 0,3881.",
+        "4. Cálculo final: eta = 1 - 0,3881 = 0,6119 ≈ 61,2%.",
+        "5. Conclusão: mesmo sem qualquer atrito ou perda de calor nas tubulações, essa máquina teórica máxima rejeitará cerca de 38,8% de calor para o meio ambiente."
+      ],
+      coreConcept: "Ciclo de Carnot: Rendimento Máximo Teórico e Conversão de Temperatura em Kelvin",
+      trapWarning: "Erro número 1 no ENEM em termodinâmica: calcular rendimento com temperaturas em Celsius (°C)! É mandatório somar 273 e converter para Kelvin (K)."
+    },
+    commonTraps: [
+      "Calcular 1 - (27 / 500) em graus Celsius obtendo 94,6%",
+      "Confundir a taxa de calor rejeitado (T_fria / T_quente) com o trabalho útil gerado"
+    ],
+    tags: ["ciclo-de-carnot", "rendimento", "segunda-lei", "termodinamica", "kelvin"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-022",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Dilatação Térmica Linear e Engenharia Estrutural",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na construção da via férrea de um trem de transporte de minério de ferro, os trilhos de aço são instalados com pequenos espaçamentos conhecidos como 'juntas de dilatação' para evitar flambagem e deformação catastrófica das barras metálicas no calor do verão. Cada segmento de trilho de aço mede L0 = 20 metros a uma temperatura de instalação de 10 °C. O coeficiente de dilatação linear do aço é alfa = 1,2 × 10⁻⁵ °C⁻¹.",
+      source: "Engenharia de Transportes e Resistência dos Materiais"
+    },
+    prompt: "Em uma tarde escaldante em que a temperatura do trilho atinge 40 °C sob sol direto, o aumento de comprimento (dilatação linear) experimentado por cada trilho de 20 metros é de:",
+    options: [
+      { id: "a", text: "7,2 mm", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2,4 mm", isCorrect: false, distractorRationale: "Calculou a dilatação para uma variação de apenas 10 °C em vez de 30 °C." },
+      { id: "c", text: "9,6 mm", isCorrect: false, distractorRationale: "Multiplicou pela temperatura final de 40 °C em vez da variação de temperatura (40 - 10 = 30 °C)." },
+      { id: "d", text: "72,0 mm", isCorrect: false, distractorRationale: "Errou a conversão de metros para milímetros por uma ordem de grandeza (fator 10)." },
+      { id: "e", text: "1,2 mm", isCorrect: false, distractorRationale: "Considerou apenas o valor numérico do coeficiente de dilatação." }
+    ],
+    detailedExplanation: {
+      summary: "A dilatação térmica linear é dada por Delta L = L0 × alfa × Delta T. Com L0 = 20 m, alfa = 1,2 × 10⁻⁵ °C⁻¹ e Delta T = 40 - 10 = 30 °C: Delta L = 20 × (1,2 × 10⁻⁵) × 30 = 7,2 × 10⁻³ m = 7,2 mm.",
+      stepByStep: [
+        "1. Identificar a variação de temperatura sofrida pela peça: Delta T = T_final - T_inicial = 40 °C - 10 °C = 30 °C.",
+        "2. Aplicar a lei fundamental da dilatação linear: Delta L = L0 × alfa × Delta T.",
+        "3. Substituir os valores: Delta L = 20 m × (1,2 × 10⁻⁵ °C⁻¹) × 30 °C.",
+        "4. Cálculo numérico: Delta L = (20 × 30) × 1,2 × 10⁻⁵ = 600 × 1,2 × 10⁻⁵ = 720 × 10⁻⁵ m = 7,2 × 10⁻³ m.",
+        "5. Conversão para milímetros: 1 m = 1 000 mm -> 7,2 × 10⁻³ × 1 000 = 7,2 mm."
+      ],
+      coreConcept: "Dilatação Linear: Delta L = L0 × alfa × Delta T e Controle Estrutural com Juntas de Folga",
+      trapWarning: "Cuidado: use SEMPRE a variação de temperatura (Delta T = 40 - 10 = 30 °C), e nunca a temperatura final isolada (40 °C)!"
+    },
+    commonTraps: [
+      "Usar 40 °C em vez de Delta T = 30 °C na equação",
+      "Errar a potência de 10 na conversão de metros para milímetros"
+    ],
+    tags: ["dilatacao-linear", "termodinamica", "engenharia-civil", "juntas-de-dilatacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-023",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Comportamento Anômalo da Água e Sobrevivência Aquática",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante invernos rigorosos em regiões de altas latitudes, rios e lagos de água doce congelam apenas em sua superfície, preservando peixes, anfíbios e vegetação aquática vivos nas camadas profundas sob a camada de gelo. Esse fenômeno vital para a biosfera decorre de uma propriedade térmica atípica da água líquida em baixas temperaturas.",
+      source: "Termodinâmica dos Fluidos e Ecologia Aquática"
+    },
+    prompt: "A sobrevivência dos organismos no fundo dos lagos congelados é explicada pelo fato de que a água:",
+    options: [
+      { id: "a", text: "apresenta densidade máxima a 4 °C e se expande ao congelar, fazendo com que a camada de gelo menos densa flutue e isole termicamente a água líquida a 4 °C no fundo do lago.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "possui calor específico nulo quando próxima de 0 °C, resfriando o fundo instantaneamente.", isCorrect: false, distractorRationale: "O calor específico da água é elevado (~1 cal/g°C), atuando como excelente moderador térmico." },
+      { id: "c", text: "torna-se cem vezes mais densa ao se transformar em gelo sólido, afundando continuamente até preencher o leito.", isCorrect: false, distractorRationale: "O gelo é MENOS denso que a água líquida (~0,92 g/cm³ vs 1,00 g/cm³); se afundasse, o lago congelaria de baixo para cima matando tudo." },
+      { id: "d", text: "conduz calor por convecção dez vezes mais rápido através do gelo sólido do que no ar.", isCorrect: false, distractorRationale: "O gelo é um mau condutor de calor, atuando como isolante térmico que barra a perda de calor para o ar externo." },
+      { id: "e", text: "produz radiação gama por fissão do oxigênio aquecendo as plantas bentônicas.", isCorrect: false, distractorRationale: "Não há fissão nuclear ou radiação gama na água de lagos doces em congelamento." }
+    ],
+    detailedExplanation: {
+      summary: "Entre 0 °C e 4 °C a água sofre dilatação anômala: ao ser aquecida de 0 °C a 4 °C seu volume diminui e sua densidade aumenta, atingindo o máximo a 4 °C (1,000 g/cm³). No congelamento a 0 °C, formam-se pontes de hidrogênio em arranjo hexagonal aberto com muito espaço vazio, tornando o gelo menos denso (0,92 g/cm³). O gelo flutua e o ar frio congela apenas o topo, enquanto a água mais pesada a 4 °C afunda e permanece líquida no leito.",
+      stepByStep: [
+        "1. Com o resfriamento sazonal, a água superficial esfria até 4 °C e afunda por convecção (é a mais densa).",
+        "2. Uma vez que todo o lago atinge 4 °C, o resfriamento adicional de 4 °C para 0 °C torna a água superficial MENOS densa, impedindo que ela afunde.",
+        "3. A 0 °C, a superfície congela formando uma lâmina de gelo flutuante.",
+        "4. O gelo possui baixa condutividade térmica, agindo como um isolante térmico que impede a saída do calor da água abaixo para o ar congelante.",
+        "5. O leito profundo do lago permanece na fase líquida a 4 °C, garantindo oxigênio dissolvido e abrigo para as espécies biológicas."
+      ],
+      coreConcept: "Comportamento Anômalo da Água: Densidade Máxima a 4 °C e Isolamento Térmico por Gelo Superficial",
+      trapWarning: "Lembre-se: quase todas as substâncias da natureza diminuem de volume e ficam mais densas ao solidificar. A água é a grande exceção que SE EXPANDE ao congelar!"
+    },
+    commonTraps: [
+      "Achar que o gelo afunda no lago congelado",
+      "Supor que a água no fundo está a 0 °C (ela fica estável a 4 °C por ser a temperatura de máxima densidade)"
+    ],
+    tags: ["anomalia-da-agua", "densidade", "calor-especifico", "ecologia", "pontes-de-hidrogenio"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-024",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Primeira Lei da Termodinâmica e Compressão Adiabática",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nos motores a combustão interna do ciclo Diesel, o ar atmosférico puro é admitido no cilindro e comprimido de forma extremamente rápida pelo pistão, reduzindo seu volume a uma fração de 1/20 do original antes da injeção do combustível líquido. Devido à altíssima velocidade do curso do pistão, não há tempo hábil para que ocorram trocas significativas de calor com as paredes do motor durante esse estágio.",
+      source: "ENEM / Motores Térmicos e Processos Adiabáticos"
+    },
+    prompt: "Com base na Primeira Lei da Termodinâmica (Delta U = Q - W), a rápida compressão sofrida pelo ar no pistão resulta em uma transformação:",
+    options: [
+      { id: "a", text: "adiabática, na qual o trabalho mecânico realizado sobre o gás é integralmente convertido em aumento de sua energia interna, elevando sua temperatura a ponto de inflamar o combustível sem vela de ignição.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "isotérmica, na qual a temperatura absoluta do gás permanece perfeitamente constante apesar da elevação extrema da pressão.", isCorrect: false, distractorRationale: "Transformações isotérmicas exigem compressão lenta com calor cedido para fora; aqui o processo é rápido e a temperatura sobe centenas de graus." },
+      { id: "c", text: "isobárica, mantendo a pressão inalterada enquanto o volume se expande espontaneamente.", isCorrect: false, distractorRationale: "O volume diminui violentamente e a pressão aumenta dezenas de vezes no pistão." },
+      { id: "d", text: "isocórica, na qual nenhum trabalho de força é trocado com o êmbolo móvel do pistão.", isCorrect: false, distractorRationale: "O êmbolo se move e comprime o gás realizando grande trabalho mecânico (W ≠ 0)." },
+      { id: "e", text: "endotérmica com absorção maciça de calor do ambiente externo através do pistão vedado.", isCorrect: false, distractorRationale: "Por ser adiabático (rápido), não há absorção de calor do meio externo (Q = 0)." }
+    ],
+    detailedExplanation: {
+      summary: "Em processos rápidos, Q = 0 (transformação adiabática). Pela 1ª Lei: Delta U = Q - W = 0 - W = -W. Na compressão, o trabalho é realizado SOBRE o gás (W_gás < 0), logo Delta U = -(-|W|) = +|W| > 0. O aumento da energia interna manifesta-se como elevação súbita da temperatura (ultrapassando 550 °C), suficiente para autoignição imediata do diesel pulverizado.",
+      stepByStep: [
+        "1. Processo rápido sem tempo para fluxo térmico -> Transformação Adiabática: Q = 0.",
+        "2. Primeira Lei da Termodinâmica: Delta U = Q - W -> Delta U = - W.",
+        "3. Sentido do trabalho: como o volume diminui (Delta V < 0), o gás é comprimido e o trabalho realizado pelo gás é negativo (W < 0).",
+        "4. Variação da energia interna: Delta U = - (-|W|) = + |W| > 0.",
+        "5. Como a energia interna de um gás ideal depende diretamente da sua temperatura absoluta (U = (3/2) n R T), um Delta U positivo acarreta uma elevação maciça da temperatura do ar comprimido.",
+        "6. O diesel injetado vaporiza e queima espontaneamente sem necessidade de centelha elétrica."
+      ],
+      coreConcept: "Transformação Adiabática: Q = 0, Delta U = - W e Autoignição no Motor Diesel",
+      trapWarning: "Atenção: compressão rápida é sempre adiabática! O trabalho mecânico do pistão é transformado diretamente em agitação térmica das moléculas do gás."
+    },
+    commonTraps: [
+      "Achar que motor a diesel possui vela de ignição (a centelha é dispensada pelo aquecimento adiabático)",
+      "Confundir adiabática (sem calor, com variação de temperatura) com isotérmica (temperatura constante com troca de calor)"
+    ],
+    tags: ["adiabatica", "primeira-lei", "motor-diesel", "trabalho-termodinamico", "energia-interna"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-TERM-025",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Termologia",
+    subtopic: "Calorimetria, Mudança de Fase e Equilíbrio Térmico",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um experimento de termologia realizado em um calorímetro ideal de capacidade térmica desprezível, misturam-se 100 gramas de gelo picado em seu ponto de fusão (0 °C) com 400 gramas de água líquida a uma temperatura de 50 °C. Dados físicos: calor latente de fusão do gelo Lf = 80 cal/g; calor específico da água líquida c = 1,0 cal/(g·°C). Desconsidere qualquer perda de calor para o meio ambiente.",
+      source: "Física Térmica Experimental e Balanço Energético"
+    },
+    prompt: "Após atingir o equilíbrio térmico no interior do calorímetro, a temperatura final de equilíbrio do sistema é de:",
+    options: [
+      { id: "a", text: "24 °C", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "40 °C", isCorrect: false, distractorRationale: "Fez a média ponderada das temperaturas ignorando completamente o calor latente consumido para fundir o gelo (100×0 + 400×50)/500 = 40 °C." },
+      { id: "c", text: "10 °C", isCorrect: false, distractorRationale: "Errou a massa total de água líquida no denominador após a fusão (usou apenas 400 g em vez de 500 g)." },
+      { id: "d", text: "0 °C com gelo restante", isCorrect: false, distractorRationale: "Supôs que o calor fornecido pela água morna seria insuficiente para fundir todo o gelo." },
+      { id: "e", text: "30 °C", isCorrect: false, distractorRationale: "Subtraiu erroneamente o calor de fusão gerando erro de saldo energético." }
+    ],
+    detailedExplanation: {
+      summary: "Calor cedido pela água quente para resfriar de 50 °C até 0 °C: Q_ced = 400 × 1 × (50 - 0) = 20 000 cal. Calor necessário para fundir os 100 g de gelo a 0 °C: Q_fusao = 100 × 80 = 8 000 cal. Como 20 000 > 8 000, todo o gelo funde e restam 12 000 cal para aquecer a massa total de 500 g de água: 12 000 = 500 × 1 × (T_eq - 0) -> T_eq = 24 °C.",
+      stepByStep: [
+        "1. Etapa 1 - Checar se o gelo funde por completo:",
+        "   - Calor para fundir 100 g de gelo: Q1 = m_gelo × Lf = 100 g × 80 cal/g = 8 000 cal.",
+        "   - Calor máximo que os 400 g de água a 50 °C podem ceder até atingir 0 °C: Q_max = 400 g × 1 cal/(g°C) × 50 °C = 20 000 cal.",
+        "   - Como 20 000 cal > 8 000 cal, todo o gelo funde e o equilíbrio térmico ocorre ACIMA de 0 °C.",
+        "2. Etapa 2 - Balanço de calor total do sistema isolado (Soma Q = 0):",
+        "   - Calor de fusão do gelo: Q_fusao = +8 000 cal.",
+        "   - Aquecimento da água do gelo derretido (100 g) de 0 °C até T_eq: Q_aquec = 100 × 1 × (T_eq - 0) = 100 T_eq.",
+        "   - Resfriamento da água morna (400 g) de 50 °C até T_eq: Q_resfr = 400 × 1 × (T_eq - 50) = 400 T_eq - 20 000.",
+        "3. Igualando o somatório a zero:",
+        "   8 000 + 100 T_eq + 400 T_eq - 20 000 = 0",
+        "   500 T_eq - 12 000 = 0 -> 500 T_eq = 12 000.",
+        "4. Resolvendo para T_eq:",
+        "   T_eq = 12 000 / 500 = 120 / 5 = 24 °C."
+      ],
+      coreConcept: "Calorimetria com Mudança de Fase: Verificação do Calor Latente e Conservação da Energia Térmica",
+      trapWarning: "Armadilha mais frequente no ENEM: esquecer que o gelo que derrete vira 100 g de ÁGUA LÍQUIDA que também se aquece! A massa aquecida final é de 100 + 400 = 500 g de água!"
+    },
+    commonTraps: [
+      "Fazer média ponderada ignorando o calor latente de fusão do gelo (marcando 40 °C)",
+      "Esquecer de somar a massa de água derretida à massa original da água líquida"
+    ],
+    tags: ["calorimetria", "mudanca-de-fase", "equilibrio-termico", "calor-latente", "calor-sensivel"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

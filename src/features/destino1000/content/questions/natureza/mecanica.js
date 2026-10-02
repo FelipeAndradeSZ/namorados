@@ -845,6 +845,240 @@ export const QUESTIONS_MECANICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-021",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Potência Mecânica, Rendimento e Força Motora",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma central de suprimentos hospitalares, um guincho elétrico industrial é utilizado para içar verticalmente um palete de medicamentos com massa total m = 400 kg. O conjunto sobe com velocidade constante de 1,5 m/s em movimento retilíneo uniforme. Devido ao atrito mecânico nas engrenagens e às perdas elétricas nos enrolamentos do motor, o rendimento eletromecânico global do sistema é de eta = 75%. Adote g = 10 m/s².",
+      source: "Mecânica Aplicada e Eficiência Energética"
+    },
+    prompt: "A potência elétrica total consumida da rede elétrica pelo motor desse guincho durante a elevação uniforme é de:",
+    options: [
+      { id: "a", text: "8,0 kW", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "6,0 kW", isCorrect: false, distractorRationale: "Calculou a potência mecânica útil (P_util = F × v = 6,0 kW), mas esqueceu de dividir pelo rendimento de 75% para obter a potência total consumida." },
+      { id: "c", text: "4,5 kW", isCorrect: false, distractorRationale: "Multiplicou a potência útil por 0,75 em vez de dividir (6,0 × 0,75 = 4,5 kW)." },
+      { id: "d", text: "10,0 kW", isCorrect: false, distractorRationale: "Estimou o rendimento como sendo 60% por equívoco aritmético." },
+      { id: "e", text: "2,0 kW", isCorrect: false, distractorRationale: "Subtraiu 4 kW da potência útil sem embasamento físico." }
+    ],
+    detailedExplanation: {
+      summary: "Com velocidade constante, a força motora equilibra o peso: F = P = m × g = 400 × 10 = 4 000 N. A potência mecânica útil é P_util = F × v = 4 000 × 1,5 = 6 000 W = 6,0 kW. Sendo o rendimento eta = 0,75: P_total = P_util / eta = 6 000 / 0,75 = 8 000 W = 8,0 kW.",
+      stepByStep: [
+        "1. Condição de equilíbrio dinâmico (velocidade constante): Força resultante nula -> Força do cabo F = Peso do palete P.",
+        "2. Cálculo da força peso: P = m × g = 400 kg × 10 m/s² = 4 000 N.",
+        "3. Potência mecânica útil realizada pelo guincho: P_util = F × v = 4 000 N × 1,5 m/s = 6 000 Watts = 6,0 kW.",
+        "4. Definição de rendimento eletromecânico: eta = P_util / P_total -> P_total = P_util / eta.",
+        "5. Cálculo da potência total absorvida da rede: P_total = 6,0 kW / 0,75 = 8,0 kW.",
+        "6. Interpretação física: o motor retira 8,0 kW da rede, entrega 6,0 kW de potência útil para erguer a carga e dissipa 2,0 kW em forma de calor (efeito Joule e atrito)."
+      ],
+      coreConcept: "Potência Mecânica P = F × v e Relação de Rendimento eta = P_util / P_total",
+      trapWarning: "Lembre-se sempre: a potência TOTAL consumida pela máquina é sempre MAIOR que a potência útil! Para achar a potência total, divide-se a útil pelo rendimento (número decimal menor que 1)."
+    },
+    commonTraps: [
+      "Parar na potência útil (6 kW) esquecendo que o motor consome mais energia devido às perdas",
+      "Multiplicar pelo rendimento (6 × 0,75 = 4,5 kW) achando que a potência de entrada seria menor que a de saída"
+    ],
+    tags: ["potencia-mecanica", "rendimento", "energia", "leis-de-newton", "fisica-aplicada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-022",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Hidrostática: Princípio de Pascal e Prensa Hidráulica",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma oficina especializada na manutenção de veículos de resgate e ambulâncias, utiliza-se um elevador hidráulico automotivo baseado no Princípio de Pascal. O sistema consiste em dois pistões cilíndricos comunicantes preenchidos com óleo incompressível: o pistão menor possui área de seção transversal A1 = 20 cm² e o pistão maior, que sustenta o chassi do veículo, possui área A2 = 500 cm².",
+      source: "Mecânica dos Fluidos e Sistemas Hidráulicos"
+    },
+    prompt: "Ao aplicar uma força vertical descendente de módulo F1 = 300 N sobre o pistão menor, a força vertical ascendente transmitida ao pistão maior e a relação entre os deslocamentos verticais dos pistões (d1 / d2) são, respectivamente:",
+    options: [
+      { id: "a", text: "7 500 N e 25", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "7 500 N e 1/25", isCorrect: false, distractorRationale: "Inverteu a razão de deslocamento dos êmbolos (o pistão menor desloca-se 25 vezes mais que o maior)." },
+      { id: "c", text: "300 N e 1", isCorrect: false, distractorRationale: "Tratou como se não houvesse multiplicação de força mecânica hidrostática." },
+      { id: "d", text: "6 000 N e 20", isCorrect: false, distractorRationale: "Errou a razão entre as áreas dos pistões (500 / 20 = 25, não 20)." },
+      { id: "e", text: "15 000 N e 50", isCorrect: false, distractorRationale: "Multiplicou a razão de áreas por 2 arbitrariamente." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo Princípio de Pascal, a variação de pressão é transmitida integralmente a todos os pontos do fluido: Delta P1 = Delta P2 -> F1 / A1 = F2 / A2. Assim: F2 = F1 × (A2 / A1) = 300 × (500 / 20) = 300 × 25 = 7 500 N. Pela conservação de volume ou de trabalho mecânico (W1 = W2 -> F1 × d1 = F2 × d2), a razão de deslocamento d1 / d2 = F2 / F1 = 7 500 / 300 = 25.",
+      stepByStep: [
+        "1. Princípio de Pascal: a pressão exercida pelo êmbolo menor propaga-se uniformemente por todo o líquido incompressível.",
+        "2. Igualdade de pressões: P1 = P2 -> F1 / A1 = F2 / A2.",
+        "3. Razão de amplificação de força: F2 = 300 N × (500 cm² / 20 cm²) = 300 × 25 = 7 500 N.",
+        "4. Conservação da energia mecânica (trabalho de entrada = trabalho de saída): W1 = W2 -> F1 × d1 = F2 × d2.",
+        "5. Relação de deslocamentos: d1 / d2 = F2 / F1 = 7 500 / 300 = 25.",
+        "6. Conclusão física: o sistema multiplica a força por 25 vezes, mas exige que o operador empurre o pistão menor por uma distância 25 vezes maior (ganho de força sem criação mágica de energia)."
+      ],
+      coreConcept: "Princípio de Pascal e Conservação do Trabalho: Multiplicação Hidrostática de Força",
+      trapWarning: "Prensa hidráulica multiplica força, mas NUNCA multiplica energia ou trabalho mecânico! O trabalho realizado no êmbolo de entrada é rigorosamente igual ao do êmbolo de saída."
+    },
+    commonTraps: [
+      "Achar que a prensa hidráulica realiza mais trabalho do que recebe",
+      "Errar a simplificação 500 / 20 = 25"
+    ],
+    tags: ["principio-de-pascal", "prensa-hidraulica", "hidrostatica", "conservacao-de-trabalho"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-023",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Dinâmica do Movimento Circular e Atrito Estático em Curvas",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma via urbana plana e horizontal sem inclinação de pista (sem sobrelevação), uma viatura de socorro precisa realizar uma curva circular de raio constante R = 50 metros. O coeficiente de atrito estático entre os pneus de borracha do veículo e o asfalto seco é mi_e = 0,80. Considere a aceleração da gravidade local g = 10 m/s².",
+      source: "Dinâmica Veicular e Segurança Viária"
+    },
+    prompt: "Para efetuar a curva com segurança sem sofrer derrapagem lateral para fora da pista, a velocidade máxima que a viatura pode atingir é de:",
+    options: [
+      { id: "a", text: "20 m/s (72 km/h)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "40 m/s (144 km/h)", isCorrect: false, distractorRationale: "Esqueceu de extrair a raiz quadrada ao isolar v na equação da força centrípeta (v² = 400 -> marcou 40 m/s em vez de 20 m/s)." },
+      { id: "c", text: "15 m/s (54 km/h)", isCorrect: false, distractorRationale: "Subtraiu a gravidade do raio antes de multiplicar." },
+      { id: "d", text: "25 m/s (90 km/h)", isCorrect: false, distractorRationale: "Calculou para mi = 1,25 por inversão do coeficiente." },
+      { id: "e", text: "10 m/s (36 km/h)", isCorrect: false, distractorRationale: "Dividiu a velocidade correta por 2 por margem de segurança arbitrária." }
+    ],
+    detailedExplanation: {
+      summary: "Em pista horizontal plana, a força de atrito estático lateral atua como a única resultante centrípeta que mantém o carro na trajetória circular: F_cp = F_at,max -> m × v² / R = mi_e × N = mi_e × m × g. Cancelando a massa: v = √(mi_e × g × R) = √(0,80 × 10 × 50) = √400 = 20 m/s (72 km/h).",
+      stepByStep: [
+        "1. Identificar as forças que atuam no plano da curva: no eixo vertical Normal = Peso (N = m × g); no eixo horizontal radial a força de atrito estático aponta para o centro da curva.",
+        "2. A força resultante centrípeta necessária para curvar é: F_cp = m × v² / R.",
+        "3. No limite iminente de derrapagem lateral, o atrito atinge o valor estático máximo: F_at = mi_e × N = mi_e × m × g.",
+        "4. Igualando as expressões: m × v² / R = mi_e × m × g.",
+        "5. Note que a massa m cancela-se em ambos os membros (a velocidade limite de derrapagem independe da massa do automóvel!).",
+        "6. Isolando a velocidade: v² = mi_e × g × R = 0,80 × 10 × 50 = 400.",
+        "7. Extraindo a raiz quadrada: v_max = √400 = 20 m/s.",
+        "8. Conversão para km/h: 20 × 3,6 = 72 km/h."
+      ],
+      coreConcept: "Movimento Circular: Força de Atrito Estático como Resultante Centrípeta",
+      trapWarning: "A massa do veículo não importa! Uma moto leve e um caminhão pesado derraparão exatamente na mesma velocidade máxima se possuírem pneus com o mesmo coeficiente de atrito."
+    },
+    commonTraps: [
+      "Esquecer de tirar a raiz quadrada de 400 (marcar 40 m/s)",
+      "Achar que veículos mais pesados conseguem fazer a curva mais rápido porque a massa seguraria o carro"
+    ],
+    tags: ["forca-centripeta", "atrito-estatico", "movimento-circular", "dinamica", "seguranca-viaria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-024",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Teorema do Impulso e Dispositivos de Segurança Passiva",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em testes de colisão frontal realizados pela indústria automobilística, avalia-se a eficiência de dispositivos de segurança veicular como o airbag e as zonas de deformação programada do capô. Em um impacto contra um obstáculo rígido, a velocidade inicial do passageiro cai até o repouso completo, sofrendo uma variação prefixada de quantidade de movimento (Delta p) determinada pela sua massa e velocidade de tráfego.",
+      source: "Biomecânica do Trauma e Engenharia de Segurança Automotiva"
+    },
+    prompt: "Pelo Teorema do Impulso (I = Delta p = F_media × Delta t), a presença do airbag reduz a gravidade das lesões cranianas e torácicas do passageiro porque:",
+    options: [
+      { id: "a", text: "aumenta o tempo de duração da desaceleração mecânica (Delta t), reduzindo drasticamente o módulo da força média de impacto exercida sobre o corpo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "reduz a zero a quantidade de movimento do passageiro antes mesmo de o veículo tocar a barreira.", isCorrect: false, distractorRationale: "O airbag só atua durante a colisão física real; ele não desacelera o corpo antes do evento do choque." },
+      { id: "c", text: "elimina a inércia biológica do passageiro convertendo toda a matéria dos ossos em energia luminosa.", isCorrect: false, distractorRationale: "A inércia é propriedade intrínseca da massa que não pode ser anulada nem convertida em luz." },
+      { id: "d", text: "diminui o tempo de parada para menos de 1 milissegundo, aumentando a rigidez estrutural.", isCorrect: false, distractorRationale: "Diminuir o tempo de parada aumentaria a força média (F = Delta p / Delta t), tornando a colisão fatal." },
+      { id: "e", text: "absorve a força gravitacional da Terra impedindo que o corpo pese sobre o assento.", isCorrect: false, distractorRationale: "O airbag protege contra o impacto frontal horizontal, sem alterar a força peso vertical terrestre." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo Teorema do Impulso: Impulso = F_media × Delta t = Delta p. Como a variação do momento linear Delta p = m × (0 - v0) é fixa para uma dada velocidade, a força média é inversamente proporcional ao tempo de interação: F_media = Delta p / Delta t. Ao amortecer a colisão, o airbag prolonga o intervalo de frenagem Delta t, o que derruba a intensidade da força média F_media, preservando órgãos e estruturas ósseas.",
+      stepByStep: [
+        "1. Teorema do Impulso: I = Delta p = F_media × Delta t.",
+        "2. Em uma desaceleração de v0 até 0, o Delta p é uma constante inevitável (mesma massa, mesma velocidade inicial).",
+        "3. Sem airbag (impacto direto contra volante rígido): a frenagem ocorre em tempo extremamente diminuto (Delta t ínfimo -> força F colossal, provocando fraturas e lesões encefálicas).",
+        "4. Com airbag (bolsa de gás que deforma progressivamente): o intervalo de desaceleração Delta t é ampliado significativamente.",
+        "5. Como F_media = Delta p / Delta t, com maior Delta t a força média sobre o tórax e cabeça do indivíduo cai para patamares suportáveis pela fisiologia humana."
+      ],
+      coreConcept: "Teorema do Impulso: I = F_media × Delta t = Delta p e Redução da Força por Ampliação do Tempo",
+      trapWarning: "Lembre-se: o airbag NÃO diminui a variação de velocidade nem o Delta p total do passageiro (ele vai parar de qualquer jeito). O que o airbag faz é DISTRIBUIR esse mesmo Delta p ao longo de mais tempo, diminuindo a força instantânea!"
+    },
+    commonTraps: [
+      "Achar que o airbag diminui a variação de quantidade de movimento (Delta p é o mesmo)",
+      "Supor que o airbag funciona parando o passageiro mais rápido (ele para MAIS DEVAGAR)"
+    ],
+    tags: ["teorema-do-impulso", "quantidade-de-movimento", "airbag", "biomecanica", "leis-de-newton"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-MEC-025",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Mecânica",
+    subtopic: "Estática do Corpo Rígido: Equilíbrio de Rotação e Torque",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma simulação mecânica de elevação de cargas, uma barra rígida e homogênea de comprimento total L = 2,0 metros e peso próprio P_barra = 100 N está apoiada horizontalmente sobre um ponto de apoio fixo (fulcro triangular) localizado a 0,5 metros de sua extremidade esquerda A. Na ponta esquerda A, encontra-se suspensa verticalmente uma caixa de suprimentos de peso P_caixa.",
+      source: "Estática dos Sólidos e Equilíbrio Rotacional"
+    },
+    prompt: "Para que a barra permaneça em equilíbrio estático perfeitamente horizontal sem tombar, o peso P_caixa pendurado na extremidade A deve ser igual a:",
+    options: [
+      { id: "a", text: "100 N", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "50 N", isCorrect: false, distractorRationale: "Esqueceu que a distância do centro de gravidade da barra até o ponto de apoio é de 0,5 metros." },
+      { id: "c", text: "200 N", isCorrect: false, distractorRationale: "Multiplicou pelo comprimento total da barra em vez da distância ao fulcro." },
+      { id: "d", text: "300 N", isCorrect: false, distractorRationale: "Posicionou o peso da barra na extremidade oposta em vez do centro de massa." },
+      { id: "e", text: "150 N", isCorrect: false, distractorRationale: "Somou as distâncias de forma incorreta no balanço de torque." }
+    ],
+    detailedExplanation: {
+      summary: "Para uma barra homogênea de 2,0 m, o centro de gravidade (CG) localiza-se em seu ponto médio, a 1,0 m da extremidade A. Como o fulcro está a 0,5 m de A, a distância do CG ao fulcro é d_CG = 1,0 - 0,5 = 0,5 m. Condição de equilíbrio de torques em relação ao fulcro: Torque_caixa = Torque_barra -> P_caixa × 0,5 = P_barra × 0,5 -> P_caixa = P_barra = 100 N.",
+      stepByStep: [
+        "1. Identificar a posição do ponto de apoio (fulcro): dist(A, Fulcro) = 0,5 m.",
+        "2. Identificar a posição do peso da barra: como a barra é HOMOGÊNEA de comprimento L = 2,0 m, seu peso atua exatamente no centro geométrico (CG), a 1,0 m de A.",
+        "3. Calcular o braço de alavanca do peso da barra em relação ao fulcro: d_barra = 1,0 m - 0,5 m = 0,5 m (à direita do fulcro).",
+        "4. Braço de alavanca da caixa suspensa na extremidade A: d_caixa = 0,5 m (à esquerda do fulcro).",
+        "5. Equação do equilíbrio rotacional (somatório dos torques nulo em torno do fulcro):",
+        "   Torque no sentido horário = Torque no sentido anti-horário",
+        "   P_barra × d_barra = P_caixa × d_caixa",
+        "   100 N × 0,5 m = P_caixa × 0,5 m.",
+        "6. Isolando P_caixa: P_caixa = (100 × 0,5) / 0,5 = 100 N."
+      ],
+      coreConcept: "Estática do Corpo Rígido: Torque = Força × Braço de Alavanca e Ponto de Aplicação do Peso Próprio",
+      trapWarning: "Lembre-se: o peso da barra homogênea atua SEMPRE no seu ponto médio (centro de gravidade)! Nunca coloque o peso da barra nas extremidades."
+    },
+    commonTraps: [
+      "Colocar o peso da barra na extremidade direita em vez de no ponto médio",
+      "Errar o braço de alavanca da barra em relação ao ponto de apoio"
+    ],
+    tags: ["estatica", "torque", "equilibrio-rotacional", "alavanca", "centro-de-massa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

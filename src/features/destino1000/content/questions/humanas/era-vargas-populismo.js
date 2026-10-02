@@ -797,6 +797,230 @@ export const QUESTIONS_ERA_VARGAS = [
     status: 'published',
     version: 1,
     createdAt: '2026-10-01'
+  },
+  {
+    id: 'HUM-VARGAS-021',
+    area: 'humanas',
+    competence: 2,
+    skill: 8,
+    topic: 'Era Vargas',
+    subtopic: 'O Plano Cohen e o Golpe do Estado Novo (1937)',
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: 'application',
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: 'Em setembro de 1937, jornais e emissoras de rádio de todo o Brasil divulgaram com alarme a descoberta pelas Forças Armadas do suposto "Plano Cohen" — um documento secreto que descrevia em detalhes uma iminente insurreição comunista com assassinatos de líderes políticos, incêndio de igrejas e saques ao comércio. O clima de histeria pública permitiu a Getúlio Vargas decretar estado de sítio, cancelar as eleições presidenciais previstas para 1938, fechar o Congresso Nacional e outorgar a Constituição autoritária de 1937 (a "Polaca"). Anos mais tarde, comprovou-se que o documento fora uma grosseira farsa forjada pelo capitão integralista Olímpio Mourão Filho.',
+      source: 'História do Brasil Contemporâneo e a Era Vargas'
+    },
+    prompt: 'A divulgação do forjado Plano Cohen operou historicamente como:',
+    options: [
+      { id: 'a', text: 'uma justificativa fraudulenta orquestrada para instaurar a ditadura do Estado Novo (1937-1945), neutralizando a oposição democrática através do medo do comunismo.', isCorrect: true, distractorRationale: null },
+      { id: 'b', text: 'uma comprovação empírica legítima de que a União Soviética havia invadido o litoral brasileiro.', isCorrect: false, distractorRationale: 'O plano era comprovadamente falso, sem qualquer relação com invasão soviética real.' },
+      { id: 'c', text: 'o marco inicial da restauração democrática que fortaleceu o poder do Congresso Nacional e dos sindicatos livres.', isCorrect: false, distractorRationale: 'O golpe fechou o Congresso, aboliu os partidos políticos e colocou os sindicatos sob tutela do Estado.' },
+      { id: 'd', text: 'um acordo diplomático de paz assinado entre o Partido Comunista Brasileiro e a Ação Integralista Brasileira.', isCorrect: false, distractorRationale: 'Comunistas e integralistas eram inimigos ideológicos mortais e o plano forjado serviu para prender opositores de esquerda.' },
+      { id: 'e', text: 'um projeto econômico voltado a privatizar todas as ferrovias e refinarias de petróleo nacionais.', isCorrect: false, distractorRationale: 'O Estado Novo adotou o nacional-estatismo industrial com a fundação da CSN e Vale do Rio Doce.' }
+    ],
+    detailedExplanation: {
+      summary: 'O Plano Cohen foi a fraude política que deu o pretexto perfeito para o golpe de 10 de novembro de 1937. Valendo-se do anticomunismo das Forças Armadas e das classes médias após a Intentona Comunista de 1935, Getúlio Vargas cancelou as eleições, fechou o Congresso e inaugurou a ditadura do Estado Novo, inspirada nos regimes fascistas europeus.',
+      stepByStep: [
+        '1. Antecedente: A Constituição de 1934 previa eleições democráticas em janeiro de 1938, das quais Vargas não poderia participar legalmente.',
+        '2. A farsa: O capitão integralista Mourão Filho redigiu uma simulação de plano comunista para exercícios internos, que vazou para o general Góes Monteiro e para Vargas.',
+        '3. Instrumentalização: O governo alterou o nome para "Plano Cohen" (conotando sobrenome judaico para atrair a simpatia antissemita da época) e divulgou na Hora do Brasil como conspiração real.',
+        '4. Golpe de 10 de novembro de 1937: Tropas cercam o Congresso, outorga-se a Constituição "Polaca" (redigida por Francisco Campos) e instaura-se o Estado Novo.',
+        '5. Conclusão: Trata-se do mais célebre episódio de "fake news" e conspiração manufactured da história política brasileira para legitimar um regime de força.'
+      ],
+      coreConcept: 'Plano Cohen: Farsa Anticomunista e o Golpe do Estado Novo em 1937',
+      trapWarning: 'No ENEM: Nunca confunda a Intentona Comunista de 1935 (que foi uma revolta armada REAL liderada por Prestes) com o Plano Cohen de 1937 (que foi uma farsa COMPROVADAMENTE FALSA forjada pelos integralistas e pelo governo).'
+    },
+    commonTraps: [
+      'Achar que o Plano Cohen era um documento comunista autêntico',
+      'Confundir a Intentona Comunista de 1935 com o Plano Cohen de 1937'
+    ],
+    tags: ['plano-cohen', 'estado-novo', 'getulio-vargas', 'ditadura-1937', 'anticomunismo'],
+    status: 'published',
+    version: 1,
+    createdAt: '2026-10-01'
+  },
+  {
+    id: 'HUM-VARGAS-022',
+    area: 'humanas',
+    competence: 2,
+    skill: 8,
+    topic: 'Era Vargas',
+    subtopic: 'A Ruptura de 1930 e a Crise da República Oligárquica',
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: 'application',
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: 'Ao assumir o poder provisório em 1930 após a deposição do presidente Washington Luís pela Aliança Liberal, Getúlio Vargas dissolveu as assembleias legislativas estaduais e substituiu os antigos governadores eleitos por "interventores federais" de sua estrita confiança — muitos deles jovens tenentes ligados ao movimento tenentista.',
+      source: 'Boris Fausto, A Revolução de 1930: Historiografia e História'
+    },
+    prompt: 'Essa medida centralizadora adotada pelo governo provisório de Getúlio Vargas representou uma ruptura com a República Velha porque:',
+    options: [
+      { id: 'a', text: 'desarticulou a tradicional "política dos governadores" e o poder quase autônomo das oligarquias estaduais do café, consolidando a supremacia do Estado centralizador federal.', isCorrect: true, distractorRationale: null },
+      { id: 'b', text: 'restituiu o poder absoluto dos coronéis do interior que passaram a emitir moedas estaduais próprias.', isCorrect: false, distractorRationale: 'A nomeação dos interventores desestruturou as oligarquias estaduais tradicionais e enfraqueceu os coronéis do café.' },
+      { id: 'c', text: 'extinguiu o Exército brasileiro e entregou a segurança nacional à marinha mercante de Portugal.', isCorrect: false, distractorRationale: 'O Exército foi o grande esteio unificador e modernizador da revolução centralizadora de 1930.' },
+      { id: 'd', text: 'aboliu o trabalho assalariado no Brasil restaurando o cativeiro de africanos nas cidades.', isCorrect: false, distractorRationale: 'A escravidão fora abolida em 1888 e Vargas iniciou a regulamentação dos direitos trabalhistas urbanos.' },
+      { id: 'e', text: 'transformou o estado de São Paulo no único detentor do direito de indicar presidentes da República.', isCorrect: false, distractorRationale: 'A Revolução de 1930 quebrou justamente a hegemonia paulista, deflagrando a Revolução Constitucionalista de 1932 em reação.' }
+    ],
+    detailedExplanation: {
+      summary: 'A República Velha (1889-1930) baseava-se no federalismo descentralizado da "política dos governadores" de Campos Sales, onde as oligarquias estaduais (com destaque para São Paulo e Minas Gerais) governavam seus estados como feudos privados. Com a Revolução de 1930, Vargas centralizou as rédeas no governo federal, nomeando interventores e submetendo os estados à autoridade nacional do Palácio do Catete.',
+      stepByStep: [
+        '1. Estrutura da República Oligárquica: Coronelismo local -> Política dos Governadores estaduais -> Política do Café com Leite federal.',
+        '2. Rompimento em 1930: Washington Luís indica o paulista Júlio Prestes, quebrando o acordo com Minas Gerais. Minas alia-se ao Rio Grande do Sul e Paraíba (Aliança Liberal).',
+        '3. Vitória da Revolução de 1930: Vargas assume e adota intervenção federal direta nos estados federados.',
+        '4. Consequência: Destruição do federalismo oligárquico e nascimento do Estado Nacional Moderno centralizado no Brasil.',
+        '5. Reação: O descontentamento da oligarquia paulista com o interventor João Alberto desembocou na Revolução Constitucionalista de 1932.'
+      ],
+      coreConcept: 'Revolução de 1930: Quebra da Política dos Governadores e Centralização do Poder Estatal',
+      trapWarning: 'No ENEM: 1930 não foi uma revolução socialista nem operária; foi uma reconfiguração do Estado burguês brasileiro, transferindo o comando dos cafeicultores tradicionais para o Estado centralizador urbano-industrial.'
+    },
+    commonTraps: [
+      'Achar que a Revolução de 1930 fortaleceu as oligarquias cafeeiras paulistas',
+      'Confundir o governo provisório de 1930 com o Estado Novo autoritário de 1937'
+    ],
+    tags: ['revolucao-1930', 'politica-dos-governadores', 'interventores', 'getulio-vargas', 'centralizacao'],
+    status: 'published',
+    version: 1,
+    createdAt: '2026-10-01'
+  },
+  {
+    id: 'HUM-VARGAS-023',
+    area: 'humanas',
+    competence: 2,
+    skill: 8,
+    topic: 'Governos Democráticos',
+    subtopic: 'A Criação da Petrobras e o Nacionalismo do Segundo Governo Vargas (1951-1954)',
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: 'application',
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: 'Em 1953, durante seu mandato democrático eleito pelo voto popular, o presidente Getúlio Vargas sancionou a Lei nº 2.004, que criou a empresa estatal Petróleo Brasileiro S.A. (Petrobras) e instituiu o monopólio estatal sobre a pesquisa, lavra, refino e transporte do petróleo em território brasileiro. A aprovação da lei foi resultado de uma intensa mobilização cívica popular que uniu estudantes da UNE, militares nacionalistas e sindicatos sob o lema "O Petróleo é Nosso!".',
+      source: 'Nacionalismo e Desenvolvimento no Brasil: 1945-1964'
+    },
+    prompt: 'A fundação da Petrobras expressou o confronto político entre dois projetos econômicos antagônicos no Brasil dos anos 1950:',
+    options: [
+      { id: 'a', text: 'o nacional-desenvolvimentismo getulista, que defendia o controle estatal dos setores estratégicos de energia para viabilizar a industrialização, versus o liberalismo internacionalista da UDN, que defendia a concessão irrestrita das jazidas ao capital estrangeiro.', isCorrect: true, distractorRationale: null },
+      { id: 'b', text: 'o comunismo soviético agrário versus a restauração do absolutismo monárquico dos Bragança.', isCorrect: false, distractorRationale: 'A disputa era no marco republicano moderno entre desenvolvimentismo estatal capitalista e liberalismo cosmopolita pró-EUA.' },
+      { id: 'c', text: 'o desarmamento pacífico internacional contra a queima de todo o petróleo nacional em fogueiras.', isCorrect: false, distractorRationale: 'O objetivo era extrair e refinar petróleo para abastecer caminhões, automóveis e indústrias nacionais.' },
+      { id: 'd', text: 'a proibição da utilização de automóveis e veículos pesados nas rodovias brasileiras.', isCorrect: false, distractorRationale: 'A demanda por petróleo crescia justamente pelo rápido processo de rodoviarismo e transporte rodoviário.' },
+      { id: 'e', text: 'a transferência da sede governamental da Petrobras para o controle direto da Standard Oil norte-americana.', isCorrect: false, distractorRationale: 'A Petrobras foi fundada com monopólio ESTATAL exatamente para barrar o cartel estrangeiro das "Sete Irmãs" do petróleo.' }
+    ],
+    detailedExplanation: {
+      summary: 'A criação da Petrobras em 1953 cristalizou a polarização da década de 1950 entre "nacionalistas" (trabalhistas do PTB e militares patriotas, favoráveis ao monopólio estatal da energia) e "entreguistas" (liberais da UDN, favoráveis à entrada livre de petrolíferas transnacionais norte-americanas). Vargas garantiu a soberania energética, essencial para o salto industrial subsequente.',
+      stepByStep: [
+        '1. Campanha "O Petróleo é Nosso!": Movimento de massas iniciado no Clube Militar e abraçado pela União Nacional dos Estudantes (UNE).',
+        '2. Polêmica legislativa: A UDN de Carlos Lacerda e Juarez Távora argumentava que o Brasil não tinha tecnologia nem petróleo e que o monopólio estatal afastaria capitais.',
+        '3. Lei 2.004 de 1953: Criação da Petrobras com monopólio estatal da pesquisa e refino (a distribuição em postos foi deixada ao setor privado).',
+        '4. Repercussão geopolítica: O nacionalismo petrolífero acirrou a fúria das elites e dos conglomerados estrangeiros contra Vargas, culminando na crise política que levou ao seu suicídio em 1954.'
+      ],
+      coreConcept: 'Nacional-Desenvolvimentismo vs Liberalismo: Campanha "O Petróleo é Nosso" e a Fundação da Petrobras',
+      trapWarning: 'No ENEM: lembre-se de que a Petrobras nasceu com monopólio estatal de EXPLORAÇÃO e REFINO, mas a distribuição nos postos de combustíveis continuou aberta a companhias privadas nacionais e estrangeiras.'
+    },
+    commonTraps: [
+      'Achar que a Petrobras foi criada no primeiro governo Vargas (ela foi criada no segundo mandato democrático, em 1953)',
+      'Confundir a posição da UDN (liberal pró-capital estrangeiro) com a do PTB/Vargas (nacionalista estatal)'
+    ],
+    tags: ['petrobras', 'o-petroleo-e-nosso', 'nacional-desenvolvimentismo', 'getulio-vargas', 'energia'],
+    status: 'published',
+    version: 1,
+    createdAt: '2026-10-01'
+  },
+  {
+    id: 'HUM-VARGAS-024',
+    area: 'humanas',
+    competence: 2,
+    skill: 8,
+    topic: 'Governos Democráticos',
+    subtopic: 'O Plano de Metas de Juscelino Kubitschek e o Modelo do Tripé Econômico',
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: 'application',
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: 'Eleito presidente da República, Juscelino Kubitschek (1956-1961) lançou o Plano de Metas sob o famoso slogan "50 anos de progresso em 5 anos de governo". O plano priorizou energia, transportes e indústria de base, culminando na construção da nova capital federal, Brasília, e na atração em larga escala de multinacionais automobilísticas como Volkswagen, Ford e General Motors.',
+      source: 'História do Desenvolvimento Brasileiro e os Anos JK'
+    },
+    prompt: 'A engenharia financeira e estrutural do modelo de desenvolvimento implementado por JK ficou conhecida como o "Tripé Econômico", fundamentado na articulação entre:',
+    options: [
+      { id: 'a', text: 'o Estado (financiando infraestrutura, estradas e siderurgia), o capital privado nacional (produzindo bens de consumo não duráveis) e o capital estrangeiro transnacional (investindo na indústria automobilística e de bens duráveis).', isCorrect: true, distractorRationale: null },
+      { id: 'b', text: 'o latifúndio monocultor de cana, os mosteiros beneditinos e o comércio escravista luso-africano.', isCorrect: false, distractorRationale: 'Essa estrutura pertence ao Brasil Colonial açucareiro, e não à modernização urbana-industrial dos anos 1950.' },
+      { id: 'c', text: 'o fechamento autárquico da economia brasileira a qualquer capital estrangeiro e o confisco de automóveis privados.', isCorrect: false, distractorRationale: 'O governo JK abriu as portas e concedeu volumosos incentivos cambiais à entrada de montadoras transnacionais (Instrução 113 da Sumoc).' },
+      { id: 'd', text: 'a privatização integral de todas as hidrelétricas e a extinção de ministérios e bancos estatais.', isCorrect: false, distractorRationale: 'O Estado expandiu pesadamente sua atuação direta fundando Furnas e construindo a infraestrutura pesada.' },
+      { id: 'e', text: 'a adoção do padrão monetário ouro associada à proibição de estradas rodoviárias em todo o país.', isCorrect: false, distractorRationale: 'JK priorizou o rodoviarismo ("governar é abrir estradas") em detrimento do transporte ferroviário.' }
+    ],
+    detailedExplanation: {
+      summary: 'O governo JK operou a consolidação industrial brasileira através do modelo do tripé: 1) Capital Estatal nos setores de grande investimento e baixo retorno imediato (energia, rodovias, siderurgia); 2) Capital Privado Nacional no consumo tradicional (têxtil, alimentos); 3) Capital Estrangeiro nos setores de alta tecnologia (automobilístico, eletrodomésticos, químico). O preço desse salto foi o rodoviarismo dependente, o endividamento externo e a escalada da inflação.',
+      stepByStep: [
+        '1. Metas JK: 31 metas distribuídas em 5 setores: Energia, Transporte, Indústria de Base, Alimentação e Educação (a "meta-síntese" foi a construção de Brasília).',
+        '2. O Tripé Econômico: Cada agente econômico assumiu um papel complementar no desenvolvimento capitalista.',
+        '3. Opção pelo Rodoviarismo: Descentralizou o transporte sobre trilhos em favor da malha rodoviária para absorver os caminhões e carros das montadoras estrangeiras atraídas ao ABC Paulista.',
+        '4. Construção de Brasília (1960): Interiorização da capital, integração do Centro-Oeste e afirmação simbólica da modernidade nacional.',
+        '5. Contradições do legado: Emissão monetária descontrolada para custear as obras gerou forte inflação e quadruplicou a dívida externa herdada pelos governos seguintes.'
+      ],
+      coreConcept: 'Plano de Metas de JK: O Tripé Econômico, Rodoviarismo e a Construção de Brasília',
+      trapWarning: 'Cuidado: apesar do otimismo do "desenvolvimentismo" dos anos dourados de JK, o modelo aprofundou a dependência do transporte rodoviário (petróleo) e deixou uma herança severa de inflação e desigualdade regional.'
+    },
+    commonTraps: [
+      'Achar que o Plano de Metas atingiu com o mesmo êxito as metas de Educação e Alimentação (essas duas foram as mais negligenciadas)',
+      'Desconhecer que o capital estrangeiro entrou com força na indústria automobilística durante a gestão JK'
+    ],
+    tags: ['anos-jk', 'plano-de-metas', 'tripe-economico', 'rodoviarismo', 'brasilia'],
+    status: 'published',
+    version: 1,
+    createdAt: '2026-10-01'
+  },
+  {
+    id: 'HUM-VARGAS-025',
+    area: 'humanas',
+    competence: 2,
+    skill: 8,
+    topic: 'Governos Democráticos',
+    subtopic: 'A Política Externa Independente (PEI) no Início dos Anos 1960',
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: 'application',
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: 'Em 1961, durante o curto mandato do presidente Jânio Quadros e mantida sob a presidência de João Goulart, o Itamaraty formulou a chamada Política Externa Independente (PEI), sob a condução de diplomatas como Afonso Arinos e San Tiago Dantas. Em pleno auge da Guerra Fria, a diretriz rompeu com o alinhamento automático incondicional aos Estados Unidos, restabeleceu laços diplomáticos e comerciais com a União Soviética e a China, defendeu o princípio da não intervenção na Revolução Cubana e apoiou os movimentos de descolonização na África e na Ásia.',
+      source: 'História das Relações Internacionais do Brasil e a Guerra Fria'
+    },
+    prompt: 'O principal objetivo geoestratégico da Política Externa Independente (PEI) para a inserção internacional do Brasil era:',
+    options: [
+      { id: 'a', text: 'ampliar os mercados exportadores para os produtos brasileiros e afirmar a autonomia diplomática soberana do país sem subordinação mecânica à bipolaridade da Guerra Fria.', isCorrect: true, distractorRationale: null },
+      { id: 'b', text: 'declarar guerra aberta aos países da Europa Ocidental para confiscar seus territórios coloniais.', isCorrect: false, distractorRationale: 'A PEI defendia o pacifismo, a autodeterminação dos povos e a solução negociada de controvérsias na ONU.' },
+      { id: 'c', text: 'romper qualquer relação de comércio com os Estados Unidos da América.', isCorrect: false, distractorRationale: 'O Brasil buscou diversificar parcerias sem romper relações com os EUA, recusando apenas o alinhamento cego e submisso.' },
+      { id: 'd', text: 'integrar formalmente o Brasil como república soviética integrante do Pacto de Varsóvia.', isCorrect: false, distractorRationale: 'O Brasil participou do Movimento dos Não Alinhados como observador, preservando sua soberania e regime capitalista.' },
+      { id: 'e', text: 'submeter a política externa brasileira às deliberações exclusivas da Coroa britânica.', isCorrect: false, distractorRationale: 'A proposta da PEI era justamente a afirmação de autonomia e soberania nacional anticolonial.' }
+    ],
+    detailedExplanation: {
+      summary: 'A Política Externa Independente (PEI) de 1961 a 1964 representou uma virada pragmática no Itamaraty: em vez de aceitar passivamente o papel de satélite subordinado a Washington na Guerra Fria, o Brasil buscou novos mercados para sua indústria e agricultura no bloco socialista e no Terceiro Mundo (Ásia/África), defendendo o princípio da autodeterminação dos povos.',
+      stepByStep: [
+        '1. Doutrina anterior (Dutra): Alinhamento incondicional aos EUA (rompimento com a URSS e caça aos comunistas).',
+        '2. Princípios da PEI (Jânio/Jango): Universalismo diplomático, não alinhamento automático a blocos militares, defesa do desarmamento e anticolonialismo.',
+        '3. Atos simbólicos marcantes: Restabelecimento de laços com URSS e China comunista; condecoração de Ernesto Che Guevara por Jânio Quadros com a Ordem do Cruzeiro do Sul (o que enfureceu a direita militar e a UDN).',
+        '4. Consequência geopolítica: A autonomia da PEI e a recusa brasileira em sancionar Cuba na OEA irritaram profundamente o governo dos EUA (John F. Kennedy / Lyndon Johnson), que passou a conspirar e financiar o golpe civil-militar de 1964.',
+        '5. Repercussão histórica: As bases da PEI inspiraram a diplomacia universalista brasileira em governos posteriores (como no governo Geisel e na política externa contemporânea).'
+      ],
+      coreConcept: 'Política Externa Independente (PEI): Universalismo, Não Alinhamento e Autonomia Nacional',
+      trapWarning: 'No ENEM: A PEI não era uma adesão ao comunismo! Era uma diplomacia PRAGMÁTICA comercial voltada a vender café, açúcar e produtos brasileiros para qualquer país do mundo, independentemente de ideologia.'
+    },
+    commonTraps: [
+      'Achar que a PEI transformou o Brasil em um país comunista alinhado à URSS',
+      'Esquecer que a PEI foi iniciada por Jânio Quadros e continuada por João Goulart'
+    ],
+    tags: ['politica-externa-independente', 'pei', 'janio-quadros', 'guerra-fria', 'itamaraty'],
+    status: 'published',
+    version: 1,
+    createdAt: '2026-10-01'
   }
 ];
 

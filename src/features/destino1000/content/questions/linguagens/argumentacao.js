@@ -1083,6 +1083,225 @@ export const QUESTIONS_ARGUMENTACAO = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-021",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Argumentação e Retórica",
+    subtopic: "Falácia da Falsa Causa (Post Hoc Ergo Propter Hoc) e Correlação vs Causalidade",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em campanhas de desinformação na internet, tornou-se frequente o uso de argumentos do tipo: 'O paciente ingeriu o chá da planta X na terça-feira e na quinta-feira seus sintomas de gripe desapareceram por completo; logo, o chá da planta X é a cura comprovada para a infecção viral'. Na lógica formal e na metodologia científica, essa dedução constitui a falácia da falsa causa, conhecida historicamente pela expressão latina *post hoc ergo propter hoc* ('depois disso, logo por causa disso').",
+      source: "Lógica Informal, Metodologia Científica e Pensamento Crítico"
+    },
+    prompt: "A falha argumentativa apresentada no texto decorre fundamentalmente do fato de que o enunciador:",
+    options: [
+      { id: "a", text: "confunde uma mera sucessão temporal e coincidência cronológica de eventos com um nexo causal cientificamente comprovado, ignorando que o sistema imunológico debela naturalmente certas viroses.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "afirma categoricamente que nenhuma espécie botânica possui substâncias com propriedades fitoterápicas.", isCorrect: false, distractorRationale: "O enunciador não negou o valor dos fitoterápicos em geral; o erro está na inferência causal precipitada sem teste controlado." },
+      { id: "c", text: "apresenta dados quantitativos de ensaios clínicos duplo-cego que desmentem as diretrizes da Organização Mundial da Saúde.", isCorrect: false, distractorRationale: "O texto não cita ensaios clínicos duplo-cego, mas sim um relato anedótico e informal isolado." },
+      { id: "d", text: "utiliza uma oração subordinada adverbial concessiva para demonstrar que o paciente tomou medicamentos alopáticos.", isCorrect: false, distractorRationale: "Não há oração concessiva no relato nem menção a remédios alopáticos prévios." },
+      { id: "e", text: "emprega termos arcaicos do latim clássico para convencer a bancada médica sobre a eficácia de antibióticos.", isCorrect: false, distractorRationale: "A expressão latina foi usada pelo autor analista para classificar a falácia, e não pelo sujeito que relatou o chá." }
+    ],
+    detailedExplanation: {
+      summary: "A falácia 'post hoc ergo propter hoc' comete o erro de supor que, só porque o evento B ocorreu após o evento A, o evento A foi necessariamente a causa de B. Na ausência de grupo de controle e isolamento de variáveis, a correlação temporal é insuficiente para atestar eficácia biológica.",
+      stepByStep: [
+        "1. Identificação da estrutura: Evento A (tomar o chá) ocorreu antes de B (melhora clínica).",
+        "2. Identificação da inferência falaciosa: Concluir que A causou B unicamente pela ordem cronológica.",
+        "3. Realidade científica: Quadros de resfriado e viroses respiratórias autolimitadas costumam remitir espontaneamente em poucos dias pela ação dos anticorpos e linfócitos.",
+        "4. Conclusão: Trata-se da falácia da falsa causa (post hoc), típica de relatos anedóticos não controlados."
+      ],
+      coreConcept: "Falácia da Falsa Causa (Post Hoc Ergo Propter Hoc)",
+      trapWarning: "No ENEM e na prova de Linguagens, fique atento a relações causais fictícias. Correlação temporal não implica causalidade científica."
+    },
+    commonTraps: [
+      "Acreditar que a ordem temporal de dois fatos garante relação de causa e efeito",
+      "Confundir depoimento anedótico individual com comprovação clínica"
+    ],
+    tags: ["argumentacao", "falacias", "falsa-causa", "post-hoc", "pensamento-critico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-022",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Argumentação e Retórica",
+    subtopic: "Argumento de Autoridade Legítimo vs Falácia do Apelo Indevido (Ad Verecundiam)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere dois trechos veiculados no debate público contemporâneo:\n\nTrecho 1: 'Segundo relatório conclusivo do Painel Intergovernamental sobre Mudanças Climáticas (IPCC), que congrega mais de 800 climatologistas e revisores de artigos em periódicos internacionais indexados, as emissões antrópicas de gases de efeito estufa aceleraram a temperatura média do planeta.'\nTrecho 2: 'O famoso ator e galã de cinema declarou em suas redes sociais que as vacinas de RNA mensageiro causam alterações perigosas na personalidade humana, razão pela qual a população deveria rejeitar a imunização coletiva.'",
+      source: "Retórica Crítica e Análise de Discurso da Mídia"
+    },
+    prompt: "Comparando os dois procedimentos argumentativos, verifica-se que o Trecho 2 configura uma falácia de apelo indevido à autoridade (*argumentum ad verecundiam*) porque:",
+    options: [
+      { id: "a", text: "apoia sua premissa na notoriedade midiática de uma celebridade que carece de expertise científica e respaldo em evidências biomédicas revisadas por pares.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "emprega argumentos baseados em estatísticas epidemiológicas que contrariam os consensos da física quântica.", isCorrect: false, distractorRationale: "O Trecho 2 não cita estatísticas epidemiológicas nem faz referência à física quântica." },
+      { id: "c", text: "utiliza uma autoridade governamental oficial para proibir o debate em instituições universitárias.", isCorrect: false, distractorRationale: "O ator não é uma autoridade governamental e não detém poder legal proibitivo." },
+      { id: "d", text: "desenvolve um raciocínio dedutivo silogístico perfeito cujas conclusões independem de validação empírica.", isCorrect: false, distractorRationale: "O raciocínio é falacioso e cientificamente incorreto, sem qualquer rigor silogístico." },
+      { id: "e", text: "restringe a circulação do conteúdo opinativo a veículos acadêmicos impressos de circulação fechada.", isCorrect: false, distractorRationale: "A opinião foi difundida abertamente em redes sociais, e não em periódicos acadêmicos." }
+    ],
+    detailedExplanation: {
+      summary: "O argumento de autoridade legítimo (como o Trecho 1) sustenta-se na qualificação técnica, no consenso de pares e em pesquisas consolidadas. O apelo indevido à autoridade (ad verecundiam, Trecho 2) transfere o prestígio de alguém em uma área (atuação/cinema) para emitir vereditos falsos em outra área sem domínio de competência (imunologia/medicina).",
+      stepByStep: [
+        "1. No Trecho 1: IPCC, mais de 800 climatologistas, literatura científica revisada por pares -> autoridade epistêmica legítima.",
+        "2. No Trecho 2: Celebridade/ator opinando sobre vacinas -> notoriedade pública usada indevidamente como aval científico.",
+        "3. Conceito retórico: Falácia *ad verecundiam* é o recurso à reputação ou fama de alguém para legitimar teses fora de sua especialidade.",
+        "4. Conclusão: A alternativa (a) explicita exatamente a ausência de competência biomédica revisada por pares."
+      ],
+      coreConcept: "Argumento de Autoridade vs Falácia Ad Verecundiam",
+      trapWarning: "No ENEM: Nem todo argumento de autoridade é falácia! É legítimo quando a autoridade é especialista no assunto tratado e reflete consensos metodológicos."
+    },
+    commonTraps: [
+      "Achar que todo argumento que cita pessoas conhecidas é necessariamente falso",
+      "Confundir fama popular com autoridade técnico-científica legítima"
+    ],
+    tags: ["argumento-de-autoridade", "ad-verecundiam", "retorica", "comunicacao", "falacias"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-023",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Argumentação e Retórica",
+    subtopic: "Estratégia de Concessão Argumentativa e Contraposição Dialética",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de um editorial opinativo sobre a transição para fontes limpas de energia:\n'Embora seja inegável que a substituição progressiva dos combustíveis fósseis por matrizes renováveis envolva custos financeiros iniciais vultosos e reestruturações complexas nos complexos industriais, postergar essa transição acarretará desastres ecológicos e prejuízos econômicos incomparavelmente mais devastadores a médio e longo prazos. Desse modo, o investimento precoce em energias solar e eólica constitui o único caminho prudente e sustentável.'",
+      source: "Revista de Economia Ecológica e Sustentabilidade"
+    },
+    prompt: "No fragmento apresentado, o articulista emprega a estratégia da concessão argumentativa ('Embora seja inegável...') com a finalidade retórica de:",
+    options: [
+      { id: "a", text: "reconhecer previamente uma dificuldade real apontada pelos opositores para, em seguida, neutralizá-la e demonstrar a superioridade do seu ponto de vista principal.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "desistir da defesa da energia renovável em razão dos custos elevados que inviabilizam o progresso industrial.", isCorrect: false, distractorRationale: "O autor não desiste; pelo contrário, reforça que postergar a transição gerará prejuízos ainda maiores." },
+      { id: "c", text: "comprovar que os combustíveis fósseis não produzem dióxido de carbono nem interferem no balanço térmico.", isCorrect: false, distractorRationale: "O texto reconhece a urgência climática e defende o abandono progressivo dos combustíveis fósseis." },
+      { id: "d", text: "atacar pessoalmente os empresários do setor energético por meio de recursos de desqualificação moral.", isCorrect: false, distractorRationale: "Não há ataque pessoal (ad hominem), mas debate racional de custos versus benefícios futuros." },
+      { id: "e", text: "negar a legitimidade dos cálculos econômicos no planejamento de políticas públicas estatais.", isCorrect: false, distractorRationale: "O autor utiliza justamente argumentos econômicos de longo prazo para validar sua tese." }
+    ],
+    detailedExplanation: {
+      summary: "A concessão argumentativa é uma das técnicas mais eficazes na dissertação do ENEM e no debate acadêmico: o autor concede temporariamente um ponto ao opositor ('Embora envolva custos vultosos...') para mostrar honestidade intelectual, mas rebate imediatamente com um argumento de peso esmagador ('postergar acarretará desastres ainda maiores').",
+      stepByStep: [
+        "1. Identificação do operador concessivo: 'Embora...', 'Conquanto...', 'Não obstante...'.",
+        "2. Identificação da concessão: Reconhecimento de que os custos iniciais das fontes renováveis são elevados.",
+        "3. Identificação do contra-ataque retórico: O custo da inação climática é infinitamente maior e catastrófico.",
+        "4. Efeito persuasivo: O enunciador ganha credibilidade perante o leitor por demonstrar maturidade e ponderação, desarmando antecipadamente as objeções contrárias."
+      ],
+      coreConcept: "Concessão Argumentativa e Contra-argumentação",
+      trapWarning: "Na redação do ENEM, usar operadores concessivos demonstra domínio avançado de autoria e projeto de texto (Competência 3 e 4)."
+    },
+    commonTraps: [
+      "Achar que fazer concessão enfraquece a tese (na verdade, ela fortalece ao antecipar e refutar críticas)",
+      "Confundir concessão com contradição interna"
+    ],
+    tags: ["concessao-argumentativa", "dialetica", "operadores-argumentativos", "redacao-enem", "retorica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-024",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Argumentação e Retórica",
+    subtopic: "Falácia do Espantalho (Straw Man) no Debate Público",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Observe o diálogo travado em uma audiência pública sobre transporte coletivo:\nDebatedor A: 'Precisamos ampliar ciclovias estruturadas e faixas exclusivas de ônibus nos corredores metropolitanos para reduzir o tráfego de automóveis individuais e os poluentes.'\nDebatedor B: 'O que o senhor está propondo é confiscar os carros de todas as famílias e forçar idosos e doentes a pedalar 30 quilômetros sob tempestades. Essa ideia é um absurdo tirânico e deve ser rejeitada!'",
+      source: "Comunicação Política e Análise dos Vícios de Argumentação"
+    },
+    prompt: "A intervenção do Debatedor B exemplifica a falácia do 'espantalho' (ou homem de palha) porque consiste em:",
+    options: [
+      { id: "a", text: "distorcer e exagerar caricaturalmente a proposta original do oponente, criando uma versão absurda e fácil de atacar que jamais foi defendida por ele.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "concordar integralmente com a ampliação de linhas de metrô e ciclovias em horários de pico.", isCorrect: false, distractorRationale: "O Debatedor B rejeita agressivamente a fala de A, sem demonstrar concordância." },
+      { id: "c", text: "citar estatísticas de engenharia de tráfego que demonstram a fluidez do tráfego rodoviário.", isCorrect: false, distractorRationale: "Não há estatísticas nem dados de engenharia de tráfego na resposta do Debatedor B." },
+      { id: "d", text: "utilizar a lógica matemática dedutiva para demonstrar a inviabilidade financeira dos semáforos.", isCorrect: false, distractorRationale: "A resposta recorre a hipérboles emotivas infundadas, e não a cálculos matemáticos dedutivos." },
+      { id: "e", text: "fazer um elogio sincero à habilidade física e esportiva da população idosa.", isCorrect: false, distractorRationale: "O enunciador vitimiza a população idosa como recurso retórico de comoção social." }
+    ],
+    detailedExplanation: {
+      summary: "A falácia do espantalho (straw man) ocorre quando um debatedor substitui a posição real do adversário por uma versão deturpada, extremada ou simplista, atacando essa cópia frágil (o 'espantalho') em vez da proposta concreta apresentada.",
+      stepByStep: [
+        "1. Proposta original (A): Faixas de ônibus e ciclovias para atenuar o trânsito e emissões de poluentes.",
+        "2. Versão deturpada por B: 'Confiscar carros de todas as famílias e forçar idosos a pedalar 30 km sob chuva'.",
+        "3. Análise crítica: Debatedor A jamais propôs confisco de automóveis nem pedaladas compulsórias para vulneráveis.",
+        "4. Conclusão: Ao inventar uma farsa indefensável, B tenta derrotar A de maneira desleal perante a plateia."
+      ],
+      coreConcept: "Falácia do Espantalho (Straw Man Argument)",
+      trapWarning: "No ENEM: A falácia do espantalho é um dos recursos mais comuns na desinformação e em discursos polarizados. Identifique se o interlocutor está respondendo ao que foi dito ou a uma caricatura inventada."
+    },
+    commonTraps: [
+      "Confundir contra-argumentação legítima com deformação deliberada das ideias do outro",
+      "Ser seduzido pela veemência emocional do atacante sem avaliar a fidelidade ao texto original"
+    ],
+    tags: ["falacia-do-espantalho", "straw-man", "debate-publico", "etica-argumentativa", "retorica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-025",
+    area: "linguagens",
+    competence: 7,
+    skill: 24,
+    topic: "Argumentação e Retórica",
+    subtopic: "Modalizadores Discursivos e Marcas de Posicionamento Argumentativo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as duas formulações a respeito do mesmo acontecimento econômico:\n\nEnunciado 1: 'O novo pacote fiscal supostamente equilibrará as contas públicas no próximo semestre.'\nEnunciado 2: 'O novo pacote fiscal indubitavelmente equilibrará as contas públicas no próximo semestre.'\n\nEm linguística e análise textual, advérbios como 'supostamente' e 'indubitavelmente' funcionam como moduladores discursivos (ou modalizadores epistêmicos).",
+      source: "Semântica Argumentativa e Análise do Discurso Contemporâneo"
+    },
+    prompt: "A comparação entre os dois enunciados revela que os modalizadores empregados exercem a função de:",
+    options: [
+      { id: "a", text: "evidenciar graus opostos de comprometimento e certeza do locutor em relação à verdade do fato anunciado, expressando desconfiança/distanciamento no Enunciado 1 e convicção inabalável no Enunciado 2.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "alterar o tempo verbal da oração de futuro do presente para pretérito imperfeito do subjuntivo.", isCorrect: false, distractorRationale: "O tempo verbal 'equilibrará' permaneceu idêntico nos dois enunciados (futuro do presente do indicativo)." },
+      { id: "c", text: "eliminar a função conativa do discurso para transformá-lo exclusivamente em metalinguagem de dicionário.", isCorrect: false, distractorRationale: "Não se trata de metalinguagem nem de definição dicionarizada; trata-se de argumentação política/econômica." },
+      { id: "d", text: "indicar que o autor é analfabeto funcional incapaz de empregar a norma culta da língua portuguesa.", isCorrect: false, distractorRationale: "Distrator preconceituoso e inverídico; os termos são recursos formais cultos e sofisticados." },
+      { id: "e", text: "garantir que ambos os textos possuem absoluta neutralidade jornalística isenta de qualquer posicionamento.", isCorrect: false, distractorRationale: "Pelo contrário, modalizadores são as marcas mais claras de que a linguagem NÃO é neutra." }
+    ],
+    detailedExplanation: {
+      summary: "Modalizadores epistêmicos são palavras ou expressões pelas quais o locutor manifesta sua atitude perante o conteúdo do enunciado. 'Supostamente' instaura dúvida, ironia ou afastamento ('alguém diz isso, mas eu não endosso'); já 'indubitavelmente' imprime máxima certeza e força assertiva ao argumento.",
+      stepByStep: [
+        "1. No Enunciado 1: 'supostamente' expressa incerteza, reserva epistêmica ou desconfiança sobre a eficácia do pacote fiscal.",
+        "2. No Enunciado 2: 'indubitavelmente' expressa certeza categórica, adesão plena e ênfase assertiva.",
+        "3. Efeito de sentido: A escolha lexical modula a credibilidade da informação e condiciona a interpretação do leitor.",
+        "4. Conclusão: A alternativa (a) descreve com exatidão como os modalizadores definem o grau de comprometimento do locutor com a verdade."
+      ],
+      coreConcept: "Modalizadores Discursivos e Marcas de Subjetividade Textual",
+      trapWarning: "No ENEM: Questões de Linguagens adoram cobrar modalizadores (advérbios, locuções adverbiais, verbos modais como 'pode/deve'). Eles revelam a ideologia e o posicionamento implícito do autor por trás de uma aparente neutralidade."
+    },
+    commonTraps: [
+      "Acreditar que advérbios exercem apenas função sintática acessória sem carga persuasiva",
+      "Ignorar que palavras como 'supostamente', 'talvez', 'certamente' alteram radicalmente o tom do texto"
+    ],
+    tags: ["modalizadores-discursivos", "marcas-de-autoria", "semantica-argumentativa", "linguagens-enem", "retorica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
-
