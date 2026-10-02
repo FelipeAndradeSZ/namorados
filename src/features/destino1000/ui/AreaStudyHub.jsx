@@ -23,9 +23,9 @@ import { FlashcardDeck } from "./FlashcardDeck";
 // Mapeamento dos módulos de questões por área do ENEM
 const AREA_TOPICS = {
   natureza: [
-    { id: "natureza/ecologia", name: "Ecologia e Dinâmica Ambiental", tag: "Biologia", priority: "Crítica • Top 1", questionsCount: 10 },
+    { id: "natureza/ecologia", name: "Ecologia e Dinâmica Ambiental", tag: "Biologia", priority: "Crítica • Top 1", questionsCount: 20 },
     { id: "natureza/citologia", name: "Citologia e Metabolismo Energético", tag: "Biologia", priority: "Crítica • Top Medicina", questionsCount: 10 },
-    { id: "natureza/eletricidade", name: "Eletrodinâmica e Circuitos", tag: "Física", priority: "Alta • Cai Todo Ano", questionsCount: 10 },
+    { id: "natureza/eletricidade", name: "Eletrodinâmica e Circuitos", tag: "Física", priority: "Alta • Cai Todo Ano", questionsCount: 20 },
     { id: "natureza/ondulatoria", name: "Ondulatória, Acústica e Óptica", tag: "Física", priority: "Crítica • V = λ·f", questionsCount: 10 },
     { id: "natureza/termologia", name: "Termologia, Calorimetria e Dilatação", tag: "Física", priority: "Alta • Trocas Térmicas", questionsCount: 10 },
     { id: "natureza/estequiometria", name: "Estequiometria e Cálculos Químicos", tag: "Química", priority: "Alta • Ouro da TRI", questionsCount: 10 },
@@ -42,7 +42,7 @@ const AREA_TOPICS = {
     { id: "matematica/estatistica", name: "Estatística (Médias, Mediana, Moda)", tag: "Estatística", priority: "Crítica • Acerto Obrigatório", questionsCount: 15 },
     { id: "matematica/geometria", name: "Geometria Espacial e Plana", tag: "Geometria", priority: "Alta • Projeções e Volumes", questionsCount: 15 },
     { id: "matematica/geometria-analitica", name: "Geometria Analítica e Retas", tag: "Geometria", priority: "Alta • Coordenadas e Cônicas", questionsCount: 10 },
-    { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 10 },
+    { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 20 },
     { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 10 },
     { id: "matematica/probabilidade", name: "Probabilidade e Análise Combinatória", tag: "Combinatória", priority: "Média-Alta", questionsCount: 10 },
   ],
@@ -54,13 +54,13 @@ const AREA_TOPICS = {
     { id: "humanas/sociologia-filosofia", name: "Sociologia e Filosofia Contemporânea", tag: "Sociologia", priority: "Alta • Útil para Redação", questionsCount: 10 },
     { id: "humanas/brasil-colonial", name: "Brasil Colonial: Economia e Escravidão", tag: "História", priority: "Alta", questionsCount: 10 },
     { id: "humanas/meio-ambiente", name: "Biomas Brasileiros e Impactos Antrópicos", tag: "Geografia", priority: "Alta", questionsCount: 10 },
-    { id: "humanas/era-vargas-populismo", name: "Era Vargas, CLT e Populismo", tag: "História", priority: "Crítica • Muito Cobrado", questionsCount: 10 },
+    { id: "humanas/era-vargas-populismo", name: "Era Vargas, CLT e Populismo", tag: "História", priority: "Crítica • Muito Cobrado", questionsCount: 20 },
     { id: "humanas/geografia-fisica-clima", name: "Climatologia, Relevo e Domínios Naturais", tag: "Geografia", priority: "Alta • Aziz Ab'Sáber", questionsCount: 10 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 10 },
     { id: "linguagens/literatura", name: "Literatura Brasileira e Modernismo", tag: "Literatura", priority: "Alta • Semana de 22 e Fase 30", questionsCount: 10 },
-    { id: "linguagens/argumentacao", name: "Argumentação e Recursos Persuasivos", tag: "Argumentação", priority: "Alta", questionsCount: 10 },
+    { id: "linguagens/argumentacao", name: "Argumentação e Recursos Persuasivos", tag: "Argumentação", priority: "Alta", questionsCount: 20 },
     { id: "linguagens/vanguardas-artes", name: "Vanguardas Europeias e Artes Visuais", tag: "Artes", priority: "Alta • Modernismo e Ruptura", questionsCount: 10 },
     { id: "linguagens/generos", name: "Gêneros Textuais e Esferas de Circulação", tag: "Gêneros", priority: "Alta", questionsCount: 10 },
     { id: "linguagens/recursos-linguisticos", name: "Recursos da Língua e Variação Linguística", tag: "Gramática", priority: "Média-Alta", questionsCount: 10 },

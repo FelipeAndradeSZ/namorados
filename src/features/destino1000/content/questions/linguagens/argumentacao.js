@@ -648,5 +648,441 @@ export const QUESTIONS_ARGUMENTACAO = [
     status: "published",
     version: 2,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-011",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Argumentação e Retórica",
+    subtopic: "Falácia do Espantalho no Debate Público",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No calor dos debates em redes sociais, é frequente que um debatedor reformule a fala do adversário de maneira grosseiramente distorcida, caricatural ou extremada, para então atacar e demolir com facilidade essa versão caricata que nunca foi dita pelo oponente. Na retórica e na teoria da argumentação, essa manobra desonesta é denominada 'Falácia do Espantalho'.",
+      source: "Lógica Informal e Falácias Argumentativas - Douglas Walton"
+    },
+    prompt: "A manobra retórica do 'espantalho' compromete a qualidade do debate público porque:",
+    options: [
+      { id: "a", text: "evita o enfrentamento honesto das ideias reais do interlocutor, substituindo-as por uma versão deliberadamente enfraquecida e fácil de ridicularizar.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "utiliza vocabulário erudito que impede a compreensão por pessoas de baixa escolaridade.", isCorrect: false, distractorRationale: "A falácia independe de linguagem erudita; seu problema reside na desonestidade de distorção de premissas." },
+      { id: "c", text: "obriga os debatedores a assinar acordos diplomáticos vinculantes na Justiça Federal.", isCorrect: false, distractorRationale: "Debates em redes sociais não constituem processos judiciais formais." },
+      { id: "d", text: "impede o uso de metáforas literárias em qualquer tipo de texto dissertativo.", isCorrect: false, distractorRationale: "Metáforas continuam sendo recursos estilísticos válidos e legítimos." },
+      { id: "e", text: "garante a vitória irrefutável e permanente daquele que praticou a distorção lógica.", isCorrect: false, distractorRationale: "Para quem domina o pensamento crítico, a falácia é facilmente desmascarada como sinal de fraqueza argumentativa." }
+    ],
+    detailedExplanation: {
+      summary: "Construir um 'espantalho' consiste em inventar uma caricatura da tese oposta. Por ser uma caricatura frágil (como um boneco de palha), o debatedor consegue 'destruí-la' facilmente, enganando a plateia desatenta.",
+      stepByStep: [
+        "1. Identificar o artifício: Debatedor A diz que 'devemos fiscalizar melhor os contratos públicos de merenda'. Debatedor B acusa: 'Veja só, ele quer que as crianças passem fome!'.",
+        "2. Análise lógica: Debatedor B nunca respondeu sobre a fiscalização; ele criou um espantalho ('quer que as crianças passem fome') para gerar repulsa moral na audiência.",
+        "3. Efeito no debate: anula o diálogo substantivo e alimenta a histeria e polarização cega."
+      ],
+      coreConcept: "Falácia do Espantalho (Straw Man Fallacy) e Desonestidade Intelectual",
+      trapWarning: "No ENEM: Se o texto descreve alguém distorcendo o que o outro disse para fazer parecer absurdo -> FALÁCIA DO ESPANTALHO."
+    },
+    commonTraps: [
+      "Confundir Falácia do Espantalho com Ad Hominem (ataque à pessoa)",
+      "Achar que toda simplificação é necessariamente uma falácia do espantalho"
+    ],
+    tags: ["argumentacao", "falacias", "espantalho", "retorica", "debate-publico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-012",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Argumentação e Retórica",
+    subtopic: "Argumento de Autoridade Legítimo vs Falácia Ad Verecundiam",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O recurso à autoridade é comum e necessário em textos argumentativos e científicos. No entanto, para que o argumento de autoridade seja epistemicamente legítimo, o perito citado deve possuir especialização reconhecida na área temática em discussão. Citar a opinião pessoal de um consagrado físico nuclear sobre a melhor metodologia pedagógica de alfabetização infantil constitui, em lógica, um apelo indevido à autoridade (Argumentum ad Verecundiam).",
+      source: "Manual de Argumentação Científica e Filosofia da Ciência"
+    },
+    prompt: "De acordo com o texto, a legitimidade de um argumento de autoridade decorre primordialmente da:",
+    options: [
+      { id: "a", text: "pertinência temática direta entre a especialidade comprovada do especialista e o assunto sob deliberação.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "quantidade de seguidores e curtidas que a personalidade possui em redes sociais.", isCorrect: false, distractorRationale: "Popularidade virtual não confere autoridade epistemológica ou científica." },
+      { id: "c", text: "idade avançada da personalidade citada na data de publicação do ensaio.", isCorrect: false, distractorRationale: "Idade biológica não é garantia de expertise metodológica." },
+      { id: "d", text: "ausência total de contraditório ou de outras fontes no corpo do texto.", isCorrect: false, distractorRationale: "A boa prática acadêmica incentiva a pluralidade de perspectivas e o cotejo crítico de fontes." },
+      { id: "e", text: "imposição da tese como verdade divina incontestável sem necessidade de justificativas.", isCorrect: false, distractorRationale: "Dogmatismo religioso é o oposto do raciocínio argumentativo crítico." }
+    ],
+    detailedExplanation: {
+      summary: "Um argumento de autoridade só é válido se a autoridade for legítima NAQUELE campo do saber. Notoriedade em uma área (ex.: física quântica ou futebol) não se transfere automaticamente para outra (ex.: pedagogia infantil ou vacinologia).",
+      stepByStep: [
+        "1. Argumento de Autoridade Legítimo: Fiocruz e OMS falando sobre imunização; linguistas falando sobre variação dialetal.",
+        "2. Falácia ad verecundiam: usar o prestígio de um Nobel de Química para opinar sobre economia agrária ou filosofia moral.",
+        "3. Critério de validação do ENEM: Pertinência + Legitimidade + Produtividade da autoridade citada."
+      ],
+      coreConcept: "Argumento de Autoridade Legítimo vs. Falácia Ad Verecundiam",
+      trapWarning: "No ENEM e na redação nota 1000: Use repertórios legitimados que dialoguem com a área do problema abordado!"
+    },
+    commonTraps: [
+      "Achar que qualquer pessoa famosa serve como argumento de autoridade para qualquer assunto",
+      "Confundir fama com competência técnica científica"
+    ],
+    tags: ["argumento-de-autoridade", "ad-verecundiam", "repertorio-sociocultural", "logica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-013",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Argumentação e Retórica",
+    subtopic: "Relação de Causa e Efeito vs Correlação Ilusória",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um estudo demonstrou que cidades com maior número de igrejas são exatamente as mesmas cidades que registram maior número de acidentes automobilísticos ao longo do ano. Um articulista desavisado concluiu precipitadamente que frequentar cerimônias religiosas prejudica os reflexos dos motoristas no trânsito, cometendo a clássica falácia da falsa causa (cum hoc ergo propter hoc).",
+      source: "Estatística sem Mistérios e Pensamento Crítico"
+    },
+    prompt: "O erro lógico fundamental cometido na conclusão do articulista consiste em:",
+    options: [
+      { id: "a", text: "confundir uma mera correlação estatística entre duas variáveis com uma relação de causa e efeito, ignorando a variável oculta comum subjacente (o tamanho da população urbana da cidade).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "utilizar dados numéricos oriundos de recenseamentos demográficos oficiais de alta precisão.", isCorrect: false, distractorRationale: "O problema não está na precisão dos números coletados, mas na dedução causal equivocada tirada a partir deles." },
+      { id: "c", text: "negar a existência de semáforos e faixas de pedestres nas avenidas metropolitanas.", isCorrect: false, distractorRationale: "Distrator tangencial sem relação com o raciocínio epistemológico do texto." },
+      { id: "d", text: "afirmar que acidentes de trânsito dependem exclusivamente de condições climáticas adversas.", isCorrect: false, distractorRationale: "Não é essa a afirmação nem a falácia descrita no texto." },
+      { id: "e", text: "presumir que a religiosidade é incompatível com qualquer tipo de transporte mecanizado.", isCorrect: false, distractorRationale: "Distrator caricato." }
+    ],
+    detailedExplanation: {
+      summary: "Correlação não implica causalidade! Cidades mais populosas têm naturalmente mais igrejas, mais padarias, mais escolas E mais acidentes de trânsito. A causa comum de ambos os números altos é o TAMANHO DA POPULAÇÃO.",
+      stepByStep: [
+        "1. Premissa empírica: Há correlação positiva entre número de igrejas e número de batidas de carro.",
+        "2. Erro causal: Supor que ir à igreja causa batidas (ou que batidas causam idas à igreja).",
+        "3. Variável de confusão (terceira variável): O tamanho da cidade! Em cidades com 10 milhões de habitantes há muitas igrejas e muitos carros; em cidades de 5 mil habitantes há poucas igrejas e pouquíssimos acidentes.",
+        "4. Princípio científico: 'Correlação não prova causalidade'."
+      ],
+      coreConcept: "Correlação vs. Causalidade e a Falácia da Falsa Causa",
+      trapWarning: "No ENEM: Questões que confrontam dois gráficos e perguntam se o fenômeno A causou B cobram exatamente a distinção entre correlação estatística e nexo causal real."
+    },
+    commonTraps: [
+      "Acreditar que se duas coisas aumentam juntas no gráfico, uma necessariamente causou a outra",
+      "Ignorar variáveis intervenientes ocultas em dados sociais"
+    ],
+    tags: ["falsa-causa", "correlacao-causalidade", "pensamento-critico", "interpretacao-graficos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-014",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Argumentação e Retórica",
+    subtopic: "A Estratégia de Concessão Argumentativa e Operadores Concessivos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de um ensaio acadêmico:\n'Conquanto os investimentos governamentais em inteligência artificial tenham crescido expressivamente no último biênio, a ausência de marcos regulatórios transparentes e de treinamento ético continuado mantém a administração pública vulnerável a vieses algorítmicos discriminatórios.'",
+      source: "Ensaio sobre Ética e Inteligência Artificial no Setor Público"
+    },
+    prompt: "Ao empregar o operador argumentativo concessivo 'Conquanto' na oração inicial, o autor do texto adota a estratégia retórica de:",
+    options: [
+      { id: "a", text: "fazer uma concessão tática ao admitir temporariamente um ponto positivo, apenas para enfraquecê-lo diante da tese principal mais crítica apresentada na oração independente.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "declarar que os investimentos tecnológicos são irrelevantes e devem ser imediatamente congelados.", isCorrect: false, distractorRationale: "O texto admite expressamente que os investimentos cresceram, não pedindo seu congelamento." },
+      { id: "c", text: "introduzir uma explicação biográfica irrelevante sobre a formação dos programadores de software.", isCorrect: false, distractorRationale: "Não há menção biográfica no trecho." },
+      { id: "d", text: "estabelecer uma relação de estrita dependência cronológica onde uma ação só ocorre após o término da outra.", isCorrect: false, distractorRationale: "'Conquanto' é conjunção subordinativa concessiva, e não temporal (como 'depois que' ou 'quando')." },
+      { id: "e", text: "restringir o público-alvo do ensaio exclusivamente a cientistas da computação com pós-doutorado.", isCorrect: false, distractorRationale: "O texto tem linguagem argumentativa formal acessível ao leitor culto geral." }
+    ],
+    detailedExplanation: {
+      summary: "A concessão argumentativa é uma jogada de xadrez discursiva: o autor antecipa o contra-argumento do oponente ('os investimentos cresceram!'), concorda parcialmente com ele, mas mostra que o problema estrutural ('ausência de marcos éticos') é mais grave e preponderante.",
+      stepByStep: [
+        "1. Operador: 'Conquanto' = embora, ainda que, a despeito de (valor concessivo).",
+        "2. Dinâmica discursiva: a oração concessiva cede um ponto secundário.",
+        "3. Força argumentativa: a oração principal ('a ausência de marcos... mantém vulnerável') é a que prevalece no raciocínio e ancora a tese do autor.",
+        "4. Vantagem retórica: quem faz concessões parece equilibrado, razoável e maduro, aumentando seu poder de convencimento."
+      ],
+      coreConcept: "Concessão Argumentativa e Operadores Concessivos no ENEM",
+      trapWarning: "Atenção: A ideia que tem maior peso argumentativo é SEMPRE a que fica na oração principal, e não na oração introduzida pela conjunção concessiva!"
+    },
+    commonTraps: [
+      "Achar que o autor concorda integralmente com a ideia contida na oração concessiva",
+      "Confundir valor concessivo com valor conclusivo ou causal"
+    ],
+    tags: ["concessao-argumentativa", "conquanto", "coesao-textual", "operadores-argumentativos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-015",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Argumentação e Retórica",
+    subtopic: "Redução ao Absurdo (Reductio ad Absurdum)",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em debate sobre a instalação de radares eletrônicos e limites de velocidade nas cidades, um crítico afirmou que qualquer limite imposto pelo poder público é uma violação inaceitável da liberdade individual de locomoção. O articulista rebateu: 'Se aceitarmos a premissa de que qualquer regra de velocidade atenta contra a liberdade individual, deveríamos, pela mesma lógica, autorizar que motoristas transitem a 140 km/h sobre as calçadas em frente a creches escolares, já que qualquer proibição constituiria tirania estatal.'",
+      source: "Artigo de Opinião e Filosofia do Direito Urbano"
+    },
+    prompt: "O método de refutação empregado pelo articulista para desconstruir o posicionamento do oponente é conhecido como:",
+    options: [
+      { id: "a", text: "redução ao absurdo, técnica que aceita provisoriamente a tese do adversário para demonstrar que seus desdobramentos lógicos extremos levam a uma contradição insustentável.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "apelo à comoção infantil com finalidade meramente demagógica e sem fundamento racional.", isCorrect: false, distractorRationale: "O exemplo da creche não é mera pieguice, mas a demonstração do absurdo de suprimir regras de trânsito." },
+      { id: "c", text: "censura prévia compulsória ao direito de livre manifestação do pensamento.", isCorrect: false, distractorRationale: "O debate ocorre no campo das ideias e argumentos, sem nenhuma censura jurídica." },
+      { id: "d", text: "falácia ad hominem mediante insultos verbais diretos à moral privada do debatedor.", isCorrect: false, distractorRationale: "O articulista não atacou a pessoa do oponente, atacou a consequência lógica de sua tese." },
+      { id: "e", text: "generalização indutiva fundamentada em levantamentos métricos de velocidade média.", isCorrect: false, distractorRationale: "Não houve levantamento empírico estatístico no argumento." }
+    ],
+    detailedExplanation: {
+      summary: "A Redução ao Absurdo (reductio ad absurdum) é uma das armas mais elegantes da lógica dedutiva. Você diz: 'Vamos fingir que você está certo. Onde essa lógica nos levaria? A carros a 140 km/h na calçada. Como essa conclusão é manifestamente absurda, a sua premissa original só pode estar errada.'",
+      stepByStep: [
+        "1. Premissa do oponente: 'Regras de velocidade violam a liberdade e não devem existir'.",
+        "2. Aplicação extrema da premissa: sem regras de velocidade, dirigir na calçada em alta velocidade seria lícito.",
+        "3. Conclusão da aplicação: isso é moralmente e civicamente inaceitável.",
+        "4. Desfecho lógico: como a consequência é absurda, a tese que a originou deve ser rejeitada."
+      ],
+      coreConcept: "Argumento por Redução ao Absurdo (Reductio ad Absurdum)",
+      trapWarning: "No ENEM: Quando um autor aceita a lógica do oponente apenas para mostrar que ela gera um monstro conceitual inaceitável -> REDUÇÃO AO ABSURDO."
+    },
+    commonTraps: [
+      "Confundir redução ao absurdo com ataque pessoal (ad hominem)",
+      "Achar que o autor realmente defende o exemplo absurdo que usou como ilustração"
+    ],
+    tags: ["reducao-ao-absurdo", "logica-dedutiva", "refutacao", "artigo-de-opiniao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-016",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Argumentação e Retórica",
+    subtopic: "A Falácia do Falso Dilema na Retórica Política",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em discursos populistas ou de propaganda polarizadora, enunciados como 'Ou você apoia integralmente e sem ressalvas as nossas medidas econômicas, ou você torce pelo colapso do país e é um inimigo do povo' são recorrentes. Essa estratégia discursiva reduz artificialmente um espectro complexo e plural de soluções viáveis a apenas duas alternativas extremas e excludentes.",
+      source: "Retórica e Desinformação Política - Ensaios de Comunicação"
+    },
+    prompt: "O artifício argumentativo descrito no texto caracteriza a falácia do Falso Dilema porque ele:",
+    options: [
+      { id: "a", text: "elimina arbitrariamente as nuances, caminhos intermediários e propostas alternativas legítimas, coagindo o interlocutor a uma escolha binária forçada.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "obriga os parlamentares a votar leis exclusivamente por voto aberto e nominal.", isCorrect: false, distractorRationale: "Distrator de procedimento parlamentar sem relação com a figura de pensamento." },
+      { id: "c", text: "se fundamenta na leitura atenta de pareceres técnicos emitidos pelo Tribunal de Contas da União.", isCorrect: false, distractorRationale: "O falso dilema é uma manobra retórica emocional, não uma análise técnica." },
+      { id: "d", text: "demonstra matematicamente a inviabilidade de todas as economias mistas de mercado.", isCorrect: false, distractorRationale: "Não há demonstração matemática no discurso polarizador." },
+      { id: "e", text: "incentiva o pensamento plural e o respeito incondicional às discordâncias democráticas.", isCorrect: false, distractorRationale: "O falso dilema busca exatamente aniquilar o pensamento plural e o debate democrático." }
+    ],
+    detailedExplanation: {
+      summary: "O Falso Dilema (ou Falsa Dicotomia) é o 'ou 8 ou 80' da retórica. A realidade quase sempre oferece dezenas de alternativas intermediárias (opções C, D, E), mas o manipulador finge que só existem a sua opção (supostamente virtuosa) e uma opção horrível (para assustar o ouvinte).",
+      stepByStep: [
+        "1. Estrutura do falso dilema: 'Ou A (minha proposta) ou B (o caos absoluto)'.",
+        "2. Vício lógico: esconder propositalmente que existem dezenas de alternativas moderadas ou aprimoradas entre A e B.",
+        "3. Finalidade política: anular o debate crítico e forçar a adesão passiva através do medo e da chantagem moral."
+      ],
+      coreConcept: "Falso Dilema (Falsa Dicotomia) e Polarização Discursiva",
+      trapWarning: "No ENEM: Frases iniciadas por 'Ou você está conosco, ou está contra nós' são o modelo clássico do falso dilema."
+    },
+    commonTraps: [
+      "Achar que todo dilema é falso (dilemas genuínos ocorrem quando realmente só há duas possibilidades lógicas, como vivo ou morto)",
+      "Não perceber que na vida social e política quase sempre existem múltiplos caminhos intermediários"
+    ],
+    tags: ["falso-dilema", "falsa-dicotomia", "polarizacao", "retorica-politica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-017",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Argumentação e Retórica",
+    subtopic: "A Ironia como Recurso Argumentativo Crítico",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na crônica machadiana, o narrador observa o desfile pomposo da nobreza escravocrata do século XIX e comenta com fingida ingenuidade: 'Que admirável ordem social a nossa! Onde os homens de bem desfrutam do descanso merecido à sombra dos cafezais, enquanto seus fiéis cativos, generosamente acolhidos do desamparo da África, exercitam com vigor a virtude do labor sem se queixarem do cansaço das correntes.'",
+      source: "Crônicas Escolhidas - Machado de Assis (comentadas)"
+    },
+    prompt: "No excerto, a ironia funciona como poderoso recurso argumentativo porque ela:",
+    options: [
+      { id: "a", text: "afirma na superfície verbal o oposto do que realmente pretende comunicar, gerando cumplicidade com o leitor para desmascarar a crueldade e o cinismo da hipocrisia escravocrata.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "faz o elogio sincero e entusiasmado do regime escravista como modelo humanitário de caridade social.", isCorrect: false, distractorRationale: "Machado de Assis utiliza o humor cáustico e a ironia para condenar a escravidão, e não para elogiá-la." },
+      { id: "c", text: "apresenta dados demográficos objetivos sem nenhuma tonalidade emocional ou julgamento de valor.", isCorrect: false, distractorRationale: "O texto é eminentemente subjetivo, literário e carregado de juízo de valor implícito." },
+      { id: "d", text: "recomenda expressamente a ampliação do comércio transatlântico de africanos escravizados.", isCorrect: false, distractorRationale: "Leitura literal ingênua que ignora o sarcasmo do autor." },
+      { id: "e", text: "confunde o leitor ao adotar termos científicos de química e botânica agrícola.", isCorrect: false, distractorRationale: "Não há termos de química ou botânica no excerto." }
+    ],
+    detailedExplanation: {
+      summary: "A ironia consiste em enunciar algo esperando que o interlocutor perceba a inadequação manifesta entre o sentido literal e o sentido pretendido (antiphrasis). Ao chamar a violência do chicote de 'virtude do labor', Machado expõe a sordidez moral da classe dominante.",
+      stepByStep: [
+        "1. Sentido literal: O narrador parece elogiar a nobreza e a escravidão ('admirável ordem', 'generosamente acolhidos').",
+        "2. Quebra de expectativa: O choque entre as palavras de caridade e a realidade brutal das correntes gera o estranhamento irônico.",
+        "3. Função persuasiva: A ironia machadiana ridiculariza o autoengano dos escravocratas de forma muito mais demolidora do que um discurso inflamado comum."
+      ],
+      coreConcept: "A Ironia como Estratégia Argumentativa e Crítica Social",
+      trapWarning: "Cuidado no ENEM: Ler Machado de Assis ao pé da letra é a armadilha número um! O sentido real do texto é quase sempre o avesso das palavras polidas do narrador."
+    },
+    commonTraps: [
+      "Fazer leitura literal ingênua de textos irônicos ou satíricos",
+      "Achar que ironia é sinônimo exclusivo de agressão ou piada boba"
+    ],
+    tags: ["ironia", "machado-de-assis", "critica-social", "recursos-expressivos", "literatura-enem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-018",
+    area: "linguagens",
+    competence: 7,
+    skill: 21,
+    topic: "Argumentação e Retórica",
+    subtopic: "Argumento por Analogia e Comparação Histórica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em editorial sobre a necessidade urgente de investimentos federais na transição para a matriz de energia limpa, um grande jornal sustentou:\n'Assim como as nações que lideraram a introdução das máquinas a vapor no século XVIII colheram mais de um século de primazia geopolítica e pujança industrial, o Brasil do século XXI, abençoado com sol e vento abundantes, terá seu futuro econômico definido pela coragem de liderar a infraestrutura do hidrogênio verde hoje, ou estará condenado ao atraso perpétuo dos espectadores passivos da história.'",
+      source: "Editorial Jornalístico sobre Transição Energética"
+    },
+    prompt: "A força persuasiva do trecho apoia-se principalmente no tipo de argumentação construído por:",
+    options: [
+      { id: "a", text: "analogia e paralelo histórico, que estabelece similitude funcional entre a pioneira Revolução Industrial passada e a atual corrida pela liderança nas energias limpas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "apelo à autoridade divina para justificar o destino místico da nação brasileira.", isCorrect: false, distractorRationale: "A menção poética a 'sol e vento abundantes' refere-se ao potencial geográfico natural, sem dogmatismo religioso." },
+      { id: "c", text: "falácia ad hominem desferida contra pesquisadores do setor de carvão mineral.", isCorrect: false, distractorRationale: "O texto não insulta pesquisadores ou pessoas específicas." },
+      { id: "d", text: "dedução silogística fechada comprovada por equações da termodinâmica clássica.", isCorrect: false, distractorRationale: "Não há equações físicas ou silogismo formal no editorial." },
+      { id: "e", text: "redução ao absurdo demonstrando a impossibilidade de gerar energia a partir do vento.", isCorrect: false, distractorRationale: "O texto defende a viabilidade da energia eólica e limpa." }
+    ],
+    detailedExplanation: {
+      summary: "O argumento por analogia (ou comparação histórica) projeta o aprendizado de um evento consagrado do passado (Revolução Industrial a vapor) sobre uma escolha crucial do presente (energia limpa), mostrando que a mesma lei de pioneirismo econômico se aplica a ambos.",
+      stepByStep: [
+        "1. Identificar o termo A (passado): Países pioneiros na energia a vapor -> colheram primazia e riqueza.",
+        "2. Identificar o termo B (presente): Países que liderarem a energia limpa -> colherão riqueza e futuro.",
+        "3. Conclusão da analogia: Portanto, o Brasil deve ser pioneiro na transição para o hidrogênio verde.",
+        "4. Validade da analogia: A correlação entre controle de matriz energética inovadora e desenvolvimento socioeconômico é historicamente sólida."
+      ],
+      coreConcept: "Argumento por Analogia e Comparação Histórica no ENEM",
+      trapWarning: "Para que o argumento por analogia seja válido, os elementos comparados devem compartilhar características estruturais essenciais e não apenas semelhanças superficiais."
+    },
+    commonTraps: [
+      "Confundir argumento por analogia com argumento por autoridade",
+      "Achar que comparar fatos históricos diferentes invalida o raciocínio"
+    ],
+    tags: ["analogia", "comparacao-historica", "editorial", "argumentacao", "energia-limpa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-019",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Argumentação e Retórica",
+    subtopic: "Apelo à Tradição (Ad Antiquitatem) vs Ética Racional",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em debates jurídicos sobre práticas que envolvem maus-tratos a animais ou discriminação secular de grupos sociais, defensores de tais costumes costumam argumentar que 'essa prática não pode ser banida porque é realizada há mais de trezentos anos por nossos antepassados e faz parte das tradições imutáveis de nossa terra'. Essa linha de sustentação é conhecida como falácia do Apelo à Tradição (Argumentum ad Antiquitatem).",
+      source: "Filosofia Moral e Teoria da Justiça - Ensaios Críticos"
+    },
+    prompt: "Do ponto de vista da ética argumentativa e dos direitos fundamentais, o apelo à tradição é insustentável porque:",
+    options: [
+      { id: "a", text: "a antiguidade temporal de um costume não confere a ele validade ética, jurídica ou moral intrínseca, uma vez que diversas práticas cruéis e discriminatórias foram perpetuadas historicamente por séculos antes de serem banidas pela razão.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "todas as práticas ancestrais do passado eram biologicamente inviáveis em virtude do clima quente.", isCorrect: false, distractorRationale: "Distrator estapafúrdio sem nexo com o debate ético e jurídico." },
+      { id: "c", text: "as tradições populares são proibidas por acordos de patentes industriais da União Europeia.", isCorrect: false, distractorRationale: "Tradições culturais não são patentes comerciais privadas." },
+      { id: "d", text: "os antepassados de qualquer nação não possuíam capacidade neurológica para articular linguagem verbal.", isCorrect: false, distractorRationale: "Afirmação historicamente e antropologicamente falsa." },
+      { id: "e", text: "qualquer lei votada no presente revoga retroativamente o nascimento de gerações anteriores.", isCorrect: false, distractorRationale: "A lei se aplica aos fatos presentes e futuros, não cancela a existência de ancestrais." }
+    ],
+    detailedExplanation: {
+      summary: "A longevidade de uma prática não a torna justa. A escravidão perdurou por milênios em dezenas de impérios; a queima de mulheres acusadas de bruxaria e a negação de direitos cívicos às mulheres foram 'tradições' por séculos. A legitimidade de uma conduta deve ser julgada pela razão, pela dignidade e pela justiça, e não pelo calendário.",
+      stepByStep: [
+        "1. Falácia ad antiquitatem: 'É bom / correto porque é antigo e tradicional'.",
+        "2. Desmonte lógico: Dizer que algo sempre foi feito assim não responde se algo DEVE continuar sendo feito assim (diferença entre o 'ser' e o 'dever ser' de David Hume).",
+        "3. Paradigma dos Direitos Humanos: Costumes culturais que violam a dignidade e os direitos humanos fundamentais não podem se sobrepor à ética e à legalidade republicana."
+      ],
+      coreConcept: "Falácia do Apelo à Tradição (Ad Antiquitatem) e Direitos Humanos",
+      trapWarning: "No ENEM: Se o argumento defende uma prática violenta ou discriminatória dizendo que 'sempre foi assim na cultura popular', trata-se de falácia de apelo à tradição que viola os Direitos Humanos."
+    },
+    commonTraps: [
+      "Confundir valorização do patrimônio cultural sadio com chancela a violações de direitos",
+      "Achar que tempo de existência equivale a correção moral"
+    ],
+    tags: ["apelo-a-tradicao", "ad-antiquitatem", "direitos-humanos", "falacias", "etica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ARG-020",
+    area: "linguagens",
+    competence: 7,
+    skill: 24,
+    topic: "Argumentação e Retórica",
+    subtopic: "Projeto de Texto e Tese Bipartida no Modelo Dissertativo ENEM",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Analise a introdução a seguir, extraída de uma redação modelo nota 1000:\n'A Carta Magna de 1988 preconiza a saúde e a dignidade humana como direitos universais inalienáveis de todos os cidadãos. Todavia, a persistência do estigma associado às doenças mentais no Brasil contemporâneo subverte essa garantia constitucional, alimentada tanto pela desinformação secular disseminada no tecido social quanto pela insuficiência estrutural de centros de acolhimento psicossocial da rede pública.'",
+      source: "Manual de Engenharia Textual da Redação ENEM"
+    },
+    prompt: "A introdução analisada cumpre com excelência as exigências do 'projeto de texto' (Competência 3 do ENEM) porque:",
+    options: [
+      { id: "a", text: "articula um repertório legitimado de partida (a CF/88), apresenta o tema completo e antecipa explicitamente uma tese bipartida com duas causas distintas que serão aprofundadas em D1 e D2.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "limita-se a narrar uma crônica fictícia sem emitir nenhum juízo de valor ou posicionamento crítico.", isCorrect: false, distractorRationale: "O texto é eminentemente dissertativo-argumentativo com forte juízo de valor ('subverte essa garantia')." },
+      { id: "c", text: "apresenta a proposta de intervenção completa com os 5 elementos logo no primeiro parágrafo.", isCorrect: false, distractorRationale: "A proposta de intervenção completa com os 5 elementos pertence à conclusão, e não à introdução." },
+      { id: "d", text: "utiliza linguagem coloquial de gírias juvenis para se aproximar afetivamente da banca examinadora.", isCorrect: false, distractorRationale: "O registro formal culto padrão é rigorosamente respeitado (Competência 1)." },
+      { id: "e", text: "evita qualquer menção aos problemas sociais do Brasil para manter neutralidade jornalística.", isCorrect: false, distractorRationale: "A redação do ENEM exige expressamente a problematização da realidade brasileira." }
+    ],
+    detailedExplanation: {
+      summary: "A introdução padrão ouro de 200 pontos na Competência 3 apresenta: 1) Contextualização (CF/88); 2) Apresentação do tema com conectivo de contraste ('Todavia...'); 3) Tese bipartida com Argumento 1 ('desinformação secular' -> será o D1) e Argumento 2 ('insuficiência estrutural de acolhimento' -> será o D2).",
+      stepByStep: [
+        "1. Elemento 1 (Repertório): Art. 6º da CF/88 legitima o debate com base jurídica sólida.",
+        "2. Elemento 2 (Problematização): Conectivo 'Todavia' denuncia o descompasso entre a lei e a realidade brasileira.",
+        "3. Elemento 3 (Tese Bipartida): 'alimentada tanto por X [causa sociocultural] quanto por Y [causa institucional]'.",
+        "4. Impacto na C3: O corretor sabe exatamente o que esperar nos próximos parágrafos, atestando autoria e planejamento prévio impecável."
+      ],
+      coreConcept: "Engenharia da Introdução e Projeto de Texto Bipartido (Competência 3)",
+      trapWarning: "Se você anunciar duas causas na introdução (A1 e A2), você DEVE obrigatoriamente desenvolvê-las exatamente nessa ordem em D1 e D2. Nunca abandone um argumento anunciado!"
+    },
+    commonTraps: [
+      "Escrever introduções genéricas sem antecipar a tese bipartida",
+      "Confundir o papel da introdução com o da conclusão com proposta"
+    ],
+    tags: ["redacao-enem", "projeto-de-texto", "tese-bipartida", "competencia-3", "introducao-padrao-ouro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
