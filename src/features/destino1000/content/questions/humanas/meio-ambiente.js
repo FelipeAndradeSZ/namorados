@@ -833,6 +833,230 @@ export const QUESTIONS_MEIO_AMBIENTE = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-021",
+    area: "humanas",
+    competence: 6,
+    skill: 29,
+    topic: "Geografia",
+    subtopic: "Inversão Térmica e Poluição Atmosférica Urbana",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nas madrugadas frias de inverno em grandes metrópoles cercadas por relevo ondulado ou serras (como São Paulo e Belo Horizonte), a perda radiativa rápida de calor pelo solo resfria a camada atmosférica de contato superficial. Esse bolsão de ar frio, mais denso, permanece aprisionado junto ao solo, recoberto por uma camada de ar mais aquecido que atua como uma 'tampa' térmica, impedindo a convecção vertical normal.",
+      source: "Climatologia Urbana e Poluição Atmosférica"
+    },
+    prompt: "O fenômeno meteorológico descrito e seu impacto socioambiental imediato sobre as cidades consistem na:",
+    options: [
+      { id: "a", text: "inversão térmica, que bloqueia a dispersão vertical de poluentes e gases tóxicos, agravando significativamente as doenças e internações respiratórias da população urbana.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "chuva ácida generalizada que consome os alicerces de concreto dos edifícios em poucas horas.", isCorrect: false, distractorRationale: "Chuva ácida é precipitação química com óxidos de enxofre/nitrogênio, distinta do fenômeno térmico de inversão do gradiente vertical." },
+      { id: "c", text: "formação instantânea de furacões subtropicais devido ao congelamento abrupto das calçadas.", isCorrect: false, distractorRationale: "Furacões alimentam-se de águas oceânicas quentes tropicais, sem qualquer relação com a estabilidade atmosférica de inverno continental." },
+      { id: "d", text: "destruição da camada de ozônio estratosférica na troposfera inferior provocada por gás oxigênio puro.", isCorrect: false, distractorRationale: "A destruição do ozônio estratosférico ocorre por CFCs em escala global e altitude de 20-30 km, não na camada urbana de inversão." },
+      { id: "e", text: "elevação imediata da evapotranspiração florestal que satura os aquíferos profundos com vapor d'água.", isCorrect: false, distractorRationale: "No inverno frio a taxa de evapotranspiração é reduzida e a inversão aprisiona poluentes na atmosfera baixa." }
+    ],
+    detailedExplanation: {
+      summary: "Em condições atmosféricas normais, o ar mais quente (menos denso) junto ao solo sobe por convecção, dispersando poluentes para a alta atmosfera. Na inversão térmica de inverno, o ar frio denso fica retido na base sob o ar quente, estagnando o ar e concentrando fuligem, monóxido de carbono e óxidos nos primeiros metros do solo, disparando crises de asma, bronquite e rinite alérgica.",
+      stepByStep: [
+        "1. Gradiente térmico padrão: a temperatura do ar diminui com a altitude (ar quente em baixo -> sobe; ar frio em cima -> desce). Isso garante circulação convectiva contínua.",
+        "2. Condição de inversão: na madrugada de inverno com céu límpido, o solo esfria rapidamente por irradiação e resfria a camada de ar em contato direto.",
+        "3. Uma camada de ar quente fica sobreposta à camada fria de ar estagnado rente ao solo.",
+        "4. Como o ar frio é mais denso, ele não consegue subir, interrompendo a convecção (estabilidade estática).",
+        "5. Toda a fumaça de chaminés industriais e escapamentos veiculares fica aprisionada na altura da respiração humana até que a radiação solar do meio-dia aqueça novamente o solo."
+      ],
+      coreConcept: "Inversão Térmica: Estabilidade Convectiva de Inverno e Concentração de Poluentes Troposféricos",
+      trapWarning: "A inversão térmica é um fenômeno METEOROLÓGICO NATURAL que ocorre mesmo em desertos inabitados. Ela se torna um 'problema ambiental' quando ocorre sobre grandes centros urbanos industrializados poluídos."
+    },
+    commonTraps: [
+      "Achar que a inversão térmica foi 'criada' pela poluição humana (ela é natural, mas aprisiona a poluição gerada pelo homem)",
+      "Confundir inversão térmica com efeito estufa ou ilha de calor"
+    ],
+    tags: ["inversao-termica", "climatologia-urbana", "poluicao-do-ar", "saude-publica", "geografia-fisica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-022",
+    area: "humanas",
+    competence: 6,
+    skill: 29,
+    topic: "Geografia",
+    subtopic: "Ilhas de Calor Urbanas e Planejamento Socioespacial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Imagens térmicas captadas por satélites de sensoriamento remoto revelam que o centro expandido de cidades como São Paulo, Rio de Janeiro e Porto Alegre pode registrar temperaturas de superfície de 5°C a 10°C superiores às de bairros periféricos arborizados e áreas de preservação no entorno.",
+      source: "Mapeamento Termográfico Urbano e Mudanças Climáticas"
+    },
+    prompt: "Entre os fatores antrópicos determinantes para a gênese e intensidade desse gradiente térmico microclimático destaca-se:",
+    options: [
+      { id: "a", text: "a substituição da cobertura vegetal por asfalto e concreto de baixo albedo, combinada à retenção de calor pelas edificações e emissões térmicas de veículos e condicionadores de ar.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a proliferação de parques lineares que refletem integralmente a radiação solar ultravioleta para o espaço sideral.", isCorrect: false, distractorRationale: "Parques e áreas verdes amenizam a temperatura através de sombra e evapotranspiração, combatendo as ilhas de calor." },
+      { id: "c", text: "o aumento do índice pluviométrico causado exclusivamente pela passagem de correntes marítimas polares no asfalto.", isCorrect: false, distractorRationale: "Correntes marítimas atuam nos oceanos costeiros e não explicam o aquecimento diferenciado das áreas centrais urbanas." },
+      { id: "d", text: "a redução compulsória do consumo de energia elétrica em indústrias instaladas nas periferias da cidade.", isCorrect: false, distractorRationale: "A concentração térmica decorre da densidade construtiva e queima de combustíveis nas áreas centrais." },
+      { id: "e", text: "o uso exclusivo de telhados brancos ecológicos de alto albedo em todas as construções civis metropolitanas.", isCorrect: false, distractorRationale: "Telhados brancos de alto albedo resfriam os edifícios e atenuam as ilhas de calor, não as intensificam." }
+    ],
+    detailedExplanation: {
+      summary: "A ilha de calor urbana resulta de múltiplos fatores convergentes: 1) Materiais urbanos (asfalto, concreto) com baixo albedo que absorvem muita radiação solar e alta inércia térmica (liberam calor à noite); 2) Impermeabilização e ausência de árvores (menos evapotranspiração que resfria o ar); 3) Rugosidade geométrica dos edifícios (cânions urbanos que barram ventos); 4) Calor antropogênico (veículos e ar-condicionado).",
+      stepByStep: [
+        "1. Albedo: fração de radiação solar refletida. Vegetação e superfícies claras têm alto albedo; asfalto escuro tem baixíssimo albedo (absorve até 90% da luz solar incidente).",
+        "2. Vegetação arbórea realiza evapotranspiração (processo endotérmico que retira calor do ambiente para evaporar água da folha). O centro urbano sem árvores perde esse resfriamento natural.",
+        "3. Concentração vertical de prédios aprisiona a radiação refletida (efeito cânion) e bloqueia a circulação de brisas refrescantes.",
+        "4. Atividades metabólicas humanas, trânsito pesado e compressores de refrigeração liberam continuamente megawatts de calor residual no ar central."
+      ],
+      coreConcept: "Ilhas de Calor Urbanas: Albedo, Inércia Térmica dos Materiais e Perda de Evapotranspiração",
+      trapWarning: "Lembre-se: albedo alto significa QUE REFLETE MUITA LUZ (superfície fria, como neve ou tinta branca). Albedo baixo significa QUE ABSORVE MUITA LUZ E ESQUENTA (como o asfalto preto)."
+    },
+    commonTraps: [
+      "Confundir albedo alto com capacidade de absorver calor (o correto é: albedo alto reflete, albedo baixo absorve)",
+      "Achar que áreas verdes aquecem o ar"
+    ],
+    tags: ["ilha-de-calor", "albedo", "urbanizacao", "microclima", "geografia-urbana"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-023",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia",
+    subtopic: "Lixiviação e Laterização de Solos Tropicais Úmidos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em áreas tropicais e equatoriais com estações chuvosas intensas, a remoção da cobertura florestal original para implantação de monoculturas agrícolas expõe o horizonte superficial do solo ao impacto mecânico direto das gotas de chuva. Ao longo do tempo, a água pluvial que se infiltra lava os minerais alcalinos e nutrientes solúveis solapando a fertilidade natural e provocando o acúmulo superficial de compostos oxigenados de ferro e alumínio.",
+      source: "Pedologia e Conservação dos Solos Tropicais"
+    },
+    prompt: "Os processos geomorfológicos e pedológicos descritos denominam-se, respectivamente:",
+    options: [
+      { id: "a", text: "lixiviação (lavagem e perda de nutrientes solúveis por percolação) e laterização (formação de uma carapaça ferruginosa endurecida e estéril).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "assoreamento dos mananciais e desertificação por geadas polares de altitude.", isCorrect: false, distractorRationale: "Laterização é processo geoquímico tropical sob altas temperaturas e chuvas, sem relação com geadas polares." },
+      { id: "c", text: "salinização provocada por irrigação subterrânea em solos de estepe semiárida.", isCorrect: false, distractorRationale: "Salinização ocorre em regiões áridas com evaporação rápida de águas ricas em cloretos, o inverso do clima úmido lixiviante." },
+      { id: "d", text: "arenização gerada por ventos catabáticos de geleiras pleistocênicas.", isCorrect: false, distractorRationale: "Arenização decorre de retrabalhamento de arenitos friáveis e não de geleiras do Pleistoceno no Brasil tropical." },
+      { id: "e", text: "pedogênese acelerada que converte argila pura em terra roxa fertilíssima rica em húmus vulcânico.", isCorrect: false, distractorRationale: "A lixiviação e laterização empobrecem o solo e criam crostas estéreis (canga/laterita), destruindo a fertilidade húmica." }
+    ],
+    detailedExplanation: {
+      summary: "A lixiviação é a lixívia (lavagem) de nutrientes solúveis (cálcio, magnésio, potássio) pela água da chuva que percola no perfil do solo. Já a laterização é a concentração residual e precipitação de óxidos de ferro e alumínio decorrente da intensa lixiviação da sílica em climas quentes e úmidos, consolidando uma crosta avermelhada endurecida (laterita).",
+      stepByStep: [
+        "1. Em florestas tropicais maduras, a ciclagem de nutrientes é mantida pela serapilheira (folhas e matéria orgânica que caem e são decompostas rapidamente).",
+        "2. Com o desmatamento, o solo fica desprotegido do sol tórrido e da chuva pesada.",
+        "3. A água infiltra em grande volume e dissolve bases químicas trocáveis (K+, Ca2+, Mg2+) e sílica solúvel, transportando-os para os lençóis freáticos profundos (lixiviação).",
+        "4. No horizonte superficial restam minerais insolúveis de hidróxidos de ferro (Fe2O3) e alumínio (Al2O3).",
+        "5. Na alternância com períodos secos, esses óxidos oxidam e cimentam-se, formando a laterita (crosta dura que impede a penetração de raízes e a agricultura)."
+      ],
+      coreConcept: "Degradação dos Solos Tropicais: Lixiviação de Nutrientes e Laterização",
+      trapWarning: "Não confunda lixiviação (lavagem interna por infiltração/percolação) com erosão laminar (desgaste e arraste superficial da terra pelo escoamento superficial)."
+    },
+    commonTraps: [
+      "Confundir lixiviação com erosão superficial laminar",
+      "Achar que laterização torna o solo mais fértil (ela gera uma carapaça dura e improdutiva)"
+    ],
+    tags: ["pedologia", "lixiviacao", "laterizacao", "solos-tropicais", "impactos-ambientais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-024",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia",
+    subtopic: "Supressão da Mata Ciliar e Assoreamento Fluvial",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A legislação florestal brasileira (Lei nº 12.651/2012) classifica as faixas de vegetação nativa ao longo das margens de rios, córregos e nascentes como Áreas de Preservação Permanente (APPs). A eliminação deliberada dessa vegetação ribeirinha para expansão agropecuária ou ocupação imobiliária desencadeia uma série de desequilíbrios na dinâmica hidrográfico-sedimentar das bacias.",
+      source: "Gestão de Recursos Hídricos e Legislação Ambiental"
+    },
+    prompt: "A principal função ecológica da mata ciliar cuja perda desencadeia diretamente o assoreamento dos rios é a de:",
+    options: [
+      { id: "a", text: "ancorar as margens com suas redes de raízes e atuar como filtro biológico retendo sedimentos erodidos pelas chuvas antes que atinjam a calha do rio.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "impedir que a água da chuva atinja o solo através da evaporação instantânea de 100% das gotas na copa das árvores.", isCorrect: false, distractorRationale: "As copas interceptam parte das chuvas amenizando a energia do impacto, mas grande parte da água infiltra e alimenta o lençol freático." },
+      { id: "c", text: "gerar correntes de vento contínuas capazes de empurrar a areia das margens para as montanhas mais altas.", isCorrect: false, distractorRationale: "Mata ciliar não gera correntes de vento e sedimentos não sobem montanhas por ação eólica." },
+      { id: "d", text: "neutralizar quimicamente todos os metais pesados industriais por decomposição nuclear espontânea.", isCorrect: false, distractorRationale: "Vegetação não realiza transmutação nuclear nem neutraliza poluição radioativa ou química pesada industrial ilimitada." },
+      { id: "e", text: "aquecer a água do rio até a temperatura de ebulição para eliminar microrganismos patogênicos.", isCorrect: false, distractorRationale: "A sombra da mata ciliar cumpre função exatamente inversa: mantém a água fresca e oxigenada." }
+    ],
+    detailedExplanation: {
+      summary: "A mata ciliar atua como os 'cílios' dos olhos para o curso d'água: suas raízes entrelaçadas estabilizam os barrancos contra desmoronamentos e a cobertura de folhas e galhos amortece o escoamento superficial da enxurrada, filtrando a terra. Sem a mata, a chuva arrasta toneladas de solo para o leito do rio, diminuindo sua profundidade (assoreamento) e aumentando drasticamente os transbordamentos de cheias.",
+      stepByStep: [
+        "1. Função física das raízes: agem como uma malha de contenção estrutural contra a erosão mecânica das margens fluviais.",
+        "2. Efeito esponja e filtro: o solo coberto por matéria orgânica retém partículas de terra e defensivos agrícolas carreados pela enxurrada.",
+        "3. Quando a mata ciliar é desmatada, o escoamento superficial ganha velocidade turbulenta e arrasta grandes volumes de sedimentos para a calha do rio.",
+        "4. Deposição de sedimentos no leito do rio: processo conhecido como assoreamento.",
+        "5. Consequências do assoreamento: perda da profundidade navegável, morte de espécies bentônicas por turbidez e aumento da frequência e gravidade de inundações nas várzeas ribeirinhas."
+      ],
+      coreConcept: "Mata Ciliar e Recursos Hídricos: Proteção Mecânica contra Erosão e Assoreamento",
+      trapWarning: "Lembre-se da metáfora do ENEM: mata CILIAR protege o rio assim como os CÍLIOS protegem os olhos contra poeira e detritos externos."
+    },
+    commonTraps: [
+      "Achar que o assoreamento é o aumento da profundidade do rio (é o contrário: o leito fica mais raso)",
+      "Confundir mata ciliar com vegetação xerófila de caatinga distante dos rios"
+    ],
+    tags: ["mata-ciliar", "assoreamento", "bacias-hidrograficas", "codigo-florestal", "conservacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-AMB-025",
+    area: "humanas",
+    competence: 6,
+    skill: 28,
+    topic: "Geografia",
+    subtopic: "Arenização nos Pampas versus Desertificação no Semiárido",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No Brasil, a degradação das terras assume dinâmicas morfológicas e biogeográficas distintas em diferentes regiões ecológicas. Enquanto em áreas do Semiárido nordestino (como nos núcleos de Gilbués, Cabrobó e Irauçuba) desenvolve-se o processo de desertificação, no Sudoeste do Rio Grande do Sul (em municípios como Alegrete, Manoel Viana e São Francisco de Assis) verifica-se o fenômeno da arenização dos campos sulinos.",
+      source: "Geomorfologia e Dinâmica de Solos Brasileiros"
+    },
+    prompt: "A distinção conceitual e ambiental primordial entre o processo de arenização gaúcho e a desertificação semiárida reside no fato de que a arenização:",
+    options: [
+      { id: "a", text: "ocorre em clima subtropical úmido com precipitação pluviométrica abundante, decorrendo do retrabalhamento eólico e hídrico de depósitos de arenito friável sob pastoreio excessivo, e não de déficit de chuvas prolongado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "constitui um processo estritamente idêntico à desertificação, diferenciando-se unicamente pelo nome vernacular atribuído pelos produtores de soja.", isCorrect: false, distractorRationale: "São processos pedológicos e climáticos radicalmente diferentes; desertificação exige clima árido, semiárido ou subúmido seco." },
+      { id: "c", text: "é provocada pela chuva ácida gerada pelas usinas de carvão que dissolve as rochas basálticas da serra.", isCorrect: false, distractorRationale: "O substrato da arenização é arenito de origem eólica fóssil da Formação Botucatu, e não basalto dissolvido por acidez." },
+      { id: "d", text: "ocorre exclusivamente em áreas urbanizadas por descarte de entulho de construção civil ao ar livre.", isCorrect: false, distractorRationale: "A arenização é um processo rural em áreas campestres extensivas de pecuária do bioma Pampa." },
+      { id: "e", text: "resulta da elevação do lençol freático por represamento de usinas hidrelétricas costeiras.", isCorrect: false, distractorRationale: "O fenômeno relaciona-se à erosão hídrica e eólica superficial sobre substrato arenoso frágil, sem relação com represas litorâneas." }
+    ],
+    detailedExplanation: {
+      summary: "A desertificação (definida pela ONU na Convenção de Combate à Desertificação) ocorre exclusivamente em zonas áridas, semiáridas e subúmidas secas com severo déficit hídrico acumulado. Já a arenização no Rio Grande do Sul ocorre em clima subtropical com alto índice de chuvas (1.400 a 1.700 mm/ano). Solos derivados de arenitos pouco consolidados perdem a cobertura de gramíneas pelo sobrepastoreio, expondo a areia móvel que forma 'areais'.",
+      stepByStep: [
+        "1. Desertificação: Clima com balanço hídrico negativo (escassez de chuvas + alta evaporação) no Semiárido brasileiro, degradando a Caatinga e os solos rasos.",
+        "2. Arenização: Clima subtropical úmido (chove regularmente o ano todo) nos Pampas sul-rio-grandenses.",
+        "3. Geologia da arenização: Substrato de rochas sedimentares areníticas friáveis (paleodunas fósseis da Bacia do Paraná).",
+        "4. Ação antrópica: O pisoteio excessivo do gado (sobrepastoreio) e a aração agrícola removem a cobertura rasa de gramíneas dos campos nativos.",
+        "5. A força das chuvas torrenciais (ravinas) e dos ventos espalha a areia solta, originando manchas de areia em expansão conhecidas como areais."
+      ],
+      coreConcept: "Arenização vs Desertificação: Diferenças Climáticas, Geológicas e Morfogenéticas",
+      trapWarning: "Cuidado clássico no ENEM: a arenização no Rio Grande do Sul NÃO É desertificação! O clima local é CHUVOSO (subtropical úmido), desmentindo a ideia de que 'surgimento de areia decorre de falta de chuvas'."
+    },
+    commonTraps: [
+      "Classificar a arenização como uma forma de desertificação em clima seco",
+      "Esquecer que o clima do Sudoeste gaúcho é subtropical úmido com chuvas regulares"
+    ],
+    tags: ["arenizacao", "desertificação", "bioma-pampa", "semiarido", "geomorfologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

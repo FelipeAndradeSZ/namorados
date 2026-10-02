@@ -848,6 +848,231 @@ export const QUESTIONS_CITOLOGIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-021",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Bomba de Sódio-Potássio e Transporte Ativo Primário",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A manutenção das diferenças de concentração iônica entre o citoplasma e o meio extracelular é essencial para a transmissão de impulsos nervosos e a osmorregulação. A bomba de sódio e potássio (Na+/K+ ATPase) consome cerca de um terço de toda a energia metabólica de uma célula animal em repouso para mover íons contra seus respectivos gradientes de concentração química.",
+      source: "Tratado de Fisiologia Médica e Biologia Celular"
+    },
+    prompt: "O funcionamento estequiométrico e eletrogênico dessa proteína transmembrana caracteriza-se pelo bombeamento ativo de:",
+    options: [
+      { id: "a", text: "3 íons Na+ para o meio extracelular e 2 íons K+ para o interior celular, com consumo de 1 molécula de ATP.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2 íons Na+ para o interior celular e 3 íons K+ para o meio extracelular, por difusão facilitada passiva.", isCorrect: false, distractorRationale: "A bomba transporta 3 sódios para fora e 2 potássios para dentro, contra o gradiente e com gasto de ATP, e não a favor de gradiente." },
+      { id: "c", text: "quantidades equimolares (1:1) de Na+ e K+ para manter a neutralidade elétrica imediata da membrana.", isCorrect: false, distractorRationale: "A proporção é assimétrica (3 Na+ para fora e 2 K+ para dentro), tornando a bomba eletrogênica." },
+      { id: "d", text: "íons Ca2+ e Mg2+ em substituição aos monovalentes durante períodos de estresse osmótico agudo.", isCorrect: false, distractorRationale: "A bomba Na+/K+ ATPase é estritamente específica para íons sódio e potássio; cálcio possui bombas próprias (SERCA)." },
+      { id: "e", text: "3 moléculas de glicose acopladas à entrada passiva de 2 íons potássio sem fosforilação proteica.", isCorrect: false, distractorRationale: "Confunde a bomba primária Na+/K+ ATPase com o cotransportador secundário SGLT de glicose-sódio." }
+    ],
+    detailedExplanation: {
+      summary: "A bomba Na+/K+ ATPase realiza transporte ativo primário: hidrolisa 1 ATP para expulsar 3 íons Na+ da célula e internalizar 2 íons K+, gerando um interior celular eletronegativo e mantendo o gradiente químico.",
+      stepByStep: [
+        "1. No citoplasma, a enzima liga 3 íons Na+ com alta afinidade.",
+        "2. Ocorre a fosforilação da enzima pelo ATP (quebra de ATP em ADP + Pi).",
+        "3. A mudança conformacional expõe os íons Na+ ao exterior celular, onde são liberados.",
+        "4. No meio extracelular, a enzima liga 2 íons K+, promovendo a desfosforilação.",
+        "5. A proteína retorna à conformação original e libera os 2 íons K+ no citosol celular."
+      ],
+      coreConcept: "Transporte Ativo Primário: Bomba de Na+/K+ ATPase",
+      trapWarning: "Lembre-se sempre da regra mnemônica 'Sal (Na+) fora, Potássio (K+) dentro' e da proporção: 3 Na+ saem para cada 2 K+ que entram."
+    },
+    commonTraps: [
+      "Inverter o sentido dos íons (achar que o sódio entra ativamente)",
+      "Achar que o transporte de sódio e potássio é passivo na bomba"
+    ],
+    tags: ["citologia", "membrana-plasmatica", "transporte-ativo", "bomba-sodio-potassio", "fisiologia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-022",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Fosforilação Oxidativa e Teoria Quimiosmótica",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A teoria quimiosmótica proposta por Peter Mitchell estabeleceu que a síntese de adenosina trifosfato (ATP) nas mitocôndrias ocorre acoplada a um gradiente eletroquímico de prótons através da membrana mitocondrial interna. Certas substâncias químicas, conhecidas como desacopladores mitocondriais (como o 2,4-dinitrofenol, DNP), tornam essa membrana permeável aos prótons, permitindo o retorno dos íons H+ para a matriz sem passar pelo canal da ATP sintase.",
+      source: "Bioquímica e Bioenergética Celular"
+    },
+    prompt: "Em uma célula exposta a um desacoplador mitocondrial desse tipo, observa-se como consequência fisiológica imediata:",
+    options: [
+      { id: "a", text: "manutenção do consumo de oxigênio com forte queda na produção de ATP e dissipação da energia livre na forma de calor térmico.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "bloqueio total do ciclo de Krebs e interrupção completa da glicólise por ausência de elétrons.", isCorrect: false, distractorRationale: "O desacoplamento não bloqueia o fluxo de elétrons; pelo contrário, o consumo de oxigênio e a oxidação de substratos aumentam." },
+      { id: "c", text: "aumento drástico na síntese de ATP devido à aceleração da rota quimiosmótica pela ATP sintase.", isCorrect: false, distractorRationale: "A síntese de ATP diminui ou cessa porque o gradiente de prótons é dissipado pelos desacopladores." },
+      { id: "d", text: "acúmulo de NADH e FADH2 na matriz mitocondrial por incapacidade de transferir elétrons para os complexos proteicos.", isCorrect: false, distractorRationale: "Os cofatores continuam sendo oxidados rapidamente; os desacopladores afetam o gradiente de H+, não o transporte de elétrons." },
+      { id: "e", text: "conversão imediata de toda a respiração celular em fotossíntese reversa no citoplasma.", isCorrect: false, distractorRationale: "Células animais não realizam fotossíntese sob nenhuma circunstância bioquímica." }
+    ],
+    detailedExplanation: {
+      summary: "Os desacopladores mitocondriais dissipam o gradiente de prótons sem inibir a cadeia respiratória. A oxidação continua consumindo oxigênio aceleradamente, mas a energia que geraria ATP é dissipada integralmente como calor.",
+      stepByStep: [
+        "1. A cadeia respiratória bombeia prótons da matriz para o espaço intermembrana.",
+        "2. Em condições normais, os prótons só retornam à matriz girando o rotor da ATP sintase (fosforilação oxidativa).",
+        "3. O desacoplador age como um carreador lipofílico de H+, permitindo que os prótons atravessem a bicamada livremente.",
+        "4. Sem gradiente protônico acumulado, a ATP sintase para de produzir ATP.",
+        "5. O fluxo de elétrons continua ou se acelera tentando restabelecer o potencial, e toda a energia dos elétrons vira calor (hipertermia)."
+      ],
+      coreConcept: "Bioenergética: Hipótese Quimiosmótica e Desacoplamento Mitocondrial",
+      trapWarning: "Substâncias inibidoras (ex: cianeto) travam o transporte de elétrons e o consumo de O2. Desacopladores (ex: termogenina e DNP) mantêm o consumo de O2 elevado, mas anulam a síntese de ATP."
+    },
+    commonTraps: [
+      "Confundir inibidor de transporte de elétrons (bloqueia O2) com desacoplador (consome O2 e gera calor)",
+      "Achar que o desacoplador aumenta a produção de ATP"
+    ],
+    tags: ["mitocondria", "fosforilacao-oxidativa", "teoria-quimiosmotica", "desacopladores", "bioenergetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-023",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Fermentação Celular e Regeneração de Coenzimas",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante a prática de exercícios físicos de intensidade extrema e curta duração (como uma prova de sprint de 100 metros rasos), a demanda muscular por energia supera a capacidade de fornecimento de oxigênio pelo sistema cardiovascular. Nessas condições de anaerobiose tecidual temporária, as células musculares realizam fermentação láctica para sustentar a síntese emergencial de ATP.",
+      source: "Bioquímica Fisiológica do Esporte"
+    },
+    prompt: "Do ponto de vista bioquímico celular, a etapa essencial da fermentação que viabiliza a continuidade da produção anaeróbia de ATP pela glicólise é a:",
+    options: [
+      { id: "a", text: "regeneração de NAD+ oxidado a partir da redução do piruvato em lactato pela lactato desidrogenase.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "produção líquida adicional de 36 moléculas de ATP durante a conversão enzimática de lactato.", isCorrect: false, distractorRationale: "A etapa fermentativa não produz nenhum ATP adicional; o saldo líquido continua sendo apenas 2 ATP por glicose na glicólise." },
+      { id: "c", text: "absorção direta de CO2 liberado pelas mitocôndrias para formar fosfocreatina na matriz citoplasmática.", isCorrect: false, distractorRationale: "A fermentação láctica não consome CO2 e a fosfocreatina utiliza ATP muscular prévio." },
+      { id: "d", text: "oxidação completa do ácido pirúvico em água e gás carbônico no lúmen do retículo sarcoplasmático.", isCorrect: false, distractorRationale: "A oxidação completa requer oxigênio e ciclo de Krebs nas mitocôndrias, inviáveis na anaerobiose estrita." },
+      { id: "e", text: "quebra de fosfolipídios de membrana para geração direta de piruvato sem uso de glicose.", isCorrect: false, distractorRationale: "A fonte de piruvato na fermentação muscular é a quebra de glicose oriunda do glicogênio tecidual." }
+    ],
+    detailedExplanation: {
+      summary: "A principal função biológica da fermentação é oxidar o NADH gerado na glicólise de volta a NAD+, garantindo que a enzima gliceraldeído-3-fosfato desidrogenase continue ativa para manter a glicólise funcionando.",
+      stepByStep: [
+        "1. A glicólise converte glicose em 2 piruvatos, produzindo saldo de 2 ATP e reduzindo 2 NAD+ em 2 NADH.",
+        "2. Sem oxigênio, a cadeia respiratória mitocondrial não pode oxidar esse NADH de volta a NAD+.",
+        "3. Se o pool celular de NAD+ se esgotasse, a própria glicólise pararia, interrompendo qualquer fornecimento de ATP.",
+        "4. A enzima lactato desidrogenase reduz o piruvato a lactato e, concomitantemente, oxida NADH de volta a NAD+.",
+        "5. Com o NAD+ regenerado, a glicólise continua gerando 2 ATP por molécula de glicose degradada."
+      ],
+      coreConcept: "Bioquímica da Fermentação: Regeneração de NAD+ para Continuidade da Glicólise",
+      trapWarning: "A reação piruvato → lactato não gera ATP algum! Ela existe unicamente para reciclar o NADH em NAD+."
+    },
+    commonTraps: [
+      "Achar que a etapa de fermentação produz dezenas de ATP adicionais",
+      "Confundir fermentação láctica (não libera CO2) com alcoólica (libera CO2 e etanol)"
+    ],
+    tags: ["fermentacao-lactica", "glicolise", "nad", "metabolismo-energetico", "anaerobiose"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-024",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Autofagia Lisossômica e Homeostase Celular",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Prêmio Nobel de Fisiologia ou Medicina de 2016 foi concedido ao biólogo japonês Yoshinori Ohsumi por suas descobertas sobre os mecanismos da autofagia celular. Trata-se de um processo altamente conservado e regulado em que a célula degrada e recicla seus próprios componentes citoplasmáticos desgastados, como mitocôndrias danificadas e agregados proteicos anômalos.",
+      source: "Fundação Nobel e Artigos de Biologia Celular Contemporânea"
+    },
+    prompt: "No mecanismo da macroautofagia, os componentes celulares senescentes a serem eliminados são inicialmente:",
+    options: [
+      { id: "a", text: "envolvidos por uma dupla membrana lipídica formando um autofagossomo, que posteriormente se funde ao lisossomo para digestão enzimática.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "expelidos intactos para a circulação sanguínea através de canais iônicos de descarte vesicular.", isCorrect: false, distractorRationale: "A autofagia é um processo de digestão interna intracelular, não de expulsão passiva por canais iônicos." },
+      { id: "c", text: "convertidos diretamente em RNA mensageiro no interior do nucléolo celular para reuso ribossômico.", isCorrect: false, distractorRationale: "Nucléolo sintetiza rRNA e organiza ribossomos; não atua na degradação de organelas velhas." },
+      { id: "d", text: "fagocitados por bactérias da microbiota intestinal que penetram na membrana citoplasmática.", isCorrect: false, distractorRationale: "A autofagia é um processo puramente eucariótico autônomo, sem intervenção de bactérias intestinais." },
+      { id: "e", text: "cristalizados no estroma cloroplastidial para servir de reserva mineral permanente na célula animal.", isCorrect: false, distractorRationale: "Células animais não contêm cloroplastos e a autofagia recicla biomoléculas, não as cristaliza." }
+    ],
+    detailedExplanation: {
+      summary: "Na macroautofagia, o material celular a ser degradado é envolvido por uma dupla membrana isoladora (fagóforo) que se fecha gerando o autofagossomo. Este se funde ao lisossomo formando o autolisossomo, onde hidrolases ácidas quebram os polímeros em monômeros reutilizáveis.",
+      stepByStep: [
+        "1. Estímulos como privação de nutrientes (baixo nível de aminoácidos) ativam vias sinalizadoras da autofagia.",
+        "2. Uma vesícula de dupla membrana se expande e sequestra organelas velhas (ex: mitocôndrias senescentes).",
+        "3. O fechamento da vesícula forma a estrutura delimitada denominada autofagossomo.",
+        "4. O autofagossomo transloca-se e funde sua membrana externa com a membrana do lisossomo primário.",
+        "5. As hidrolases lisossômicas ácidas degradam o conteúdo em aminoácidos, nucleotídeos e ácidos graxos que voltam ao citosol."
+      ],
+      coreConcept: "Autofagia Lisossômica: Autofagossomo, Fusão Lisossômica e Reciclagem Molecular",
+      trapWarning: "Heterofagia é a digestão de material capturado do meio externo (fagocitose/pinocitose). Autofagia é a digestão programada de componentes da própria célula."
+    },
+    commonTraps: [
+      "Confundir heterofagia (alimento do meio externo) com autofagia (estruturas da própria célula)",
+      "Achar que a autofagia é apenas danosa (ela é fundamental para a sobrevivência e renovação celular)"
+    ],
+    tags: ["citologia", "lisossomos", "autofagia", "reciclagem-celular", "premio-nobel"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-025",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Citologia",
+    subtopic: "Diferenciação Celular e Regulação da Expressão Gênica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um organismo multicelular adulto como o ser humano, um neurônio do córtex cerebral e uma célula beta das ilhotas pancreáticas desempenham papéis biológicos radicalmente distintos: enquanto o neurônio conduz impulsos elétricos rápidos, a célula beta sintetiza e secreta o hormônio proteico insulina. No entanto, com raras exceções fisiológicas, ambas as células contêm rigorosamente a mesma sequência nucleotídica em seu genoma nuclear.",
+      source: "Biologia Molecular da Célula e Epigenética"
+    },
+    prompt: "Essa diversidade morfológica e funcional entre células de uma mesma constituição genética decorre da:",
+    options: [
+      { id: "a", text: "expressão gênica diferencial regulada por fatores de transcrição específicos e modificações epigenéticas na cromatina.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "eliminação física de genes desnecessários do núcleo celular à medida que os tecidos se especializam.", isCorrect: false, distractorRationale: "O genoma permanece intacto em quase todas as células somáticas (equivalência genômica); genes não são deletados." },
+      { id: "c", text: "substituição espontânea do código genético de trincas por duplas de nucleotídeos em células secretoras.", isCorrect: false, distractorRationale: "O código genético é universal e constituído de códons de 3 nucleotídeos em todos os tecidos." },
+      { id: "d", text: "duplicação aleatória de cromossomos inteiros nos neurônios para conferir resistência à condução de cargas elétricas.", isCorrect: false, distractorRationale: "Neurônios e células beta normais possuem a mesma ploidia diploide regular (2n = 46 cromossomos)." },
+      { id: "e", text: "capacidade exclusiva de células pancreáticas sintetizarem ribossomos capazes de ler aminoácidos.", isCorrect: false, distractorRationale: "Todas as células utilizam a mesma maquinaria ribossômica básica para a síntese de proteínas." }
+    ],
+    detailedExplanation: {
+      summary: "A diferenciação celular em organismos pluricelulares é regida pela expressão diferencial de genes. Embora todas as células somáticas possuam o mesmo genoma (equivalência genômica), diferentes conjuntos de genes são ativados ou silenciados por fatores de transcrição e marcas epigenéticas (metilação de DNA e modificações de histonas).",
+      stepByStep: [
+        "1. Conceito de Equivalência Genômica: todas as células somáticas possuem o mesmo DNA do zigoto original.",
+        "2. Na célula beta pancreática, o gene da insulina está localizado em regiões de eucromatina descondensada e fatores de transcrição específicos ativam sua transcrição em mRNA.",
+        "3. No neurônio, o gene da insulina está empacotado em heterocromatina silenciada e hipermetilada, impedindo sua leitura.",
+        "4. Em contrapartida, genes que codificam canais iônicos voltagem-dependentes e sinapsinas estão ativados nos neurônios.",
+        "5. Portanto, o fenótipo celular depende dos genes que estão ativamente transcritos, e não de diferenças na sequência do genoma."
+      ],
+      coreConcept: "Diferenciação Celular: Expressão Gênica Diferencial e Regulação Epigenética",
+      trapWarning: "Cuidado: especialização celular não é perda de DNA! Células maduras mantêm quase todos os genes (como provou a clonagem da ovelha Dolly a partir de um núcleo somático)."
+    },
+    commonTraps: [
+      "Acreditar que células diferenciadas perdem os genes que não utilizam",
+      "Confundir diferenciação celular com mutação gênica permanente"
+    ],
+    tags: ["diferenciacao-celular", "expressao-genica", "epigenetica", "biologia-molecular", "genetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

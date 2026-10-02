@@ -836,6 +836,241 @@ export const QUESTIONS_QUIMICA_ORGANICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ORG-021",
+    area: "natureza",
+    competence: 7,
+    skill: 24,
+    topic: "Química Orgânica",
+    subtopic: "Reações de Adição Eletrofílica e Regra de Markovnikov",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na síntese orgânica de intermediários farmacêuticos halogenados, a reação de adição de haletos de hidrogênio (como o HBr anidro) a alcenos assimétricos segue o princípio formulado pelo químico russo Vladimir Markovnikov em 1869. Ao reagir o propeno (CH2=CH-CH3) com brometo de hidrogênio em meio livre de peróxidos, obtém-se predominantemente um único composto mono-halogenado entre os dois produtos constitucionais teoricamente possíveis.",
+      source: "SOLOMONS, T. W. G.; FRYHLE, C. B. Química Orgânica. LTC."
+    },
+    prompt: "O produto orgânico majoritário formado nessa reação e a justificativa mecanicista formulada pela Regra de Markovnikov são, respectivamente:",
+    options: [
+      { id: "a", text: "2-bromopropano, pois o eletrófilo H+ adiciona-se ao carbono da dupla que já possui o maior número de hidrogênios (C1), gerando o carbocátion secundário mais estável que é atacado pelo íon brometo no carbono central (C2).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "1-bromopropano, pois o bromo liga-se preferencialmente ao carbono que tem menos hidrogênios para balancear a densidade eletrônica.", isCorrect: false, distractorRationale: "O 1-bromopropano é o produto antimarkovnikov minoritário que só seria obtido sob efeito Kharasch com presença de peróxidos orgânicos via radicais livres." },
+      { id: "c", text: "ciclopropano, pois a adição de HBr força o fechamento espontâneo de uma cadeia cíclica de três membros.", isCorrect: false, distractorRationale: "A reação é de adição simples à dupla ligação com manutenção da cadeia aberta acíclica." },
+      { id: "d", text: "propan-2-ol, pois o bromo atua apenas como catalisador inerte sem se incorporar à molécula final.", isCorrect: false, distractorRationale: "O bromo incorpora-se covalentemente à estrutura carbônica formando um haleto orgânico, não um álcool." },
+      { id: "e", text: "propino, pois o HBr remove hidrogênios da cadeia transformando a ligação dupla em ligação tripla.", isCorrect: false, distractorRationale: "HBr sofre adição que satura a dupla em simples, não uma desidrogenação que forme alcino." }
+    ],
+    detailedExplanation: {
+      summary: "A Regra de Markovnikov dita que na adição de H-X a alcenos assimétricos, o H+ adiciona-se ao carbono mais hidrogenado da dupla. Isso gera o carbocátion secundário (mais estável por hiperconjugação e efeito indutivo positivo dos grupos alquila vizinhos do que o carbocátion primário), orientando a entrada do Br- no C2 para formar o 2-bromopropano.",
+      stepByStep: [
+        "1. Identificar o alceno assimétrico: Propeno (C1=CH2 ligado a 2 H; C2=CH ligado a 1 H e 1 CH3).",
+        "2. Primeira etapa (adição do eletrófilo H+):",
+        "   - Se H+ entra no C1: forma o carbocátion no C2: [CH3-CH(+)-CH3] -> carbocátion SECUNDÁRIO (muito mais estável).",
+        "   - Se H+ entrasse no C2: formaria o carbocátion no C1: [CH2(+)-CH2-CH3] -> carbocátion PRIMÁRIO (instável).",
+        "3. Segunda etapa (ataque do nucleófilo Br-):",
+        "   O ânion brometo ataca o carbono central C2 portador da carga positiva, formando CH3-CH(Br)-CH3: 2-bromopropano.",
+        "4. Conclusão: a alternativa 'a' expressa com rigor mecanicista a regra de Markovnikov."
+      ],
+      coreConcept: "Adição Eletrofílica em Alcenos, Estabilidade de Carbocátions e Regra de Markovnikov",
+      trapWarning: "No ENEM: Regra de Markovnikov: 'O hidrogênio vai para onde já tem mais hidrogênio' (o rico em H fica mais rico em H). O bromo entra no carbono menos hidrogenado."
+    },
+    commonTraps: [
+      "Inverter o produto achando que o bromo entra no carbono da ponta (efeito antimarkovnikov)",
+      "Não saber que carbocátion secundário é termodinamicamente mais estável que carbocátion primário"
+    ],
+    tags: ["adicao-eletrofilica", "markovnikov", "propeno", "haletos", "carbocation"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ORG-022",
+    area: "natureza",
+    competence: 7,
+    skill: 24,
+    topic: "Química Orgânica",
+    subtopic: "Desidratação de Álcoois e Regra de Saytzeff",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O etanol e outros álcoois sofrem reações de eliminação quando aquecidos na presença de ácido sulfúrico concentrado (H2SO4) atuando como agente desidratante. A natureza dos produtos depende criticamente da temperatura operacional:\n• A cerca de 140 °C, predomina a desidratação intermolecular entre duas moléculas de álcool.\n• A temperaturas mais elevadas, em torno de 170 °C, predomina a desidratação intramolecular no interior da mesma molécula de álcool.",
+      source: "Química Orgânica Experimental e Processos Industriais."
+    },
+    prompt: "Ao submeter o etanol puro à desidratação intermolecular (a 140 °C) e à desidratação intramolecular (a 170 °C), obtêm-se, respectivamente, como produtos orgânicos principais:",
+    options: [
+      { id: "a", text: "etoxietano (éter dietílico) e eteno (etileno).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ácido acético e metanal.", isCorrect: false, distractorRationale: "Ácido acético é produto de oxidação do etanol, e não de eliminação por desidratação." },
+      { id: "c", text: "eteno e etoxietano.", isCorrect: false, distractorRationale: "Inverteu a temperatura dos processos: intermolecular a 140 °C gera éter; intramolecular a 170 °C gera alceno." },
+      { id: "d", text: "acetato de etila e acetileno.", isCorrect: false, distractorRationale: "Acetato de etila é um éster produzido por reação com ácido carboxílico, e não por desidratação pura de etanol." },
+      { id: "e", text: "gás carbônico e fuligem.", isCorrect: false, distractorRationale: "Esses são produtos de combustão completa e incompleta." }
+    ],
+    detailedExplanation: {
+      summary: "A desidratação intermolecular (140 °C) une dois álcoois eliminando uma molécula de água entre eles para formar um ÉTER: 2 CH3CH2OH → CH3CH2-O-CH2CH3 + H2O. A desidratação intramolecular (170 °C) remove H e OH da mesma molécula formando uma dupla ligação de ALCENO: CH3CH2OH → CH2=CH2 + H2O.",
+      stepByStep: [
+        "1. Desidratação Intermolecular (baixa temperatura relativa, ~140 °C):",
+        "   Dois mols de álcool perdem 1 H de um e 1 OH do outro: R-OH + HO-R → R-O-R + H2O.",
+        "   Com etanol: CH3CH2OH + HOCH2CH3 → CH3CH2-O-CH2CH3 (etoxietano / éter etílico) + H2O.",
+        "2. Desidratação Intramolecular (alta temperatura, ~170 °C):",
+        "   Um único mol de álcool perde a hidroxila de um carbono e um hidrogênio do carbono vizinho: R-CH2-CH2-OH → R-CH=CH2 + H2O.",
+        "   Com etanol: CH3CH2OH → H2C=CH2 (eteno) + H2O.",
+        "3. Em álcoois maiores (ex: butan-2-ol), a desidratação intramolecular segue a Regra de Saytzeff: o alceno majoritário é o mais substituído e estável (but-2-eno em vez de but-1-eno).",
+        "4. Conclusão: a alternativa 'a' descreve com exatidão os dois caminhos reacionais."
+      ],
+      coreConcept: "Desidratação de Álcoois (Intermolecular gera Éter; Intramolecular gera Alceno)",
+      trapWarning: "No ENEM: Guarde o macete de temperatura: 140 °C é mais 'frio' (junta 2 moléculas para formar ÉTER); 170 °C é mais 'quente' (quebra a própria molécula para formar ALCENO)."
+    },
+    commonTraps: [
+      "Inverter os produtos da desidratação a 140 °C e 170 °C",
+      "Confundir reação de eliminação/desidratação com reação de oxidação de álcool"
+    ],
+    tags: ["desidratacao-alcoois", "eter", "alceno", "eliminacao", "etanol"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ORG-023",
+    area: "natureza",
+    competence: 7,
+    skill: 24,
+    topic: "Química Orgânica",
+    subtopic: "Oxidação de Álcoois e Reagentes Analíticos (Bafômetro Químico)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Os antigos bafômetros químicos utilizados na fiscalização de trânsito baseavam-se na reação redox entre o vapor de etanol presente no ar expirado pelo condutor e uma solução ácida de dicromato de potássio (K2Cr2O7) embebida em sílica-gel. O dicromato alaranjado contém cromo no estado de oxidação Cr(VI). Na presença de etanol, o cromo é reduzido a íons cromo III [Cr(III)], que apresentam coloração verde característica.",
+      source: "Química Analítica Forense e Toxicologia Social."
+    },
+    prompt: "Durante esse processo redox de identificação no bafômetro químico, o etanol sofre reação de:",
+    options: [
+      { id: "a", text: "oxidação branda a etanal (acetaldeído) e posteriormente a ácido etanoico (ácido acético), enquanto o cromo atua como agente oxidante sofrendo redução de Cr⁶⁺ para Cr³⁺.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "redução a gás metano combustível com ganho de prótons.", isCorrect: false, distractorRationale: "O etanol perde hidrogênios e ganha oxigênio, sofrendo oxidação e não redução a metano." },
+      { id: "c", text: "esterificação espontânea com nitrogênio atmosférico para formar uréia sólida.", isCorrect: false, distractorRationale: "O N2 do ar é inerte nessas condições e a reação com dicromato é uma oxirredução pura." },
+      { id: "d", text: "polimerização por adição formando policloreto de vinila (PVC).", isCorrect: false, distractorRationale: "O etanol não possui ligação dupla nem cloro para formar PVC." },
+      { id: "e", text: "hidrólise enzimática que converte o álcool diretamente em glicerol trivalente.", isCorrect: false, distractorRationale: "A reação no tubo de ensaio é inorgânica química (dicromato ácido), e não enzimática biológica." }
+    ],
+    detailedExplanation: {
+      summary: "Álcoois primários sofrem oxidação em etapas: oxidam-se primeiro a aldeídos e depois a ácidos carboxílicos. O dicromato de potássio (Cr2O7²⁻, alaranjado, Cr⁶⁺) atua como agente oxidante, oxidando o etanol a ácido acético e reduzindo-se a Cr³⁺ (verde).",
+      stepByStep: [
+        "1. Classificação do etanol: Álcool primário (CH3CH2OH, hidroxila ligada a carbono primário).",
+        "2. Caminho oxidativo do álcool primário:",
+        "   - 1ª etapa: Etanol perde 2 H -> Etanal (aldeído, CH3CHO).",
+        "   - 2ª etapa: Etanal recebe 1 O -> Ácido etanoico (ácido carboxílico, CH3COOH).",
+        "3. Oxirredução concomitante:",
+        "   - O carbono do etanol é oxidado (seu NOX médio sobe de -2 para 0 e depois para +3).",
+        "   - O cromo do dicromato é o agente oxidante e sofre redução: Cr⁺⁶ (alaranjado) + 3 e⁻ → Cr⁺³ (verde).",
+        "4. Mudança cromática: A viragem visual do alaranjado para o verde comprova a presença de álcool etílico expirado.",
+        "5. Conclusão: a opção 'a' sintetiza com rigor o mecanismo redox do bafômetro."
+      ],
+      coreConcept: "Oxidação de Álcoois Primários e Reação Redox do Dicromato de Potássio",
+      trapWarning: "No ENEM: Lembre-se: Álcool primário oxida a aldeído e ácido carboxílico; Álcool secundário oxida a cetona; Álcool terciário NÃO oxida em condições brandas (não tem H ligado ao carbono da hidroxila)."
+    },
+    commonTraps: [
+      "Achar que álcool terciário oxida da mesma forma (ele não sofre oxidação branda)",
+      "Confundir qual espécie oxida (o etanol) e qual espécie reduz (o cromo do dicromato)"
+    ],
+    tags: ["oxidacao-alcoois", "bafo-metro", "dicromato-de-potassio", "redox", "quimica-forense"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ORG-024",
+    area: "natureza",
+    competence: 7,
+    skill: 24,
+    topic: "Química Orgânica",
+    subtopic: "Detergentes Biodegradáveis e Estrutura de Tensoativos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nas décadas de 1960 e 1970, rios que cortavam grandes metrópoles foram tomados por espessas montanhas de espuma branca persistente decorrentes do descarte de detergentes sintéticos formulados com sulfonato de alquilbenzeno de cadeia altamente ramificada (ABS). Para mitigar o impacto ambiental, leis ambientais determinaram a substituição compulsória dessa substância por sulfonato de alquilbenzeno linear (LAS).",
+      source: "Química Ambiental e Degradação de Poluentes Aquáticos."
+    },
+    prompt: "A substituição dos detergentes ramificados (ABS) pelos detergentes lineares (LAS) eliminou as espumas permanentes nos mananciais aquáticos porque as moléculas de LAS:",
+    options: [
+      { id: "a", text: "possuem cadeias carbônicas hidrofóbicas retilíneas sem ramificações, que são facilmente reconhecidas e metabolizadas por enzimas de bactérias decompositoras aeróbias por beta-oxidação (biodegradabilidade).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "são 100% solúveis em óleo e nunca entram em contato com a água doce dos rios.", isCorrect: false, distractorRationale: "O detergente é um tensoativo anfipático solúvel em água e em gorduras." },
+      { id: "c", text: "reagem com o oxigênio da atmosfera explodindo instantaneamente antes de tocar o leito dos rios.", isCorrect: false, distractorRationale: "Detergentes não sofrem combustão explosiva espontânea na água." },
+      { id: "d", text: "transformam os rios em ácidos fortes que esterilizam toda e qualquer forma de bactéria aquática.", isCorrect: false, distractorRationale: "O detergente LAS não altera radicalmente a acidez da água para níveis letais universais." },
+      { id: "e", text: "possuem metais pesados radioativos que desintegram as bolhas de sabão por fissão nuclear.", isCorrect: false, distractorRationale: "Distrator estapafúrdio; tensoativos são compostos orgânicos sulfatados sem materiais radioativos." }
+    ],
+    detailedExplanation: {
+      summary: "Bactérias decompositoras naturais possuem enzimas adaptadas evolutivamente para digerir ácidos graxos de cadeia linear. Cadeias carbônicas ramificadas com carbonos quaternários apresentam impedimento estérico, impedindo a ação das enzimas bacterianas (recalcitrância). O detergente linear (LAS) é rapidamente biodegradado, impedindo a formação crônica de espumas.",
+      stepByStep: [
+        "1. Estrutura do detergente: Molécula anfipática com cauda carbônica apolar e cabeça iônica polar (-SO3⁻ Na⁺).",
+        "2. Problema do detergente ramificado (ABS): As ramificações e carbonos terciários/quaternários criam barreira tridimensional (impedimento estérico) para as oxidases bacterianas, tornando-o NÃO biodegradável.",
+        "3. Solução do detergente linear (LAS): Cadeia de hidrocarboneto sem ramificações, análoga aos lipídios naturais.",
+        "4. Ação biológica: As bactérias atacam a extremidade da cadeia e quebram de dois em dois carbonos (beta-oxidação), degradando o tensoativo em poucos dias.",
+        "5. Conclusão: A alternativa 'a' expressa a base bioquímica da biodegradabilidade de detergentes."
+      ],
+      coreConcept: "Biodegradabilidade de Tensoativos: Cadeia Linear vs Cadeia Ramificada",
+      trapWarning: "No ENEM: Guarde a correlação: Cadeia Linear = Biodegradável (amigo do ambiente); Cadeia Ramificada = Recalcitrante / Não biodegradável (poluente gerador de espumas)."
+    },
+    commonTraps: [
+      "Achar que detergente linear não produz espuma na lavagem (ele espuma na pia, mas a espuma some no rio porque é degradada por bactérias)",
+      "Confundir sabão (sal de ácido graxo natural) com detergente sintético (sulfonato de alquila derivado do petróleo)"
+    ],
+    tags: ["detergente-biodegradavel", "tensoativo", "cadeia-linear", "poluicao-aquatica", "las"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ORG-025",
+    area: "natureza",
+    competence: 7,
+    skill: 24,
+    topic: "Química Orgânica",
+    subtopic: "Polímeros Biodegradáveis e Síntese de PLA (Ácido Polilático)",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A substituição de plásticos convencionais derivados do petróleo (como o polipropileno e o poliestireno) por bioplásticos compostáveis é uma tendência de ponta na química sustentável. O poliácido lático (PLA) é obtido a partir da fermentação bacteriana de amido de milho ou cana-de-açúcar para gerar ácido lático [ácido 2-hidroxipropanoico, CH3-CH(OH)-COOH], que em seguida sofre polimerização por condensação.",
+      source: "Polímeros Verdes e Economia Circular dos Materiais."
+    },
+    prompt: "A principal característica estrutural que permite que embalagens de PLA se degradem em usinas de compostagem industrial em questão de meses, diferentemente do polietileno tradicional que persiste por séculos, é a:",
+    options: [
+      { id: "a", text: "presença de ligações éster (-COO-) repetidas ao longo de sua cadeia polimérica principal, que são vulneráveis à hidrólise enzimática e química por microrganismos decompositores que quebram o polímero em monômeros de ácido lático bioassimiláveis.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ausência completa de átomos de carbono em toda a estrutura do material.", isCorrect: false, distractorRationale: "O PLA é um polímero orgânico composto por carbono, hidrogênio e oxigênio." },
+      { id: "c", text: "existência de anéis aromáticos de benzeno insolúveis que repelem a radiação ultravioleta do sol.", isCorrect: false, distractorRationale: "O ácido lático é alifático saturado e não possui anéis aromáticos." },
+      { id: "d", text: "presença de ligações metálicas condutoras que dissolvem o plástico em contato com o ar ambiente seco.", isCorrect: false, distractorRationale: "Plásticos são isolantes moleculares covalentes sem ligação metálica." },
+      { id: "e", text: "incapacidade do material de interagir com moléculas de água ou enzimas fúngicas.", isCorrect: false, distractorRationale: "A biodegradação requer exatamente a interação com água e enzimas microbianas para que ocorra a hidrólise." }
+    ],
+    detailedExplanation: {
+      summary: "O polietileno e o polipropileno possuem esqueletos formados exclusivamente por ligações C-C simples muito estáveis e apolares, que enzimas bacterianas não conseguem clivar. O PLA é um poliéster alifático: possui grupos éster (-COO-) na cadeia principal suscetíveis à clivagem hidrolítica (hidrólise de éster), regenerando ácido lático natural metabolizável.",
+      stepByStep: [
+        "1. Monômero do PLA: Ácido lático possui uma hidroxila (-OH) e uma carboxila (-COOH) na mesma molécula (função mista álcool-ácido).",
+        "2. Polimerização por condensação: O -OH de uma molécula reage com o -COOH da outra com eliminação de H2O, formando ligações ÉSTER repetidas ao longo do polímero (poliéster).",
+        "3. Mecanismo de degradação: Em compostagem aquecida e úmida, a água e enzimas esterases de fungos e bactérias hidrolisam as ligações éster.",
+        "4. Destino metabólico: O polímero fragmenta-se em ácido lático, que entra no metabolismo microbiano e é convertido aerobicamente em CO2, H2O e biomassa, fechando o ciclo do carbono.",
+        "5. Conclusão: a alternativa 'a' detalha com precisão a base macromolecular da biodegradabilidade do PLA."
+      ],
+      coreConcept: "Biopolímeros, Ligações Éster e Degradação por Hidrólise Enzimática (PLA)",
+      trapWarning: "No ENEM: 'Bioplástico' pode significar plástico de FONTE renovável (ex: polietileno verde da cana, que NÃO é biodegradável) OU plástico BIODEGRADÁVEL (como o PLA). Nem todo plástico de origem vegetal se degrada fácil na natureza!"
+    },
+    commonTraps: [
+      "Achar que polietileno verde da cana-de-açúcar se decompõe em meses (ele é quimicamente idêntico ao derivado do petróleo e dura séculos)",
+      "Não reconhecer a ligação éster como o ponto de quebra hidrolítica dos poliésteres"
+    ],
+    tags: ["pla", "biopolimeros", "acido-latico", "poliester", "biodegradabilidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

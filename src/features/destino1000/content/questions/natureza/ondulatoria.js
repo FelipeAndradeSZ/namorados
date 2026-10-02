@@ -834,6 +834,229 @@ export const QUESTIONS_ONDULATORIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-OND-021",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Ondulatória",
+    subtopic: "Efeito Doppler no Ecocardiograma e Hemodinâmica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O ecocardiograma com Doppler é um exame diagnóstico não invasivo amplamente empregado na cardiologia clínica para avaliar o fluxo sanguíneo nas cavidades cardíacas e nas artérias coronárias. O transdutor emite pulsos de ultrassom de alta frequência que colidem com as hemácias (glóbulos vermelhos) em circulação e são refletidos de volta para o detector.",
+      source: "Fundamentos de Física Médica e Diagnóstico por Imagem"
+    },
+    prompt: "Quando as hemácias estão se aproximando do transdutor de ultrassom durante a ejeção sistólica, o sinal refletido captado pelo aparelho apresenta, em relação ao pulso originalmente emitido:",
+    options: [
+      { id: "a", text: "frequência aparente maior e comprimento de onda aparente menor, permitindo calcular com precisão a velocidade e o sentido do fluxo sanguíneo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "frequência aparente menor e comprimento de onda aparente maior, provocando diminuição da velocidade de propagação do ultrassom no sangue.", isCorrect: false, distractorRationale: "Na aproximação relativa, a frequência observada é sempre maior; além disso, a velocidade de propagação depende exclusivamente do meio biológico." },
+      { id: "c", text: "mesma frequência e mesmo comprimento de onda, pois ondas mecânicas não sofrem efeito Doppler no interior de tecidos biológicos líquidos.", isCorrect: false, distractorRationale: "O efeito Doppler manifesta-se em qualquer onda quando há velocidade relativa entre fonte refletora e detector." },
+      { id: "d", text: "conversão espontânea de onda longitudinal mecânica em radiação eletromagnética ionizante de raios X.", isCorrect: false, distractorRationale: "O ultrassom é e permanece sendo uma onda mecânica inofensiva e não ionizante." },
+      { id: "e", text: "amplitude nula devido à interferência totalmente destrutiva gerada pela viscosidade do plasma sanguíneo.", isCorrect: false, distractorRationale: "O eco refletido atinge o detector com amplitude mensurável, não ocorrendo cancelamento total." }
+    ],
+    detailedExplanation: {
+      summary: "Pelo Efeito Doppler, quando a fonte refletora (hemácia) se aproxima do receptor, as frentes de onda refletidas chegam com intervalos de tempo mais curtos, resultando em maior frequência percebida.",
+      stepByStep: [
+        "1. O transdutor emite ultrassom com frequência f0.",
+        "2. As hemácias atuam como receptores móveis e refletores em movimento relativo.",
+        "3. Como as hemácias se deslocam em direção ao transdutor (aproximação), os picos das frentes de onda se comprimem espacialmente no sentido do detector.",
+        "4. A taxa temporal de encontro com o detector aumenta, logo a frequência detectada f é estritamente maior que f0 (shift Doppler positivo).",
+        "5. O processador do aparelho calcula a velocidade v do sangue pela variação percentual delta f / f0."
+      ],
+      coreConcept: "Efeito Doppler: Variação de Frequência Aparente por Movimento Relativo",
+      trapWarning: "A velocidade da onda no meio biológico NÃO muda! A velocidade depende apenas da densidade e elasticidade do sangue (~1540 m/s). O que varia para o observador é a frequência percebida e o comprimento de onda aparente."
+    },
+    commonTraps: [
+      "Achar que na aproximação a frequência aparente diminui",
+      "Confundir variação de frequência aparente com alteração na velocidade intrínseca da onda no tecido"
+    ],
+    tags: ["ondulatoria", "efeito-doppler", "ultrassom", "medicina", "frequencia-aparente"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-OND-022",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Ondulatória",
+    subtopic: "Interferência em Películas Finas e Iridescência",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao observar uma fina película de água e sabão ou uma camada milimétrica de óleo automotivo derramada sobre o asfalto molhado iluminado pela luz solar branca, nota-se a formação de faixas com padrões coloridos e brilhantes (iridescência) que variam de tonalidade conforme a espessura da lâmina e a posição do observador.",
+      source: "Óptica Física e Fenômenos Ondulatórios"
+    },
+    prompt: "Essas cores vívidas observadas na película fina são originadas primariamente pelo fenômeno óptico de:",
+    options: [
+      { id: "a", text: "interferência luminosa entre os feixes de luz refletidos na face anterior e na face posterior da lâmina fina.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "dispersão cromática por refração simples provocada por prismas triangulares esculpidos na água.", isCorrect: false, distractorRationale: "A lâmina de óleo/sabão tem faces planas quase paralelas, não agindo como prisma dispersivo triangular." },
+      { id: "c", text: "polarização linear que absorve totalmente o comprimento de onda correspondente à cor vermelha.", isCorrect: false, distractorRationale: "Polarização orienta o plano elétrico da onda, mas não gera padrões iridescentes de cores por superposição de caminho óptico." },
+      { id: "d", text: "efeito fotoelétrico que excita elétrons livres da superfície gerando fótons de luz laser colimada.", isCorrect: false, distractorRationale: "O efeito fotoelétrico emite elétrons fotoelétricos sob radiação ultravioleta em metais, não fótons em películas líquidas." },
+      { id: "e", text: "difração de raios X decorrente da rede cristalina atômica dos hidrocarbonetos de cadeia longa.", isCorrect: false, distractorRationale: "A luz solar incidente é visível (380-750 nm) e a espessura da película é micrométrica, sem envolvimento de raios X." }
+    ],
+    detailedExplanation: {
+      summary: "Na interferência em lâminas delgadas, a luz solar incide e parte é refletida na superfície externa superior, enquanto a outra parte penetra, reflete na superfície inferior interna e emerge. Os dois raios superpõem-se; para comprimentos de onda cuja diferença de caminho óptico gera interferência construtiva, a cor é reforçada aos olhos do observador.",
+      stepByStep: [
+        "1. O raio de luz solar incidente atinge a primeira superfície da película: raio 1 é refletido imediatamente.",
+        "2. Uma fração da luz é refratada, atravessa a espessura d da lâmina, reflete na segunda interface e emerge paralela ao raio 1 (raio 2).",
+        "3. O raio 2 percorre uma distância extra aproximada de 2d dentro do meio de índice n.",
+        "4. Como a espessura d é da ordem de grandeza de centenas de nanômetros (comparável ao comprimento de onda da luz visível), os dois raios interferem construtiva ou destrutivamente.",
+        "5. Onde a interferência for construtiva para o azul, enxerga-se azul; onde for para o amarelo, enxerga-se amarelo."
+      ],
+      coreConcept: "Interferência em Lâminas Finas: Diferença de Caminho Óptico e Iridescência",
+      trapWarning: "Não confunda arco-íris comum (que envolve dispersão e reflexão interna em gotas esféricas) com iridescência em películas finas (que é interferência construtiva e destrutiva em espessura delgada)."
+    },
+    commonTraps: [
+      "Confundir iridescência de películas com refração em prismas (arco-íris)",
+      "Achar que o sabão ou óleo possui pigmentos corantes que dão a cor"
+    ],
+    tags: ["optica-fisica", "interferência", "laminas-delgadas", "iridescencia", "ondas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-OND-023",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Ondulatória",
+    subtopic: "Difração de Ondas Eletromagnéticas em Ambientes Urbanos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em redes de comunicação sem fio residenciais, os roteadores Wi-Fi operam frequentemente em duas bandas: 2,4 GHz (comprimento de onda em torno de 12,5 cm) e 5,0 GHz (comprimento de onda em torno de 6,0 cm). Usuários costumam constatar que, embora a rede de 5 GHz forneça maior taxa de transmissão de dados a curta distância em linha de visada direta, o sinal de 2,4 GHz consegue contornar cantos de paredes e manter conexão estável em cômodos mais distantes.",
+      source: "Propagação de Ondas Eletromagnéticas e Redes de Comunicação"
+    },
+    prompt: "A maior facilidade do sinal de 2,4 GHz em contornar obstáculos estruturais e quinas de paredes em uma residência decorre do fato de que:",
+    options: [
+      { id: "a", text: "seu maior comprimento de onda favorece o fenômeno da difração, aproximando as dimensões da onda da ordem de grandeza das aberturas e quinas dos ambientes.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "sua velocidade de propagação no ar atmosférico é duas vezes maior do que a velocidade das ondas de 5 GHz.", isCorrect: false, distractorRationale: "Todas as ondas eletromagnéticas propagam-se rigorosamente com a mesma velocidade no ar (c ≈ 3 x 10^8 m/s)." },
+      { id: "c", text: "suas ondas possuem fótons de altíssima energia capazes de quebrar e atravessar as ligações covalentes do concreto armado.", isCorrect: false, distractorRationale: "A energia do fóton é proporcional à frequência (E = hf); 2,4 GHz tem fótons de menor energia e é estritamente não ionizante." },
+      { id: "d", text: "a frequência mais baixa elimina qualquer reflexão especular nas superfícies metálicas e espelhos da casa.", isCorrect: false, distractorRationale: "Ondas de 2,4 GHz refletem perfeitamente em superfícies condutoras metálicas." },
+      { id: "e", text: "o sinal de 2,4 GHz é uma onda acústica mecânica que ressoa com os tubos de PVC hidráulicos.", isCorrect: false, distractorRationale: "Wi-Fi é onda eletromagnética, não onda acústica mecânica." }
+    ],
+    detailedExplanation: {
+      summary: "A difração é a capacidade de uma onda contornar obstáculos ou atravessar aberturas. Esse efeito torna-se tanto mais pronunciado quanto mais o comprimento de onda se aproxima das dimensões dos obstáculos. Como lambda = c / f, menor frequência implica maior comprimento de onda e maior difração.",
+      stepByStep: [
+        "1. Relação fundamental: v = lambda * f -> lambda = c / f.",
+        "2. Frequência menor (2,4 GHz) resulta em comprimento de onda significativamente maior (lambda ≈ 12,5 cm) em comparação a 5 GHz (lambda ≈ 6 cm).",
+        "3. Vãos de portas, frestas e quinas de corredores têm dimensões em escala centimétrica e métrica.",
+        "4. Como a difração é máxima quando o tamanho do obstáculo se aproxima do comprimento de onda, a onda de 2,4 GHz sofre difração mais eficiente, 'dobrando esquinas' com menor atenuação geométrica."
+      ],
+      coreConcept: "Difração de Ondas: Dependência do Comprimento de Onda em Relação ao Tamanho do Obstáculo",
+      trapWarning: "No vácuo e no ar, todas as ondas eletromagnéticas viajam na mesma velocidade c! A frequência maior não viaja mais rápido."
+    },
+    commonTraps: [
+      "Achar que ondas com frequências mais altas têm velocidade maior",
+      "Confundir difração (contornar obstáculos) com refração (mudança de meio e velocidade)"
+    ],
+    tags: ["difracao", "ondas-eletromagneticas", "comprimento-de-onda", "redes-sem-fio", "fisica-do-cotidiano"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-OND-024",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Ondulatória",
+    subtopic: "Polarização da Luz e Aplicações em Telas e Óculos",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em óculos de sol antirreflexo de alta performance e em telas de dispositivos eletrônicos (como monitores LCD), utilizam-se filtros polarizadores constituídos de polímeros orientados. Quando a luz natural emitida pelo Sol incide sobre a superfície de um lago calmo, o reflexo ofuscante que atinge os olhos de um observador à beira do lago é predominantemente polarizado no plano horizontal paralelo à água.",
+      source: "Óptica e Dispositivos Tecnológicos"
+    },
+    prompt: "Para atenuar quase completamente esse reflexo incômodo sem bloquear totalmente a visão do ambiente ao redor, as lentes desses óculos devem possuir um filtro polarizador cujo eixo de transmissão esteja alinhado na direção:",
+    options: [
+      { id: "a", text: "vertical, bloqueando seletivamente o campo elétrico das ondas luminosas horizontalmente polarizadas refletidas pela água.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "horizontal, alinhando-se em fase para amplificar por ressonância o brilho refletido.", isCorrect: false, distractorRationale: "Um eixo horizontal deixaria passar 100% da luz refletida ofuscante, agravando o brilho nos olhos." },
+      { id: "c", text: "circular contínua em rotação mecânica rápida, convertendo o feixe de luz em som inaudível.", isCorrect: false, distractorRationale: "Lentes de óculos são elementos estáticos e luz não se converte em ondas sonoras acústicas." },
+      { id: "d", text: "longitudinal paralela ao raio luminoso, já que a luz natural é constituída por ondas mecânicas.", isCorrect: false, distractorRationale: "A luz é uma onda eletromagnética transversal; ondas longitudinais sequer sofrem polarização." },
+      { id: "e", text: "aleatória tridimensional para refratar todos os comprimentos de onda em ângulos críticos opostos.", isCorrect: false, distractorRationale: "Um filtro aleatório não é polarizador direcional e não eliminaria o ofuscamento horizontal." }
+    ],
+    detailedExplanation: {
+      summary: "A polarização é propriedade exclusiva das ondas transversais. A luz refletida pela superfície horizontal da água torna-se predominantemente polarizada horizontalmente. Portanto, uma lente polarizada verticalmente barra esse componente horizontal (Lei de Malus: cos(90°) = 0), eliminando o reflexo cegante.",
+      stepByStep: [
+        "1. A luz emitida pelo Sol é não polarizada (o vetor campo elétrico vibra em todas as direções transversais perpendiculares à propagação).",
+        "2. Ao refletir numa superfície lisa horizontal (lago, capô de carro, asfalto), o feixe refletido fica fortemente polarizado na horizontal.",
+        "3. Se as lentes dos óculos contêm um polarizador com eixo de transmissão estritamente vertical, a luz polarizada horizontalmente não consegue atravessar a rede de polímeros (ângulo de 90° entre os eixos -> intensidade transmitida é nula).",
+        "4. A luz difusa do restante do ambiente (que contém componentes verticais) passa parcialmente, mantendo a visibilidade clara da paisagem."
+      ],
+      coreConcept: "Polarização da Luz: Ondas Transversais e Filtragem Seletiva de Vetores de Campo Elétrico",
+      trapWarning: "Lembre-se: ONDAS LONGITUDINAIS (como o som no ar) NÃO SOFREM POLARIZAÇÃO! A polarização só existe para ondas transversais (como a luz e as ondas de rádio)."
+    },
+    commonTraps: [
+      "Achar que ondas sonoras sofrem polarização",
+      "Escolher o eixo alinhado ao reflexo (horizontal) em vez do perpendicular (vertical) que o bloqueia"
+    ],
+    tags: ["polarizacao", "ondas-transversais", "optica", "oculos-polarizados", "aplicacoes-tecnologicas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-OND-025",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Ondulatória",
+    subtopic: "Ondas Estacionárias e Acústica de Instrumentos Musicais",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma das cordas de nylon de um violão tem comprimento útil L = 0,60 m entre os dois pontos de fixação rígida (o rastilho e a pestana). Ao ser dedilhada em sua corda solta, a onda propaga-se no nylon com velocidade v = 240 m/s, formando o padrão fundamental de onda estacionária (primeiro harmônico, n = 1), no qual as extremidades fixas atuam obrigatoriamente como nós e o ponto central atua como ventre.",
+      source: "Acústica Física dos Instrumentos de Cordas"
+    },
+    prompt: "A frequência fundamental do som gerado pela vibração dessa corda é igual a:",
+    options: [
+      { id: "a", text: "200 Hz.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "100 Hz.", isCorrect: false, distractorRationale: "Esqueceu que no harmônico fundamental L = lambda / 2, calculando incorretamente lambda = 2,40 m em vez de 1,20 m." },
+      { id: "c", text: "400 Hz.", isCorrect: false, distractorRationale: "Calculou a frequência do segundo harmônico (n = 2) em vez do fundamental (n = 1)." },
+      { id: "d", text: "144 Hz.", isCorrect: false, distractorRationale: "Multiplicou a velocidade pelo comprimento em vez de dividir." },
+      { id: "e", text: "600 Hz.", isCorrect: false, distractorRationale: "Calculou o terceiro harmônico (n = 3)." }
+    ],
+    detailedExplanation: {
+      summary: "Em uma corda de extremidades fixas, o comprimento de onda do harmônico fundamental vale lambda = 2L. Utilizando a equação fundamental da ondulatória v = lambda * f, obtemos f = v / (2L) = 240 / (2 * 0,60) = 200 Hz.",
+      stepByStep: [
+        "1. Para uma corda com ambas as extremidades presas, os extremos são nós e o primeiro harmônico possui apenas 1 ventre central.",
+        "2. A distância entre dois nós consecutivos é meio comprimento de onda: L = lambda / 2 -> lambda = 2 * L.",
+        "3. Substituindo o comprimento fornecido: lambda = 2 * 0,60 m = 1,20 m.",
+        "4. Aplicando a equação de Taylor/fundamental: f = v / lambda.",
+        "5. Cálculo: f = 240 / 1,20 = 200 Hz."
+      ],
+      coreConcept: "Ondas Estacionárias em Cordas: Harmônicos e Frequência Fundamental fn = n * v / (2L)",
+      trapWarning: "Cuidado com as unidades: sempre mantenha o comprimento em metros (m) para coincidir com a velocidade em m/s e obter a frequência em Hertz (Hz = 1/s)."
+    },
+    commonTraps: [
+      "Usar lambda = L em vez de lambda = 2L no primeiro harmônico",
+      "Calcular a frequência do segundo harmônico"
+    ],
+    tags: ["ondas-estacionarias", "harmônicos", "cordas-sonoras", "frequencia-fundamental", "acustica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

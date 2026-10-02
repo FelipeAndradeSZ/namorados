@@ -811,6 +811,228 @@ export const QUESTIONS_GEOGRAFIA_URBANA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEO-021",
+    area: "humanas",
+    competence: 2,
+    skill: 6,
+    topic: "Urbanização",
+    subtopic: "Gentrificação e Revitalização de Centros Urbanos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Projetos de renovação urbana em áreas centrais degradadas ou antigas zonas portuárias das grandes metrópoles brasileiras são frequentemente divulgados pelo poder público e pelo setor imobiliário sob o lema da 'revitalização cultural'. Intervenções paisagísticas, museus modernos e polos gastronômicos atraem investimentos vultosos, elevando substancialmente o preço do metro quadrado e os tributos imobiliários.",
+      source: "Planejamento Urbano e Dinâmica Imobiliária Metropolitana"
+    },
+    prompt: "A principal contradição socioespacial associada a esses processos de gentrificação reside na:",
+    options: [
+      { id: "a", text: "expulsão indireta dos moradores e pequenos comerciantes tradicionais de baixa renda para periferias desprovidas de infraestrutura, provocada pela alta inflacionária dos aluguéis e do custo de vida local.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "democratização automática e gratuita do acesso à moradia popular nobre para todas as famílias periféricas da cidade.", isCorrect: false, distractorRationale: "A gentrificação opera de modo oposto: elitiza o território e restringe o acesso aos grupos de maior poder aquisitivo." },
+      { id: "c", text: "destruição completa das redes elétricas e de abastecimento de água potável no perímetro reformado.", isCorrect: false, distractorRationale: "Os bairros gentrificados recebem pesados investimentos em infraestrutura e serviços públicos qualificados." },
+      { id: "d", text: "estatização compulsória de todas as propriedades privadas que passam a ser geridas por cooperativas agrícolas.", isCorrect: false, distractorRationale: "A lógica da intervenção baseia-se na especulação imobiliária de mercado e no capital privado, não em coletivização agrária." },
+      { id: "e", text: "proibição total de circulação de automóveis e transporte sobre trilhos na malha urbana metropolitana.", isCorrect: false, distractorRationale: "Essas áreas costumam ser altamente conectadas aos modais de transporte para viabilizar o fluxo de consumidores e trabalhadores." }
+    ],
+    detailedExplanation: {
+      summary: "Gentrificação (termo cunhado pela socióloga Ruth Glass) é a transformação de áreas urbanas populares ou deterioradas através de investimentos imobiliários que atraem classes de renda mais alta, resultando na expulsão de populações locais originárias devido ao aumento intolerável do valor do solo, aluguel, IPTU e serviços cotidianos.",
+      stepByStep: [
+        "1. Área central ou portuária passa por abandono histórico e desvalorização do solo.",
+        "2. Poder público e grandes incorporadoras firmam parcerias público-privadas ('operações urbanas') para reformar fachadas, praças e criar centros culturais.",
+        "3. O bairro torna-se 'atraente' e atrai cafés sofisticados, lofts e público de alta renda.",
+        "4. Consequência imediata: disparada no valor dos aluguéis e tributos municipais.",
+        "5. A população trabalhadora e pequenos comerciantes locais não conseguem arcar com os novos custos e são forçados a migrar para periferias longínquas."
+      ],
+      coreConcept: "Gentrificação: Reestruturação Urbana, Valorização Imobiliária e Segregação Excludente",
+      trapWarning: "Cuidado: projetos de renovação urbana trazem embelezamento estético e melhorias estruturais aparentes, mas geram severa exclusão social. O ENEM sempre cobra esse olhar crítico sobre o destino dos moradores mais pobres!"
+    },
+    commonTraps: [
+      "Achar que gentrificação beneficia igualmente todas as classes sociais da cidade",
+      "Confundir gentrificação com favelização ou decadência urbana"
+    ],
+    tags: ["gentrificacao", "especulacao-imobiliaria", "espaco-urbano", "segregacao", "geografia-humana"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEO-022",
+    area: "humanas",
+    competence: 2,
+    skill: 7,
+    topic: "Urbanização",
+    subtopic: "Macrocefalia Urbana e Hipertrofia do Setor Terciário",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O processo de urbanização brasileiro, intensificado a partir da década de 1950 com a industrialização do Sudeste e a modernização excludente do campo (mecanização agrícola e concentração fundiária), gerou fluxos migratórios gigantescos em direção às grandes capitais sem que a infraestrutura urbana e a oferta de empregos com carteira assinada crescessem na mesma velocidade.",
+      source: "Milton Santos, A Urbanização Brasileira (adaptado)."
+    },
+    prompt: "Essa discrepância entre o ritmo veloz do êxodo rural e a capacidade de absorção produtiva formal das cidades resultou na:",
+    options: [
+      { id: "a", text: "macrocefalia urbana, acompanhada da hipertrofia do setor terciário informal (subemprego, ambulantes e serviços precários de subsistência).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "erradicação imediata da pobreza metropolitana por pleno emprego na indústria de alta tecnologia.", isCorrect: false, distractorRationale: "O setor fabril nunca conseguiu empregar todo o excedente populacional do campo, gerando desemprego e informalidade." },
+      { id: "c", text: "distribuição perfeitamente equilibrada e harmônica da população entre todas as vilas rurais do país.", isCorrect: false, distractorRationale: "O país concentrou de forma desproporcional sua população nas grandes metrópoles litorâneas e do Sudeste." },
+      { id: "d", text: "extinção completa do comércio e das atividades bancárias nas cidades com mais de 500 mil moradores.", isCorrect: false, distractorRationale: "O setor financeiro e corporativo se fortaleceu nas metrópoles, convivendo com a massa do terciário informal." },
+      { id: "e", text: "redução drástica da taxa de urbanização nacional para patamares inferiores a 20% no século XXI.", isCorrect: false, distractorRationale: "O Brasil ultrapassou 85% de taxa de urbanização no século XXI, caracterizando um país amplamente urbano." }
+    ],
+    detailedExplanation: {
+      summary: "Macrocefalia urbana é o inchaço desmesurado de uma ou poucas metrópoles em relação ao restante da rede urbana. Sem postos industriais suficientes para todos os migrantes, essa massa de trabalhadores refugiou-se no setor terciário informal (vendedores ambulantes, biscates, prestadores autônomos sem direitos previdenciários), fenômeno conhecido como hipertrofia do terciário.",
+      stepByStep: [
+        "1. Fatores repulsivos no campo: concentração de terras, mecanização de lavouras e ausência de reforma agrária expulsaram milhões de camponeses.",
+        "2. Chegada às capitais: a indústria automatizava-se gradualmente e exigia qualificação, não absorvendo a mão de obra migrante.",
+        "3. Sobrevivência: os trabalhadores desempregados criam postos de trabalho autônomos de baixa remuneração e sem direitos trabalhistas (economia informal).",
+        "4. Hipertrofia do terciário: o comércio de rua e os serviços pessoais inflam desproporcionalmente, tornando-se o principal amortecedor da crise social urbana."
+      ],
+      coreConcept: "Urbanização Subdesenvolvida: Macrocefalia Urbana e Hipertrofia do Terciário Informal",
+      trapWarning: "Setor terciário hipertrofiado no Brasil não é sinal de enriquecimento ou economia pós-industrial desenvolvida, mas sim reflexo de carência de empregos formais na indústria e agropecuária."
+    },
+    commonTraps: [
+      "Confundir hipertrofia do terciário informal com setor de serviços avançados e tecnologia de ponta",
+      "Achar que o êxodo rural foi totalmente absorvido pelas indústrias automobilísticas e têxteis"
+    ],
+    tags: ["macrocefalia-urbana", "setor-terciario", "informalidade", "exodo-rural", "milton-santos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEO-023",
+    area: "humanas",
+    competence: 2,
+    skill: 7,
+    topic: "Urbanização",
+    subtopic: "Conurbação e o Estatuto da Metrópole",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A Lei Federal nº 13.089/2015, conhecida como Estatuto da Metrópole, estabeleceu diretrizes para o planejamento, a gestão e a execução das Funções Públicas de Interesse Comum (FPICs) em Regiões Metropolitanas e Aglomerações Urbanas no Brasil. O marco legal visa enfrentar impasses administrativos gerados pela contiguidade física entre municípios vizinhos cujas manchas urbanas se fundiram ao longo do tempo.",
+      source: "Legislação Urbana e Governança Federativa"
+    },
+    prompt: "O fenômeno geográfico espacial da fusão contínua entre manchas urbanas e o principal desafio de gestão metropolitana associado são:",
+    options: [
+      { id: "a", text: "conurbação e a necessidade de articulação interfederativa consorciada para serviços comuns essenciais, como transporte coletivo metropolitano, saneamento básico e gestão de resíduos sólidos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "segregação vertical e a obrigação de unificar os prefeitos de todos os municípios em um único governante vitalício.", isCorrect: false, distractorRationale: "O Estatuto não cria cargos vitalícios nem extingue a autonomia constitucional dos prefeitos municipais." },
+      { id: "c", text: "macrocefalia isolada e a destruição das fronteiras estaduais pela transferência compulsória de capitais.", isCorrect: false, distractorRationale: "A conurbação é expansão horizontal de manchas urbanas vizinhas, sem alteração de fronteiras estaduais compulsórias." },
+      { id: "d", text: "rurbanização dispersa e a proibição de circulação de veículos entre cidades limítrofes.", isCorrect: false, distractorRationale: "Na conurbação há integração contínua de malhas viárias e fluxo diário massivo de pessoas e mercadorias." },
+      { id: "e", text: "desmetropolização acelerada e o encerramento definitivo do fornecimento de água tratada para periferias.", isCorrect: false, distractorRationale: "A lei visa justamente aprimorar e garantir a cooperação nos sistemas integrados de adutoras e mananciais." }
+    ],
+    detailedExplanation: {
+      summary: "Conurbação é o encontro ou unificação física das malhas urbanas de dois ou mais municípios limítrofes, tornando a divisa municipal indistinguível a olho nu. Como rios, linhas de ônibus, lixo e enchentes não respeitam limites políticos de fronteira municipal, o Estatuto da Metrópole institui instrumentos de governança interfederativa para planejar conjuntamente essas Funções Públicas de Interesse Comum (FPICs).",
+      stepByStep: [
+        "1. Conceito espacial: conurbação = expansão horizontal periférica de cidades vizinhas até a fusão física do tecido urbano.",
+        "2. Conflito institucional: cada município tem seu prefeito, sua câmara de vereadores e seu plano diretor independente.",
+        "3. Problema: poluição hídrica em um município a montante contamina a represa de captação de água do município vizinho a jusante; uma avenida corta três cidades com tarifas de ônibus desarticuladas.",
+        "4. Solução do Estatuto da Metrópole: governança consorciada intermunicipal para gerenciar transporte, bacias hidrográficas, aterros sanitários e habitação compartilhada."
+      ],
+      coreConcept: "Conurbação Urbana e Governança Metropolitana Interfederativa (Estatuto da Metrópole)",
+      trapWarning: "Cuidado: conurbação não unifica as prefeituras! Cada município preserva sua autonomia política e jurídica. O que se unifica é o espaço construído e a necessidade de gestão técnica integrada."
+    },
+    commonTraps: [
+      "Achar que na conurbação os municípios deixam de existir politicamente",
+      "Confundir conurbação (fusão física) com migração pendular (movimento diário de pessoas)"
+    ],
+    tags: ["conurbacao", "regiao-metropolitana", "estatuto-da-metropole", "governanca", "politicas-publicas"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEO-024",
+    area: "humanas",
+    competence: 2,
+    skill: 7,
+    topic: "Urbanização",
+    subtopic: "Mobilidade Urbana e Migração Pendular Diária",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Todos os dias úteis, milhões de trabalhadores residentes em municípios do entorno das capitais (como a Baixada Fluminense no Rio de Janeiro, a Região do Grande ABC e Osasco em São Paulo, ou a Região Metropolitana de Salvador) acordam de madrugada para enfrentar trens superlotados, metrôs e ônibus intermunicipais rumo ao centro financeiro, retornando aos seus lares somente no período noturno.",
+      source: "Mobilidade Urbana e Dinâmica Metropolitana no Brasil"
+    },
+    prompt: "Esse movimento populacional diário e periódico e suas principais consequências socioeconômicas definem:",
+    options: [
+      { id: "a", text: "a migração pendular, que gera sobrecarga nos sistemas de transporte coletivo nos horários de pico e reduz as horas de descanso e lazer dos trabalhadores das cidades-dormitório.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a transumância pastoril, motivada pelas alterações das estações climáticas de inverno e verão.", isCorrect: false, distractorRationale: "Transumância é migração sazonal de pastores/rebanhos ligada ao ciclo climático, e não deslocamento diário urbano de trabalhadores." },
+      { id: "c", text: "o nomadismo urbano, no qual as famílias trocam de residência fixa todas as semanas em busca de comida.", isCorrect: false, distractorRationale: "O trabalhador pendular possui residência fixa e estável na cidade-dormitório e retorna para casa todo dia." },
+      { id: "d", text: "o êxodo urbano definitivo, que esvazia permanentemente as áreas industriais periféricas.", isCorrect: false, distractorRationale: "Não é migração definitiva, mas sim um movimento diário de ir e voltar (vai e vem periódico)." },
+      { id: "e", text: "o teletrabalho universal, que eliminou a necessidade de trens e metrôs nas grandes cidades brasileiras.", isCorrect: false, distractorRationale: "A classe trabalhadora de serviços manuais e comércio opera predominantemente de forma presencial diária." }
+    ],
+    detailedExplanation: {
+      summary: "A migração pendular é o movimento diário de vai e vem de pessoas entre seu município de residência (cidade-dormitório) e o município onde trabalham ou estudam (polo de atração econômica). Esse fluxo concentra-se em horários de pico matutinos e vespertinos, expondo as deficiências estruturais do transporte de massa e subtraindo horas preciosas do tempo de convívio familiar e repouso dos trabalhadores.",
+      stepByStep: [
+        "1. Definição: migração pendular = deslocamento periódico de curto alcance com retorno no mesmo dia (sem mudança definitiva de domicílio), assemelhando-se ao vai e vem de um pêndulo de relógio.",
+        "2. Causa fundamental: segregação socioespacial e preços proibitivos dos aluguéis e imóveis próximos aos centros de trabalho.",
+        "3. O trabalhador é compelido a morar longe, em municípios periféricos chamados de 'cidades-dormitório'.",
+        "4. Impactos diretos: superlotação crônica de ônibus e trens metropolitanos, congestionamentos monumentais de trânsito e desgaste físico/mental crônico pelo tempo excessivo de deslocamento diário (comum ultrapassar 3 a 4 horas por dia em trânsito)."
+      ],
+      coreConcept: "Migração Pendular: Mobilidade Urbana, Cidades-Dormitório e Desigualdade no Uso do Tempo",
+      trapWarning: "Lembre-se: migração pendular NÃO É mudança de residência! O sujeito não se muda de casa; ele apenas se desloca diariamente para trabalhar e volta para dormir."
+    },
+    commonTraps: [
+      "Confundir migração pendular (diária) com transumância ou sazonal (meses/estações do ano)",
+      "Achar que quem faz migração pendular muda de endereço definitivo toda semana"
+    ],
+    tags: ["migracao-pendular", "cidades-dormitorio", "mobilidade-urbana", "transporte-publico", "trabalho"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-GEO-025",
+    area: "humanas",
+    competence: 2,
+    skill: 6,
+    topic: "Urbanização",
+    subtopic: "Segregação Socioespacial e Vulnerabilidade Geotécnica a Desastres",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A cada temporada de fortes tempestades de verão nas regiões serranas e litorâneas do Sudeste e Nordeste brasileiro, repetem-se tragédias com deslizamentos de terra (escorregamentos em encostas de morros) e inundações em fundos de vale que vitimam desproporcionalmente as populações mais vulneráveis de favelas e loteamentos clandestinos.",
+      source: "Geomorfologia Urbana, Defesa Civil e Justiça Climática"
+    },
+    prompt: "A recorrência desses episódios trágicos reflete fundamentalmente:",
+    options: [
+      { id: "a", text: "a segregação socioespacial gerada pela mercantilização do solo urbano, que empurra as famílias de menor renda para terrenos de alto risco geológico desprovidos de contenção de encostas e drenagem adequada.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "um fenômeno geológico estritamente imprevisível e aleatório no qual a renda das famílias não guarda qualquer correlação com o local de moradia atingido.", isCorrect: false, distractorRationale: "A geografia demonstra clara estratificação de classe: os setores de alta renda habitam áreas geotécnicamente seguras e estruturadas." },
+      { id: "c", text: "a opção recreativa voluntária da população pobre em construir casas sobre leitos de rios por preferência estética.", isCorrect: false, distractorRationale: "A ocupação dessas áreas não é escolha recreativa, mas imposição econômica da carência de alternativas habitacionais acessíveis." },
+      { id: "d", text: "a ocorrência inédita de chuvas torrenciais no clima tropical, que nunca havia registrado precipitações pluviométricas no verão.", isCorrect: false, distractorRationale: "O regime pluviométrico tropical com verões chuvosos é característica climática natural conhecida há séculos no Brasil." },
+      { id: "e", text: "o excesso de áreas verdes preservadas no topo dos morros que desestabiliza a coesão das rochas cristalinas.", isCorrect: false, distractorRationale: "A vegetação nativa com raízes profundas fixa as encostas; sua retirada para ocupação desordenada é que deflagra os deslizamentos." }
+    ],
+    detailedExplanation: {
+      summary: "Os chamados 'desastres naturais' em encostas urbanas são, na verdade, desastres SOCIOAMBIENTAIS. A terra urbana é tratada como mercadoria especulativa no mercado imobiliário formal. As famílias que não conseguem pagar os preços do mercado formal são empurradas para encostas íngremes e várzeas inundáveis (áreas de descarte do mercado imobiliário). Ao retirar a vegetação e despejar águas servidas sem saneamento no talude, a estabilidade geotécnica do morro colapsa na estação chuvosa.",
+      stepByStep: [
+        "1. Crítica conceitual: não existem desastres puramente 'naturais' em áreas urbanas ocupadas; existe a conjunção de um evento físico (chuva intensa) sobre uma vulnerabilidade social prévia induzida.",
+        "2. Mecanismo de mercado: o solo plano e seguro é monopolizado por incorporadoras e classes de alta renda.",
+        "3. Mecânica do solo em encostas: a remoção da mata nativa, o corte inadequado do talude para fazer platôs e o descarte de canos de água não canalizada encharcam o manto de intemperismo (solo sobre rocha).",
+        "4. Aumento da pressão neutra da água: a água da chuva satura o solo, reduz o atrito e o peso da massa de terra vence a resistência, desencadeando escorregamento translacional ou em cunha.",
+        "5. Conclusão: a solução exige reforma urbana, habitação de interesse social segura e obras de contenção e drenagem preventivas pela Defesa Civil."
+      ],
+      coreConcept: "Desastres Socioambientais: Segregação Urbana, Vulnerabilidade Geotécnica e Justiça Climática",
+      trapWarning: "Cuidado com o discurso de culpabilização da vítima ('a culpa é do morador que construiu no morro'). A ocupação de áreas de risco decorre da ausência histórica de políticas públicas de habitação popular e planejamento urbano inclusivo!"
+    },
+    commonTraps: [
+      "Tratar a tragédia como evento meramente 'natural e imprevisível'",
+      "Culpabilizar exclusivamente as famílias pobres pela falta de opções habitacionais seguras"
+    ],
+    tags: ["desastres-socioambientais", "deslizamentos-de-terra", "vulnerabilidade-social", "planejamento-urbano", "justica-climatica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

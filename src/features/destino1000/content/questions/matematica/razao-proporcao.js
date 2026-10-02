@@ -833,7 +833,239 @@ export const QUESTIONS_RAZAO_PROPORCAO = [
       trapWarning: "A engrenagem intermediária não altera a relação final de rotações entre a primeira e a última engrenagem!"
     },
     commonTraps: ["considerar proporcao direta", "marcar o valor da engrenagem intermediaria B"],
-    tags: ["engrenagens", "proporcionalidade inversa", "mecanica aplicada", "transmissao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-021",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Razão e Proporção",
+    subtopic: "Escala Cartográfica e Proporcionalidade de Áreas (E²)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na planta baixa de ampliação de um complexo hospitalar, elaborada na escala de 1:200, a sala destinada ao novo centro cirúrgico de alta complexidade foi desenhada como um retângulo com dimensões de 15 cm de largura por 20 cm de comprimento.",
+      source: "Arquitetura Hospitalar e Desenho Técnico"
+    },
+    prompt: "A área real ocupada por essa sala cirúrgica no edifício construído é de:",
+    options: [
+      { id: "a", text: "1 200 m²", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "60 m²", isCorrect: false, distractorRationale: "Multiplicou a área desenhada apenas pelo fator linear 200 (300 × 200 = 60 000 cm² = 6 m²) ou cometeu erro de conversão de unidades." },
+      { id: "c", text: "120 m²", isCorrect: false, distractorRationale: "Errou a escala de áreas ao esquecer de elevar a razão ao quadrado e errou a conversão métrica." },
+      { id: "d", text: "600 m²", isCorrect: false, distractorRationale: "Calculou incorretamente as dimensões reais como 15 m e 40 m." },
+      { id: "e", text: "2 400 m²", isCorrect: false, distractorRationale: "Multiplicou o resultado correto por 2 arbitrariamente." }
+    ],
+    detailedExplanation: {
+      summary: "A razão entre áreas é igual ao quadrado da razão de escala linear: A_real = A_desenho / E² ou A_real = A_desenho × (denominador da escala)². Convertendo as dimensões reais: 15 cm × 200 = 3 000 cm = 30 m; 20 cm × 200 = 4 000 cm = 40 m. Área = 30 m × 40 m = 1 200 m².",
+      stepByStep: [
+        "1. Escala linear: 1 : 200 significa que 1 cm no papel corresponde a 200 cm = 2 metros na realidade.",
+        "2. Largura real: 15 cm × 2 m/cm = 30 metros.",
+        "3. Comprimento real: 20 cm × 2 m/cm = 40 metros.",
+        "4. Área real = Largura real × Comprimento real = 30 m × 40 m = 1 200 m².",
+        "5. Método alternativo por escala de áreas: Área desenhada = 15 cm × 20 cm = 300 cm². Fator de escala ao quadrado = (200)² = 40 000. Área real = 300 × 40 000 cm² = 12 000 000 cm². Como 1 m² = 10 000 cm², dividindo por 10 000 obtém-se 1 200 m²."
+      ],
+      coreConcept: "Escala Linear vs Escala de Áreas: Razão entre áreas é proporcional a E²",
+      trapWarning: "Erro clássico no ENEM: multiplicar a área do papel diretamente por 200 em vez de (200)²!"
+    },
+    commonTraps: [
+      "Multiplicar a área por 200 em vez de 200²",
+      "Errar a conversão de cm² para m² (lembrar que 1 m² = 10 000 cm²)"
+    ],
+    tags: ["escala", "areas", "proporcionalidade", "geometria-plana", "desenho-tecnico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-022",
+    area: "matematica",
+    competence: 1,
+    skill: 4,
+    topic: "Razão e Proporção",
+    subtopic: "Divisão em Partes Inversamente Proporcionais",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A direção de um centro de pesquisa médica estabeleceu uma gratificação especial de R$ 33.000,00 para ser distribuída entre três equipes laboratoriais (A, B e C). Para incentivar a pontualidade na entrega dos laudos clínicos, a quantia foi dividida de forma inversamente proporcional ao tempo médio de atraso registrado por cada equipe durante o trimestre: a equipe A teve média de 2 dias de atraso, a equipe B teve 3 dias e a equipe C registrou 6 dias.",
+      source: "Gestão Laboratorial e Métodos Quantitativos"
+    },
+    prompt: "O valor recebido pela equipe A nessa divisão é de:",
+    options: [
+      { id: "a", text: "R$ 16.500,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 11.000,00", isCorrect: false, distractorRationale: "Calculou o valor atribuído à equipe B." },
+      { id: "c", text: "R$ 5.500,00", isCorrect: false, distractorRationale: "Calculou o valor recebido pela equipe C." },
+      { id: "d", text: "R$ 6.000,00", isCorrect: false, distractorRationale: "Fez divisão diretamente proporcional (2 / (2+3+6) × 33.000 = 6.000)." },
+      { id: "e", text: "R$ 18.000,00", isCorrect: false, distractorRationale: "Fez divisão diretamente proporcional para a equipe C (6 / 11 × 33.000 = 18.000)." }
+    ],
+    detailedExplanation: {
+      summary: "Dividir em partes inversamente proporcionais a 2, 3 e 6 equivale a dividir em partes diretamente proporcionais a 1/2, 1/3 e 1/6. Reduzindo ao mesmo denominador comum (6), as frações equivalem a 3/6, 2/6 e 1/6, ou seja, proporções de 3 : 2 : 1. A equipe A recebe 3 das 6 partes, totalizando metade do montante (R$ 16.500,00).",
+      stepByStep: [
+        "1. Inversos dos coeficientes de atraso: 1/2 (equipe A), 1/3 (equipe B), 1/6 (equipe C).",
+        "2. MMC(2, 3, 6) = 6. Multiplicando todos por 6 para obter coeficientes inteiros:",
+        "   Equipe A: (1/2) × 6 = 3 partes.",
+        "   Equipe B: (1/3) × 6 = 2 partes.",
+        "   Equipe C: (1/6) × 6 = 1 parte.",
+        "3. Total de partes proporcionais: 3 + 2 + 1 = 6 partes.",
+        "4. Valor de cada parte: R$ 33.000,00 / 6 = R$ 5.500,00.",
+        "5. Equipe A tem 3 partes: 3 × R$ 5.500,00 = R$ 16.500,00."
+      ],
+      coreConcept: "Divisão Inversamente Proporcional: Conversão em Frações de Denominador Comum",
+      trapWarning: "Atenção: divisão INVERSAMENTE proporcional premia quem tem menor atraso! A equipe com menor atraso (2 dias) deve receber a maior fatia financeira."
+    },
+    commonTraps: [
+      "Dividir diretamente proporcional aos números 2, 3 e 6 (favorecendo quem atrasou mais)",
+      "Errar a soma das frações de denominadores distintos"
+    ],
+    tags: ["divisao-proporcional", "inversamente-proporcional", "arimetica", "frações", "matematica-financeira"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-023",
+    area: "matematica",
+    competence: 3,
+    skill: 11,
+    topic: "Razão e Proporção",
+    subtopic: "Densidade Demográfica e Razão entre Índices Populacionais",
+    difficulty: 2,
+    estimatedTimeSeconds: 130,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para planejar a distribuição de novas Unidades Básicas de Saúde (UBS), a Secretaria Municipal de Saúde analisou a densidade demográfica de dois distritos de uma grande cidade: o Distrito Norte possui uma população de 120 000 habitantes distribuídos em uma área geográfica de 80 km²; o Distrito Sul possui uma população de 180 000 habitantes em uma área territorial de 150 km².",
+      source: "Demografia e Planejamento em Saúde Coletiva"
+    },
+    prompt: "A razão entre a densidade demográfica do Distrito Norte e a densidade demográfica do Distrito Sul é igual a:",
+    options: [
+      { id: "a", text: "1,25", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "0,80", isCorrect: false, distractorRationale: "Inverteu a razão calculando Distrito Sul / Distrito Norte (1 200 / 1 500 = 0,80)." },
+      { id: "c", text: "1,50", isCorrect: false, distractorRationale: "Calculou a razão entre as áreas geográficas (120 000 / 80 = 1 500, sem dividir pela do Sul)." },
+      { id: "d", text: "0,67", isCorrect: false, distractorRationale: "Calculou a razão direta entre as populações (120 000 / 180 000 = 2/3 ≈ 0,67)." },
+      { id: "e", text: "1,875", isCorrect: false, distractorRationale: "Calculou a razão direta entre as áreas territoriais (150 / 80 = 1,875)." }
+    ],
+    detailedExplanation: {
+      summary: "Densidade demográfica é a razão Habitantes / Área. D_Norte = 120 000 / 80 = 1 500 hab/km². D_Sul = 180 000 / 150 = 1 200 hab/km². A razão D_Norte / D_Sul = 1 500 / 1 200 = 5 / 4 = 1,25.",
+      stepByStep: [
+        "1. Densidade do Distrito Norte: D_Norte = 120 000 hab / 80 km² = 1 500 hab/km².",
+        "2. Densidade do Distrito Sul: D_Sul = 180 000 hab / 150 km² = 1 200 hab/km².",
+        "3. Razão pedida: D_Norte / D_Sul = 1 500 / 1 200.",
+        "4. Simplificando por 300: (1 500 / 300) / (1 200 / 300) = 5 / 4 = 1,25.",
+        "5. Conclusão: o Distrito Norte tem densidade populacional 25% superior à do Distrito Sul."
+      ],
+      coreConcept: "Densidade Demográfica: Razão entre População Absoluta e Área Territorial",
+      trapWarning: "Atenção à ordem da razão solicitada no comando: Norte sobre Sul, e não Sul sobre Norte."
+    },
+    commonTraps: [
+      "Inverter a ordem da razão pedida (calcular Sul / Norte)",
+      "Dividir apenas as populações e ignorar as respectivas áreas territoriais"
+    ],
+    tags: ["densidade-demografica", "razao", "interpretacao-de-dados", "geografia-quantitativa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-024",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Eficiência Energética e Consumo Específico",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na gestão hídrica de uma estação de tratamento de água potável, avalia-se a eficiência de dois conjuntos motobomba para bombeamento de água: o Motor 1 consumiu 45 kWh de energia elétrica para bombear 180 m³ de água para os reservatórios elevados; o Motor 2 consumiu 60 kWh de energia elétrica para bombear 200 m³ de água sob as mesmas condições hidráulicas.",
+      source: "Saneamento Básico e Eficiência Energética"
+    },
+    prompt: "Em relação ao volume de água bombeado por unidade de energia consumida (em m³/kWh), a diferença de rendimento entre o motor mais eficiente e o motor menos eficiente é de, aproximadamente:",
+    options: [
+      { id: "a", text: "0,67 m³/kWh", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "0,33 m³/kWh", isCorrect: false, distractorRationale: "Cometeu erro de subtração de frações (4 - 10/3 = 2/3 ≈ 0,67, não 1/3 ≈ 0,33)." },
+      { id: "c", text: "1,20 m³/kWh", isCorrect: false, distractorRationale: "Calculou a razão entre consumos em kWh em vez do rendimento m³/kWh." },
+      { id: "d", text: "0,15 m³/kWh", isCorrect: false, distractorRationale: "Inverteu a taxa de rendimento calculando consumo específico em kWh/m³ (45/180 = 0,25 e 60/200 = 0,30 -> diferença 0,05)." },
+      { id: "e", text: "2,00 m³/kWh", isCorrect: false, distractorRationale: "Subtraiu diretamente grandezas de unidades incomparáveis." }
+    ],
+    detailedExplanation: {
+      summary: "Rendimento do Motor 1: 180 m³ / 45 kWh = 4,00 m³/kWh. Rendimento do Motor 2: 200 m³ / 60 kWh = 10/3 ≈ 3,33 m³/kWh. A diferença entre os rendimentos é 4 - 3,33... = 2/3 ≈ 0,67 m³/kWh.",
+      stepByStep: [
+        "1. Rendimento do Motor 1: R1 = 180 / 45 = 4,00 m³/kWh (mais eficiente).",
+        "2. Rendimento do Motor 2: R2 = 200 / 60 = 20/6 = 10/3 ≈ 3,333 m³/kWh.",
+        "3. Diferença de rendimento: Delta R = R1 - R2 = 4 - 10/3 = (12 - 10) / 3 = 2/3 m³/kWh.",
+        "4. Convertendo a dízima para representação decimal aproximada: 2/3 ≈ 0,666... ≈ 0,67 m³/kWh.",
+        "5. O motor 1 bombeia cerca de 0,67 m³ a mais de água para cada kWh de eletricidade gasta."
+      ],
+      coreConcept: "Taxa de Eficiência e Rendimento Operacional: Razão entre Benefício e Custo Energético",
+      trapWarning: "Atenção à unidade pedida: o enunciado pede volume por kWh (m³/kWh), e não kWh por volume (kWh/m³)."
+    },
+    commonTraps: [
+      "Inverter a razão pedida (calcular kWh/m³ em vez de m³/kWh)",
+      "Arredondar prematuramente as frações gerando erro cumulativo"
+    ],
+    tags: ["rendimento", "razao", "eficiencia-energetica", "taxas", "saneamento"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-025",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Regra de Três Composta e Produtividade",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na reforma e ampliação emergencial de um setor de terapia intensiva de um hospital de referência, uma equipe de 12 operários com produtividades idênticas, trabalhando 8 horas por dia durante 10 dias consecutivos, executou 40% do total da obra planejada.",
+      source: "Gestão Operacional de Engenharia Hospitalar"
+    },
+    prompt: "Para finalizar os 60% restantes da obra, foram contratados mais operários, totalizando uma equipe de 16 profissionais com o mesmo padrão de produtividade, que passarão a trabalhar 6 horas por dia. Nessas novas condições, os dias necessários para concluir os 60% restantes da obra serão:",
+    options: [
+      { id: "a", text: "15 dias", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "12 dias", isCorrect: false, distractorRationale: "Tratou a jornada diária como diretamente proporcional ao número de dias." },
+      { id: "c", text: "18 dias", isCorrect: false, distractorRationale: "Errou a proporção de operários tratando como diretamente proporcional." },
+      { id: "d", text: "10 dias", isCorrect: false, distractorRationale: "Supôs que o aumento de operários compensaria perfeitamente o aumento de obra sem considerar a redução das horas diárias." },
+      { id: "e", text: "20 dias", isCorrect: false, distractorRationale: "Esqueceu de inverter a razão dos operários na regra de três composta." }
+    ],
+    detailedExplanation: {
+      summary: "Montando a proporção com a grandeza Dias como incógnita x: mais operários exigem menos dias (inversa: 16/12); menos horas/dia exigem mais dias (inversa: 6/8); mais obra exige mais dias (direta: 40/60). Assim: 10/x = (16/12) × (6/8) × (40/60) = (4/3) × (3/4) × (2/3) = 2/3. Logo, 2x = 30 -> x = 15 dias.",
+      stepByStep: [
+        "1. Identificar grandezas: Operários (O), Horas/dia (H), Dias (D), Fração da Obra (F).",
+        "   Cenário 1: 12 operários, 8 h/dia, 10 dias, 40% de obra.",
+        "   Cenário 2: 16 operários, 6 h/dia, x dias, 60% de obra.",
+        "2. Fixando a coluna dos dias (D):",
+        "   - Dias e Operários: Inversamente proporcionais (mais operários -> menos dias). Razão = 16/12 = 4/3.",
+        "   - Dias e Horas/dia: Inversamente proporcionais (menos horas -> mais dias). Razão = 6/8 = 3/4.",
+        "   - Dias e Obra: Diretamente proporcionais (mais obra -> mais dias). Razão = 40/60 = 2/3.",
+        "3. Montando a equação: 10 / x = (4/3) × (3/4) × (2/3).",
+        "4. Simplificando os fatores: (4/3) × (3/4) = 1. Resta 10 / x = 2/3.",
+        "5. Multiplicando em cruz: 2x = 30 -> x = 15 dias."
+      ],
+      coreConcept: "Regra de Três Composta: Análise Criteriosa de Grandezas Direta e Inversamente Proporcionais",
+      trapWarning: "Classifique cuidadosamente cada grandeza em relação à incógnita (Dias): operários e jornada são inversamente proporcionais, enquanto o volume da obra é diretamente proporcional!"
+    },
+    commonTraps: [
+      "Tratar operários ou horas de trabalho como diretamente proporcionais aos dias",
+      "Esquecer de que a fração de obra restante é 60% (100% - 40%) e não 40%"
+    ],
+    tags: ["regra-de-tres-composta", "proporcionalidade", "produtividade", "arimetica"],
     status: "published",
     version: 1,
     createdAt: "2026-10-01"

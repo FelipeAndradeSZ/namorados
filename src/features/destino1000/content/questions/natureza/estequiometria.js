@@ -823,6 +823,263 @@ export const QUESTIONS_ESTEQUIOMETRIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ESTEQ-021",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Estequiometria",
+    subtopic: "Reagente Limitante e Rendimento na Síntese de Haber-Bosch",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A síntese industrial da amônia (NH3) pelo processo Haber-Bosch é a base da fabricação de fertilizantes nitrogenados que sustentam a agricultura mundial: N2(g) + 3 H2(g) ⇌ 2 NH3(g). Em um reator industrial mantido sob alta pressão e com catalisador de ferro, foram inseridos 10,0 mols de gás nitrogênio (N2) e 24,0 mols de gás hidrogênio (H2). O processo operou com um rendimento reacional de 75%.",
+      source: "Princípios de Química: Questionando a Vida Moderna e o Meio Ambiente."
+    },
+    prompt: "Com base nas quantidades fornecidas e no rendimento da reação, o número de mols de amônia (NH3) efetivamente produzido é igual a:",
+    options: [
+      { id: "a", text: "12,0 mols.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "16,0 mols.", isCorrect: false, distractorRationale: "Calculou o rendimento teórico máximo de 100% sobre o reagente limitante (16,0 mols), esquecendo de aplicar os 75% de rendimento real." },
+      { id: "c", text: "15,0 mols.", isCorrect: false, distractorRationale: "Considerou o N2 como limitante sem verificar a proporção estequiométrica (10 mols de N2 exigiriam 30 mols de H2)." },
+      { id: "d", text: "20,0 mols.", isCorrect: false, distractorRationale: "Assumiu 100% de rendimento com base no nitrogênio em excesso." },
+      { id: "e", text: "8,0 mols.", isCorrect: false, distractorRationale: "Errou a proporção estequiométrica molar entre H2 e NH3." }
+    ],
+    detailedExplanation: {
+      summary: "Pela estequiometria 1 N2 : 3 H2, para reagir com 24,0 mols de H2 são necessários 8,0 mols de N2. Como há 10,0 mols de N2, o H2 é o reagente limitante e sobram 2,0 mols de N2 em excesso. 3 mols de H2 geram 2 mols de NH3, logo 24 mols de H2 gerariam teoricamente 16 mols de NH3. Com 75% de rendimento: 16 · 0,75 = 12,0 mols de NH3.",
+      stepByStep: [
+        "1. Escrever a equação química balanceada: 1 N2 + 3 H2 → 2 NH3.",
+        "2. Identificar o reagente limitante:",
+        "   - Razão estequiométrica requerida: n(H2) / n(N2) = 3 / 1 = 3.",
+        "   - Razão experimental fornecida: 24,0 / 10,0 = 2,4 < 3.",
+        "   - Como 2,4 é menor que 3, o H2 está em falta: H2 É O REAGENTE LIMITANTE.",
+        "3. Calcular o rendimento teórico máximo de NH3 (a 100%):",
+        "   3 mols H2 ──── 2 mols NH3",
+        "   24,0 mols H2 ── n_teorico",
+        "   n_teorico = (24,0 · 2) / 3 = 16,0 mols de NH3.",
+        "4. Aplicar o rendimento real de 75%:",
+        "   n_real = 16,0 · 0,75 = 12,0 mols de NH3.",
+        "5. Conclusão: a síntese produz 12,0 mols de amônia."
+      ],
+      coreConcept: "Reagente Limitante e Cálculo com Rendimento Percentual",
+      trapWarning: "No ENEM: NUNCA calcule produtos a partir do reagente em excesso! O reagente limitante é quem dita a quantidade máxima formada."
+    },
+    commonTraps: [
+      "Usar o reagente que tem menor número de mols sem ponderar pelos coeficientes estequiométricos",
+      "Esquecer de multiplicar pelo rendimento percentual de 75%"
+    ],
+    tags: ["reagente-limitante", "rendimento", "haber-bosch", "amonia", "estequiometria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ESTEQ-022",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Estequiometria",
+    subtopic: "Pureza de Minérios na Siderurgia (Hematita e Ferro)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na metalurgia da extração do ferro nos altos-fornos siderúrgicos, a hematita (minério constituído predominantemente por óxido de ferro III, Fe2O3) é reduzida pelo monóxido de carbono (CO) conforme a reação: Fe2O3(s) + 3 CO(g) → 2 Fe(s) + 3 CO2(g). Uma carga de 1.000 kg de minério de hematita com teor de pureza de 80% em Fe2O3 foi processada sob rendimento de 100%.\n(Massas molares: Fe = 56 g/mol; O = 16 g/mol; Fe2O3 = 160 g/mol).",
+      source: "Siderurgia Brasileira e Química Industrial Inorgânica."
+    },
+    prompt: "A massa de ferro metálico puro (Fe) obtida a partir dessa tonelada de minério é de:",
+    options: [
+      { id: "a", text: "560 kg.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "700 kg.", isCorrect: false, distractorRationale: "Calculou como se o minério fosse 100% puro sem descontar os 20% de impurezas estéreis (1.000 x 112/160 = 700 kg)." },
+      { id: "c", text: "800 kg.", isCorrect: false, distractorRationale: "Calculou apenas a massa de Fe2O3 puro (80% de 1.000 = 800 kg) sem efetuar o cálculo estequiométrico do Fe metálico." },
+      { id: "d", text: "280 kg.", isCorrect: false, distractorRationale: "Esqueceu do coeficiente 2 no ferro metálico (usou apenas 56 g em vez de 2 x 56 = 112 g)." },
+      { id: "e", text: "448 kg.", isCorrect: false, distractorRationale: "Errou a proporção estequiométrica." }
+    ],
+    detailedExplanation: {
+      summary: "Em 1.000 kg de minério a 80% de pureza há 800 kg de Fe2O3 puro. Pela estequiometria: 160 g de Fe2O3 produzem 2 · 56 = 112 g de Fe metálico. Logo, 800 kg produzem (800 · 112) / 160 = 560 kg de ferro metálico.",
+      stepByStep: [
+        "1. Calcular a massa de reagente puro na amostra de minério:",
+        "   m(Fe2O3 puro) = 80% de 1.000 kg = 0,80 · 1.000 = 800 kg.",
+        "2. Calcular as massas molares dos participantes da reação:",
+        "   M(Fe2O3) = 2 · 56 + 3 · 16 = 112 + 48 = 160 g/mol.",
+        "   Massa de 2 Fe = 2 · 56 = 112 g/mol.",
+        "3. Montar a regra de três estequiométrica:",
+        "   160 kg de Fe2O3 ──── 112 kg de Fe",
+        "   800 kg de Fe2O3 ──── m(Fe)",
+        "4. Resolver a proporção:",
+        "   m(Fe) = (800 · 112) / 160 = 5 · 112 = 560 kg.",
+        "5. Conclusão: são obtidos 560 kg de ferro metálico."
+      ],
+      coreConcept: "Cálculo Estequiométrico Envolvendo Pureza de Amostras Minerais",
+      trapWarning: "No ENEM: Impurezas NÃO reagem! O primeiro passo obrigatório é sempre calcular a massa da substância pura multiplicando a massa total pela porcentagem de pureza."
+    },
+    commonTraps: [
+      "Fazer a conta direto com os 1.000 kg brutos sem aplicar os 80% de pureza",
+      "Confundir a massa de Fe2O3 puro (800 kg) com a massa do ferro metálico produzido (560 kg)"
+    ],
+    tags: ["pureza", "siderurgia", "hematita", "ferro", "estequiometria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ESTEQ-023",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Estequiometria",
+    subtopic: "Volume de Gases Fora das CNTP e a Equação dos Gases Ideais",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O sistema de segurança passiva do airbag veicular baseia-se na decomposição pirotécnica ultrarrápida da azida de sódio sólida (NaN3) ativada por um sensor de desaceleração mecânica: 2 NaN3(s) → 2 Na(s) + 3 N2(g). O gás nitrogênio (N2) gerado infla a bolsa em menos de 40 milissegundos. Considere uma bolsa de airbag que requer exatamente 60,0 L de gás N2 sob pressão de 1,0 atm e temperatura de 27 °C para inflar plenamente.\n(Dados: R = 0,082 atm·L·mol⁻¹·K⁻¹; T(K) = T(°C) + 273; Massas molares: Na = 23 g/mol, N = 14 g/mol; NaN3 = 65 g/mol).",
+      source: "Química Forense e Sistemas de Segurança Automotiva."
+    },
+    prompt: "A quantidade mínima aproximada de matéria (em mols) de azida de sódio (NaN3) necessária para inflar adequadamente esse airbag nas referidas condições de temperatura e pressão é de:",
+    options: [
+      { id: "a", text: "1,63 mol.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2,44 mol.", isCorrect: false, distractorRationale: "Calculou os mols de N2 (2,44 mol), esquecendo da proporção estequiométrica 2 mols de NaN3 para 3 mols de N2." },
+      { id: "c", text: "3,66 mol.", isCorrect: false, distractorRationale: "Multiplicou por 3/2 em vez de multiplicar por 2/3." },
+      { id: "d", text: "2,68 mol.", isCorrect: false, distractorRationale: "Usou incorretamente o volume molar de 22,4 L/mol das CNTP em vez de usar PV=nRT para 27 °C." },
+      { id: "e", text: "0,82 mol.", isCorrect: false, distractorRationale: "Dividiu pela metade sem considerar a razão estequiométrica." }
+    ],
+    detailedExplanation: {
+      summary: "Primeiro determina-se o número de mols de N2 pela equação de Clapeyron (PV = nRT). T = 27 + 273 = 300 K. n(N2) = (1 · 60) / (0,082 · 300) = 60 / 24,6 ≈ 2,439 mol. Pela equação: 2 NaN3 geram 3 N2, logo n(NaN3) = (2/3) · 2,439 ≈ 1,63 mol.",
+      stepByStep: [
+        "1. Converter a temperatura para Kelvin: T = 27 + 273 = 300 K.",
+        "2. Calcular o número de mols de gás N2 por PV = nRT:",
+        "   n(N2) = (P · V) / (R · T) = (1,0 · 60,0) / (0,082 · 300).",
+        "   0,082 · 300 = 24,6 L·atm/mol.",
+        "   n(N2) = 60,0 / 24,6 ≈ 2,439 mol de N2.",
+        "3. Aplicar a proporção estequiométrica da reação balanceada:",
+        "   2 mols NaN3 ──── 3 mols N2",
+        "   n(NaN3) ──── 2,439 mols N2",
+        "   n(NaN3) = (2 · 2,439) / 3 = 4,878 / 3 ≈ 1,626 ≈ 1,63 mol.",
+        "4. Conclusão: são necessários aproximadamente 1,63 mol de azida de sódio."
+      ],
+      coreConcept: "Estequiometria com Gases Fora das CNTP (Equação de Clapeyron: PV = nRT)",
+      trapWarning: "No ENEM: Se a temperatura for diferente de 0 °C (273 K), NUNCA use 22,4 L/mol! O volume molar só é 22,4 L nas CNTP (0 °C e 1 atm)."
+    },
+    commonTraps: [
+      "Usar 22,4 L/mol quando a temperatura dada é 27 °C (300 K)",
+      "Esquecer de converter a temperatura de Celsius para Kelvin somando 273"
+    ],
+    tags: ["gases-ideais", "clapeyron", "airbag", "estequiometria", "azida-de-sodio"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ESTEQ-024",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Estequiometria",
+    subtopic: "Reações Consecutivas na Produção Industrial de Ácido Sulfúrico",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O ácido sulfúrico (H2SO4) é o insumo químico de maior volume de produção mundial, considerado um termômetro da atividade industrial. Sua síntese pelo processo de contato ocorre em três etapas consecutivas:\nEtapa 1: S(s) + O2(g) → SO2(g)\nEtapa 2: 2 SO2(g) + O2(g) → 2 SO3(g)\nEtapa 3: SO3(g) + H2O(l) → H2SO4(aq)\n(Massas molares: S = 32 g/mol; H = 1 g/mol; O = 16 g/mol; H2SO4 = 98 g/mol).",
+      source: "Indústria Química e Processos Químicos Industriais."
+    },
+    prompt: "Para produzir 490 kg de ácido sulfúrico (H2SO4) com 100% de rendimento global no processo, a massa mínima de enxofre sólido (S) elementar requerida na etapa inicial é igual a:",
+    options: [
+      { id: "a", text: "160 kg.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "320 kg.", isCorrect: false, distractorRationale: "Multiplicou por 2 devido ao coeficiente na etapa 2 intermediária, sem somar a equação global adequadamente." },
+      { id: "c", text: "490 kg.", isCorrect: false, distractorRationale: "Assumiu conservação de massa 1:1 em quilogramas em vez de proporção estequiométrica molar." },
+      { id: "d", text: "98 kg.", isCorrect: false, distractorRationale: "Usou a massa molar do ácido sulfúrico." },
+      { id: "e", text: "80 kg.", isCorrect: false, distractorRationale: "Dividiu a massa por 2 por engano." }
+    ],
+    detailedExplanation: {
+      summary: "Multiplicando a etapa 1 por 2 e a etapa 3 por 2 e somando, a reação global é: 2 S + 3 O2 + 2 H2O → 2 H2SO4, o que simplifica para 1 mol de S gerando 1 mol de H2SO4. Portanto, 32 g de S geram 98 g de H2SO4. Para 490 kg de ácido: (490 · 32) / 98 = 5 · 32 = 160 kg de enxofre.",
+      stepByStep: [
+        "1. Obter a equação química global somando as etapas:",
+        "   - Etapa 1 (multiplicada por 2): 2 S + 2 O2 → 2 SO2",
+        "   - Etapa 2: 2 SO2 + O2 → 2 SO3",
+        "   - Etapa 3 (multiplicada por 2): 2 SO3 + 2 H2O → 2 H2SO4",
+        "   - Equação Global: 2 S + 3 O2 + 2 H2O → 2 H2SO4.",
+        "2. Relação molar simplificada: 1 mol S ──── 1 mol H2SO4.",
+        "3. Relação em massa:",
+        "   32 kg de S ──── 98 kg de H2SO4",
+        "   m(S) ──── 490 kg de H2SO4.",
+        "4. Resolver a proporção:",
+        "   m(S) = (490 · 32) / 98 = 5 · 32 = 160 kg.",
+        "5. Conclusão: são necessários 160 kg de enxofre sólido."
+      ],
+      coreConcept: "Estequiometria de Reações Consecutivas e Equação Global",
+      trapWarning: "No ENEM: Em reações sucessivas, determine SEMPRE a proporção na equação global cancelando as substâncias intermediárias (como SO2 e SO3) antes de fazer as contas."
+    },
+    commonTraps: [
+      "Fazer três regras de três separadas e errar o transporte de coeficientes intermediários",
+      "Achar que a massa de reagente precisa ser igual à massa do produto (a água e o oxigênio também fornecem massa ao ácido!)"
+    ],
+    tags: ["reacoes-consecutivas", "acido-sulfurico", "processo-de-contato", "equacao-global"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ESTEQ-025",
+    area: "natureza",
+    competence: 5,
+    skill: 17,
+    topic: "Estequiometria",
+    subtopic: "Neutralização de Efluentes Ácidos por Hidróxidos Metálicos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma indústria química descarta em sua estação de tratamento um efluente ácido contendo 2.000 L de uma solução de ácido clorídrico (HCl) na concentração molar de 0,050 mol/L. Para neutralizar totalmente esse ácido antes do lançamento na rede coletora, os técnicos utilizam hidróxido de magnésio [Mg(OH)2] em suspensão aquosa: 2 HCl(aq) + Mg(OH)2(s) → MgCl2(aq) + 2 H2O(l).\n(Massas molares: Mg = 24 g/mol; O = 16 g/mol; H = 1 g/mol; Mg(OH)2 = 58 g/mol).",
+      source: "Tratamento de Efluentes Industriais e Química Ambiental."
+    },
+    prompt: "A massa mínima de hidróxido de magnésio [Mg(OH)2] necessária para neutralizar integralmente todo o ácido clorídrico contido no efluente é igual a:",
+    options: [
+      { id: "a", text: "2,9 kg.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "5,8 kg.", isCorrect: false, distractorRationale: "Esqueceu que a estequiometria é 2 HCl para 1 Mg(OH)2 (usou proporção 1:1 de 100 mols de hidróxido = 5.800 g)." },
+      { id: "c", text: "1,45 kg.", isCorrect: false, distractorRationale: "Dividiu a massa de hidróxido por 2 duas vezes consecutivas." },
+      { id: "d", text: "11,6 kg.", isCorrect: false, distractorRationale: "Multiplicou por 2 em vez de dividir por 2 na proporção da base." },
+      { id: "e", text: "0,58 kg.", isCorrect: false, distractorRationale: "Errou a conversão de volume de 2.000 L por uma casa decimal." }
+    ],
+    detailedExplanation: {
+      summary: "O número total de mols de HCl no efluente é n = C · V = 0,050 mol/L · 2.000 L = 100 mols de HCl. Pela equação: 2 mols de HCl reagem com 1 mol de Mg(OH)2. São necessários 50 mols de Mg(OH)2. Massa = 50 · 58 g/mol = 2.900 g = 2,9 kg.",
+      stepByStep: [
+        "1. Calcular a quantidade de matéria (mols) de HCl no reservatório:",
+        "   n(HCl) = Concentração · Volume = 0,050 mol/L · 2.000 L = 100 mols de HCl.",
+        "2. Identificar a estequiometria da reação de neutralização:",
+        "   2 HCl ──── 1 Mg(OH)2.",
+        "   Como cada molécula de Mg(OH)2 possui 2 hidroxilas (diácida/dibásica), neutraliza 2 mols de H+.",
+        "3. Calcular os mols necessários de Mg(OH)2:",
+        "   n(Mg(OH)2) = 100 / 2 = 50 mols.",
+        "4. Calcular a massa em gramas e quilogramas:",
+        "   Massa molar do Mg(OH)2 = 24 + 2 · (16 + 1) = 24 + 34 = 58 g/mol.",
+        "   m = 50 mols · 58 g/mol = 2.900 g = 2,9 kg.",
+        "5. Conclusão: são necessários 2,9 kg de hidróxido de magnésio."
+      ],
+      coreConcept: "Estequiometria em Soluções Aquosas e Reação de Neutralização Ácido-Base",
+      trapWarning: "No ENEM: Cuidado com a atomicidade dos íons H+ e OH-! 1 mol de Mg(OH)2 neutraliza 2 mols de HCl (proporção 1:2)."
+    },
+    commonTraps: [
+      "Tratar a reação como 1:1 esquecendo que o Mg(OH)2 tem 2 hidroxilas",
+      "Errar a conversão de gramas para quilogramas (2.900 g = 2,9 kg)"
+    ],
+    tags: ["neutralizacao", "acido-base", "efluentes", "solucoes", "estequiometria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

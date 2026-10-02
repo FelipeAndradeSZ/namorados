@@ -836,6 +836,246 @@ export const QUESTIONS_ELETROQUIMICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-ELETROQ-021",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Proteção Catódica e Metal de Sacrifício",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Estruturas metálicas de aço (liga de ferro e carbono) em contato permanente com eletrólitos aquosos salinos, como tubulações subterrâneas de gás e cascos de plataformas marítimas de petróleo, sofrem severa corrosão eletroquímica. Para protegê-las, técnicos fixam blocos de zinco metálico conectados eletricamente à estrutura de ferro. Periodicamente, constata-se o desgaste dos blocos de zinco, enquanto o ferro permanece intacto.\n(Potenciais padrão de redução: Eº(Fe²⁺/Fe) = -0,44 V; Eº(Zn²⁺/Zn) = -0,76 V; Eº(O₂ + 2H₂O + 4e⁻ / 4OH⁻) = +0,40 V).",
+      source: "Engenharia de Materiais e Corrosão Eletroquímica."
+    },
+    prompt: "O princípio eletroquímico que fundamenta a proteção da estrutura de aço pelos blocos de zinco reside no fato de o zinco:",
+    options: [
+      { id: "a", text: "possuir menor potencial de redução (maior potencial de oxidação) do que o ferro, oxidando-se preferencialmente como ânodo de sacrifício e fornecendo elétrons para manter a estrutura de ferro como cátodo protegido.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "atuar como cátodo inerte que impede a passagem de oxigênio por blindagem eletrostática nuclear.", isCorrect: false, distractorRationale: "O zinco atua como ânodo ativo e desgasta-se por oxidação (Zn → Zn²⁺ + 2e⁻), e não como cátodo inerte." },
+      { id: "c", text: "possuir maior densidade que o ferro, repelindo mecanicamente a água salgada para longe dos tubos.", isCorrect: false, distractorRationale: "O fenômeno é eletroquímico por transferência de elétrons, não uma barreira mecânica gravitacional de densidade." },
+      { id: "d", text: "reduzir os cátions sódio da água do mar em sódio metálico explosivo protetor.", isCorrect: false, distractorRationale: "O sódio tem potencial muito mais negativo (-2,71 V) e não é reduzido na água pelo zinco." },
+      { id: "e", text: "tornar o potencial de redução do ferro infinitamente positivo pela criação de um campo magnético eterno.", isCorrect: false, distractorRationale: "O potencial termodinâmico de redução do elemento não é alterado." }
+    ],
+    detailedExplanation: {
+      summary: "Na proteção catódica por metal de sacrifício, conecta-se ao ferro um metal com menor potencial de redução (maior tendência de oxidar), como o zinco (-0,76 V) ou magnésio (-2,37 V). O metal de sacrifício perde elétrons (ânodo) e corrói no lugar do ferro (cátodo).",
+      stepByStep: [
+        "1. Comparar potenciais padrão de redução:",
+        "   Eº(Fe²⁺/Fe) = -0,44 V",
+        "   Eº(Zn²⁺/Zn) = -0,76 V.",
+        "2. Identificar a tendência redox:",
+        "   Como -0,76 V é menor que -0,44 V, o zinco tem menor tendência de reduzir e MAIOR tendência de oxidar que o ferro.",
+        "3. Semirreação no zinco (Ânodo de sacrifício): Zn(s) → Zn²⁺(aq) + 2 e⁻ (sofre corrosão contínua).",
+        "4. Fluxo de elétrons: Os elétrons fluem do zinco para a tubulação de ferro, tornando o ferro o CÁTODO da célula galvânica.",
+        "5. Conclusão: Enquanto houver zinco metálico acoplado, o ferro não cede elétrons e não enferruja (permanece protegido)."
+      ],
+      coreConcept: "Proteção Catódica e Metal de Sacrifício contra a Corrosão do Ferro",
+      trapWarning: "No ENEM: Para ser metal de sacrifício do ferro, o metal DEVE ter potencial de redução MENOR que -0,44 V (como Zn, Mg, Al). Metais nobres como cobre (+0,34 V) ACELERAM a ferrugem do ferro em vez de proteger!"
+    },
+    commonTraps: [
+      "Achar que qualquer metal pode proteger o ferro (metais com Eº maior, como cobre ou estanho, aumentam a corrosão do ferro)",
+      "Confundir o papel do zinco como ânodo com cátodo"
+    ],
+    tags: ["protecao-catodica", "metal-de-sacrificio", "corrosao", "zinco", "ferro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELETROQ-022",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Eletrólise Ígnea e Produção de Metais Reativos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Metais altamente eletropositivos (como sódio, magnésio e alumínio) não podem ser obtidos por eletrólise de suas soluções aquosas, pois a água descarrega preferencialmente no cátodo. Por essa razão, a indústria utiliza a eletrólise ígnea, que consiste na passagem de corrente contínua através do composto iônico fundido a altas temperaturas na completa ausência de água. Na eletrólise ígnea do cloreto de sódio (célula de Downs), o sal funde a cerca de 800 °C.",
+      source: "Processos Industriais Eletroquímicos e Obtenção de Metais."
+    },
+    prompt: "Na célula de eletrólise ígnea do cloreto de sódio fundido (NaCl líquido), os produtos formados no cátodo (polo negativo) e no ânodo (polo positivo) são, respectivamente:",
+    options: [
+      { id: "a", text: "sódio metálico líquido [Na(l)] e gás cloro [Cl2(g)].", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "gás hidrogênio [H2(g)] e gás oxigênio [O2(g)].", isCorrect: false, distractorRationale: "Hidrogênio e oxigênio só seriam gerados se houvesse água, mas a eletrólise ígnea é conduzida a seco na ausência absoluta de água." },
+      { id: "c", text: "hidróxido de sódio [NaOH(aq)] e ácido clorídrico [HCl(aq)].", isCorrect: false, distractorRationale: "Eletrólise ígnea produz substâncias simples elementares (Na e Cl2), e não compostos aquosos." },
+      { id: "d", text: "gás cloro no cátodo e sódio metálico no ânodo.", isCorrect: false, distractorRationale: "Inverteu os polos: o cátion Na+ é atraído pelo cátodo negativo e o ânion Cl- é atraído pelo ânodo positivo." },
+      { id: "e", text: "carbonato de sódio e ozônio gasoso.", isCorrect: false, distractorRationale: "Não há carbono nem oxigênio no sal NaCl puro fundido." }
+    ],
+    detailedExplanation: {
+      summary: "A eletrólise ígnea força reações não espontâneas em sais fundidos. Cátions Na⁺ migram para o cátodo (-) onde recebem elétrons (redução a Naº metálico); ânions Cl⁻ migram para o ânodo (+) onde perdem elétrons (oxidação a Cl2 gasoso).",
+      stepByStep: [
+        "1. Dissociação por fusão térmica pura: 2 NaCl(s) → 2 Na⁺(l) + 2 Cl⁻(l) (sem solvente aquoso).",
+        "2. No Cátodo (polo negativo do gerador):",
+        "   O polo negativo injeta elétrons: 2 Na⁺(l) + 2 e⁻ → 2 Na(l) (sódio metálico reduzido).",
+        "3. No Ânodo (polo positivo do gerador):",
+        "   O polo positivo puxa elétrons: 2 Cl⁻(l) → Cl2(g) + 2 e⁻ (gás cloro oxidado).",
+        "4. Equação global da eletrólise ígnea: 2 NaCl(l) → 2 Na(l) + Cl2(g).",
+        "5. Conclusão: a alternativa 'a' descreve fielmente os produtos dos eletrodos."
+      ],
+      coreConcept: "Eletrólise Ígnea do NaCl e Redução Direta de Metais Alcalinos",
+      trapWarning: "No ENEM: Eletrólise ÍGNEA não tem água! Jamais marque hidrogênio (H2) ou oxigênio (O2) em eletrólise ígnea de sal anidro."
+    },
+    commonTraps: [
+      "Confundir eletrólise ígnea (seca) com eletrólise aquosa (com água)",
+      "Inverter a polaridade dos eletrodos (na eletrólise, cátodo é negativo e ânodo é positivo)"
+    ],
+    tags: ["eletrolise-ignea", "sodio", "cloro", "celula-de-downs", "eletroquimica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELETROQ-023",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Eletrólise Aquosa do Cloreto de Sódio e Competição de Descarga",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A eletrólise de uma solução aquosa concentrada de cloreto de sódio (salmoura industrial) é a base da gigantesca indústria de cloro-álcali. Nessa solução ocorrem simultaneamente a dissociação do sal e a autoionização da água, gerando quatro espécies iônicas em solução: Na⁺, H⁺, Cl⁻ e OH⁻. Na eletrólise com eletrodos inertes de grafite, estabelece-se uma competição de descarga iônica em cada polo.",
+      source: "Indústria de Cloro-Álcali e Eletroquímica Aplicada."
+    },
+    prompt: "Considerando a facilidade relativa de descarga dos íons em meio aquoso, as substâncias gasosas liberadas no cátodo e no ânodo e o soluto remanescente na solução são, respectivamente:",
+    options: [
+      { id: "a", text: "gás hidrogênio (H2) no cátodo, gás cloro (Cl2) no ânodo e hidróxido de sódio (NaOH) dissolvido na solução aquosa.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "sódio metálico no cátodo, gás oxigênio no ânodo e água destilada pura.", isCorrect: false, distractorRationale: "O cátion Na+ não descarrega na presença de água; o H+ descarrega primeiro porque metais alcalinos têm prioridade de descarga baixíssima." },
+      { id: "c", text: "gás oxigênio no cátodo, gás hidrogênio no ânodo e ácido clorídrico.", isCorrect: false, distractorRationale: "Inverteu os gases e os polos da eletrólise." },
+      { id: "d", text: "gás cloro no cátodo, sódio metálico no ânodo e hipoclorito de sódio.", isCorrect: false, distractorRationale: "O cloro é ânion e descarrega no polo positivo (ânodo), não no cátodo." },
+      { id: "e", text: "gás metano e vapor de amônia.", isCorrect: false, distractorRationale: "Não há carbono nem nitrogênio na salmoura." }
+    ],
+    detailedExplanation: {
+      summary: "Na salmoura: no cátodo concorrem Na⁺ (metal alcalino) e H⁺ (da água). O H⁺ descarrega primeiro gerando H2(g) e deixando OH⁻ em excesso. No ânodo concorrem Cl⁻ (haleto não oxigenado) e OH⁻ (da água). O Cl⁻ descarrega primeiro gerando Cl2(g). Na solução restam os íons espectadores Na⁺ e OH⁻, formando NaOH (soda cáustica).",
+      stepByStep: [
+        "1. Ordem de prioridade de descarga no Cátodo (cátions):",
+        "   Metais alcalinos, alcalinoterrosos e Al³⁺ < H⁺ da água < Demais cátions metálicos.",
+        "   Como o Na⁺ é alcalino, o H⁺ tem prioridade: 2 H⁺(aq) + 2 e⁻ → H2(g) (desprendimento de gás hidrogênio).",
+        "2. Ordem de prioridade de descarga no Ânodo (ânions):",
+        "   Ânions oxigenados e F⁻ < OH⁻ da água < Haletos não oxigenados (Cl⁻, Br⁻, I⁻) e outros.",
+        "   O Cl⁻ descarrega antes do OH⁻: 2 Cl⁻(aq) → Cl2(g) + 2 e⁻ (desprendimento de gás cloro).",
+        "3. Soluto remanescente na cuba eletrolítica:",
+        "   Os íons Na⁺ e OH⁻ permanecem dissolvidos, originando solução concentrada de soda cáustica (NaOH).",
+        "4. Conclusão: a indústria cloro-álcali produz simultaneamente H2, Cl2 e NaOH."
+      ],
+      coreConcept: "Eletrólise Aquosa de Salmoura e Regras de Prioridade de Descarga",
+      trapWarning: "No ENEM: Na eletrólise aquosa de sais de sódio, NUNCA se forma sódio metálico! Forma-se gás H2 e soda cáustica NaOH."
+    },
+    commonTraps: [
+      "Achar que o sódio descarrega em solução aquosa (ele só descarrega em eletrólise ígnea)",
+      "Não saber a ordem de descarga dos ânions haletos frente à hidroxila da água"
+    ],
+    tags: ["eletrolise-aquosa", "salmoura", "cloro-alcali", "ordem-de-descarga", "naoh"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELETROQ-024",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "1ª Lei de Faraday e Galvanoplastia (Prateação)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na indústria da galvanoplastia, o recobrimento metálico de objetos por eletrodeposição (como a cromagem de peças de automóveis ou a prateação de talheres de latão) baseia-se na 1ª Lei de Faraday: a massa de substância depositada em um eletrodo é diretamente proporcional à quantidade de carga elétrica (Q = i · t) que atravessa a cuba eletrolítica. Um jogo de talheres foi prateado em um banho de nitrato de prata [AgNO3(aq)] operando com corrente contínua constante de 5,0 A durante 965 segundos.\n(Dados: Constante de Faraday F = 96.500 C/mol de elétrons; Massa molar da prata Ag = 108 g/mol; Semirreação: Ag⁺ + 1 e⁻ → Ag(s)).",
+      source: "Eletroquímica Quantitativa e Engenharia de Superfícies."
+    },
+    prompt: "A massa de prata metálica (Ag) depositada sobre os talheres ao término desse processo de galvanoplastia é igual a:",
+    options: [
+      { id: "a", text: "5,40 g.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10,80 g.", isCorrect: false, distractorRationale: "Esqueceu de dividir pela constante de Faraday de forma correta (calculou 0,1 mol em vez de 0,05 mol)." },
+      { id: "c", text: "2,70 g.", isCorrect: false, distractorRationale: "Dividiu a massa por 2 por engano, como se a prata fosse bivalente." },
+      { id: "d", text: "54,00 g.", isCorrect: false, distractorRationale: "Errou a ordem de grandeza da carga calculada." },
+      { id: "e", text: "1,08 g.", isCorrect: false, distractorRationale: "Multiplicou por 0,01 mol em vez de 0,05 mol." }
+    ],
+    detailedExplanation: {
+      summary: "Pela Lei de Faraday: Q = i · t = 5,0 A · 965 s = 4.825 C. Sabendo que 1 mol de elétrons (96.500 C) deposita 1 mol de prata (108 g), monta-se a proporção: m = (4.825 · 108) / 96.500 = 0,05 · 108 = 5,40 g.",
+      stepByStep: [
+        "1. Calcular a carga elétrica total transportada (Q):",
+        "   Q = i · t = 5,0 A · 965 s = 4.825 C.",
+        "2. Determinar o número de mols de elétrons que circularam:",
+        "   n_e = Q / F = 4.825 C / 96.500 C/mol = 0,05 mol de elétrons.",
+        "3. Analisar a estequiometria eletrônica da deposição da prata:",
+        "   Ag⁺ + 1 e⁻ → 1 Ag(s).",
+        "   1 mol de e⁻ (96.500 C) ──── deposita 1 mol de Ag (108 g).",
+        "4. Calcular a massa depositada:",
+        "   m = 0,05 mol · 108 g/mol = 5,40 g de prata.",
+        "5. Conclusão: depositam-se 5,40 gramas de prata metálica sobre os talheres."
+      ],
+      coreConcept: "1ª Lei de Faraday: Q = i · t e Cálculo Estequiométrico da Eletrodeposição",
+      trapWarning: "No ENEM: Preste extrema atenção na valência do metal: para Ag⁺ (1 e⁻ = 96.500 C); para Cu²⁺ ou Ni²⁺ (2 e⁻ = 2 · 96.500 C = 193.000 C); para Al³⁺ (3 e⁻ = 3 · 96.500 C)!"
+    },
+    commonTraps: [
+      "Esquecer de converter o tempo para segundos (nesta questão o tempo já veio em segundos)",
+      "Não atentar para a carga do íon metálico na semirreação catódica"
+    ],
+    tags: ["leis-de-faraday", "galvanoplastia", "prateacao", "carga-eletrica", "eletrodeposicao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
+  },
+  {
+    id: "NAT-ELETROQ-025",
+    area: "natureza",
+    competence: 5,
+    skill: 18,
+    topic: "Eletroquímica",
+    subtopic: "Pilhas de Combustível a Hidrogênio e Eficiência Energética",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A transição energética para uma economia descarbonizada tem nas células a combustível de membrana polimérica de troca de prótons (PEMFC) uma das tecnologias mais promissoras. Ao contrário das pilhas secundárias convencionais (baterias de lítio), a célula a combustível é um dispositivo de fluxo contínuo alimentado externamente com gás hidrogênio (H2) no ânodo e gás oxigênio (O2) no cátodo: 2 H2(g) + O2(g) → 2 H2O(l).",
+      source: "Tecnologias de Hidrogênio Verde e Descarbonização Energética."
+    },
+    prompt: "Uma vantagem termodinâmica e ambiental fundamental das células a combustível a hidrogênio quando comparadas aos motores de combustão interna reside no fato de que elas:",
+    options: [
+      { id: "a", text: "convertem diretamente a energia química dos reagentes em energia elétrica sem passar por etapas intermediárias térmicas (evitando o limite de rendimento de Carnot dos motores a combustão) e liberam exclusivamente vapor d'água puro como subproduto reacional.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "não necessitam de nenhum reagente gasoso contínuo para manter a geração de eletricidade indefinidamente.", isCorrect: false, distractorRationale: "Células a combustível operam como sistemas abertos e necessitam de fluxo contínuo de H2 e O2 para gerar corrente." },
+      { id: "c", text: "emitem grandes volumes de dióxido de carbono benéfico para o resfriamento da biosfera.", isCorrect: false, distractorRationale: "A célula a combustível a hidrogênio NÃO emite CO2; seu único subproduto direto é água." },
+      { id: "d", text: "substituem todos os elétrons condutores por partículas alfa pesadas de alta radiação gama.", isCorrect: false, distractorRationale: "A célula é um dispositivo eletroquímico limpo de baixa temperatura sem radioatividade." },
+      { id: "e", text: "operam com rendimento termodinâmico de 100% violando as leis da conservação da entropia.", isCorrect: false, distractorRationale: "Nenhuma máquina térmica ou eletroquímica viola a 2ª Lei da Termodinâmica (há perdas por sobretensão ôhmica e calor residual)." }
+    ],
+    detailedExplanation: {
+      summary: "Motores a combustão queimam combustível gerando calor para mover pistões mecânicos e girar geradores, sofrendo o limite de rendimento térmico do ciclo de Carnot (~30%). Células a combustível realizam oxirredução direta com rendimento elétrico superior a 50-60% e emissão líquida ZERO de poluentes (apenas H2O).",
+      stepByStep: [
+        "1. Semirreação Anódica: 2 H2(g) → 4 H⁺(aq) + 4 e⁻ (oxidação do combustível hidrogênio).",
+        "2. Membrana PEM: Permite a passagem seletiva de prótons H⁺ até o cátodo, enquanto os elétrons são forçados a circular por um circuito elétrico externo realizando trabalho útil (motor elétrico).",
+        "3. Semirreação Catódica: O2(g) + 4 H⁺(aq) + 4 e⁻ → 2 H2O(l) (redução do comburente oxigênio do ar).",
+        "4. Vantagens ambientais: Zero emissão de CO2, NOx ou material particulado no escapamento; subproduto é água potável pura.",
+        "5. Conclusão: a alternativa 'a' sintetiza com clareza a superioridade termodinâmica e ecológica da célula a combustível."
+      ],
+      coreConcept: "Pilha a Combustível a Hidrogênio (Célula a Combustível) e Ciclo Limpo",
+      trapWarning: "No ENEM: A célula a combustível é ambientalmente limpa no USO; porém, o benefício global depende da ORIGEM do hidrogênio (o hidrogênio verde, obtido por eletrólise da água com energia solar/eólica, é limpo; o hidrogênio cinza, obtido do gás natural, gera CO2 na produção)."
+    },
+    commonTraps: [
+      "Achar que célula a combustível é um motor de combustão interna a hidrogênio (ela é um gerador eletroquímico, não queima combustível)",
+      "Achar que ela funciona sem suprimento contínuo de gases externos"
+    ],
+    tags: ["pilha-de-combustivel", "hidrogenio-verde", "descarbonizacao", "eletroquimica", "eficiencia-energetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-02"
   }
 ];
+
 

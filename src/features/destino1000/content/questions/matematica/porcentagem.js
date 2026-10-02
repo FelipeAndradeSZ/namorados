@@ -811,5 +811,234 @@ export const QUESTIONS_PORCENTAGEM = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-PORC-021",
+    area: "matematica",
+    competence: 1,
+    skill: 3,
+    topic: "Porcentagem",
+    subtopic: "Aumentos e Descontos Sucessivos Acumulados",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma distribuidora de insumos hospitalares ajustou o preço unitário de um lote de seringas descartáveis em duas etapas consecutivas: primeiro, devido à alta do custo da matéria-prima, aplicou um aumento de 20%; no mês subsequente, para acelerar as vendas, concedeu um desconto de 15% sobre o valor já reajustado.",
+      source: "ENEM / Matemática Comercial e Financeira"
+    },
+    prompt: "Em relação ao preço original do lote antes dos dois reajustes, o valor final após as duas alterações sofreu um:",
+    options: [
+      { id: "a", text: "aumento de 2,0%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "aumento de 5,0%", isCorrect: false, distractorRationale: "Subtraiu diretamente as porcentagens (20% - 15% = 5%), ignorando que o desconto incidiu sobre uma base já majorada." },
+      { id: "c", text: "desconto de 5,0%", isCorrect: false, distractorRationale: "Subtraiu 15% de 20% com sinal invertido." },
+      { id: "d", text: "aumento de 35,0%", isCorrect: false, distractorRationale: "Somou as duas taxas (20% + 15%)." },
+      { id: "e", text: "valor inalterado (0,0%)", isCorrect: false, distractorRationale: "Supôs erroneamente que aumentos e descontos percentuais se cancelam simetricamente." }
+    ],
+    detailedExplanation: {
+      summary: "Em reajustes sucessivos, multiplicam-se os fatores de correção: Fator total = (1 + 0,20) × (1 - 0,15) = 1,20 × 0,85 = 1,02. O fator 1,02 representa um aumento acumulado de 2%.",
+      stepByStep: [
+        "1. Seja P o preço inicial do insumo.",
+        "2. Após o aumento de 20%, o preço passa a ser P1 = P × (1 + 0,20) = 1,20 × P.",
+        "3. O desconto de 15% é aplicado sobre P1: P2 = P1 × (1 - 0,15) = 1,20 × P × 0,85.",
+        "4. Efetuando o produto dos fatores: 1,20 × 0,85 = 1,020.",
+        "5. Preço final = 1,02 × P, o que corresponde a um aumento efetivo de (1,02 - 1) × 100% = +2,0%."
+      ],
+      coreConcept: "Variações Percentuais Sucessivas: Fator Acumulado F = (1 + i1) × (1 + i2)",
+      trapWarning: "Nunca some nem subtraia taxas percentuais em cadeia! A base de cálculo se modifica a cada reajuste sucessivo."
+    },
+    commonTraps: [
+      "Subtrair algebricamente as taxas: 20% - 15% = 5%",
+      "Achar que 20% de aumento anula 20% de desconto"
+    ],
+    tags: ["porcentagem", "aumentos-sucessivos", "descontos-sucessivos", "fatores-multiplicativos"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-PORC-022",
+    area: "matematica",
+    competence: 2,
+    skill: 7,
+    topic: "Porcentagem",
+    subtopic: "Margem de Lucro sobre o Preço de Venda (Markup)",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Uma cooperativa de produtores rurais adquire sacas de fertilizante mineral organomineral pelo custo de aquisição de R$ 80,00 cada. Para cobrir custos operacionais e expandir suas instalações, a gerência estipulou que o lucro comercial deve corresponder a rigorosamente 20% do preço final de venda cobrado dos associados.",
+      source: "Gestão Financeira e Formação de Preço de Venda"
+    },
+    prompt: "O preço de venda de cada saca de fertilizante deve ser fixado em:",
+    options: [
+      { id: "a", text: "R$ 100,00", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "R$ 96,00", isCorrect: false, distractorRationale: "Calculou 20% sobre o custo de R$ 80,00 (80 + 16 = 96), erro comum que gera margem sobre venda de apenas 16,67%." },
+      { id: "c", text: "R$ 104,00", isCorrect: false, distractorRationale: "Somou 20% e mais 10% de imposto não solicitado no texto." },
+      { id: "d", text: "R$ 120,00", isCorrect: false, distractorRationale: "Calculou 50% de markup sobre o custo." },
+      { id: "e", text: "R$ 88,00", isCorrect: false, distractorRationale: "Calculou apenas 10% de lucro sobre o custo." }
+    ],
+    detailedExplanation: {
+      summary: "Preço de Venda (V) = Custo (C) + Lucro (L). Como L = 0,20 × V, temos V = 80 + 0,20V -> 0,80V = 80 -> V = 80 / 0,80 = R$ 100,00.",
+      stepByStep: [
+        "1. Identificar a definição solicitada: lucro sobre o PREÇO DE VENDA, e não sobre o custo.",
+        "2. Equação básica: Venda = Custo + Lucro.",
+        "3. Substituindo os dados: V = 80 + 0,20 × V.",
+        "4. Isolando o termo V: V - 0,20 V = 80 -> 0,80 V = 80.",
+        "5. Dividindo ambos os membros: V = 80 / 0,80 = 800 / 8 = R$ 100,00.",
+        "6. Conferência da margem: Lucro = 100 - 80 = R$ 20,00. Proporção do lucro sobre a venda: 20 / 100 = 20% (exato!)."
+      ],
+      coreConcept: "Margem de Lucro sobre a Venda: V = Custo / (1 - taxa_margem)",
+      trapWarning: "Cuidado extremo: se você calcular 20% de 80 = 16 e somar (96), a margem sobre o preço de venda será de apenas 16/96 = 16,67%, violando a meta da cooperativa."
+    },
+    commonTraps: [
+      "Calcular a margem percentual sobre o custo em vez de sobre o preço de venda",
+      "Confundir markup multiplicador sobre o custo com margem sobre a receita"
+    ],
+    tags: ["matematica-comercial", "margem-de-lucro", "preco-de-venda", "porcentagem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-PORC-023",
+    area: "matematica",
+    competence: 4,
+    skill: 15,
+    topic: "Porcentagem",
+    subtopic: "Pontos Percentuais versus Variação Percentual Relativa",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma campanha de conscientização sobre vacinação pediátrica em um município, uma pesquisa constatou que o percentual de famílias favoráveis à imunização integral passou de 40% no primeiro levantamento para 50% na pesquisa realizada seis meses depois.",
+      source: "Bioestatística e Epidemiologia de Campo"
+    },
+    prompt: "Nesse intervalo de seis meses, a variação em pontos percentuais e o aumento percentual relativo da adesão foram, respectivamente, de:",
+    options: [
+      { id: "a", text: "10 pontos percentuais e 25%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10 pontos percentuais e 10%", isCorrect: false, distractorRationale: "Confundiu pontos percentuais absolutos com variação relativa da grandeza." },
+      { id: "c", text: "25 pontos percentuais e 10%", isCorrect: false, distractorRationale: "Inverteu os dois conceitos." },
+      { id: "d", text: "50 pontos percentuais e 20%", isCorrect: false, distractorRationale: "Utilizou o valor final 50% como variação de pontos percentuais." },
+      { id: "e", text: "10 pontos percentuais e 20%", isCorrect: false, distractorRationale: "Calculou a variação relativa sobre o valor final (10 / 50 = 20%) em vez do valor inicial." }
+    ],
+    detailedExplanation: {
+      summary: "A variação absoluta em pontos percentuais é a diferença simples: 50% - 40% = 10 pontos percentuais (p.p.). Já o aumento relativo percentual mede o crescimento sobre a base original: (50 - 40) / 40 = 10 / 40 = 0,25 = 25%.",
+      stepByStep: [
+        "1. Variação em pontos percentuais (diferença aritmética simples): 50 - 40 = 10 pontos percentuais.",
+        "2. Variação percentual relativa (taxa de crescimento sobre o patamar inicial):",
+        "   Delta % = (Valor_final - Valor_inicial) / Valor_inicial",
+        "   Delta % = (50 - 40) / 40 = 10 / 40 = 1 / 4 = 0,25 = 25%.",
+        "3. Portanto, a adesão cresceu 10 pontos percentuais, o que representa uma expansão de 25% em relação ao patamar original de famílias favoráveis."
+      ],
+      coreConcept: "Diferença entre Variação Absoluta (Pontos Percentuais) e Variação Relativa (%)",
+      trapWarning: "No ENEM e na mídia, nunca diga que 'a adesão aumentou 10%' quando passou de 40% para 50%! Ela aumentou 10 pontos percentuais e 25% em termos relativos."
+    },
+    commonTraps: [
+      "Confundir pontos percentuais com porcentagem relativa",
+      "Calcular o aumento relativo dividindo pelo valor final (10/50 = 20%) em vez do inicial (10/40 = 25%)"
+    ],
+    tags: ["pontos-percentuais", "estatistica", "variacao-relativa", "interpretacao-grafica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-PORC-024",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Porcentagem",
+    subtopic: "Concentração Percentual e Mistura de Soluções",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na farmácia de manipulação de uma unidade hospitalar, há um reservatório contendo 60 litros de solução antisséptica de álcool a 70% em volume (70° GL). Para atender a um protocolo específico de desinfecção cirúrgica, é necessário elevar a concentração alcoólica da solução para exatamente 80% em volume mediante adição de álcool puro (100° GL).",
+      source: "Farmácia Hospitalar e Diluição de Soluções"
+    },
+    prompt: "O volume de álcool puro que deve ser adicionado ao reservatório para atingir a concentração desejada é de:",
+    options: [
+      { id: "a", text: "30 litros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "6 litros", isCorrect: false, distractorRationale: "Calculou 10% de 60 litros (diferença entre 80% e 70%), ignorando que a adição altera o volume total da mistura." },
+      { id: "c", text: "15 litros", isCorrect: false, distractorRationale: "Dividiu 60 por 4 sem considerar a conservação de massa do soluto." },
+      { id: "d", text: "20 litros", isCorrect: false, distractorRationale: "Equacionou com o volume inicial no denominador sem somar o soluto adicionado." },
+      { id: "e", text: "24 litros", isCorrect: false, distractorRationale: "Calculou a quantidade de água presente no reservatório inicial." }
+    ],
+    detailedExplanation: {
+      summary: "Na solução inicial de 60 L a 70%, há 42 L de álcool puro e 18 L de água. Ao adicionar x litros de álcool puro, o volume de álcool vira 42 + x e o volume total vira 60 + x. Para concentração de 80%: (42 + x)/(60 + x) = 0,80 -> 42 + x = 48 + 0,8x -> 0,2x = 6 -> x = 30 litros.",
+      stepByStep: [
+        "1. Volume de álcool na solução inicial: V_alc = 0,70 × 60 = 42 litros.",
+        "2. Volume de água (que permanece constante): V_agua = 60 - 42 = 18 litros.",
+        "3. Na solução final a 80% de álcool, a água representará os 20% restantes da mistura total.",
+        "4. Como a água não foi alterada: 20% do Volume Total Final = 18 litros.",
+        "   0,20 × V_total = 18 -> V_total = 18 / 0,20 = 90 litros.",
+        "5. O volume de álcool adicionado é: Delta V = V_total - V_inicial = 90 - 60 = 30 litros.",
+        "6. Conferência: Álcool final = 42 + 30 = 72 litros. Concentração: 72 / 90 = 0,80 = 80%."
+      ],
+      coreConcept: "Mistura de Soluções e Diluição Reversa: Conservação do Componente Invariante",
+      trapWarning: "Método ninja para o ENEM: observe qual componente NÃO muda (a água)! Se a água é 18 L e precisa representar 20% do total final, o total final é imediatamente 18 / 0,20 = 90 L."
+    },
+    commonTraps: [
+      "Achar que basta adicionar 10% do volume inicial (6 litros)",
+      "Esquecer de somar o álcool adicionado ao volume total no denominador"
+    ],
+    tags: ["soluções", "misturas", "concentracao-percentual", "algebra", "farmacia"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-PORC-025",
+    area: "matematica",
+    competence: 2,
+    skill: 7,
+    topic: "Porcentagem",
+    subtopic: "Desconto à Vista versus Juros Embutidos no Parcelamento",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um equipamento odontológico de esterilização é anunciado em uma loja especializada sob duas modalidades de pagamento: à vista, com desconto de 10% sobre o preço de tabela de R$ 4.000,00 (totalizando R$ 3.600,00); ou financiado em 2 parcelas 'sem juros' de R$ 2.000,00 cada, sendo a 1ª parcela paga como entrada no ato da compra e a 2ª parcela paga exatamente 30 dias após a compra.",
+      source: "Educação Financeira e Análise de Crédito"
+    },
+    prompt: "Considerando o valor à vista como o preço de referência real do bem, a taxa mensal de juros efetivamente embutida na opção parcelada em relação ao pagamento à vista é de:",
+    options: [
+      { id: "a", text: "25,0%", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "10,0%", isCorrect: false, distractorRationale: "Acreditou que a taxa de juros coincide numericamente com o percentual de desconto à vista." },
+      { id: "c", text: "0,0%", isCorrect: false, distractorRationale: "Caiu na publicidade de parcelamento 'sem juros'." },
+      { id: "d", text: "20,0%", isCorrect: false, distractorRationale: "Calculou os juros sobre a parcela final de R$ 2.000,00 (400 / 2 000 = 20%) em vez do saldo financiado." },
+      { id: "e", text: "11,1%", isCorrect: false, distractorRationale: "Calculou a taxa sobre o valor total à vista (400 / 3 600 = 11,1%), desconsiderando a entrada paga na data zero." }
+    ],
+    detailedExplanation: {
+      summary: "O valor real do produto é R$ 3.600,00. Ao pagar R$ 2.000,00 de entrada, o cliente financia um saldo devedor real de R$ 3.600,00 - R$ 2.000,00 = R$ 1.600,00 por um mês. Como paga R$ 2.000,00 na 2ª parcela, paga R$ 400,00 de juros sobre R$ 1.600,00. Taxa de juros = 400 / 1.600 = 1/4 = 25%.",
+      stepByStep: [
+        "1. Preço real do bem na data zero (à vista): R$ 3.600,00.",
+        "2. No plano a prazo, o comprador paga R$ 2.000,00 na data zero como entrada.",
+        "3. Saldo efetivamente financiado pela loja durante o mês: 3.600 - 2.000 = R$ 1.600,00.",
+        "4. Após 30 dias, o cliente quita a dívida pagando R$ 2.000,00.",
+        "5. Valor dos juros monetários cobrados no período de 1 mês: 2.000 - 1.600 = R$ 400,00.",
+        "6. Taxa de juros mensal embutida: i = Juros / Saldo Financiado = 400 / 1.600 = 1 / 4 = 0,25 = 25,0%."
+      ],
+      coreConcept: "Juros Embutidos no Financiamento com Entrada: i = Juros / (Preço à vista - Entrada)",
+      trapWarning: "A entrada não é financiada! O erro fatal é dividir os R$ 400 de juros pelo valor à vista total (R$ 3.600) ou pela parcela (R$ 2.000). Os juros incidem apenas sobre o saldo devedor de R$ 1.600!"
+    },
+    commonTraps: [
+      "Achar que a compra a prazo não tem juros",
+      "Dividir os juros pelo preço total (400/3600 = 11,1%) ignorando a entrada"
+    ],
+    tags: ["matematica-financeira", "juros-embutidos", "desconto-a-vista", "educacao-financeira", "porcentagem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

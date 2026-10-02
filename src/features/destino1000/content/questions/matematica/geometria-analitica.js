@@ -899,6 +899,234 @@ export const QUESTIONS_GEOMETRIA_ANALITICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-021",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Distância Euclidiana entre Dois Pontos",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No sistema de georreferenciamento de uma central de ambulâncias de suporte avançado (SAMU), o mapa de uma região metropolitana foi calibrado sobre um plano cartesiano com escala em quilômetros. A base de atendimento A está localizada no ponto de coordenadas (2, 3) e o local de uma ocorrência médica prioritária B está situado nas coordenadas (8, 11).",
+      source: "ENEM / Geometria Analítica e Otimização Logística"
+    },
+    prompt: "A distância em linha reta entre a base de atendimento A e o local da ocorrência B é igual a:",
+    options: [
+      { id: "a", text: "10,0 km", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "14,0 km", isCorrect: false, distractorRationale: "Calculou a distância em grade (soma das diferenças das coordenadas: |8 - 2| + |11 - 3| = 6 + 8 = 14 km), que não é a distância euclidiana em linha reta." },
+      { id: "c", text: "7,0 km", isCorrect: false, distractorRationale: "Dividiu a soma das coordenadas por 2 arbitrariamente." },
+      { id: "d", text: "12,5 km", isCorrect: false, distractorRationale: "Cometeu erro no cálculo da hipotenusa ao somar os quadrados." },
+      { id: "e", text: "8,0 km", isCorrect: false, distractorRationale: "Considerou apenas a variação no eixo das ordenadas (|11 - 3| = 8)." }
+    ],
+    detailedExplanation: {
+      summary: "A distância euclidiana entre dois pontos A(xA, yA) e B(xB, yB) é dada pelo Teorema de Pitágoras no plano: d = √[(xB - xA)² + (yB - yA)²]. Com catetos Delta x = 6 e Delta y = 8, d = √(36 + 64) = √100 = 10 km.",
+      stepByStep: [
+        "1. Variação horizontal: Delta x = xB - xA = 8 - 2 = 6 km.",
+        "2. Variação vertical: Delta y = yB - yA = 11 - 3 = 8 km.",
+        "3. Aplicando a fórmula da distância euclidiana: d = √[(Delta x)² + (Delta y)²].",
+        "4. Cálculo numérico: d = √[6² + 8²] = √[36 + 64] = √100 = 10,0 km.",
+        "5. Reconhecimento imediato: trata-se do triângulo pitagórico clássico de lados 6, 8 e 10 (múltiplo do triângulo 3, 4, 5)."
+      ],
+      coreConcept: "Distância entre Dois Pontos no Plano Cartesiano: d² = (Delta x)² + (Delta y)²",
+      trapWarning: "Cuidado para não confundir distância em linha reta (euclidiana) com distância manhattan/quarteirões (|Delta x| + |Delta y|)."
+    },
+    commonTraps: [
+      "Somar as diferenças lineares (6 + 8 = 14) em vez de aplicar o Teorema de Pitágoras",
+      "Errar a subtração das coordenadas"
+    ],
+    tags: ["distancia-entre-pontos", "pitagoras", "plano-cartesiano", "geometria-analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-022",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Baricentro de um Triângulo e Ponto de Equilíbrio",
+    difficulty: 2,
+    estimatedTimeSeconds: 120,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para otimizar o abastecimento farmacêutico de três policlínicas situadas nas coordenadas cartesianas A(1, 4), B(5, 2) e C(6, 9), um consórcio municipal decidiu construir um galpão central de distribuição exatamente no baricentro geométrico (centro de gravidade) do triângulo demarcado pelas três unidades.",
+      source: "Planejamento Urbano e Logística em Saúde"
+    },
+    prompt: "As coordenadas cartesianas (x, y) do ponto de instalação desse galpão de distribuição são:",
+    options: [
+      { id: "a", text: "(4, 5)", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "(6, 7)", isCorrect: false, distractorRationale: "Dividiu a soma das coordenadas por 2 em vez de 3." },
+      { id: "c", text: "(3, 4)", isCorrect: false, distractorRationale: "Subtraiu 1 de cada coordenada por engano." },
+      { id: "d", text: "(5, 5)", isCorrect: false, distractorRationale: "Calculou a média apenas de dois vértices e ignorou o vértice A." },
+      { id: "e", text: "(12, 15)", isCorrect: false, distractorRationale: "Somou as coordenadas dos três vértices mas esqueceu de dividir por 3." }
+    ],
+    detailedExplanation: {
+      summary: "As coordenadas do baricentro G de um triângulo com vértices A, B e C correspondem à média aritmética simples das coordenadas de seus três vértices: xG = (xA + xB + xC) / 3 e yG = (yA + yB + yC) / 3. Assim: xG = (1 + 5 + 6)/3 = 4 e yG = (4 + 2 + 9)/3 = 5.",
+      stepByStep: [
+        "1. Identificar as coordenadas dos vértices: A(1, 4), B(5, 2) e C(6, 9).",
+        "2. Abscissa do baricentro: xG = (xA + xB + xC) / 3 = (1 + 5 + 6) / 3 = 12 / 3 = 4.",
+        "3. Ordenada do baricentro: yG = (yA + yB + yC) / 3 = (4 + 2 + 9) / 3 = 15 / 3 = 5.",
+        "4. O baricentro do triângulo localiza-se exatamente no ponto G(4, 5)."
+      ],
+      coreConcept: "Baricentro do Triângulo: Centroide Geométrico G = ((x1+x2+x3)/3, (y1+y2+y3)/3)",
+      trapWarning: "Lembre-se: são 3 vértices, logo a divisão é por 3, e não por 2 (que seria o ponto médio de um segmento)."
+    },
+    commonTraps: [
+      "Dividir por 2 em vez de dividir por 3",
+      "Esquecer de dividir após somar as coordenadas dos pontos"
+    ],
+    tags: ["baricentro", "triangulo", "ponto-medio", "geometria-analitica", "centro-de-massa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-023",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Retas Perpendiculares no Plano Cartesiano",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No projeto da rede de escoamento de um laboratório químico, a galeria de drenagem principal r segue a trajetória retilínea de equação geral 2x - 3y + 6 = 0. Um duto de alívio secundário s deve ser construído de modo a ser rigorosamente perpendicular à galeria principal e passar pelo ponto de conexão P(4, 1).",
+      source: "Engenharia Hidráulica e Geometria Analítica"
+    },
+    prompt: "A equação geral da reta s correspondente a esse duto secundário é:",
+    options: [
+      { id: "a", text: "3x + 2y - 14 = 0", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "2x - 3y - 5 = 0", isCorrect: false, distractorRationale: "Essa é a equação de uma reta paralela (mesma inclinação m = 2/3), não perpendicular." },
+      { id: "c", text: "3x - 2y - 10 = 0", isCorrect: false, distractorRationale: "Inverteu a inclinação mas esqueceu de trocar o sinal (usou m = 3/2 em vez de -3/2)." },
+      { id: "d", text: "2x + 3y - 11 = 0", isCorrect: false, distractorRationale: "Trocou apenas o sinal do coeficiente y sem inverter os coeficientes numéricos de x e y." },
+      { id: "e", text: "x + y - 5 = 0", isCorrect: false, distractorRationale: "Equação arbitrária que não satisfaz a perpendicularidade." }
+    ],
+    detailedExplanation: {
+      summary: "O coeficiente angular da reta r (2x - 3y + 6 = 0) é mr = 2/3. Para que a reta s seja perpendicular, seu coeficiente angular deve ser o oposto do inverso: ms = -1 / mr = -3/2. Usando a equação fundamental y - yP = ms(x - xP) com P(4, 1): y - 1 = (-3/2)(x - 4) -> 2y - 2 = -3x + 12 -> 3x + 2y - 14 = 0.",
+      stepByStep: [
+        "1. Isolar y na equação da reta r para encontrar mr: 3y = 2x + 6 -> y = (2/3)x + 2. Coeficiente angular mr = 2/3.",
+        "2. Condição de perpendicularidade: mr × ms = -1 -> (2/3) × ms = -1 -> ms = -3/2.",
+        "3. Equação da reta s que passa por P(4, 1): y - 1 = (-3/2)(x - 4).",
+        "4. Multiplicando ambos os membros por 2: 2(y - 1) = -3(x - 4) -> 2y - 2 = -3x + 12.",
+        "5. Agrupando todos os termos no primeiro membro: 3x + 2y - 2 - 12 = 0 -> 3x + 2y - 14 = 0."
+      ],
+      coreConcept: "Perpendicularidade de Retas: ms = -1 / mr e Equação Geral da Reta",
+      trapWarning: "Retas perpendiculares possuem coeficientes angulares inversos E opostos (troca de sinal E de fração). Não basta inverter a fração!"
+    },
+    commonTraps: [
+      "Esquecer de trocar o sinal ao inverter a fração (usar 3/2 em vez de -3/2)",
+      "Confundir condição de paralelismo (mr = ms) com perpendicularidade"
+    ],
+    tags: ["retas-perpendiculares", "coeficiente-angular", "equacao-geral", "geometria-analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-024",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Distância de Ponto a Reta",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "calculation",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Por normas de segurança de radioproteção em um centro oncológico, um equipamento de radioterapia situado nas coordenadas P(3, 5) deve manter uma distância mínima de segurança em relação a uma parede de contenção blindada retilínea cuja trajetória cartesiana é descrita pela reta r: 4x + 3y + 3 = 0 (com coordenadas em metros).",
+      source: "Engenharia Biomédica e Normas de Radioproteção"
+    },
+    prompt: "A distância perpendicular mais curta entre a fonte emissora no ponto P e a parede blindada r é de:",
+    options: [
+      { id: "a", text: "6,0 metros", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "30,0 metros", isCorrect: false, distractorRationale: "Calculou o numerador |Ax0 + By0 + C| = |4(3) + 3(5) + 3| = 30, mas esqueceu de dividir por √(A² + B²)." },
+      { id: "c", text: "5,0 metros", isCorrect: false, distractorRationale: "Confundiu a distância com o módulo do vetor normal √(4² + 3²) = 5." },
+      { id: "d", text: "4,2 metros", isCorrect: false, distractorRationale: "Errou as operações algébricas no numerador." },
+      { id: "e", text: "7,5 metros", isCorrect: false, distractorRationale: "Dividiu 30 por 4 em vez de dividir por 5." }
+    ],
+    detailedExplanation: {
+      summary: "A distância d de um ponto P(x0, y0) a uma reta r: Ax + By + C = 0 é d = |A x0 + B y0 + C| / √(A² + B²). Substituindo: d = |4(3) + 3(5) + 3| / √(4² + 3²) = |12 + 15 + 3| / √25 = 30 / 5 = 6,0 metros.",
+      stepByStep: [
+        "1. Identificar os coeficientes da reta r: A = 4, B = 3, C = 3.",
+        "2. Identificar as coordenadas do ponto P: x0 = 3, y0 = 5.",
+        "3. Calcular o valor do numerador: |A x0 + B y0 + C| = |4(3) + 3(5) + 3| = |12 + 15 + 3| = |30| = 30.",
+        "4. Calcular o denominador: √(A² + B²) = √(4² + 3²) = √(16 + 9) = √25 = 5.",
+        "5. Distância perpendicular: d = 30 / 5 = 6,0 metros."
+      ],
+      coreConcept: "Fórmula da Distância de Ponto a Reta: d = |Ax0 + By0 + C| / √(A² + B²)",
+      trapWarning: "Lembre-se de sempre colocar a reta na sua forma GERAL (Ax + By + C = 0) antes de aplicar os coeficientes A, B e C na fórmula!"
+    },
+    commonTraps: [
+      "Esquecer de dividir pela raiz da soma dos quadrados dos coeficientes",
+      "Errar o sinal do termo independente C"
+    ],
+    tags: ["distancia-ponto-reta", "vetor-normal", "geometria-analitica", "radioprotecao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-GEOAN-025",
+    area: "matematica",
+    competence: 2,
+    skill: 8,
+    topic: "Geometria Analítica",
+    subtopic: "Posição Relativa entre Reta e Circunferência",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma simulação gráfica do campo de alcance de uma antena transmissora, a borda da área de cobertura eletromagnética é modelada pela circunferência de equação x² + y² = 25 (com medidas em quilômetros). Uma linha de transmissão de fibra óptica estende-se retilineamente ao longo da reta de equação 3x + 4y - 25 = 0.",
+      source: "Telecomunicações e Modelagem Geométrica"
+    },
+    prompt: "Calculando a distância do centro da circunferência até a linha de transmissão, conclui-se que a reta em relação à circunferência é:",
+    options: [
+      { id: "a", text: "tangente, pois a distância do centro à reta é exatamente igual a 5 km, coincidindo com o raio da circunferência.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "secante, interceptando a circunferência em dois pontos distintos porque a distância do centro à reta é menor do que o raio.", isCorrect: false, distractorRationale: "A distância é rigorosamente 5 km (igual ao raio), caracterizando tangência e não secância." },
+      { id: "c", text: "exterior, sem nenhum ponto de contato porque a distância é maior do que 25 km.", isCorrect: false, distractorRationale: "O raio é R = √25 = 5 km e a distância d = 5 km; portanto, há exatamente 1 ponto comum de tangência." },
+      { id: "d", text: "diametral, pois a reta passa obrigatoriamente pela origem (0, 0) das coordenadas.", isCorrect: false, distractorRationale: "Substituindo (0, 0) na equação da reta temos 3(0) + 4(0) - 25 = -25 ≠ 0; a reta não passa pelo centro." },
+      { id: "e", text: "concêntrica com raio nulo em relação ao eixo das abscissas.", isCorrect: false, distractorRationale: "Conceito geométrico incorreto; 'concêntrica' aplica-se a pares de circunferências com mesmo centro." }
+    ],
+    detailedExplanation: {
+      summary: "A circunferência x² + y² = 25 tem centro C(0, 0) e raio R = √25 = 5 km. A distância do centro C(0, 0) à reta 3x + 4y - 25 = 0 é d = |3(0) + 4(0) - 25| / √(3² + 4²) = 25 / 5 = 5 km. Como d = R, a reta é tangente à circunferência.",
+      stepByStep: [
+        "1. Parâmetros da circunferência: Centro C(0, 0) e Raio R = √25 = 5 km.",
+        "2. Distância de C(0, 0) à reta r: 3x + 4y - 25 = 0:",
+        "   d = |3(0) + 4(0) - 25| / √(3² + 4²)",
+        "   d = |-25| / √(9 + 16) = 25 / √25 = 25 / 5 = 5 km.",
+        "3. Comparação entre distância d e raio R:",
+        "   - Se d < R: reta secante (2 pontos comuns).",
+        "   - Se d = R: reta tangente (1 ponto comum).",
+        "   - Se d > R: reta exterior (0 pontos comuns).",
+        "4. Como d = 5 km e R = 5 km, conclui-se com certeza que a reta é TANGENTE."
+      ],
+      coreConcept: "Posição Relativa Reta-Circunferência: Comparação entre Distância do Centro (d) e o Raio (R)",
+      trapWarning: "Lembre-se: o raio da circunferência x² + y² = 25 é √25 = 5 km, e não 25 km!"
+    },
+    commonTraps: [
+      "Achar que o raio é 25 em vez de √25 = 5",
+      "Confundir reta secante (d < R) com tangente (d = R)"
+    ],
+    tags: ["circunferencia", "posicao-relativa", "reta-tangente", "distancia-ponto-reta", "geometria-analitica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 
