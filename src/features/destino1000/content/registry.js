@@ -76,6 +76,7 @@ export const QUESTION_MODULES = {
   "humanas/filosofia-politica-poder": () => import("./questions/humanas/filosofia-politica-poder.js"),
   "humanas/geografia-urbana-segregacao": () => import("./questions/humanas/geografia-urbana-segregacao.js"),
   "humanas/iluminismo-revolucoes-burguesas": () => import("./questions/humanas/iluminismo-revolucoes-burguesas.js"),
+  "humanas/republica-oligarquica-revoltas": () => import("./questions/humanas/republica-oligarquica-revoltas.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),

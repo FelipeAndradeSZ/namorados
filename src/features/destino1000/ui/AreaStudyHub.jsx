@@ -84,6 +84,7 @@ const AREA_TOPICS = {
     { id: "humanas/filosofia-politica-poder", name: "Filosofia Política, Estado, Poder e Democracia", tag: "Filosofia", priority: "Crítica • Maquiavel a Arendt e Habermas", questionsCount: 25 },
     { id: "humanas/geografia-urbana-segregacao", name: "Geografia Urbana, Metropolização e Segregação Socioespacial", tag: "Geografia", priority: "Crítica • Gentrificação & Milton Santos", questionsCount: 25 },
     { id: "humanas/iluminismo-revolucoes-burguesas", name: "Iluminismo, Revoluções Burguesas e Pensamento Liberal", tag: "História", priority: "Crítica • Luzes, 1789 e Direitos", questionsCount: 25 },
+    { id: "humanas/republica-oligarquica-revoltas", name: "República Oligárquica, Coronelismo e Revoltas Sociais (1889-1930)", tag: "História", priority: "Crítica • Vacina, Canudos, Chibata e 1930", questionsCount: 25 },
   ],
   linguagens: [
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 25 },

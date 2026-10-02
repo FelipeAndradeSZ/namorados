@@ -3055,6 +3055,51 @@ export const THEORY_CONTENT = {
       "Na redação, apresentar propostas vagas sem os 5 elementos obrigatórios: propostas sem meio/modo ou sem detalhamento perdem até 120 pontos na C5!"
     ],
     mnemonics: "Mestres da Argumentação: 'No MAS o argumento que ganha é o que vem depois; no EMBORA o que ganha é o que fica de fora; falácia de espantalho deforma pra bater; ad hominem bate na pessoa pro argumento não ver; e na intervenção do ENEM, são 5 passos pra vencer: Agente, Ação, Modo, Detalhe e o que vai Acontecer!'"
+  },
+
+  "humanas/republica-oligarquica-revoltas": {
+    topic: "República Oligárquica, Coronelismo e Revoltas Sociais (1889-1930)",
+    area: "humanas",
+    areaName: "Ciências Humanas e suas Tecnologias",
+    enemRelevance: "Top 3 mais cobrado na História do Brasil no ENEM (Competência 2, Habilidades 7, 8 e 9). Presença praticamente garantida em questões sobre cidadania, saúde pública histórica (Revolta da Vacina) e movimentos rurais.",
+    highFrequencySkills: ["H7 - Identificar o significado histórico das relações de poder", "H8 - Analisar a ação dos estados nacionais no controle social e econômico", "H9 - Comparar o significado de movimentos sociais de contestação à ordem"],
+    overview: "A Primeira República (1889-1930) é tratada pela matriz do ENEM sob a perspectiva da tensão permanente entre a retórica formal da modernização republicana e a realidade brutal de exclusão social e violência política. Para Beatriz (foco em Medicina), esse módulo é estratégico não apenas pelas questões de história, mas pela conexão direta entre o sanitarismo de Oswaldo Cruz, o autoritarismo higienista da Revolta da Vacina de 1904 e a evolução das políticas públicas de saúde e bioética no Brasil.",
+    keyConcepts: [
+      {
+        title: "A Engenharia do Poder Oligárquico: Coronelismo e Política dos Governadores",
+        content: "• Coronelismo (Victor Nunes Leal): Sistema de compromisso e reciprocidade assimétrica. O coronel controla os votos do município (voto de cabresto) por meio do paternalismo, favores assistenciais e violência de jagunços, entregando bancadas fiéis aos governadores em troca de verbas e impunidade.\n• Política dos Governadores (Campos Sales): Pacto de não intervenção mútua entre o Presidente da República e as oligarquias estaduais dominantes.\n• Degola Eleitoral: A Comissão Verificadora de Poderes no Congresso recusava a diplomação de qualquer candidato de oposição eleito, eliminando a dissidência parlamentar.\n• Constituição de 1891: Federalismo amplo, voto aberto e exclusão dos analfabetos (mais de 80% da população), soldados e mendigos."
+      },
+      {
+        title: "A Economia do Café e o Convênio de Taubaté (1906)",
+        content: "• Socialização das Perdas: Em crises de superprodução, o Estado contraía empréstimos externos em libras para comprar e estocar o excedente de café, desvalorizando o câmbio. O povo pagava com inflação e carestia alimentar, enquanto o cafeicultor mantinha seus lucros privados intactos.\n• Imigração Subvencionada e Branqueamento: O governo paulista custeava a vinda de milhões de europeus (italianos, espanhóis) tanto para suprir o latifúndio cafeeiro quanto para executar o projeto eugenista racista de branqueamento da população, marginalizando os negros recém-libertos da escravidão."
+      },
+      {
+        title: "Revoltas Rurais e Messianismo Sertanejo",
+        content: "• Canudos (1896-1897): Arraial de Belo Monte fundado por Antônio Conselheiro no sertão baiano; atraiu mais de 25 mil pessoas que viviam de produção comunitária autônoma, ameaçando o monopólio da terra e a mão de obra dos coronéis. Destruído pelo Exército após quatro expedições militares.\n• Contestado (1912-1916): Conflito entre PR e SC deflagrado pela expulsão violenta de camponeses caboclos pela ferrovia Brazil Railway e pela madeireira Lumber Company; liderados pelo monge José Maria, organizaram 'cidades santas' até serem massacrados por tropas federais (uso pioneiro da aviação militar).\n• Cangaço: Banditismo social (Eric Hobsbawm) no sertão nordestino (Lampião); rebeldia armada pré-política nascida da miséria e da falta de justiça institucional no latifúndio."
+      },
+      {
+        title: "Revoltas Urbanas e Tensões de Cidadania",
+        content: "• Revolta da Vacina (1904): Conflito no Rio de Janeiro provocado pela lei de vacinação obrigatória contra a varíola (Oswaldo Cruz), que estourou sobre o descontentamento popular com as demolições dos cortiços do centro (o 'Bota-Abaixo' de Pereira Passos) e a inflação.\n• Revolta da Chibata (1910): Motim dos marinheiros negros e mestiços liderados por João Cândido ('Almirante Negro') nos couraçados da Armada, exigindo o fim dos castigos corporais herdados da escravidão e soldos dignos.\n• Greve Geral de 1917: Movimento operário fabril em SP e RJ hegemonizado pelo anarcossindicalismo, reivindicando jornada de 8 horas e fim do trabalho infantil."
+      },
+      {
+        title: "A Crise dos Anos 1920 e a Ruptura de 1930",
+        content: "• O Ano de 1922: Semana de Arte Moderna (ruptura cultural com o passadismo oligárquico), Fundação do Partido Comunista do Brasil (PCB) e início do Tenentismo com os '18 do Forte de Copacabana'.\n• Tenentismo e Coluna Prestes (1925-1927): Oficiais rebeldes exigindo voto secreto, moralização política e educação primária; marcharam 25 mil km invictos pelo interior.\n• Crise de 1929 e Revolução de 1930: Quebra do café na Grande Depressão; rompimento do café com leite por Washington Luís; Aliança Liberal de Getúlio Vargas toma o poder em outubro de 1930, encerrando a Primeira República."
+      }
+    ],
+    formulasAndRules: [
+      "Circuito Oligárquico: Coronel (manda no município) ⇄ Governador (manda no estado) ⇄ Presidente da República (manda na União).",
+      "Filtro Constitucional de 1891: Voto masculino + maior de 21 anos + alfabetizado (excluía ~95% da população real).",
+      "Tese de José Murilo de Carvalho: 'Os Bestializados' — uma república formal proclamada de cima para baixo sem cidadania substantiva para o povo.",
+      "Tese de Celso Furtado: A quebra de 1929 inviabilizou o modelo primário-exportador e catalisou a industrialização por substituição de importações (ISI)."
+    ],
+    enemTraps: [
+      "Afirmar que a Revolta da Vacina foi apenas um motim de ignorantes contra a ciência: o povo reagiu contra o autoritarismo da invasão domiciliar e contra a destruição violenta de suas casas no Bota-Abaixo!",
+      "Achar que o voto na Primeira República era secreto: o voto era ABERTO (descoberto), o que permitia ao coronel fiscalizar e punir quem votasse contra sua vontade!",
+      "Confundir a liderança operária da Greve de 1917 com comunistas: a greve de 1917 foi liderada por ANARCOSSINDICALISTAS; o PCB só foi fundado cinco anos depois, em 1922!",
+      "Achar que Canudos e Contestado eram revoltas que queriam derrubar o governo para instaurar o socialismo: eram movimentos messiânicos de sobrevivência camponesa contra o latifúndio e a fome!",
+      "Achar que o Tenentismo dos anos 1920 era socialista: o tenentismo original era um movimento reformista cívico-moralizador burguês focado em voto secreto e autoridade central."
+    ],
+    mnemonics: "Engrenagem da República Velha: 'Coronel toca o cabresto na roça; governador degola na comissão; presidente compra café com empréstimo do gringo em Taubaté; em 1904 a vacina explode com o bota-abaixo; em 1910 João Cândido cala a chibata no mar; e em 1930 a crise quebra o café e Vargas fecha o congresso pro novo Brasil começar!'"
   }
 };
 
