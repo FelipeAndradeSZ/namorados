@@ -55,6 +55,7 @@ export const QUESTION_MODULES = {
   "linguagens/generos-digitais-hipertexto": () => import("./questions/linguagens/generos-digitais-hipertexto.js"),
   "linguagens/teoria-literaria-poetica": () => import("./questions/linguagens/teoria-literaria-poetica.js"),
   "linguagens/semiotica-multimodal-charges": () => import("./questions/linguagens/semiotica-multimodal-charges.js"),
+  "linguagens/estrategias-argumentativas-persuasao": () => import("./questions/linguagens/estrategias-argumentativas-persuasao.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),

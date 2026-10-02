@@ -21,13 +21,13 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
     return null;
   }
 
-  // Parsear texto com negrito, itálico, código inline e links
+  // Parsear texto com negrito, itálico, código inline, fórmulas matemáticas e tags
   const renderInlineFormatted = (text) => {
     if (!text) return null;
 
     // Tokens para processar tags inline
-    // Suporta: **negrito**, *itálico*, `código/fórmula`
-    const regex = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g;
+    // Suporta: **negrito**, *itálico*, `código/fórmula`, $fórmula matemática$, \(fórmula\)
+    const regex = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\$[^$\n]+\$|\\\([^\)]+\\\))/g;
     const parts = text.split(regex);
 
     return parts.map((part, idx) => {
@@ -56,6 +56,28 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
           >
             {inner}
           </code>
+        );
+      }
+      if (part.startsWith("$") && part.endsWith("$")) {
+        const inner = part.slice(1, -1);
+        return (
+          <span
+            key={idx}
+            className="px-1.5 py-0.5 mx-0.5 rounded bg-sky-950/70 text-sky-200 font-mono text-xs border border-sky-800/50 inline-flex items-center shadow-xs"
+          >
+            {inner}
+          </span>
+        );
+      }
+      if (part.startsWith("\\(") && part.endsWith("\\)")) {
+        const inner = part.slice(2, -2);
+        return (
+          <span
+            key={idx}
+            className="px-1.5 py-0.5 mx-0.5 rounded bg-sky-950/70 text-sky-200 font-mono text-xs border border-sky-800/50 inline-flex items-center shadow-xs"
+          >
+            {inner}
+          </span>
         );
       }
       return <React.Fragment key={idx}>{part}</React.Fragment>;
@@ -125,9 +147,17 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
         quoteLines.push(lines[i].trim().replace(/^>\s?/, ""));
         i++;
       }
+      let fullQuote = quoteLines.join("\n");
+      let alertType = null;
+      const alertMatch = fullQuote.match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/i);
+      if (alertMatch) {
+        alertType = alertMatch[1].toUpperCase();
+        fullQuote = fullQuote.slice(alertMatch[0].length);
+      }
       blocks.push({
         type: "blockquote",
-        content: quoteLines.join("\n")
+        alertType,
+        content: fullQuote
       });
       continue;
     }
@@ -172,7 +202,12 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
     if (/^[-*•]\s+/.test(line)) {
       const listItems = [];
       while (i < lines.length && /^[-*•]\s+/.test(lines[i].trim())) {
-        listItems.push(lines[i].trim().replace(/^[-*•]\s+/, ""));
+        const raw = lines[i];
+        const indent = raw.search(/\S/);
+        listItems.push({
+          text: raw.trim().replace(/^[-*•]\s+/, ""),
+          indent: indent >= 2 ? 1 : 0
+        });
         i++;
       }
       blocks.push({
@@ -186,8 +221,13 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
     if (/^\d+[.)]\s+/.test(line)) {
       const listItems = [];
       while (i < lines.length && /^\d+[.)]\s+/.test(lines[i].trim())) {
-        const itemText = lines[i].trim().replace(/^\d+[.)]\s+/, "");
-        listItems.push(itemText);
+        const raw = lines[i];
+        const indent = raw.search(/\S/);
+        const itemText = raw.trim().replace(/^\d+[.)]\s+/, "");
+        listItems.push({
+          text: itemText,
+          indent: indent >= 2 ? 1 : 0
+        });
         i++;
       }
       blocks.push({
@@ -223,7 +263,53 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
   }
 
   // Identificador de estilo de blockquote
-  const getBlockquoteTheme = (text) => {
+  const getBlockquoteTheme = (text, alertType) => {
+    if (alertType === "NOTE") {
+      return {
+        bg: "bg-gradient-to-r from-sky-950/40 via-sky-900/20 to-slate-900/60",
+        border: "border-sky-500/70",
+        text: "text-sky-200",
+        title: "Nota Didática • Contexto Fundamental",
+        icon: <Info className="w-5 h-5 text-sky-400 flex-shrink-0" />
+      };
+    }
+    if (alertType === "TIP") {
+      return {
+        bg: "bg-gradient-to-r from-emerald-950/40 via-emerald-900/20 to-slate-900/60",
+        border: "border-emerald-500/70",
+        text: "text-emerald-200",
+        title: "Dica Estratégica TRI",
+        icon: <Zap className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+      };
+    }
+    if (alertType === "IMPORTANT") {
+      return {
+        bg: "bg-gradient-to-r from-amber-950/40 via-amber-900/20 to-slate-900/60",
+        border: "border-amber-500/70",
+        text: "text-amber-200",
+        title: "Conceito Chave • Domínio Obrigatório",
+        icon: <Lightbulb className="w-5 h-5 text-amber-400 flex-shrink-0" />
+      };
+    }
+    if (alertType === "WARNING") {
+      return {
+        bg: "bg-gradient-to-r from-rose-950/40 via-rose-900/20 to-slate-900/60",
+        border: "border-rose-500/70",
+        text: "text-rose-200",
+        title: "Ponto Crítico • Armadilha da Banca",
+        icon: <AlertTriangle className="w-5 h-5 text-rose-400 flex-shrink-0" />
+      };
+    }
+    if (alertType === "CAUTION") {
+      return {
+        bg: "bg-gradient-to-r from-red-950/50 via-red-900/30 to-slate-900/70",
+        border: "border-red-500/80",
+        text: "text-red-200",
+        title: "Alerta de Distrator • Não Cometa este Erro",
+        icon: <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0" />
+      };
+    }
+
     const lower = text.toLowerCase();
     if (lower.includes("dica tri") || lower.includes("pulo do gato") || lower.includes("estratégia tri")) {
       return {
@@ -330,7 +416,8 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
           }
 
           case "blockquote": {
-            const theme = getBlockquoteTheme(block.content);
+            const theme = getBlockquoteTheme(block.content, block.alertType);
+            const quoteParagraphs = block.content.split("\n").filter(Boolean);
             return (
               <div
                 key={idx}
@@ -340,8 +427,10 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
                   {theme.icon}
                   <span className={theme.text}>{theme.title}</span>
                 </div>
-                <div className="text-slate-100 text-sm sm:text-base leading-relaxed pl-7">
-                  {renderInlineFormatted(block.content)}
+                <div className="text-slate-100 text-sm sm:text-base leading-relaxed pl-7 space-y-2">
+                  {quoteParagraphs.map((p, pIdx) => (
+                    <p key={pIdx}>{renderInlineFormatted(p)}</p>
+                  ))}
                 </div>
               </div>
             );
@@ -350,14 +439,29 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
           case "unordered-list": {
             return (
               <ul key={idx} className="space-y-2.5 my-3 pl-2">
-                {block.items.map((item, iIdx) => (
-                  <li key={iIdx} className="flex items-start gap-2.5">
-                    <span className="w-2 h-2 rounded-full bg-amber-400 mt-2 flex-shrink-0 shadow-xs shadow-amber-400/50" />
-                    <span className="flex-1 text-slate-200">
-                      {renderInlineFormatted(item)}
-                    </span>
-                  </li>
-                ))}
+                {block.items.map((item, iIdx) => {
+                  const itemText = typeof item === "string" ? item : item.text;
+                  const isSub = typeof item === "object" && item.indent > 0;
+                  return (
+                    <li
+                      key={iIdx}
+                      className={`flex items-start gap-2.5 ${
+                        isSub ? "ml-6 border-l-2 border-slate-800 pl-3 py-0.5" : ""
+                      }`}
+                    >
+                      <span
+                        className={`rounded-full mt-2 flex-shrink-0 ${
+                          isSub
+                            ? "w-1.5 h-1.5 bg-slate-400"
+                            : "w-2 h-2 bg-amber-400 shadow-xs shadow-amber-400/50"
+                        }`}
+                      />
+                      <span className="flex-1 text-slate-200">
+                        {renderInlineFormatted(itemText)}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             );
           }
@@ -365,16 +469,31 @@ export function RichMarkdownReader({ content = "", fontSize = "normal", classNam
           case "ordered-list": {
             return (
               <ol key={idx} className="space-y-3 my-3 pl-1">
-                {block.items.map((item, iIdx) => (
-                  <li key={iIdx} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-300 font-mono text-xs font-bold flex items-center justify-center mt-0.5">
-                      {iIdx + 1}
-                    </span>
-                    <span className="flex-1 text-slate-200">
-                      {renderInlineFormatted(item)}
-                    </span>
-                  </li>
-                ))}
+                {block.items.map((item, iIdx) => {
+                  const itemText = typeof item === "string" ? item : item.text;
+                  const isSub = typeof item === "object" && item.indent > 0;
+                  return (
+                    <li
+                      key={iIdx}
+                      className={`flex items-start gap-3 ${
+                        isSub ? "ml-6 border-l-2 border-slate-800 pl-3 py-0.5" : ""
+                      }`}
+                    >
+                      <span
+                        className={`flex-shrink-0 rounded-lg text-mono font-bold flex items-center justify-center mt-0.5 ${
+                          isSub
+                            ? "w-5 h-5 bg-slate-800 text-slate-300 text-[10px]"
+                            : "w-6 h-6 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs"
+                        }`}
+                      >
+                        {iIdx + 1}
+                      </span>
+                      <span className="flex-1 text-slate-200">
+                        {renderInlineFormatted(itemText)}
+                      </span>
+                    </li>
+                  );
+                })}
               </ol>
             );
           }

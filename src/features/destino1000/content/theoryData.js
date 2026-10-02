@@ -3014,6 +3014,47 @@ export const THEORY_CONTENT = {
       "Esquecer que entre Q1 e Q3 concentram-se SEMPRE exatamente 50% de todas as observações da amostra."
     ],
     mnemonics: "Estatística de Dispersão no ENEM: 'Média soma e divide; mediana corta no meio; variância eleva o desvio ao quadrado; desvio padrão tira a raiz e volta pra unidade; somar constante mexe na média mas não mexe na dispersão; e pra comparar grandezas diferentes, chama o CV (s sobre média) pra decidir a precisão!'"
+  },
+
+  "linguagens/estrategias-argumentativas-persuasao": {
+    topic: "Estratégias Argumentativas, Recursos Persuasivos e Falácias Lógicas",
+    area: "linguagens",
+    areaName: "Linguagens, Códigos e suas Tecnologias",
+    enemRelevance: "Competência 7 (Habilidades 21, 22, 23 e 24). É o eixo vertebrador tanto da prova de Linguagens quanto da nota máxima na Redação Nota 1000.",
+    highFrequencySkills: ["H21 - Reconhecer recursos de persuasão e intencionalidade", "H22 - Relacionar conectivos e orientação argumentativa", "H23 - Identificar falácias lógicas e preconceitos discursivos", "H24 - Analisar pontos de vista, polifonia e marcas de autoria"],
+    overview: "A banca do ENEM avalia a capacidade crítica do estudante de dissecar a maquinaria do discurso persuasivo. Para Beatriz (foco em Medicina), o domínio da argumentação e a detecção de falácias são essenciais não apenas para garantir pontuação de topo na prova objetiva e na Redação, mas para blindar o raciocínio clínico contra pseudociências, propagandas farmacológicas predatórias e falácias em saúde pública.",
+    keyConcepts: [
+      {
+        title: "A Tríade Retórica Aristotélica e Tipologias Probatórias",
+        content: "• Logos (Razão e Prova): Argumentos baseados em dados estatísticos auditados, nexos causais rigorosos e encadeamento dedutivo/indutivo.\n• Pathos (Emoção e Empatia): Apelo à sensibilidade ética, compaixão e indignação do auditório (ex: o uso de casos paradigmáticos e humanizados de pacientes reais).\n• Ethos (Credibilidade e Autoridade Moral): A construção da imagem do enunciador como figura prudente, íntegra e qualificada para tratar do tema.\n• Tipos de Argumento: Autoridade legítima (especialista no campo exato), Prova Concreta (dados demográficos/ensaios clínicos), Ilustração/Exemplificação (humanização concreta) e Raciocínio Lógico Causal (causa e consequência estrutural)."
+      },
+      {
+        title: "Operadores Argumentativos e a Semântica na Língua (Ducrot)",
+        content: "• Conjunções Adversativas (mas, porém, contudo): Orientam o período para a oração introduzida por elas. O argumento que vem após o 'mas' é o argumento VENCEDOR na disputa discursiva.\n• Conjunções Concessivas (embora, conquanto, ainda que): Introduzem o argumento VENCIDO. O autor reconhece um contraponto apenas para fortalecer a oração principal subordinante.\n• Operadores Escalares (até, até mesmo, inclusive): Situam a evidência no topo hierárquico da escala argumentativa ('atinge até mesmo cientistas laureados').\n• Operadores Retificadores (ou melhor, mais precisamente): Corrigem ou aprimoram a asserção anterior, elevando sua força e urgência."
+      },
+      {
+        title: "Catálogo das Falácias Lógicas Mais Cobradas no ENEM",
+        content: "• Argumentum ad Hominem: Desqualificar a evidência atacando a biografia, conduta moral ou temperamento do debatedor.\n• Espantalho (Straw Man): Distorcer e caricaturar a tese moderada do oponente para atacar uma versão frágil que nunca foi defendida.\n• Falsa Causa (Post Hoc Ergo Propter Hoc): Equiparar mera sucessão temporal à causalidade necessária ('tomei o chá e sarei, logo o chá cura').\n• Falso Dilema: Reduzir artificialmente um dilema complexo a duas opções excludentes catastróficas ('ou fecha o hospital ou quebra o estado').\n• Petição de Princípio: Raciocínio circular em que a conclusão reafirma a premissa com outras palavras.\n• Ladeira Escorregadia: Supor que um primeiro passo moderado levará deterministamente a uma catástrofe final apocalíptica sem justificativa empírica.\n• Tu Quoque: Tentar justificar o próprio erro apontando que o adversário também errou ('dois erros fazem um acerto').\n• Apelo à Ignorância (Ad Ignorantiam): Tratar algo como verdadeiro só porque ainda não se provou que é falso."
+      },
+      {
+        title: "Polifonia, Dialogismo e Marcas de Distanciamento",
+        content: "• O texto nunca é neutro; ele abriga múltiplas vozes em tensão (Bakhtin e Ducrot).\n• Aspas de Distanciamento: Indicam que o enunciador traz o discurso de outrem para o texto recusando-se a avalizar sua verdade, frequentemente com tom irônico ou crítico.\n• Modalizadores Discursivos: Calibram o grau de comprometimento com a verdade (epistêmicos: 'certamente' vs. 'é provável'; deônticos: 'é obrigatório' vs. 'é recomendável'). Na ciência médica, a prudência probabilística ('sugere-se', 'pode mitigar') é marca de rigor metodológico."
+      }
+    ],
+    formulasAndRules: [
+      "Hierarquia Adversativa: Em 'A, mas B', a orientação argumentativa pende para B.",
+      "Hierarquia Concessiva: Em 'Embora A, B', a orientação argumentativa pende para B.",
+      "Causalidade Científica: Causalidade exige Mecanismo Biológico Plausível + Correlação Estatística Significativa + Controle de Variáveis.",
+      "Padrão Ouro C5 Redação: Agente + Ação + Meio/Modo + Detalhamento + Finalidade."
+    ],
+    enemTraps: [
+      "Confundir oposição adversativa com concessiva: 'mas' dá vitória ao que vem com ele; 'embora' dá vitória à outra oração!",
+      "Confundir relato anedótico individual com evidência científica: depoimentos do tipo 'com meu tio funcionou' têm valor probatório nulo perante estudos clínicos controlados!",
+      "Interpretar ironia ao pé da letra: em textos satíricos, palavras elogiosas ('brilhante', 'genial') devem ser lidas em seu sentido oposto!",
+      "Achar que ad hominem é apenas xingamento vulgar: apontar contradições biográficas ou traços de personalidade irrelevantes para invalidar um dado estatístico também é ad hominem!",
+      "Na redação, apresentar propostas vagas sem os 5 elementos obrigatórios: propostas sem meio/modo ou sem detalhamento perdem até 120 pontos na C5!"
+    ],
+    mnemonics: "Mestres da Argumentação: 'No MAS o argumento que ganha é o que vem depois; no EMBORA o que ganha é o que fica de fora; falácia de espantalho deforma pra bater; ad hominem bate na pessoa pro argumento não ver; e na intervenção do ENEM, são 5 passos pra vencer: Agente, Ação, Modo, Detalhe e o que vai Acontecer!'"
   }
 };
 
