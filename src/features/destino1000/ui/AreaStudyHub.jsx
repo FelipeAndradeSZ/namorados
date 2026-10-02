@@ -34,6 +34,8 @@ const AREA_TOPICS = {
     { id: "natureza/genetica", name: "Genética, DNA e Biotecnologia", tag: "Biologia", priority: "Alta", questionsCount: 25 },
     { id: "natureza/mecanica", name: "Mecânica e Conservação de Energia", tag: "Física", priority: "Alta", questionsCount: 25 },
     { id: "natureza/termoquimica", name: "Termoquímica e Cinética Química", tag: "Química", priority: "Média-Alta", questionsCount: 25 },
+    { id: "natureza/evolucao", name: "Evolução e Genética de Populações", tag: "Biologia", priority: "Crítica • Neodarwinismo", questionsCount: 25 },
+    { id: "natureza/solucoes-equilibrio", name: "Equilíbrio Químico e Soluções", tag: "Química", priority: "Crítica • pH e Le Chatelier", questionsCount: 25 },
   ],
   matematica: [
     { id: "matematica/razao-proporcao", name: "Razão, Proporção e Escala", tag: "Aritmética", priority: "Crítica • Mais Cobrado", questionsCount: 25 },
@@ -45,6 +47,7 @@ const AREA_TOPICS = {
     { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 25 },
     { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 25 },
     { id: "matematica/probabilidade", name: "Probabilidade e Análise Combinatória", tag: "Combinatória", priority: "Média-Alta", questionsCount: 25 },
+    { id: "matematica/progressoes", name: "Progressões Aritméticas e Geométricas (PA e PG)", tag: "Álgebra", priority: "Crítica • Modelagem Linear e Exponencial", questionsCount: 25 },
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 25 },
@@ -61,11 +64,11 @@ const AREA_TOPICS = {
     { id: "linguagens/interpretacao", name: "Interpretação e Compreensão Textual", tag: "Texto", priority: "Crítica • Mais de 60% da Prova", questionsCount: 25 },
     { id: "linguagens/literatura", name: "Literatura Brasileira e Modernismo", tag: "Literatura", priority: "Alta • Semana de 22 e Fase 30", questionsCount: 25 },
     { id: "linguagens/argumentacao", name: "Argumentação e Recursos Persuasivos", tag: "Argumentação", priority: "Alta", questionsCount: 25 },
-    { id: "linguagens/vanguardas-artes", name: "Vanguardas Europeias e Artes Visuais", tag: "Artes", priority: "Alta • Modernismo e Ruptura", questionsCount: 20 },
-    { id: "linguagens/generos", name: "Gêneros Textuais e Esferas de Circulação", tag: "Gêneros", priority: "Alta", questionsCount: 20 },
-    { id: "linguagens/recursos-linguisticos", name: "Recursos da Língua e Variação Linguística", tag: "Gramática", priority: "Média-Alta", questionsCount: 20 },
-    { id: "linguagens/funcoes-linguagem", name: "Funções da Linguagem (Roman Jakobson)", tag: "Comunicação", priority: "Crítica • Cai Todo Ano", questionsCount: 20 },
-    { id: "linguagens/figuras-linguagem", name: "Figuras de Linguagem e Expressividade", tag: "Estilística", priority: "Crítica • Ouro do ENEM", questionsCount: 20 },
+    { id: "linguagens/vanguardas-artes", name: "Vanguardas Europeias e Artes Visuais", tag: "Artes", priority: "Alta • Modernismo e Ruptura", questionsCount: 25 },
+    { id: "linguagens/generos", name: "Gêneros Textuais e Esferas de Circulação", tag: "Gêneros", priority: "Alta", questionsCount: 25 },
+    { id: "linguagens/recursos-linguisticos", name: "Recursos da Língua e Variação Linguística", tag: "Gramática", priority: "Média-Alta", questionsCount: 25 },
+    { id: "linguagens/funcoes-linguagem", name: "Funções da Linguagem (Roman Jakobson)", tag: "Comunicação", priority: "Crítica • Cai Todo Ano", questionsCount: 25 },
+    { id: "linguagens/figuras-linguagem", name: "Figuras de Linguagem e Expressividade", tag: "Estilística", priority: "Crítica • Ouro do ENEM", questionsCount: 25 },
   ],
   redacao: [
     { id: "redacao/estrutura-padrao", name: "Estrutura Padrão Ouro (Introdução, D1, D2, C5)", tag: "Estrutura", priority: "Crítica • Rumo aos 1000", questionsCount: 10 },

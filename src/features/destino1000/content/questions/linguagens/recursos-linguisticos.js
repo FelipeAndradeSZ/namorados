@@ -830,6 +830,226 @@ export const QUESTIONS_RECURSOS_LINGUISTICOS = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-021",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Recursos da Língua",
+    subtopic: "Ambiguidade Estrutural vs Ambiguidade Lexical e Efeitos de Sentido",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes frases divulgadas em folhetos informativos:\n\nFrase 1: 'O médico examinou o paciente sentado na cadeira de rodas.'\nFrase 2: 'A loja anunciou a venda de sapatos para rapazes de couro.'\n\nEm ambas as sentenças, a ordem dos termos sintáticos gera duplo sentido (ambiguidade estrutural ou anfibologia), comprometendo a clareza do enunciado.",
+      source: "Manual de Clareza e Precisão Textual na Norma-Padrão"
+    },
+    prompt: "A ambiguidade estrutural observada na Frase 1 decorre especificamente do fato de que:",
+    options: [
+      { id: "a", text: "o adjunto adnominal/adverbial 'sentado na cadeira de rodas' pode se referir tanto ao sujeito agente ('o médico') quanto ao objeto direto paciente ('o paciente'), deixando incerto quem de fato estava sentado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o substantivo 'médico' possui duplo sentido dicionarizado por ser homônimo perfeito de um verbo da primeira conjugação.", isCorrect: false, distractorRationale: "A ambiguidade é sintático-estrutural de posição de adjuntos, e não polissemia ou homonímia do vocábulo 'médico'." },
+      { id: "c", text: "a frase contém uma contradição biológica insolúvel que impede a existência física de cadeiras de rodas em hospitais.", isCorrect: false, distractorRationale: "Cadeiras de rodas são itens hospitalares corriqueiros; o problema é estritamente de sintaxe e ambiguidade." },
+      { id: "d", text: "a palavra 'paciente' foi grafada em desacordo com as regras do Novo Acordo Ortográfico.", isCorrect: false, distractorRationale: "A grafia e ortografia de todos os termos estão rigorosamente corretas." },
+      { id: "e", text: "o verbo 'examinou' exige preposição obrigatória regida no pretérito perfeito com crase.", isCorrect: false, distractorRationale: "O verbo 'examinar' é transitivo direto no contexto ('examinou o paciente'), sem crase." }
+    ],
+    detailedExplanation: {
+      summary: "A ambiguidade sintática (anfibologia) ocorre quando o arranjo dos termos na frase permite mais de uma interpretação gramatical legítima. Para desfazê-la na Frase 1, deve-se reorganizar os termos: 'Sentado na cadeira de rodas, o médico examinou o paciente' ou 'O médico examinou o paciente que estava sentado na cadeira de rodas'.",
+      stepByStep: [
+        "1. Identificação do termo móvel: 'sentado na cadeira de rodas'.",
+        "2. Análise do duplo vínculo: Pela proximidade sintática, qualifica 'o paciente'; pelo contexto de exame clínico, pode ser uma postura assumida pelo 'médico'.",
+        "3. Conceito gramatical: Trata-se de ambiguidade estrutural provocada pelo mau posicionamento de oração reduzida de particípio / adjunto.",
+        "4. Conclusão: A alternativa (a) explicita cirurgicamente a causa do duplo sentido."
+      ],
+      coreConcept: "Ambiguidade Estrutural (Anfibologia) e Clareza Textual",
+      trapWarning: "No ENEM e na Redação nota 1000: Evite ambiguidades sintáticas causadas pelo mau posicionamento de adjuntos e orações adjetivas restritivas ou explicativas!"
+    },
+    commonTraps: [
+      "Confundir ambiguidade de palavra isolada (lexical/polissemia) com ambiguidade de ordenamento frasal (estrutural/sintática)",
+      "Não perceber a duplicidade de leitura em frases cotidianas"
+    ],
+    tags: ["ambiguidade", "anfibologia", "sintaxe", "clareza-textual", "redacao-enem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-022",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Recursos da Língua",
+    subtopic: "Paralelismo Sintático e Harmonia Estrutural no Padrão Culto",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes frases redigidas por candidatos a exames vestibulares:\n\nFrase 1: 'O novo diretor prometeu redução de custos e que iria contratar novos professores.'\nFrase 2: 'O novo diretor prometeu a redução de custos e a contratação de novos professores.'\n\nNa teoria da coerência e coesão gramatical, a Frase 2 atende rigorosamente ao princípio do paralelismo sintático, enquanto a Frase 1 apresenta uma falha estrutural frequente.",
+      source: "Sintaxe da Norma-Padrão e Engenharia Textual da Dissertação"
+    },
+    prompt: "A conformidade da Frase 2 ao princípio do paralelismo sintático manifesta-se no fato de que:",
+    options: [
+      { id: "a", text: "coordena elementos com idêntica natureza morfossintática (dois sintagmas nominais regidos pelo mesmo verbo transitivo direto), assegurando simetria, equilíbrio rítmico e clareza ao período.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "substitui orações afirmativas por interjeições conativas dirigidas à diretoria executiva da escola.", isCorrect: false, distractorRationale: "Não há interjeições no período; são dois complementos nominais formais perfeitamente articulados." },
+      { id: "c", text: "elimina todos os substantivos abstratos para transformar o texto em uma narrativa de ficção científica.", isCorrect: false, distractorRationale: "Pelo contrário, emprega substantivos formais ('redução', 'contratação') em harmonia estrutural." },
+      { id: "d", text: "converte a voz ativa do verbo principal em voz passiva pronominal reflexiva recíproca.", isCorrect: false, distractorRationale: "O verbo 'prometeu' permanece na voz ativa com sujeito agente determinado." },
+      { id: "e", text: "obriga o uso de rimas ricas consoantes em todas as palavras terminadas em ditongo decrescente.", isCorrect: false, distractorRationale: "Paralelismo sintático é questão de estrutura gramatical, não de versificação poética." }
+    ],
+    detailedExplanation: {
+      summary: "O paralelismo sintático exige que elementos coordenados ou correlacionados desempenhem o mesmo papel gramatical com formatos semelhantes. Se o primeiro termo é um sintagma nominal ('a redução de custos'), o segundo também deve ser nominal ('a contratação de professores'), e não uma oração inteira desenvolvida ('e que iria contratar').",
+      stepByStep: [
+        "1. Na Frase 1 (quebra de paralelismo): Substantivo ('redução') coordenado com oração subordinada substantiva ('e que iria...'). Causa estranheza e perda de coesão.",
+        "2. Na Frase 2 (paralelismo mantido): Dois sintagmas nominais articulados: [a redução de X] e [a contratação de Y].",
+        "3. Impacto na redação do ENEM: O respeito ao paralelismo sintático pontua diretamente na Competência 1 e Competência 4.",
+        "4. Conclusão: A alternativa (a) expõe os fundamentos do paralelismo morfossintático."
+      ],
+      coreConcept: "Paralelismo Sintático e Morfológico na Construção do Período",
+      trapWarning: "No ENEM: Corrija quebras de paralelismo! 'Gosto de ler, de estudar e praticar esportes' -> falha de paralelismo preposicional. O correto: 'de ler, de estudar e DE praticar'!"
+    },
+    commonTraps: [
+      "Misturar substantivo com oração desenvolvida em enumerações coordenadas",
+      "Esquecer a preposição no segundo termo em orações regidas pelo mesmo verbo"
+    ],
+    tags: ["paralelismo-sintatico", "coesao-textual", "competencia-1", "gramatica-normativa", "redacao-enem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-023",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Recursos da Língua",
+    subtopic: "Coesão Referencial: Anáfora, Catáfora e Progressão por Hiperônimos",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de uma crônica de costumes urbanos:\n'O velho casarão da esquina resistiu bravamente à especulação imobiliária durante décadas. A imponente edificação, que presenciou a transformação do bairro operário em polo financeiro, ostentava portas de jacarandá maciço e azulejos portugueses raros. Todos sabiam disto: cedo ou tarde, as máquinas de demolição acabariam por derrubá-la.'",
+      source: "Crônicas da Memória e Urbanização Brasileira"
+    },
+    prompt: "No fragmento apresentado, os mecanismos de coesão referencial 'A imponente edificação', 'disto' e o pronome oblíquo '-la' desempenham, respectivamente, as funções de:",
+    options: [
+      { id: "a", text: "anáfora por substituição hiperonímica (retomando 'o velho casarão'), catáfora (antecipando a revelação da demolição que virá a seguir) e anáfora pronominal (retomando a edificação a ser derrubada).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "pleonasmo vicioso, catacrese involuntária e cacofonia fonética de terminação em vogal nasal.", isCorrect: false, distractorRationale: "Trata-se de recursos legítimos de coesão referencial textual, e não de figuras de erro estilístico." },
+      { id: "c", text: "catáfora inicial, anáfora mediata e apelo fático com teste de sinal radiofônico.", isCorrect: false, distractorRationale: "'A imponente edificação' retoma termo prévio, configurando anáfora, e não catáfora de abertura." },
+      { id: "d", text: "recurso metalinguístico para ensinar conjugação de verbos pronominais na segunda pessoa.", isCorrect: false, distractorRationale: "O texto não se propõe a dar aulas gramaticais teóricas de conjugação." },
+      { id: "e", text: "criação de neologismos tecnológicos para divulgar maquinários pesados de construção civil.", isCorrect: false, distractorRationale: "Não há neologismos no texto; as palavras pertencem ao léxico tradicional culto da língua." }
+    ],
+    detailedExplanation: {
+      summary: "A coesão referencial evita repetições desnecessárias e garante a fluidez do texto: Anáfora = retoma elemento anterior ('A imponente edificação' e '-la' retomam 'o velho casarão'); Catáfora = aponta para frente, antecipando uma informação ('disto: cedo ou tarde...'). O hiperônimo é um termo de sentido mais amplo ('edificação' abrange 'casarão').",
+      stepByStep: [
+        "1. 'A imponente edificação': Termo de sentido genérico que retoma 'casarão' -> Anáfora com hiperônimo.",
+        "2. 'disto:': O pronome demonstrativo neutro com 't' ('isto/disto') antecipa o que vem depois dos dois-pontos -> Catáfora.",
+        "3. 'derrubá-la': O pronome clítico '-la' retoma a edificação/casarão -> Anáfora pronominal.",
+        "4. Conclusão: A alternativa (a) classifica com rigor os três movimentos de coesão do período."
+      ],
+      coreConcept: "Coesão Referencial: Mecanismos Anafóricos, Catafóricos e Hiperônimos",
+      trapWarning: "No ENEM e na Redação: Use demonstrativos com precisão! 'Este/isto' aponta para a frente (catáfora) ou para o tempo presente; 'Esse/isso' retoma o que já foi dito (anáfora)!"
+    },
+    commonTraps: [
+      "Confundir anáfora (olhar para trás no texto) com catáfora (olhar para a frente)",
+      "Não reconhecer que hiperônimos (termos mais abrangentes) são ferramentas de ouro da coesão lexical"
+    ],
+    tags: ["coesao-referencial", "anafora", "catafora", "hiperonimo", "competencia-4"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-024",
+    area: "linguagens",
+    competence: 7,
+    skill: 24,
+    topic: "Recursos da Língua",
+    subtopic: "Variação Linguística Diatópica, Regionalismos e Adequação Situacional",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes designações populares para a raiz comestível *Manihot esculenta* nas diversas regiões brasileiras:\n• 'Mandioca' (predominante nas regiões Sudeste e Centro-Oeste);\n• 'Macaxeira' (predominante nas regiões Nordeste e Norte);\n• 'Aipim' (predominante no Rio de Janeiro e partes do Sul).\n\nPara além do léxico culinário, cada região apresenta traços prosódicos (o 'sotaque'), giros sintáticos e construções orais particulares consagradas por séculos de história.",
+      source: "BAGNO, Marcos. Preconceito Linguístico: O que é, como se faz. São Paulo: Parábola Editorial, 2023."
+    },
+    prompt: "À luz da sociolinguística contemporânea e das matrizes do ENEM, a coexistência dos termos 'mandioca', 'macaxeira' e 'aipim' exemplifica:",
+    options: [
+      { id: "a", text: "uma variação linguística diatópica (geográfica/regional), atestando a riqueza e a vitalidade histórica do português brasileiro, cuja diversidade não autoriza nenhuma hierarquização de superioridade ou inferioridade entre os falares regionais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a degradação da língua portuguesa culta causada pelo isolamento geográfico de populações analfabetas.", isCorrect: false, distractorRationale: "Trata-se de preconceito linguístico infundado; variações regionais são legítimas em todas as camadas sociais." },
+      { id: "c", text: "uma fraude agronômica passível de punição judicial pelo Ministério da Agricultura.", isCorrect: false, distractorRationale: "São nomes populares consagrados culturalmente para a mesma espécie botânica." },
+      { id: "d", text: "a necessidade urgente de unificar a fala brasileira por meio de decretos federais que imponham multas a quem não usar o vocábulo de São Paulo.", isCorrect: false, distractorRationale: "A linguística e a legislação repudiam imposições autoritárias sobre os falares do povo." },
+      { id: "e", text: "um erro crasso de concordância nominal passível de nota zero na prova de redação do ENEM.", isCorrect: false, distractorRationale: "São termos do vocabulário legítimo aceitos pelos principais dicionários da língua." }
+    ],
+    detailedExplanation: {
+      summary: "A variação geográfica (diatópica) reflete as particularidades históricas e culturais de cada região do Brasil. Não existe uma região que fale o português 'mais correto' do que outra. O conceito fundamental da linguística moderna é a ADEQUAÇÃO: saber adequar o registro linguístico à situação comunicativa.",
+      stepByStep: [
+        "1. Conceito: Variação diatópica = variação no espaço geográfico (mandioca, macaxeira, aipim / jerimum, abóbora / tangerina, bergamota, mexerica).",
+        "2. Postura científica: A sociolinguística demonstra que todas as variedades linguísticas possuem gramática coerente e lógica funcional.",
+        "3. Combate ao preconceito linguístico: Desqualificar o falar nordestino, nortista, caipira ou sulista como 'feio' ou 'errado' é preconceito social mascarado de zelo gramatical.",
+        "4. Conclusão: A alternativa (a) exprime a visão humanista e científica da Matriz do ENEM."
+      ],
+      coreConcept: "Variação Linguística Diatópica (Regional) e Preconceito Linguístico",
+      trapWarning: "No ENEM: NUNCA marque uma alternativa que afirme que uma variante regional é 'errada', 'pobre' ou 'corruptora da língua portuguesa'! A diversidade linguística é sempre valorizada."
+    },
+    commonTraps: [
+      "Achar que existe um único termo 'correto' e que os outros são gírias inferiores",
+      "Confundir variação regional legítima com desrespeito à norma-padrão em situações formais escritas"
+    ],
+    tags: ["variacao-linguistica", "diatopica", "regionalismos", "preconceito-linguistico", "marcos-bagno"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-025",
+    area: "linguagens",
+    competence: 7,
+    skill: 23,
+    topic: "Recursos da Língua",
+    subtopic: "Operadores Argumentativos: Oposição Enfática vs Concessão Subordinada",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere os dois períodos abaixo a respeito do mesmo debate social:\n\nPeríodo A: 'O projeto habitacional exige investimentos orçamentários vultosos, MAS beneficiará milhares de famílias sem teto.'\nPeríodo B: 'O projeto habitacional beneficiará milhares de famílias sem teto, MAS exige investimentos orçamentários vultosos.'\n\nEm análise textual, as conjunções coordenativas adversativas orientam de forma decisiva a força argumentativa da frase.",
+      source: "DUCROT, Oswald. O Dizer e o Dito: Polifonia e Argumentação na Língua"
+    },
+    prompt: "A comparação semântica e pragmática entre os dois períodos evidencia que:",
+    options: [
+      { id: "a", text: "a conjunção adversativa 'mas' atribui maior peso argumentativo à oração que ela introduz, fazendo com que o Período A conclua em favor da aprovação do projeto e o Período B conduza à sua rejeição ou adiamento.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ambos os períodos defendem exatamente a mesma conclusão com a mesma ênfase emotiva e neutralidade.", isCorrect: false, distractorRationale: "A inversão da ordem com o conectivo adversativo inverte o direcionamento argumentativo final do texto." },
+      { id: "c", text: "a conjunção 'mas' no Período B funciona como conectivo aditivo com valor de soma matemática.", isCorrect: false, distractorRationale: "O 'mas' é adversativo em ambos, marcando oposição e prevalência do argumento subsequente." },
+      { id: "d", text: "o Período A viola a norma culta ao utilizar uma conjunção entre duas orações independentes.", isCorrect: false, distractorRationale: "O emprego de conjunções adversativas entre orações coordenadas é a essência da norma culta." },
+      { id: "e", text: "nenhum dos períodos possui valor argumentativo relevante para o debate público sobre moradia.", isCorrect: false, distractorRationale: "Ambos são enunciados argumentativos prototípicos sobre políticas públicas de moradia social." }
+    ],
+    detailedExplanation: {
+      summary: "Na teoria da argumentação de Oswald Ducrot e Koch, o conectivo adversativo ('mas', 'porém', 'contudo') confere prevalência ao argumento que o sucede imediatamente: P mas Q -> o falante quer que o ouvinte apoie a conclusão apontada por Q! No Período A, o benefício prevalece; no Período B, o custo financeiro prevalece.",
+      stepByStep: [
+        "1. Estrutura do Período A: [Custo alto] MAS [Benefício social]. O argumento vitorioso é o benefício social -> Apoio ao projeto.",
+        "2. Estrutura do Período B: [Benefício social] MAS [Custo alto]. O argumento vitorioso é o custo elevado -> Rejeição ou cautela ao projeto.",
+        "3. Poder dos operadores argumentativos: A ordem dos fatores altera profundamente o direcionamento ideológico e persuasivo do texto.",
+        "4. Conclusão: A alternativa (a) reflete perfeitamente a teoria semântico-argumentativa dos operadores de oposição."
+      ],
+      coreConcept: "Operadores Argumentativos de Oposição e a Orientação Discursiva",
+      trapWarning: "No ENEM e na Redação: O que vem depois do 'mas' é a sua tese definitiva! Use o 'mas' sempre a favor do argumento que você quer sustentar perante a banca corretora!"
+    },
+    commonTraps: [
+      "Achar que trocar a ordem de duas orações adversativas não altera o sentido do texto",
+      "Não perceber a força persuasiva decisiva da última oração introduzida por conjunção adversativa"
+    ],
+    tags: ["operadores-argumentativos", "conjuncoes-adversativas", "ducrot", "semantica-argumentativa", "redacao-enem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
 

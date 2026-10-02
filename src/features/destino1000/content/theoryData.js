@@ -1340,6 +1340,117 @@ export const THEORY_CONTENT = {
       "Confundir arenização (processo eólico em solos arenosos no RS) com desertificação (processo antrópico/climático severo em zonas semiáridas)."
     ],
     mnemonics: "Hotspots do Brasil: 'MA-CE' (Mata Atlântica e Cerrado)."
+  },
+
+  "natureza/evolucao": {
+    topic: "Evolução Biológica e Neodarwinismo",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Top mais cobrado em Biologia (especialmente resistência bacteriana e especiação).",
+    highFrequencySkills: ["H15 - Mecanismos de evolução e adaptação", "H16 - Genética de populações"],
+    overview: "A Teoria Sintética da Evolução unifica a Seleção Natural de Darwin com a Genética Mendeliana e a Biologia Molecular. A variabilidade surge por mutação ao acaso e recombinação gênica; a seleção natural atua como filtro direcional favorecendo o sucesso reprodutivo diferencial.",
+    keyConcepts: [
+      {
+        title: "Seleção Natural vs Lamarquismo",
+        content: "Lamarck postulava que o meio cria a necessidade e induz mutações orientadas (uso e desuso + herança dos caracteres adquiridos). No Neodarwinismo, a variação pré-existe ao acaso na população; o meio ambiental atua selecionando os fenótipos mais aptos a deixar descendentes férteis."
+      },
+      {
+        title: "Resistência a Antibióticos e Pesticidas",
+        content: "O antibiótico ou pesticida NÃO induz a mutação de resistência! As bactérias resistentes já existiam previamente em frequência minúscula na colônia. O medicamento elimina as sensíveis (seleção direcional) e permite a proliferação desimpedida das linhagens resistentes."
+      },
+      {
+        title: "Especiação Alopátrica e Simpátrica",
+        content: "Alopátrica: Barreira geográfica física divide a população -> acúmulo independente de mutações e pressões seletivas -> ISOLAMENTO REPRODUTIVO definitivo. Simpátrica: Ocorre no mesmo território geográfico (frequente em plantas por poliploidia 3n, 4n, 6n)."
+      },
+      {
+        title: "Homologia vs Analogia",
+        content: "Homologia (Irradiação Adaptativa): mesma origem embrionária e ancestralidade comum com funções divergentes (braço humano, pata do cavalo, asa do morcego). Analogia (Convergência Evolutiva): origens embrionárias distintas com formas semelhantes por pressões ambientais análogas (tubarão e golfinho; asa da ave e asa do inseto)."
+      }
+    ],
+    formulasAndRules: [
+      "Equilíbrio de Hardy-Weinberg: p + q = 1  |  p² + 2pq + q² = 1 (p = alelo A, q = alelo a; 2pq = heterozigotos).",
+      "Número de meias-vidas de isótopo: k = tempo_total / meia-vida  ⟹  m = m0 / 2^k."
+    ],
+    enemTraps: [
+      "Nunca marque alternativas que digam que 'o ser vivo se adaptou para sobreviver' (visão teleológica lamarquista). O correto é 'sobreviveu porque já era adaptado'.",
+      "Não confunda homem descendente do macaco: a ciência afirma ancestral comum compartilhado, e não descendência direta de primatas atuais."
+    ],
+    mnemonics: "Fontes de Variabilidade: 'Mutações criam; Meiose e Sexo embaralham; Seleção Natural filtra'."
+  },
+
+  "natureza/solucoes-equilibrio": {
+    topic: "Equilíbrio Químico e Soluções",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Pilar obrigatório em Química (Le Chatelier, pH e Tampão Sanguíneo caem todo ano).",
+    highFrequencySkills: ["H24 - Equilíbrios em solução aquosa", "H25 - Controle de pH e soluções"],
+    overview: "Estudo dos sistemas reversíveis, perturbações pelo Princípio de Le Chatelier, cálculo de pH/pOH, reações de neutralização, diluição e propriedades coligativas.",
+    keyConcepts: [
+      {
+        title: "Princípio de Le Chatelier",
+        content: "Quando um equilíbrio sofre perturbação externa, o sistema se desloca no sentido de anular essa perturbação: • Aumentar [reagente] desloca para a DIREITA; • Aumentar pressão desloca para o MENOR volume gasoso; • Aumentar temperatura desloca no sentido ENDOTÉRMICO (ΔH > 0)."
+      },
+      {
+        title: "Tampão Sanguíneo e Alcalose/Acidose",
+        content: "CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3-. Hiperventilação elimina CO2 -> equilíbrio desloca para a ESQUERDA -> consome H+ -> pH sobe (Alcalose respiratória). Hipoventilação retém CO2 -> desloca para a DIREITA -> gera H+ -> pH cai (Acidose respiratória)."
+      },
+      {
+        title: "Diluição e Mistura de Soluções",
+        content: "Diluição conserva a massa de soluto: C1 · V1 = C2 · V2. Na titulação ácido-base estequiométrica: n_H+ = n_OH- ⟹ M_ácido · V_ácido · (nº de H+) = M_base · V_base · (nº de OH-)."
+      },
+      {
+        title: "Hidrólise Salina",
+        content: "O sal herda o lado FORTE dos reagentes de origem: Sal de ácido forte + base fraca = Ácido (pH < 7, ex: NH4Cl). Sal de ácido fraco + base forte = Básico (pH > 7, ex: NaHCO3). Sal de ácido forte + base forte = Neutro (pH = 7, ex: NaCl)."
+      }
+    ],
+    formulasAndRules: [
+      "Concentração em Quantidade de Matéria: M = n / V = m / (MM · V).",
+      "Escala de pH: pH = -log[H+]  |  pOH = -log[OH-]  |  pH + pOH = 14 (a 25 °C).",
+      "Produto de Solubilidade: Kps = [A+]^a · [B-]^b (sólidos não entram na fórmula).",
+      "Diluição: C1 · V1 = C2 · V2."
+    ],
+    enemTraps: [
+      "Catalisador NÃO desloca equilíbrio químico nem aumenta rendimento de produtos; apenas encurta o tempo para atingir o equilíbrio!",
+      "Sólidos puros e líquidos puros NÃO entram na expressão de Kc nem Kp."
+    ],
+    mnemonics: "Le Chatelier Térmico: 'Esquentou? Corre pro Endotérmico! Esfriou? Vai pro Exotérmico!'."
+  },
+
+  "matematica/progressoes": {
+    topic: "Progressões Aritméticas e Geométricas (PA e PG)",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Tema transversal de alta pontuação na TRI (modelagem linear e exponencial).",
+    highFrequencySkills: ["H15 - Reconhecer padrões em sequências", "H16 - Modelagem algébrica de PA e PG"],
+    overview: "Compreensão de sequências numéricas recursivas: Progressão Aritmética (variação aditiva constante / função afim) e Progressão Geométrica (variação multiplicativa constante / função exponencial).",
+    keyConcepts: [
+      {
+        title: "Progressão Aritmética (PA)",
+        content: "Termo geral: an = a1 + (n - 1) · r. A razão r é constante (r = an - an-1). Soma dos termos: Sn = [(a1 + an) · n] / 2. Aplicação: fileiras de cadeiras, degraus de escada, planos de treino linear, amortização SAC."
+      },
+      {
+        title: "Progressão Geométrica (PG)",
+        content: "Termo geral: an = a1 · q^(n - 1). A razão q é o quociente entre termos sucessivos (q = an / an-1). Soma de PG finita: Sn = a1 · (q^n - 1) / (q - 1). Aplicação: proliferação celular, contágio viral, juros compostos, decaimento radioativo."
+      },
+      {
+        title: "Soma de PG Infinita Convergente",
+        content: "Para progressões geométricas decrescentes onde a razão satisfaz |q| < 1 (como 1/2, 1/3, 0,1), a soma de infinitos termos converge para um valor finito exato: S∞ = a1 / (1 - q). Aplicação: fractais, saltos amortecidos de bola de borracha, dízimas periódicas."
+      },
+      {
+        title: "Interpolação de Termos",
+        content: "Inserir k termos entre dois extremos a1 e an cria uma sequência com n = k + 2 termos e (k + 1) intervalos (vãos). A razão é: r = (an - a1) / (k + 1)."
+      }
+    ],
+    formulasAndRules: [
+      "PA: an = a1 + (n - 1) · r  |  Sn = [(a1 + an) · n] / 2.",
+      "PG: an = a1 · q^(n - 1)  |  Sn = a1 · (q^n - 1) / (q - 1)  |  S∞ = a1 / (1 - q) para |q| < 1.",
+      "Média Aritmética (PA de 3 termos): b = (a + c) / 2  |  Média Geométrica (PG de 3 termos): b² = a · c."
+    ],
+    enemTraps: [
+      "Não confunda (n - 1) com n no termo geral da PA e PG: do 1º ao 20º termo são 19 razões!",
+      "Ao interpolar k postes ou mudas de árvores, divida por (k + 1) vãos, não por k!"
+    ],
+    mnemonics: "PA soma (linha reta); PG multiplica (curva exponencial que explode)."
   }
 };
 

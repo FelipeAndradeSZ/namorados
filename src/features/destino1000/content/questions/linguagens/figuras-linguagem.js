@@ -801,5 +801,225 @@ export const QUESTIONS_FIGURAS_LINGUAGEM = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-021",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Elipse e Zeugma: Omissão Estrutural e Concisão Estilística",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as frases a seguir extraídas de textos literários:\n\nFrase 1: 'Na terra, tanta dor; no céu, nenhum consolo.'\nFrase 2: 'Ele preferia o silêncio da biblioteca; ela, o burburinho do pátio escolar.'\n\nEm ambas as construções, a expressividade decorre da omissão intencional de termos oracionais facilmente recuperáveis pela leitura atenta.",
+      source: "Estilística da Língua Portuguesa e Figuras de Sintaxe"
+    },
+    prompt: "No plano estilístico e sintático, a distinção fundamental entre a omissão na Frase 1 e a omissão na Frase 2 reside no fato de que:",
+    options: [
+      { id: "a", text: "na Frase 1 ocorre elipse (supressão do verbo 'haver' subentendido pelo contexto geral), enquanto na Frase 2 ocorre zeugma (omissão do verbo 'preferir', que já havia sido expressamente enunciado no período anterior).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a Frase 1 comete um erro de regência verbal imperdoável que desqualifica a coerência textual do período.", isCorrect: false, distractorRationale: "A elipse é uma figura sintática legítima e prestigiada, não um erro gramatical." },
+      { id: "c", text: "a Frase 2 apresenta anacoluto involuntário decorrente da falta de domínio do padrão culto pelo autor.", isCorrect: false, distractorRationale: "Não há anacoluto (fratura sintática), mas sim zeugma límpido e equilibrado." },
+      { id: "d", text: "ambas as frases exemplificam pleonasmos redundantes que repetem os mesmos termos desnecessariamente.", isCorrect: false, distractorRationale: "Ocorre o oposto do pleonasmo: os termos são suprimidos por economia estilística, não repetidos." },
+      { id: "e", text: "a Frase 1 utiliza prosopopeia ao atribuir sentimentos humanos à terra e ao céu simultaneamente.", isCorrect: false, distractorRationale: "A figura central em debate é a omissão oracional de 'haver', e não a personificação cósmica." }
+    ],
+    detailedExplanation: {
+      summary: "A elipse consiste na omissão de um termo que não apareceu antes no texto, mas é depreendido pela lógica contextual ('Na terra, [há] tanta dor'). O zeugma é uma espécie particular de elipse na qual o termo omitido já foi mencionado anteriormente no mesmo período ('ela [preferia], o burburinho').",
+      stepByStep: [
+        "1. Na Frase 1: 'Na terra, tanta dor' omite o verbo de existência ('há/existe'), inferido pelo sentido geral -> Elipse.",
+        "2. Na Frase 2: 'ela, o burburinho' omite o verbo 'preferia', que apareceu exatamente na primeira oração ('Ele preferia...') -> Zeugma.",
+        "3. Função estilística: Evitar repetições cacofônicas, dinamizar o ritmo do período e conferir elegância clássica ao texto.",
+        "4. Conclusão: A alternativa (a) estabelece com exatidão a distinção técnica entre elipse e zeugma."
+      ],
+      coreConcept: "Elipse vs Zeugma nas Figuras de Sintaxe",
+      trapWarning: "No ENEM: Todo zeugma é uma elipse, mas nem toda elipse é zeugma. Zeugma exige menção expressa prévia do termo no mesmo período!"
+    },
+    commonTraps: [
+      "Confundir termo suprimido contextual (elipse) com termo suprimido já mencionado (zeugma)",
+      "Considerar a vírgula do zeugma como erro de pontuação"
+    ],
+    tags: ["figuras-de-sintaxe", "elipse", "zeugma", "estilistica", "gramatica-contextual"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-022",
+    area: "linguagens",
+    competence: 8,
+    skill: 27,
+    topic: "Figuras de Linguagem",
+    subtopic: "Aliteração e Assonância: Recursos Fônicos e Expressividade Rítmica",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Analise os versos clássicos do poema de Cruz e Sousa:\n\n'Vozes veladas, veludosas vozes,\nVolúpias dos violões, vozes veladas,\nVagam nos velhos vórtices velozes\nDos ventos, vivas, vãs, vulcanizadas.'\n\nNessa estrofe do simbolismo brasileiro, a sonoridade desempenha papel preponderante na construção da atmosfera lírica do poema.",
+      source: "Cruz e Sousa, 'Violões que Choram', Broquéis (1893)"
+    },
+    prompt: "O efeito expressivo marcante do poema é construído prioritariamente pela:",
+    options: [
+      { id: "a", text: "iteração contínua do fonema consonantal fricativo sonoro /v/ (aliteração), mimetizando acusticamente o sopro sussurrado do vento e a vibração melancólica das cordas de violão.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "adoção estrita de rimas pobres de substantivos concretos terminados na vogal nasal /ã/.", isCorrect: false, distractorRationale: "O poema é marcado por rimas ricas e complexas, e o recurso central é a repetição de consoantes iniciais /v/." },
+      { id: "c", text: "utilização exclusiva de orações interrogativas diretas que cobram respostas do leitor.", isCorrect: false, distractorRationale: "Não há orações interrogativas nos versos citados." },
+      { id: "d", text: "supressão absoluta de quaisquer adjetivos qualificadores para valorizar o estilo seco e descarnado.", isCorrect: false, distractorRationale: "O texto é riquíssimo em adjetivos sensorialmente carregados ('veladas', 'veludosas', 'velozes', 'vivas', 'vãs')." },
+      { id: "e", text: "tradução literal de provérbios populares alemães do século XVIII sobre tempestades marítimas.", isCorrect: false, distractorRationale: "O texto é poesia simbolista brasileira original de Cruz e Sousa." }
+    ],
+    detailedExplanation: {
+      summary: "A aliteração é a repetição deliberada de fonemas consonantais idênticos ou semelhantes ('Vozes Veladas, Veludosas Vozes, Volúpias dos Violões...'). No simbolismo de Cruz e Sousa, a aliteração em /v/ cria a sinestesia auditiva da ventania e do sussurro poético.",
+      stepByStep: [
+        "1. Identificação do padrão fônico: Repetição insistente da consoante 'v' nos versos.",
+        "2. Conceito estilístico: Aliteração = repetição de consoantes (enquanto Assonância = repetição de vogais tônicas).",
+        "3. Função simbólica: O som /v/ fricativo traduz acusticamente o movimento do ar, das vozes místicas e do vento.",
+        "4. Conclusão: A alternativa (a) explica a aliteração consonantal e seu impacto expressivo estético."
+      ],
+      coreConcept: "Aliteração e Expressividade Sonora no Simbolismo",
+      trapWarning: "No ENEM: Aliteração = consoantes; Assonância = vogais. Muito cobrado em poemas barrocos, simbolistas e em slogans publicitários e letras de MPB!"
+    },
+    commonTraps: [
+      "Confundir aliteração (consoantes) com assonância (vogais)",
+      "Achar que recursos sonoros pertencem apenas à gramática histórica, ignorando sua potência semântica"
+    ],
+    tags: ["figuras-de-som", "aliteracao", "assonancia", "simbolismo", "cruz-e-sousa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-023",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Anacoluto: Quebra Sintática e Espontaneidade Oral na Literatura",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes passagens:\n\nPassagem 1: 'Eu, que era a branca e linda Filis, / Agora sou a escura e triste Joana.' (Cláudio Manuel da Costa)\nPassagem 2: 'Esse menino, a paciência com ele acabou faz tempo.'\n\nEm ambas as sentenças, um termo é anunciado no início da oração como foco de atenção, mas a sequência estrutural é bruscamente interrompida, deixando o elemento inicial sem função sintática direta (sujeito, objeto) com o verbo principal que se segue.",
+      source: "Sintaxe da Língua Portuguesa: Do Clássico ao Coloquial"
+    },
+    prompt: "A figura de sintaxe presente nos trechos analisados, caracterizada por essa interrupção do encadeamento sintático regular, denomina-se:",
+    options: [
+      { id: "a", text: "anacoluto, recurso estilístico que isola um termo no início do período para destacá-lo pragmaticamente, simulando a espontaneidade do pensamento vivo e da fala cotidiana.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "hipérbato, que consiste unicamente na troca harmônica entre a posição do substantivo e a do artigo definido.", isCorrect: false, distractorRationale: "O hipérbato é a inversão da ordem direta dos termos na oração, sem ruptura sintática do vínculo gramatical." },
+      { id: "c", text: "polissíndeto, caracterizado pelo emprego repetitivo e desnecessário de conjunções coordenativas aditivas.", isCorrect: false, distractorRationale: "Não há repetição sucessiva de conectivos 'e' ou 'nem'." },
+      { id: "d", text: "zeugma, visto que o termo inicial foi omitido em todas as orações subordinadas do período composto.", isCorrect: false, distractorRationale: "O termo não foi omitido; ele foi enunciado no início e ficou 'solto' pela fratura da frase." },
+      { id: "e", text: "metonímia, baseada na troca do instrumento musical pelo nome da escola de samba.", isCorrect: false, distractorRationale: "Não há troca de instrumento musical por escola de samba no excerto." }
+    ],
+    detailedExplanation: {
+      summary: "O anacoluto (do grego *anakolouthos*, 'sem seguimento') é a interrupção da sequência sintática da oração. Um sujeito ou tópico é apresentado, mas o locutor muda o rumo da frase, deixando o termo original sintaticamente isolado ('Esse menino [tópico], a paciência [sujeito real] acabou...').",
+      stepByStep: [
+        "1. Estrutura de 'Esse menino, a paciência com ele acabou': Se fôssemos seguir a ordem direta, diríamos 'A paciência com esse menino acabou'.",
+        "2. Efeito estilístico: Colocar 'Esse menino' na frente destaca o tema do discurso antes de articular a predicação.",
+        "3. Emprego na arte: Escritores como Machado de Assis, Graciliano Ramos e poetas modernos usam o anacoluto para capturar o fluxo de consciência e a vivacidade da oralidade.",
+        "4. Conclusão: Trata-se de anacoluto clássico e estilisticamente expressivo."
+      ],
+      coreConcept: "Anacoluto: Fratura Sintática com Propósito de Ênfase e Tópico Discursivo",
+      trapWarning: "No ENEM: Em textos literários ou tirinhas, o anacoluto NÃO é considerado erro grosseiro, mas um recurso de estilização da linguagem falada!"
+    },
+    commonTraps: [
+      "Confundir anacoluto (quebra sintática) com hipérbato (mera inversão de ordem sem quebra)",
+      "Rotular qualquer desvio coloquial como erro sem analisar o projeto poético do autor"
+    ],
+    tags: ["anacoluto", "figuras-de-sintaxe", "oralidade", "literatura", "sintaxe-expressiva"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-024",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Quiasmo e Paralelismo Sintático: Cruzamento Estrutural e Simetria Textual",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a famosa reflexão de Machado de Assis em *Memórias Póstumas de Brás Cubas*:\n\n'Não tive filhos, não transmiti a nenhuma criatura o legado da nossa miséria.'\n\nE compare-a com esta conhecida máxima de um célebre discurso público:\n\n'Não pergunte o que seu país pode fazer por você; pergunte o que você pode fazer por seu país.'\n\nAmbas as sentenças constroem sua contundência por meio do equilíbrio e da alternância rigorosa de termos sintáticos correlatos.",
+      source: "Retórica Clássica, Análise Textual e Estilo Machadiano"
+    },
+    prompt: "A máxima do discurso público ('Não pergunte o que seu país pode fazer por você; pergunte o que você pode fazer por seu país') ilustra com precisão a figura retórica do:",
+    options: [
+      { id: "a", text: "quiasmo, caracterizado pelo arranjo cruzado de termos correlatos (país / você // você / país), invertendo a relação entre agente e paciente para produzir impacto persuasivo e autorreflexão no interlocutor.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "eufemismo, utilizado unicamente para abrandar uma notícia trágica de morte inesperada na família.", isCorrect: false, distractorRationale: "Não há atenuação de luto ou morte; a frase é uma provocação de engajamento cívico." },
+      { id: "c", text: "pleonasmo vicioso, visto que a repetição de palavras empobrece o vocabulário sem acrescentar sentido.", isCorrect: false, distractorRationale: "A inversão gera contraste semântico profundo, sendo uma das figuras de retórica mais admiradas mundialmente." },
+      { id: "d", text: "prosopopeia fúnebre, atribuindo ações de andar e correr a conceitos matemáticos abstratos.", isCorrect: false, distractorRationale: "Não há personificação de conceitos matemáticos." },
+      { id: "e", text: "catacrese involuntária que decorre da ausência de substantivos adequados no léxico nacional.", isCorrect: false, distractorRationale: "Catacrese é o uso de termo emprestado por falta de palavra própria ('pé da mesa'), o que não se aplica aqui." }
+    ],
+    detailedExplanation: {
+      summary: "O quiasmo (da letra grega 'chi' - X) é o cruzamento simétrico de termos em orações contíguas segundo o esquema A-B / B-A ('país' [A] por 'você' [B] / 'você' [B] por seu 'país' [A]). Esse espelhamento inverte os papéis gramaticais e enfatiza a responsabilidade ativa do cidadão.",
+      stepByStep: [
+        "1. Esquema da frase: [O que o país pode fazer por você] vs [O que você pode fazer pelo país].",
+        "2. Identificação da estrutura cruzada: Termos A e B no primeiro segmento tornam-se B e A no segundo.",
+        "3. Função persuasiva: Quebrar a atitude passiva de quem apenas cobra o Estado e convocar o indivíduo à cidadania engajada.",
+        "4. Conclusão: Trata-se da clássica figura de estilo denominada quiasmo."
+      ],
+      coreConcept: "Quiasmo e Paralelismo Sintático Cruzado na Retórica",
+      trapWarning: "No ENEM: O quiasmo é frequentemente associado ao Barroco (cultismo de Gregório de Matos e Padre Antônio Vieira) e à retórica política de grandes oradores!"
+    },
+    commonTraps: [
+      "Confundir quiasmo com mera repetição de palavras sem perceber a inversão em cruz (A-B / B-A)",
+      "Achar que é erro de redundância estilística"
+    ],
+    tags: ["quiasmo", "retorica", "paralelismo", "machado-de-assis", "figuras-de-sintaxe"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FIG-025",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Figuras de Linguagem",
+    subtopic: "Silepse de Gênero, Número e Pessoa: A Concordância Ideológica",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere os seguintes enunciados extraídos da crônica e da fala pública:\n\nEnunciado 1: 'A bela e populosa São Paulo acolhe os migrantes de braços abertos.' vs 'São Paulo é acolhedora, mas continua muito violenta.'\nEnunciado 2: 'A multidão desesperada gritavam palavras de ordem em frente ao parlamento.'\nEnunciado 3: 'Os brasileiros somos um povo de imensa criatividade e resiliência diante das crises.'\n\nEm todos esses casos, a concordância gramatical não se faz estritamente com as palavras expressas na frase, mas sim com a ideia implícita na mente do falante.",
+      source: "Gramática Descritiva e Estilística da Concordância Ideológica"
+    },
+    prompt: "O fenômeno estilístico e sintático manifesto nos enunciados 1, 2 e 3 denomina-se silepse. No Enunciado 3 ('Os brasileiros somos...'), a silepse classifica-se como de:",
+    options: [
+      { id: "a", text: "pessoa, pois o sujeito expresso na terceira pessoa do plural ('os brasileiros') comanda o verbo na primeira pessoa do plural ('somos') porque o próprio locutor se inclui explicitamente entre eles.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "gênero, uma vez que o substantivo 'brasileiros' é flexionado no feminino neutro em oposição ao particípio.", isCorrect: false, distractorRationale: "A concordância discordante se dá na pessoa gramatical (3ª do plural -> 1ª do plural), e não no gênero masculino/feminino." },
+      { id: "c", text: "número, porque o substantivo coletivo singular força o verbo a concordar com o adjunto adnominal.", isCorrect: false, distractorRationale: "Silepse de número ocorre no Enunciado 2 ('A multidão gritavam'), não no Enunciado 3." },
+      { id: "d", text: "tempo, visto que o pretérito mais-que-perfeito é substituído pelo imperativo afirmativo militar.", isCorrect: false, distractorRationale: "Não há silepse de tempo e os verbos estão no presente do indicativo." },
+      { id: "e", text: "modo, pois indica dúvida ontológica sobre a existência da cidadania republicana no país.", isCorrect: false, distractorRationale: "Trata-se de uma figura de concordância sintática de pessoa, e não de modo verbal." }
+    ],
+    detailedExplanation: {
+      summary: "A silepse é a concordância que se faz com o sentido (a ideia mental) e não com a forma gramatical da palavra. Ela pode ser: 1) de gênero ('A [cidade de] São Paulo é acolhedora'); 2) de número ('A multidão [ideia de várias pessoas] gritavam'); 3) de pessoa ('Os brasileiros [eles] somos [nós - o locutor se inclui]').",
+      stepByStep: [
+        "1. Análise formal: 'Os brasileiros' = 3ª pessoa do plural ('eles'). Pela regra estrita, o verbo seria 'são'.",
+        "2. Análise da silepse: O locutor diz 'somos' (1ª pessoa do plural - 'nós').",
+        "3. Razão ideológica: O falante é brasileiro e quer enfatizar seu sentimento de pertencimento e união com a coletividade.",
+        "4. Conclusão: Trata-se de silepse de pessoa clássica da língua portuguesa."
+      ],
+      coreConcept: "Silepse de Gênero, Número e Pessoa (Concordância Ideológica)",
+      trapWarning: "No ENEM: Questões sobre silepse avaliam se o aluno compreende que a língua possui recursos estilísticos que transcendem o mecanicismo das regras gramaticais secas, expressando subjetividade e intencionalidade."
+    },
+    commonTraps: [
+      "Julgar a frase 'os brasileiros somos' como erro crasso de concordância sem perceber a silepse de pessoa",
+      "Confundir silepse de pessoa (3ª para 1ª) com silepse de gênero (masculino para feminino) ou de número (singular para plural)"
+    ],
+    tags: ["silepse", "concordancia-ideologica", "silepse-de-pessoa", "estilistica", "gramatica-contextual"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

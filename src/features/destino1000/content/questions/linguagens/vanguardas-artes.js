@@ -853,5 +853,226 @@ export const QUESTIONS_VANGUARDAS_ARTES = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-021",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Dadaísmo, Marcel Duchamp e a Revolução do Ready-Made",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "conceptual",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 1917, Marcel Duchamp enviou para a exposição da Sociedade dos Artistas Independentes de Nova York um urinol de louça sanitária branca invertido, intitulado 'A Fonte' (Fountain) e assinado com o pseudônimo 'R. Mutt'. A obra gerou escândalo imediato e inaugurou formalmente o conceito estético de 'ready-made' — a apropriação e deslocamento de um objeto industrial comum para o espaço expositivo da arte.",
+      source: "ARGAN, Giulio Carlo. Arte Moderna: Do Iluminismo aos Movimentos Contemporâneos"
+    },
+    prompt: "O gesto vanguardista de Marcel Duchamp ao apresentar o ready-made 'A Fonte' revolucionou a história da arte ocidental porque:",
+    options: [
+      { id: "a", text: "deslocou o valor da obra do virtuosismo técnico manual e da beleza visual acadêmica para a atitude conceitual e a intenção do artista, redefinindo o estatuto do que pode ser considerado arte.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "comprovou cientificamente a superioridade da porcelana francesa sobre a cerâmica esmaltada americana.", isCorrect: false, distractorRationale: "Duchamp não realizava testes industriais de resistência de materiais hidráulicos." },
+      { id: "c", text: "defendeu o retorno obrigatório à pintura renascentista figurativa com perspectiva geométrica rigorosa.", isCorrect: false, distractorRationale: "O Dadaísmo combateu agressivamente o academicismo e os cânones renascentistas tradicionais." },
+      { id: "d", text: "pretendeu comercializar louças sanitárias com desconto promocional para os frequentadores de museus.", isCorrect: false, distractorRationale: "O ready-made é uma provocação filosófica anticapitalista e anti-institucional, não um mostruário comercial." },
+      { id: "e", text: "restringiu a apreciação artística a peritos químicos capazes de sintetizar vernizes industriais.", isCorrect: false, distractorRationale: "O ready-made democratizou a reflexão, tornando a experiência artística acessível à mente pensante e crítica." }
+    ],
+    detailedExplanation: {
+      summary: "O Dadaísmo surgiu no contexto desolador da Primeira Guerra Mundial (Cabaret Voltaire, Zurique, 1916) como protesto radical contra a razão burguesa que levara a Europa à carnificina. Duchamp levou essa rebelião ao limite: se o objeto não foi feito pelas mãos do artista, mas sim escolhido por ele ('ready-made'), o que define a arte é a IDEIA, o contexto institucional e o questionamento da convenção.",
+      stepByStep: [
+        "1. Movimento: Dadaísmo e origem da Arte Conceitual.",
+        "2. Obra: 'A Fonte' (1917) de Marcel Duchamp.",
+        "3. Quebra de paradigma: A arte deixa de ser 'habilidade de esculpir ou pintar belamente' e passa a ser 'capacidade de gerar uma nova proposição de pensamento'.",
+        "4. Conclusão: A alternativa (a) expressa o consenso canônico sobre a ruptura fundadora do ready-made duchampiano."
+      ],
+      coreConcept: "Dadaísmo, Marcel Duchamp e a Gênese do Ready-Made Conceitual",
+      trapWarning: "No ENEM: Quando vir Duchamp ou Dadaísmo, lembre-se das palavras-chave: provocação, ruptura com o belo acadêmico, objeto industrial descontextualizado e primazia do conceito sobre o artesanato!"
+    },
+    commonTraps: [
+      "Achar que o Dadaísmo buscava criar obras harmoniosas e decorativas para salões nobres",
+      "Confundir a crítica de Duchamp com vandalismo sem propósito filosófico"
+    ],
+    tags: ["dadaismo", "marcel-duchamp", "ready-made", "arte-conceitual", "vanguardas-europeias"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-022",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Expressionismo: A Deformação Plástica e o Grito da Angústia Existencial",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a análise da emblemática pintura 'O Grito' (1893), do artista norueguês Edvard Munch:\n'Em meio a um céu em chamas com faixas ondulantes de vermelho e amarelo, uma figura cadavérica sem traços de gênero definidos comprime as mãos contra a cabeça com os olhos arregalados e a boca aberta em pânico. A ponte e a paisagem ao fundo não obedecem às proporções realistas, mas parecem vibrar em convulsão sincronizada com o terror psíquico do protagonista.'",
+      source: "História da Arte Ocidental e Vanguardas do Século XX"
+    },
+    prompt: "A estética expressionista manifesta em 'O Grito' diferencia-se da pintura realista e impressionista porque prioriza a:",
+    options: [
+      { id: "a", text: "projeção dramática dos estados emocionais, da angústia interior e dos tormentos da alma humana sobre a matéria plástica, deformando deliberadamente cores, linhas e figuras para exteriorizar a dor existencial.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "reprodução fotográfica exata da luminosidade solar sobre a superfície das águas de lagos parisienses.", isCorrect: false, distractorRationale: "A captação fugaz da luz solar sem drama subjetivo é a marca do Impressionismo (Monet, Renoir), e não do Expressionismo." },
+      { id: "c", text: "construção de figuras geométricas puras destinadas ao cálculo de pontes ferroviárias metálicas.", isCorrect: false, distractorRationale: "O cálculo e geometrização pertencem à engenharia ou ao Cubismo/Construtivismo, não à convulsão do Expressionismo." },
+      { id: "d", text: "glorificação entusiasmada da velocidade dos automóveis e das engrenagens da metrópole industrial.", isCorrect: false, distractorRationale: "O culto à velocidade e às máquinas é característica do Futurismo italiano de Marinetti." },
+      { id: "e", text: "obediência estrita aos tratados de harmonia e perspectiva linear da Renascença italiana.", isCorrect: false, distractorRationale: "O Expressionismo rompe deliberadamente com a perspectiva linear e a proporção clássica." }
+    ],
+    detailedExplanation: {
+      summary: "Enquanto o Impressionismo registrava a impressão que o mundo de fora causava na retina do olho, o Expressionismo faz o caminho inverso: exprime as aflições de DENTRO da alma e as projeta com fúria sobre o mundo exterior. Cores dissonantes, linhas sinuosas e rostos espectrais comunicam a solidão e o desamparo do homem moderno.",
+      stepByStep: [
+        "1. Vanguarda: Expressionismo (Munch, Die Brücke, Der Blaue Reiter, Lasar Segall no Brasil).",
+        "2. Procedimento estético: Deformação plástica da realidade (cores irreais e contornos tortuosos).",
+        "3. Finalidade artística: Tornar visível o invisível — o medo, a alienação, a morte e a angústia psíquica.",
+        "4. Conclusão: A alternativa (a) traduz perfeitamente a essência expressiva da pintura de Munch."
+      ],
+      coreConcept: "Expressionismo: Deformação Emocional e Subjetivismo Plástico",
+      trapWarning: "No ENEM: Impressionismo = luz e momento fugaz exterior; Expressionismo = sentimento, dor, grito e angústia interior deformando o mundo!"
+    },
+    commonTraps: [
+      "Confundir Impressionismo (Monet) com Expressionismo (Munch/Van Gogh)",
+      "Achar que as figuras distorcidas eram por incapacidade técnica do pintor"
+    ],
+    tags: ["expressionismo", "edvard-munch", "o-grito", "angustia-existencial", "deformacao-plastica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-023",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Cubismo: A Decomposição Geométrica e a Superação do Ponto de Fuga",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a revolução visual inaugurada por Pablo Picasso e Georges Braque a partir de obras como *Les Demoiselles d'Avignon* (1907):\n'Ao rejeitar a perspectiva com ponto de fuga único herdada do Renascimento — que simulava uma falsa ilusão de profundidade tridimensional em uma tela plana —, os pintores cubistas fragmentaram o objeto em múltiplos planos geométricos superpostos, permitindo ao espectador enxergar a frente, o perfil e a parte posterior de uma mesma figura simultaneamente.'",
+      source: "GOMBRICH, E. H. A História da Arte. Rio de Janeiro: LTC"
+    },
+    prompt: "A principal inovação epistêmica e estética introduzida pelo Cubismo nas artes visuais consistiu em:",
+    options: [
+      { id: "a", text: "abandonar a ilusão de ótica da perspectiva monofocal renascentista em favor da multiplicidade de ângulos e planos captados simultaneamente na bidimensionalidade da tela, incorporando o tempo e a mente no ato de ver.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "proibir o uso de tinta a óleo e adotar exclusivamente mosaicos de pedras pré-históricas.", isCorrect: false, distractorRationale: "O Cubismo utilizou telas a óleo, colagens (papier collé) e materiais mistos, sem proibições de tinta a óleo." },
+      { id: "c", text: "pintar paisagens campestres bucólicas para acalmar a ansiedade de aristocratas franceses.", isCorrect: false, distractorRationale: "O Cubismo era uma vanguarda urbana e radical, rompendo com o bucolismo tradicional." },
+      { id: "d", text: "restringir a representação visual à cópia fiel de fotografias tiradas com lentes teleobjetivas.", isCorrect: false, distractorRationale: "O Cubismo recusou categoricamente a imitação fotográfica mimética da realidade." },
+      { id: "e", text: "afirmar que a geometria euclidiana é a única fé religiosa que deve guiar a conduta moral humana.", isCorrect: false, distractorRationale: "A geometrização cubista é uma pesquisa de linguagem plástica espacial, não um dogma religioso moral." }
+    ],
+    detailedExplanation: {
+      summary: "Desde o Renascimento de Brunelleschi e Da Vinci (século XV), a pintura ocidental operava sob a ilusão do ponto de fuga: uma 'janela' para um espaço tridimensional falso. Picasso e Braque destruíram essa convenção. No Cubismo, o objeto é desmontado e planificado: ver não é apenas receber luz na retina, mas reconstruir intelectualmente as facetas do objeto no tempo.",
+      stepByStep: [
+        "1. Vanguarda: Cubismo analítico e sintético (Picasso, Braque, Juan Gris, Tarsila do Amaral no Brasil).",
+        "2. Conceito-chave: Simultaneidade de pontos de vista (ver um rosto de frente e de perfil ao mesmo tempo).",
+        "3. Rompimento: Fim da perspectiva renascentista monofocal; afirmação da bidimensionalidade do suporte.",
+        "4. Conclusão: A alternativa (a) sintetiza com precisão histórica a revolução cubista."
+      ],
+      coreConcept: "Cubismo: Desconstrução da Perspectiva Renascentista e Simultaneidade de Planos",
+      trapWarning: "No ENEM: Cubismo não é apenas 'desenhar quadrados'! É ver o mesmo objeto de vários lados ao mesmo tempo no mesmo plano (simultaneidade)!"
+    },
+    commonTraps: [
+      "Achar que o Cubismo é uma arte abstrata total (o Cubismo histórico sempre manteve diálogo com objetos reais: violões, cachimbos, retratos)",
+      "Confundir Cubismo com Fauvismo (o foco cubista é a forma geométrica estrutural, não o arrebatamento das cores puras)"
+    ],
+    tags: ["cubismo", "pablo-picasso", "georges-braque", "perspectiva-renascentista", "simultaneidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-024",
+    area: "linguagens",
+    competence: 4,
+    skill: 12,
+    topic: "Artes e Vanguardas",
+    subtopic: "Surrealismo e René Magritte: A Traição das Imagens e a Lógica dos Sonhos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a célebre pintura de René Magritte, *A Traição das Imagens* (1929), que retrata com realismo minucioso um cachimbo de madeira acompanhado da frase em caligrafia escolar: 'Ceci n'est pas une pipe' (Isto não é um cachimbo).\nO pintor belga declarou certa vez: 'A famosa pintura do cachimbo... Como as pessoas me censuraram por causa dela! E, no entanto, você poderia fumar meu cachimbo? Não, não poderia. É apenas uma representação, não é? Portanto, se eu tivesse escrito 'Isto é um cachimbo', eu teria mentido!'",
+      source: "FOUCAULT, Michel. Isto Não É um Cachimbo. Rio de Janeiro: Paz & Terra"
+    },
+    prompt: "Ao tensionar a relação entre a imagem figurativa, o texto verbal e a coisa real, a obra de Magritte propõe uma reflexão surrealista e semiótica que demonstra:",
+    options: [
+      { id: "a", text: "a irredutível distância entre a representação artística (o signo imagético e linguístico) e o objeto concreto da realidade, desmascarando a ilusão de que a pintura possa se confundir com a coisa em si.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a necessidade de proibir a venda de tabaco em estabelecimentos comerciais de centros urbanos.", isCorrect: false, distractorRationale: "A pintura é uma reflexão metalinguística e filosófica sobre a representação artística, sem viés sanitarista antitabagista." },
+      { id: "c", text: "o desconhecimento do artista sobre as funções cotidianas dos utensílios domésticos de madeira.", isCorrect: false, distractorRationale: "Magritte conhecia perfeitamente o cachimbo; a provocação é deliberadamente conceitual e filosófica." },
+      { id: "d", text: "a imposição da língua francesa como único idioma legítimo para a catalogação em museus internacionais.", isCorrect: false, distractorRationale: "O uso do francês decorre da nacionalidade belga de Magritte, não de chauvinismo linguístico." },
+      { id: "e", text: "a comprovação empírica de que os quadros pintados a óleo devem ser acesos com fósforos para liberar aroma.", isCorrect: false, distractorRationale: "Distrator estapafúrdio que causaria destruição de patrimônio artístico." }
+    ],
+    detailedExplanation: {
+      summary: "A obra de Magritte é um marco da semiótica e do Surrealismo. Uma pintura de um cachimbo é uma imagem de tinta sobre tela, e não um objeto que se possa queimar e fumar. Magritte explode a confusão milenar entre o SIGNO (a representação) e o OBJETO REAL (o referente).",
+      stepByStep: [
+        "1. Obra: 'A Traição das Imagens' (1929) de René Magritte.",
+        "2. Paradoxo: Um cachimbo perfeitamente pintado com a inscrição categórica 'Isto não é um cachimbo'.",
+        "3. Tese filosófica (discutida inclusive por Michel Foucault): A imagem de uma maçã não alimenta; o desenho de um cachimbo não se fuma; o nome de um objeto não é o objeto.",
+        "4. Conclusão: A alternativa (a) explica a separação entre signo/representação e coisa real."
+      ],
+      coreConcept: "Surrealismo de Magritte: A Distinção entre Signo, Representação e Realidade",
+      trapWarning: "No ENEM: Questões sobre Magritte e Surrealismo frequentemente cobram a função metalinguística na arte e o questionamento dos limites da representação visual!"
+    },
+    commonTraps: [
+      "Achar que Magritte estava apenas fazendo uma piada boba sem conteúdo filosófico",
+      "Confundir a obra com uma campanha antitabagista real"
+    ],
+    tags: ["surrealismo", "rene-magritte", "isto-nao-e-um-cachimbo", "semiotica", "representacao-artistica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-ART-025",
+    area: "linguagens",
+    competence: 4,
+    skill: 14,
+    topic: "Artes e Vanguardas",
+    subtopic: "Neoconcretismo Brasileiro: Hélio Oiticica, Parangolés e a Arte Participativa",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na década de 1960, o artista plástico brasileiro Hélio Oiticica rompeu com os suportes tradicionais da pintura de cavalete ao criar os *Parangolés*: capas, tecidos, estandartes e tendas coloridas concebidas para serem vestidas e movimentadas pelo público. Oiticica aproximou-se da comunidade da Estação Primeira de Mangueira, no Rio de Janeiro, unindo a dança do samba, o corpo vivo e a arte contemporânea sob a célebre máxima: 'A pureza é um mito' e 'Da adversidade vivemos'.",
+      source: "OITICICA, Hélio. Aspiro ao Grande Labirinto. Rio de Janeiro: Rocco"
+    },
+    prompt: "A proposta artística dos *Parangolés* de Hélio Oiticica transformou a relação entre o espectador e a obra de arte porque:",
+    options: [
+      { id: "a", text: "converteu o público de mero contemplador passivo em participante ativo e cocriador da obra, exigindo a experiência sensorial e o movimento do corpo humano para que a arte se materialize no espaço e no tempo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "pretendeu confeccionar uniformes industriais padronizados para operários de fábricas automobilísticas.", isCorrect: false, distractorRationale: "Os Parangolés são obras de arte participativa libertária, avessas a uniformização industrial." },
+      { id: "c", text: "defendeu o isolamento elitista dos museus fechados para impedir o acesso das populações periféricas e negras.", isCorrect: false, distractorRationale: "Oiticica levou a arte para a Mangueira e o povo periférico para os centros culturais, deselitizando o ambiente artístico." },
+      { id: "d", text: "restringiu a fruição estética à leitura solitária e silenciosa de tratados de matemática pura.", isCorrect: false, distractorRationale: "Os Parangolés exigem dança, suor, toque, cor e vivência coletiva do corpo em movimento." },
+      { id: "e", text: "propôs a destruição definitiva de todas as escolas de samba cariocas por considerá-las primitivas.", isCorrect: false, distractorRationale: "Oiticica era passista da Mangueira e reverenciava o samba como a mais alta expressão de vivência plástica." }
+    ],
+    detailedExplanation: {
+      summary: "O Neoconcretismo brasileiro (Lygia Clark com os 'Bichos' e Hélio Oiticica com os 'Parangolés' e 'Penetráveis') é um dos momentos mais celebrados da arte brasileira no mundo. A obra não está acabada na parede; ela só EXISTE quando alguém a veste, anda, dança e vive a cor no espaço.",
+      stepByStep: [
+        "1. Movimento: Neoconcretismo e Arte Participativa no Brasil (anos 1960).",
+        "2. Obra: *Parangolés* de Hélio Oiticica.",
+        "3. Conceito-chave: Morte do contemplador passivo. O 'espectador' torna-se 'participante' ativo.",
+        "4. Conexão sociocultural: Encontro da vanguarda com a cultura popular e o samba da Mangueira durante o regime militar.",
+        "5. Conclusão: A alternativa (a) expressa perfeitamente a revolução da arte corporal e participativa de Oiticica."
+      ],
+      coreConcept: "Neoconcretismo, Hélio Oiticica: Parangolés e a Arte Participativa",
+      trapWarning: "No ENEM: Lygia Clark (Bichos) e Hélio Oiticica (Parangolés) caem quase todos os anos! Lembre-se: 'arte participativa', 'o espectador vira participante ativo', 'rompimento com a moldura e com o museu tradicional'!"
+    },
+    commonTraps: [
+      "Achar que o Parangolé é uma roupa de moda comum para desfilar em passarelas comerciais",
+      "Ignorar o papel crucial da participação do corpo humano na ativação da obra"
+    ],
+    tags: ["helio-oiticica", "parangoles", "neoconcretismo", "arte-participativa", "mangueira"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

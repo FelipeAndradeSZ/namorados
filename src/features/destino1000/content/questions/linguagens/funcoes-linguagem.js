@@ -794,5 +794,226 @@ export const QUESTIONS_FUNCOES_LINGUAGEM = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FUNC-021",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Funções da Linguagem",
+    subtopic: "Hierarquia Funcional e Coexistência de Múltiplas Funções no Mesmo Texto",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de uma reportagem de divulgação científica sobre a preservação dos corais marinhos:\n'Nas profundezas cristalinas dos recifes tropicais, onde o silêncio azul parece guardar os segredos mais antigos da Terra, cientistas registraram uma perda de 40% da cobertura de corais vivos nos últimos três anos devido ao estresse térmico provocado pelo aquecimento global de 1,1 °C acima dos níveis pré-industriais.'",
+      source: "Revista Ciência & Sociedade Contemporânea, 2024"
+    },
+    prompt: "Na análise das funções da linguagem presentes no fragmento, verifica-se que:",
+    options: [
+      { id: "a", text: "a função referencial predomina no conjunto do texto (ao informar dados quantitativos e causas factuais do fenômeno ecológico), embora conviva harmonicamente com a função poética na abertura descritiva lírica do cenário.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a função fática é a única atuante no excerto, já que o objetivo exclusivo do autor é testar se o monitor de computador do leitor está ligado.", isCorrect: false, distractorRationale: "Não se trata de teste de canal físico; o texto comunica fatos e dados científicos reais." },
+      { id: "c", text: "a função metalinguística anula qualquer conteúdo informativo por se tratar de um debate gramatical sobre o sufixo '-al'.", isCorrect: false, distractorRationale: "O texto não analisa o código linguístico nem faz análise morfológica de sufixos." },
+      { id: "d", text: "a função conativa é exercida pelo uso de verbos no imperativo dirigidos a ordens militares compulsórias aos peixes.", isCorrect: false, distractorRationale: "Não há verbos no imperativo nem apelo a ordens militares no excerto." },
+      { id: "e", text: "a presença simultânea de duas funções invalida a classificação do gênero textual pela ABNT.", isCorrect: false, distractorRationale: "Textos reais quase nunca contêm uma única função isolada; a coexistência hierarquizada é a regra nos discursos." }
+    ],
+    detailedExplanation: {
+      summary: "Roman Jakobson frisou que é raro encontrar mensagens verbais que preencham apenas uma função. O aspecto decisivo é a HIERARQUIA funcional: qual é a função dominante que comanda a mensagem? No texto científico jornalístico, a função referencial governa a macroestrutura (informar dados reais), usando a função poética como recurso subsidiário de atração estilística.",
+      stepByStep: [
+        "1. Trecho lírico: 'Nas profundezas cristalinas... silêncio azul...' -> recursos sonoros e imagéticos (Função Poética secundária).",
+        "2. Núcleo factual: '...cientistas registraram perda de 40%... estresse térmico de 1,1 °C...' -> dados empíricos objetivos (Função Referencial dominante).",
+        "3. Conceito jakobsoniano: A função dominante confere o gênero ao texto (divulgação científica / reportagem).",
+        "4. Conclusão: A alternativa (a) reflete perfeitamente a coexistência hierarquizada das duas funções."
+      ],
+      coreConcept: "Hierarquia Funcional: Função Dominante e Funções Acessórias",
+      trapWarning: "No ENEM: Não busque pureza absoluta! Identifique sempre a função DOMINANTE do texto, reconhecendo que outras funções podem operar como suporte estilístico."
+    },
+    commonTraps: [
+      "Achar que porque há uma frase poética o texto inteiro se torna exclusivamente poético",
+      "Ignorar o propósito comunicativo global da matéria informativa"
+    ],
+    tags: ["funcoes-da-linguagem", "funcao-referencial", "funcao-poetica", "hierarquia-textual", "divulgacao-cientifica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FUNC-022",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Funções da Linguagem",
+    subtopic: "Função Referencial Denotativa no Jornalismo de Dados e Gráficos",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a legenda técnica sob um infográfico demográfico publicado em um boletim estatístico oficial:\n'Segundo dados da Pesquisa Nacional por Amostra de Domicílios (PNAD), o rendimento médio mensal real domiciliar per capita no Brasil atingiu R$ 1.848 em 2023, registrando avanço de 11,5% em comparação aos valores consolidados de 2022, impulsionado pela expansão da ocupação formal e pela ampliação dos programas de transferência de renda.'",
+      source: "Boletim de Indicadores Sociais e Econômicos, IBGE"
+    },
+    prompt: "Nesse texto informativo, a predominância da função referencial (ou informativa) da linguagem manifesta-se formalmente pela:",
+    options: [
+      { id: "a", text: "adoção da terceira pessoa gramatical, foco no referente do mundo empírico, precisão denotativa dos termos e ausência de adjetivação emotiva pessoal.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "utilização de orações exclamativas e interjeições passionais que dramatizam o sofrimento do autor.", isCorrect: false, distractorRationale: "O texto adota tom neutro, impessoal e institucional, sem qualquer interjeição ou exclamação passional." },
+      { id: "c", text: "incorporação de rimas emparelhadas decassílabas para valorizar a musicalidade rítmica das cifras financeiras.", isCorrect: false, distractorRationale: "O texto é prosa técnica estritamente denotativa, desprovida de estrutura métrica poética." },
+      { id: "d", text: "conjugação de verbos na segunda pessoa do singular formulando desafios esportivos ao leitor.", isCorrect: false, distractorRationale: "Não há verbos na segunda pessoa nem desafios; a função conativa não é a dominante." },
+      { id: "e", text: "explicação semântica das origens etimológicas da palavra 'rendimento' no latim vulgar.", isCorrect: false, distractorRationale: "Não há explicação etimológica nem foco metalinguístico no código." }
+    ],
+    detailedExplanation: {
+      summary: "A função referencial (ou denotativa/cognitiva) visa transmitir informações objetivas sobre a realidade exterior (o referente). Seus traços essenciais são: 3ª pessoa gramatical, vocabulário denotativo unívoco, neutralidade do enunciador e ênfase em dados e comprovações empíricas.",
+      stepByStep: [
+        "1. Identificação do foco comunicativo: Informar as estatísticas econômicas do IBGE.",
+        "2. Recursos linguísticos mobilizados: 3ª pessoa ('atingiu', 'registrando'), números exatos ('R$ 1.848', '11,5%'), fontes oficiais ('PNAD/IBGE').",
+        "3. Ausência de marcas de subjetividade: Não há opiniões afetivas nem tentativas de persuadir o leitor a comprar algo.",
+        "4. Conclusão: Trata-se da função referencial clássica com foco no contexto/referente."
+      ],
+      coreConcept: "Função Referencial: Impessoalidade, Denotação e Objetividade Informativa",
+      trapWarning: "No ENEM: Gráficos, tabelas, notícias jornalísticas secas, textos de divulgação científica e verbetes enciclopédicos têm sempre predominância da função referencial!"
+    },
+    commonTraps: [
+      "Confundir texto informativo com texto argumentativo opinativo",
+      "Esquecer que a função referencial prioriza a transmissão de conteúdo factual em 3ª pessoa"
+    ],
+    tags: ["funcoes-da-linguagem", "funcao-referencial", "ibge", "jornalismo-de-dados", "denotacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FUNC-023",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Funções da Linguagem",
+    subtopic: "Função Conativa ou Apelativa em Campanhas de Saúde Pública",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o texto verbal de um cartaz de utilidade pública do Ministério da Saúde:\n'Não dê folga para o mosquito da dengue! Vistorie seu quintal semanalmente, descarte recipientes que possam acumular água parada e proteja sua família. Faça a sua parte e alerte também os seus vizinhos.'",
+      source: "Campanha Nacional de Combate às Arboviroses, Ministério da Saúde"
+    },
+    prompt: "O texto da campanha institucional estrutura-se predominantemente em torno da função conativa (ou apelativa) da linguagem. Essa escolha justifica-se pelo propósito comunicativo de:",
+    options: [
+      { id: "a", text: "influenciar diretamente a conduta prática do receptor por meio de verbos no imperativo ('não dê', 'vistorie', 'descarte', 'faça') e pronomes possessivos de segunda pessoa ('seu', 'sua'), conclamando-o à ação preventiva coletiva.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "descrever a anatomia zoológica detalhada do aparelho bucal picador do inseto vetor.", isCorrect: false, distractorRationale: "O cartaz não descreve anatomia zoológica de insetos (isso seria função referencial biológica)." },
+      { id: "c", text: "expressar as angústias poéticas existenciais da equipe de redatores da agência de publicidade.", isCorrect: false, distractorRationale: "Não há expressão de sentimentos íntimos dos redatores (função emotiva)." },
+      { id: "d", text: "analisar as classes gramaticais dos vocábulos da frase segundo a Nomenclatura Gramatical Brasileira.", isCorrect: false, distractorRationale: "O texto não faz metalinguagem sobre regras gramaticais." },
+      { id: "e", text: "testar o sinal de radiofrequência dos aparelhos de televisão instalados nos hospitais.", isCorrect: false, distractorRationale: "O cartaz não se destina a checagem de canal tecnológico (função fática)." }
+    ],
+    detailedExplanation: {
+      summary: "A função conativa (do latim *conatus*, 'tentativa, esforço') foca no DESTINATÁRIO (receptor). O objetivo é induzi-lo a agir, mudar de atitude ou adotar um comportamento. Suas marcas mais comuns são verbos no modo imperativo, pronomes de tratamento ou possessivos de 2ª pessoa e vocativos.",
+      stepByStep: [
+        "1. Polo comunicativo mobilizado: Receptor (o cidadão/leitor).",
+        "2. Formas verbais empregadas: 'Não dê', 'vistorie', 'descarte', 'proteja', 'faça', 'alerte' (todas no imperativo).",
+        "3. Pronomes voltados ao leitor: 'seu quintal', 'sua família', 'seus vizinhos'.",
+        "4. Intenção discursiva: Mobilização cívica sanitária contra o mosquito.",
+        "5. Conclusão: Trata-se da função conativa em sua mais nobre aplicação de utilidade pública."
+      ],
+      coreConcept: "Função Conativa: O Foco no Receptor e a Convocação à Ação",
+      trapWarning: "No ENEM: A função conativa não aparece apenas na publicidade comercial que vende produtos; aparece massivamente em campanhas de saúde pública, preservação ambiental e conscientização no trânsito!"
+    },
+    commonTraps: [
+      "Achar que função apelativa só existe em comerciais de marcas com fins lucrativos",
+      "Ignorar o papel dos verbos no modo imperativo como marcador primordial da conatividade"
+    ],
+    tags: ["funcao-conativa", "funcao-apelativa", "saude-publica", "campanhas-sociais", "imperativo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FUNC-024",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Funções da Linguagem",
+    subtopic: "Função Fática na Era Digital: Interações em Chats e Redes Sociais",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Observe os registros de um diálogo em um aplicativo de mensagens instantâneas entre dois estudantes de medicina:\n— Ei, tá por aí?\n— Oi! Tô sim, fala.\n— Blz? A conexão aqui deu uma travada, você tá conseguindo me ouvir direito pelo áudio?\n— Tô te ouvindo perfeitamente, manda bala!\n— Valeu, era só pra testar mesmo. Agora vou começar a falar das aulas de embriologia.",
+      source: "Estudos de Comunicação Digital e Análise da Conversação Contemporânea"
+    },
+    prompt: "Nas trocas de mensagens examinadas, os enunciados 'Ei, tá por aí?', 'Oi! Tô sim', 'você tá conseguindo me ouvir direito?' e 'Tô te ouvindo perfeitamente' cumprem predominantemente a função fática da linguagem porque visam:",
+    options: [
+      { id: "a", text: "estabelecer, prolongar, testar e confirmar a eficiência do canal físico e tecnológico de comunicação entre os interlocutores antes do envio do conteúdo propriamente dito.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "transmitir teses filosóficas complexas sobre o materialismo dialético de Karl Marx.", isCorrect: false, distractorRationale: "O diálogo ainda não transmitiu nenhuma tese teórica densa; limitou-se a abrir o canal comunicativo." },
+      { id: "c", text: "definir dicionarizadamente o significado dos neologismos utilizados no ambiente da internet.", isCorrect: false, distractorRationale: "Não há definição enciclopédica nem metalinguística de termos." },
+      { id: "d", text: "impor comandos ditatoriais coercitivos para restringir a liberdade de expressão dos cidadãos.", isCorrect: false, distractorRationale: "Trata-se de conversa colaborativa cotidiana entre dois colegas." },
+      { id: "e", text: "recitar versos alexandrinos para emocionar profundamente a comunidade científica internacional.", isCorrect: false, distractorRationale: "O texto não possui versos poéticos nem visa comoção estética da comunidade científica." }
+    ],
+    detailedExplanation: {
+      summary: "A função fática foca no CANAL (o suporte ou meio de transmissão). Seu papel não é veicular ideias profundas, mas verificar se o circuito de contato está aberto, operacional e receptivo. No mundo digital, expressões como 'tá me ouvindo?', 'blz?', saudações breves e checagens de rede são o ápice do uso fático.",
+      stepByStep: [
+        "1. Polo comunicativo focalizado: Canal / Meio de contato (áudio, rede de internet).",
+        "2. Identificação das expressões: 'Ei, tá por aí?', 'você tá conseguindo me ouvir?'.",
+        "3. Função pragmática: Assegurar que o meio técnico funciona antes de transmitir a aula de embriologia.",
+        "4. Conclusão: Trata-se da função fática típica das conversações humanas e do ecossistema das redes."
+      ],
+      coreConcept: "Função Fática: A Manutenção e Checagem do Canal de Contato",
+      trapWarning: "No ENEM: A função fática não serve apenas ao telefone ('alô', 'desliga'). Ela cai em textos sobre cumprimentos sociais ('tudo bem?', 'bom dia'), rituais de elevador e mensagens de bate-papo virtual!"
+    },
+    commonTraps: [
+      "Achar que a função fática não tem valor comunicativo por não ter conteúdo informativo denso",
+      "Confundir checagem de canal ('tá me ouvindo?') com pergunta referencial científica"
+    ],
+    tags: ["funcao-fatica", "canal-de-comunicacao", "comunicacao-digital", "redes-sociais", "sociolinguistica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-FUNC-025",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Funções da Linguagem",
+    subtopic: "Metalinguagem Poética: Quando a Literatura Reflete sobre o Próprio Escrever",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o célebre poema 'Procura da Poesia', de Carlos Drummond de Andrade:\n\n'Não faças versos sobre acontecimentos.\nNão há criação nem morte perante a poesia.\nDiante dela, a vida é um sol estático, não aquece nem ilumina.\n(...)\nPenetra surdamente no reino das palavras.\nLá estão os poemas que esperam ser escritos.\nEstão trêmulos de medo, mas não têm medo de ninguém.\n(...)\nChega mais perto e contempla as palavras.\nCada uma tem mil faces secretas sob a face neutra\ne te pergunta, sem interesse pela resposta,\npobre ou terrível, que lhe deres:\nTrouxeste a chave?'",
+      source: "ANDRADE, Carlos Drummond de. A Rosa do Povo (1945)"
+    },
+    prompt: "No poema de Drummond, a expressividade resulta da convergência entre a função poética e a função metalinguística. A dimensão metalinguística evidencia-se fundamentalmente pelo fato de que o texto:",
+    options: [
+      { id: "a", text: "utiliza a linguagem poética como objeto de sua própria reflexão crítica, transformando o ato de compor versos e a natureza das palavras no tema central da poesia.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "fornece uma bula farmacêutica instruindo a dosagem correta de analgésicos para autores com enxaqueca.", isCorrect: false, distractorRationale: "O poema não é uma bula médica nem instrui sobre medicamentos." },
+      { id: "c", text: "restringe-se a cumprimentar formalmente os leitores para verificar se a página do livro foi impressa com nitidez.", isCorrect: false, distractorRationale: "Isso seria função fática caricaturada, que não se aplica ao lirismo drummondiano." },
+      { id: "d", text: "transcreve o depoimento judicial de um réu acusado de furto de chaves residenciais no Rio de Janeiro.", isCorrect: false, distractorRationale: "A 'chave' mencionada no verso é uma metáfora para a decifração poética do mistério verbal." },
+      { id: "e", text: "propõe a erradicação de todos os dicionários das escolas para evitar o aprendizado gramatical dos jovens.", isCorrect: false, distractorRationale: "O poema convida o leitor a penetrar no reino das palavras com profundo respeito e sensibilidade estética." }
+    ],
+    detailedExplanation: {
+      summary: "A função metalinguística ocorre quando a linguagem toma a própria linguagem (o código) como objeto de mensagem e estudo. Quando um poema fala do ato de escrever poemas, quando um pintor pinta um pintor diante do cavalete (como nas 'Meninas' de Velázquez), ou quando um cineasta faz um filme sobre fazer filmes (como '8½' de Fellini), estamos diante de metalinguagem estética.",
+      stepByStep: [
+        "1. Polo comunicativo mobilizado: O código verbal poético.",
+        "2. Identificação do tema: O próprio poema ensina como escrever um poema ('Não faças versos sobre acontecimentos... penetra no reino das palavras...').",
+        "3. Dupla função: Função poética (pelo ritmo, versos, imagens sensíveis) somada à função metalinguística (pela autorreflexão do texto sobre seu próprio processo de criação).",
+        "4. Conclusão: Trata-se de metalinguagem poética clássica, recorrente nas provas do ENEM."
+      ],
+      coreConcept: "Função Metalinguística na Literatura e na Arte Autorreflexiva",
+      trapWarning: "No ENEM: Metalinguagem não é apenas o dicionário explicando palavras! É qualquer poema sobre fazer poemas, pintura sobre pintar, romance que fala de escrever romances ou cinema sobre o fazer fílmico!"
+    },
+    commonTraps: [
+      "Achar que metalinguagem existe apenas na gramática normativa ou em dicionários",
+      "Ignorar que poesia de vanguarda e modernismo usam metalinguagem com frequência altíssima"
+    ],
+    tags: ["metalinguagem", "carlos-drummond-de-andrade", "funcoes-da-linguagem", "modernismo", "a-rosa-do-povo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];

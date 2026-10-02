@@ -25,6 +25,7 @@ export const QUESTION_MODULES = {
   "matematica/razao-proporcao": () => import("./questions/matematica/razao-proporcao.js"),
   "matematica/trigonometria": () => import("./questions/matematica/trigonometria.js"),
   "matematica/geometria-analitica": () => import("./questions/matematica/geometria-analitica.js"),
+  "matematica/progressoes": () => import("./questions/matematica/progressoes.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
@@ -59,6 +60,8 @@ export const QUESTION_MODULES = {
   "natureza/citologia": () => import("./questions/natureza/citologia.js"),
   "natureza/eletroquimica": () => import("./questions/natureza/eletroquimica.js"),
   "natureza/termologia": () => import("./questions/natureza/termologia.js"),
+  "natureza/evolucao": () => import("./questions/natureza/evolucao.js"),
+  "natureza/solucoes-equilibrio": () => import("./questions/natureza/solucoes-equilibrio.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),

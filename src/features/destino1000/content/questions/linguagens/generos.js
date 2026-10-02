@@ -1079,6 +1079,226 @@ export const QUESTIONS_GENEROS = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-021",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Manifesto Cultural: Ruptura, Coletividade e Proclamação Estética",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de um célebre manifesto cultural modernista:\n'Só a Antropofagia nos une. Socialmente. Economicamente. Filosoficamente. Única lei do mundo. Expressão mascarada de todos os individualismos, de todos os coletivismos. De todas as religiões. De todos os tratados de paz. Tupi, or not tupi that is the question. (...) Contra todas as catequeses. E contra a mãe dos Gracos. Só me interessa o que não é meu. Lei do homem. Lei do antropófago.'",
+      source: "Oswald de Andrade, Manifesto Antropófago, Revista de Antropofagia, 1928"
+    },
+    prompt: "O gênero textual manifesto cultural, consagrado pelas vanguardas modernistas e exemplificado pelo excerto, caracteriza-se prioritariamente pelo(a):",
+    options: [
+      { id: "a", text: "tom incisivo e proclamador de ruptura, pelo emprego de aforismos provocativos e pela enunciação de um programa estético e político compartilhado por um grupo vanguardista.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "narrativa cronológica detalhada e linear da biografia de todos os governantes do Império brasileiro.", isCorrect: false, distractorRationale: "O manifesto não é uma biografia cronológica; é um texto programático aforístico de contestação artística." },
+      { id: "c", text: "registro impessoal neutro voltado para o relato burocrático de transações contábeis industriais.", isCorrect: false, distractorRationale: "O texto é altamente apaixonado, transgressor e provocador, avesso a relatórios burocráticos." },
+      { id: "d", text: "descrição metódica e experimental de reações de destilação fracionada em tubos de ensaio.", isCorrect: false, distractorRationale: "Trata-se de revolução conceitual e cultural na literatura, e não de experimento químico laboratorial." },
+      { id: "e", text: "submissão reverente aos modelos literários parnasianos importados da Europa no século XIX.", isCorrect: false, distractorRationale: "O manifesto antropófago prega justamente a deglutição crítica da cultura forasteira para afirmar a autonomia brasileira." }
+    ],
+    detailedExplanation: {
+      summary: "O manifesto é um gênero público de contestação e refundação cultural. Redigido geralmente em nome de um coletivo ('nos une'), utiliza frases curtas, impacto imagético, neologismos e aforismos contundentes para demolir velhos cânones e propor um novo modo de enxergar o mundo.",
+      stepByStep: [
+        "1. Contexto: Vanguardas do início do século XX (Futurismo, Dadaísmo, Surrealismo, Modernismo de 22/28).",
+        "2. Traços do gênero: Tom performático, fratura sintática, slogans memoráveis ('Tupi or not tupi...').",
+        "3. Intenção comunicativa: Despertar a consciência coletiva e propor uma nova estética autônoma.",
+        "4. Conclusão: A alternativa (a) sintetiza com precisão os traços definidores do manifesto cultural."
+      ],
+      coreConcept: "Gênero Manifesto: Aforismo, Ruptura Vanguardista e Proclamação Estética",
+      trapWarning: "No ENEM: Manifestos artísticos aparecem frequentemente em questões de Linguagens e Literatura da Semana de Arte Moderna de 1922!"
+    },
+    commonTraps: [
+      "Confundir manifesto com artigo científico tradicional de análise",
+      "Não perceber a intencionalidade de escândalo e ruptura que rege os manifestos modernistas"
+    ],
+    tags: ["manifesto", "vanguardas", "antropofagia", "oswald-de-andrade", "modernismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-022",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Resenha Crítica vs Resumo Informativo: A Presença do Juízo de Valor",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere dois textos a respeito do mesmo romance literário contemporâneo:\n\nTexto 1: 'O romance narra a trajetória de um jovem ribeirinho que deixa sua aldeia natal rumo à metrópole para estudar e confronta os preconceitos sociais e as barreiras burocráticas do meio urbano ao longo de três décadas.'\nTexto 2: 'Com uma prosa vigorosa e lirismo comovente, a obra retrata a odisseia do ribeirinho sem cair nas armadilhas do sentimentalismo fácil. O autor orquestra as vozes periféricas com admirável precisão linguística, embora o desfecho pareça algo precipitado ao abreviar conflitos familiares cruciais levantados na primeira parte.'",
+      source: "Estudos de Gêneros da Esfera Crítica e Acadêmica"
+    },
+    prompt: "A comparação entre os dois excertos permite identificar que o Texto 2 constitui uma autêntica 'resenha crítica' (enquanto o Texto 1 é um mero resumo informativo) porque:",
+    options: [
+      { id: "a", text: "alia à síntese enxuta do enredo uma avaliação valorativa fundamentada, apontando virtudes estéticas e fragilidades estruturais da obra analisada sob a perspectiva crítica do enunciador.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "restringe-se a copiar mecanicamente a orelha do livro sem manifestar nenhuma impressão reflexiva.", isCorrect: false, distractorRationale: "O Texto 2 faz uma análise crítica profunda e original com prós ('prosa vigorosa') e contras ('desfecho precipitado')." },
+      { id: "c", text: "apresenta dados biográficos do autor com o objetivo explícito de promover a venda em feiras comerciais.", isCorrect: false, distractorRationale: "A resenha não é publicidade comercial nem mera biografia; é exame estético do livro." },
+      { id: "d", text: "utiliza linguagem agressiva com termos injuriosos para destruir a carreira pessoal do romancista.", isCorrect: false, distractorRationale: "A crítica é elegante, técnica e equilibrada, destacando tanto qualidades quanto limitações da narrativa." },
+      { id: "e", text: "omite completamente sobre o que trata o livro para manter segredo absoluto perante a comunidade acadêmica.", isCorrect: false, distractorRationale: "O Texto 2 resume a espinha dorsal do enredo antes de avaliar a técnica literária." }
+    ],
+    detailedExplanation: {
+      summary: "A distinção entre resumo e resenha é clássica: o resumo apenas sintetiza o conteúdo com neutralidade (o que a obra diz); a resenha resume e AVALIA criticamente, emitindo julgamento de mérito com adjetivações valorativas e justificativas fundamentadas (o que a obra vale).",
+      stepByStep: [
+        "1. No Texto 1: Apenas narra o percurso do personagem (resumo puramente descritivo e neutro).",
+        "2. No Texto 2: 'prosa vigorosa', 'lirismo comovente', 'sem sentimentalismo fácil', 'desfecho algo precipitado' (marcas claras de valoração crítica).",
+        "3. Função social da resenha: Orientar o leitor ou espectador e contextualizar a importância estética ou científica do produto cultural.",
+        "4. Conclusão: A alternativa (a) expõe de forma cirúrgica a essência da resenha crítica."
+      ],
+      coreConcept: "Resenha Crítica vs Resumo: A Marcação do Juízo de Valor e Apreciação Estética",
+      trapWarning: "No ENEM: Questões que comparam resenha e resumo buscam as marcas de autoria e adjetivos apreciativos do resenhista. Fique atento às palavras que expressam julgamento!"
+    },
+    commonTraps: [
+      "Confundir resenha crítica com resumo ou sinopse comercial de catálogo",
+      "Achar que resenha crítica só pode conter elogios ou apenas ataques destrutivos"
+    ],
+    tags: ["resenha-critica", "resumo", "juizo-de-valor", "generos-textuais", "critica-literaria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-023",
+    area: "linguagens",
+    competence: 5,
+    skill: 15,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Relato de Memória Autobiográfica e Valor Testemunhal",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere o seguinte trecho de *Quarto de Despejo*, de Carolina Maria de Jesus:\n'2 de maio de 1958. Eu não sou indolente. Há tempos que eu pretendia fazer o meu diário. Mas eu pensava que não tinha valor e que era perder tempo. (...) Fiz a comida, sobrou um pouco para as crianças. Eu fico pensando se um dia a minha vida há de mudar. O meu sonho era andar limpinha, pôr um vestido bonito, pentear o cabelo, usar um par de sapatos e não ter de catar papéis no asfalto quente para comprar um pedaço de pão.'",
+      source: "JESUS, Carolina Maria de. Quarto de Despejo: Diário de uma Favelada. São Paulo: Ática, 2014."
+    },
+    prompt: "No gênero diário e relato de memória autobiográfica, a força discursiva e política do texto de Carolina Maria de Jesus provém primordialmente do fato de:",
+    options: [
+      { id: "a", text: "converter a vivência pessoal da fome e da exclusão social em um testemunho histórico e documental de inestimável valor crítico sobre a marginalização urbana no Brasil.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "seguir os moldes dos folhetins românticos do século XIX para idealizar a pobreza com nostalgia pastoral.", isCorrect: false, distractorRationale: "O texto é um choque de realismo cru e denúncia social sem nenhuma idealização romântica nostálgica." },
+      { id: "c", text: "utilizar a ficção fantástica de ficção científica para fantasiar viagens interplanetárias.", isCorrect: false, distractorRationale: "Trata-se de um diário autobiográfico documental que registra a vida concreta na favela do Canindé." },
+      { id: "d", text: "abster-se de demonstrar emoções para cumprir os requisitos de uma ata notarial de repartição pública.", isCorrect: false, distractorRationale: "O diário transborda humanidade, dor, indignação e sonhos de dignidade pessoal." },
+      { id: "e", text: "defender a abolição da escrita alfabética em favor exclusivo de registros orais em fitas magnéticas.", isCorrect: false, distractorRationale: "Carolina encontrou justamente na escrita do caderno de papéis recolhidos a sua forma mais potente de existência e resistência." }
+    ],
+    detailedExplanation: {
+      summary: "O diário autobiográfico e o relato de memórias conferem voz direta a sujeitos que frequentemente foram silenciados pela história oficial. Na obra de Carolina Maria de Jesus, o diário íntimo transcende a individualidade para se tornar um documento sociológico demolidor da desigualdade estrutural brasileira.",
+      stepByStep: [
+        "1. Gênero: Diário pessoal / memória autobiográfica em 1ª pessoa.",
+        "2. Dimensão testemunhal: Registro cotidiano da luta contra a fome, da coleta de papel e do descaso do poder público.",
+        "3. Impacto pedagógico no ENEM: O ENEM valoriza profundamente textos em que a literatura e o relato pessoal se articulam com a cidadania e a memória coletiva.",
+        "4. Conclusão: A alternativa (a) articula com precisão a dimensão estética e documental do relato."
+      ],
+      coreConcept: "Relato de Memória, Diário e Literatura de Testemunho Social",
+      trapWarning: "No ENEM: Carolina Maria de Jesus é uma das autoras mais cobradas do país! Reconheça no seu texto a legitimidade plena da literatura periférica e memorialística."
+    },
+    commonTraps: [
+      "Subestimar o diário como gênero puramente trivial ou 'ingênuo'",
+      "Desconsiderar a força documental e histórica da memória dos excluídos"
+    ],
+    tags: ["carolina-maria-de-jesus", "quarto-de-despejo", "diario", "memoria", "literatura-testemunhal"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-024",
+    area: "linguagens",
+    competence: 5,
+    skill: 17,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Artigo de Divulgação Científica vs Paper Acadêmico Especializado",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere a abertura de um artigo de divulgação científica veiculado em portal de notícias de grande circulação:\n'Imagine uma 'tesoura molecular' capaz de entrar no núcleo de uma célula viva, cortar com precisão cirúrgica um gene defeituoso causador de anemia falciforme e substituí-lo por uma versão saudável. Isso não é ficção: é a tecnologia CRISPR-Cas9, premiada com o Nobel de Química e que agora começa a transformar o tratamento de doenças genéticas raras no Brasil.'",
+      source: "Ciência Hoje para Todos, Divulgação Científica Contemporânea"
+    },
+    prompt: "O gênero artigo de divulgação científica emprega estratégias de transposição didática como a metáfora da 'tesoura molecular'. O emprego dessa linguagem metafórica atende ao propósito comunicativo de:",
+    options: [
+      { id: "a", text: "democratizar o conhecimento científico especializado, tornando conceitos de biologia molecular acessíveis e compreensíveis ao público leigo sem abrir mão da precisão conceitual dos fatos.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "induzir as pessoas a cortarem seus próprios tecidos biológicos com tesouras domésticas não esterilizadas.", isCorrect: false, distractorRationale: "Distrator absurdo; 'tesoura molecular' é uma analogia didática ilustrativa." },
+      { id: "c", text: "substituir a literatura de cordel por manuais de farmacologia nas escolas de ensino fundamental.", isCorrect: false, distractorRationale: "O objetivo é difundir avanços da ciência e saúde em linguagem amigável, sem rivalidade com tradições culturais." },
+      { id: "d", text: "esconder da sociedade civil os avanços da engenharia genética para proteger segredos de laboratórios estrangeiros.", isCorrect: false, distractorRationale: "O texto faz exatamente o oposto: revela e explica a tecnologia de forma transparente à sociedade." },
+      { id: "e", text: "comprovar que a tecnologia CRISPR foi desenvolvida no século XIV durante a peste negra.", isCorrect: false, distractorRationale: "A técnica é do século XXI e rendeu o prêmio Nobel recente." }
+    ],
+    detailedExplanation: {
+      summary: "A divulgação científica realiza a 'tradução' do jargão técnico hermético da academia para a linguagem compreensível pelo cidadão comum. Recursos como analogias ('tesoura molecular'), comparações com o cotidiano e vocabulário claro garantem a inclusão científica da população.",
+      stepByStep: [
+        "1. Esfera discursiva: Divulgação científica e jornalismo científico.",
+        "2. Recurso mobilizado: Metáfora didática ('tesoura molecular' para o complexo enzima-RNA Cas9).",
+        "3. Efeito pedagógico: Facilitar a visualização mental do mecanismo bioquímico sem recorrer a equações ou nomenclatura química inacessível.",
+        "4. Conclusão: A alternativa (a) descreve a nobre função da transposição didática na divulgação científica."
+      ],
+      coreConcept: "Divulgação Científica e Transposição Didática de Conceitos Complexos",
+      trapWarning: "No ENEM: Textos de divulgação científica usam metáforas para explicar fenômenos naturais e tecnológicos. Identifique a função de ponte entre cientistas e a sociedade civil!"
+    },
+    commonTraps: [
+      "Achar que o uso de metáforas em textos de ciência diminui a seriedade do conhecimento",
+      "Confundir divulgação científica (ampla) com artigo acadêmico especializado (para pares)"
+    ],
+    tags: ["divulgacao-cientifica", "transposicao-didatica", "crispr", "metafora-didatica", "generos-textuais"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-GEN-025",
+    area: "linguagens",
+    competence: 5,
+    skill: 16,
+    topic: "Gêneros Textuais e Tipologias",
+    subtopic: "Cartum e Charge: A Ironia Multimodal na Crítica dos Costumes e da Política",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Descrição de um cartum contemporâneo premiado:\nUma família sentada ao redor da mesa de jantar em silêncio absoluto. Cada integrante — pai, mãe e dois filhos — segura um smartphone com o rosto iluminado pela luz azul da tela. No centro da mesa, há uma luminária na qual se lê uma placa colocada pelo restaurante: 'Conecte-se com quem está perto'. Na parede ao fundo, o relógio marca a passagem das horas sem que nenhum membro da família tenha trocado uma única palavra ou olhar entre si.",
+      source: "Salão Internacional de Humor Gráfico e Comunicação Visual"
+    },
+    prompt: "O gênero cartum estrutura-se pela articulação multimodal entre signos visuais e verbais. No exemplo descrito, o efeito de humor crítico e reflexivo fundamenta-se na:",
+    options: [
+      { id: "a", text: "ironia provocada pelo contraste evidente entre a mensagem da placa ('Conecte-se com quem está perto') e o isolamento relacional concreto das pessoas absorvidas pelo mundo virtual, denunciando o distanciamento afetivo na era da hiperconectividade.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "defesa intransigente do fechamento de todos os restaurantes para obrigar a população a cozinhar em fogueiras.", isCorrect: false, distractorRationale: "O cartum não critica os estabelecimentos nem propõe fogueiras; critica o vício digital e a solidão compartilhada." },
+      { id: "c", text: "comemoração festiva da evolução tecnológica dos displays de LED dos aparelhos de telefonia móvel.", isCorrect: false, distractorRationale: "O tom da imagem é satírico e melancólico, não celebratório do hardware comercial." },
+      { id: "d", text: "acusação penal de que os aparelhos celulares transmitem ondas radioativas venenosas para a comida servida.", isCorrect: false, distractorRationale: "Distrator infundado sem respaldo na mensagem social do cartum." },
+      { id: "e", text: "constatação empírica de que os relógios mecânicos de parede são objetos inúteis na contemporaneidade.", isCorrect: false, distractorRationale: "O relógio simboliza a passagem do tempo perdido em silêncio, mas não é o alvo principal da sátira." }
+    ],
+    detailedExplanation: {
+      summary: "O cartum é um gênero multimodal atemporal que aborda comportamentos humanos e questões universais por meio da sátira e da ironia. A contradição entre a intenção explícita da placa (aproximar as pessoas) e o comportamento real dos indivíduos (ilhas isoladas em telas) gera a crítica reflexiva.",
+      stepByStep: [
+        "1. Linguagem verbal: 'Conecte-se com quem está perto' (apelo à comunhão presencial).",
+        "2. Linguagem visual: Quatro pessoas inertes encarando telas individuais no escuro.",
+        "3. Recurso retórico: Ironia situacional / contraste gritante entre discurso e prática.",
+        "4. Crítica sociológica: A hiperconectividade digital que paradoxalmente gera solidão e incomunicabilidade nas relações familiares.",
+        "5. Conclusão: A alternativa (a) capta integralmente o núcleo semântico da obra gráfica."
+      ],
+      coreConcept: "Cartum, Ironia Situacional e Crítica aos Costumes na Hiperconectividade",
+      trapWarning: "No ENEM: Charge trata de um fato ou personagem político pontual e datado (da semana/mês); Cartum trata de hábitos humanos e comportamentos universais atemporais!"
+    },
+    commonTraps: [
+      "Confundir charge (datada/política circunstancial) com cartum (atemporal/costumes universais)",
+      "Analisar apenas a frase da placa ignorando o contraste com o desenho dos personagens"
+    ],
+    tags: ["cartum", "multimodalidade", "ironia", "hiperconectividade", "humor-grafico"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
-
