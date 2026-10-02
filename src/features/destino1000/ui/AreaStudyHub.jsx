@@ -24,7 +24,7 @@ import { FlashcardDeck } from "./FlashcardDeck";
 const AREA_TOPICS = {
   natureza: [
     { id: "natureza/ecologia", name: "Ecologia e Dinâmica Ambiental", tag: "Biologia", priority: "Crítica • Top 1", questionsCount: 20 },
-    { id: "natureza/citologia", name: "Citologia e Metabolismo Energético", tag: "Biologia", priority: "Crítica • Top Medicina", questionsCount: 10 },
+    { id: "natureza/citologia", name: "Citologia e Metabolismo Energético", tag: "Biologia", priority: "Crítica • Top Medicina", questionsCount: 20 },
     { id: "natureza/eletricidade", name: "Eletrodinâmica e Circuitos", tag: "Física", priority: "Alta • Cai Todo Ano", questionsCount: 20 },
     { id: "natureza/ondulatoria", name: "Ondulatória, Acústica e Óptica", tag: "Física", priority: "Crítica • V = λ·f", questionsCount: 10 },
     { id: "natureza/termologia", name: "Termologia, Calorimetria e Dilatação", tag: "Física", priority: "Alta • Trocas Térmicas", questionsCount: 10 },
@@ -40,7 +40,7 @@ const AREA_TOPICS = {
     { id: "matematica/porcentagem", name: "Porcentagem e Variações Percentuais", tag: "Financeira", priority: "Crítica • Base da TRI", questionsCount: 20 },
     { id: "matematica/financeira", name: "Matemática Financeira e Juros", tag: "Financeira", priority: "Alta • Aplicação Prática", questionsCount: 10 },
     { id: "matematica/estatistica", name: "Estatística (Médias, Mediana, Moda)", tag: "Estatística", priority: "Crítica • Acerto Obrigatório", questionsCount: 15 },
-    { id: "matematica/geometria", name: "Geometria Espacial e Plana", tag: "Geometria", priority: "Alta • Projeções e Volumes", questionsCount: 15 },
+    { id: "matematica/geometria", name: "Geometria Espacial e Plana", tag: "Geometria", priority: "Alta • Projeções e Volumes", questionsCount: 25 },
     { id: "matematica/geometria-analitica", name: "Geometria Analítica e Retas", tag: "Geometria", priority: "Alta • Coordenadas e Cônicas", questionsCount: 10 },
     { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 20 },
     { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 10 },
@@ -48,7 +48,7 @@ const AREA_TOPICS = {
   ],
   humanas: [
     { id: "humanas/brasil-republica", name: "Brasil República e Ditadura Militar", tag: "História", priority: "Crítica • Mais Cobrado", questionsCount: 10 },
-    { id: "humanas/cidadania-direitos", name: "Cidadania, Direitos e Movimentos Sociais", tag: "Sociologia", priority: "Crítica • Base da Redação", questionsCount: 10 },
+    { id: "humanas/cidadania-direitos", name: "Cidadania, Direitos e Movimentos Sociais", tag: "Sociologia", priority: "Crítica • Base da Redação", questionsCount: 20 },
     { id: "humanas/geografia-urbana", name: "Geografia Urbana, Demografia e Espaço", tag: "Geografia", priority: "Crítica", questionsCount: 10 },
     { id: "humanas/geopolitica", name: "Geopolítica, Nova DIT e Globalização", tag: "Geografia", priority: "Alta • Atualidades", questionsCount: 10 },
     { id: "humanas/sociologia-filosofia", name: "Sociologia e Filosofia Contemporânea", tag: "Sociologia", priority: "Alta • Útil para Redação", questionsCount: 10 },

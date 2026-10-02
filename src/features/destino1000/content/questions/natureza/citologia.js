@@ -407,5 +407,447 @@ export const QUESTIONS_CITOLOGIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-011",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Cadeia Respiratória e Fosforilação Oxidativa",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O cianeto de potássio (KCN) é um veneno letal de ação fulminante. No interior das células humanas, o íon cianeto liga-se com altíssima afinidade ao ferro do complexo citocromo c oxidase (Complexo IV), bloqueando a transferência final de elétrons para o oxigênio molecular na membrana interna das mitocôndrias.",
+      source: "Toxicologia Celular e Bioquímica Médica"
+    },
+    prompt: "A intoxicação por cianeto provoca a morte rápida do indivíduo porque interrompe diretamente a:",
+    options: [
+      { id: "a", text: "formação do gradiente eletroquímico de prótons e a síntese de ATP pela ATP sintase, colapsando o suprimento de energia metabólica celular.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "duplicação semiconservativa do DNA nuclear durante a fase S da interfase.", isCorrect: false, distractorRationale: "O cianeto bloqueia a respiração mitocondrial, não a replicação enzimática do DNA no núcleo." },
+      { id: "c", text: "conversão inicial de glicose em frutose-1,6-bisfosfato na glicólise citoplasmática.", isCorrect: false, distractorRationale: "A glicólise ocorre no citosol e independe de oxigênio ou de citocromos mitocondriais." },
+      { id: "d", text: "digestão intracelular de proteínas nos lisossomos secundários.", isCorrect: false, distractorRationale: "Enzimas hidrolíticas lisossômicas não dependem da cadeia respiratória para funcionar a curto prazo." },
+      { id: "e", text: "excreção renal de uréia pelos túbulos contorcidos distais.", isCorrect: false, distractorRationale: "Esse é um processo fisiológico tecidual posterior; a causa primária fatal é o colapso energético celular geral." }
+    ],
+    detailedExplanation: {
+      summary: "Na fosforilação oxidativa mitocondrial, a passagem de elétrons pelos complexos da cadeia respiratória bombeia prótons H+ para o espaço intermembranas. O cianeto trava o Complexo IV, o gradiente de H+ zera, e a ATP sintase para de girar, cessando a produção de ATP.",
+      stepByStep: [
+        "1. Cadeia de transporte de elétrons: elétrons trazidos por NADH e FADH2 fluem pelos complexos I, II, III e IV.",
+        "2. Aceptor final de elétrons: Oxigênio (O2), que se combina com prótons formando água (H2O).",
+        "3. Bloqueio por cianeto: inibe o Complexo IV -> trava toda a cadeia a montante.",
+        "4. Sem fluxo de elétrons, não há bombeamento de prótons H+ -> fim do gradiente quimiosmótico.",
+        "5. Sem gradiente de prótons, a ATP sintase cessa a fosforilação de ADP em ATP, causando falência celular sistêmica imediata."
+      ],
+      coreConcept: "Cadeia Respiratória, Gradiente Eletroquímico de H+ e Fosforilação Oxidativa",
+      trapWarning: "No ENEM: O oxigênio é o ACEPTOR FINAL de elétrons na respiração celular. Se ele for bloqueado (ou se o complexo IV for inibido), o ciclo de Krebs e a cadeia param."
+    },
+    commonTraps: [
+      "Achar que o cianeto destrói as moléculas de glicose",
+      "Confundir cadeia respiratória (mitocôndria) com glicólise (citosol)"
+    ],
+    tags: ["bioenergetica", "mitocondria", "cadeia-respiratoria", "atp-sintase", "fosforilacao-oxidativa"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-012",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Fermentação Lática e Dívida de Oxigênio no Músculo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante uma corrida de velocidade máxima de 100 metros rasos, o esforço muscular vigoroso exige regeneração imediata de ATP em ritmo muito superior à capacidade do sistema cardiovascular de fornecer oxigênio aos miócitos esqueléticos. Nessas condições de anaerobiose temporária, as células musculares recorrem à fermentação lática.",
+      source: "Fisiologia do Exercício e Bioquímica Metabólica"
+    },
+    prompt: "A principal função biológica da conversão de piruvato em lactato durante a fermentação lática anaeróbica é:",
+    options: [
+      { id: "a", text: "regenerar as moléculas de NAD⁺ oxidadas a partir do NADH, permitindo que a glicólise continue ocorrendo e produzindo 2 ATPs por glicose.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "produzir 36 moléculas adicionais de ATP diretamente no citoplasma sem consumo de glicose.", isCorrect: false, distractorRationale: "A fermentação gera um rendimento líquido de apenas 2 ATPs por glicose (da própria glicólise)." },
+      { id: "c", text: "alcalinizar o pH sarcoplasmático para acelerar a contração da miosina.", isCorrect: false, distractorRationale: "O ácido lático dissocia-se em lactato e H+, ACIDIFICANDO o meio celular e contribuindo para a fadiga." },
+      { id: "d", text: "sintetizar glicogênio novo a partir de dióxido de carbono dissolvido no sangue.", isCorrect: false, distractorRationale: "Células animais heterótrofas não fixam CO2 para sintetizar carboidratos." },
+      { id: "e", text: "converter o excesso de glicose em álcool etílico para proteger as fibras nervosas.", isCorrect: false, distractorRationale: "Células musculares humanas não realizam fermentação alcoólica (esta é típica de leveduras e vegetais)." }
+    ],
+    detailedExplanation: {
+      summary: "Para a glicólise continuar funcionando, é obrigatório haver NAD+ livre para aceitar elétrons. Na falta de oxigênio, a redução do piruvato em lactato oxida o NADH de volta a NAD+, garantindo a continuidade da glicólise anaeróbica.",
+      stepByStep: [
+        "1. Glicólise: 1 Glicose -> 2 Piruvatos + 2 ATP (líquidos) + 2 NADH.",
+        "2. O gargalo: se não houver oxigênio nas mitocôndrias, o NADH acumula-se e o estoque de NAD+ citoplasmático se esgota.",
+        "3. Solução anaeróbica: a enzima lactato desidrogenase transfere elétrons do NADH para o piruvato: Piruvato + NADH -> Lactato + NAD+.",
+        "4. Resultado: o NAD+ livre volta para o início da glicólise, permitindo que o músculo continue produzindo 2 ATP por ciclo emergencialmente."
+      ],
+      coreConcept: "Regeneração de NAD+ na Fermentação Lática",
+      trapWarning: "Cuidado: A etapa da fermentação em si (piruvato -> lactato) NÃO produz nenhum ATP novo! Ela serve estritamente para REGENERAR o NAD+ para que a glicólise não pare."
+    },
+    commonTraps: [
+      "Achar que a etapa de fermentação produz dezenas de ATPs",
+      "Esquecer que o objetivo chave é a regeneração do cofator NAD+"
+    ],
+    tags: ["fermentacao-latica", "glicolise", "nad", "metabolismo-muscular", "anaerobiose"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-013",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Fotossíntese: Origem do Oxigênio e Ciclo de Calvin",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um experimento clássico de biologia vegetal conduzido por Samuel Ruben e Martin Kamen, duas culturas de algas unicelulares foram iluminadas sob diferentes condições isotópicas:\n• Cultura 1: água com oxigênio pesado marcada isotopicamente (H₂¹⁸O) e gás carbônico comum (C¹⁶O₂);\n• Cultura 2: água comum (H₂¹⁶O) e gás carbônico com oxigênio pesado (C¹⁸O₂).\nApós a iluminação, os cientistas analisaram a composição do oxigênio gasoso (O₂) liberado pelas duas culturas.",
+      source: "Experimento Histórico de Ruben e Kamen (1941) e Fotossíntese"
+    },
+    prompt: "Os resultados desse experimento comprovaram inequivocamente que:",
+    options: [
+      { id: "a", text: "o gás oxigênio (O2) liberado na fotossíntese provém exclusivamente da quebra da água (fotólise da água na fase fotoquímica) e não do gás carbônico (CO2).", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "todo o oxigênio liberado na atmosfera tem origem na quebra enzimática do dióxido de carbono no Ciclo de Calvin.", isCorrect: false, distractorRationale: "O experimento provou exatamente o oposto: na Cultura 2 o O2 liberado era normal (¹⁶O), provando que o O2 não veio do CO2." },
+      { id: "c", text: "a fase escura da fotossíntese produz oxigênio líquido armazenado nos vacúolos celulares.", isCorrect: false, distractorRationale: "O Ciclo de Calvin não produz O2; consome ATP e NADPH para sintetizar glicose." },
+      { id: "d", text: "as moléculas de água participam da fotossíntese apenas como catalisadores inorgânicos inalterados.", isCorrect: false, distractorRationale: "A água é consumida como doadora primária de elétrons e prótons H+." },
+      { id: "e", text: "as algas realizam fotossíntese exclusivamente na ausência total de pigmentos clorofilianos.", isCorrect: false, distractorRationale: "Algas verdes contêm clorofila como pigmento fotorreceptor indispensável." }
+    ],
+    detailedExplanation: {
+      summary: "Na Cultura 1 (com H₂¹⁸O), o oxigênio liberado era pesado (¹⁸O₂). Na Cultura 2 (com C¹⁸O₂), o oxigênio liberado era comum (¹⁶O₂). Isso demonstrou definitivamente que todo o O2 da fotossíntese origina-se da fotólise da água (Reação de Hill) nos tilacoides.",
+      stepByStep: [
+        "1. Fase Fotoquímica (Clara): Ocorre nos tilacoides dos cloroplastos.",
+        "2. Fotólise da água: 2 H2O + luz -> 4 H+ + 4 e- + O2.",
+        "3. O oxigênio é subproduto liberado para a atmosfera.",
+        "4. Fase Química (Enzimática / Ciclo de Calvin): Ocorre no estroma; fixa o CO2 para produzir carboidratos (C6H12O6), utilizando os H+ e elétrons carreados pelo NADPH e a energia do ATP gerados na fase clara."
+      ],
+      coreConcept: "Fotólise da Água e Origem do O2 Atmosférico",
+      trapWarning: "No ENEM, essa pegadinha cai com frequência: 'O oxigênio que respiramos vem do CO2?' Resposta: NÃO! Vem da ÁGUA (H2O) quebrada pela luz."
+    },
+    commonTraps: [
+      "Achar que o O2 liberado na fotossíntese provém do CO2",
+      "Confundir o local da fase clara (tilacoides) com o da fase escura (estroma)"
+    ],
+    tags: ["fotossintese", "fotolise-da-agua", "experimento-isotopico", "cloroplasto"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-014",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Citologia",
+    subtopic: "Teoria da Endossimbiose Seriada (Margulis)",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A Teoria Endossimbiótica, formulada e consolidada pela bióloga Lynn Margulis na década de 1960, postula que organelas bioenergéticas das células eucarióticas atuais (mitocôndrias e cloroplastos) evoluíram a partir de ancestrais procariontes autônomos que foram fagocitados por uma célula hospedeira ancestral primitiva, estabelecendo uma simbiose mutualística permanente.",
+      source: "Evolução Celular e Endossimbiose - Lynn Margulis"
+    },
+    prompt: "Dentre as evidências citológicas e moleculares que sustentam a origem endossimbiótica de mitocôndrias e cloroplastos, destaca-se:",
+    options: [
+      { id: "a", text: "a presença de DNA próprio circular não associado a histonas, ribossomos do tipo 70S similares aos bacterianos, capacidade de autoduplicação e dupla membrana lipídica.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a presença de membrana nuclear carioteca que envolve o DNA mitocondrial isolando-o do estroma.", isCorrect: false, distractorRationale: "Mitocôndrias e cloroplastos não possuem núcleo ou carioteca interna." },
+      { id: "c", text: "a capacidade de sobreviverem e se reproduzirem indefinitivamente fora de qualquer célula hospedeira em água destilada pura.", isCorrect: false, distractorRationale: "Ao longo de bilhões de anos, muitos genes foram transferidos para o genoma nuclear do hospedeiro, tornando-as dependentes." },
+      { id: "d", text: "a ausência completa de proteínas em suas membranas e de enzimas na matriz mitocondrial.", isCorrect: false, distractorRationale: "Mitocôndrias possuem altíssima densidade de proteínas transportadoras e enzimas respiratórias." },
+      { id: "e", text: "a origem filogenética comprovada a partir de fungos pluricelulares basidiomicetos.", isCorrect: false, distractorRationale: "Suas origens são bacterianas (alfa-proteobactérias para mitocôndrias e cianobactérias para cloroplastos)." }
+    ],
+    detailedExplanation: {
+      summary: "Mitocôndrias e cloroplastos comportam-se como 'bactérias domesticadas': têm DNA circular próprio, ribossomos 70S menores (sensíveis a antibióticos), dividem-se por fissão binária e a membrana interna tem lipídios bacterianos (cardiolipina), enquanto a externa veio do vacúolo fagocítico da célula hospedeira.",
+      stepByStep: [
+        "1. DNA próprio: molécula circular, nua (sem histonas típicas de eucariontes).",
+        "2. Ribossomos 70S: semelhantes aos de bactérias (eucariontes têm ribossomos 80S no citosol).",
+        "3. Dupla membrana: a membrana interna corresponde à membrana bacteriana original; a membrana externa corresponde à membrana da vesícula da célula hospedeira que a englobou.",
+        "4. Autoduplicação: dividem-se por divisão binária independentemente da mitose nuclear."
+      ],
+      coreConcept: "Teoria da Endossimbiose Seriada e Provas Moleculares",
+      trapWarning: "No ENEM: Mitocôndrias descendem de bactérias aeróbicas heterótrofas; cloroplastos descendem de cianobactérias fotossintetizantes."
+    },
+    commonTraps: [
+      "Achar que o complexo de Golgi ou o retículo endoplasmático surgiram por endossimbiose (eles surgiram por invaginações da membrana plasmática)",
+      "Esquecer que os ribossomos mitocondriais são do tipo procarionte 70S"
+    ],
+    tags: ["endossimbiose", "mitocondria", "cloroplasto", "evolucao-celular", "lynn-margulis"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-015",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Complexo Golgiense e Secreção Celular",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No pâncreas exócrino, as células acinares produzem e secretam grandes quantidades de enzimas digestivas (como tripsinogênio, amilase e lípase) destinadas ao duodeno. Um rastreamento radioativo com aminoácidos marcados revelou o percurso temporal dessas proteínas: primeiro no retículo endoplasmático rugoso (RER), minutos depois nas cisternas do complexo golgiense e, finalmente, em vesículas de secreção que realizam exocitose na membrana plasmática.",
+      source: "Experimento de George Palade e Tráfego Vesicular"
+    },
+    prompt: "Durante a passagem das enzimas digestivas pelo complexo de Golgi, essa organela desempenha a função de:",
+    options: [
+      { id: "a", text: "modificar quimicamente (glicosilação e fosforilação), empacotar, selecionar e direcionar as proteínas para suas vesículas de secreção exocítica específicas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "traduzir os códons do RNA mensageiro diretamente em cadeias de polipeptídeos lineares.", isCorrect: false, distractorRationale: "A tradução do RNAm ocorre nos ribossomos do retículo endoplasmático rugoso ou citosol." },
+      { id: "c", text: "produzir gás carbônico e consumir água para sintetizar ATP na fermentação alcoólica.", isCorrect: false, distractorRationale: "O complexo de Golgi não gera ATP bioenergético." },
+      { id: "d", text: "duplicar o DNA cromossômico antes do início da metáfase mitótica.", isCorrect: false, distractorRationale: "A duplicação do genoma ocorre no núcleo celular durante a fase S da interfase." },
+      { id: "e", text: "degradar todos os lipídios celulares por meio de reações fotoquímicas de oxirredução.", isCorrect: false, distractorRationale: "O Golgi sintetiza polissacarídeos e processa proteínas, não degradando indiscriminadamente lipídios celulares." }
+    ],
+    detailedExplanation: {
+      summary: "O Complexo de Golgi funciona como a 'central de triagem e correios' da célula: recebe proteínas do RER pela face cis, processa modificações pós-traducionais (glicosilação), empacota em vesículas na face trans e despacha para secreção (exocitose) ou formação de lisossomos.",
+      stepByStep: [
+        "1. Rota de secreção celular: Núcleo (transcrição RNAm) -> RER (tradução nos ribossomos e dobramento) -> Vesículas de transporte -> Complexo de Golgi (face cis).",
+        "2. Processamento no Golgi: glicosilação final, adição de sulfatos, clivagem proteolítica.",
+        "3. Roteamento: separação das proteínas que vão para os lisossomos daquelas destinadas à secreção externa (acinar pancreática).",
+        "4. Outras funções vitais do Golgi: formação do acrossomo dos espermatozoides e formação da lamela média em células vegetais (fragmoplasto)."
+      ],
+      coreConcept: "Funções do Complexo Golgiense no Tráfego Celular",
+      trapWarning: "No ENEM: Duas estruturas célebres são formadas pelo Complexo de Golgi: o ACROSSOMO (vesícula cheia de enzimas na ponta do espermatozoide) e os LISOSSOMOS primários."
+    },
+    commonTraps: [
+      "Achar que o Golgi sintetiza as proteínas (ele apenas modifica e empacota; quem sintetiza é o ribossomo no RER)",
+      "Esquecer da formação do acrossomo do espermatozoide"
+    ],
+    tags: ["complexo-de-golgi", "secrecao-celular", "trafego-vesicular", "acrossomo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-016",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Lisossomos: Autofagia, Heterofagia e Apoptose",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante a metamorfose dos anfíbios anuros, o girino perde gradualmente sua cauda natatória para transformar-se em sapo adulto adaptado à vida terrestre. De maneira análoga, durante o desenvolvimento embrionário humano, as mãos e pés dos fetos apresentam inicialmente membranas interdigitais completas (como patas de pato), as quais desaparecem antes do nascimento, delineando dedos perfeitamente individualizados.",
+      source: "Embriologia Humana e Biologia do Desenvolvimento"
+    },
+    prompt: "O desaparecimento das membranas interdigitais no feto humano e a reabsorção da cauda do girino são mediados celularmente pelo processo de:",
+    options: [
+      { id: "a", text: "apoptose (morte celular programada), coordenado pela ativação de caspases e digestão autofágica/lisossômica controlada, sem desencadear reação inflamatória no tecido circundante.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "necrose traumática por queimadura química provocada pelo acúmulo de ácido úrico no líquido amniótico.", isCorrect: false, distractorRationale: "Necrose é morte patológica descontrolada associada a trauma, rompimento celular e inflamação severa." },
+      { id: "c", text: "mitose descontrolada que converte as células da membrana em células ósseas calcificadas.", isCorrect: false, distractorRationale: "As células não se convertem em ossos; elas morrem e são fagocitadas por macrófagos." },
+      { id: "d", text: "duplicação cromossômica sem citocinese em todas as células periféricas dos membros.", isCorrect: false, distractorRationale: "Isso geraria poliploidia, o que não ocorre na morfogênese digital normal." },
+      { id: "e", text: "desnaturação térmica irreversível de todo o citoesqueleto por febre embrionária materna.", isCorrect: false, distractorRationale: "O processo é fisiológico, genético e programado em temperatura corporal normal." }
+    ],
+    detailedExplanation: {
+      summary: "A apoptose é o 'suicídio celular altruísta programado': a célula se desmantela de forma limpa, seus fragmentos (corpos apoptóticos) são fagocitados sem extravasar enzimas, evitando inflamação. É fundamental na modelagem de tecidos embrionários e na eliminação de células velhas ou danificadas.",
+      stepByStep: [
+        "1. Diferença entre Apoptose e Necrose: Necrose = morte por lesão/acidente (célula incha, estoura, gera pus e inflamação). Apoptose = morte limpa e programada geneticamente.",
+        "2. Morfogênese: A eliminação das membranas entre os dedos e a cauda do girino são exemplos clássicos de apoptose escultural biológica.",
+        "3. Papel dos Lisossomos: Na autofagia e autólose fisiológica, hidrolases ácidas lisossômicas digerem componentes internos para reciclagem de nutrientes.",
+        "4. Importância no câncer: Células cancerosas perdem a capacidade de entrar em apoptose, multiplicando-se infinitamente."
+      ],
+      coreConcept: "Apoptose (Morte Celular Programada) vs. Necrose",
+      trapWarning: "No ENEM: Se o processo é natural, ordenado, biológico e não gera inflamação (regressão da cauda do girino, dedos das mãos, renovação do endométrio na menstruação) -> É SEMPRE APOPTOSE."
+    },
+    commonTraps: [
+      "Confundir apoptose (morte programada limpa) com necrose (morte patológica com lise e inflamação)",
+      "Achar que morte celular no embrião é sempre defeito ou anomalia congênita"
+    ],
+    tags: ["apoptose", "lisossomos", "desenvolvimento-embrionario", "morte-celular-programada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-017",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Bomba de Sódio e Potássio e Transporte Ativo",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A membrana plasmática dos neurônios mantém uma distribuição assimétrica de íons entre os meios intracelular e extracelular. A concentração de íons sódio (Na⁺) é significativamente maior no fluido extracelular, enquanto a concentração de íons potássio (K⁺) é muito mais elevada no citosol. Essa disparidade eletroquímica é sustentada continuamente pela proteína transmembrana Bomba de Na⁺/K⁺ ATPase.",
+      source: "Neurofisiologia Básica e Biofísica Celular"
+    },
+    prompt: "O mecanismo molecular de bombeamento de íons realizado pela Bomba de Na⁺/K⁺ ATPase classifica-se como:",
+    options: [
+      { id: "a", text: "transporte ativo primário, com quebra direta de ATP para transportar 3 íons Na⁺ para o meio extracelular e 2 íons K⁺ para o meio intracelular, ambos contra seus respectivos gradientes de concentração.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "difusão facilitada passiva, a favor do gradiente de concentração e sem gasto de energia metabólica celular.", isCorrect: false, distractorRationale: "A bomba atua CONTRA os gradientes de concentração, o que exige gasto obrigatório de ATP." },
+      { id: "c", text: "osmose iônica seletiva, na qual cátions movem-se arrastados exclusivamente pelo fluxo de moléculas de água.", isCorrect: false, distractorRationale: "Osmose refere-se exclusivamente ao transporte de solvente (água) através de membrana semipermeável." },
+      { id: "d", text: "endocitose por vesículas de clatrina que englobam cristais de cloreto de sódio dissolvidos.", isCorrect: false, distractorRationale: "A bomba é uma proteína carreadora de membrana, não uma vesícula endocítica." },
+      { id: "e", text: "transporte ativo secundário que bombeia 2 íons Na⁺ para fora e 3 íons K⁺ para dentro sem alterar o potencial de membrana.", isCorrect: false, distractorRationale: "Inverteu a estequiometria (são 3 Na+ para fora e 2 K+ para dentro) e a bomba é primária eletrogênica." }
+    ],
+    detailedExplanation: {
+      summary: "A bomba consome cerca de 30% do ATP de todo o corpo humano em repouso. A cada ciclo catalítico: hidrolisa 1 ATP, bombeia 3 Na+ para FORA da célula e 2 K+ para DENTRO da célula. Como sai mais carga positiva do que entra (3 contra 2), gera uma carga líquida negativa no interior celular (potencial de repouso ~ -70 mV).",
+      stepByStep: [
+        "1. Estequiometria de ouro: 3 Na+ saem, 2 K+ entram, 1 ATP é quebrado.",
+        "2. Contra o gradiente: Na+ já é abundante fora e é expulso mais ainda; K+ já é abundante dentro e é puxado mais ainda.",
+        "3. Função vital: Manter o potencial de repouso da membrana para permitir a transmissão do impulso nervoso e controlar a osmolaridade celular para a célula não inchar e estourar.",
+        "4. Mnemônico: 'Sai três sódios, entra dois potássios' (Na+ SAI, K+ ENTRA)."
+      ],
+      coreConcept: "Bomba de Na⁺/K⁺ ATPase, Potencial de Membrana e Transporte Ativo",
+      trapWarning: "Macete do ENEM: O potássio (K+) é o íon do interior da célula (K-K-K, você ri para DENTRO); o sódio (Na+) fica fora."
+    },
+    commonTraps: [
+      "Inverter os números (achar que são 2 Na+ e 3 K+)",
+      "Achar que é transporte passivo a favor do gradiente"
+    ],
+    tags: ["bomba-sodio-potassio", "transporte-ativo", "membrana-plasmatica", "potencial-de-repouso", "atp"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-018",
+    area: "natureza",
+    competence: 4,
+    skill: 14,
+    topic: "Citologia",
+    subtopic: "Osmose em Células Vegetais vs Animais",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma aula prática de laboratório, estudantes mergulharam hemácias humanas (glóbulos vermelhos) e células da epiderme de cebola (Allio cepa) em recipientes contendo água destilada pura (meio fortemente hipotônico em relação ao citoplasma celular). Horas depois, observaram o estado microscópico de ambas as amostras.",
+      source: "Práticas de Fisiologia e Osmose Celular"
+    },
+    prompt: "Ao microscópio, os estudantes constataram que as hemácias humanas sofreram lise celular (hemólise/estouraram), enquanto as células vegetais de cebola mantiveram-se íntegras e túrgidas. A integridade física das células vegetais foi garantida pela presença da:",
+    options: [
+      { id: "a", text: "parede celular celulósica rígida externa, que exerce pressão mecânica contrária de turgor, impedindo a entrada excessiva de água e o rompimento da membrana plasmática.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "membrana plasmática impermeável que impede a passagem de qualquer molécula de água para o vacúolo.", isCorrect: false, distractorRationale: "A membrana é perfeitamente permeável à água através de aquaporinas; a água entra até atingir o equilíbrio de pressão de turgor." },
+      { id: "c", text: "capacidade exclusiva dos cloroplastos vegetais de evaporar água sob a luz do microscópio.", isCorrect: false, distractorRationale: "Células da epiderme de cebola nem sequer possuem cloroplastos (não fazem fotossíntese subterrânea)." },
+      { id: "d", text: "ausência completa de solutos no interior dos vacúolos de suco celular.", isCorrect: false, distractorRationale: "Vacúolos possuem soluções ricas em sais e açúcares, conferindo pressão osmótica interna." },
+      { id: "e", text: "presença de queratina animal espessa na face externa da membrana celular vegetal.", isCorrect: false, distractorRationale: "Queratina é proteína animal; vegetais possuem celulose, hemicelulose e pectina." }
+    ],
+    detailedExplanation: {
+      summary: "Em meio hipotônico, a água entra por osmose na célula. A hemácia (sem parede celular) incha até a membrana estourar (lise osmótica / hemólise). A célula vegetal possui parede celular celulósica rígida e elástica: ela incha e fica túrgida, mas a pressão da parede (Pt) empata com a sucção osmótica (Sc), impedindo que a célula exploda.",
+      stepByStep: [
+        "1. Osmose: movimento de solvente do meio hipotônico (menos concentrado) para o hipertônico (mais concentrado).",
+        "2. Hemácia animal: não tem parede celular -> inchaço contínuo -> plasmoptise (hemólise).",
+        "3. Célula vegetal: possui parede celulósica -> a água entra no vacúolo -> célula fica túrgida.",
+        "4. Equilíbrio osmótico vegetal: Sucção de entrada (S) = Pressão Osmótica Interna (PO) - Pressão de Turgor da Parede (PT). Quando PO = PT, a entrada de água cessa sem que a célula rompa."
+      ],
+      coreConcept: "Comportamento Osmótico Celular e Papel da Parede Celular Celulósica",
+      trapWarning: "No ENEM: Meio hipotônico -> Célula animal estoura (lise); Célula vegetal fica TÚRGIDA (não estoura!). Meio hipertônico -> Célula animal murcha (crenação); Célula vegetal fica PLASMOLISADA."
+    },
+    commonTraps: [
+      "Achar que célula vegetal nunca ganha água em meio hipotônico",
+      "Esquecer que a epiderme de cebola não é verde e não contém cloroplastos"
+    ],
+    tags: ["osmose", "parede-celular", "turgor", "hemolise", "plasmolise"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-019",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Citologia",
+    subtopic: "Pontos de Checagem do Ciclo Celular e o Gene p53",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O gene TP53 codifica a proteína p53, frequentemente apelidada de 'o guardião do genoma'. No ponto de checagem da transição G1/S do ciclo celular, a p53 detecta eventuais danos ou quebras na fita dupla do DNA provocadas por radiação ultravioleta ou agentes químicos mutagênicos. Ao identificar o dano, a p53 interrompe a progressão do ciclo celular para permitir o reparo do DNA; se o dano for irreparável, induz a célula à apoptose.",
+      source: "Biologia Molecular do Câncer - Weinberg"
+    },
+    prompt: "Em mais de 50% de todos os tipos de tumores malignos humanos, constatam-se mutações com perda de função no gene TP53. A perda da proteína p53 funcional propicia o desenvolvimento do câncer porque:",
+    options: [
+      { id: "a", text: "permite que células portadoras de mutações genéticas deletérias continuem se dividindo descontroladamente sem reparar o DNA nem entrar em apoptose.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "impede a formação do fuso acromático durante a anáfase mitótica, paralisando todas as células do corpo.", isCorrect: false, distractorRationale: "O câncer caracteriza-se por proliferação desordenada e ativa, e não por paralisação celular." },
+      { id: "c", text: "obriga a mitocôndria a realizar fotossíntese no lugar da respiração celular.", isCorrect: false, distractorRationale: "Células tumorais humanas não realizam fotossíntese." },
+      { id: "d", text: "neutraliza todos os vírus da imunodeficiência adquirida presentes na circulação linfática.", isCorrect: false, distractorRationale: "A proteína p53 é um supressor tumoral de controle do ciclo celular, não um anticorpo antiviral." },
+      { id: "e", text: "elimina a capacidade de síntese de lipídios pelo retículo endoplasmático liso.", isCorrect: false, distractorRationale: "A biossíntese lipídica não é o alvo regulatório da p53 no ponto de checagem G1/S." }
+    ],
+    detailedExplanation: {
+      summary: "O TP53 é um gene supressor de tumor. Sem a p53 funcional para 'frear' o ciclo celular em G1 quando o DNA está quebrado, a célula entra na fase S, replica o DNA defeituoso e passa a mutação para as células-filhas, acumulando mutações que levam ao câncer.",
+      stepByStep: [
+        "1. Ciclo celular: Interfase (G1 -> S [replicação do DNA] -> G2) e Fase M (Mitose e Citocinese).",
+        "2. Pontos de checagem (checkpoints): Portões de controle de qualidade geridos por ciclinas, CDKs e proteínas como a p53.",
+        "3. Função da p53 normal: 1) Pausa o ciclo em G1; 2) Ativa enzimas de reparo do DNA; 3) Se o estrago for muito grande, ativa a morte programada (apoptose).",
+        "4. Célula cancerosa: Mutou o gene p53 -> perde o freio -> acumula aberrações cromossômicas -> proliferação clonal descontrolada."
+      ],
+      coreConcept: "Controle do Ciclo Celular, Genes Supressores de Tumor e Carcinogênese",
+      trapWarning: "No ENEM: Câncer é uma doença de DESREGULAÇÃO DO CICLO CELULAR associada a falhas nos mecanismos de controle e apoptose."
+    },
+    commonTraps: [
+      "Achar que oncogenes e genes supressores de tumor têm a mesma função (oncogenes estimulam divisão; supressores de tumor freiam divisão)",
+      "Confundir a fase de replicação do DNA (fase S) com a fase de mitose"
+    ],
+    tags: ["ciclo-celular", "p53", "cancer", "supressores-tumor", "pontos-de-checagem"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "NAT-CITO-020",
+    area: "natureza",
+    competence: 4,
+    skill: 15,
+    topic: "Citologia",
+    subtopic: "Meiose e Mecanismos Geradores de Variabilidade Genética",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "A reprodução sexuada é um dos principais motores evolutivos da vida eucariótica, assegurando que irmãos gerados pelos mesmos pais biológicos (com exceção de gêmeos univitelinos) apresentem patrimônios genéticos únicos e distintos. Essa extraordinária diversidade de combinações alélicas é gerada fundamentalmente durante a divisão meiótica de formação dos gametas.",
+      source: "Genética e Biologia Celular da Reprodução"
+    },
+    prompt: "Os dois eventos citogenéticos específicos ocorridos durante a Meiose I responsáveis pela geração dessa ampla variabilidade genética nos gametas são:",
+    options: [
+      { id: "a", text: "o crossing-over (permutação gênica entre cromátides não-irmãs de cromossomos homólogos na Prófase I) e a segregação independente dos pares de cromossomos homólogos na Anáfase I.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a duplicação semiconservativa dos centrômeros na Metáfase II e a cariocinese na Telófase II.", isCorrect: false, distractorRationale: "Esses eventos distribuem o material previamente recombinado, mas não geram novas combinações alélicas." },
+      { id: "c", text: "a fusão permanente de dois núcleos zigóticos na fase G0 e o encurtamento forçado dos telômeros.", isCorrect: false, distractorRationale: "Fusão de núcleos é fecundação e encurtamento telomérico relaciona-se ao envelhecimento celular, não à meiose." },
+      { id: "d", text: "a conversão compulsória de todas as células somáticas diploides em células reprodutivas haploides por mitose simples.", isCorrect: false, distractorRationale: "Mitose não reduz a ploidia da célula; apenas a meiose é divisão reducional (2n -> n)." },
+      { id: "e", text: "a substituição de todas as trincas de bases nitrogenadas de uracila por timina durante o crossing-over.", isCorrect: false, distractorRationale: "O DNA cromossômico contém timina normalmente e o crossing-over recombina trechos inteiros de DNA sem alterar quimicamente as bases." }
+    ],
+    detailedExplanation: {
+      summary: "A variabilidade genética da meiose provém de dois momentos-chave da Meiose I: 1) Crossing-over (Prófase I - Paquíteno): troca física de segmentos de DNA entre cromátides não-irmãs do par de homólogos; 2) Segregação Independente (Anáfase I - 2ª Lei de Mendel): os cromossomos maternos e paternos se separam aleatoriamente para os polos da célula.",
+      stepByStep: [
+        "1. Meiose I (Reducional): Separação dos cromossomos homólogos.",
+        "2. Evento 1: Crossing-over na Prófase I (recombina alelos no mesmo cromossomo, quebrando o linkage completo).",
+        "3. Evento 2: Segregação independente na Anáfase I (em humanos, com 23 pares de cromossomos, a segregação aleatória gera 2²³ = mais de 8,3 milhões de tipos de gametas diferentes SEM contar o crossing-over!).",
+        "4. Fecundação ao acaso: 8,3 milhões de óvulos possíveis x 8,3 milhões de espermatozoides possíveis = mais de 70 trilhões de combinações genéticas únicas por casal!"
+      ],
+      coreConcept: "Mecanismos Meióticos de Variabilidade Genética: Crossing-Over e Segregação Independente",
+      trapWarning: "No ENEM: Crossing-over ocorre na PRÓFASE I (Meiose I). A separação de homólogos ocorre na ANÁFASE I. A separação de cromátides irmãs ocorre na ANÁFASE II."
+    },
+    commonTraps: [
+      "Confundir separação de homólogos (Anáfase I) com separação de cromátides-irmãs (Anáfase II)",
+      "Achar que a mitose gera variabilidade genética (mitose gera clones genéticos idênticos)"
+    ],
+    tags: ["meiose", "crossing-over", "permutacao", "segregacao-independente", "variabilidade-genetica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
