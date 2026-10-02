@@ -30,6 +30,7 @@ export const QUESTION_MODULES = {
   "matematica/exponencial-logaritmos": () => import("./questions/matematica/exponencial-logaritmos.js"),
   "matematica/analise-combinatoria": () => import("./questions/matematica/analise-combinatoria.js"),
   "matematica/sistemas-equacoes": () => import("./questions/matematica/sistemas-equacoes.js"),
+  "matematica/aritmetica-divisibilidade": () => import("./questions/matematica/aritmetica-divisibilidade.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),

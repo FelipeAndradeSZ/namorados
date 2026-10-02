@@ -2195,6 +2195,52 @@ export const THEORY_CONTENT = {
       "Glicogênio muscular NÃO serve para manter a glicemia do sangue, pois o músculo não possui a enzima glicose-6-fosfatase."
     ],
     mnemonics: "A água dá o O₂ pro ar; a glicose dá o CO₂ pra expirar; e o aceptor final é o O₂ que faz a água brotar!"
+  },
+
+  "matematica/aritmetica-divisibilidade": {
+    topic: "Aritmética Básica, Notação Científica e MDC/MMC",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Competência 1 (H1, H2, H3, H4, H5): O pilar mais importante da TRI no ENEM (~20% a 25% da prova). Questões fáceis e médias cujo acerto é obrigatório para notas superiores a 800+ em Matemática.",
+    highFrequencySkills: [
+      "H1 - Reconhecer características do sistema de numeração decimal e ordens de grandeza",
+      "H2 - Utilizar a notação científica e realizar conversões com múltiplos e submúltiplos do SI",
+      "H3 - Resolver situações-problema envolvendo o cálculo do MDC (partições máximas) e do MMC (coincidências periódicas)",
+      "H4 - Avaliar a razoabilidade de estimativas e ordens de grandeza em contextos reais",
+      "H5 - Aplicar critérios de divisibilidade e aritmética modular na resolução de problemas cotidianos"
+    ],
+    overview: "Aritmética Elementar no ENEM avalia o domínio prático dos números reais: operações fundamentais sem calculadora, dízimas periódicas e frações geratrizes, fatoração de inteiros, propriedades do MDC e MMC, notação científica, conversão entre escalas métricas (micro, nano, pico, quilo, mega, giga) e a lógica de calendários e ciclos periódicos.",
+    keyConcepts: [
+      {
+        title: "MDC vs. MMC: O Segredo de Identificação",
+        content: "• MDC (Máximo Divisor Comum): surge quando o problema exige DIVIDIR, REPARTIR ou CORTAR grandezas em pedaços do MAIOR tamanho possível, sem sobras e sem misturar categorias (ex: caixas de remédios, cortes de barras metálicas ou tecidos).\n• MMC (Mínimo Múltiplo Comum): surge quando o problema envolve COINCIDÊNCIA DE EVENTOS PERIÓDICOS no tempo futuro (ex: plantões médicos que coincidem a cada 4, 6 e 10 dias; semáforos, cometas ou engrenagens acopladas)."
+      },
+      {
+        title: "Propriedade Fundamental de Dois Números",
+        content: "Para quaisquer dois números inteiros positivos A e B: MDC(A, B) × MMC(A, B) = A × B. Essa propriedade permite calcular rapidamente um dos números conhecendo o outro e seus divisores/múltiplos comuns."
+      },
+      {
+        title: "Notação Científica e Ordem de Grandeza",
+        content: "• Notação Científica: expressa na forma N = k × 10ⁿ, onde 1 ≤ |k| < 10 e n ∈ ℤ.\n• Ordem de Grandeza: avalia a potência de 10 mais próxima. Regra canônica: se a mantissa k < √10 (≈ 3,162), a ordem de grandeza é 10ⁿ; se k ≥ √10, a ordem de grandeza é 10ⁿ⁺¹."
+      },
+      {
+        title: "Aritmética Modular e Ciclos de Calendário",
+        content: "Fenômenos com período T repetem seu estado inicial a cada T unidades. Para saber o estado após N unidades de tempo, calcula-se o resto R da divisão euclidiana de N por T: N = q·T + R. O estado futuro é exatamente o estado inicial avançado em R posições (ex: dias da semana usam T = 7; horas do relógio usam T = 24 ou 12)."
+      }
+    ],
+    formulasAndRules: [
+      "Fórmula do Número de Divisores: Se N = p₁ᵃ · p₂ᵇ · p₃ᶜ, então o total de divisores positivos é D(N) = (a + 1)(b + 1)(c + 1).",
+      "Produto MDC e MMC: MDC(A, B) · MMC(A, B) = A · B (válido estritamente para dois números).",
+      "Trabalho Conjunto / Torneiras: 1/T_total = 1/t₁ + 1/t₂ (o tempo combinado é sempre menor que o menor tempo individual).",
+      "Critério da Ordem de Grandeza: k · 10ⁿ ⟹ se k < 3,16, ordem = 10ⁿ; se k ≥ 3,16, ordem = 10ⁿ⁺¹."
+    ],
+    enemTraps: [
+      "Não confunda a capacidade da caixa (o MDC) com a quantidade total de caixas (soma dos quocientes dos lotes pelo MDC)!",
+      "Cuidado com o critério da raiz de 10 (3,16): 2,5 × 10¹³ tem ordem de grandeza 10¹³, e NÃO 10¹⁴!",
+      "Na conversão de horas decimais: 2,4 horas NÃO são 2 horas e 40 minutos! Multiplique 0,4 por 60 minutos para obter 2 horas e 24 minutos.",
+      "Na divisão de potências de 10 com expoentes negativos: 10⁻⁶ / 10⁻⁹ = 10^(-6 - (-9)) = 10³ = 1 000."
+    ],
+    mnemonics: "MDC reparte no maior sem sobrar; MMC espera a periodicidade encontrar; e 0,4 hora é 24 minutos pra não vacilar!"
   }
 };
 
