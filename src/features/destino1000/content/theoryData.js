@@ -2150,6 +2150,51 @@ export const THEORY_CONTENT = {
       "Não conferir as unidades de tempo: misturar minutos e horas na mesma equação sem conversão prévia."
     ],
     mnemonics: "Trabalho soma o inverso da hora; no vértice, -b sobre 2a não demora; no ralo esvazia e subtrai sem demora!"
+  },
+
+  "natureza/bioquimica-metabolismo": {
+    topic: "Bioquímica Celular, Bioenergética e Metabolismo",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Competência 4 e 5 (H14, H15, H16, H17): Tema de altíssima cobrança no ENEM e diferencial absoluto para Medicina (respiração celular, fotossíntese, cinética enzimática e avitaminoses).",
+    highFrequencySkills: [
+      "H14 - Identificar padrões em processos biológicos e bioenergéticos celulares",
+      "H15 - Interpretar modelos e experimentos metabólicos em condições aeróbicas e anaeróbicas",
+      "H16 - Avaliar impactos nutricionais, carências vitamínicas e homeostase fisiológica",
+      "H17 - Relacionar estrutura e função de biomoléculas com adaptações evolutivas e processos industriais"
+    ],
+    overview: "A bioenergética estuda como as células capturam, transformam e utilizam energia livre. No ENEM, o foco está na compreensão integrada das vias metabólicas: a oxidação da glicose (glicólise, ciclo de Krebs e fosforilação oxidativa mitocondrial), a conversão luminosa na fotossíntese (fase clara e ciclo de Calvin), a fermentação como via de regeneração de NAD⁺, a cinética enzimática (efeito de pH, temperatura e inibidores) e o papel biológico de vitaminas e macronutrientes.",
+    keyConcepts: [
+      {
+        title: "Respiração Celular Aeróbica vs. Fermentações",
+        content: "• Glicólise (citosol): cliva glicose (6C) em 2 piruvatos (3C), rendendo líquido 2 ATP e 2 NADH.\n• Fermentação: processo anaeróbico cuja função primária é REGENERAR NAD⁺ a partir do NADH para manter a glicólise funcionando (láctica: piruvato vira lactato; alcoólica: piruvato vira acetaldeído + CO₂ e depois etanol).\n• Ciclo de Krebs (matriz mitocondrial): por glicose (2 voltas), gera 6 NADH, 2 FADH₂, 2 GTP/ATP e libera 4 CO₂.\n• Fosforilação Oxidativa (cristas mitocondriais): os elétrons passam pelos complexos I a IV, bombeando H⁺ para o espaço intermembranas; a força motriz protônica move a ATP sintase gerando ~26-28 ATPs. O O₂ é o ACEPTOR FINAL de elétrons, formando água metabólica (H₂O)."
+      },
+      {
+        title: "Fotossíntese: Fase Clara e Ciclo de Calvin",
+        content: "• Fase Fotoquímica (tilacoides): a luz excita clorofilas. Na fotólise da água (reação de Hill), a água doa elétrons e libera O₂ para a atmosfera (todo o O₂ vem da H₂O!). Gera ATP (fotofosforilação) e NADPH.\n• Fase Química / Ciclo de Calvin (estroma): a enzima Rubisco fixa o CO₂ atmosférico em ribulose-1,5-bisfosfato (RuBP). Com consumo de ATP e NADPH da fase clara, produz trioses que sintetizam glicose e amido."
+      },
+      {
+        title: "Cinética Enzimática e Inibição",
+        content: "• Enzimas reduzem a energia de ativação sem alterar o ΔG da reação.\n• Km reflete a afinidade: menor Km = maior afinidade pelo substrato.\n• Inibição Competitiva: inibidor disputa o sítio ativo; Vmax inalterada com excesso de substrato, mas Km aumenta.\n• Inibição Não Competitiva / Alostérica: inibidor liga-se fora do sítio ativo; diminui Vmax, mantendo Km inalterado."
+      },
+      {
+        title: "Principais Avitaminoses no ENEM",
+        content: "• Vitamina C (ácido ascórbico): hidrossolúvel, cofator na síntese de colágeno. Carência = Escorbuto (sangramentos e fragilidade capilar).\n• Vitamina D (calciferol): lipossolúvel, sintetizada na pele sob radiação UVB, estimula absorção intestinal de cálcio. Carência = Raquitismo (crianças) e Osteomalácia (adultos).\n• Vitamina A (retinol): lipossolúvel, componente da rodopsina nos bastonetes. Carência = Hemeralopia (cegueira noturna) e Xeroftalmia.\n• Vitamina B1 (tiamina): cofator da piruvato desidrogenase. Carência = Beribéri."
+      }
+    ],
+    formulasAndRules: [
+      "Balanço da Fotólise da Água: 2 H₂O + luz ⟹ 4 H⁺ + 4 e⁻ + O₂ (o oxigênio atmosférico provém 100% da água).",
+      "Equação Global da Respiração: C₆H₁₂O₆ + 6 O₂ ⟹ 6 CO₂ + 6 H₂O + ~30-32 ATP.",
+      "Cinética de Michaelis-Menten: Km = concentração de substrato [S] na qual V = Vmax / 2.",
+      "Adaptação CAM vs C4: CAM separa TEMPORALMENTE (noite fixa malato, dia faz Calvin); C4 separa ESPACIALMENTE (mesofilo fixa, bainha de Kranz faz Calvin)."
+    ],
+    enemTraps: [
+      "O oxigênio liberado na fotossíntese NÃO vem do CO₂! Vem exclusivamente da molécula de H₂O quebrada na fase clara.",
+      "O gás carbônico eliminado na respiração NÃO vem do O₂ inalado! Vem das descarboxilações da glicose e do ciclo de Krebs. O O₂ inalado vira água!",
+      "A fermentação em si NÃO gera ATP adicional; ela apenas regenera o NAD⁺ para que a glicólise citoplasmática não seja interrompida.",
+      "Glicogênio muscular NÃO serve para manter a glicemia do sangue, pois o músculo não possui a enzima glicose-6-fosfatase."
+    ],
+    mnemonics: "A água dá o O₂ pro ar; a glicose dá o CO₂ pra expirar; e o aceptor final é o O₂ que faz a água brotar!"
   }
 };
 

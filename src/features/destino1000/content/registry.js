@@ -79,6 +79,7 @@ export const QUESTION_MODULES = {
   "natureza/solucoes-equilibrio": () => import("./questions/natureza/solucoes-equilibrio.js"),
   "natureza/fisiologia-humana": () => import("./questions/natureza/fisiologia-humana.js"),
   "natureza/fisica-moderna": () => import("./questions/natureza/fisica-moderna.js"),
+  "natureza/bioquimica-metabolismo": () => import("./questions/natureza/bioquimica-metabolismo.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),
