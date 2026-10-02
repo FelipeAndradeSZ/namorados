@@ -1144,6 +1144,202 @@ export const THEORY_CONTENT = {
       "Nas tirinhas, a ironia quase sempre está na quebra de expectativa entre fala e imagem."
     ],
     mnemonics: "A-P-E-H (Antítese = Opostos; Paradoxo = Impossível; Eufemismo = Suave; Hipérbole = Exagero)."
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // MATEMÁTICA FINANCEIRA
+  // ═══════════════════════════════════════════════════════════════
+  "matematica/financeira": {
+    topic: "Matemática Financeira e Juros",
+    area: "matematica",
+    areaName: "Matemática e suas Tecnologias",
+    enemRelevance: "Alta recorrência (2 a 4 questões por prova). Ouro da TRI por contextualizar o cotidiano financeiro.",
+    highFrequencySkills: ["H13 - Avaliar propostas de financiamento e investimentos", "H14 - Resolver problemas com acréscimos e descontos"],
+    overview: "A prova do ENEM privilegia tomadas de decisão financeiras racionais: comparar compra à vista com desconto versus parcelamento, identificar taxas embutidas e calcular montantes em juros simples e compostos.",
+    keyConcepts: [
+      {
+        title: "Juros Simples vs. Juros Compostos",
+        content: "• Juros Simples: A taxa incide SEMPRE sobre o capital inicial (crescimento LINEAR/PA): J = C · i · t e M = C + J = C · (1 + i · t).\n• Juros Compostos: A taxa incide sobre o montante acumulado do período anterior ('juros sobre juros', crescimento EXPONENCIAL/PG): M = C · (1 + i)^t."
+      },
+      {
+        title: "A Venda Parcelada 'Sem Juros' (Armadilha Real)",
+        content: "Se uma loja oferece um produto por R$ 100 à vista OU 2 vezes de R$ 50 (sendo R$ 50 de entrada e R$ 50 após 30 dias), ela NÃO está vendendo sem juros. O cliente financiou apenas R$ 50 (100 - 50 da entrada) e pagou R$ 50 depois, logo a taxa é 0% nesse caso. Mas se à vista tiver 10% de desconto (R$ 90 à vista): financiou R$ 40 (90 - 50) e pagou R$ 50 depois! Taxa real = 10 / 40 = 25% ao mês!"
+      },
+      {
+        title: "Aumentos e Descontos Sucessivos",
+        content: "Nunca some ou subtraia porcentagens sucessivas! Use fatores multiplicativos: Fator de aumento = (1 + i); Fator de desconto = (1 - i). Um aumento de 20% seguido de aumento de 30% resulta em 1,20 · 1,30 = 1,56 (aumento real de 56%, e NÃO de 50%)."
+      },
+      {
+        title: "Inflação e Taxa Real de Juros (Equação de Fisher)",
+        content: "A taxa aparente (nominal) inclui a inflação. A taxa real é o verdadeiro ganho de poder de compra: (1 + i_aparente) = (1 + i_real) · (1 + taxa_inflação). Se uma aplicação rende 10% mas a inflação foi de 10%, o rendimento real é ZERO."
+      }
+    ],
+    formulasAndRules: [
+      "Juros Simples: J = C · i · t  |  M = C · (1 + i · t)",
+      "Juros Compostos: M = C · (1 + i)^t  |  J = M - C",
+      "Fator Multiplicativo de Aumento: F = 1 + i",
+      "Fator Multiplicativo de Redução: F = 1 - i",
+      "Variação Percentual: Δ% = [(Valor Final - Valor Inicial) / Valor Inicial] · 100"
+    ],
+    enemTraps: [
+      "Somar descontos sucessivos (dois descontos de 10% NÃO equivalem a 20%, mas sim a 1 - 0,90 · 0,90 = 19%).",
+      "No parcelamento com entrada, esquecer de abater o valor da entrada do saldo devedor principal antes de calcular a taxa de juros da parcela seguinte."
+    ],
+    mnemonics: "J-C-I-T ('Jesus Cristo Ilumina Todos' para J = C · i · t)."
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // LINGUAGENS: GÊNEROS TEXTUAIS
+  // ═══════════════════════════════════════════════════════════════
+  "linguagens/generos": {
+    topic: "Gêneros Textuais e Esferas de Circulação",
+    area: "linguagens",
+    areaName: "Linguagens, Códigos e suas Tecnologias",
+    enemRelevance: "Crítica (mais de 15 questões por prova). O ENEM é uma prova essencialmente pautada em gêneros discursivos.",
+    highFrequencySkills: ["H21 - Reconhecer funções da linguagem e gêneros", "H22 - Identificar marcas linguísticas de circulação social"],
+    overview: "Gêneros textuais são padrões comunicativos sociocomunicativos estáveis que realizam propósitos específicos em determinadas esferas sociais (jornalística, acadêmica, literária, cotidiana, publicitária, jurídica).",
+    keyConcepts: [
+      {
+        title: "Gênero Textual vs. Tipo Textual",
+        content: "• Tipos Textuais: Conjunto finito de estruturas sequenciais básicas (Narrativo, Descritivo, Dissertativo-Argumentativo, Expositivo, Injuntivo/Instrucional).\n• Gêneros Textuais: Infinitos e dinâmicos, definidos pela função social e contexto (notícia, editorial, receita de bolo, meme, artigo científico, bula de remédio, manifesto)."
+      },
+      {
+        title: "Esfera Jornalística e Informação vs. Opinião",
+        content: "• Notícia / Reportagem: Predomínio do tipo expositivo-narrativo, foco na apuração de fatos, terceira pessoa, busca de imparcialidade (embora haja enquadramento ideológico).\n• Editorial: Foco na opinião institucional coletiva do veículo de comunicação, sem assinatura individual, verbo no presente, forte carga argumentativa.\n• Artigo de Opinião: Assinado por um articulista, defende tese pessoal com recursos persuasivos e de autoria explícita."
+      },
+      {
+        title: "Gêneros Digitais e Hibridismo Contemporâneo",
+        content: "A internet criou gêneros multissemióticos que fundem texto verbal, imagens, sons e hiperlinks (memes, postagens em fóruns, threads, infográficos interativos, podcasts). O ENEM frequentemente analisa a função social e a circulação desses novos suportes na formação da cidadania."
+      }
+    ],
+    formulasAndRules: [
+      "Injuntivo/Instrucional: Verbos no imperativo ou infinitivo ('misture', 'leia', 'tome').",
+      "Dissertativo-Argumentativo: Tese + argumentos fundamentados + proposta de reflexão ou solução.",
+      "Narrativo: Enredo, personagens, tempo, espaço e narrador (1ª ou 3ª pessoa)."
+    ],
+    enemTraps: [
+      "Classificar um editorial como 'texto neutro e puramente informativo'. O editorial SEMPRE defende um posicionamento ideológico da empresa jornalística.",
+      "Confundir crônica (literária, reflexiva, parte de um detalhe cotidiano) com notícia (factual, imediata e documental)."
+    ],
+    mnemonics: "Tipos são 5: 'NA-DE-DIS-EX-IN' (Narrativo, Descritivo, Dissertativo, Expositivo, Injuntivo)."
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // LINGUAGENS: ARGUMENTAÇÃO
+  // ═══════════════════════════════════════════════════════════════
+  "linguagens/argumentacao": {
+    topic: "Argumentação e Recursos Persuasivos",
+    area: "linguagens",
+    areaName: "Linguagens, Códigos e suas Tecnologias",
+    enemRelevance: "Alta frequência (essencial tanto para questões objetivas quanto para atingir nota 900+ na Redação).",
+    highFrequencySkills: ["H19 - Analisar estratégias de persuasão", "H20 - Reconhecer pontos de vista e teses confrontadas"],
+    overview: "A argumentação busca convencer ou persuadir o interlocutor a aderir a uma tese. No ENEM, avalia-se a capacidade de identificar a tese central, as estratégias de sustentação e os recursos de contra-argumentação.",
+    keyConcepts: [
+      {
+        title: "Tipos de Argumentos",
+        content: "• Argumento de Autoridade: Citação de especialistas, instituições consagradas (OMS, IBGE) ou filósofos legitimados.\n• Argumento por Comprovação: Dados estatísticos, pesquisas científicas empíricas e documentos históricos.\n• Argumento de Causa e Consequência: Relação lógica demonstrando os desdobramentos necessários de um evento.\n• Argumento por Exemplificação: Fatos concretos notórios que ilustram a veracidade da tese."
+      },
+      {
+        title: "Contra-argumentação e Refutação",
+        content: "Consiste em antecipar a possível objeção do leitor para, em seguida, desconstruí-la ou enfraquecê-la mediante evidências mais robustas. Costuma ser introduzida por conectivos concessivos ('embora', 'conquanto', 'ainda que') e arrematada por fortes conectivos adversativos ('no entanto', 'todavia', 'contudo')."
+      },
+      {
+        title: "Falácias Lógicas mais Comuns",
+        content: "• Ad Hominem: Atacar o indivíduo que enuncia em vez de refutar seus argumentos lógicos.\n• Falsa Causa (Post hoc ergo propter hoc): Presumir que, porque B ocorreu após A, A foi a causa direta de B.\n• Generalização Apressada: Concluir uma regra universal a partir de uma amostra minúscula e insuficiente."
+      }
+    ],
+    formulasAndRules: [
+      "Estrutura da Argumentação: Tese (Opinião) + Premissas (Justificativas) + Evidências (Dados) = Conclusão",
+      "Operadores de Reforço Argumentativo: 'Sobretudo', 'inclusive', 'principalmente', 'não apenas... mas também'."
+    ],
+    enemTraps: [
+      "Confundir o argumento citado como contraponto com a tese principal defendida pelo próprio autor.",
+      "Confundir fato (dado objetivo comprovável) com opinião (julgamento de valor subjetivo do enunciador)."
+    ],
+    mnemonics: "A-C-C-E (Autoridade, Comprovação, Causa-efeito, Exemplificação)."
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // LINGUAGENS: RECURSOS LINGUÍSTICOS E VARIAÇÃO
+  // ═══════════════════════════════════════════════════════════════
+  "linguagens/recursos-linguisticos": {
+    topic: "Recursos da Língua e Variação Linguística",
+    area: "linguagens",
+    areaName: "Linguagens, Códigos e suas Tecnologias",
+    enemRelevance: "Média-Alta. O ENEM não cobra decoreba gramatical de nomenclatura; cobra a gramática em função do sentido do texto.",
+    highFrequencySkills: ["H25 - Empregar mecanismos de coesão", "H26 - Avaliar efeitos de sentido provocados por escolhas linguísticas", "H27 - Respeitar a diversidade das variedades linguísticas"],
+    overview: "Este tópico articula a gramática aplicada (coesão, operadores, regência e crase) à sociolinguística (combate ao preconceito linguístico e valorização das variedades regionais e sociais).",
+    keyConcepts: [
+      {
+        title: "Coesão Referencial: Anáfora vs. Catáfora",
+        content: "• Anáfora: Retomada de um termo já citado no texto por meio de pronomes, sinônimos ou hiperônimos ('Machado publicou Dom Casmurro. O autor carioca...').\n• Catáfora: Antecipação de um termo que ainda será explicitado ('O segredo é este: estudar com constância')."
+      },
+      {
+        title: "Operadores Argumentativos (Conectivos)",
+        content: "• Oposição/Adversidade: Mas, porém, contudo, todavia, no entanto (o argumento após o 'mas' é o mais forte).\n• Concessão: Embora, ainda que, conquanto, apesar de que (admite um fato sem que ele mude a conclusão principal).\n• Conclusão: Portanto, logo, destarte, dessarte, por conseguinte.\n• Explicação/Causa: Pois (antes do verbo), porque, já que, visto que."
+      },
+      {
+        title: "Variação Linguística e Preconceito Linguístico",
+        content: "A língua varia no tempo (histórica/diacrônica), no espaço geográfico (regional/diatópica), entre grupos sociais e classes (sociocultural/diastrática) e no grau de formalidade da situação (diafásica). Para o ENEM e a linguística moderna, NÃO EXISTE variante certa ou errada em termos biológicos; existem variantes ADEQUADAS ou INADEQUADAS à situação comunicativa."
+      },
+      {
+        title: "Crase na Prática",
+        content: "Fusão da preposição 'a' com o artigo 'a' ou demonstrativo 'aquele'. Regra prática: substitua a palavra feminina por uma masculina correspondente; se virar 'ao', tem crase! (Ex: 'Vou à escola' → 'Vou ao colégio' → TEM CRASE). Nunca ocorre crase antes de verbo, palavra masculina e artigo indefinido (um/uma)."
+      }
+    ],
+    formulasAndRules: [
+      "Teste da Crase: Palavra feminina → Palavra masculina equivalente. Se resultar 'ao', usa-se acento grave (`à`).",
+      "Variação Diatópica: Regional (sotaques e termos regionais como 'mandioca', 'macaxeira', 'aipim').",
+      "Variação Diastrática: Social (gírias de grupos profissionais, classes sociais ou faixas etárias)."
+    ],
+    enemTraps: [
+      "Julgar expressões populares regionais como 'erros gramaticais'. No ENEM, a resposta correta valoriza a adequação cultural e a eficácia comunicativa.",
+      "Confundir a função de 'pois' antes do verbo (explicativo/causal) com 'pois' entre vírgulas após o verbo (conclusivo)."
+    ],
+    mnemonics: "Regra do 'Ao': 'Se vou a e volto da, crase há. Se vou a e volto de, crase pra quê?'"
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // CIÊNCIAS HUMANAS: MEIO AMBIENTE
+  // ═══════════════════════════════════════════════════════════════
+  "humanas/meio-ambiente": {
+    topic: "Biomas Brasileiros e Impactos Antrópicos",
+    area: "humanas",
+    areaName: "Ciências Humanas e suas Tecnologias",
+    enemRelevance: "Alta frequência (3 a 5 questões por prova). Integração profunda entre Geografia Física, Geopolítica e Ecologia.",
+    highFrequencySkills: ["H26 - Analisar impactos de matrizes energéticas", "H28 - Avaliar apropriação dos recursos naturais e sustentabilidade"],
+    overview: "O ENEM aborda as questões socioambientais a partir dos conflitos pelo uso dos recursos: desmatamento na Amazônia e no Cerrado, desertificação no Semiárido, crise hídrica e a geopolítica climática dos acordos internacionais.",
+    keyConcepts: [
+      {
+        title: "Cerrado: A 'Caixa-d'Água' Ameaçada",
+        content: "Possui solos profundos e vegetação com raízes pivotantes extensas que alimentam lençóis freáticos e as cabeceiras de 8 grandes bacias hidrográficas (incluindo São Francisco, Prata e Tocantins). O avanço da fronteira agrícola da soja e pecuária no Matopiba causa desmatamento acelerado e compactação do solo, comprometendo o abastecimento hídrico nacional."
+      },
+      {
+        title: "Amazônia e os 'Rios Voadores'",
+        content: "A exuberante floresta amazônica evapotranspira bilhões de litros de água por dia. Essas massas de ar úmidas encontram a barreira da Cordilheira dos Andes e são defletidas em direção ao Centro-Oeste, Sudeste e Sul do Brasil, regulando o regime de chuvas que sustenta a agricultura e os reservatórios das hidrelétricas."
+      },
+      {
+        title: "Mata Atlântica e Hotspots de Biodiversidade",
+        content: "Conceito de Norman Myers: área com alta taxa de espécies endêmicas (que só existem ali) e que já perdeu mais de 70% de sua cobertura original. No Brasil, Mata Atlântica (resta menos de 12%) e Cerrado são classificados como hotspots globais prioritários para conservação."
+      },
+      {
+        title: "Caatinga e Desertificação",
+        content: "Único bioma exclusivamente brasileiro, com vegetação xerófila adaptada ao estresse hídrico. A superexploração de lenha para olarias, o sobrepastoreio caprino e técnicas inadequadas de irrigação provocam a salinização do solo e núcleos graves de desertificação (como em Gilbués/PI e Irauçuba/CE)."
+      },
+      {
+        title: "Matriz Elétrica Brasileira vs. Matriz Energética",
+        content: "• Matriz Elétrica (apenas eletricidade): Mais de 80% renovável (hidrelétrica, eólica, biomassa e solar).\n• Matriz Energética (inclui combustíveis de transportes e indústrias): Cerca de 47% renovável, dependente de derivados de petróleo e gás fóssil.\nEm períodos de seca severa, o acionamento emergencial de usinas termelétricas encarece as tarifas (bandeiras) e eleva as emissões de carbono."
+      }
+    ],
+    formulasAndRules: [
+      "Hotspot de Biodiversidade: Pelo menos 1.500 plantas vasculares endêmicas + Perda antrópica > 70% da vegetação nativa.",
+      "Equilíbrio Hidrológico: Desmatamento → Menos evapotranspiração → Menor infiltração subterrânea → Mais escoamento superficial → Assoreamento e enchentes."
+    ],
+    enemTraps: [
+      "Achar que a Amazônia é o maior emissor de gases do efeito estufa por indústrias. No Brasil, o principal vetor de emissões é a Mudança no Uso da Terra (queimadas e desmatamento ilegal para pecuária e grãos).",
+      "Confundir arenização (processo eólico em solos arenosos no RS) com desertificação (processo antrópico/climático severo em zonas semiáridas)."
+    ],
+    mnemonics: "Hotspots do Brasil: 'MA-CE' (Mata Atlântica e Cerrado)."
   }
 };
 

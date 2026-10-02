@@ -63,7 +63,7 @@ export const QUESTIONS_CIDADANIA_DIREITOS = [
       { id: "b", text: "privatização progressiva dos leitos hospitalares mediante copagamento obrigatório dos usuários.", isCorrect: false, distractorRationale: "O SUS é público, gratuito no ponto de atendimento e universal." },
       { id: "c", text: "centralização decisória exclusiva em Brasília, extinguindo a gestão descentralizada nos municípios.", isCorrect: false, distractorRationale: "Uma das diretrizes do SUS é justamente a DESCENTRALIZAÇÃO político-administrativa para os municípios." },
       { id: "d", text: "priorização do atendimento curativo de alta complexidade em detrimento da prevenção e vigilância sanitária.", isCorrect: false, distractorRationale: "O SUS prioriza a atenção básica primária (prevenção e promoção da saúde)." },
-      { id: "e", text: "exclusão de estrangeiros e imigrantes não naturalizados dos programas de vacinação pública.", isCorrect: false, distractorRationale: "O SUS atende universalmente qualquer ser humano em solo brasileiro, inclusive turistas e imigrantes sem documentação." }
+      { id: "e", text: "exclusão de estrangeiros e imigrantes não naturalizados dos programas de vacinação pública.", isCorrect: false, distractorRationale: "O SUS atende universalmente qualquer ser humano em solo brasileiro, inclusive estrangeiros temporários e migrantes sem documentação." }
     ],
     detailedExplanation: {
       summary: "O SUS consagrou a universalidade: saúde deixou de ser privilégio dos segurados da previdência e passou a ser direito de cidadania universal garantido pelo Estado.",

@@ -198,5 +198,206 @@ export const QUESTIONS_SOCIOLOGIA_FILOSOFIA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-004",
+    area: "humanas",
+    competence: 5,
+    skill: 23,
+    topic: "Sociologia",
+    subtopic: "Ação Social em Max Weber",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Para Max Weber, a Sociologia é uma ciência compreensiva que visa entender o sentido subjetivo que os indivíduos atribuem às suas próprias ações. A 'ação social' ocorre sempre que o indivíduo orienta seu comportamento considerando a presença ou expectativa de conduta de outros sujeitos.",
+      source: "Max Weber, Economia e Sociedade. Brasília: Ed. UnB (adaptado)."
+    },
+    prompt: "Quando um estudante de Medicina passa longas noites revisando questões e resolvendo simulados com o objetivo exclusivo de ser aprovado no vestibular de alta concorrência, sua conduta exemplifica o tipo weberiano de ação:",
+    options: [
+      { id: "a", text: "social racional com relação a fins, orientada pelo cálculo metódico dos meios para atingir um objetivo prático deliberado.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "tradicional, ditada unicamente por hábitos e costumes herdados de ancestrais pré-modernos.", isCorrect: false, distractorRationale: "O vestibular e a rotina planejada são escolhas modernas orientadas por metas, não costumes arcaicos imutáveis." },
+      { id: "c", text: "afetiva, movida por impulsos emocionais imediatos e descontrolados de raiva ou euforia passageira.", isCorrect: false, distractorRationale: "A preparação metódica baseia-se em autocontrole e planejamento, oposto de passionalidade irrefletida." },
+      { id: "d", text: "social racional com relação a valores, quando o indivíduo age sem se importar com qualquer resultado ou utilidade futura.", isCorrect: false, distractorRationale: "Na ação com relação a valores não há cálculo pragmático de fins; aqui, o fim declarado é a aprovação no exame." },
+      { id: "e", text: "não social patológica, caracterizada pela ausência de qualquer relação de sentido com a realidade envolvente.", isCorrect: false, distractorRationale: "A conduta tem sentido social evidente e está plenamente sintonizada com as regras de seleção universitária." }
+    ],
+    detailedExplanation: {
+      summary: "A ação racional referente a fins orienta-se pela escolha consciente dos meios mais adequados para atingir um objetivo específico.",
+      stepByStep: [
+        "A tipologia weberiana distingue quatro tipos de ação: tradicional, afetiva, racional referente a valores e racional referente a fins.",
+        "A ação racional com relação a fins (Zweckrationalität) avalia custos, meios e consequências para alcançar um objetivo pragmático previamente fixado.",
+        "O estudo sistemático e o treinamento focado na aprovação universitária são exemplos clássicos dessa racionalidade instrumental e calculista."
+      ],
+      coreConcept: "Tipologia da Ação Social em Max Weber",
+      trapWarning: "Cuidado: na ação racional com relação a valores, o agente age pelo dever moral intrínseco sem importar as consequências; na ação por fins, o resultado é a meta norteadora."
+    },
+    commonTraps: ["confundir ação por fins com ação por valores", "ignorar a intencionalidade do cálculo"],
+    tags: ["weber", "acao social", "racionalidade", "sociologia compreensiva"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-003",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia",
+    subtopic: "Ética Deontológica de Immanuel Kant",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne uma lei universal [...]. Age de tal maneira que uses a humanidade, tanto na tua pessoa como na pessoa de qualquer outro, sempre e simultaneamente como um fim e nunca simplesmente como um meio.",
+      source: "Immanuel Kant, Fundamentação da Metafísica dos Costumes (1785)."
+    },
+    prompt: "A formulação kantiana do imperativo categórico estabelece que a moralidade de uma ação fundamenta-se na:",
+    options: [
+      { id: "a", text: "obediência ao dever racional autônomo, recusando a instrumentalização de seres humanos e o cálculo utilitarista das consequências.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "busca pragmática do prazer sensorial imediato e na maximização do bem-estar egoísta individual.", isCorrect: false, distractorRationale: "Isso define o hedonismo egoísta, doutrina totalmente oposta ao rigor ético deontológico de Kant." },
+      { id: "c", text: "submissão incondicional aos dogmas religiosos impostos por autoridades eclesiásticas medievais.", isCorrect: false, distractorRationale: "Para Kant, a moral é autônoma e fruto da razão prática universal do próprio sujeito, não de imposição externa (heteronomia)." },
+      { id: "d", text: "aceitação da mentira estratégica como instrumento legítimo sempre que produzir benefícios econômicos.", isCorrect: false, distractorRationale: "Kant rechaça frontalmente a mentira, pois se universalizada, destruiria a própria possibilidade de promessas e confiança mútua." },
+      { id: "e", text: "relativização dos preceitos morais conforme a classe social ou a conveniência política momentânea.", isCorrect: false, distractorRationale: "O imperativo de Kant é categórico (universal e incondicional), nunca relativo." }
+    ],
+    detailedExplanation: {
+      summary: "A ética do dever (deontologia) de Kant afirma que a dignidade humana não tem preço nem utilidade instrumental; cada pessoa é um fim em si mesma.",
+      stepByStep: [
+        "Kant rejeita éticas consequencialistas (onde os fins justificam os meios).",
+        "O imperativo categórico exige que toda regra de conduta passe pelo teste da universalização: 'e se todos fizessem o mesmo?'.",
+        "A segunda formulação proíbe usar pessoas como meros instrumentos para interesses particulares; o ser humano tem dignidade ontológica."
+      ],
+      coreConcept: "O Imperativo Categórico e a Ética do Dever em Kant",
+      trapWarning: "Kant distingue imperativo hipotético ('se quer X, faça Y') de categórico ('faça o dever incondicionalmente porque é racional')."
+    },
+    commonTraps: ["confundir kantismo com utilitarismo", "achar que Kant defende a moral baseada em sentimentos"],
+    tags: ["kant", "imperativo categorico", "etica", "dever"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-SOC-005",
+    area: "humanas",
+    competence: 5,
+    skill: 25,
+    topic: "Sociologia Contemporânea",
+    subtopic: "Zygmunt Bauman e a Modernidade Líquida",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Na contemporaneidade, as instituições outrora duradouras da modernidade sólida — como os empregos vitalícios, os sindicatos fortes, as famílias tradicionais e os projetos coletivos de longo prazo — deram lugar a vínculos transitórios, fluidos e precários. As relações interpessoais tornaram-se mercadorias descartáveis regidas pela lógica do consumo.",
+      source: "Zygmunt Bauman, Modernidade Líquida. Rio de Janeiro: Zahar (adaptado)."
+    },
+    prompt: "Segundo a reflexão sociológica de Zygmunt Bauman, a metáfora da 'liquidez' traduz uma sociedade em que:",
+    options: [
+      { id: "a", text: "a instabilidade dos vínculos humanos e o individualismo geram incerteza e fragilidade nas relações afetivas e profissionais.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o Estado de bem-estar social garante segurança perpétua contra as oscilações do mercado de capitais.", isCorrect: false, distractorRationale: "Bauman mostra justamente o desmonte do Estado de bem-estar social e a terceirização dos riscos para o indivíduo." },
+      { id: "c", text: "as identidades sociais tornaram-se rígidas e padronizadas pelas corporações feudais de ofício.", isCorrect: false, distractorRationale: "Na modernidade líquida, as identidades são flexíveis, mutáveis e voláteis, oposto da rigidez corporativa." },
+      { id: "d", text: "a tecnologia de satélites garantiu a erradicação de qualquer forma de solidão ou angústia existencial.", isCorrect: false, distractorRationale: "Para Bauman, as redes virtuais geram conexões fáceis de desconectar, ampliando a solidão e a angústia de fundo." },
+      { id: "e", text: "a fidelidade irrestrita às tradições comunitárias sobrepõe-se integralmente à liberdade de consumo individual.", isCorrect: false, distractorRationale: "O consumo desenfreado e o culto ao presente suplantam qualquer lealdade comunitária perene." }
+    ],
+    detailedExplanation: {
+      summary: "Para Bauman, os líquidos não mantêm forma por muito tempo; assim são os laços afetivos e profissionais na sociedade contemporânea.",
+      stepByStep: [
+        "A modernidade sólida era marcada por estabilidade, planos de carreira de 40 anos e casamentos indissolúveis.",
+        "A modernidade líquida é marcada por desregulamentação, obsolescência programada e mercantilização dos afetos ('amor líquido').",
+        "O indivíduo é responsabilizado solitariamente pelos seus fracassos em um mundo onde nada foi feito para durar."
+      ],
+      coreConcept: "Modernidade Líquida e Fragilização dos Vínculos Sociais",
+      trapWarning: "Conexões em redes sociais para Bauman não equivalem a relacionamentos profundos; elas podem ser desfeitas com um clique."
+    },
+    commonTraps: ["considerar liquidez como sinônimo de liberdade plena sem angústia", "ignorar a crítica ao consumismo"],
+    tags: ["bauman", "modernidade liquida", "amor liquido", "individualismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-004",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Contemporânea",
+    subtopic: "Michel Foucault e o Biopoder",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O panóptico de Jeremy Bentham é a figura arquitetônica dessa composição. O princípio é conhecido: na periferia, uma construção em anel; no centro, uma torre [...]. O panóptico deve ser compreendido como um modelo generalizável de funcionamento; uma maneira de definir as relações de poder com a vida cotidiana dos homens.",
+      source: "Michel Foucault, Vigiar e Punir: Nascimento da Prisão. Petrópolis: Vozes (adaptado)."
+    },
+    prompt: "Na análise foucaultiana sobre as tecnologias de poder na modernidade, o dispositivo panóptico exemplifica uma forma de poder disciplinar que opera por meio da:",
+    options: [
+      { id: "a", text: "vigilância invisível contínua, que induz no indivíduo um estado consciente e permanente de docilização e autocontrole.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "violência física pública e desmedida exercida diretamente pelo monarca em praça aberta.", isCorrect: false, distractorRationale: "Foucault explica que o poder disciplinar substituiu exatamente o antigo suplício público medieval pela disciplina invisível." },
+      { id: "c", text: "concessão irrestrita de autonomia libertária a presidiários, estudantes e operários fabris.", isCorrect: false, distractorRationale: "O panóptico adestra e normaliza corpos, sem outorgar soberania libertária aos internados." },
+      { id: "d", text: "ausência absoluta de regras higiênicas e corporais no interior das instituições de confinamento.", isCorrect: false, distractorRationale: "A disciplina foucaultiana é a minuciosa normatização de gestos, horários, posturas e higiene." },
+      { id: "e", text: "extinção de qualquer forma de autoridade institucional nos hospitais, quartéis e escolas.", isCorrect: false, distractorRationale: "As instituições disciplinares são os nós difusos onde essa autoridade se prolifera e se capilariza." }
+    ],
+    detailedExplanation: {
+      summary: "O panóptico faz o vigiado acreditar que está sob vigilância o tempo todo, introjetando a disciplina em seu próprio comportamento.",
+      stepByStep: [
+        "Na torre central do panóptico, o vigia vê todas as celas sem poder ser visto.",
+        "Como os prisioneiros (ou estudantes, ou operários) não sabem em que momento exato estão sendo observados, comportam-se como se estivessem permanentemente vigiados.",
+        "Foucault demonstra como o poder moderno não precisa de violência física direta; ele molda 'corpos dóceis' por meio do olhar normalizador e das instituições disciplinares."
+      ],
+      coreConcept: "Poder Disciplinar, Microfísica do Poder e o Panóptico",
+      trapWarning: "Para Foucault, o poder não está concentrado apenas no Estado ou no governante; ele é capilar e circula em todas as relações sociais."
+    },
+    commonTraps: ["achar que poder exige violência física bruta", "desconhecer a interiorização da vigilância"],
+    tags: ["foucault", "panoptico", "biopoder", "vigiar e punir"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-FIL-005",
+    area: "humanas",
+    competence: 5,
+    skill: 24,
+    topic: "Filosofia Política",
+    subtopic: "Hannah Arendt e a Banalidade do Mal",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Ao acompanhar o julgamento do oficial nazista Adolf Eichmann em Jerusalém (1961), a filósofa Hannah Arendt deparou-se não com um monstro sádico possuído por ódio desmedido, mas com um burocrata medíocre, incapaz de pensar criticamente pelas próprias faculdades mentais, cuja defesa consistia unicamente em afirmar que estava 'apenas cumprindo ordens e respeitando a lei'.",
+      source: "Hannah Arendt, Eichmann em Jerusalém: Um Relato sobre a Banalidade do Mal (adaptado)."
+    },
+    prompt: "O conceito de 'banalidade do mal' formulado por Hannah Arendt adverte a humanidade contemporânea sobre o perigo de regimes e sistemas em que:",
+    options: [
+      { id: "a", text: "a renúncia à reflexão crítica individual e o cumprimento cego de ordens burocráticas transformam pessoas comuns em agentes de atrocidades sistemáticas.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o mal é praticado exclusivamente por indivíduos acometidos por patologias mentais congênitas incuráveis.", isCorrect: false, distractorRationale: "Arendt constatou exatamente o oposto: Eichmann era clinicamente normal, e esse era o fato mais aterrador." },
+      { id: "c", text: "a anarquia política total impede a criação de qualquer estrutura estatal organizada de administração.", isCorrect: false, distractorRationale: "O mal totalitário foi gerido por um Estado burocrático e hiperorganizado, não por anarquia." },
+      { id: "d", text: "a ampla liberdade de imprensa e o debate filosófico público incitam diretamente o assassinato em massa.", isCorrect: false, distractorRationale: "O debate e o pensamento crítico são exatamente os antídotos contra a banalização do mal." },
+      { id: "e", text: "o amor cristão incondicional é institucionalizado compulsoriamente como código de trânsito.", isCorrect: false, distractorRationale: "Sem nexo com a teoria política arendtiana sobre o totalitarismo." }
+    ],
+    detailedExplanation: {
+      summary: "Arendt demonstrou que o mal mais devastador pode ser praticado por pessoas comuns que abdicaram da capacidade reflexiva de pensar.",
+      stepByStep: [
+        "A tradição filosófica ocidental supunha que o mal radical derivava de motivações demoníacas ou impulsos malignos conscientes.",
+        "Arendt identificou que o genocídio burocrático moderno foi executado por funcionários que trocaram o julgamento moral pelo cumprimento de metas e obediência a ordens hierárquicas.",
+        "A 'banalidade do mal' decorre da alienação do pensamento: quando o indivíduo deixa de refletir sobre as implicações humanas dos seus atos."
+      ],
+      coreConcept: "A Banalidade do Mal e a Ausência de Pensamento em Hannah Arendt",
+      trapWarning: "'Banal' aqui não significa 'comum' ou 'pouco importante'; significa que sua raiz foi a superficialidade do pensamento de burocratas acríticos."
+    },
+    commonTraps: ["achar que Arendt justificou ou minimizou o nazismo", "confundir banalidade com insignificância"],
+    tags: ["hannah arendt", "banalidade do mal", "totalitarismo", "etica politica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

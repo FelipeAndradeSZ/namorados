@@ -11,7 +11,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "No Eixo Monumental de Brasília, será implantado um novo canteiro central de flores no formato retangular, com 200 metros de comprimento por 15 metros de largura.",
       source: "Original"
@@ -52,7 +51,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "belo-horizonte",
     context: {
       supportText: "O contorno da Lagoa da Pampulha, em Belo Horizonte, possui formato irregular, mas um urbanista a aproximou de um polígono composto por 4 trechos retos de 3 km cada e um trecho curvo que mede aproximadamente 6 km.",
       source: "Original"
@@ -93,9 +91,8 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
-      supportText: "No setor hoteleiro, um reservatório de água possui formato cilíndrico, com área da base igual a 10 m² e altura de 5 m.",
+      supportText: "Em um hospital público universitário, um reservatório de água potável possui formato cilíndrico, com área da base igual a 10 m² e altura de 5 m.",
       source: "Original"
     },
     prompt: "Qual é a capacidade máxima volumétrica desse reservatório, em metros cúbicos?",
@@ -134,7 +131,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "belo-horizonte",
     context: {
       supportText: "Na região da Pampulha, num dado momento da tarde, um poste de 5 metros de altura projeta uma sombra de 8 metros no chão plano. No mesmo instante, um prédio vizinho projeta uma sombra de 40 metros.",
       source: "Original"
@@ -176,7 +172,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "Para um festival na Esplanada dos Ministérios, foi montado um palco em formato de setor circular (uma 'fatia de pizza' de um círculo) com raio de 10 metros e ângulo central de 90 graus. Considere π = 3.",
       source: "Original"
@@ -218,7 +213,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "A Catedral de Brasília tem o formato de hiperboloide de rotação, mas para simplificar um estudo em maquete, foi aproximada para um tronco de cone circular reto, cujas bases (teto vazado e chão) têm raios aproximados r = 10 m e R = 30 m, respectivamente. A altura vertical do tronco é 40 m. Considere π = 3.",
       source: "Enem adaptado"
@@ -261,7 +255,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "Na reforma de uma calçada em São Paulo, optou-se por usar ladrilhos no formato de hexágonos regulares, cujo lado mede 20 cm. Sabe-se que a área de um hexágono regular de lado L é 6 vezes a área de um triângulo equilátero. Adote √3 = 1,7.",
       source: "Original"
@@ -303,7 +296,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "Uma fábrica produz potes. A opção A é um cilindro reto de raio 4 cm e altura 10 cm. A opção B é um prisma de base quadrada, onde o lado do quadrado é 8 cm e a altura é 10 cm. Considere π = 3,1.",
       source: "Original"
@@ -344,7 +336,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "Para garantir acessibilidade em um prédio governamental, uma rampa reta será construída ligando o térreo, no nível da calçada, a uma porta a 1,5 m de altura. A base da rampa no solo ficará distante 2,0 m (distância horizontal) da base da parede da porta.",
       source: "Original"
@@ -386,7 +377,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
     context: {
       supportText: "Na planta baixa de um apartamento no Rio de Janeiro, desenhada na escala 1:100, um quarto retangular mede 4 cm por 5 cm de desenho.",
       source: "Original"
@@ -428,7 +418,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "belo-horizonte",
     context: {
       supportText: "Um terreno em declive em um bairro de BH possui a forma de um trapézio retângulo. A frente do terreno (base menor) mede 10 m, os fundos (base maior) medem 20 m e a lateral reta que forma ângulo de 90° com as bases mede 30 m.",
       source: "Original"
@@ -470,7 +459,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "belo-horizonte",
     context: {
       supportText: "Um arquiteto fez uma maquete do Estádio Mineirão na escala 1:100. O volume da estrutura principal da maquete é de 0,05 m³.",
       source: "Enem adaptado"
@@ -512,7 +500,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "Em uma praça retangular de 20m x 40m em Brasília, serão construídos dois canteiros circulares tangentes entre si e às bordas do retângulo mais estreito. O restante da praça será gramado. Considere π = 3.",
       source: "Original"
@@ -555,7 +542,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
     context: {
       supportText: "Um condomínio dispõe de 100 metros de tela de arame para cercar uma área retangular de lazer para os cachorros. Um dos lados dessa área utilizará o próprio muro do condomínio, não necessitando de tela.",
       source: "Enem adaptado"
@@ -598,7 +584,6 @@ export const QUESTIONS_GEOMETRIA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    hubId: "b3-bolsa",
     context: {
       supportText: "No complexo logístico de uma cooperativa agrícola, uma bola medidora em formato perfeitamente esférico, com raio de 3 metros, foi colocada dentro de um silo cilíndrico recém-construído de mesmo raio de base e cuja altura é igual ao diâmetro da bola (cilindro equilátero tangenciando a esfera em todos os lados).",
       source: "Enem adaptado"

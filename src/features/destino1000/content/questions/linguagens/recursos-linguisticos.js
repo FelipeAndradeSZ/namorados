@@ -198,5 +198,208 @@ export const QUESTIONS_RECURSOS_LINGUISTICOS = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-006",
+    area: "linguagens",
+    competence: 8,
+    skill: 27,
+    topic: "Recursos Linguísticos",
+    subtopic: "Coesão Referencial Anafórica",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em um ensaio sobre a história da imunização, lê-se o seguinte trecho:\n'Edward Jenner observou que ordenhadoras expostas à varíola bovina desenvolviam imunidade contra a letal varíola humana. Esse médico britânico formulou então a hipótese seminal que daria origem às vacinas modernas. Tal descoberta revolucionou a medicina preventiva global.'",
+      source: "Revista de História da Ciência e Tecnologia (adaptado)."
+    },
+    prompt: "Para assegurar a progressão temática do texto sem repetições vocabulares desnecessárias, os sintagmas 'Esse médico britânico' e 'Tal descoberta' funcionam como recursos coesivos de:",
+    options: [
+      { id: "a", text: "anáfora por hiperonímia e paráfrase referencial, retomando antecedentes já apresentados no fluxo discursivo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "catáfora estilística antecipatória, introduzindo personagens e conceitos que só serão revelados nos parágrafos finais.", isCorrect: false, distractorRationale: "Catáfora aponta para o que vem depois; os sintagmas retomam o que já foi dito antes (anáfora)." },
+      { id: "c", text: "repetição tautológica viciosa, evidenciando escassez de vocabulário do redator acadêmico.", isCorrect: false, distractorRationale: "O recurso enriquece a coesão sem redundância viciosa, empregando sinônimos e qualificadores precisos." },
+      { id: "d", text: "ambiguidade sintática culposa, impedindo a correlação unívoca entre o cientista e sua teoria formulada.", isCorrect: false, distractorRationale: "A referência é límpida e inequívoca: 'Esse médico' refere-se a Edward Jenner." },
+      { id: "e", text: "elipse verbal radical, suprimindo o núcleo do predicado das orações subordinadas.", isCorrect: false, distractorRationale: "Não há elipse verbal; há substituição e retomada nominal explícita." }
+    ],
+    detailedExplanation: {
+      summary: "A anáfora retoma termos antecedentes por meio de demonstrativos e termos genéricos/hiperônimos para manter a clareza do texto.",
+      stepByStep: [
+        "'Esse médico britânico' retoma o antecedente específico 'Edward Jenner', agregando sua profissão e nacionalidade sem repetir o nome próprio.",
+        "'Tal descoberta' sumariza anadiforicamente todo o fato narrado na primeira frase sobre a imunidade das ordenhadoras.",
+        "Mecanismos de coesão referencial por anáfora são essenciais tanto para a prova de Linguagens quanto para a Competência 4 da Redação Nota 1000."
+      ],
+      coreConcept: "Coesão Referencial Anafórica e Hiperonímia",
+      trapWarning: "Anáfora olha para trás (retoma); catáfora olha para a frente (antecipa: 'Desejo apenas isto: sua aprovação')."
+    },
+    commonTraps: ["confundir anáfora com catáfora", "confundir substituição lexical com redundância"],
+    tags: ["coesao", "anafora", "hiperonimia", "progressao tematica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-007",
+    area: "linguagens",
+    competence: 7,
+    skill: 22,
+    topic: "Recursos Linguísticos",
+    subtopic: "Operadores Argumentativos de Oposição e Concessão",
+    difficulty: 4,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as duas reformulações argumentativas sobre o uso de inteligência artificial em diagnósticos médicos:\n\nEnunciado 1: 'Os algoritmos de inteligência artificial aumentam a precisão na detecção precoce de lesões malignas, mas a decisão terapêutica final deve permanecer sob a responsabilidade ética do médico humano.'\n\nEnunciado 2: 'Embora a decisão terapêutica final deva permanecer sob a responsabilidade ética do médico humano, os algoritmos de inteligência artificial aumentam a precisão na detecção precoce de lesões malignas.'",
+      source: "Bioética & Inteligência Artificial (adaptado)."
+    },
+    prompt: "A comparação entre os dois enunciados revela que a alternância entre a conjunção adversativa ('mas') e a conjunção concessiva ('embora') altera a orientação argumentativa do discurso porque:",
+    options: [
+      { id: "a", text: "o conector adversativo confere força conclusiva principal à oração por ele introduzida, enquanto o concessivo subordina o argumento a uma tese que prevalece na oração principal.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "ambos os conectores expressam rigorosamente a mesma hierarquia discursiva sem nenhuma modificação de foco persuasivo.", isCorrect: false, distractorRationale: "O foco argumentativo muda radicalmente entre os dois enunciados: no 1 foca-se no médico; no 2 foca-se na tecnologia." },
+      { id: "c", text: "o uso de 'mas' estabelece uma relação de causa e consequência cronológica entre o exame e a consulta clínica.", isCorrect: false, distractorRationale: "'Mas' é conjunção adversativa de oposição/contraste, não consecutiva ou causal." },
+      { id: "d", text: "o conector 'embora' anula a veracidade empírica da oração que encabeça, tratando a ética médica como ilusão.", isCorrect: false, distractorRationale: "A oração concessiva admite um fato como verdadeiro e real, apenas retira-lhe a força de impedir a conclusão da oração principal." },
+      { id: "e", text: "a conjunção 'mas' é classificada como marca exclusiva da linguagem coloquial imprópria para a redação dissertativa.", isCorrect: false, distractorRationale: "'Mas' é plenamente legítimo e padrão na norma culta escrita." }
+    ],
+    detailedExplanation: {
+      summary: "Na oposição adversativa (mas), o argumento introduzido é o mais forte; na concessão (embora), o argumento forte é o da oração principal.",
+      stepByStep: [
+        "No Enunciado 1: a oração introduzida por 'mas' tem maior peso argumentativo; o texto conclui em defesa do papel soberano do médico.",
+        "No Enunciado 2: 'embora' introduz um argumento vencido (concessão); o argumento com força resolutiva final é o da oração principal ('a IA aumenta a precisão').",
+        "Operadores argumentativos orientam os caminhos interpretativos do leitor (teoria de Oswald Ducrot e Koch)."
+      ],
+      coreConcept: "Hierarquia Argumentativa: Adversativas versus Concessivas",
+      trapWarning: "Lembre-se: aquilo que vem depois do 'mas' é a conclusão que o autor quer que o leitor guarde na memória."
+    },
+    commonTraps: ["achar que adversativa e concessiva têm o mesmo efeito de sentido", "ignorar a força da oração principal"],
+    tags: ["operadores argumentativos", "adversativa", "concessiva", "coesao sequencial"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-008",
+    area: "linguagens",
+    competence: 8,
+    skill: 25,
+    topic: "Recursos Linguísticos",
+    subtopic: "Regência Verbal e Sentido Contextual",
+    difficulty: 3,
+    estimatedTimeSeconds: 130,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere as seguintes construções oracionais presentes em documentos jurídicos e hospitalares:\n\nI. A equipe médica de emergência assistiu o paciente politraumatizado durante toda a madrugada.\nII. É dever indeclinável de todo cidadão consciente assistir às sessões públicas de prestação de contas na câmara municipal.\nIII. O direito à ampla defesa e ao contraditório assiste a qualquer acusado no Estado Democrático de Direito.",
+      source: "Manual de Redação Forense e Médica (adaptado)."
+    },
+    prompt: "No que concerne à regência do verbo 'assistir' nos três períodos de acordo com a norma-padrão da língua, seus significados contextuais são, respectivamente:",
+    options: [
+      { id: "a", text: "prestar auxílio/socorrer; presenciar/ver como espectador; caber/competir como prerrogativa.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "presenciar/ver; morar/residir; conceder aposentadoria remunerada.", isCorrect: false, distractorRationale: "O sentido no item I é cuidar/socorrer; no item III é pertencer/caber por direito." },
+      { id: "c", text: "julgar penalmente; ignorar intencionalmente; vetar legalmente.", isCorrect: false, distractorRationale: "Nenhum desses sentidos corresponde ao verbo 'assistir'." },
+      { id: "d", text: "operar cirurgicamente; filmar em vídeo de alta definição; transferir renda.", isCorrect: false, distractorRationale: "Interpretações desprovidas de suporte léxico-semântico." },
+      { id: "e", text: "residir com endereço fixo; contratar funcionários; pagar tributos atrasados.", isCorrect: false, distractorRationale: "'Assistir' com sentido de residir é intransitivo com preposição 'em' (ex: assiste em Brasília)." }
+    ],
+    detailedExplanation: {
+      summary: "O verbo 'assistir' muda de sentido dependendo de sua transitividade: direto (socorrer), indireto com 'a' (presenciar ou caber por direito).",
+      stepByStep: [
+        "Em I: 'assistir o paciente' (transitivo direto) = prestar socorro, cuidar, dar assistência médica.",
+        "Em II: 'assistir às sessões' (transitivo indireto com crase/preposição 'a') = ver, testemunhar, presenciar.",
+        "Em III: 'assiste a qualquer acusado' (transitivo indireto) = cabe, pertence, é de competência.",
+        "A variação na regência preposicional altera diretamente o significado pretendido na comunicação formal."
+      ],
+      coreConcept: "Polissemia da Regência Verbal na Norma Padrão",
+      trapWarning: "No dia a dia oral é comum falar 'assistir o filme', mas na norma culta cobrada no ENEM o sentido de presenciar exige preposição: 'assistir ao filme'."
+    },
+    commonTraps: ["tratar todas as regências de assistir como idênticas", "ignorar a regência de caber/competir"],
+    tags: ["regencia verbal", "norma culta", "sentido contextual", "semantica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-009",
+    area: "linguagens",
+    competence: 8,
+    skill: 25,
+    topic: "Recursos Linguísticos",
+    subtopic: "Ocorrência do Sinal Indicativo de Crase",
+    difficulty: 3,
+    estimatedTimeSeconds: 120,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Considere os dois pares de frases abaixo retirados de guias de comunicação corporativa:\n\nPar 1:\nFrase A: O perito técnico cheirou a substância química no laboratório.\nFrase B: A sala de reuniões cheirava à substância química vazada do duto.\n\nPar 2:\nFrase C: O estudante procedeu à análise dos dados estatísticos do simulado.\nFrase D: O coordenador pedagógico dirigiu-se a uma sala de estudos vazia.",
+      source: "Manual de Práticas Redacionais do ENEM."
+    },
+    prompt: "A análise do emprego ou ausência do acento grave indicador de crase nas frases apresentadas evidencia que:",
+    options: [
+      { id: "a", text: "em C a crase é obrigatória pela fusão da preposição exigida pelo verbo transitivo indireto com o artigo definido feminino, enquanto em D a crase é vedada diante do artigo indefinido 'uma'.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "o acento grave em C é facultativo por se tratar de substantivo abstrato iniciado por vogal temática.", isCorrect: false, distractorRationale: "A regência de 'proceder' (no sentido de iniciar/fazer) exige preposição 'a' obrigatória antes de substantivo feminino determinado por 'a': 'à análise'." },
+      { id: "c", text: "em D o acento grave deveria ter sido obrigatoriamente empregado em decorrência da locução adverbial de modo.", isCorrect: false, distractorRationale: "Nunca ocorre crase antes de artigo indefinido ('a uma'); há apenas a preposição simples 'a'." },
+      { id: "d", text: "as frases A e B possuem exatamente o mesmo significado sintático sem alteração no papel do sujeito.", isCorrect: false, distractorRationale: "Em A o perito inala o aroma (objeto direto); em B a sala exala o odor (locução prepositiva)." },
+      { id: "e", text: "o sinal indicativo de crase foi abolido pelo Novo Acordo Ortográfico em todas as orações subordinadas.", isCorrect: false, distractorRationale: "O Novo Acordo Ortográfico não aboliu nem alterou as regras sintáticas de ocorrência da crase." }
+    ],
+    detailedExplanation: {
+      summary: "A crase resulta da fusão de preposição 'a' com artigo definido 'a'; não ocorre crase antes do artigo indefinido 'uma'.",
+      stepByStep: [
+        "O verbo 'proceder' (no sentido de realizar) rege a preposição 'a' (proceder a algo). Como 'análise' é palavra feminina antecedida de artigo 'a', ocorre crase obrigatória: proceder à análise.",
+        "O verbo 'dirigir-se' rege preposição 'a' (dirigir-se a algum lugar), porém diante do artigo indefinido 'uma' não há artigo definido 'a'; portanto, a crase é proibida: dirigiu-se a uma sala.",
+        "Identificar os fatores condicionantes da crase é fundamental para evitar descontos na Competência 1 do ENEM."
+      ],
+      coreConcept: "Condições Sintáticas de Ocorrência e Proibição da Crase",
+      trapWarning: "Crase nunca ocorre antes de palavras masculinas, verbos no infinitivo e artigos indefinidos (um/uma)."
+    },
+    commonTraps: ["colocar crase antes de artigo indefinido 'uma'", "confundir crase obrigatória com facultativa"],
+    tags: ["crase", "regencia", "norma padrao", "gramatica aplicada"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "LIN-REC-010",
+    area: "linguagens",
+    competence: 8,
+    skill: 26,
+    topic: "Variação Linguística",
+    subtopic: "Preconceito Linguístico e Diversidade",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Não existe nenhuma justificativa de ordem linguística, científica ou pedagógica para desqualificar as falas regionais e populares como 'erradas' ou 'mutiladas'. A língua é um organismo vivo, heterogêneo e dinâmico, cujas variações geográficas, etárias e sociais refletem a imensa riqueza cultural de uma sociedade. O julgamento negativo sobre certos usos não decorre da gramática da língua, mas de um preconceito social mascarado de zelo gramatical.",
+      source: "Marcos Bagno, Preconceito Linguístico: O que é, como se faz. São Paulo: Parábola Editorial (adaptado)."
+    },
+    prompt: "Com base na perspectiva sociolinguística adotada na Matriz de Referência do ENEM, a discriminação dirigida a falantes de variantes de menor prestígio social caracteriza-se como:",
+    options: [
+      { id: "a", text: "uma manifestação de preconceito linguístico que reproduz assimetrias e exclusões sociais sob o pretexto de correção normativa.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "um mecanismo científico legítimo indispensável para erradicar gírias populares e uniformizar a fala de todas as regiões.", isCorrect: false, distractorRationale: "A linguística moderna comprova que a variação é inerente a qualquer língua natural viva e não deve ser reprimida." },
+      { id: "c", text: "uma prova cabal de que a norma-padrão foi inventada exclusivamente por povos de outros continentes sem contato com o Brasil.", isCorrect: false, distractorRationale: "A norma-padrão brasileira possui tradição histórica documentada no país e é um patrimônio compartilhado." },
+      { id: "d", text: "uma exigência legal do Ministério da Educação para reprovar candidatos que utilizem termos de matriz africana ou indígena.", isCorrect: false, distractorRationale: "O MEC e o ENEM valorizam a pluralidade e a matriz afro-indígena formadora do português brasileiro." },
+      { id: "e", text: "uma consequência biológica direta da capacidade de articulação fonética diferenciada de grupos populacionais.", isCorrect: false, distractorRationale: "Não há determinismo biológico ou genético na fala; as variações são socioculturais e históricas." }
+    ],
+    detailedExplanation: {
+      summary: "O preconceito linguístico estigmatiza formas populares e regionais para legitimar a exclusão socioeconômica de seus falantes.",
+      stepByStep: [
+        "A sociolinguística demonstra que todas as variedades linguísticas possuem gramática interna consistente e plena eficácia comunicativa.",
+        "Classificar certas falas (como a caipira, a nordestina ou das periferias urbanas) como 'português errado' é transferir o preconceito contra a classe social do falante para a forma como ele fala.",
+        "O papel da escola e da prova de Linguagens do ENEM não é condenar as variantes, mas garantir o domínio da norma-padrão formal como ferramenta de cidadania, respeitando a diversidade.",
+        "O conceito de 'adequação linguística' substitui o binarismo raso de 'certo versus errado'."
+      ],
+      coreConcept: "Preconceito Linguístico e Adequação Sociolinguística",
+      trapWarning: "No ENEM, variação linguística NUNCA é classificada como erro gramatical da fala, mas sim como fenômeno legítimo de adequação e diversidade."
+    },
+    commonTraps: ["considerar variação regional como erro", "confundir norma de prestígio com verdade absoluta biológica"],
+    tags: ["variacao linguistica", "preconceito linguistico", "marcos bagno", "sociolinguistica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

@@ -205,5 +205,213 @@ export const QUESTIONS_RAZAO_PROPORCAO = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-006",
+    area: "matematica",
+    competence: 3,
+    skill: 11,
+    topic: "Razão e Proporção",
+    subtopic: "Escala Volumétrica",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Um engenheiro hospitalar constrói uma maquete na escala linear 1:50 para representar o novo setor de hemodiálise. Na maquete, o reservatório cúbico de água purificada possui volume de 80 cm³.",
+      source: "ENEM / Engenharia Biomédica"
+    },
+    prompt: "Qual é a capacidade volumétrica real desse reservatório de água purificada, expressa em litros?",
+    options: [
+      { id: "a", text: "10.000 L", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "4.000 L", isCorrect: false, distractorRationale: "Multiplicou o volume linearmente pela escala (80 * 50 = 4.000)." },
+      { id: "c", text: "200.000 L", isCorrect: false, distractorRationale: "Multiplicou pelo quadrado da escala (80 * 50²)." },
+      { id: "d", text: "1.000 L", isCorrect: false, distractorRationale: "Errou a conversão de decímetros cúbicos para litros." },
+      { id: "e", text: "50.000 L", isCorrect: false, distractorRationale: "Estimou a capacidade com base na razão da escala sem elevar ao cubo." }
+    ],
+    detailedExplanation: {
+      summary: "A escala de volumes varia com o cubo da escala linear: V_real = V_modelo * (escala)^3.",
+      stepByStep: [
+        "A escala linear é 1:50, portanto a escala volumétrica é (50)^3 = 125.000.",
+        "Calcule o volume real em cm³: V_real = 80 cm³ * 125.000 = 10.000.000 cm³.",
+        "Converta cm³ para decímetros cúbicos (litros), sabendo que 1 litro = 1 dm³ = 1.000 cm³.",
+        "V_real em litros = 10.000.000 / 1.000 = 10.000 litros."
+      ],
+      coreConcept: "Escala Volumétrica Tridimensional",
+      trapWarning: "Volumes variam com o cubo da escala de comprimento. Nunca multiplique volumes pela escala linear."
+    },
+    commonTraps: ["usar escala linear para volume", "esquecer elevar ao cubo"],
+    tags: ["escala", "volume", "conversoes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-007",
+    area: "matematica",
+    competence: 3,
+    skill: 11,
+    topic: "Razão e Proporção",
+    subtopic: "Escala Superficial e Cartografia",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma carta topográfica de planejamento territorial confeccionada na escala 1:25.000, uma reserva ecológica florestal é demarcada por uma área poligonal de 16 cm².",
+      source: "Original / Gestão Ambiental"
+    },
+    prompt: "Qual é a área territorial real dessa reserva ecológica florestal, expressa em quilômetros quadrados (km²)?",
+    options: [
+      { id: "a", text: "1,0 km²", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "4,0 km²", isCorrect: false, distractorRationale: "Multiplicou a área linearmente sem elevar a escala ao quadrado." },
+      { id: "c", text: "10,0 km²", isCorrect: false, distractorRationale: "Cometeu erro de conversão de unidades de cm² para km²." },
+      { id: "d", text: "0,4 km²", isCorrect: false, distractorRationale: "Inverteu a razão entre metros e quilômetros." },
+      { id: "e", text: "25,0 km²", isCorrect: false, distractorRationale: "Utilizou diretamente o denominador da escala." }
+    ],
+    detailedExplanation: {
+      summary: "A escala de áreas varia com o quadrado da escala linear: Área_real = Área_mapa * (escala)^2.",
+      stepByStep: [
+        "Converta a escala linear para quilômetros: 1 cm no mapa = 25.000 cm reais = 250 m = 0,25 km reais.",
+        "Calcule a equivalência de 1 cm² de área: (1 cm)² = (0,25 km)² = 0,0625 km².",
+        "Multiplique pela área demarcada: Área_real = 16 * 0,0625 km² = 1,0 km²."
+      ],
+      coreConcept: "Escala Cartográfica de Superfície",
+      trapWarning: "Em áreas, a razão de semelhança é elevada ao quadrado: (k)^2."
+    },
+    commonTraps: ["escala linear para area", "erro conversao km2"],
+    tags: ["escala", "cartografia", "area"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-008",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Regra de Três Composta",
+    difficulty: 3,
+    estimatedTimeSeconds: 160,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em uma indústria farmacêutica, 8 máquinas idênticas operando durante 6 horas por dia produzem 14.400 frascos de medicamento em 5 dias de trabalho. Para atender a um aumento emergencial na demanda, a fábrica colocou em operação mais 2 máquinas iguais às primeiras e aumentou a jornada diária para 8 horas.",
+      source: "ENEM / Produção Farmacêutica"
+    },
+    prompt: "Mantendo o mesmo ritmo operacional, quantos frascos de medicamento serão produzidos com a nova configuração ao longo de 6 dias de produção?",
+    options: [
+      { id: "a", text: "28.800 frascos", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "24.000 frascos", isCorrect: false, distractorRationale: "Desconsiderou o aumento da jornada horária diária." },
+      { id: "c", text: "18.000 frascos", isCorrect: false, distractorRationale: "Considerou apenas o acréscimo de máquinas." },
+      { id: "d", text: "32.400 frascos", isCorrect: false, distractorRationale: "Inverteu uma das grandezas proporcionais." },
+      { id: "e", text: "36.000 frascos", isCorrect: false, distractorRationale: "Superestimou a produção diária por fator linear incorreto." }
+    ],
+    detailedExplanation: {
+      summary: "Na regra de três composta, todas as grandezas (máquinas, horas/dia, dias) são diretamente proporcionais à produção de frascos.",
+      stepByStep: [
+        "Estado inicial: 8 máquinas, 6 h/dia, 5 dias -> 14.400 frascos.",
+        "Estado final: 10 máquinas (8+2), 8 h/dia, 6 dias -> X frascos.",
+        "Relação de proporcionalidade: X / 14.400 = (10 / 8) * (8 / 6) * (6 / 5).",
+        "Simplificando os fatores: (10 / 8) * (8 / 6) * (6 / 5) = 10 / 5 = 2.",
+        "Portanto: X = 14.400 * 2 = 28.800 frascos."
+      ],
+      coreConcept: "Regra de Três Composta e Proporcionalidade Direta",
+      trapWarning: "Verifique se o novo número de máquinas é 'mais 2' (total 10) e analise o sentido de cada grandeza em relação à produção."
+    },
+    commonTraps: ["considerar 2 maquinas em vez de 10", "inverter grandezas diretas"],
+    tags: ["regra de tres composta", "producao", "proporcionalidade"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-009",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Divisão Inversamente Proporcional",
+    difficulty: 4,
+    estimatedTimeSeconds: 170,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Dois técnicos de laboratório, Lucas e Marina, foram encarregados de processar e validar um lote com 70 laudos bioquímicos. A coordenação estipulou que a quantidade de laudos que cada um receberia seria inversamente proporcional ao tempo de atraso acumulado no mês: Lucas registrou 2 horas de atraso, enquanto Marina registrou 3 horas.",
+      source: "Original / Dinâmica Laboratorial"
+    },
+    prompt: "Quantos laudos couberam a Lucas nessa divisão inversamente proporcional?",
+    options: [
+      { id: "a", text: "42 laudos", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "28 laudos", isCorrect: false, distractorRationale: "Calculou a quantidade de laudos atribuída a Marina." },
+      { id: "c", text: "35 laudos", isCorrect: false, distractorRationale: "Dividiu os laudos igualmente sem considerar a proporcionalidade inversa." },
+      { id: "d", text: "46 laudos", isCorrect: false, distractorRationale: "Errou no cálculo do MMC entre as frações inversas." },
+      { id: "e", text: "50 laudos", isCorrect: false, distractorRationale: "Aplicou proporção direta no lugar da inversa." }
+    ],
+    detailedExplanation: {
+      summary: "Dividir inversamente proporcional a 2 e 3 equivale a dividir diretamente proporcional aos inversos: 1/2 e 1/3.",
+      stepByStep: [
+        "Seja k a constante de proporcionalidade inversa: Lucas recebe k/2 e Marina recebe k/3.",
+        "A soma dos laudos é 70: k/2 + k/3 = 70.",
+        "Reduzindo ao mesmo denominador (MMC = 6): (3k + 2k) / 6 = 70 => 5k / 6 = 70.",
+        "Isolando k: 5k = 420 => k = 84.",
+        "Laudos de Lucas: 84 / 2 = 42 laudos (e Marina recebe 84 / 3 = 28 laudos; 42 + 28 = 70)."
+      ],
+      coreConcept: "Divisão Inversamente Proporcional",
+      trapWarning: "Quem tem menor atraso recebe maior quantidade de tarefas na divisão inversamente proporcional."
+    },
+    commonTraps: ["fazer divisao direta", "inverter atribuicao dos sujeitos"],
+    tags: ["divisao inversa", "laboratorio", "fracoes"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "MAT-RAZ-010",
+    area: "matematica",
+    competence: 3,
+    skill: 12,
+    topic: "Razão e Proporção",
+    subtopic: "Vazão Conjunta e Tempo de Esvaziamento",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "application",
+    requiresCalculation: true,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Duas bombas de drenagem são utilizadas para descarte de efluentes de um reservatório de segurança biológica. Operando de forma isolada, a bomba A esvazia o reservatório em 3 horas. A bomba B, mais potente, esvazia o mesmo reservatório operando sozinha em 2 horas.",
+      source: "ENEM / Física & Vazão"
+    },
+    prompt: "Se as duas bombas forem acionadas simultaneamente com suas potências nominais, em quanto tempo o reservatório estará completamente esvaziado?",
+    options: [
+      { id: "a", text: "1 hora e 12 minutos", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "1 hora e 30 minutos", isCorrect: false, distractorRationale: "Calculou a média aritmética simples dos tempos individuais e subtraiu 1 hora." },
+      { id: "c", text: "2 horas e 30 minutos", isCorrect: false, distractorRationale: "Somou as metades dos tempos de cada bomba." },
+      { id: "d", text: "50 minutos", isCorrect: false, distractorRationale: "Errou a conversão de 6/5 de hora para o formato horas e minutos." },
+      { id: "e", text: "1 hora e 20 minutos", isCorrect: false, distractorRationale: "Confundiu a fração 1/5 de hora com 20 minutos em vez de 12 minutos." }
+    ],
+    detailedExplanation: {
+      summary: "A soma das taxas de vazão horárias determina a taxa conjunta de esvaziamento: 1/T_total = 1/T_A + 1/T_B.",
+      stepByStep: [
+        "Vazão da bomba A: esvazia 1/3 do reservatório por hora.",
+        "Vazão da bomba B: esvazia 1/2 do reservatório por hora.",
+        "Vazão combinada: 1/3 + 1/2 = 2/6 + 3/6 = 5/6 do reservatório por hora.",
+        "Tempo necessário T: T = 1 / (5/6) = 6/5 de hora.",
+        "Convertendo 6/5 de hora: 1 hora inteira + 1/5 de hora = 60 min + (60 / 5) min = 1 hora e 12 minutos."
+      ],
+      coreConcept: "Taxas de Variação e Vazão Composta",
+      trapWarning: "1/5 de hora são 12 minutos (60 / 5 = 12), e nunca 20 minutos."
+    },
+    commonTraps: ["media aritmetica dos tempos", "conversao de fracao de hora errada"],
+    tags: ["vazao", "torneiras e bombas", "taxa horaria"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

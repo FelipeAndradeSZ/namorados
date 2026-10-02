@@ -11,8 +11,6 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     questionType: "contextualized",
     requiresCalculation: false,
     requiresInterpretation: true,
-    cityId: "salvador",
-    hubId: "pelourinho",
     context: {
       supportText: "O açúcar foi o produto escolhido por Portugal para dar início à colonização efetiva do Brasil, em meados do século XVI. A escolha não foi acidental: os portugueses já tinham experiência com a cultura da cana nas ilhas atlânticas, o produto tinha alto valor no mercado europeu e a empresa contou com o financiamento de capitais holandeses.",
       source: "Original, baseado em historiografia clássica (Celso Furtado)."
@@ -53,8 +51,6 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     questionType: "interpretation",
     requiresCalculation: false,
     requiresInterpretation: true,
-    cityId: "salvador",
-    hubId: "museu-afro",
     context: {
       supportText: "Documento histórico: 'Revolta dos Malês (1835). Os rebeldes pretendiam tomar a cidade de Salvador e instituir um governo islâmico. Vestidos com abadás brancos, os africanos, muitos deles letrados e muçulmanos, organizaram um dos levantes mais sofisticados do período imperial.'",
       source: "João José Reis, Rebelião Escrava no Brasil (adaptado)."
@@ -95,8 +91,6 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     questionType: "text",
     requiresCalculation: false,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
-    hubId: "paco-imperial",
     context: {
       supportText: "Em 1943, o governo de Getúlio Vargas consolidou as Leis do Trabalho (CLT). Em seus discursos de 1º de maio, Vargas frequentemente se referia aos trabalhadores como 'trabalhadores do Brasil', apresentando-se como um 'pai' que lhes concedia direitos, enquanto o Estado passava a controlar e atrelar os sindicatos ao Ministério do Trabalho.",
       source: "Discursos de Getúlio Vargas, 1930-1945 (adaptado)."
@@ -138,8 +132,6 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     questionType: "contextualized",
     requiresCalculation: false,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
-    hubId: "paco-imperial",
     context: {
       supportText: "A Lei Áurea (1888) decretou o fim oficial da escravidão no Brasil. Contudo, as décadas seguintes foram marcadas pela ausência de políticas públicas para a inserção socioeconômica dos ex-escravizados, que foram relegados a subempregos, moradias precárias e forte discriminação racial na nascente República.",
       source: "Historiografia contemporânea sobre o Pós-Abolição."
@@ -180,8 +172,6 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     questionType: "interpretation",
     requiresCalculation: false,
     requiresInterpretation: true,
-    cityId: "belo-horizonte",
-    hubId: "ouro-preto",
     context: {
       supportText: "Durante o século XVIII, a descoberta de ouro em Minas Gerais alterou profundamente a dinâmica colonial. O eixo econômico deslocou-se do Nordeste para o Centro-Sul, surgiram vilas e arraiais, e o mercado interno ganhou impulso para abastecer a crescente população mineradora.",
       source: "Laura de Mello e Souza, Desclassificados do Ouro (adaptado)."
@@ -210,5 +200,207 @@ export const QUESTIONS_BRASIL_COLONIAL = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-006",
+    area: "humanas",
+    competence: 3,
+    skill: 11,
+    topic: "Expansão Territorial",
+    subtopic: "Tratado de Madri e Uti Possidetis",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "O Tratado de Madri (1750) consagrou diplomaticamente a nova configuração geográfica da América portuguesa. Negociado pelo diplomata luso-brasileiro Alexandre de Gusmão, o acordo revogou a linha imaginária de Tordesilhas e estabeleceu que a posse efetiva da terra (o princípio do uti possidetis, ita possideatis) determinaria as fronteiras entre as coroas ibéricas.",
+      source: "Boris Fausto, História do Brasil. São Paulo: EDUSP (adaptado)."
+    },
+    prompt: "A consolidação das fronteiras do Brasil pelo Tratado de Madri baseou-se na ocupação territorial prévia decorrente, principalmente, da:",
+    options: [
+      { id: "a", text: "atuação de bandeirantes, avanço da pecuária extensiva no sertão e missões religiosas no vale amazônico.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "instalação planejada de fortificações militares portuguesas ao longo de toda a cordilheira dos Andes.", isCorrect: false, distractorRationale: "Portugal nunca ocupou nem construiu fortes na cordilheira dos Andes." },
+      { id: "c", text: "compra legalizada de terras aos chefes incas e astecas autorizada pela coroa espanhola.", isCorrect: false, distractorRationale: "Incas e astecas ficavam em domínios hispânicos e suas civilizações já haviam sido destruídas séculos antes." },
+      { id: "d", text: "substituição pacífica dos colonizadores espanhóis por imigrantes asiáticos financiados pelo governo luso.", isCorrect: false, distractorRationale: "Anacronismo total; a imigração asiática só ocorreu no século XX republicano." },
+      { id: "e", text: "intervenção militar direta da marinha britânica para frear o avanço colonial espanhol no Prata.", isCorrect: false, distractorRationale: "A Inglaterra não interveio militarmente no Tratado de Madri de 1750." }
+    ],
+    detailedExplanation: {
+      summary: "O Tratado de Madri legalizou a expansão territorial baseando-se no princípio do uti possidetis (quem possui de fato a terra).",
+      stepByStep: [
+        "A linha de Tordesilhas de 1494 limitava as possessões portuguesas ao litoral atlântico.",
+        "Ao longo dos séculos XVII e XVIII, bandeirantes paulistas em busca de ouro e indígenas, pecuaristas no vale do Rio São Francisco e jesuítas na Amazônia avançaram para o interior.",
+        "Em 1750, Alexandre de Gusmão utilizou o princípio romano do uti possidetis para garantir a soberania portuguesa sobre as áreas efetivamente colonizadas."
+      ],
+      coreConcept: "Uti Possidetis e Expansão Territorial Colonial",
+      trapWarning: "A expansão territorial não decorreu de concessão espanhola benevolente, mas da ocupação física de fato."
+    },
+    commonTraps: ["confundir Tordesilhas com Tratado de Madri", "anacronismo sobre fronteiras"],
+    tags: ["fronteiras", "tratado de madri", "uti possidetis", "bandeiras"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-007",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "Resistência Escrava",
+    subtopic: "Quilombo dos Palmares",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Os quilombos nunca foram apenas refúgios temporários de escravizados fugidos; constituíram verdadeiras comunidades autônomas que reinventaram relações de parentesco, técnicas agrícolas, metalurgia e estratégias políticas de autodefesa em meio à ordem colonial escravista opressora.",
+      source: "Flávio dos Santos Gomes, A Hidra e os Pântanos: Mocambos, Quilombos e Comunidades de Fugitivos no Brasil (adaptado)."
+    },
+    prompt: "No contexto da América portuguesa, a existência e longevidade do Quilombo dos Palmares no século XVII evidenciam que a resistência negra à escravidão:",
+    options: [
+      { id: "a", text: "articulava resistência armada, autonomia produtiva e reorganização sociopolítica alternativa ao modelo colonial.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "dependia obrigatoriamente do consentimento e do financiamento secreto de senhores de engenho pernambucanos.", isCorrect: false, distractorRationale: "Os senhores de engenho organizavam expedições armadas para destruir os quilombos." },
+      { id: "c", text: "tinha como único propósito restaurar monarquias absolutistas idênticas às europeias em solo americano.", isCorrect: false, distractorRationale: "Palmares recriava formas de organização comunitária com forte matriz africana, e não absolutismo europeu." },
+      { id: "d", text: "limitava-se à fuga individual e passiva, sem impactos econômicos ou militares sobre a capitania.", isCorrect: false, distractorRationale: "Palmares gerou sucessivas campanhas militares coloniais e impactos socioeconômicos profundos." },
+      { id: "e", text: "foi suprimida facilmente pelo governo colonial em poucas semanas sem necessidade de forças mercenárias.", isCorrect: false, distractorRationale: "Palmares resistiu por quase um século e exigiu a contratação de Domingos Jorge Velho para sua destruição." }
+    ],
+    detailedExplanation: {
+      summary: "Os quilombos representavam uma alternativa sociopolítica e econômica completa ao modelo escravista de plantation colonial.",
+      stepByStep: [
+        "A historiografia contemporânea superou a visão de quilombos como meros esconderijos de fugitivos.",
+        "Palmares contava com dezenas de milhares de habitantes distribuídos em mocambos, com policultura, metalurgia e comércio com povoados vizinhos.",
+        "A resistência negra combinava insubordinação militar com preservação de identidades e solidariedades reconstruídas."
+      ],
+      coreConcept: "Quilombos como Espaços de Autonomia e Resistência",
+      trapWarning: "Não reduza a resistência à fuga passiva: houve produção, estratégia diplomática e enfrentamento militar."
+    },
+    commonTraps: ["visão passiva do escravizado", "desconsiderar complexidade do quilombo"],
+    tags: ["quilombos", "palmares", "resistencia", "escravidao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-008",
+    area: "humanas",
+    competence: 3,
+    skill: 12,
+    topic: "Reformas Pombalinas",
+    subtopic: "Iluminismo Ibérico e Centralização",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Sob o reinado de D. José I, o ministro Marquês de Pombal (1750-1777) implementou uma série de medidas administrativas inspiradas no despotismo esclarecido, com o objetivo de recuperar as finanças do império português e intensificar a exploração econômica de suas colônias, em especial o Brasil.",
+      source: "Kenneth Maxwell, A Devassa da Devassa. Rio de Janeiro: Paz e Terra (adaptado)."
+    },
+    prompt: "Entre as principais medidas do reformismo pombalino que impactaram diretamente a administração e a sociedade do Brasil colonial, destaca-se a:",
+    options: [
+      { id: "a", text: "expulsão dos jesuítas e a transferência da capital da colônia de Salvador para o Rio de Janeiro.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "proclamação imediata da independência política da colônia sob uma monarquia constitucional lusa.", isCorrect: false, distractorRationale: "Pombal buscou reforçar os laços coloniais e o controle mercantilista sobre o Brasil." },
+      { id: "c", text: "extinção completa da cobrança de impostos sobre a extração do ouro na região de Minas Gerais.", isCorrect: false, distractorRationale: "Pombal criou a cota mínima de 100 arrobas de ouro e a derrama para forçar o pagamento dos tributos." },
+      { id: "d", text: "abertura total dos portos brasileiros ao livre comércio com os Estados Unidos da América.", isCorrect: false, distractorRationale: "A Abertura dos Portos só ocorreu em 1808 com D. João VI, em contexto das guerras napoleônicas." },
+      { id: "e", text: "devolução das terras indígenas à soberania autônoma dos povos nativos sem cobrança de dízimo.", isCorrect: false, distractorRationale: "O Diretório dos Índios secularizou a administração, mas com fins de assimilação cultural forçada e trabalho compulsório." }
+    ],
+    detailedExplanation: {
+      summary: "Pombal expulsou a Companhia de Jesus em 1759 e transferiu a sede do Vice-Reinado para o Rio de Janeiro em 1763.",
+      stepByStep: [
+        "A transferência da capital de Salvador para o Rio de Janeiro (1763) atendeu ao novo eixo econômico minerador e à necessidade de vigiar o escoamento do ouro.",
+        "A expulsão dos jesuítas (1759) visou quebrar o poder secular da Igreja e instaurar um ensino estatal laico subordinado à Coroa.",
+        "Essas medidas exemplificam o Despotismo Esclarecido português: modernizar a máquina estatal para maximizar a arrecadação metropolitana."
+      ],
+      coreConcept: "Reformas Pombalinas e Despotismo Esclarecido",
+      trapWarning: "Pombal não enfraqueceu o pacto colonial; ele tentou torná-lo mais eficiente e fiscalizador."
+    },
+    commonTraps: ["confundir modernização com liberdade colonial", "antecipar abertura dos portos"],
+    tags: ["pombal", "jesuitas", "rio de janeiro", "fiscalismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-009",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "Movimentos Emancipacionistas",
+    subtopic: "Inconfidência Mineira vs Conjuração Baiana",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "No final do século XVIII, o descontentamento contra a opressão colonial gerou duas conspirações marcantes: a Inconfidência Mineira (1789), articulada por magistrados, poetas, proprietários e militares; e a Conjuração Baiana de 1798 (Revolta dos Alfaiates), que mobilizou alfaiates, soldados, negros libertos e escravizados.",
+      source: "Emília Viotti da Costa, Da Monarquia à República. São Paulo: UNESP (adaptado)."
+    },
+    prompt: "Ao comparar esses dois movimentos que questionaram a autoridade metropolitana portuguesa, verifica-se que a Conjuração Baiana diferenciava-se da Inconfidência Mineira fundamentalmente pela:",
+    options: [
+      { id: "a", text: "composição popular e pela defesa explícita da abolição da escravidão e da igualdade racial.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "proposta de manutenção irrestrita do pacto colonial e submissão absolutista à Coroa de Portugal.", isCorrect: false, distractorRationale: "Ambos os movimentos eram separatistas e anticoloniais." },
+      { id: "c", text: "recusa categórica em adotar os ideais iluministas e republicanos divulgados pela Revolução Francesa.", isCorrect: false, distractorRationale: "A Conjuração Baiana foi profundamente inspirada na fase popular/jacobina da Revolução Francesa." },
+      { id: "d", text: "ausência de qualquer liderança militar ou letrada em sua organização e panfletagem nas cidades.", isCorrect: false, distractorRationale: "Contou com médicos e letrados (como Cipriano Barata) e soldados entre suas fileiras." },
+      { id: "e", text: "defesa intransigente da conservação dos privilégios da grande aristocracia cafeeira paulista.", isCorrect: false, distractorRationale: "A cafeicultura paulista sequer existia nessa época com peso político significativo." }
+    ],
+    detailedExplanation: {
+      summary: "A Inconfidência Mineira foi elitista e tímida quanto à escravidão; a Conjuração Baiana foi popular, jacobina e antiescravista.",
+      stepByStep: [
+        "A Inconfidência Mineira foi influenciada pela independência dos EUA (1776), com base social de proprietários devedores da Fazenda Real, mantendo divergências sobre a libertação dos escravos.",
+        "A Conjuração Baiana de 1798 teve forte influência jacobina da Revolução Francesa (1789), com panfletos pregando liberdade, república, igualdade racial e o fim do trabalho escravo.",
+        "A repressão colonial na Bahia foi implacável contra os líderes populares negros (Lucas Dantas, Manuel Faustino), condenados à forca."
+      ],
+      coreConcept: "Movimentos Emancipacionistas e Questão Social",
+      trapWarning: "Cuidado: nem toda revolta separatista era abolicionista; a elite mineira não defendia o fim da escravidão."
+    },
+    commonTraps: ["generalizar abolição para todos os movimentos", "homogeneizar bases sociais"],
+    tags: ["inconfidencia mineira", "conjuracao baiana", "republicanismo", "abolicionismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-BRC-010",
+    area: "humanas",
+    competence: 3,
+    skill: 12,
+    topic: "Período Joanino",
+    subtopic: "Abertura dos Portos e Ruptura do Pacto Colonial",
+    difficulty: 3,
+    estimatedTimeSeconds: 140,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Logo após a transferência da corte portuguesa para o Rio de Janeiro em 1808, fugindo da invasão napoleônica, o príncipe regente D. João assinou a Carta Régia de Abertura dos Portos às Nações Amigas, seguida pelos Tratados de 1810 com o Reino Unido da Grã-Bretanha.",
+      source: "Leslie Bethell, História da América Latina: Da Independência a 1870. São Paulo: EDUSP."
+    },
+    prompt: "A Abertura dos Portos de 1808 e os Tratados de 1810 representaram um marco decisivo no processo de independência do Brasil porque:",
+    options: [
+      { id: "a", text: "romperam de fato o pacto colonial mercantilista e integraram a economia brasileira à órbita industrial britânica.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "estabeleceram barreiras alfandegárias proibitivas para proteger o parque manufatureiro brasileiro nascente.", isCorrect: false, distractorRationale: "Os Tratados de 1810 fixaram tarifa de apenas 15% para produtos ingleses, inviabilizando indústrias nacionais." },
+      { id: "c", text: "provocaram o fechamento definitivo de todos os comércios marítimos com as nações europeias.", isCorrect: false, distractorRationale: "O ato abriu as trocas comerciais com potências globais, sobretudo com a Inglaterra." },
+      { id: "d", text: "restringiram o poder político dos grandes proprietários de terras em benefício das comunidades indígenas.", isCorrect: false, distractorRationale: "A aristocracia rural brasileira foi a principal beneficiada com o escoamento de suas exportações." },
+      { id: "e", text: "anularam imediatamente a soberania da coroa de Bragança, transformando o Brasil em colônia oficial francesa.", isCorrect: false, distractorRationale: "Portugal estava em guerra com a França napoleônica sob proteção da marinha inglesa." }
+    ],
+    detailedExplanation: {
+      summary: "A Carta Régia de 1808 liquidou o exclusivo metropolitano, inaugurando a dependência comercial em relação à Inglaterra.",
+      stepByStep: [
+        "O pacto colonial obrigava o Brasil a comerciar apenas com ou através de Portugal.",
+        "Com a Abertura dos Portos às Nações Amigas (1808), a metrópole perdeu seu monopólio comercial.",
+        "Os Tratados de Comércio e Navegação de 1810 deram à Inglaterra tarifa privilegiada de 15% (menor que a dos próprios portugueses, 16%).",
+        "Essa medida tornou economicamente irreversível o processo de separação política entre Brasil e Portugal."
+      ],
+      coreConcept: "Fim do Exclusivo Metropolitano e Dependência Inglesa",
+      trapWarning: "A independência econômica do Brasil em relação a Portugal antecedeu em 14 anos a independência política de 1822."
+    },
+    commonTraps: ["achar que protegeu a indústria nacional", "confundir nações amigas com França"],
+    tags: ["periodo joanino", "abertura dos portos", "inglaterra", "pacto colonial"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+

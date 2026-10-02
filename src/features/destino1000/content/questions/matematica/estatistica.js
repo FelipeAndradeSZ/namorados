@@ -11,7 +11,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: false,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "O Departamento de Trânsito de São Paulo realizou um levantamento sobre o número de acidentes diários em uma das principais avenidas da cidade durante 10 dias consecutivos. Os dados registrados foram: 2, 3, 2, 5, 2, 4, 3, 2, 5, 1.",
       source: "Original"
@@ -52,7 +51,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "A Companhia do Metropolitano de São Paulo monitora o fluxo de passageiros. Em uma estação de médio porte, os registros (em milhares) de segunda a sexta-feira foram: 40, 45, 50, 45, 60.",
       source: "Original"
@@ -92,7 +90,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "graph",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
     context: {
       supportText: "No Rio de Janeiro, um food truck vende hambúrgueres artesanais. O gráfico de faturamento indica R$ 1000 na quarta, R$ 1500 na quinta, R$ 2500 na sexta, R$ 3000 no sábado e R$ 2000 no domingo.",
       source: "Original"
@@ -133,7 +130,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "Em uma startup de tecnologia em Brasília, os salários dos 6 desenvolvedores de uma equipe são: R$ 3000, R$ 4500, R$ 3500, R$ 12000, R$ 4000, R$ 5000.",
       source: "Original"
@@ -174,7 +170,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "Em um concurso público em São Paulo, as notas são calculadas por média ponderada. Português tem peso 2, Matemática tem peso 3 e Conhecimentos Específicos tem peso 5. Um candidato tirou 7,0 em Português, 6,0 em Matemática e 8,0 em Conhecimentos Específicos.",
       source: "Original"
@@ -216,7 +211,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "graph",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
     context: {
       supportText: "Uma pesquisa no Rio de Janeiro revelou o tempo de deslocamento ao trabalho. 10 pessoas demoram 30 min, 25 pessoas demoram 60 min, 15 pessoas demoram 90 min, e 10 pessoas demoram 120 min.",
       source: "Original"
@@ -258,7 +252,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "graph",
     requiresCalculation: true,
     requiresInterpretation: true,
-    hubId: "b3-bolsa",
     context: {
       supportText: "Um investidor na B3 (Bolsa do Brasil) possui uma carteira diversificada mostrada em um gráfico de setores: 40% em Ações, 30% em Tesouro Direto, 20% em Fundos Imobiliários e o restante em Criptomoedas. O valor total da carteira é de R$ 50.000,00.",
       source: "Original"
@@ -299,7 +292,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "interpretation",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "Dados do IBGE mostram o crescimento populacional anual de um bairro de Brasília. Em 2020 a população era de 12.000 habitantes; em 2021 foi para 12.500; em 2022 para 13.000. Assumindo-se um modelo de crescimento aritmético linear (tendência constante de aumento absoluto).",
       source: "Original"
@@ -342,7 +334,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "Uma torrefação de café em São Paulo ensaca lotes diariamente. Durante uma semana, o número de sacas processadas foi: 40, 45, 45, 50, 45, 55, 70.",
       source: "Original"
@@ -384,7 +375,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
     context: {
       supportText: "Para avaliar um plano de asfaltamento no Rio de Janeiro, a prefeitura pontuou ruas em 3 critérios (qualidade prévia, fluxo de veículos, importância turística) com notas de 0 a 10 e pesos 2, 4 e 4, respectivamente. Uma rua obteve nota 5 em qualidade, 8 em fluxo e X em importância turística. Sabe-se que a média final dessa rua foi 7,4.",
       source: "Original"
@@ -427,7 +417,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
     context: {
       supportText: "A Secretaria de Saúde do DF utiliza a média móvel de 3 dias para analisar casos de gripe. Os registros de domingo a quinta-feira foram: 100, 110, 150, 130, 170.",
       source: "Original"
@@ -468,7 +457,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
     context: {
       supportText: "Em um clube de São Paulo, o treinador quer escalar o atleta mais regular nos saltos. O Atleta A teve saltos de: 6,0m; 6,5m; 7,0m (Média=6,5m). O Atleta B teve saltos de: 6,3m; 6,5m; 6,7m (Média=6,5m). O treinador escolherá quem apresentar o menor desvio padrão.",
       source: "Original"
@@ -510,7 +498,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "rio-de-janeiro",
     context: {
       supportText: "A prefeitura do RJ testou a espessura do asfalto (em cm) em 3 pontos de uma nova via: 8, 10 e 12. A especificação técnica aprova a obra se a variância dessa amostra de 3 pontos for menor que 5 cm².",
       source: "Original"
@@ -553,7 +540,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "interpretation",
     requiresCalculation: true,
     requiresInterpretation: true,
-    hubId: "b3-bolsa",
     context: {
       supportText: "Em uma corretora, 4 funcionários recebem salários iguais a R$ 3.000,00. O diretor que se junta a eles ganha R$ 23.000,00. Com a chegada do diretor, um analista quer recalcular a média e a mediana da equipe de 5 pessoas.",
       source: "Original"
@@ -596,7 +582,6 @@ export const QUESTIONS_ESTATISTICA = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    hubId: "b3-bolsa",
     context: {
       supportText: "Na B3, a ação XPTO tem um preço médio anual de R$ 50,00 com desvio padrão de R$ 5,00. A ação YZWK tem preço médio de R$ 10,00 com desvio padrão de R$ 2,00. O risco relativo (coeficiente de variação) indica o quão arriscado é o ativo em relação ao seu próprio preço.",
       source: "Original"

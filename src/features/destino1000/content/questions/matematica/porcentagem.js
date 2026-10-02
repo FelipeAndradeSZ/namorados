@@ -11,8 +11,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
-    hubId: "metro-sp",
     context: {
       supportText: "A tarifa do transporte público na cidade de São Paulo sofre reajustes periódicos para acompanhar a inflação e os custos de operação do sistema. Em um determinado ano, a tarifa do Metrô SP passou de R$ 4,00 para R$ 4,40.",
       source: "Original"
@@ -53,7 +51,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: false,
-    cityId: "sao-paulo",
     context: {
       supportText: "Durante a Black Friday, uma loja de eletrônicos em um shopping de São Paulo anuncia um smartphone que custava R$ 2.000,00 com um desconto de 15%.",
       source: "Original"
@@ -93,8 +90,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
-    hubId: "congresso-nacional",
     context: {
       supportText: "Em Brasília, foi aprovada uma lei que reajusta o salário de uma categoria de servidores públicos em duas etapas: um aumento de 5% no primeiro semestre, seguido de um aumento de 4% no segundo semestre, ambos aplicados sobre o salário imediatamente anterior.",
       source: "Inspirada em ENEM"
@@ -174,8 +169,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
-    hubId: "b3-bolsa",
     context: {
       supportText: "Um investidor na B3 (Bolsa de Valores do Brasil) comprou ações de uma empresa de tecnologia. No primeiro mês, as ações valorizaram 20%. No mês seguinte, devido a uma crise no setor, as ações sofreram uma queda de 20%.",
       source: "Inspirada em ENEM"
@@ -340,8 +333,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "vitoria",
-    hubId: "porto-tubarao",
     context: {
       supportText: "O Porto de Tubarão, em Vitória (ES), é um dos maiores exportadores de minério de ferro. Em um ano, a exportação foi de 80 milhões de toneladas. No ano seguinte, a exportação atingiu 100 milhões de toneladas.",
       source: "Original"
@@ -463,8 +454,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "brasilia",
-    hubId: "congresso-nacional",
     context: {
       supportText: "No Congresso Nacional em Brasília, discutia-se a reforma tributária e a cobrança do Imposto de Renda (IR). Um contribuinte tem uma renda tributável de R$ 4.000,00. A alíquota do IR para essa faixa é de 15%, mas há uma parcela a deduzir (desconto fixo) de R$ 350,00 estabelecida por lei.",
       source: "Inspirada em mecânica de impostos do Brasil"
@@ -586,8 +575,6 @@ export const QUESTIONS_PORCENTAGEM = [
     questionType: "contextualized",
     requiresCalculation: true,
     requiresInterpretation: true,
-    cityId: "sao-paulo",
-    hubId: "b3-bolsa",
     context: {
       supportText: "Uma ação na B3 sofreu uma queda de 40% durante um período de crise. Algum tempo depois, a economia começou a se recuperar e o valor da ação começou a subir.",
       source: "Original"

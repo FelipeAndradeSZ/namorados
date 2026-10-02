@@ -198,5 +198,206 @@ export const QUESTIONS_BRASIL_REPUBLICA = [
     status: "published",
     version: 1,
     createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-006",
+    area: "humanas",
+    competence: 3,
+    skill: 12,
+    topic: "História do Brasil",
+    subtopic: "República da Espada e Encilhamento",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Nos primeiros anos da República, o ministro da Fazenda Rui Barbosa adotou uma política econômica expansionista visando estimular o surgimento de indústrias e substituir a dependência agroexportadora. A medida autorizou bancos privados a emitirem papel-moeda com lastro em títulos da dívida pública, desencadeando intensa especulação financeira na Bolsa de Valores do Rio de Janeiro.",
+      source: "Nicolau Sevcenko, A Revolta da Vacina. São Paulo: Brasiliense (adaptado)."
+    },
+    prompt: "Essa crise socioeconômica do início da República, conhecida historicamente como o 'Encilhamento', teve como principais desdobramentos:",
+    options: [
+      { id: "a", text: "forte surto inflacionário, desvalorização cambial e proliferação de empresas-fantasma sem base produtiva real.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "consolidação de um parque industrial metalúrgico de ponta financiado por investimentos estatais diretos.", isCorrect: false, distractorRationale: "A indústria de base só se consolidou nos anos 1940 com o Estado Novo de Getúlio Vargas." },
+      { id: "c", text: "extinção da dívida externa brasileira por meio do superávit gerado nas exportações cafeeiras.", isCorrect: false, distractorRationale: "O endividamento externo aumentou drasticamente, exigindo o Funding Loan em 1898." },
+      { id: "d", text: "estabilidade monetária duradoura baseada na paridade fixa entre o mil-réis e o padrão-ouro britânico.", isCorrect: false, distractorRationale: "Ocorreu o oposto: violenta inflação e desvalorização da moeda nacional." },
+      { id: "e", text: "redistribuição ampla de terras aos ex-escravizados financiada pelos bancos emissores.", isCorrect: false, distractorRationale: "A política econômica foi estritamente financeira e urbana, sem reforma agrária." }
+    ],
+    detailedExplanation: {
+      summary: "O Encilhamento foi uma bolha especulativa provocada pela emissão descontrolada de crédito, resultando em inflação e falências.",
+      stepByStep: [
+        "A intenção declarada de Rui Barbosa era facilitar o crédito para modernizar o país após a abolição da escravidão.",
+        "Sem fiscalização adequada, surgiram empresas fictícias com ações negociadas em bolsa por valores irreais.",
+        "A bolha estourou com falência de bancos, desvalorização da moeda (mil-réis) e corrosão do poder de compra dos trabalhadores."
+      ],
+      coreConcept: "A Crise do Encilhamento na República da Espada",
+      trapWarning: "Embora pretendesse fomentar a indústria, o Encilhamento resultou primariamente em especulação financeira."
+    },
+    commonTraps: ["confundir intenção industrialista com resultado econômico", "ignorar a especulação financeira"],
+    tags: ["encilhamento", "rui barbosa", "republica da espada", "inflacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-007",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "História do Brasil",
+    subtopic: "Revolta da Vacina e Reforma Passos",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Em 1904, o Rio de Janeiro foi palco de violentos confrontos de rua entre populares e forças policiais. Enquanto a prefeitura de Pereira Passos executava o 'bota-abaixo' para alargar avenidas e embelezar a cidade aos moldes parisienses, o médico sanitarista Oswaldo Cruz liderava campanhas enérgicas contra a varíola, a febre amarela e a peste bubônica, culminando na Lei de Vacinação Obrigatória.",
+      source: "Sidney Chalhoub, Cidade Febril: Cortiços e Epidemias na Corte Imperial (adaptado)."
+    },
+    prompt: "A eclosão da Revolta da Vacina em 1904 expressou não apenas o receio popular em relação à inoculação médica, mas sobretudo:",
+    options: [
+      { id: "a", text: "a insatisfação acumulada das classes populares com a demolição de suas moradias e a política higienista autoritária.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "a exigência dos operários cariocas pela imediata implantação de um regime comunista soviético no país.", isCorrect: false, distractorRationale: "Anacronismo; a Revolução Russa ocorreu em 1917 e o movimento operário carioca não era de matriz soviética." },
+      { id: "c", text: "o apoio irrestrito da população aos barões do café contra a industrialização acelerada da capital.", isCorrect: false, distractorRationale: "A revolta foi das camadas populares pobres e de setores militares descontentes contra o governo oligárquico." },
+      { id: "d", text: "a defesa popular da medicina tradicional indígena contra a farmacologia ocidental moderna.", isCorrect: false, distractorRationale: "A motivação central foi política, sanitária e social, sem relação com tradições indígenas." },
+      { id: "e", text: "a rebelião dos grandes proprietários de cortiços contra a cobrança de IPTU progressivo pelo prefeito.", isCorrect: false, distractorRationale: "A revolta foi protagonizada pela população despossuída, expulsa para os morros e subúrbios." }
+    ],
+    detailedExplanation: {
+      summary: "A Revolta da Vacina articulou o choque cultural contra a vacinação coercitiva com o protesto social contra a expulsão dos cortiços.",
+      stepByStep: [
+        "A reforma urbana do prefeito Pereira Passos demoliu cortiços no centro do Rio ('bota-abaixo') sem oferecer moradia alternativa às famílias pobres.",
+        "Essa população foi empurrada para os morros (favelização nascente) e para as periferias distantes.",
+        "A lei que tornou a vacinação contra a varíola obrigatória, com invasão policial aos lares, foi o estopim de uma revolta social represada."
+      ],
+      coreConcept: "Higienismo Autoritário e Exclusão Urbana na Belle Époque",
+      trapWarning: "A vacina foi o estopim imediato, mas as causas profundas residiam na exclusão socioespacial do projeto modernizador."
+    },
+    commonTraps: ["reduzir o conflito à simples ignorância científica", "desconsiderar o impacto do bota-abaixo"],
+    tags: ["revolta da vacina", "pereira passos", "higienismo", "rio de janeiro"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-008",
+    area: "humanas",
+    competence: 3,
+    skill: 13,
+    topic: "História do Brasil",
+    subtopic: "Tenentismo e Coluna Prestes",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Durante a década de 1920, setores médios urbanos e jovens oficiais do Exército expressaram crescente descontentamento com as práticas políticas da Primeira República. Episódios como os 18 do Forte de Copacabana (1922), a Revolta Paulista de 1924 e a marcha da Coluna Prestes (1925-1927) abalaram a estabilidade do poder oligárquico.",
+      source: "Boris Fausto, A Revolução de 1930: Historiografia e História. São Paulo: Brasiliense."
+    },
+    prompt: "Entre as principais reivindicações do movimento tenentista que visavam reformar as instituições da Primeira República, destaca-se a:",
+    options: [
+      { id: "a", text: "adoção do voto secreto, moralização do processo eleitoral e expansão do ensino público primário gratuito.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "restauração imediata da monarquia parlamentarista com a coroação de descendentes da família real.", isCorrect: false, distractorRationale: "Os tenentes eram republicanos convictos e modernizadores, nunca monarquistas." },
+      { id: "c", text: "extinção do Exército brasileiro e substituição por milícias estaduais comandadas por coronéis locais.", isCorrect: false, distractorRationale: "Os tenentes defendiam a centralização nacional em oposição às milícias coronelistas estaduais." },
+      { id: "d", text: "coletivização compulsória de todas as fazendas cafeeiras e abolição total da propriedade privada.", isCorrect: false, distractorRationale: "O tenentismo inicial tinha corte nacionalista e burguês/reformista, não comunista." },
+      { id: "e", text: "permanência indefinida do voto aberto (a cabresto) para proteger as decisões das comunidades locais.", isCorrect: false, distractorRationale: "O combate ao voto de cabresto e à fraude oligárquica era o principal cavalo de batalha dos tenentes." }
+    ],
+    detailedExplanation: {
+      summary: "O tenentismo combatia a fraude eleitoral da política dos governadores, reivindicando voto secreto e instrução pública.",
+      stepByStep: [
+        "A Primeira República era marcada por fraudes sistemáticas (voto de cabresto, eleições a bico de pena, Comissão Verificadora de Poderes).",
+        "Os jovens oficiais de baixa e média patente viam o Exército como a instituição que representava a nação acima dos interesses regionais.",
+        "Suas pautas centrais incluíam moralização política, voto secreto, Justiça Eleitoral e ensino público como caminho civilizatório."
+      ],
+      coreConcept: "Tenentismo e Crise da Ordem Oligárquica",
+      trapWarning: "Embora Luiz Carlos Prestes tenha aderido ao comunismo mais tarde, o tenentismo da década de 1920 não era um movimento comunista."
+    },
+    commonTraps: ["confundir tenentismo inicial com socialismo", "desconhecer a pauta do voto secreto"],
+    tags: ["tenentismo", "coluna prestes", "voto secreto", "crise oligarquica"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-009",
+    area: "humanas",
+    competence: 3,
+    skill: 14,
+    topic: "História do Brasil",
+    subtopic: "Ditadura Militar e AI-5",
+    difficulty: 4,
+    estimatedTimeSeconds: 160,
+    questionType: "interpretation",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Art. 2º - O Presidente da República poderá decretar o recesso do Congresso Nacional, das Assembleias Legislativas e das Câmaras de Vereadores [...].\nArt. 10 - Fica suspensa a garantia de habeas corpus, nos casos de crimes políticos, contra a segurança nacional, a ordem econômica e social.",
+      source: "Ato Institucional nº 5 (AI-5), de 13 de dezembro de 1968."
+    },
+    prompt: "A edição do AI-5 no governo Costa e Silva representou o momento de maior endurecimento autoritário da Ditadura Militar brasileira, caracterizando-se pela:",
+    options: [
+      { id: "a", text: "supressão de garantias constitucionais, institucionalização da censura prévia e centralização de poderes discricionários no Executivo.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "convocação de eleições presidenciais diretas antecipadas para conter as manifestações populares de estudantes.", isCorrect: false, distractorRationale: "O AI-5 suspendeu garantias e fechou o Congresso, afastando qualquer hipótese de eleições diretas." },
+      { id: "c", text: "extinção de todos os órgãos de repressão e segurança interna, como DOI-CODI e DOPS.", isCorrect: false, distractorRationale: "O DOI-CODI e a máquina repressiva foram exatamente potencializados e institucionalizados a partir desse marco." },
+      { id: "d", text: "imediata renúncia dos chefes das Forças Armadas e devolução do poder político a líderes sindicais.", isCorrect: false, distractorRationale: "O regime militar intensificou sua intervenção e perseguição sobre os sindicatos operários." },
+      { id: "e", text: "revogação de toda a legislação de segurança nacional e adesão aos tratados da Anistia Internacional.", isCorrect: false, distractorRationale: "A Doutrina de Segurança Nacional foi levada ao ápice durante os chamados 'anos de chumbo'." }
+    ],
+    detailedExplanation: {
+      summary: "O AI-5 abriu o período mais violento da ditadura, com fechamento do Legislativo, censura aos meios de comunicação e cassação de direitos.",
+      stepByStep: [
+        "O AI-5 concedeu ao Presidente poder para fechar o Congresso, cassar mandatos políticos e suspender direitos políticos de qualquer cidadão.",
+        "A suspensão do habeas corpus para 'crimes políticos' facilitou prisões arbitrárias, torturas e desaparecimentos forçados nos porões do regime.",
+        "Esse período estendeu-se durante o governo Médici, combinando repressão máxima ('anos de chumbo') com propaganda ufanista e crescimento econômico concentrador."
+      ],
+      coreConcept: "Institucionalização do Autoritarismo e o AI-5",
+      trapWarning: "O AI-5 não foi uma lei ordinária; foi um ato de exceção acima da Constituição que eliminou o controle judicial dos atos do Executivo."
+    },
+    commonTraps: ["confundir AI-5 com abertura política", "ignorar a supressão do habeas corpus"],
+    tags: ["ditadura militar", "ai-5", "anos de chumbo", "autoritarismo"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
+  },
+  {
+    id: "HUM-HIST-010",
+    area: "humanas",
+    competence: 3,
+    skill: 15,
+    topic: "História do Brasil",
+    subtopic: "Diretas Já e Transição Democrática",
+    difficulty: 3,
+    estimatedTimeSeconds: 150,
+    questionType: "contextualized",
+    requiresCalculation: false,
+    requiresInterpretation: true,
+    context: {
+      supportText: "Entre o final de 1983 e o primeiro semestre de 1984, milhões de brasileiros ocuparam praças e avenidas de várias cidades do país trajando amarelo e exigindo o restabelecimento das eleições presidenciais diretas, na maior mobilização popular da história republicana brasileira.",
+      source: "Lilia Schwarcz e Heloisa Starling, Brasil: Uma Biografia. São Paulo: Companhia das Letras."
+    },
+    prompt: "Apesar da comoção cívica da campanha das 'Diretas Já', a transição final do regime militar para o governo civil em 1985 ocorreu por via de uma eleição indireta porque:",
+    options: [
+      { id: "a", text: "a Emenda Constitucional Dante de Oliveira não alcançou a maioria qualificada de dois terços no plenário da Câmara dos Deputados.", isCorrect: true, distractorRationale: null },
+      { id: "b", text: "os líderes da oposição desistiram das eleições e negociaram a manutenção do general Figueiredo no cargo.", isCorrect: false, distractorRationale: "A oposição não desistiu; disputou o Colégio Eleitoral e venceu com a chapa Tancredo Neves / José Sarney." },
+      { id: "c", text: "o Supremo Tribunal Federal decretou a ilegalidade de qualquer votação para presidente antes do ano 2000.", isCorrect: false, distractorRationale: "O STF nunca emitiu tal decisão; o processo seguiu os ritos constitucionais vigentes." },
+      { id: "d", text: "a população rejeitou a candidatura de Tancredo Neves em plebiscito nacional de voto popular.", isCorrect: false, distractorRationale: "Não houve plebiscito para a eleição presidencial de 1985." },
+      { id: "e", text: "uma intervenção militar externa impediu a apuração das cédulas nas capitais brasileiras.", isCorrect: false, distractorRationale: "Não houve intervenção externa; o Congresso votou a emenda seguindo o quórum de dois terços exigido." }
+    ],
+    detailedExplanation: {
+      summary: "A rejeição da Emenda Dante de Oliveira forçou a oposição a disputar a presidência no Colégio Eleitoral indireto, elegendo Tancredo Neves.",
+      stepByStep: [
+        "A campanha das Diretas Já mobilizou comícios multitudinários em apoio à Proposta de Emenda Constitucional Dante de Oliveira.",
+        "Em abril de 1984, a emenda obteve maioria simples dos deputados presentes, mas não atingiu os dois terços dos votos necessários para alterar a Constituição.",
+        "Diante disso, a Aliança Democrática (PMDB + dissidentes do PDS na Frente Liberal) concorreu no Colégio Eleitoral indireto, derrotando o candidato oficial Paulo Maluf e encerrando 21 anos de governos militares."
+      ],
+      coreConcept: "A Campanha das Diretas Já e a Transição Pactual",
+      trapWarning: "As Diretas Já foram vitoriosas em mobilização social, mas foram derrotadas no plenário do Congresso em 1984."
+    },
+    commonTraps: ["achar que as Diretas Já aprovaram a eleição direta imediata", "confundir Colégio Eleitoral com plebiscito"],
+    tags: ["diretas ja", "dante de oliveira", "tancredo neves", "redemocratizacao"],
+    status: "published",
+    version: 1,
+    createdAt: "2026-10-01"
   }
 ];
+
