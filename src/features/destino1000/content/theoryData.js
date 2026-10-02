@@ -2872,6 +2872,53 @@ export const THEORY_CONTENT = {
       "A Inconfidência Mineira NÃO foi uma revolta abolicionista popular; foi um levante de elites que temiam a derrama e queriam perdoar suas próprias dívidas fiscais."
     ],
     mnemonics: "As Luzes e as Revoluções: 'Locke defende a propriedade e a resistência cidadã; Montesquieu divide o poder em três pela manhã; Rousseau canta a Vontade Geral soberana; Smith solta a mão do mercado que aplana; e na França a Bastilha cai pra lei ser humana!'"
+  },
+
+  "natureza/cinetica-quimica-catalise": {
+    topic: "Cinética Química, Catálise Enzimática e Bioenergética Celular",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Competência 7 (H24, H25, H26) e Competência 4 (H14, H15, H16): Matéria decisiva para Medicina no ENEM. Conecta a físico-química microscópica das colisões e leis de velocidade com a bioquímica enzimática de Michaelis-Menten, ação de fármacos (inibidores competitivos como estatinas e antibióticos), conversores catalíticos e a termodinâmica de acoplamento do ATP com o gradiente eletroquímico de prótons mitocondrial.",
+    highFrequencySkills: [
+      "H14 - Identificar padrões em fenômenos biológicos celulares e rotas metabólicas",
+      "H15 - Interpretar modelos e parâmetros cinéticos (Km, Vmax) relacionados à homeostase e farmacologia",
+      "H24 - Reconhecer as etapas e os fatores que alteram a velocidade de transformações químicas",
+      "H26 - Avaliar impactos socioambientais da emissão veicular e desenvolvimento de catalisadores"
+    ],
+    overview: "O módulo integra os fundamentos químicos e biológicos da rapidez reacional: 1) A Teoria das Colisões Efetivas (geometria molecular favorável e energia de ativação mínima Ea); 2) A distribuição estatística de Maxwell-Boltzmann e o impacto exponencial da temperatura na fração reativa; 3) A Lei de Velocidade experimental (v = k · [A]^α · [B]^β) e a determinação de ordens de reação através da etapa lenta limitante; 4) A termodinâmica dos catalisadores (redução de Ea sem alterar ΔH, rendimento nem constante Kc) e a tecnologia dos conversores catalíticos de três vias (Pt, Pd, Rh); 5) A cinética de Michaelis-Menten, constante Km como inverso da afinidade, desnaturação térmica/pH e distinção entre inibição competitiva e alostérica na terapêutica médica; 6) O acoplamento de reações endergônicas à hidrólise de ATP e a teoria quimiosmótica de Mitchell na crista mitocondrial.",
+    keyConcepts: [
+      {
+        title: "Teoria das Colisões e Energia de Ativação (Ea)",
+        content: "• Requisitos para choque eficaz: Orientação espacial favorável + Energia cinética maior ou igual à barreira de ativação (Ea).\n• Complexo Ativado: Estado transitório de máxima energia potencial no topo da coordenada.\n• Perfil Entálpico: ΔH = H_produtos - H_reagentes. Reação exotérmica (ΔH < 0): Ea,inv = Ea,dir + |ΔH|. Reação endotérmica (ΔH > 0): Ea,inv = Ea,dir - ΔH.\n• Temperatura e Maxwell-Boltzmann: O aquecimento NÃO altera a barreira Ea; apenas desloca a curva para a direita, aumentando a fração de moléculas com energia >= Ea."
+      },
+      {
+        title: "Fatores Cinéticos e Lei de Velocidade Experimental",
+        content: "• Superfície de Contato: Em sistemas heterogêneos com sólidos, triturar o material multiplica os pontos de colisão por segundo, acelerando a taxa.\n• Concentração e Pressão Gasosa: Aumentar a molaridade ou comprimir o gás eleva a densidade de choques por unidade de volume.\n• Equação de Guldberg-Waage: v = k · [A]^α · [B]^β. As ordens α e β são deduzidas de tabelas experimentais ou da etapa lenta em mecanismos de múltiplas etapas.\n• Etapa Lenta: É o gargalo cinético que governa a velocidade de todo o processo."
+      },
+      {
+        title: "Mecanismo dos Catalisadores e Conversores Veiculares",
+        content: "• O que o catalisador FAZ: Oferece caminho alternativo com menor energia de ativação; acelera a reação direta e inversa na mesma proporção; encurta o tempo para atingir o equilíbrio.\n• O que o catalisador NÃO FAZ: NÃO altera a variação de entalpia (ΔH); NÃO altera a constante de equilíbrio (Kc); NÃO altera o rendimento teórico nem produz mais produto.\n• Conversores de Três Vias: Oxidam CO e hidrocarbonetos incombustos a CO2 e H2O (com Pt e Pd) e reduzem óxidos de nitrogênio (NOx) a N2 inerte (com Rh)."
+      },
+      {
+        title: "Cinética Enzimática de Michaelis-Menten e Bioenergética do ATP",
+        content: "• Km (Constante de Michaelis): Concentração de substrato para atingir Vmax/2. É inversamente proporcional à afinidade da enzima pelo substrato.\n• Inibição Competitiva: O fármaco disputa o sítio ativo. Aumenta o Km aparente e mantém a Vmax inalterada (ex: estatinas inibindo HMG-CoA redutase; etanol tratando intoxicação por metanol).\n• Inibição Não Competitiva: Liga-se ao sítio alostérico. Mantém o Km inalterado e reduz a Vmax (ex: intoxicação por chumbo).\n• Acoplamento de ATP: A quebra de ATP (ΔG°' ≈ -30,5 kJ/mol) soma-se a etapas endergônicas para tornar o saldo global espontâneo (ΔG_total < 0).\n• Fosforilação Oxidativa e Mitchell: Gradiente eletroquímico de H+ no espaço intermembranas gira o rotor F0 da ATP-sintase. Desacopladores (UCP-1 e DNP) dissipam o gradiente em calor sem gerar ATP."
+      }
+    ],
+    formulasAndRules: [
+      "Taxa Global: v = (v_m(A) / a) = (v_m(B) / b) = (v_m(C) / c).",
+      "Lei de Velocidade: v = k · [A]^α · [B]^β  |  Ordem Global = α + β.",
+      "Unidade de k: (L/mol)^(ordem - 1) · s⁻¹  |  Ordem 1: s⁻¹  |  Ordem 2: L/(mol·s).",
+      "Michaelis-Menten: V = (Vmax · [S]) / (Km + [S]). Em saturação ([S] >> Km): V = Vmax (ordem zero).",
+      "Acoplamento Termodinâmico: ΔG_global = ΔG_endergônica + ΔG_ATP < 0."
+    ],
+    enemTraps: [
+      "Catalisador NUNCA altera o rendimento de uma reação nem o valor de ΔH ou Kc; ele apenas diminui o tempo necessário para atingir o equilíbrio!",
+      "A temperatura NÃO diminui a energia de ativação; ela apenas aumenta a população de moléculas com energia cinética suficiente para vencê-la!",
+      "Km alto significa BAIXA afinidade da enzima pelo substrato, e não alta afinidade!",
+      "Na inibição competitiva, a velocidade máxima (Vmax) NÃO diminui; ela é atingida em concentrações suficientemente altas de substrato!",
+      "Desacopladores mitocondriais NÃO paralisam o consumo de oxigênio; eles AUMENTAM o consumo de oxigênio e a queima de glicose gerando calor inútil sem sintetizar ATP!"
+    ],
+    mnemonics: "Cinética e Enzimas do ENEM: 'Catalisador abaixa a montanha da ativação sem mexer no chão do ΔH; calor dá energia pra molécula pular; Km pequeno é enzima que ama ligar; competidor empurra o Km pra lá sem a Vmax derrubar; e o próton de Mitchell desce a crista pra o ATP rodar!'"
   }
 };
 

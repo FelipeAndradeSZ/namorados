@@ -94,6 +94,7 @@ export const QUESTION_MODULES = {
   "natureza/bioquimica-metabolismo": () => import("./questions/natureza/bioquimica-metabolismo.js"),
   "natureza/optica-geometrica-ondas": () => import("./questions/natureza/optica-geometrica-ondas.js"),
   "natureza/equilibrio-acido-base-tampao": () => import("./questions/natureza/equilibrio-acido-base-tampao.js"),
+  "natureza/cinetica-quimica-catalise": () => import("./questions/natureza/cinetica-quimica-catalise.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),

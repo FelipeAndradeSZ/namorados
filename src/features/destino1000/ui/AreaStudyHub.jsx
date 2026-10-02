@@ -41,6 +41,7 @@ const AREA_TOPICS = {
     { id: "natureza/bioquimica-metabolismo", name: "Bioquímica Celular, Bioenergética e Metabolismo", tag: "Biologia", priority: "Crítica • Top Medicina & Respiração/Fotossíntese", questionsCount: 25 },
     { id: "natureza/optica-geometrica-ondas", name: "Óptica Geométrica, Reflexão, Refração e Lentes Esféricas", tag: "Física", priority: "Crítica • Snell, Foco e Visão", questionsCount: 25 },
     { id: "natureza/equilibrio-acido-base-tampao", name: "Equilíbrio Ácido-Base, Hidrólise Salina e Solução Tampão", tag: "Química", priority: "Crítica • pH, Tampão e Medicina", questionsCount: 25 },
+    { id: "natureza/cinetica-quimica-catalise", name: "Cinética Química, Catálise Enzimática e Bioenergética", tag: "Química/Biologia", priority: "Crítica • Michaelis-Menten e E_a", questionsCount: 25 },
   ],
   matematica: [
     { id: "matematica/razao-proporcao", name: "Razão, Proporção e Escala", tag: "Aritmética", priority: "Crítica • Mais Cobrado", questionsCount: 25 },

@@ -7,16 +7,19 @@ import {
   CheckCircle2, 
   Zap, 
   Sparkles, 
-  ChevronRight,
-  BookMarked,
-  GraduationCap,
-  Layers,
-  ArrowRight,
-  AlertTriangle,
-  Lightbulb,
-  CheckSquare
+  ChevronRight, 
+  BookMarked, 
+  GraduationCap, 
+  Layers, 
+  ArrowRight, 
+  AlertTriangle, 
+  Lightbulb, 
+  CheckSquare,
+  Target,
+  Activity
 } from "lucide-react";
 import { ALL_ENEM_BOOKS, BOOKS_BY_AREA } from "../content/books/index";
+import { RichMarkdownReader } from "./RichMarkdownReader";
 
 export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
   const [selectedArea, setSelectedArea] = useState("todas");
@@ -71,7 +74,8 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
       const chapterMatch = b.chapters.some((c) => 
         c.title.toLowerCase().includes(query) || 
         (c.summary && c.summary.toLowerCase().includes(query)) ||
-        (c.deepContent && c.deepContent.toLowerCase().includes(query))
+        (c.deepContent && c.deepContent.toLowerCase().includes(query)) ||
+        (c.content && c.content.toLowerCase().includes(query))
       );
       return titleMatch || subMatch || chapterMatch;
     });
@@ -105,6 +109,33 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
     const chapterId = currentChapter.id || `${activeBook.id}-cap-${chapterNum}`;
     const isCompleted = !!completedChapters[chapterId];
     const readingTime = currentChapter.readingTimeMin || Math.round((activeBook.estimatedReadingTimeMinutes || activeBook.estimatedReadTimeMinutes || 48) / activeBook.chapters.length);
+
+    // Normalização universal do texto principal do capítulo
+    const mainText = currentChapter.deepContent || currentChapter.content || "";
+
+    // Agregação universal de exemplos resolvidos (singular ou plural)
+    const allWorkedExamples = [
+      ...(Array.isArray(currentChapter.workedExamples) ? currentChapter.workedExamples : []),
+      ...(currentChapter.workedExample ? [currentChapter.workedExample] : [])
+    ];
+
+    // Agregação de aplicações práticas e no mundo real
+    const allApplications = [
+      ...(Array.isArray(currentChapter.realWorldApplications) ? currentChapter.realWorldApplications : []),
+      ...(typeof currentChapter.realWorldApplication === "string" ? [currentChapter.realWorldApplication] : [])
+    ];
+
+    // Agregação de armadilhas e equívocos frequentes
+    const allTraps = [
+      ...(Array.isArray(currentChapter.commonTraps) ? currentChapter.commonTraps : []),
+      ...(Array.isArray(currentChapter.commonMisconceptions) ? currentChapter.commonMisconceptions : [])
+    ];
+
+    // Agregação de checklist de domínio e retenção
+    const allChecklist = [
+      ...(Array.isArray(currentChapter.retentionChecklist) ? currentChapter.retentionChecklist : []),
+      ...(Array.isArray(currentChapter.quickReviewPoints) ? currentChapter.quickReviewPoints : [])
+    ];
 
     return (
       <div className="min-h-screen bg-slate-950 text-slate-100 pb-24">
@@ -169,13 +200,29 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
                 </>
               )}
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
               {currentChapter.title}
             </h1>
+            {currentChapter.subtitle && (
+              <p className="text-slate-400 text-sm sm:text-base font-medium mb-3">
+                {currentChapter.subtitle}
+              </p>
+            )}
             {currentChapter.summary && (
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
                 💡 <span className="font-semibold text-slate-200">Visão Geral:</span> {currentChapter.summary}
               </p>
+            )}
+
+            {/* Habilidades Alvo em Chips */}
+            {Array.isArray(currentChapter.targetSkills) && currentChapter.targetSkills.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {currentChapter.targetSkills.map((sk, sIdx) => (
+                  <span key={sIdx} className="px-2.5 py-1 rounded-lg bg-sky-950/50 border border-sky-800/40 text-sky-300 text-xs">
+                    {sk}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
 
@@ -205,8 +252,26 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
             })}
           </div>
 
+          {/* Objetivos de Aprendizagem do Capítulo */}
+          {Array.isArray(currentChapter.learningObjectives) && currentChapter.learningObjectives.length > 0 && (
+            <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-md">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
+                <Target className="w-4 h-4 text-amber-400" />
+                <span>Objetivos de Domínio deste Capítulo</span>
+              </div>
+              <ul className="grid sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                {currentChapter.learningObjectives.map((obj, oIdx) => (
+                  <li key={oIdx} className="flex items-start gap-2 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="leading-relaxed">{obj}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Corpo do Conteúdo do Capítulo */}
-          <article className={`space-y-8 ${fontSize === "large" ? "text-lg leading-loose" : "text-base leading-relaxed"}`}>
+          <article className="space-y-8">
             {/* Se o capítulo estiver estruturado em 'sections' */}
             {currentChapter.sections && currentChapter.sections.length > 0 && (
               <div className="space-y-8">
@@ -217,9 +282,7 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
                       <span>{sec.heading}</span>
                     </h2>
 
-                    <div className="text-slate-200 whitespace-pre-line font-sans space-y-3 font-normal">
-                      {sec.content}
-                    </div>
+                    <RichMarkdownReader content={sec.content} fontSize={fontSize} />
 
                     {sec.didacticBox && (
                       <div className="my-5 p-4 rounded-xl bg-gradient-to-r from-amber-950/50 via-amber-900/30 to-slate-900 border border-amber-600/50 shadow-inner">
@@ -237,65 +300,131 @@ export function BibliotecaHub({ onStartTopicSession, onBackToHub }) {
               </div>
             )}
 
-            {/* Se o capítulo estiver estruturado em 'deepContent' */}
-            {currentChapter.deepContent && (
+            {/* Conteúdo contínuo enriquecido (deepContent ou content) */}
+            {mainText && (
               <div className="space-y-6">
-                <div className="text-slate-200 whitespace-pre-line font-sans space-y-4 font-normal leading-relaxed">
-                  {currentChapter.deepContent}
+                <RichMarkdownReader content={mainText} fontSize={fontSize} />
+              </div>
+            )}
+
+            {/* Exemplos Resolvidos e Modelados Modelo ENEM */}
+            {allWorkedExamples.length > 0 && (
+              <div className="space-y-6 my-10">
+                <div className="flex items-center gap-2 text-indigo-300 font-extrabold text-base border-b border-indigo-900/60 pb-2.5">
+                  <Lightbulb className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                  <span>Exemplos Resolvidos e Modelados • Padrão ENEM</span>
                 </div>
+                {allWorkedExamples.map((ex, exIdx) => {
+                  const problem = ex.enunciado || ex.problem;
+                  const steps = Array.isArray(ex.stepByStep) 
+                    ? ex.stepByStep 
+                    : ex.stepByStep 
+                    ? [ex.stepByStep] 
+                    : ex.resolution 
+                    ? [ex.resolution] 
+                    : [];
+                  const answer = ex.gabarito || ex.answer;
+                  const insight = ex.keyInsight;
 
-                {/* Exemplo Resolvido */}
-                {currentChapter.workedExample && (
-                  <div className="my-6 p-5 rounded-2xl bg-gradient-to-br from-indigo-950/60 via-slate-900 to-slate-950 border border-indigo-700/50 shadow-lg">
-                    <div className="flex items-center gap-2 text-indigo-300 font-extrabold text-sm mb-3">
-                      <Lightbulb className="w-5 h-5 text-indigo-400" />
-                      <span>Exemplo Resolvido e Modelado Modelo ENEM</span>
-                    </div>
-                    <div className="bg-slate-950/80 p-3.5 rounded-xl border border-indigo-900/40 text-xs sm:text-sm text-slate-200 mb-3 whitespace-pre-line">
-                      <strong className="text-amber-300 block mb-1">Enunciado Típico:</strong>
-                      {currentChapter.workedExample.problem}
-                    </div>
-                    <div className="bg-indigo-950/40 p-3.5 rounded-xl border border-indigo-800/40 text-xs sm:text-sm text-indigo-100 whitespace-pre-line mb-3">
-                      <strong className="text-emerald-400 block mb-1">Resolução Passo a Passo:</strong>
-                      {currentChapter.workedExample.resolution}
-                    </div>
-                    {currentChapter.workedExample.keyInsight && (
-                      <div className="text-xs text-amber-300/90 bg-amber-950/30 p-2.5 rounded-lg border border-amber-800/40">
-                        ⚡ <strong className="text-amber-300">Pulo do Gato (TRI):</strong> {currentChapter.workedExample.keyInsight}
+                  return (
+                    <div key={exIdx} className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-indigo-950/60 via-slate-900 to-slate-950 border border-indigo-700/60 shadow-xl space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold uppercase tracking-wider text-indigo-300">
+                          {ex.title || `Exemplo Resolvido ${exIdx + 1}`}
+                        </span>
                       </div>
-                    )}
-                  </div>
-                )}
 
-                {/* Armadilhas Clássicas */}
-                {currentChapter.commonTraps && currentChapter.commonTraps.length > 0 && (
-                  <div className="my-6 p-4 rounded-xl bg-rose-950/30 border border-rose-800/50">
-                    <div className="flex items-center gap-2 text-rose-300 font-bold text-sm mb-2">
-                      <AlertTriangle className="w-4 h-4 text-rose-400" />
-                      <span>Armadilhas Mais Comuns do ENEM neste Tópico</span>
-                    </div>
-                    <ul className="space-y-1.5 text-xs sm:text-sm text-rose-100/90 list-disc list-inside">
-                      {currentChapter.commonTraps.map((trap, tIdx) => (
-                        <li key={tIdx} className="leading-relaxed">{trap}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                      {problem && (
+                        <div className="bg-slate-950/90 p-4 rounded-xl border border-indigo-900/50 text-sm text-slate-200">
+                          <strong className="text-amber-300 block mb-1.5 flex items-center gap-1.5">
+                            <span>Enunciado Modelo:</span>
+                          </strong>
+                          <div className="whitespace-pre-line leading-relaxed">{problem}</div>
+                        </div>
+                      )}
 
-                {/* Checklist de Retenção */}
-                {currentChapter.retentionChecklist && currentChapter.retentionChecklist.length > 0 && (
-                  <div className="my-6 p-4 rounded-xl bg-emerald-950/30 border border-emerald-800/50">
-                    <div className="flex items-center gap-2 text-emerald-300 font-bold text-sm mb-2">
-                      <CheckSquare className="w-4 h-4 text-emerald-400" />
-                      <span>Checklist de Domínio (Autoavaliação)</span>
+                      {steps.length > 0 && (
+                        <div className="bg-indigo-950/30 p-4 rounded-xl border border-indigo-800/40 text-sm text-indigo-100 space-y-2">
+                          <strong className="text-emerald-400 block mb-1">
+                            Resolução Passo a Passo:
+                          </strong>
+                          {steps.map((st, sIdx) => (
+                            <div key={sIdx} className="flex items-start gap-2 text-xs sm:text-sm">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
+                              <span className="leading-relaxed">{st}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {answer && (
+                        <div className="bg-emerald-950/40 p-3 rounded-xl border border-emerald-800/50 text-xs sm:text-sm text-emerald-200">
+                          <strong className="text-emerald-300">Gabarito Comentado:</strong> {answer}
+                        </div>
+                      )}
+
+                      {insight && (
+                        <div className="text-xs sm:text-sm text-amber-300 bg-amber-950/40 p-3 rounded-xl border border-amber-800/50">
+                          ⚡ <strong className="text-amber-200">Pulo do Gato (TRI):</strong> {insight}
+                        </div>
+                      )}
                     </div>
-                    <ul className="space-y-1.5 text-xs sm:text-sm text-emerald-100/90 list-disc list-inside">
-                      {currentChapter.retentionChecklist.map((item, iIdx) => (
-                        <li key={iIdx} className="leading-relaxed">{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Aplicações Práticas, Saúde e Tecnologia */}
+            {allApplications.length > 0 && (
+              <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-cyan-950/40 via-sky-950/30 to-slate-900 border border-cyan-800/50 shadow-md">
+                <div className="flex items-center gap-2 text-cyan-300 font-bold text-sm mb-3">
+                  <Activity className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                  <span>Aplicações no Mundo Real, Saúde e Tecnologia</span>
+                </div>
+                <ul className="space-y-2.5">
+                  {allApplications.map((app, aIdx) => (
+                    <li key={aIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-cyan-100/90 leading-relaxed">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
+                      <span>{app}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Armadilhas Mais Frequentes e Pegadinhas da Banca */}
+            {allTraps.length > 0 && (
+              <div className="my-8 p-5 sm:p-6 rounded-2xl bg-rose-950/30 border border-rose-800/60 shadow-md">
+                <div className="flex items-center gap-2 text-rose-300 font-bold text-sm mb-3">
+                  <AlertTriangle className="w-4 h-4 text-rose-400 flex-shrink-0" />
+                  <span>Armadilhas Mais Frequentes e Pegadinhas da Banca</span>
+                </div>
+                <ul className="space-y-2.5">
+                  {allTraps.map((trap, tIdx) => (
+                    <li key={tIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-rose-100/90 leading-relaxed">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 flex-shrink-0" />
+                      <span>{trap}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Checklist de Domínio e Retenção Ativa */}
+            {allChecklist.length > 0 && (
+              <div className="my-8 p-5 sm:p-6 rounded-2xl bg-emerald-950/30 border border-emerald-800/60 shadow-md">
+                <div className="flex items-center gap-2 text-emerald-300 font-bold text-sm mb-3">
+                  <CheckSquare className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span>Checklist de Domínio e Retenção Ativa</span>
+                </div>
+                <ul className="space-y-2.5">
+                  {allChecklist.map((item, iIdx) => (
+                    <li key={iIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </article>
