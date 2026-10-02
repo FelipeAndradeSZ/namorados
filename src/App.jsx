@@ -46,7 +46,7 @@ function App() {
               fallback={
                 <div className="flex h-full w-full flex-col items-center justify-center bg-[#0b0c1e] text-rose-200">
                   <div className="size-10 animate-spin rounded-full border-2 border-rose-300 border-t-transparent mb-4" />
-                  <p className="font-display text-lg">Decolando no Destino 1000... ✈️</p>
+                  <p className="font-display text-lg">Preparando sua plataforma de estudos... 📚</p>
                 </div>
               }
             >

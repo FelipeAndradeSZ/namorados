@@ -1,13 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  PenTool, 
-  BarChart3, 
-  GraduationCap, 
-  Target
+import {
+  PenTool,
+  BarChart3,
+  GraduationCap,
+  Target,
+  Home
 } from "lucide-react";
 
 import { HUD } from "./ui/HUD";
+import { DashboardHome } from "./ui/DashboardHome";
 import { AreaStudyHub } from "./ui/AreaStudyHub";
 import { StudyStation } from "./ui/StudyStation";
 import { RedacaoLab } from "./ui/RedacaoLab";
@@ -18,22 +20,41 @@ import { contentEngine } from "./core/contentEngine";
 import { saveAttempt } from "./core/indexedDB";
 import { loadPlayerState, savePlayerState } from "./core/storageSync";
 import { rewardStudyAction } from "./core/gameState";
-import { 
-  calculateNextReview, 
+import {
+  calculateNextReview,
   updateSkillMastery
 } from "./learning/learningEngine";
 import { destinoAudio } from "./core/soundEngine";
 
 export default function Destino1000App({ onBack }) {
-  const [playerState, setPlayerState] = useState(() => loadPlayerState());
-  const [activeTab, setActiveTab] = useState("areas"); // 'areas' | 'simulados' | 'estudo' | 'redacao' | 'evolucao'
+  const [playerState, setPlayerState] = useState(() => {
+    const loaded = loadPlayerState();
+    const today = new Date().toISOString().split("T")[0];
+    if (loaded?.profile && loaded.profile.lastActiveDate !== today) {
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      const yesterdayStr = yesterday.toISOString().split("T")[0];
+      const isConsecutive = loaded.profile.lastActiveDate === yesterdayStr;
+      return {
+        ...loaded,
+        profile: {
+          ...loaded.profile,
+          lastActiveDate: today,
+          streakDays: isConsecutive ? (loaded.profile.streakDays || 1) + 1 : 1
+        }
+      };
+    }
+    return loaded;
+  });
+  const [activeTab, setActiveTab] = useState("inicio"); // 'inicio' | 'areas' | 'simulados' | 'estudo' | 'redacao' | 'evolucao'
+  const [selectedAreaId, setSelectedAreaId] = useState("natureza");
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
   const [activeSessionQuestions, setActiveSessionQuestions] = useState([]);
   const [isMuted, setIsMuted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   // Estados de Sessão Acadêmica e Simulado Cronometrado
-  const [sessionType, setSessionType] = useState("estudo"); // 'estudo' | 'simulado' | 'revisao' | 'erro' | 'rapido'
+  const [sessionType, setSessionType] = useState("estudo");
   const [sessionStartTime, setSessionStartTime] = useState(null);
   const [currentSessionAttempts, setCurrentSessionAttempts] = useState([]);
   const [completedSessionData, setCompletedSessionData] = useState(null);
@@ -106,7 +127,6 @@ export default function Destino1000App({ onBack }) {
       if (questions && questions.length > 0) {
         setActiveSessionQuestions(questions);
       } else {
-        // Fallback para perguntas da área
         const [area] = modulePath.split("/");
         const areaQs = await contentEngine.getQuestionsForArea(area);
         setActiveSessionQuestions(areaQs.slice(0, 10));
@@ -131,15 +151,15 @@ export default function Destino1000App({ onBack }) {
     setCurrentSessionAttempts([]);
     setCompletedSessionData(null);
     setSimuladoTimeRemaining(minutes * 60);
-    
+
     const count = Math.max(2, Math.floor(minutes / 2.5));
     const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
-    
+
     let quickPool = await contentEngine.getRandomQuestions(count, { excludeIds: seenIds });
-    
+
     if (quickPool.length < count) {
-       const fallback = await contentEngine.getRandomQuestions(count);
-       quickPool = fallback;
+      const fallback = await contentEngine.getRandomQuestions(count);
+      quickPool = fallback;
     }
 
     setActiveSessionQuestions(quickPool);
@@ -179,7 +199,7 @@ export default function Destino1000App({ onBack }) {
     setIsLoading(false);
   };
 
-  // Modo "Caderno de Erros" (Superar falhas)
+  // Modo "Caderno de Erros"
   const handleStartErrorSession = async () => {
     destinoAudio.playClick();
     setIsLoading(true);
@@ -214,21 +234,30 @@ export default function Destino1000App({ onBack }) {
     setSessionStartTime(Date.now());
     setCurrentSessionAttempts([]);
     setCompletedSessionData(null);
-    setSimuladoTimeRemaining(count * 180); // 3 minutos por questão (padrão ENEM)
-    
+    setSimuladoTimeRemaining(count * 180);
+
     const seenIds = new Set(playerState.history?.map(h => h.questionId) || []);
-    
+
     let simuladoPool = await contentEngine.getRandomQuestions(count, { excludeIds: seenIds });
-    
+
     if (simuladoPool.length < count) {
-       const fallback = await contentEngine.getRandomQuestions(count);
-       simuladoPool = fallback;
+      const fallback = await contentEngine.getRandomQuestions(count);
+      simuladoPool = fallback;
     }
 
     setActiveSessionQuestions(simuladoPool);
     setActiveQuestionIndex(0);
     setActiveTab("estudo");
     setIsLoading(false);
+  };
+
+  // Navegar para uma área específica
+  const handleNavigateToArea = (areaKey) => {
+    destinoAudio.playClick();
+    if (areaKey) {
+      setSelectedAreaId(areaKey);
+    }
+    setActiveTab("areas");
   };
 
   // Processar resposta da questão
@@ -245,25 +274,20 @@ export default function Destino1000App({ onBack }) {
     let attemptToSave = null;
 
     setPlayerState(prev => {
-      // 1. Recompensa de XP Acadêmico
       let xp = isCorrect ? 50 : 20;
 
       if (reflected) {
-        // Bônus pedagógico por reflexão metacognitiva do erro
         xp += 30;
       }
 
       const rewarded = rewardStudyAction(prev, { xp, isCorrect });
 
-      // 2. Cálculo do SM-2 (Repetição Espaçada)
       const previousSchedule = prev.history?.find(h => h.questionId === questionId)?.reviewSchedule;
       const nextSchedule = calculateNextReview(previousSchedule, isCorrect, confidence);
 
-      // 3. Atualizar domínio da área
       const currentAreaMastery = prev.masteryMatrix?.[question.area] || 50;
       const newAreaMastery = updateSkillMastery(currentAreaMastery, isCorrect, question.difficulty, confidence);
 
-      // 4. Caderno de Erros (Metacognição e Superação)
       let updatedErrorNotebook = [...(prev.errorNotebook || [])];
       if (!isCorrect) {
         const existingErrIdx = updatedErrorNotebook.findIndex(e => e.questionId === questionId);
@@ -283,11 +307,9 @@ export default function Destino1000App({ onBack }) {
           updatedErrorNotebook = [errEntry, ...updatedErrorNotebook];
         }
       } else {
-        // Se acertou, remove do caderno de erros
         updatedErrorNotebook = updatedErrorNotebook.filter(e => e.questionId !== questionId);
       }
 
-      // 5. Construir tentativa
       attemptToSave = {
         id: `${Date.now()}-${questionId}`,
         questionId,
@@ -323,10 +345,10 @@ export default function Destino1000App({ onBack }) {
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-[#0b0c1e] text-white select-none overflow-hidden font-sans">
-      
+
       {/* Top HUD */}
-      <HUD 
-        playerState={playerState} 
+      <HUD
+        playerState={playerState}
         onBack={onBack}
         isMuted={isMuted}
         onToggleMute={handleToggleMute}
@@ -335,6 +357,29 @@ export default function Destino1000App({ onBack }) {
       {/* Área Central Rolável */}
       <main className="flex-1 overflow-y-auto pb-24 pt-2">
         <AnimatePresence mode="wait">
+
+          {activeTab === "inicio" && (
+            <motion.div
+              key="inicio"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+            >
+              <DashboardHome
+                playerState={playerState}
+                onNavigateToArea={handleNavigateToArea}
+                onStartQuickSession={handleQuickSession}
+                onStartReviewSession={handleStartReviewSession}
+                onStartErrorSession={handleStartErrorSession}
+                onStartSimulado={handleSimuladoSession}
+                onGoToRedacao={() => setActiveTab("redacao")}
+                onGoToAnalytics={() => setActiveTab("evolucao")}
+                onGoToAreas={() => setActiveTab("areas")}
+              />
+            </motion.div>
+          )}
+
           {activeTab === "areas" && (
             <motion.div
               key="areas"
@@ -343,7 +388,9 @@ export default function Destino1000App({ onBack }) {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <AreaStudyHub 
+              <AreaStudyHub
+                key={selectedAreaId}
+                initialAreaId={selectedAreaId}
                 playerState={playerState}
                 onStartTopicSession={handleStartTopicSession}
                 onGoToRedacao={() => setActiveTab("redacao")}
@@ -365,8 +412,8 @@ export default function Destino1000App({ onBack }) {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <AnalyticsDashboard 
-                playerState={playerState} 
+              <AnalyticsDashboard
+                playerState={playerState}
                 onStartSimulado={handleSimuladoSession}
               />
             </motion.div>
@@ -389,7 +436,7 @@ export default function Destino1000App({ onBack }) {
                   totalTimeSeconds={completedSessionData.totalTimeSeconds}
                   onClose={() => {
                     setCompletedSessionData(null);
-                    setActiveTab("areas");
+                    setActiveTab("inicio");
                   }}
                   onRetryErrors={(wrongQuestions) => {
                     setActiveSessionQuestions(wrongQuestions);
@@ -406,14 +453,17 @@ export default function Destino1000App({ onBack }) {
                   <p className="text-sm">Carregando conteúdo e questões do ENEM...</p>
                 </div>
               ) : currentQuestion ? (
-                <StudyStation 
+                <StudyStation
                   key={currentQuestion.id}
+                  questions={activeSessionQuestions}
                   question={currentQuestion}
                   questionIndex={activeQuestionIndex}
                   totalQuestions={activeSessionQuestions.length}
+                  attempts={currentSessionAttempts}
                   sessionType={sessionType}
                   timeRemainingSeconds={simuladoTimeRemaining}
                   onAnswerSubmit={handleAnswerSubmit}
+                  onSelectQuestionIndex={(idx) => setActiveQuestionIndex(idx)}
                   onNextQuestion={() => {
                     if (activeQuestionIndex < activeSessionQuestions.length - 1) {
                       setActiveQuestionIndex(prev => prev + 1);
@@ -421,16 +471,20 @@ export default function Destino1000App({ onBack }) {
                       handleFinishSession();
                     }
                   }}
-                  isLastQuestion={activeQuestionIndex >= activeSessionQuestions.length - 1}
+                  onPrevQuestion={() => {
+                    setActiveQuestionIndex(prev => Math.max(0, prev - 1));
+                  }}
+                  onFinishSession={handleFinishSession}
+                  onBackToMenu={() => setActiveTab("inicio")}
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center h-[50vh] text-white/50 px-6 text-center">
                   <p className="mb-4">Não há questões disponíveis para este filtro no momento.</p>
-                  <button 
-                    onClick={() => setActiveTab("areas")}
+                  <button
+                    onClick={() => setActiveTab("inicio")}
                     className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition cursor-pointer text-white font-semibold"
                   >
-                    Voltar para as Áreas do ENEM
+                    Voltar ao Início
                   </button>
                 </div>
               )}
@@ -457,8 +511,8 @@ export default function Destino1000App({ onBack }) {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
             >
-              <AnalyticsDashboard 
-                playerState={playerState} 
+              <AnalyticsDashboard
+                playerState={playerState}
                 onStartSimulado={handleSimuladoSession}
               />
             </motion.div>
@@ -466,13 +520,24 @@ export default function Destino1000App({ onBack }) {
         </AnimatePresence>
       </main>
 
-      {/* Barra Inferior de Navegação - Focada em Estudos do ENEM */}
-      <nav 
+      {/* Barra Inferior de Navegação — 5 Abas Focadas em Estudo */}
+      <nav
         aria-label="Navegação da Plataforma ENEM"
         className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#100810]/95 px-3 py-2 backdrop-blur-2xl"
       >
         <div className="mx-auto flex max-w-lg items-center justify-around">
-          
+
+          <button
+            type="button"
+            onClick={() => { destinoAudio.playClick(); setActiveTab("inicio"); }}
+            className={`flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${
+              activeTab === "inicio" ? "text-rose-400 font-bold scale-105" : "text-rose-200/50 hover:text-rose-200"
+            }`}
+          >
+            <Home size={20} />
+            <span className="text-[0.65rem]">Início</span>
+          </button>
+
           <button
             type="button"
             onClick={() => { destinoAudio.playClick(); setActiveTab("areas"); }}
@@ -481,7 +546,7 @@ export default function Destino1000App({ onBack }) {
             }`}
           >
             <GraduationCap size={20} />
-            <span className="text-[0.65rem]">Áreas ENEM</span>
+            <span className="text-[0.65rem]">Matérias</span>
           </button>
 
           <button
@@ -503,7 +568,7 @@ export default function Destino1000App({ onBack }) {
             }`}
           >
             <PenTool size={20} />
-            <span className="text-[0.65rem]">Redação 1000</span>
+            <span className="text-[0.65rem]">Redação</span>
           </button>
 
           <button
@@ -514,7 +579,7 @@ export default function Destino1000App({ onBack }) {
             }`}
           >
             <BarChart3 size={20} />
-            <span className="text-[0.65rem]">Desempenho</span>
+            <span className="text-[0.65rem]">Progresso</span>
           </button>
 
         </div>

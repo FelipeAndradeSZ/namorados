@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Compass, Heart, Menu, Pause, Sparkles, X } from "lucide-react";
+import { GraduationCap, Heart, Menu, Pause, Sparkles, X } from "lucide-react";
 import { loveStory } from "../../config/loveStory";
 import { useExperience } from "../../context/useExperience";
 
@@ -89,14 +89,13 @@ export function Navigation() {
               {effectsEnabled ? <Pause size={15} /> : <Sparkles size={16} />}
             </button>
 
-            {/* Botão Elegante para Entrar no Destino 1000 */}
             <button
               type="button"
               onClick={handleOpenGame}
               className="group relative flex items-center gap-2 rounded-full border border-rose-300/30 bg-gradient-to-r from-rose-500/20 via-pink-500/20 to-purple-500/20 px-4 py-2.5 text-xs font-semibold tracking-wide text-rose-100 shadow-[0_0_20px_rgba(244,63,94,0.2)] backdrop-blur-md transition-all hover:scale-105 hover:border-rose-300 hover:bg-rose-500/30 cursor-pointer"
             >
-              <Compass size={14} className="text-rose-300" />
-              <span>Destino 1000 ✈️</span>
+              <GraduationCap size={14} className="text-rose-300" />
+              <span>Estudos ENEM 📚</span>
             </button>
 
             <a
@@ -130,7 +129,7 @@ export function Navigation() {
             className="fixed inset-0 z-[60] grid place-items-center bg-[#100810]/95 px-8 backdrop-blur-2xl md:hidden"
           >
             <div className="flex flex-col items-center gap-8">
-              {/* Opção Destino 1000 no menu Mobile */}
+              {/* Plataforma de Estudos ENEM no menu Mobile */}
               <motion.button
                 type="button"
                 onClick={handleOpenGame}
@@ -138,8 +137,8 @@ export function Navigation() {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-display text-3xl sm:text-4xl text-rose-300 flex items-center gap-3 cursor-pointer"
               >
-                <Compass size={28} className="text-rose-300" />
-                <span>Destino 1000 ✈️</span>
+                <GraduationCap size={28} className="text-rose-300" />
+                <span>Estudos ENEM 📚</span>
               </motion.button>
 
               {links.map((link, index) => (

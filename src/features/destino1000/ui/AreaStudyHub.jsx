@@ -116,6 +116,7 @@ const AREA_COLORS = {
 
 export function AreaStudyHub({ 
   playerState = {}, 
+  initialAreaId = "natureza",
   onStartTopicSession, 
   onGoToRedacao, 
   onStartQuickSession,
@@ -123,7 +124,7 @@ export function AreaStudyHub({
   onStartErrorSession,
   onXpEarned
 }) {
-  const [selectedAreaId, setSelectedAreaId] = useState("natureza");
+  const [selectedAreaId, setSelectedAreaId] = useState(initialAreaId);
   const [activeTheoryModule, setActiveTheoryModule] = useState(null);
   const [activeFlashcards, setActiveFlashcards] = useState(null); // null | { area: string, moduleId: string }
 

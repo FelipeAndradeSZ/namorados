@@ -15,7 +15,7 @@ export function HUD({ playerState, onBack, isMuted, onToggleMute }) {
             onClick={onBack}
             className="grid size-9 shrink-0 place-items-center rounded-xl border border-white/15 bg-white/5 text-rose-200 hover:bg-rose-500/20 transition cursor-pointer"
             aria-label="Voltar para a página inicial"
-            title="Sair do Destino 1000"
+            title="Voltar ao site principal"
           >
             <ArrowLeft size={18} />
           </button>

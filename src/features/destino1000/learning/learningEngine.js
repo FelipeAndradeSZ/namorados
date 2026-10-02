@@ -181,7 +181,7 @@ export function getDailyRecommendation(playerState) {
     dueReviewsCount: dueReviews.length,
     reason: `Detectamos que ${weakestArea.toUpperCase()} é a área que mais pode alavancar sua pontuação no ENEM neste momento.`,
     recommendedDuration: "20 minutos",
-    targetMission: `Expedição de Fortalecimento em ${weakestArea}`
+    targetMission: `Sessão de Fortalecimento em ${weakestArea}`
   };
 }
 
