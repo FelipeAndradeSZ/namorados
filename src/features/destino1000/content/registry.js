@@ -26,6 +26,7 @@ export const QUESTION_MODULES = {
   "matematica/trigonometria": () => import("./questions/matematica/trigonometria.js"),
   "matematica/geometria-analitica": () => import("./questions/matematica/geometria-analitica.js"),
   "matematica/progressoes": () => import("./questions/matematica/progressoes.js"),
+  "matematica/geometria-plana": () => import("./questions/matematica/geometria-plana.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
@@ -50,6 +51,7 @@ export const QUESTION_MODULES = {
   "humanas/era-vargas-populismo": () => import("./questions/humanas/era-vargas-populismo.js"),
   "humanas/geografia-fisica-clima": () => import("./questions/humanas/geografia-fisica-clima.js"),
   "humanas/historia-geral": () => import("./questions/humanas/historia-geral.js"),
+  "humanas/brasil-imperio": () => import("./questions/humanas/brasil-imperio.js"),
 
   // ── Ciências da Natureza ──
   "natureza/ecologia": () => import("./questions/natureza/ecologia.js"),
@@ -65,6 +67,7 @@ export const QUESTION_MODULES = {
   "natureza/termologia": () => import("./questions/natureza/termologia.js"),
   "natureza/evolucao": () => import("./questions/natureza/evolucao.js"),
   "natureza/solucoes-equilibrio": () => import("./questions/natureza/solucoes-equilibrio.js"),
+  "natureza/fisiologia-humana": () => import("./questions/natureza/fisiologia-humana.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),

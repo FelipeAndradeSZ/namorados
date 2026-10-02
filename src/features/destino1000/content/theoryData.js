@@ -1601,6 +1601,121 @@ export const THEORY_CONTENT = {
       "Não confunda escravidão clássica com servidão feudal: o servo não era vendido individualmente no mercado, mas estava preso à gleba com obrigações tributárias senhoriais."
     ],
     mnemonics: "Atenas vota na praça mas exclui a maioria; a França derruba o sangue nobre em nome da lei igualitária."
+  },
+
+  "natureza/fisiologia-humana": {
+    topic: "Fisiologia Humana e Imunologia",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Assunto mais recorrente de Biologia Médica no ENEM (Vacina vs. Soro, Néfrons/ADH, Insulina/Glucagon e Sistema Cardiovascular).",
+    highFrequencySkills: ["H14 - Mecanismos de regulação e defesa do corpo humano", "H15 - Homeostase e processos biológicos em situações clínicas"],
+    overview: "Estudo integrado do funcionamento dos sistemas orgânicos humanos, mecanismos de retroalimentação homeostática (feedback negativo), controle endócrino e respostas imunológicas inata e adaptativa.",
+    keyConcepts: [
+      {
+        title: "Imunização Ativa vs. Passiva (Vacinas vs. Soros)",
+        content: "Vacina = Imunização Ativa (antígenos atenuados/inativados ou RNAm; induz síntese própria de anticorpos e diferenciação de linfócitos de memória; efeito preventivo e duradouro). Soro = Imunização Passiva (anticorpos prontos policlonais heterólogos; efeito curativo emergencial e rápido para envenenamento e tétano agudo; sem formação de memória imunológica duradoura)."
+      },
+      {
+        title: "Excreção e Osmorregulação Renal (Néfron e ADH)",
+        content: "Filtração glomerular no corpúsculo de Malpighi (impermeável a proteínas como albumina). Reabsorção ativa de 100% da glicose no túbulo contorcido proximal (via cotransporte SGLT2). ADH (vasopressina, da neuro-hipófise) insere aquaporinas nos ductos coletores aumentando reabsorção de água e concentrando a urina. Aldosterona (córtex da adrenal) reabsorve Na+ e secreta K+."
+      },
+      {
+        title: "Homeostase Glicêmica Pancreática",
+        content: "Ilhotas de Langerhans: Células beta secretam INSULINA (anabólica, hipoglicemiante, promove captação de glicose via GLUT4 e glicogênese hepática/muscular). Células alfa secretam GLUCAGON (catabólico, hiperglicemiante, ativa glicogenólise e gliconeogênese no fígado). No Diabetes Mellitus descompensado, a glicosúria provoca diurese osmótica (poliúria e polidipsia)."
+      },
+      {
+        title: "Ciclo Cardíaco e Circulação de Gases",
+        content: "Coração com 4 cavidades e circulação dupla e completa. Sístole ventricular fecha valvas atrioventriculares (tricúspide e mitral = 1ª bulha cardíaca 'tum') e ejeta sangue na aorta e tronco pulmonar. Transporte de CO2: ~70% como íon bicarbonato (HCO3-) dissolvido no plasma catalisado pela anidrase carbônica eritrocitária. Efeito Bohr: acidose tecidual reduz a afinidade da hemoglobina por O2, facilitando sua liberação."
+      }
+    ],
+    formulasAndRules: [
+      "Equação do Tampão Respiratório: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3- (hiperventilação expira CO2 e eleva o pH sanguíneo).",
+      "Pressão Arterial: PA = Débito Cardíaco (DC) × Resistência Vascular Periférica (RVP).",
+      "Potencial de Ação: Despolarização = Influxo de Na+; Repolarização = Efluxo de K+; Repouso mantido pela Na+/K+-ATPase."
+    ],
+    enemTraps: [
+      "Bile NÃO possui enzimas digestivas! Sua função é exclusivamente físico-química tensoativa: emulsificar gotículas lipídicas para ampliar a área da lipase pancreática.",
+      "Linfócitos T NÃO sintetizam anticorpos. Apenas plasmócitos (linfócitos B ativados) produzem imunoglobulinas.",
+      "O principal estímulo fisiológico para a ventilação é o excesso de CO2 no sangue detectado pelo bulbo (acidose), e NÃO a falta de oxigênio."
+    ],
+    mnemonics: "Vacina ativa memória da vacaria; Soro salva na emergência do veneno sem memória futura."
+  },
+
+  "matematica/geometria-plana": {
+    topic: "Geometria Plana e Polígonos",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Competência 2 do ENEM: Áreas de figuras planas, Teorema de Pitágoras e Semelhança de Triângulos caem em pelo menos 6 a 8 questões anualmente.",
+    highFrequencySkills: ["H6 - Identificar características de polígonos", "H7 - Calcular áreas de superfícies planas", "H8 - Resolver problemas envolvendo relações métricas e trigonometria"],
+    overview: "Cálculo de perímetros e áreas de polígonos e círculos, propriedades métricas no triângulo retângulo, semelhança geométrica e razões proporcionais lineares e quadráticas em contextos cotidianos.",
+    keyConcepts: [
+      {
+        title: "Fórmulas Fundamentais de Áreas",
+        content: "Triângulo: A = (b · h)/2 | Triângulo Equilátero: A = (L²√3)/4 | Triângulo com Ângulo: A = (a · b · sen θ)/2 | Trapézio: A = [(B + b) · h]/2 | Losango: A = (D · d)/2 | Círculo: A = π · R² | Coroa Circular: A = π · (R² - r²)."
+      },
+      {
+        title: "Teorema de Pitágoras e Relações Métricas",
+        content: "Em triângulos retângulos: a² = b² + c² (hipotenusa 'a'). Relações métricas com projeções m e n: h² = m · n (altura ao quadrado é a média geométrica das projeções); a · h = b · c; b² = a · m; c² = a · n. Ternos pitagóricos famosos para memorizar: 3-4-5, 5-12-13, 8-15-17 e 7-24-25."
+      },
+      {
+        title: "Semelhança e Razões Lineares vs. Áreas",
+        content: "Se a razão de semelhança linear entre duas figuras é k, então a razão entre seus perímetros é k, e a razão entre suas áreas é k²! Exemplo: se uma maquete está na escala 1:100 (k = 1/100), a área real é multiplicada por 100² = 10.000."
+      },
+      {
+        title: "Polígonos Regulares e Pavimentação",
+        content: "Soma dos ângulos internos: S_i = (n - 2) · 180°. Ângulo interno: a_i = S_i / n. Ângulo externo: a_e = 360° / n. Número de diagonais: d = [n · (n - 3)] / 2. Apenas triângulos equiláteros (60°), quadrados (90°) e hexágonos regulares (120°) ladrilham o plano sozinhos porque seus ângulos são divisores exatos de 360°."
+      }
+    ],
+    formulasAndRules: [
+      "Comprimento da Circunferência: C = 2 · π · R.",
+      "Área do Hexágono Regular: A = 6 × (L²√3 / 4) = 3L²√3 / 2.",
+      "Fórmula de Heron: A = √[p(p - a)(p - b)(p - c)], onde p = (a + b + c)/2.",
+      "Base Média do Trapézio: B_m = (Base maior + Base menor) / 2."
+    ],
+    enemTraps: [
+      "Nunca esqueça de elevar a escala linear ao quadrado quando calcular áreas reais: 1 cm : 200 m linear equivale a 1 cm² : 40.000 m² de área!",
+      "Não confunda coroa circular π(R² - r²) com π(R - r)². (30² - 20² = 500 ≠ 10² = 100).",
+      "No paralelogramo, a área é simplesmente base × altura perpendicular, SEM dividir por 2."
+    ],
+    mnemonics: "Trapézio soma as bases e parte ao meio; Pitágoras quadra os catetos pro topo inteiro."
+  },
+
+  "humanas/brasil-imperio": {
+    topic: "Brasil Império (Primeiro Reinado, Regências e Segundo Reinado)",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Eixo estrutural da História do Brasil (Constituição de 1824, Período Regencial, Café, Lei de Terras de 1850 e Abolição).",
+    highFrequencySkills: ["H11 - Compreender a formação do Estado Nacional brasileiro", "H12 - Analisar as contradições políticas e institucionais do Império", "H13 - Avaliar o impacto das transformações socioeconômicas e do cativeiro"],
+    overview: "Análise da construção do Estado monárquico brasileiro, do conflito entre centralismo e federalismo, da manutenção da ordem latifundiária e escravocrata, e dos processos que levaram à crise da monarquia e à Proclamação da República.",
+    keyConcepts: [
+      {
+        title: "Primeiro Reinado e Carta de 1824",
+        content: "D. Pedro I dissolveu a Constituinte de 1823 ('Noite da Agonia') e outorgou a Constituição de 1824. Quatro poderes com primazia do Poder Moderador (privativo do Imperador, sagrado e inviolável). Voto censitário e indireto. Padroado e beneplácito subordinavam a Igreja. Reações liberais: Confederação do Equador (1824, Frei Caneca). Guerra da Cisplatina e crise econômica levaram à abdicação em 7 de abril de 1831."
+      },
+      {
+        title: "Período Regencial (1831–1840): Avanço e Regresso",
+        content: "Criação da Guarda Nacional (1831) entregou poder militar aos latifundiários ('coronéis'). Ato Adicional de 1834 descentralizou poder criando Assembleias Provinciais. Eclosão de revoltas provinciais: Cabanagem (Pará, massas populares ribeirinhas), Revolta dos Malês (Bahia, 1835, escravizados islâmicos letrados), Farroupilha (RS, estancieiros criadores de gado e charque), Balaiada (MA). O Golpe da Maioridade (1840) antecipou o reinado de D. Pedro II aos 14 anos para restaurar a ordem."
+      },
+      {
+        title: "Segundo Reinado: Café e a Lei de Terras de 1850",
+        content: "Sistema de 'Parlamentarismo às Avessas': o Imperador escolhia o Primeiro-Ministro pelo Poder Moderador, alternando Liberais ('Luzias') e Conservadores ('Saquaremas'). Marcha do café: Vale do Paraíba (escravista arcaico, solo esgotado) para o Oeste Paulista (terra roxa, ferrovias, imigração italiana pelo colonato). Em setembro de 1850: Lei Eusébio de Queirós extinguiu o tráfico transatlântico e a Lei de Terras nº 601 transformou a terra em mercadoria cara por compra, impedindo o acesso à posse por ex-escravizados e imigrantes."
+      },
+      {
+        title: "Crise do Trono e Proclamação da República (1889)",
+        content: "A Guerra do Paraguai (1864–1870) politizou o Exército Brasileiro, que adotou o positivismo (Benjamin Constant) e passou a rejeitar a monarquia. A tríplice crise: 1. Questão Religiosa (prisão de bispos em 1872); 2. Questão Militar (conflito entre oficiais e políticos civis); 3. Questão Abolicionista: após a Lei Áurea (1888) sem indenização, os latifundiários do Vale do Paraíba abandonaram a monarquia ('republicanos de última hora'). Em 15 de novembro de 1889, Deodoro da Fonseca e os militares proclamaram a República."
+      }
+    ],
+    formulasAndRules: [
+      "Sequência Gradualista das Leis Abolicionistas: 1850 (Eusébio de Queirós) ⟹ 1871 (Ventre Livre) ⟹ 1885 (Sexagenários) ⟹ 1888 (Lei Áurea).",
+      "Poder Moderador = Quarto poder discricionário que nomeava ministros e dissolvia a Câmara sem prestar contas a ninguém.",
+      "Lei de Terras de 1850 = Fim da posse gratuita; terra pública só se adquire com pagamento em dinheiro à vista."
+    ],
+    enemTraps: [
+      "A Constituição de 1824 foi OUTORGADA (imposta) por D. Pedro I, e não promulgada por assembleia eleita.",
+      "A Lei do Ventre Livre não libertava a criança imediatamente para viver com autonomia: o fazendeiro podia explorar seu trabalho até os 21 anos!",
+      "A Proclamação da República em 1889 não contou com ampla participação popular: foi um golpe militar articulado com a oligarquia cafeeira ('o povo assistiu bestializado')."
+    ],
+    mnemonics: "Avanço liberal descentralizou nas regências; o café marchou pro oeste e o Exército derrubou a Coroa em 89."
   }
 };
 
