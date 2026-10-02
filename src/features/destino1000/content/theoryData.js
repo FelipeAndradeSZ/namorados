@@ -2437,6 +2437,58 @@ export const THEORY_CONTENT = {
       "Não confunda Meio Técnico-Científico-Informacional com neutralidade tecnológica: Milton Santos ressalta que as redes técnicas concentram poder em 'espaços luminosos' corporativos, segregando os 'espaços opacos'."
     ],
     mnemonics: "Taylor cronometra, Ford põe na esteira, Toyota enxuga o estoque e a plataforma algorítmica uberiza a carteira!"
+  },
+
+  "humanas/filosofia-politica-poder": {
+    topic: "Filosofia Política, Estado, Poder e Democracia",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Competência 3 e 5 (H11, H12, H13, H14, H15, H23): Realismo político maquiaveliano (virtù e fortuna), Contratualismo clássico (Hobbes, Locke, Rousseau), Tripartição dos poderes de Montesquieu, Monopólio da força legítima em Max Weber, Banalidade do Mal em Hannah Arendt, Esfera pública deliberativa em Habermas, Biopolítica em Foucault, Necropolítica em Achille Mbembe e Teoria da Justiça de Rawls.",
+    highFrequencySkills: [
+      "H11 - Identificar registros sobre a cidadania e a participação política em diferentes sociedades",
+      "H12 - Analisar o papel da justiça, do direito e da ética em formações históricas",
+      "H13 - Analisar as contradições do poder político, superestrutura e lutas sociais",
+      "H14 - Comparar diferentes concepções sobre o papel do Estado e das leis na organização social",
+      "H15 - Avaliar criticamente a atuação de instituições estatais e movimentos democráticos",
+      "H23 - Reconhecer as bases filosóficas das declarações de direitos humanos e da cidadania moderna"
+    ],
+    overview: "A Filosofia e a Sociologia Política investigam as fontes de legitimidade do poder, as origens e funções do Estado, as tensões entre liberdade individual e autoridade soberana, e a construção histórica da cidadania democrática. O ENEM cobra o confronto rigoroso entre as correntes do pensamento: o realismo secular de Maquiavel, os três modelos contratualistas (absolutista em Hobbes, liberal-jusnaturalista em Locke e democrático-radical em Rousseau), os freios institucionais de Montesquieu, a tipologia da dominação de Weber, as tragédias do totalitarismo em Arendt e as críticas contemporâneas à violência soberana e desigualdade (Foucault, Mbembe, Honneth, Rawls e Chaui).",
+    keyConcepts: [
+      {
+        title: "Nicolau Maquiavel e a Autonomia da Política",
+        content: "• Ruptura com a moral cristã e utopias antigas em prol da 'verità effettuale' (verdade efetiva das coisas).\n• A política é uma esfera autônoma com regras próprias guiadas pela manutenção da estabilidade do Estado.\n• Virtù (audácia, cálculo estratégico e capacidade de ação) versus Fortuna (imprevistos e circunstâncias do tempo histórico)."
+      },
+      {
+        title: "O Contratualismo Clássico: Hobbes, Locke e Rousseau",
+        content: "• Thomas Hobbes: estado de natureza como guerra de todos contra todos ('o homem é o lobo do homem'). Contrato de submissão irrevogável alienando a liberdade a um soberano absoluto (o Leviatã) em troca de paz e segurança da vida.\n• John Locke: jusnaturalismo liberal; os indivíduos possuem direitos naturais inalienáveis (vida, liberdade e propriedade privada gerada pelo trabalho). O Estado surge por consentimento como juiz imparcial limitado para proteger esses direitos, admitindo o direito legítimo de resistência/rebelião popular contra tiranias.\n• Jean-Jacques Rousseau: o homem nasce bom e a sociedade o corrompe com a propriedade privada e a desigualdade. O contrato social legítimo institui a soberania popular inalienável regida pela Vontade Geral (volonté générale), onde ser livre é obedecer à lei que nós mesmos elaboramos para o bem comum."
+      },
+      {
+        title: "Montesquieu e os Três Poderes (Freios e Contrapesos)",
+        content: "• 'Todo homem que tem poder é levado a abusar dele; é preciso que o poder freie o poder'.\n• Divisão funcional autônoma e harmônica entre Executivo, Legislativo e Judiciário.\n• Sistema de freios e contrapesos (checks and balances) assegura a liberdade civil ao impedir a concentração despótica de funções no mesmo governante."
+      },
+      {
+        title: "Max Weber: Estado e Tipos de Dominação",
+        content: "• Definição sociológica de Estado: comunidade humana que, dentro de um território demarcado, reivindica com êxito o monopólio do uso legítimo da força física.\n• Três Tipos Puros de Dominação: Tradicional (costumes sagrados imemoriais), Carismática (devoção afetiva a um líder excepcional) e Racional-Legal (obediência impessoal à lei formal e à competência da burocracia técnica)."
+      },
+      {
+        title: "Filosofia Política Contemporânea: Arendt, Habermas, Mbembe e Rawls",
+        content: "• Hannah Arendt: a 'banalidade do mal' (Eichmann e a atrofia moral da desresponsabilização burocrática); a ação política como espaço da pluralidade e liberdade na ágora pública.\n• Jürgen Habermas: Teoria do Agir Comunicativo e democracia deliberativa; a legitimidade das leis decorre da força do melhor argumento em debate público desprovido de coações.\n• Achille Mbembe: 'Necropolítica' como poder soberano de ditar quem deve morrer em territórios periféricos e pós-coloniais militarizados.\n• John Rawls: Teoria da Justiça sob o 'Véu da Ignorância' na posição original; garante igualdade de liberdades básicas e o Princípio da Diferença em amparo aos mais desfavorecidos.\n• Marilena Chaui: desconstrução do mito da não-violência do brasileiro e crítica ao autoritarismo social estrutural."
+      }
+    ],
+    formulasAndRules: [
+      "Tríade Contratualista: Hobbes (natureza belicosa ⟹ soberano absoluto) | Locke (natureza com direitos ⟹ Estado liberal limitado) | Rousseau (natureza boa corrompida ⟹ soberania popular da Vontade Geral).",
+      "Tripartição de Montesquieu: Executivo + Legislativo + Judiciário fiscalizando-se mutuamente = Garantia de Liberdade.",
+      "Definição de Estado (Weber): Território Soberano + Monopólio da Coerção Física Legítima.",
+      "Véu da Ignorância (Rawls): Escolha imparcial de princípios de justiça sem conhecimento prévio da própria posição social futura."
+    ],
+    enemTraps: [
+      "Hobbes NÃO defendia o direito divino dos reis; justificava o poder soberano absoluto por meio de um contrato racional laico originado no medo da morte violenta.",
+      "Locke NÃO considera que a propriedade privada é outorgada pelo Estado; ela é um direito natural pré-existente fruto do trabalho sobre a terra.",
+      "Rousseau NÃO propunha voltar a viver como selvagem primitivo isolado; defendia a reforma republicana da sociedade através da virtude cívica e da soberania popular.",
+      "A 'banalidade do mal' em Hannah Arendt NÃO diminui a gravidade do Holocausto; denuncia que atrocidades monstruosas podem ser cometidas por burocratas medíocres que abdicaram do pensamento ético crítico.",
+      "O monopólio da violência em Max Weber exige LEGITIMIDADE; força bruta arbitrária sem reconhecimento legal não configura a autoridade do Estado moderno."
+    ],
+    mnemonics: "Hobbes teme o lobo e faz o Leviatã; Locke salva a propriedade pro cidadão de manhã; Rousseau canta a Vontade Geral soberana; e Montesquieu separa o poder em três pra lei ser humana!"
   }
 };
 
