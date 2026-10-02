@@ -1451,6 +1451,156 @@ export const THEORY_CONTENT = {
       "Ao interpolar k postes ou mudas de árvores, divida por (k + 1) vãos, não por k!"
     ],
     mnemonics: "PA soma (linha reta); PG multiplica (curva exponencial que explode)."
+  },
+  "linguagens/variacao-linguistica": {
+    topic: "Variação Linguística e Preconceito",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Top 1 Absoluto em Linguagens: mais de 4 questões por prova sobre adequação, dialetos e sociolinguística.",
+    highFrequencySkills: [
+      "H28 - Reconhecer a função e o valor social das variedades linguísticas",
+      "H29 - Identificar preconceitos e juízos de valor linguísticos",
+      "H30 - Analisar a adequação do registro ao contexto comunicativo"
+    ],
+    overview: "A sociolinguística comprova que nenhuma língua viva é estática ou homogênea. As línguas variam no espaço geográfico (diatópica), no tempo histórico (diacrônica), nos estratos sociais e faixas etárias (diastrática) e nas situações de formalidade (diafásica). O preconceito linguístico é um preconceito social mascarado que desvaloriza formas faladas por grupos historicamente subordinados.",
+    keyConcepts: [
+      {
+        title: "Variação Diatópica (Regional)",
+        content: "Diferenças de vocabulário, sintaxe e pronúncia (sotaque) condicionadas pela geografia territorial (ex: dialetos caipira, mineiro, gaúcho, nordestino, amazônico)."
+      },
+      {
+        title: "Variação Diacrônica (Histórica)",
+        content: "Transformações morfológicas e fonéticas sofridas pela língua ao longo dos séculos (ex: 'Vossa Mercê' -> 'vossemecê' -> 'você' -> 'cê')."
+      },
+      {
+        title: "Variação Diastrática (Social)",
+        content: "Marcas linguísticas associadas à classe socioeconômica, escolaridade, geração/idade (gírias juvenis) e grupos de pertencimento comunitário."
+      },
+      {
+        title: "Variação Diafásica (Situacional/Estilística)",
+        content: "Níveis de registro que oscilam entre o padrão formal monitorado e o coloquial espontâneo conforme os interlocutores e o ambiente social."
+      },
+      {
+        title: "Adequação Linguística vs. 'Certo e Errado'",
+        content: "A sociolinguística substitui o binômio punitivo 'certo vs errado' pela adequação do registro ao contexto de comunicação (a metáfora do guarda-roupa de Marcos Bagno)."
+      },
+      {
+        title: "Sistematicidade da Fala Popular",
+        content: "A concordância em 'Os menino foi' obedece à regra lógica de marcação de plural no primeiro constituinte determinante, operando economia articulatória sem prejuízo do sentido."
+      }
+    ],
+    formulasAndRules: [
+      "Regra de Ouro: Não existe variedade linguística superior ou inferior em si; toda variante é legítima e atende à sua comunidade.",
+      "Padrão Escrito Formal: A redação do ENEM exige a norma padrão culta com concordância explícita e pronomes monitorados.",
+      "Adequação Pragmática: Falar difícil em um almoço de família é tão inadequado quanto usar gírias de bate-papo em uma audiência judiciária solene."
+    ],
+    enemTraps: [
+      "Alternativas preconceituosas que afirmam que uma forma popular decorre de 'preguiça', 'ignorância' ou 'corrupção da língua' SEMPRE são incorretas no ENEM!",
+      "Não confunda variação diatópica (região geográfica) com diafásica (nível de formalidade da situação)."
+    ],
+    mnemonics: "Diatópica = Topografia/Região | Diacrônica = Cronômetro/Tempo | Diastrática = Estrato Social/Classe | Diafásica = Fase/Situação."
+  },
+  "linguagens/artes-visuais-musica": {
+    topic: "Artes Visuais, Música Brasileira e Expressões Culturais",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Relevância Crítica: análise de manifestações plásticas, patrimônio imaterial, movimentos musicais e artes cênicas.",
+    highFrequencySkills: [
+      "H12 - Reconhecer diferentes funções da arte e do trabalho da produção artística",
+      "H13 - Analisar o diálogo entre arte, sociedade e momento histórico",
+      "H14 - Valorizar o patrimônio cultural brasileiro material e imaterial"
+    ],
+    overview: "A arte brasileira é um campo de permanente diálogo entre tradição, modernidade, denúncia social e afirmação identitária. Das matrizes afro-indígenas e do Barroco colonial às vanguardas da Tropicália, Cinema Novo, Grafite urbano e Hip-Hop periférico, a criação estética opera como potente vetor de intervenção cívica e reflexão ética.",
+    keyConcepts: [
+      {
+        title: "A MPB e a Resistência à Censura",
+        content: "O uso de metáforas, duplos sentidos e alegorias por Chico Buarque, Elis Regina e Gilberto Gil para criticar a ditadura militar e o AI-5 sem ser barrado pela censura prévia governamental."
+      },
+      {
+        title: "A Tropicália e a Antropofagia Sonora (1967-1968)",
+        content: "Deglutição de elementos da vanguarda pop internacional (guitarras elétricas) fundidos a ritmos folclóricos tradicionais (baião, berimbau, samba) contra o purismo ingênuo."
+      },
+      {
+        title: "Arte Urbana: Grafite vs. Pichação",
+        content: "A legitimação do grafite figurativo como bem cultural e atração de mercado versus a criminalização da pichação tipográfica como grito insurgente das periferias."
+      },
+      {
+        title: "Teatro do Oprimido de Augusto Boal",
+        content: "O conceito de 'espect-ator', que sobe ao palco para propor soluções e ensaiar a superação real de opressões sociais cotidianas, transformando o teatro em ação cívica."
+      },
+      {
+        title: "Patrimônio Cultural Imaterial",
+        content: "Saberes, celebrações e formas de expressão vivas (Cordel, Capoeira, Frevo, Bumba Meu Boi) protegidas pelo IPHAN e pela Unesco como patrimônio identitário."
+      },
+      {
+        title: "Arte Contemporânea e Participação",
+        content: "Ruptura com o pedestal e com o quadro tradicional (Lygia Clark, Hélio Oiticica e Cildo Meireles), transformando o espectador em participante ativo da obra."
+      }
+    ],
+    formulasAndRules: [
+      "Princípio Estético: Na arte contemporânea, o conceito, o processo e a participação física do espectador superam a mera perfeição técnica do objeto inanimado.",
+      "Patrimônio Imaterial: Não é a pedra de um monumento; é o saber vivo transmitido de geração a geração no corpo e na memória da comunidade."
+    ],
+    enemTraps: [
+      "Não julgue manifestações artísticas populares ou contemporâneas sob o filtro de 'belo clássico renascentista'; o ENEM avalia o conceito, a função social e a potência crítica da obra!",
+      "A capoeira e o samba já foram tipificados como crimes no Código Penal republicano; o status de patrimônio é fruto de luta e resistência histórica contra o racismo de Estado."
+    ],
+    mnemonics: "A Tropicália deglute o mundo com berimbau e guitarra; o Teatro do Oprimido ensaia no palco a coragem da vida real."
+  },
+  "humanas/historia-geral": {
+    topic: "História Geral: Antiguidade a Revoluções Modernas",
+    area: "humanas",
+    areaName: "Ciências Humanas",
+    enemRelevance: "Relevância Alta: Antiguidade Clássica, Feudalismo, Renascimento, Revoluções Burguesas, Imperialismo e Conflitos do Século XX.",
+    highFrequencySkills: [
+      "H11 - Identificar registros sobre a cidadania e a participação política em diferentes sociedades",
+      "H12 - Analisar o papel da religião, ciência e ideologia em formações históricas",
+      "H13 - Analisar as contradições do desenvolvimento econômico e lutas sociais"
+    ],
+    overview: "A História Geral estuda a evolução das relações de poder, trabalho, cidadania e pensamento no Ocidente. Da democracia direta excludente de Atenas e das lutas agrárias da plebe em Roma, passando pela servidão feudal e o Renascimento, até as revoluções burguesas (1789), o maquinismo fabril do século XIX e os horrores dos totalitarismos e guerras mundiais do século XX.",
+    keyConcepts: [
+      {
+        title: "Atenas e a Cidadania Excludente",
+        content: "Isonomia e isegoria diretas na Ágora sustentadas no trabalho de escravizados e excluindo categoricamente mulheres e estrangeiros residentes (metecos)."
+      },
+      {
+        title: "República Romana e Luta de Classes",
+        content: "Patrícios oligarcas latifundiários versus a plebe empobrecida; as reformas agrárias propostas e frustradas dos tribunos da plebe Tibério e Caio Graco."
+      },
+      {
+        title: "Feudalismo Medieval",
+        content: "Vassalagem (pacto militar de honra recíproca entre nobres livres) versus Servidão (sujeição camponesa à terra com pagamento de corveia, talha e banalidades)."
+      },
+      {
+        title: "Renascimento e Humanismo",
+        content: "Antropocentrismo e racionalismo empírico (Da Vinci, Galileu) rompendo com o princípio dogmático escolástico de autoridade teológica."
+      },
+      {
+        title: "Reforma Protestante e Mercantilismo",
+        content: "Lutero (justificação pela fé), Calvino (predestinação e ascese do trabalho analisada por Weber) e o absolutismo de direito divino (Bossuet) alicerçado no metalismo e protecionismo comercial."
+      },
+      {
+        title: "A Dupla Revolução (Hobsbawm)",
+        content: "A Revolução Francesa (1789: fim dos privilégios estamentais e igualdade civil perante a lei) e a Revolução Industrial inglesa (maquinismo, proletariado, ludismo e cartismo)."
+      },
+      {
+        title: "Imperialismo do Século XIX e Partilha da África",
+        content: "A Conferência de Berlim de 1885 recortando fronteiras artificiais com o pretexto racista do 'fardo do homem branco' e do darwinismo social."
+      },
+      {
+        title: "O Século XX: Guerras e Totalitarismos",
+        content: "A carnificina das trincheiras na Primeira Guerra; a Revolução Russa de 1917 ('Pão, Paz e Terra'); a Crise de 1929 e o New Deal keynesiano; a engenharia do extermínio totalitário nazista e o Julgamento de Nuremberg."
+      }
+    ],
+    formulasAndRules: [
+      "Regra Histórica: Nenhum sistema político do passado universalizava direitos: a cidadania moderna universal de 1948 é uma conquista árdua forjada contra séculos de exclusão.",
+      "Equação da Revolução Francesa: Queda da Bastilha + Declaração de 1789 = Fim dos privilégios hereditários de nascimento do Clero e da Nobreza."
+    ],
+    enemTraps: [
+      "Cuidado para não anacronizar: a democracia ateniense não era representativa nem elegia deputados; era direta por assembleia de cidadãos presentes!",
+      "Não confunda escravidão clássica com servidão feudal: o servo não era vendido individualmente no mercado, mas estava preso à gleba com obrigações tributárias senhoriais."
+    ],
+    mnemonics: "Atenas vota na praça mas exclui a maioria; a França derruba o sangue nobre em nome da lei igualitária."
   }
 };
 
