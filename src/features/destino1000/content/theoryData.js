@@ -2339,6 +2339,57 @@ export const THEORY_CONTENT = {
     mnemonics: "No concreto o espaço fala; no mimeógrafo a censura cala; no rap o povo rima; e a escrevivência o silêncio desanima!"
   },
 
+  "linguagens/generos-digitais-hipertexto": {
+    topic: "Gêneros Digitais, Hipertexto, Multimodalidade e Cultura da Conexão",
+    area: "linguagens",
+    areaName: "Linguagens e Códigos",
+    enemRelevance: "Competência 7 e 9 (H1, H4, H21, H22, H23, H24): Hipertexto e leitura não-linear (Pierre Lévy), memes e remix cultural, infográficos e multimodalidade, bolhas algorítmicas e câmaras de eco (Eli Pariser), fact-checking contra fake news, podcasts e nova oralidade, IA generativa e autoria, gamificação e letramento digital crítico (Magda Soares).",
+    highFrequencySkills: [
+      "H1 - Identificar linguagens e recursos expressivos como caracterização dos sistemas de comunicação",
+      "H4 - Reconhecer o papel das tecnologias da informação e comunicação na vida social",
+      "H21 - Reconhecer recursos verbais e não verbais com a finalidade de criar ou mudar comportamentos",
+      "H22 - Relacionar em diferentes textos as opiniões, temas, assuntos e recursos linguísticos",
+      "H23 - Inferir objetivos do produtor do texto e caracterizar seu público-alvo",
+      "H24 - Reconhecer estratégias argumentativas empregadas para convencimento do público na web"
+    ],
+    overview: "A emergência da cibercultura e da internet das coisas reconfigurou profundamente as práticas sociais de leitura, escrita e cidadania. O ENEM aborda os gêneros digitais não como modismos passageiros, mas como manifestações semióticas híbridas complexas: a quebra da linearidade textual via hiperlinks, a apropriação irônica de signos visuais em memes, a curadoria de dados em infográficos interativos, as armadilhas de desinformação em redes orientadas pelo engajamento e a necessidade inadiável do letramento digital crítico para a emancipação cidadã.",
+    keyConcepts: [
+      {
+        title: "Hipertexto e Leitura Reticular Não-Linear (Pierre Lévy)",
+        content: "• O hipertexto supera a linearidade da página impressa através de uma arquitetura em rede de nós conceituais interligados por hiperlinks.\n• O leitor assume copropriedade do percurso cognitivo, escolhendo quais ramificações explorar a cada momento.\n• Promove a multisequencialidade e a convergência de múltiplas linguagens (verbal, sonora, imagética)."
+      },
+      {
+        title: "Memes, Intertextualidade Paródica e Cultura do Remix",
+        content: "• Unidades culturais replicáveis que operam pela apropriação e recontextualização paródica de imagens e fatos públicos.\n• A eficácia comunicativa do meme reside no pacto de repertório prévio compartilhado entre emissor e receptor, funcionando como crítica social, humor e afirmação identitária de comunidades virtuais."
+      },
+      {
+        title: "Multimodalidade e Semiótica Visual (Infográficos e Vídeos Curtos)",
+        content: "• Articulação cooperativa e simultânea de múltiplos modos semióticos: texto verbal (ancoragem), cores (destaque/clima), proporções espaciais e ícones dinâmicos.\n• O design de infográficos guia o olhar do leitor por hierarquias informativas claras; plataformas de vídeo curto adotam cortes rápidos e hiperestímulos para combater a dispersão na 'economia da atenção'."
+      },
+      {
+        title: "Bolhas Algorítmicas, Câmaras de Eco e Desinformação (Eli Pariser)",
+        content: "• Algoritmos de recomendação priorizam engajamento e tempo de tela, retroalimentando o viés de confirmação e confinando usuários em ambientes informativos homogêneos.\n• Essa filtragem invisível favorece a proliferação de fake news (com apelo de urgência, conspiração e pânico moral) e dificulta o diálogo democrático plural.\n• O Fact-Checking (checagem de fatos) atua restaurando fontes primárias, evidências científicas e métodos de verificação transparente."
+      },
+      {
+        title: "Inteligência Artificial Generativa e Letramento Digital Crítico",
+        content: "• Modelos de linguagem de IA operam por predição probabilística estatística sobre bancos de dados de treinamento, desprovidos de consciência, intencionalidade ou subjetividade humana corporificada.\n• O Letramento Digital Crítico (Magda Soares) capacita o cidadão a questionar quem financia, quais as intenções ideológicas e o que foi omitido nos discursos que circulam na praça pública digital."
+      }
+    ],
+    formulasAndRules: [
+      "Estrutura do Hipertexto: Rede de Nós Semânticos + Hiperlinks = Leitura Multisequencial Não-Linear.",
+      "Semiótica do Meme: Imagem Prévia Reconhecível + Legenda Ressignificada = Síntese Irônica Paródica.",
+      "Multimodalidade: Texto Verbal + Ícones Gráficos + Cores + Tipografia trabalhando em sinergia semântica.",
+      "Pilares do Letramento Crítico: Investigar Autoria + Interesses Econômicos + Filtros Algorítmicos + Checagem de Fatos."
+    ],
+    enemTraps: [
+      "Gêneros da internet (memes, podcasts, gírias) NÃO são 'corrupção ou empobrecimento da língua'; são adaptações legítimas do código às necessidades expressivas dos falantes.",
+      "Algoritmos de redes sociais NÃO são neutros nem imparciais; seu código é programado para reter atenção comercial, premiando conteúdos que inflamam indignação e polarização.",
+      "A inteligência artificial generativa NÃO tem consciência reflexiva; ela realiza cálculo estatístico de proximidade lexical.",
+      "Não confunda 'alfabetização técnica' (saber mexer no celular) com 'letramento digital crítico' (saber analisar ideologias e discernir boatos de fatos comprovados)."
+    ],
+    mnemonics: "No hipertexto você clica e navega; no meme a ironia pega; na bolha o algoritmo te cega; e no fact-checking o boato se desmantela!"
+  },
+
   "humanas/trabalho-globalizacao-cultura": {
     topic: "Trabalho, Globalização, Indústria Cultural e Teoria Social Contemporânea",
     area: "humanas",

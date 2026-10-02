@@ -49,6 +49,7 @@ export const QUESTION_MODULES = {
   "linguagens/espanhol-instrumental": () => import("./questions/linguagens/espanhol-instrumental.js"),
   "linguagens/publicidade-semiotica": () => import("./questions/linguagens/publicidade-semiotica.js"),
   "linguagens/literatura-contemporanea-cancao": () => import("./questions/linguagens/literatura-contemporanea-cancao.js"),
+  "linguagens/generos-digitais-hipertexto": () => import("./questions/linguagens/generos-digitais-hipertexto.js"),
 
   // ── Ciências Humanas ──
   "humanas/brasil-colonial": () => import("./questions/humanas/brasil-colonial.js"),
