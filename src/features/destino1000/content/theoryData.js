@@ -1641,6 +1641,47 @@ export const THEORY_CONTENT = {
     mnemonics: "Vacina ativa memória da vacaria; Soro salva na emergência do veneno sem memória futura."
   },
 
+  "natureza/fisica-moderna": {
+    topic: "Física Moderna, Radiações e Energia Nuclear",
+    area: "natureza",
+    areaName: "Ciências da Natureza",
+    enemRelevance: "Competência 6 (H20, H21, H22): Frequência crescente com foco em tecnologias do cotidiano, biofísica médica (PET-scan, radioterapia, cintilografia), matrizes limpas (fotovoltaica e fusão) e radioproteção.",
+    highFrequencySkills: ["H20 - Caracterizar causas ou efeitos de movimentos de partículas subatômicas", "H21 - Avaliar processos de geração de energia nuclear e renovável", "H22 - Compreender a interação da radiação ionizante com a matéria e tecidos vivos"],
+    overview: "A Física Moderna no ENEM privilegia a compreensão fenomenológica e aplicada: o efeito fotoelétrico em células fotovoltaicas, a dualidade onda-partícula em microscopia eletrônica de alta resolução, o espectro eletromagnético e o limiar de ionização biológica, as leis de decaimento nuclear e as vantagens ecológicas da transição para novas matrizes energéticas.",
+    keyConcepts: [
+      {
+        title: "Efeito Fotoelétrico e Fótons de Einstein",
+        content: "A luz é absorvida e emitida em pacotes discretos (fótons) de energia E = h · f. Para ejetar um elétron do metal, o fóton individual deve possuir energia superior à função trabalho do material (h · f ≥ W). Aumentar a intensidade da fonte luminosa apenas aumenta a taxa de fótons por segundo (corrente elétrica), mas NÃO altera a velocidade máxima dos fotoelétrons nem permite ejeção abaixo da frequência de corte."
+      },
+      {
+        title: "Dualidade Onda-Partícula e Microscopia Eletrônica",
+        content: "Pela relação de de Broglie (λ = h / p), qualquer partícula material com momento linear exibe propriedades ondulatórias. Elétrons acelerados por alta voltagem possuem comprimentos de onda picométricos (milhares de vezes menores que os da luz visível), contornando o limite de difração óptica e permitindo que o microscópio eletrônico atinja resolução atômica."
+      },
+      {
+        title: "Radiações Ionizantes vs. Não-Ionizantes e Decaimento",
+        content: "Radiações ionizantes (raios X e gama) possuem energia fotônica suficiente (> 10-12 eV) para arrancar elétrons e quebrar ligações de DNA. Emissões nucleares: • Alfa (α): núcleos de hélio (+2e, 4u), altíssimo poder de ionização, mas barradas por folha de papel. • Beta (β): elétrons ou pósitrons nucleares, alcance intermediário (barradas por alumínio). • Gama (γ): ondas eletromagnéticas puras, máximo poder de penetração (exigem blindagem espessa de chumbo ou concreto)."
+      },
+      {
+        title: "Fissão, Fusão e Aplicações Biomédicas",
+        content: "• Fissão Nuclear: quebra de núcleos de U-235 por nêutrons térmicos controlada por barras de cádmio/boro. • Fusão Nuclear: união de Deutério e Trítio gerando Hélio e energia limpa sem resíduos de alta atividade (reatores Tokamak). • Medicina Nuclear: radiofármacos de meia-vida curta (Tecnécio-99m) e Tomografia por Emissão de Pósitrons (PET-Scan), na qual a aniquilação pósitron-elétron gera dois fótons gama colineares a 180° para mapeamento oncológico."
+      }
+    ],
+    formulasAndRules: [
+      "Energia do Fóton: E = h · f = (h · c) / λ.",
+      "Efeito Fotoelétrico: E_cin_max = h · f - W = e · V_corte.",
+      "Comprimento de de Broglie: λ = h / (m · v).",
+      "Equivalência Massa-Energia de Einstein: E = m · c².",
+      "Decaimento por Meia-Vida: A(t) = A₀ / 2^n, com n = tempo / meia-vida.",
+      "Atenuação Exponencial em Blindagem: I = I₀ / 2^k, com k = espessura / CSA."
+    ],
+    enemTraps: [
+      "Achar que aumentar a intensidade (brilho) de uma luz com frequência abaixo do corte fará o metal ejetar elétrons: a ejeção depende da energia individual de cada fóton (frequência) e não do volume de luz!",
+      "Confundir irradiação com contaminação: alimentos esterilizados por raios gama de Cobalto-60 NÃO se tornam radioativos; apenas foram expostos temporariamente à energia ionizante.",
+      "Achar que ondas de celular (5G) ou micro-ondas são ionizantes: ambas pertencem à faixa não-ionizante e não possuem energia para quebrar DNA diretamente."
+    ],
+    mnemonics: "Alfa ioniza e para no papel; Gama atravessa até o chapéu; no fotoelétrico a frequência dá a força e o brilho só multiplica a moça."
+  },
+
   "matematica/geometria-plana": {
     topic: "Geometria Plana e Polígonos",
     area: "matematica",
@@ -1793,6 +1834,47 @@ export const THEORY_CONTENT = {
       "O produto das raízes auxiliares y1 · y2 não é o produto das raízes x1 · x2, mas sim a^(x1 + x2)!"
     ],
     mnemonics: "Se o expoente tá no alto, o logaritmo tomba ele pro chão; produto vira soma e fração vira subtração."
+  },
+
+  "matematica/analise-combinatoria": {
+    topic: "Análise Combinatória e Técnicas de Contagem",
+    area: "matematica",
+    areaName: "Matemática",
+    enemRelevance: "Competência 1 e 4 (H2, H3, H15, H16): Presença constante em problemas práticos de formação de equipes, senhas, cardápios e combinações.",
+    highFrequencySkills: ["H2 - Identificar padrões de agrupamento e contagem", "H15 - Aplicar o princípio multiplicativo e aditivo", "H16 - Resolver problemas envolvendo arranjos, permutações e combinações"],
+    overview: "A Análise Combinatória no ENEM avalia a capacidade de raciocínio dedutivo para contar possibilidades sem listar exaustivamente todos os casos. O domínio central exige diferenciar se a ordem dos elementos altera o agrupamento (Arranjos/Permutações) ou se apenas a natureza dos elementos importa (Combinações), aplicando o Princípio Multiplicativo, método dos blocos e raciocínio complementar.",
+    keyConcepts: [
+      {
+        title: "Princípio Fundamental da Contagem (PFC)",
+        content: "Se uma decisão é tomada em etapas sucessivas e independentes, o total de possibilidades é o produto das opções de cada etapa: N = n1 · n2 · ... · nk. Em problemas com restrições (ex: dígitos distintos ou posições restritas), inicie sempre a resolução pela etapa que impõe mais restrições."
+      },
+      {
+        title: "Arranjos vs. Combinações (A Ordem Importa?)",
+        content: "• A ordem importa? SIM ⟹ Arranjo / Permutação. Ex: pódios, senhas bancárias, placas, anagramas. Fórmula: A(n, p) = n! / (n - p)!. • A ordem importa? NÃO ⟹ Combinação Simples. Ex: comissões, equipes de plantão, escolha de matérias, subconjuntos. Fórmula: C(n, p) = n! / [p! · (n - p)!]. A divisão por p! corrige e anula as permutações internas fictícias entre os mesmos elementos."
+      },
+      {
+        title: "Permutações com Repetição e Trajetos em Malha",
+        content: "Quando há elementos repetidos, divide-se o fatorial total pelo fatorial de cada repetição: P_n^(a, b) = n! / (a! · b!). Aplicação clássica: anagramas de palavras com letras repetidas e deslocamentos em malhas quadriculadas de ruas (onde cada trajeto é uma sequência de n passos para a direita e m passos para cima)."
+      },
+      {
+        title: "Método do Bloco e Princípio do Complementar",
+        content: "• Elementos que devem ficar juntos: trate-os provisoriamente como um único bloco. Calcule a permutação externa do bloco com os demais itens e multiplique pelas permutações internas dos elementos dentro do bloco. • Método do Complementar: Quando o problema pede 'pelo menos um', 'no mínimo um' ou restrições complexas de negação: Casos Válidos = Total Irrestrito - Casos Desfavoráveis."
+      }
+    ],
+    formulasAndRules: [
+      "PFC: N = n1 · n2 · n3 · ... · nk.",
+      "Combinação Simples: C(n, p) = n! / [p! · (n - p)!].",
+      "Permutação Simples: P_n = n!.",
+      "Permutação com Repetição: P_n^(k1, k2) = n! / (k1! · k2!).",
+      "Método do Complementar: Casos Válidos = Total - Proibidos.",
+      "Regra do E vs. OU: 'E' = multiplicar etapas simultâneas; 'OU' = somar cenários alternativos disjuntos."
+    ],
+    enemTraps: [
+      "Confundir comissão com fila ordenada: em equipes de trabalho onde todos exercem a mesma função, a ordem de escolha NÃO importa, exigindo Combinação e não Arranjo.",
+      "Esquecer a permutação interna do bloco: se 3 elementos andam juntos em bloco, lembre-se de multiplicar por 3! = 6 ao final.",
+      "Somar combinações em vez de multiplicá-las quando as escolhas de grupos distintos ocorrem simultaneamente para compor uma única equipe."
+    ],
+    mnemonics: "A ordem muda o grupo? Se SIM, permuta e arranja; se NÃO, divide por p! e combina com ganho!"
   },
 
   "linguagens/ingles-instrumental": {

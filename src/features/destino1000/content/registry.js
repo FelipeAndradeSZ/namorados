@@ -28,6 +28,7 @@ export const QUESTION_MODULES = {
   "matematica/progressoes": () => import("./questions/matematica/progressoes.js"),
   "matematica/geometria-plana": () => import("./questions/matematica/geometria-plana.js"),
   "matematica/exponencial-logaritmos": () => import("./questions/matematica/exponencial-logaritmos.js"),
+  "matematica/analise-combinatoria": () => import("./questions/matematica/analise-combinatoria.js"),
 
   // ── Linguagens ──
   "linguagens/interpretacao": () => import("./questions/linguagens/interpretacao.js"),
@@ -74,6 +75,7 @@ export const QUESTION_MODULES = {
   "natureza/evolucao": () => import("./questions/natureza/evolucao.js"),
   "natureza/solucoes-equilibrio": () => import("./questions/natureza/solucoes-equilibrio.js"),
   "natureza/fisiologia-humana": () => import("./questions/natureza/fisiologia-humana.js"),
+  "natureza/fisica-moderna": () => import("./questions/natureza/fisica-moderna.js"),
 
   // ── Redação ──
   // "redacao/competencia5": () => import("./questions/redacao/competencia5.js"),

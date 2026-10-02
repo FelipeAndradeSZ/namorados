@@ -37,6 +37,7 @@ const AREA_TOPICS = {
     { id: "natureza/evolucao", name: "Evolução e Genética de Populações", tag: "Biologia", priority: "Crítica • Neodarwinismo", questionsCount: 25 },
     { id: "natureza/solucoes-equilibrio", name: "Equilíbrio Químico e Soluções", tag: "Química", priority: "Crítica • pH e Le Chatelier", questionsCount: 25 },
     { id: "natureza/fisiologia-humana", name: "Fisiologia Humana e Imunologia", tag: "Biologia", priority: "Crítica • Top Medicina", questionsCount: 25 },
+    { id: "natureza/fisica-moderna", name: "Física Moderna, Radiações e Energia Nuclear", tag: "Física", priority: "Crítica • Efeito Fotoelétrico e Nuclear", questionsCount: 25 },
   ],
   matematica: [
     { id: "matematica/razao-proporcao", name: "Razão, Proporção e Escala", tag: "Aritmética", priority: "Crítica • Mais Cobrado", questionsCount: 25 },
@@ -48,7 +49,8 @@ const AREA_TOPICS = {
     { id: "matematica/geometria-analitica", name: "Geometria Analítica e Retas", tag: "Geometria", priority: "Alta • Coordenadas e Cônicas", questionsCount: 25 },
     { id: "matematica/funcoes", name: "Funções Afins e Quadráticas", tag: "Álgebra", priority: "Alta • Máximos e Mínimos", questionsCount: 25 },
     { id: "matematica/trigonometria", name: "Trigonometria e Funções Periódicas", tag: "Trigonometria", priority: "Alta • Ciclo e Triângulos", questionsCount: 25 },
-    { id: "matematica/probabilidade", name: "Probabilidade e Análise Combinatória", tag: "Combinatória", priority: "Média-Alta", questionsCount: 25 },
+    { id: "matematica/probabilidade", name: "Probabilidade (Simples, Condicional e Binomial)", tag: "Probabilidade", priority: "Crítica • Cálculo de Chances", questionsCount: 25 },
+    { id: "matematica/analise-combinatoria", name: "Análise Combinatória e PFC", tag: "Combinatória", priority: "Crítica • Técnicas de Contagem", questionsCount: 25 },
     { id: "matematica/progressoes", name: "Progressões Aritméticas e Geométricas (PA e PG)", tag: "Álgebra", priority: "Crítica • Modelagem Linear e Exponencial", questionsCount: 25 },
     { id: "matematica/exponencial-logaritmos", name: "Funções Exponenciais e Logaritmos", tag: "Álgebra", priority: "Crítica • Richter, pH e Decaimento", questionsCount: 25 },
   ],
